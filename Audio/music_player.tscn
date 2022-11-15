@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm3wb7tcpq2b8"]
+
+[ext_resource type="AudioStream" uid="uid://dyocr8h57fva1" path="res://Audio/Music/578066__sirplus__rainbowglazeloop16-mastered.wav" id="1_vr1kx"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_vr1kx")
+volume_db = -17.0
+autoplay = true

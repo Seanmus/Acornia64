@@ -1,0 +1,133 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxhyamou2angw"]
+
+[ext_resource type="Script" path="res://Traps/cannonBall.gd" id="1_0cr5w"]
+[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/explodeCloud.tscn" id="2_kioxh"]
+[ext_resource type="PackedScene" uid="uid://bpp4ag7ddnulv" path="res://FlowerPower/imports/cannonBall.glb" id="3_ld7xi"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ye4um"]
+
+[sub_resource type="Animation" id="Animation_2d7if"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("jumpCloud:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_e1nd2"]
+resource_name = "shoot"
+length = 3.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 35), Vector3(0, 0, 35)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("jumpCloud:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape3D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_anv6k"]
+_data = {
+"RESET": SubResource("Animation_2d7if"),
+"shoot": SubResource("Animation_e1nd2")
+}
+
+[node name="cannonBall" type="Area3D" groups=["shot"]]
+transform = Transform3D(0.736178, 0, 0, 0, 0.736178, 0, 0, 0, 0.736178, 0, 0, 0)
+script = ExtResource("1_0cr5w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.95917, 0, 0, 0, 1.95917, 0, 0, 0, 1.95917, 0, 0, 0)
+shape = SubResource("SphereShape3D_ye4um")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "shoot"
+libraries = {
+"": SubResource("AnimationLibrary_anv6k")
+}
+
+[node name="jumpCloud" parent="." instance=ExtResource("2_kioxh")]
+transform = Transform3D(1.92641, 0, 0, 0, 1.59864, 0, 0, 0, 1.92641, 0.0311819, -0.941365, -0.399483)
+visible = false
+amount = 200
+sub_emitter = NodePath(".")
+lifetime = 0.53
+collision_base_size = 36.43
+local_coords = true
+transform_align = 1
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1.35837, 0, 0, 0, 0, 1.35837, 0, -1.35837, 0, 0, 0.901534, 0)
+light_energy = 1.87
+light_indirect_energy = 0.0
+light_size = 0.085
+light_negative = true
+light_cull_mask = 4294443007
+shadow_reverse_cull_face = true
+spot_range = 18.4
+spot_attenuation = 0.277392
+spot_angle = 28.6
+spot_angle_attenuation = 0.9595
+
+[node name="cannonBall" parent="." instance=ExtResource("3_ld7xi")]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

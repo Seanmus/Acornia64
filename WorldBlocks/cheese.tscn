@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dohg1fjqe6a1g"]
+
+[ext_resource type="Texture2D" uid="uid://4q1qry2cbxwo" path="res://Textures/cheese.png" id="1_fvdsd"]
+[ext_resource type="Script" path="res://WorldBlocks/cheese.gd" id="1_jq5t0"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1y7ae"]
+
+[node name="cheese" type="Area3D" groups=["cheese"]]
+script = ExtResource("1_jq5t0")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+texture = ExtResource("1_fvdsd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["cheese"]]
+transform = Transform3D(0.881746, 0, 0, 0, 0.881746, 0, 0, 0, 0.881746, 0, 0, 0)
+shape = SubResource("SphereShape3D_1y7ae")
+
+[connection signal="body_entered" from="." to="." method="_on_cheese_body_entered"]

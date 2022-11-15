@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgdgll5oyoer7"]
+
+[ext_resource type="PackedScene" uid="uid://cw6pxr5o14iip" path="res://FlowerPower/green_bricks.tscn" id="1_uu432"]
+
+[sub_resource type="Animation" id="Animation_nya7s"]
+resource_name = "InOut"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.99879, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 1.97395), Vector3(0, 0, 1.97395), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3vxuv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[node name="InOut" type="Node3D"]
+
+[node name="greenBricks" parent="." instance=ExtResource( "1_uu432" )]
+transform = Transform3D(0.312605, 0, 0, 0, 0.487016, 0, 0, 0, 0.700359, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../greenBricks")
+autoplay = "InOut"
+anims/InOut = SubResource( "Animation_nya7s" )
+anims/RESET = SubResource( "Animation_3vxuv" )

@@ -1,0 +1,14 @@
+[remap]
+
+importer="image"
+type="Image"
+uid="uid://jxxhfetfir5j"
+path="res://godot/imported/oaklyIcon.png-2e014950cd76dff9f0f99405b22cc923.image"
+
+[deps]
+
+source_file="res://UI/Images/oaklyIcon.png"
+dest_files=["res://godot/imported/oaklyIcon.png-2e014950cd76dff9f0f99405b22cc923.image"]
+
+[params]
+

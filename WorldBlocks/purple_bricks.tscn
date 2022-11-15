@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs0tmtukbibam"]
+
+[ext_resource type="PackedScene" uid="uid://d1y0phbk1u4kt" path="res://WorldBlocks/Imports/purpleBricks.glb" id="1_mkcrw"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_phed8"]
+data = PackedVector3Array(-1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1)
+
+[node name="purpleBricks" type="StaticBody3D"]
+
+[node name="collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.4643, 0, 0, 0, 1.58738, 0, 0, 0, 3.4643, 0, 0, 0)
+shape = SubResource( "ConcavePolygonShape3D_phed8" )
+
+[node name="purpleBricks" parent="." instance=ExtResource( "1_mkcrw" )]

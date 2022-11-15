@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://denfp6uhl3qdf"
+path="res://godot/imported/wall.obj-309a8feed8d03d9cc4fbc7f5de9ee955.mesh"
+
+[deps]
+
+files=["res://godot/imported/wall.obj-309a8feed8d03d9cc4fbc7f5de9ee955.mesh"]
+
+source_file="res://FlowerPower/imports/wall.obj"
+dest_files=["res://godot/imported/wall.obj-309a8feed8d03d9cc4fbc7f5de9ee955.mesh", "res://godot/imported/wall.obj-309a8feed8d03d9cc4fbc7f5de9ee955.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

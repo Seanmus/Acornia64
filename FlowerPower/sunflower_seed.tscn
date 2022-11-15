@@ -1,0 +1,68 @@
+[gd_scene load_steps=8 format=3 uid="uid://r6hw0333avyg"]
+
+[ext_resource type="Script" path="res://FlowerPower/sunflower_seed.gd" id="1_6wvcf"]
+[ext_resource type="AudioStream" uid="uid://gkhtfsmk3exg" path="res://Audio/Effects/collect.wav" id="2_a8lhl"]
+[ext_resource type="PackedScene" uid="uid://b2t6i52mpg12l" path="res://FlowerPower/imports/sunflowerSeed.glb" id="3_mof0m"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q44gl"]
+
+[sub_resource type="Animation" id="Animation_57pjq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yb7yp"]
+resource_name = "spin"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.26573, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sjvlx"]
+_data = {
+"RESET": SubResource("Animation_57pjq"),
+"spin": SubResource("Animation_yb7yp")
+}
+
+[node name="sunflowerSeed" type="Area3D"]
+script = ExtResource("1_6wvcf")
+
+[node name="Empty" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1.19209e-07, -1, 0, 1, -1.19209e-07, 0, 3.79452, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.11755, 0, 0, 0, 2.11755, 0, 0, 0, 2.11755, 0, 3.61045, 0)
+shape = SubResource("SphereShape3D_q44gl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "spin"
+libraries = {
+"": SubResource("AnimationLibrary_sjvlx")
+}
+
+[node name="sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_a8lhl")
+
+[node name="sunflowerSeed" parent="." instance=ExtResource("3_mof0m")]
+
+[connection signal="body_entered" from="." to="." method="_on_sunflower_seed_body_entered"]

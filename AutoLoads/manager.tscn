@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://n0d0cm22tkx4"]
+
+[ext_resource type="Script" path="res://AutoLoads/Manager.gd" id="1_na45x"]
+[ext_resource type="AudioStream" uid="uid://b1vg0cresyin2" path="res://Audio/Effects/winSound.mp3" id="2_7u676"]
+
+[node name="Manager" type="Node"]
+script = ExtResource("1_na45x")
+
+[node name="winSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_7u676")
+volume_db = -5.102

@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1hh8ivyl1uba"]
+
+[ext_resource type="PackedScene" uid="uid://c1vhce73g6ioo" path="res://FlowerPower/imports/greenBricks.glb" id="2_ba702"]
+
+[sub_resource type="Animation" id="Animation_cluuc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("greenBricks2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -9.97282, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xuhn4"]
+resource_name = "UpDown"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("greenBricks2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 2.5, 4.2, 4.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -9.97282, 0), Vector3(0, -9.97282, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3rht8"]
+_data = {
+"RESET": SubResource("Animation_cluuc"),
+"UpDown": SubResource("Animation_xuhn4")
+}
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hf5ex"]
+data = PackedVector3Array(-1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1)
+
+[node name="UpDown" type="Node3D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "UpDown"
+libraries = {
+"": SubResource("AnimationLibrary_3rht8")
+}
+
+[node name="greenBricks2" parent="." instance=ExtResource("2_ba702")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.97282, 0)
+
+[node name="StaticBody3d" type="StaticBody3D" parent="greenBricks2/Cube" index="0"]
+
+[node name="CollisionShape3d" type="CollisionShape3D" parent="greenBricks2/Cube/StaticBody3d"]
+shape = SubResource("ConcavePolygonShape3D_hf5ex")
+
+[editable path="greenBricks2"]

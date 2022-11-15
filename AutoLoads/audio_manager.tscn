@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci8e1uv4chcu"]
+
+[ext_resource type="Script" path="res://AutoLoads/audio_manager.gd" id="1_1sdxu"]
+[ext_resource type="AudioStream" path="res://Audio/Effects/collect.wav" id="2_uaevk"]
+[ext_resource type="AudioStream" path="res://Audio/Effects/BitCollect.wav" id="3_ujmde"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_1sdxu")
+
+[node name="seedCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_uaevk")
+
+[node name="coinCollect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ujmde")

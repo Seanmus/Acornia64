@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ic4t7oejeu84"]
+
+[ext_resource type="Material" uid="uid://ds380bp82ruhl" path="res://Textures/grass.tres" id="1_hv47j"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wfkb2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53kcs"]
+
+[node name="Box" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource( "BoxMesh_wfkb2" )
+surface_material_override/0 = ExtResource( "1_hv47j" )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource( "BoxShape3D_53kcs" )

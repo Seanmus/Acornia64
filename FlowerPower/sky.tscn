@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmwjm3gguf3fi"]
+
+[ext_resource type="PackedScene" uid="uid://djxkx2g3ea3ro" path="res://FlowerPower/imports/sky.glb" id="1_vasm3"]
+
+[node name="sky" instance=ExtResource( "1_vasm3" )]
+transform = Transform3D(47.4473, 0, 0, 0, 47.4473, 0, 0, 0, 47.4473, 0, 0, 0)

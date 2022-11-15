@@ -1,0 +1,16 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b1vg0cresyin2"
+path="res://godot/imported/winSound.mp3-fac228cec3bf85f012557f54dc79695c.mp3str"
+
+[deps]
+
+source_file="res://Audio/Effects/winSound.mp3"
+dest_files=["res://godot/imported/winSound.mp3-fac228cec3bf85f012557f54dc79695c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0

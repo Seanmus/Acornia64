@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crm5k00ljg1tj"
+path="res://godot/imported/greenBrickCorner.obj-69a67898c4bf1ae92e856da800fea32d.mesh"
+
+[deps]
+
+files=["res://godot/imported/greenBrickCorner.obj-69a67898c4bf1ae92e856da800fea32d.mesh"]
+
+source_file="res://FlowerPower/imports/greenBrickCorner.obj"
+dest_files=["res://godot/imported/greenBrickCorner.obj-69a67898c4bf1ae92e856da800fea32d.mesh", "res://godot/imported/greenBrickCorner.obj-69a67898c4bf1ae92e856da800fea32d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

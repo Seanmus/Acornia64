@@ -1,0 +1,141 @@
+[gd_scene load_steps=15 format=3 uid="uid://c1nxd5aux2qvl"]
+
+[ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
+[ext_resource type="PackedScene" uid="uid://btn1fjffa1mtp" path="res://Player/acornModel.tscn" id="2_pgo2e"]
+[ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
+[ext_resource type="AudioStream" uid="uid://tp6w0yea4480" path="res://Audio/Effects/Land.wav" id="4_ocmxn"]
+[ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="5_olqky"]
+[ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
+[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/explodeCloud.tscn" id="7_adlch"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ot4tj"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_sqbag"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_iqq1t"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, 0, 0)
+spread = 5.01
+gravity = Vector3(0, -1, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 5.0
+color = Color(1, 1, 0.431373, 1)
+hue_variation_min = -0.42
+hue_variation_max = 0.26
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cejdx"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
+material = SubResource("StandardMaterial3D_cejdx")
+size = Vector2(1.335, 1.918)
+
+[node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
+floor_max_angle = 1.11177
+floor_snap_length = 0.31
+platform_on_leave = 2
+script = ExtResource("1_c1cwn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0440736, 0)
+shape = SubResource("CapsuleShape3D_ys4sl")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.67053)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+shape = SubResource("BoxShape3D_ot4tj")
+spring_length = 15.0
+margin = 5.397
+
+[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+
+[node name="acorn" parent="." instance=ExtResource("2_pgo2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.59405, 0)
+
+[node name="Cylinder" parent="acorn" index="0"]
+layers = 524288
+
+[node name="Empty" parent="acorn" index="1"]
+transform = Transform3D(0.0318249, -0.246745, -0.589978, -0.639498, -0.0122794, -0.0293605, 0, 0.590708, -0.24705, 0.108164, 1.24333, 0.19652)
+
+[node name="Cylinder001" parent="acorn" index="2"]
+transform = Transform3D(0.706368, 0, 1.79077e-06, 0, -0.193109, 0, -1.79077e-06, 0, 0.706368, 0.00496591, 1.87453, 0)
+layers = 524288
+
+[node name="Cube" parent="acorn" index="3"]
+layers = 524288
+
+[node name="Cube001" parent="acorn" index="4"]
+layers = 524288
+
+[node name="AnimationTree" parent="acorn" index="6"]
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_sqbag")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2iij6")
+
+[node name="LandSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ocmxn")
+volume_db = -26.0
+pitch_scale = 0.42
+
+[node name="WalkSound" type="AudioStreamPlayer" parent="."]
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_olqky")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.292421, 0)
+light_energy = 1.87
+light_indirect_energy = 0.0
+light_negative = true
+light_cull_mask = 4294443007
+shadow_reverse_cull_face = true
+spot_range = 18.4
+spot_attenuation = 0.277392
+spot_angle = 28.6
+spot_angle_attenuation = 0.9595
+
+[node name="AudioListener3D" type="AudioListener3D" parent="."]
+current = true
+
+[node name="Area3D" type="Area3D" parent="." groups=["seed"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_iqq1t")
+
+[node name="runCloud" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
+amount = 400
+lifetime = 0.16
+randomness = 1.0
+collision_base_size = 0.1
+trail_length_secs = 0.15
+process_material = SubResource("ParticlesMaterial_qbyin")
+draw_pass_1 = SubResource("QuadMesh_bu1i1")
+
+[node name="jumpCloud" parent="." instance=ExtResource("7_adlch")]
+amount = 400
+
+[node name="coinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ulqlb")
+volume_db = -5.0
+
+[connection signal="animation_finished" from="acorn/AnimationPlayer" to="." method="_on_dead_anim_finished"]
+[connection signal="finished" from="DeathSound" to="." method="_on_death_sound_finished"]
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+
+[editable path="acorn"]

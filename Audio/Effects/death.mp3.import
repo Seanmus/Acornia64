@@ -1,0 +1,16 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cawfi5a3wprvv"
+path="res://godot/imported/death.mp3-7d119d8631ab17f6f0b329c483f7ae52.mp3str"
+
+[deps]
+
+source_file="res://Audio/Effects/death.mp3"
+dest_files=["res://godot/imported/death.mp3-7d119d8631ab17f6f0b329c483f7ae52.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0

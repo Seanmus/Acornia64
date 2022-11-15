@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="uid://cn4e8rnx1wmb7" path="res://WorldBlocks/Forest/mushroom.tscn" id="1_cxihw"]
+[ext_resource type="PackedScene" uid="uid://bwhgtiehdvn0x" path="res://FlowerPower/tree_base.tscn" id="2_hn4nd"]
+
+[node name="MushRoomBounce" type="Node3D"]
+
+[node name="mushroom2" parent="." instance=ExtResource("1_cxihw")]
+transform = Transform3D(9.74936, 0, 0, 0, 9.74936, 0, 0, 0, 9.74936, 0, 20.8302, 0)
+
+[node name="treeBase2" parent="." instance=ExtResource("2_hn4nd")]
+transform = Transform3D(8.14287, 0, 0, 0, 3.83866, 0, 0, 0, 8.14287, 0, 0, 0)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmmv8wa104po2"]
+
+[ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="1_0653s"]
+
+[node name="Long" type="Node3D"]
+
+[node name="purpleBricks5" parent="." instance=ExtResource( "1_0653s" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.39416)
+
+[node name="purpleBricks6" parent="." instance=ExtResource( "1_0653s" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.52102)

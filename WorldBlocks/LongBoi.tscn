@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2tiageipj42t"]
+
+[ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://FlowerPower/green_bricks.tscn" id="1_pvl2e"]
+
+[node name="LongBoi" type="Node3D"]
+
+[node name="greenBricks9" parent="." instance=ExtResource("1_pvl2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.889)
+
+[node name="greenBricks10" parent="." instance=ExtResource("1_pvl2e")]
+
+[node name="greenBricks11" parent="." instance=ExtResource("1_pvl2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.92686)
