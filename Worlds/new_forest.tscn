@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3]
+[gd_scene load_steps=17 format=3 uid="uid://bw3y62pju1sf8"]
 
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="1_2tm05"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://FlowerPower/green_bricks.tscn" id="1_a1lhs"]

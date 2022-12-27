@@ -119,11 +119,11 @@ shape = SubResource("SphereShape3D_iqq1t")
 
 [node name="runCloud" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
+visible = false
 amount = 400
 lifetime = 0.16
 randomness = 1.0
 collision_base_size = 0.1
-trail_length_secs = 0.15
 process_material = SubResource("ParticlesMaterial_qbyin")
 draw_pass_1 = SubResource("QuadMesh_bu1i1")
 

@@ -80,6 +80,15 @@ func _physics_process(delta):
 			$JumpSound.play()
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
+		if input_dir.x > 0:
+			$acorn.rotation_degrees.y = -90
+		elif input_dir.x < 0:
+			$acorn.rotation_degrees.y = 90
+		elif input_dir.y < 0:
+			$acorn.rotation_degrees.y = 0
+		elif input_dir.y > 0:
+			$acorn.rotation_degrees.y = 180
+		
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 

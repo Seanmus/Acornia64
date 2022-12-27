@@ -581,7 +581,7 @@ _data = {
 "win": SubResource("Animation_wso6x")
 }
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_lkj48"]
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_c3ere"]
 
 [node name="acorn" instance=ExtResource("1_7lpc7")]
 
@@ -607,4 +607,4 @@ libraries = {
 
 [node name="AnimationTree" parent="." index="6" instance=ExtResource("3_b7f7b")]
 active = true
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_lkj48")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_c3ere")
