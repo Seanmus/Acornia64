@@ -14,3 +14,6 @@ dest_files=["res://godot/imported/death.mp3-7d119d8631ab17f6f0b329c483f7ae52.mp3
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
