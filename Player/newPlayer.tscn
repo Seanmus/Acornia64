@@ -728,7 +728,7 @@ _data = {
 "win": SubResource("Animation_wso6x")
 }
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_7nse8"]
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_702jc"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_iqq1t"]
 
@@ -814,7 +814,7 @@ libraries = {
 }
 
 [node name="AnimationTree" parent="acorn" instance=ExtResource("3_04y8n")]
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_7nse8")
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_702jc")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_2iij6")
