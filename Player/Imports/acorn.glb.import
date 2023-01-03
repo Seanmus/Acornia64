@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cm02gugiwa00h"
+uid="uid://qoh3nf7d6c53"
 path="res://godot/imported/acorn.glb-73f8fa700081e0649185d4e6ea9ff7c3.scn"
 
 [deps]
@@ -21,7 +21,7 @@ meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
 meshes/light_baking=1
-meshes/lightmap_texel_size=0.1
+meshes/lightmap_texel_size=0.2
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30

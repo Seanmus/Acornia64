@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cvnq0c5ig7eeb"]
+[gd_scene load_steps=24 format=3 uid="uid://cvnq0c5ig7eeb"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tgl53"]
 animation = &"die"
@@ -45,7 +45,11 @@ animation = &"win"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_880f3"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jfp6w"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2e2um"]
+states/Start/position = Vector2(115, 85)
 states/die/node = SubResource("AnimationNodeAnimation_tgl53")
 states/die/position = Vector2(1096, 75)
 states/doubleJump/node = SubResource("AnimationNodeAnimation_ndb6a")
@@ -56,8 +60,8 @@ states/walking/node = SubResource("AnimationNodeAnimation_epl0a")
 states/walking/position = Vector2(1275, 387)
 states/win/node = SubResource("AnimationNodeAnimation_e7mjk")
 states/win/position = Vector2(522, 452)
-transitions = ["jump", "walking", SubResource("AnimationNodeStateMachineTransition_ocfwx"), "walking", "jump", SubResource("AnimationNodeStateMachineTransition_86vmn"), "jump", "win", SubResource("AnimationNodeStateMachineTransition_wji3m"), "walking", "win", SubResource("AnimationNodeStateMachineTransition_mmnb5"), "jump", "die", SubResource("AnimationNodeStateMachineTransition_7t53a"), "walking", "die", SubResource("AnimationNodeStateMachineTransition_eb80w"), "doubleJump", "jump", SubResource("AnimationNodeStateMachineTransition_vbkvj"), "doubleJump", "win", SubResource("AnimationNodeStateMachineTransition_715q8"), "doubleJump", "walking", SubResource("AnimationNodeStateMachineTransition_0bqof"), "doubleJump", "die", SubResource("AnimationNodeStateMachineTransition_gaqyf"), "walking", "doubleJump", SubResource("AnimationNodeStateMachineTransition_s0ky5"), "jump", "doubleJump", SubResource("AnimationNodeStateMachineTransition_x1bud"), "die", "doubleJump", SubResource("AnimationNodeStateMachineTransition_klcft"), "die", "walking", SubResource("AnimationNodeStateMachineTransition_bpcmt"), "win", "jump", SubResource("AnimationNodeStateMachineTransition_880f3")]
-graph_offset = Vector2(10.199, 343)
+transitions = ["jump", "walking", SubResource("AnimationNodeStateMachineTransition_ocfwx"), "walking", "jump", SubResource("AnimationNodeStateMachineTransition_86vmn"), "jump", "win", SubResource("AnimationNodeStateMachineTransition_wji3m"), "walking", "win", SubResource("AnimationNodeStateMachineTransition_mmnb5"), "jump", "die", SubResource("AnimationNodeStateMachineTransition_7t53a"), "walking", "die", SubResource("AnimationNodeStateMachineTransition_eb80w"), "doubleJump", "jump", SubResource("AnimationNodeStateMachineTransition_vbkvj"), "doubleJump", "win", SubResource("AnimationNodeStateMachineTransition_715q8"), "doubleJump", "walking", SubResource("AnimationNodeStateMachineTransition_0bqof"), "doubleJump", "die", SubResource("AnimationNodeStateMachineTransition_gaqyf"), "walking", "doubleJump", SubResource("AnimationNodeStateMachineTransition_s0ky5"), "jump", "doubleJump", SubResource("AnimationNodeStateMachineTransition_x1bud"), "die", "doubleJump", SubResource("AnimationNodeStateMachineTransition_klcft"), "die", "walking", SubResource("AnimationNodeStateMachineTransition_bpcmt"), "win", "jump", SubResource("AnimationNodeStateMachineTransition_880f3"), "Start", "walking", SubResource("AnimationNodeStateMachineTransition_jfp6w")]
+graph_offset = Vector2(64.199, -198)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_tqk4a"]
 

@@ -10,12 +10,14 @@ var landing : bool
 var dead : bool
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-@onready var animationTree = $acorn/AnimationTree
+@onready var animationTree = $auriModel/AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
-@onready var anim = $acorn/AnimationPlayer
+@onready var anim = $auriModel/AnimationPlayer
 @onready var landSound = $LandSound
 @onready var runCloud = $runCloud
 @onready var jumpCloud = $jumpCloud
+@onready var auri = $auriModel
+
 var spawnPos;
 #Occurs when the game is loaded
 func _ready():
@@ -82,27 +84,27 @@ func _physics_process(delta):
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		#Turn right
 		if input_dir.x > 0 && input_dir.y == 0:
-			$acorn.rotation_degrees.y = -90
+			auri.rotation_degrees.y = -90
 		#Turn right forward	
 		if input_dir.x > 0 && input_dir.y < 0:
-			$acorn.rotation_degrees.y = -45
+			auri.rotation_degrees.y = -45
 		#Turn left	
 		if input_dir.x < 0 && input_dir.y == 0:
-			$acorn.rotation_degrees.y = 90
+			auri.rotation_degrees.y = 90
 		#Turn left forward	
 		if input_dir.x < 0 && input_dir.y < 0:
-			$acorn.rotation_degrees.y = 45
+			auri.rotation_degrees.y = 45
 		#	
 		if input_dir.y < 0 && input_dir.x == 0:
-			$acorn.rotation_degrees.y = 0
+			auri.rotation_degrees.y = 0
 			
 		if input_dir.x < 0 && input_dir.y > 0:
-			$acorn.rotation_degrees.y = 135	
+			auri.rotation_degrees.y = 135	
 			
 		if input_dir.y > 0 && input_dir.x == 0:
-			$acorn.rotation_degrees.y = 180
+			auri.rotation_degrees.y = 180
 		if input_dir.x > 0 && input_dir.y > 0:
-			$acorn.rotation_degrees.y = 225	
+			auri.rotation_degrees.y = 225	
 		
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
