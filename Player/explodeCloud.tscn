@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvmvh73ffunn6"]
+[gd_scene load_steps=5 format=3 uid="uid://bvmvh73ffunn6"]
+
+[ext_resource type="Script" path="res://Player/explodeCloud.gd" id="1_o4ftv"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
 emission_shape = 1
@@ -24,16 +26,21 @@ particles_anim_loop = false
 
 [sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
 material = SubResource("StandardMaterial3D_cejdx")
+orientation = 2
 
 [node name="jumpCloud" type="GPUParticles3D"]
 transform = Transform3D(0.355692, 0, 0, 0, 0.15653, 0, 0, 0, 0.355692, 0.0311819, -0.941365, -0.399482)
-emitting = false
 amount = 100
 lifetime = 0.4
 one_shot = true
 explosiveness = 1.0
 randomness = 1.0
 collision_base_size = 0.1
-trail_length_secs = 3.51
 process_material = SubResource("ParticlesMaterial_qbyin")
 draw_pass_1 = SubResource("QuadMesh_bu1i1")
+script = ExtResource("1_o4ftv")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

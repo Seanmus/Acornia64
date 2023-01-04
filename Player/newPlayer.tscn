@@ -1,11 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=13 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
 [ext_resource type="AudioStream" uid="uid://tp6w0yea4480" path="res://Audio/Effects/Land.wav" id="4_ocmxn"]
 [ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="5_olqky"]
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
-[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/explodeCloud.tscn" id="7_adlch"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
@@ -42,7 +41,7 @@ size = Vector2(1.335, 1.918)
 
 [node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
-floor_snap_length = 0.31
+floor_snap_length = 0.0
 platform_on_leave = 2
 script = ExtResource("1_c1cwn")
 
@@ -74,7 +73,8 @@ pitch_scale = 0.42
 stream = ExtResource("5_olqky")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.292421, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.765493, 0)
+light_color = Color(0, 0, 0, 1)
 light_energy = 1.87
 light_indirect_energy = 0.0
 light_negative = true
@@ -95,17 +95,12 @@ shape = SubResource("SphereShape3D_iqq1t")
 
 [node name="runCloud" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
-visible = false
 amount = 400
 lifetime = 0.16
 randomness = 1.0
 collision_base_size = 0.1
 process_material = SubResource("ParticlesMaterial_qbyin")
 draw_pass_1 = SubResource("QuadMesh_bu1i1")
-
-[node name="jumpCloud" parent="." instance=ExtResource("7_adlch")]
-visible = false
-amount = 400
 
 [node name="coinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ulqlb")

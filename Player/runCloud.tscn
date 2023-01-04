@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://2yrgce10oun1"]
 
-[sub_resource type="ParticlesMaterial" id="ParticlesMaterial_qbyin"]
+[sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
 emission_shape = 1
 emission_sphere_radius = 1.0
 direction = Vector3(0, 0, 0)
@@ -20,7 +20,7 @@ particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="QuadMesh" id="QuadMesh_bu1i1"]
-material = SubResource( "StandardMaterial3D_cejdx" )
+material = SubResource("StandardMaterial3D_cejdx")
 
 [node name="runCloud" type="GPUParticles3D"]
 transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
@@ -28,6 +28,5 @@ amount = 200
 lifetime = 0.4
 randomness = 1.0
 collision_base_size = 0.1
-trail_length_secs = 0.01
-process_material = SubResource( "ParticlesMaterial_qbyin" )
-draw_pass_1 = SubResource( "QuadMesh_bu1i1" )
+process_material = SubResource("ParticlesMaterial_qbyin")
+draw_pass_1 = SubResource("QuadMesh_bu1i1")

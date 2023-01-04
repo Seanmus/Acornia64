@@ -15,8 +15,9 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var anim = $auriModel/AnimationPlayer
 @onready var landSound = $LandSound
 @onready var runCloud = $runCloud
-@onready var jumpCloud = $jumpCloud
 @onready var auri = $auriModel
+@onready var poofCloud = load("res://Player/explodeCloud.tscn")
+
 
 var spawnPos;
 #Occurs when the game is loaded
@@ -43,6 +44,21 @@ func _unhandled_input(event):
 			rotate_y(-event.relative.x * mouse_sensitivty)
 			$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
 			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, 0.9)
+			
+			
+func jump():
+	if velocity.y >= 0:
+		animationState.travel("jump")
+		velocity.y += JUMP_VELOCITY
+	else:
+		velocity.y = JUMP_VELOCITY
+		animationState.travel("jump")
+		$JumpSound.play()
+
+func addPoofCloud():
+	var cloud = poofCloud.instantiate()
+	$SpotLight3D.add_child(cloud)
+		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
 	if Input.is_action_pressed("sprint"):
@@ -57,29 +73,21 @@ func _physics_process(delta):
 				animationState.travel("walking")
 			if landing:
 				landSound.play()
-				jumpCloud.emitting = true
+				addPoofCloud()
 				landing = false	
 		else:
 			if Input.is_action_just_pressed("jump") && canDoubleJump && !dead:
 				canDoubleJump = false
-				jumpCloud.emitting = true
-				if velocity.y >= 0:
-					velocity.y += JUMP_VELOCITY
-				else:
-					velocity.y = JUMP_VELOCITY
-				animationState.travel("doubleJump")
-				$JumpSound.play()
+				addPoofCloud()
+				jump()
 			velocity.y -= gravity * 1.2 * delta
 			if(velocity.y < 0):
 				velocity.y -= gravity * 5 * delta
 			if !landing:
 				landing = true
-
 		# Handle Jump.
 		if Input.is_action_just_pressed("jump") and is_on_floor():
-			animationState.travel("jump")
-			velocity.y = JUMP_VELOCITY
-			$JumpSound.play()
+			jump()
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		#Turn right
