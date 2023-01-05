@@ -167,10 +167,10 @@ transform = Transform3D(1.75919, 0, 0, 0, 17.2274, 0, 0, 0, 1.75919, 281.596, 43
 transform = Transform3D(1.75919, 0, 0, 0, 17.2274, 0, 0, 0, 1.75919, 281.596, 44.2394, 268.149)
 
 [node name="Long6" parent="Blocks" instance=ExtResource("4_mwucn")]
-transform = Transform3D(1, 0, 0, 0, 0.92436, 0.381522, 0, -0.381522, 0.92436, 282.419, 32.4644, -57.9108)
+transform = Transform3D(1.00403, 0, 0, 0, 0.92922, 0.383528, 0, -0.383528, 0.92922, 282.419, 32.4538, -57.9365)
 
 [node name="Long7" parent="Blocks" instance=ExtResource("4_mwucn")]
-transform = Transform3D(1, 0, 0, 0, 0.92436, 0.381522, 0, -0.381522, 0.92436, 282.419, 37.7357, -45.1394)
+transform = Transform3D(1.00403, 0, 0, 0, 0.92922, 0.383528, 0, -0.383528, 0.92922, 282.419, 37.7463, -45.1137)
 
 [node name="Long3" parent="Blocks" instance=ExtResource("4_mwucn")]
 transform = Transform3D(0.445943, 0.279935, -0.850159, -0.531665, 0.846955, -1.38371e-08, 0.720047, 0.452, 0.526525, 7.82695, 0.707472, -81.2158)
@@ -384,6 +384,9 @@ transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 94.
 
 [node name="cheese33" parent="Cheese" instance=ExtResource("13_dbood")]
 transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 97.6559, 300.693)
+
+[node name="tire" parent="." instance=ExtResource("9_0l7ae")]
+transform = Transform3D(2.40805, 0, 0, 0, 2.40805, 0, 0, 0, 2.40805, 282.251, 27.3041, -74.8829)
 
 [connection signal="body_entered" from="Blocks/Death" to="Player" method="Respawn"]
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]

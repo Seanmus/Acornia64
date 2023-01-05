@@ -45,14 +45,14 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mdpdf"]
-size = Vector3(1, 1.61056, 1)
+size = Vector3(1, 1.15414, 1)
 
 [node name="mushroom" type="Node3D"]
 transform = Transform3D(14.7315, 0, 0, 0, 14.7315, 0, 0, 0, 14.7315, 0, 27.5185, 0)
 script = ExtResource("1_lxx2y")
 
 [node name="collider" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.208, 0, 0, 0, 1, 0, 0.033214, 0)
+transform = Transform3D(1, 0, 0, 0, 0.208, 0, 0, 0, 1, 0, 0.0669541, 0)
 
 [node name="23547" type="CollisionShape3D" parent="collider"]
 shape = SubResource("ConcavePolygonShape3D_o0spx")
@@ -71,7 +71,7 @@ stream = ExtResource("2_sk03l")
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, -0.675482, 0)
 
 [node name="CollisionShape3d" type="CollisionShape3D" parent="MeshInstance3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.101609, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15598, 0)
 shape = SubResource("BoxShape3D_mdpdf")
 
 [connection signal="body_entered" from="collider" to="." method="_on_static_body_3d_body_entered"]

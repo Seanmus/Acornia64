@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cmhce11ja26gj"]
 
 [ext_resource type="PackedScene" uid="uid://cn4e8rnx1wmb7" path="res://WorldBlocks/Forest/mushroom.tscn" id="1_cxihw"]
 [ext_resource type="PackedScene" uid="uid://bwhgtiehdvn0x" path="res://FlowerPower/tree_base.tscn" id="2_hn4nd"]
