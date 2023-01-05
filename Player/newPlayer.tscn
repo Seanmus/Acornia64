@@ -73,7 +73,7 @@ pitch_scale = 0.42
 stream = ExtResource("5_olqky")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.765493, 0)
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -1.37231, 0)
 light_color = Color(0, 0, 0, 1)
 light_energy = 1.87
 light_indirect_energy = 0.0
