@@ -37,7 +37,8 @@ particles_anim_loop = false
 
 [sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
 material = SubResource("StandardMaterial3D_cejdx")
-size = Vector2(1.335, 1.918)
+size = Vector2(1.551, 0.406)
+orientation = 2
 
 [node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
