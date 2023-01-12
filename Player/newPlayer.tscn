@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=14 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
@@ -39,6 +39,8 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_cejdx")
 size = Vector2(1.551, 0.406)
 orientation = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tli1s"]
 
 [node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
@@ -109,6 +111,10 @@ volume_db = -5.0
 
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57631, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.21219, 0, 0, 0, 0.335724, 0, -0.333264, 0)
+shape = SubResource("BoxShape3D_tli1s")
 
 [connection signal="finished" from="DeathSound" to="." method="_on_death_sound_finished"]
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
