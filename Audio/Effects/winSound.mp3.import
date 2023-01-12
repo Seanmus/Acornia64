@@ -2,7 +2,7 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://b1vg0cresyin2"
+uid="uid://d3qx4ot2deytm"
 path="res://godot/imported/winSound.mp3-fac228cec3bf85f012557f54dc79695c.mp3str"
 
 [deps]
@@ -13,7 +13,7 @@ dest_files=["res://godot/imported/winSound.mp3-fac228cec3bf85f012557f54dc79695c.
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

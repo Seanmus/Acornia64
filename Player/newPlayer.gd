@@ -120,11 +120,6 @@ func _physics_process(delta):
 			#Forward
 			velocity.z = direction.z * speed * sprintMultiplier
 			velocity.x = direction.x * speed * sprintMultiplier 
-			if Input.get_axis("left", "right") != 0:
-				pass
-				#velocity.z = -direction.x * speed * sprintMultiplier * 0.3
-				#velocity.x = direction.z * speed * sprintMultiplier * 0.3
-				#rotate_y(-3 * Input.get_axis("left", "right") * delta)
 
 			if is_on_floor() && Input.is_action_pressed("sprint"):
 				runCloud.emitting = true
@@ -138,9 +133,8 @@ func _physics_process(delta):
 
 #Starts the win animation
 func Win():
-	print("win")
-	#$acorn/AnimationPlayer.play("win")
 	animationState.travel("win")
+	Manager._win()
 
 func Reset():
 	$acorn/AnimationPlayer.play("Reset")
