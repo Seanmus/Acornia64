@@ -139,8 +139,9 @@ func Win():
 func Reset():
 	$acorn/AnimationPlayer.play("Reset")
 	$acorn/AnimationPlayer.play("walking")
+	
 #Teleports the player back to its spawn position on player death.
-func _on_death_sound_finished():
+func _on_deathFinished():
 	global_transform = spawnPos
 	dead = false
 
@@ -148,10 +149,9 @@ func _on_death_sound_finished():
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("shot"):
 		animationState.travel("die")
+		$auriModel/AnimationPlayer.play("die")
 		$DeathSound.play()
 		dead = true
-	#elif area.is_in_group("cheese"):
-		#$coinSound.play()
 	
 
 
