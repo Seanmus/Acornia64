@@ -307,6 +307,4 @@ billboard = 1
 text = "Plant seeds to grow
 all of the sunflowers"
 
-[connection signal="body_entered" from="Death" to="Player" method="Respawn"]
-
 [editable path="FlowerPots/flowerPot3"]

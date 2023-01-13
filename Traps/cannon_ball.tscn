@@ -80,7 +80,7 @@ _data = {
 "shoot": SubResource("Animation_e1nd2")
 }
 
-[node name="cannonBall" type="Area3D" groups=["shot"]]
+[node name="cannonBall" type="Area3D" groups=["deadly"]]
 transform = Transform3D(0.736178, 0, 0, 0, 0.736178, 0, 0, 0, 0.736178, 0, 0, 0)
 script = ExtResource("1_0cr5w")
 

@@ -32,10 +32,11 @@ func Bounce():
 	animationState.travel("jump")
 	
 #Starts the proccess of the players death	
-func Respawn(_body):
-	if _body.is_in_group("Player"):
-		animationState.travel("die")
-		$DeathSound.play()
+func respawn():
+	animationState.travel("die")
+	$auriModel/AnimationPlayer.play("die")
+	$DeathSound.play()
+	dead = true
 		
 #Occurs when an input that has not been previously handled occurs.
 func _unhandled_input(event):
@@ -47,6 +48,8 @@ func _unhandled_input(event):
 			
 			
 func jump():
+	if dead:
+		return
 	if velocity.y >= 0:
 		animationState.travel("jump")
 		velocity.y += JUMP_VELOCITY
@@ -147,11 +150,8 @@ func _on_deathFinished():
 
 #Occurs when another area enters the player area
 func _on_area_3d_area_entered(area):
-	if area.is_in_group("shot"):
-		animationState.travel("die")
-		$auriModel/AnimationPlayer.play("die")
-		$DeathSound.play()
-		dead = true
+	if area.is_in_group("deadly"):
+		respawn()
 	
 
 

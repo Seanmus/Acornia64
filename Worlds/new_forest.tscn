@@ -357,7 +357,6 @@ transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 345.193, 24.3868, 193.6
 
 [node name="UI" parent="." instance=ExtResource("14_5i4fd")]
 
-[connection signal="body_entered" from="Death" to="Player" method="Respawn"]
 [connection signal="won" from="endLevel" to="Player" method="Win"]
 
 [editable path="UI"]

@@ -2,8 +2,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j1gnj"]
 
-[node name="Death" type="Area3D"]
+[node name="Death" type="Area3D" groups=["deadly"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(42.6107, 0, 0, 0, 1.33469, 0, 0, 0, 42.6107, 0, 0, 0)
-shape = SubResource( "BoxShape3D_j1gnj" )
+shape = SubResource("BoxShape3D_j1gnj")

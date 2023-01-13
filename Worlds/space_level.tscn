@@ -400,7 +400,6 @@ transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 97.
 [node name="tire" parent="." instance=ExtResource("9_0l7ae")]
 transform = Transform3D(2.40805, 0, 0, 0, 2.40805, 0, 0, 0, 2.40805, 282.251, 27.3041, -74.8829)
 
-[connection signal="body_entered" from="Blocks/Death" to="Player" method="Respawn"]
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 
 [editable path="BounceBlocks/BouncePillar"]
