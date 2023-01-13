@@ -56,6 +56,7 @@ func jump():
 	$JumpSound.play()
 	if velocity.y >= 0:
 		animationState.travel("jump")
+		anim.play("jump")
 		velocity.y += JUMP_VELOCITY
 	else:
 		velocity.y = JUMP_VELOCITY
@@ -126,7 +127,7 @@ func _physics_process(delta):
 			velocity.z = direction.z * speed * sprintMultiplier
 			velocity.x = direction.x * speed * sprintMultiplier 
 
-			if is_on_floor() && Input.is_action_pressed("sprint"):
+			if is_on_floor() && Input.is_action_pressed("sprint") && (velocity.x !=0 || velocity.z != 0):
 				runCloud.emitting = true
 			else:
 				runCloud.emitting = false
