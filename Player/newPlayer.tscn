@@ -41,6 +41,7 @@ size = Vector2(1.551, 0.406)
 orientation = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tli1s"]
+size = Vector3(0.171077, 1, 0.730695)
 
 [node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
@@ -75,19 +76,6 @@ pitch_scale = 0.42
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_olqky")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -1.37231, 0)
-light_color = Color(0, 0, 0, 1)
-light_energy = 1.87
-light_indirect_energy = 0.0
-light_negative = true
-light_cull_mask = 4294443007
-shadow_reverse_cull_face = true
-spot_range = 18.4
-spot_attenuation = 0.277392
-spot_angle = 28.6
-spot_angle_attenuation = 0.9595
-
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
 
@@ -98,6 +86,7 @@ shape = SubResource("SphereShape3D_iqq1t")
 
 [node name="runCloud" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
+visible = false
 amount = 400
 lifetime = 0.16
 randomness = 1.0
@@ -113,8 +102,21 @@ volume_db = -5.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57631, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.21219, 0, 0, 0, 0.335724, 0, -0.333264, 0)
+transform = Transform3D(0.998498, 0.0639569, 0.00496229, -0.0543435, 1.19773, 0.0483756, -0.00700197, -0.17538, 0.332183, 0, -0.346082, 0)
 shape = SubResource("BoxShape3D_tli1s")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.843945, 0)
+light_energy = 4.646
+light_indirect_energy = 2.103
+light_size = 0.085
+light_negative = true
+light_specular = 0.169
+shadow_reverse_cull_face = true
+spot_range = 18.4
+spot_attenuation = 0.233259
+spot_angle = 32.18
+spot_angle_attenuation = 0.9595
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]

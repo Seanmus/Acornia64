@@ -32,7 +32,7 @@ func Bounce():
 	animationState.travel("jump")
 	
 #Starts the proccess of the players death	
-func respawn():
+func kill():
 	animationState.travel("die")
 	$auriModel/AnimationPlayer.play("die")
 	$DeathSound.play()
@@ -63,7 +63,7 @@ func jump():
 
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
-	$SpotLight3D.add_child(cloud)
+	$runCloud.add_child(cloud)
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
@@ -153,8 +153,4 @@ func _on_deathFinished():
 #Occurs when another area enters the player area
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("deadly"):
-		respawn()
-	
-
-
-	
+		kill()
