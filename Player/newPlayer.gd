@@ -36,6 +36,9 @@ func respawn():
 	animationState.travel("die")
 	$auriModel/AnimationPlayer.play("die")
 	$DeathSound.play()
+	velocity.y = 0
+	velocity.x = 0
+	velocity.z = 0
 	dead = true
 		
 #Occurs when an input that has not been previously handled occurs.
@@ -50,13 +53,13 @@ func _unhandled_input(event):
 func jump():
 	if dead:
 		return
+	$JumpSound.play()
 	if velocity.y >= 0:
 		animationState.travel("jump")
 		velocity.y += JUMP_VELOCITY
 	else:
 		velocity.y = JUMP_VELOCITY
 		animationState.travel("jump")
-		$JumpSound.play()
 
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
@@ -78,6 +81,8 @@ func _physics_process(delta):
 				landSound.play()
 				addPoofCloud()
 				landing = false	
+			if Input.is_action_just_pressed("jump"):
+				jump()
 		else:
 			if Input.is_action_just_pressed("jump") && canDoubleJump && !dead:
 				canDoubleJump = false
@@ -88,9 +93,6 @@ func _physics_process(delta):
 				velocity.y -= gravity * 5 * delta
 			if !landing:
 				landing = true
-		# Handle Jump.
-		if Input.is_action_just_pressed("jump") and is_on_floor():
-			jump()
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		#Turn right
