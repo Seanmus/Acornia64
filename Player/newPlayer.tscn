@@ -102,20 +102,19 @@ volume_db = -5.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57631, 0)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.998498, 0.0639569, 0.00496229, -0.0543435, 1.19773, 0.0483756, -0.00700197, -0.17538, 0.332183, 0, -0.346082, 0)
+transform = Transform3D(0.998498, 0.0639569, 0.00496229, -0.0547904, 1.16849, 0.0874124, -0.000510577, -0.316125, 0.324107, -0.00024122, -0.338866, 0.0008495)
 shape = SubResource("BoxShape3D_tli1s")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -0.843945, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.103, 0)
 light_energy = 4.646
 light_indirect_energy = 2.103
 light_size = 0.085
 light_negative = true
 light_specular = 0.169
 shadow_reverse_cull_face = true
-spot_range = 18.4
-spot_attenuation = 0.233259
-spot_angle = 32.18
+spot_range = 2.952
+spot_angle = 64.37
 spot_angle_attenuation = 0.9595
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
