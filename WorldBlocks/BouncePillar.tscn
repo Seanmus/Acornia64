@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dj5qvf27mk1yp"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="1_jionq"]
-[ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/tire.tscn" id="2_ugi01"]
+[ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="2_ugi01"]
 
 [node name="BouncePillar" type="Node3D"]
 

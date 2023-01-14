@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dtcwujpbobr1o"]
+[gd_scene load_steps=13 format=3]
 
-[ext_resource type="Script" path="res://FlowerPower/flower_pot.gd" id="1_n43jj"]
-[ext_resource type="PackedScene" uid="uid://tfv2r57qdmok" path="res://FlowerPower/sunflower.tscn" id="2_0rap3"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/flower_pot.gd" id="1_n43jj"]
+[ext_resource type="PackedScene" uid="uid://tfv2r57qdmok" path="res://WorldBlocks/Interactive/sunflower.tscn" id="2_0rap3"]
 [ext_resource type="AudioStream" uid="uid://gkhtfsmk3exg" path="res://Audio/Effects/collect.wav" id="3_32nj2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74m8e"]

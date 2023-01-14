@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfflm1e5s65r5"]
 
-[ext_resource type="PackedScene" uid="uid://chyyuiwoyeb5j" path="res://FlowerPower/imports/platflowersBillboard.glb" id="1_et7q1"]
+[ext_resource type="PackedScene" uid="uid://chyyuiwoyeb5j" path="res://FlowerPower/imports/platflowersBillboard.glb" id="1_vmnua"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6l1ie"]
 data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1)
 
-[node name="platflowersBillboard" instance=ExtResource( "1_et7q1" )]
+[node name="platflowersBillboard" instance=ExtResource("1_vmnua")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="@@89468" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
-shape = SubResource( "ConcavePolygonShape3D_6l1ie" )
+shape = SubResource("ConcavePolygonShape3D_6l1ie")

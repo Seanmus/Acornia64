@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://r6hw0333avyg"]
+[gd_scene load_steps=8 format=3]
 
-[ext_resource type="Script" path="res://FlowerPower/sunflower_seed.gd" id="1_6wvcf"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/sunflower_seed.gd" id="1_6wvcf"]
 [ext_resource type="AudioStream" uid="uid://gkhtfsmk3exg" path="res://Audio/Effects/collect.wav" id="2_a8lhl"]
 [ext_resource type="PackedScene" uid="uid://b2t6i52mpg12l" path="res://FlowerPower/imports/sunflowerSeed.glb" id="3_mof0m"]
 

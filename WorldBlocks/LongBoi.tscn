@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2tiageipj42t"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://FlowerPower/green_bricks.tscn" id="1_pvl2e"]
+[ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_pvl2e"]
 
 [node name="LongBoi" type="Node3D"]
 

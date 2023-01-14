@@ -1,23 +1,23 @@
-[gd_scene load_steps=20 format=3 uid="uid://b2flel5rhiant"]
+[gd_scene load_steps=20 format=3 uid="uid://dey3jnwy7ideg"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_8e3gr"]
-[ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://FlowerPower/green_bricks.tscn" id="1_x40l4"]
+[ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_x40l4"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="2_vemqm"]
-[ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/death.tscn" id="3_75kvb"]
+[ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_75kvb"]
 [ext_resource type="PackedScene" uid="uid://ct7mwusx3nm41" path="res://FlowerPower/tree.tscn" id="4_ilknr"]
-[ext_resource type="PackedScene" uid="uid://ioatt6ckkfy3" path="res://FlowerPower/green_brick_corner.tscn" id="4_np0o4"]
+[ext_resource type="PackedScene" uid="uid://ioatt6ckkfy3" path="res://WorldBlocks/green_brick_corner.tscn" id="4_np0o4"]
 [ext_resource type="PackedScene" uid="uid://bbin276ks6el2" path="res://WorldBlocks/BigBrick.tscn" id="5_yiq3h"]
 [ext_resource type="PackedScene" uid="uid://cmwjm3gguf3fi" path="res://FlowerPower/sky.tscn" id="6_76bh7"]
-[ext_resource type="PackedScene" uid="uid://b2tiageipj42t" path="res://WorldBlocks/LongBoi.tscn" id="6_ilt61"]
-[ext_resource type="PackedScene" uid="uid://b1hh8ivyl1uba" path="res://FlowerPower/up_down.tscn" id="7_g10tq"]
-[ext_resource type="PackedScene" uid="uid://r6hw0333avyg" path="res://FlowerPower/sunflower_seed.tscn" id="9_3dkmm"]
-[ext_resource type="PackedScene" uid="uid://buebv7vsgn6hc" path="res://FlowerPower/circle_bricks.tscn" id="10_auh44"]
-[ext_resource type="PackedScene" uid="uid://dtcwujpbobr1o" path="res://FlowerPower/flower_pot.tscn" id="11_ogieb"]
-[ext_resource type="PackedScene" uid="uid://bwhgtiehdvn0x" path="res://FlowerPower/tree_base.tscn" id="12_srass"]
-[ext_resource type="PackedScene" uid="uid://cmhce11ja26gj" path="res://FlowerPower/MushRoomBounce.tscn" id="13_457dw"]
-[ext_resource type="PackedScene" uid="uid://cgdgll5oyoer7" path="res://FlowerPower/in_out.tscn" id="16_fph11"]
-[ext_resource type="PackedScene" uid="uid://bjs7yqqn42gwf" path="res://FlowerPower/double_jump_billboard.tscn" id="17_0bb88"]
-[ext_resource type="PackedScene" uid="uid://bfflm1e5s65r5" path="res://FlowerPower/platflowers_billboard.tscn" id="18_5d5f5"]
+[ext_resource type="PackedScene" path="res://WorldBlocks/LongBoi.tscn" id="6_ilt61"]
+[ext_resource type="PackedScene" uid="uid://b1hh8ivyl1uba" path="res://WorldBlocks/MovingPlatforms/up_down.tscn" id="7_g10tq"]
+[ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/sunflower_seed.tscn" id="9_3dkmm"]
+[ext_resource type="PackedScene" uid="uid://buebv7vsgn6hc" path="res://WorldBlocks/circle_bricks.tscn" id="10_auh44"]
+[ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/flower_pot.tscn" id="11_ogieb"]
+[ext_resource type="PackedScene" uid="uid://bwhgtiehdvn0x" path="res://WorldBlocks/tree_base.tscn" id="12_srass"]
+[ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/MushRoomBounce.tscn" id="13_457dw"]
+[ext_resource type="PackedScene" uid="uid://bjs7yqqn42gwf" path="res://UI/double_jump_billboard.tscn" id="17_0bb88"]
+[ext_resource type="PackedScene" uid="uid://bfflm1e5s65r5" path="res://UI/platflowers_billboard.tscn" id="18_5d5f5"]
+[ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="18_67700"]
 
 [sub_resource type="Environment" id="Environment_ngah3"]
 background_mode = 1
@@ -186,7 +186,7 @@ transform = Transform3D(244.457, 0, 0, 0, 244.457, 0, 0, 0, 244.457, 0, 0, 0)
 [node name="FlowerPots" type="Node" parent="."]
 
 [node name="flowerPot" parent="FlowerPots" instance=ExtResource("11_ogieb")]
-transform = Transform3D(0, 0, 2.23113, 0, 2.23113, 0, -2.23113, 0, 0, 18.0698, 1.63146, -2.93813)
+transform = Transform3D(0, 0, 2.23113, 0, 2.23113, 0, -2.23113, 0, 0, 22.355, 1.63146, -2.93813)
 
 [node name="flowerPot6" parent="FlowerPots" instance=ExtResource("11_ogieb")]
 transform = Transform3D(0, 0, 2.23113, 0, 2.23113, 0, -2.23113, 0, 0, -12.6984, 46.307, -5.86631)
@@ -209,7 +209,7 @@ transform = Transform3D(2.20834, 0, -0.318108, 0, 2.23113, 0, 0.318108, 0, 2.208
 [node name="SunflowerSeeds" type="Node3D" parent="."]
 
 [node name="sunflowerSeed" parent="SunflowerSeeds" instance=ExtResource("9_3dkmm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.5537, -0.283302, -4.03777)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1909, -0.283302, 8.03072)
 
 [node name="sunflowerSeed6" parent="SunflowerSeeds" instance=ExtResource("9_3dkmm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.3428, 54.8787, -17.9644)
@@ -225,9 +225,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46852, 26.6364, 57.0168)
 
 [node name="sunflowerSeed5" parent="SunflowerSeeds" instance=ExtResource("9_3dkmm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.3882, 7.89561, -98.3003)
-
-[node name="InOut" parent="." instance=ExtResource("16_fph11")]
-transform = Transform3D(0.154369, 0, 2.53408, 0, 2.53877, 0, -2.53408, 0, 0.154369, -40.5209, 57.4389, -5.37614)
 
 [node name="doubleJumpBillboard" parent="." instance=ExtResource("17_0bb88")]
 transform = Transform3D(2.25205, 0, 0, 0, 2.25205, 0, 0, 0, 2.25205, 36.4863, 8.58582, -7.16566)
@@ -301,10 +298,73 @@ billboard = 1
 text = "You can double jump!"
 
 [node name="lblPlantSeeds" type="Label3D" parent="."]
-transform = Transform3D(0.188807, 0, 0, 0, 0.188807, 0, 0, 0, 0.188807, 23.2936, 7.52761, -4.31836)
+transform = Transform3D(0.188807, 0, 0, 0, 0.188807, 0, 0, 0, 0.188807, 27.3184, 7.52761, -2.82574)
 pixel_size = 0.1
 billboard = 1
-text = "Plant seeds to grow
+text = "Plant seeds by walking into flower pots to grow
 all of the sunflowers"
+
+[node name="greenBricks" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4936, -0.122484, 23.0757)
+
+[node name="greenBricks2" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4936, -0.122484, 16.1965)
+
+[node name="greenBricks3" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4936, -0.122484, 9.36003)
+
+[node name="greenBricks4" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4936, -0.122484, 2.54629)
+
+[node name="greenBricks5" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4936, -0.122484, -4.33546)
+
+[node name="greenBricks15" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, -0.00534067, -0.999986, 0, 0.999986, -0.00534067, 36.4936, 1.77031, -8.86631)
+
+[node name="greenBricks16" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, -0.00534067, -0.999986, 0, 0.999986, -0.00534067, 36.4936, 8.65196, -8.82956)
+
+[node name="greenBricks6" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6284, -0.122484, 2.54629)
+
+[node name="greenBricks7" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6284, -0.122484, -4.33546)
+
+[node name="greenBricks8" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8231, -0.122484, 2.54629)
+
+[node name="greenBricks9" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8231, -0.122484, -4.33546)
+
+[node name="greenBricks10" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6284, -0.122484, -11.2273)
+
+[node name="greenBricks11" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8231, -0.122484, -11.2273)
+
+[node name="greenBricks12" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9426, -0.122484, 2.54629)
+
+[node name="greenBricks13" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9426, -0.122484, -4.33546)
+
+[node name="greenBricks14" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9426, -0.122484, -11.2273)
+
+[node name="BigBrick" parent="." instance=ExtResource("5_yiq3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.3559, 0, -96.8644)
+
+[node name="LargeTile2" parent="." instance=ExtResource("18_67700")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.4351, 17.7666, -103.234)
+
+[node name="LargeTile3" parent="." instance=ExtResource("18_67700")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.4351, 6.76665, -103.234)
+
+[node name="LargeTile4" parent="." instance=ExtResource("18_67700")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2643, 7.22674, -53.2629)
+
+[node name="LargeTile5" parent="." instance=ExtResource("18_67700")]
+transform = Transform3D(0.713495, 0, 0.70066, 0, 1, 0, -0.70066, 0, 0.713495, -0.608041, 15.4055, -90.9448)
 
 [editable path="FlowerPots/flowerPot3"]

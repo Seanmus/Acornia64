@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dohg1fjqe6a1g"]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Texture2D" uid="uid://4q1qry2cbxwo" path="res://Textures/cheese.png" id="1_fvdsd"]
-[ext_resource type="Script" path="res://WorldBlocks/cheese.gd" id="1_jq5t0"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/cheese.gd" id="1_jq5t0"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1y7ae"]
 
