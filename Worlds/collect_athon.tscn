@@ -145,7 +145,7 @@ transform = Transform3D(0.27213, 0.284366, -0.919283, 0.320924, 0.87382, 0.36530
 transform = Transform3D(-0.127308, 0.26551, -0.955666, -0.433946, 0.851489, 0.294375, 0.891899, 0.452184, 0.00681585, -52.7787, 16.1628, 42.9476)
 
 [node name="LongBoi2" parent="Blocks" instance=ExtResource("6_ilt61")]
-transform = Transform3D(0.999996, -0.00104787, -0.00268242, 2.53804e-08, 0.93145, -0.363869, 0.00287972, 0.363867, 0.931446, 20.2226, 3.80767, -29.6575)
+transform = Transform3D(0.999996, -0.00104787, -0.00268242, 2.53804e-08, 0.93145, -0.363869, 0.00287972, 0.363867, 0.931446, 22.8984, 3.71157, -31.5903)
 
 [node name="LongBoi7" parent="Blocks" instance=ExtResource("6_ilt61")]
 transform = Transform3D(0.999636, -0.0125208, 0.0238982, 0, 0.885791, 0.464085, -0.0269795, -0.463916, 0.885468, -77.6521, 16.0371, 21.3077)
@@ -343,6 +343,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6284, -0.122484, -11.2273)
 [node name="greenBricks11" parent="." instance=ExtResource("1_x40l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8231, -0.122484, -11.2273)
 
+[node name="greenBricks17" parent="." instance=ExtResource("1_x40l4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8231, -0.122484, -18.0889)
+
 [node name="greenBricks12" parent="." instance=ExtResource("1_x40l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9426, -0.122484, 2.54629)
 
@@ -362,7 +365,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.4351, 17.7666, -103.234)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.4351, 6.76665, -103.234)
 
 [node name="LargeTile4" parent="." instance=ExtResource("18_67700")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2643, 7.22674, -53.2629)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2643, 7.36541, -50.9208)
 
 [node name="LargeTile5" parent="." instance=ExtResource("18_67700")]
 transform = Transform3D(0.713495, 0, 0.70066, 0, 1, 0, -0.70066, 0, 0.713495, -0.608041, 15.4055, -90.9448)
