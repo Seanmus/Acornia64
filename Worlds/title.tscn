@@ -276,6 +276,9 @@ libraries = {
 "": SubResource("AnimationLibrary_v6pmb")
 }
 
+[node name="loadingLBL" parent="UI/Transition" index="1"]
+layout_mode = 3
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.709571, -0.0614129, -0.701953, 0, 0.996194, -0.0871558, 0.704634, -0.0618431, -0.706871, 85.2412, 36.9344, 43.5572)
 top_level = true
