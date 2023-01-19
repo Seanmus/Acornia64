@@ -4,8 +4,7 @@
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
 [ext_resource type="Texture2D" uid="uid://bavvqgm4m3koh" path="res://UI/Images/acorn.png" id="3_lkekw"]
-[ext_resource type="Texture2D" uid="uid://bqxidk6atop1p" path="res://UI/Images/StartButton.png" id="4_8mixb"]
-[ext_resource type="Texture2D" uid="uid://e5gkrmdhynt4" path="res://UI/Images/Collect A Thon.png" id="5_o0xr0"]
+[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="5_edqm6"]
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="8_ex5jf"]
 [ext_resource type="PackedScene" uid="uid://cmmv8wa104po2" path="res://WorldBlocks/LongPink.tscn" id="9_pbc24"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
@@ -55,6 +54,10 @@ _data = {
 "RESET": SubResource("Animation_8ovnh"),
 "SunflowerSpin": SubResource("Animation_danpn")
 }
+
+[sub_resource type="Theme" id="Theme_vaimv"]
+default_font = ExtResource("5_edqm6")
+default_font_size = 30
 
 [sub_resource type="Animation" id="Animation_ew4jo"]
 length = 0.001
@@ -214,42 +217,6 @@ libraries = {
 "": SubResource("AnimationLibrary_2q7uk")
 }
 
-[node name="startBtn" type="Button" parent="UI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -297.5
-offset_top = -230.0
-offset_right = 297.5
-offset_bottom = -56.0
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.436025, 0.425863)
-pivot_offset = Vector2(297.5, 87)
-size_flags_horizontal = 4
-icon = ExtResource("4_8mixb")
-flat = true
-
-[node name="collectBtn" type="Button" parent="UI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -299.0
-offset_top = -160.0
-offset_right = 296.0
-offset_bottom = 23.0001
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.436025, 0.425863)
-pivot_offset = Vector2(297.5, 87)
-size_flags_horizontal = 4
-icon = ExtResource("5_o0xr0")
-flat = true
-
 [node name="TextureRect" type="TextureRect" parent="UI"]
 visible = false
 offset_top = 361.0
@@ -257,19 +224,33 @@ offset_right = 891.0
 offset_bottom = 544.0
 
 [node name="audioSlider" type="HSlider" parent="UI"]
-offset_left = 80.0
-offset_top = 449.0
-offset_right = 261.0
-offset_bottom = 464.0
+offset_left = 38.0
+offset_top = 444.0
+offset_right = 219.0
+offset_bottom = 460.0
 max_value = 1.0
 step = 0.05
 value = 0.8
 
+[node name="startBtn" type="Button" parent="UI"]
+offset_left = 35.0
+offset_top = 256.0
+offset_right = 152.0
+offset_bottom = 314.0
+theme = SubResource("Theme_vaimv")
+text = "Start"
+
+[node name="collectBtn" type="Button" parent="UI"]
+offset_left = 35.0
+offset_top = 319.0
+offset_right = 152.0
+offset_bottom = 377.0
+theme = SubResource("Theme_vaimv")
+text = "Collect A thon"
+
 [node name="Transition" parent="UI" instance=ExtResource("20_pne6m")]
 visible = true
-offset_top = -1.0
 offset_right = 640.0
-offset_bottom = 479.0
 
 [node name="AnimationPlayer" parent="UI/Transition" index="0"]
 libraries = {
@@ -280,7 +261,7 @@ libraries = {
 layout_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.709571, -0.0614129, -0.701953, 0, 0.996194, -0.0871558, 0.704634, -0.0618431, -0.706871, 85.2412, 36.9344, 43.5572)
+transform = Transform3D(0.656771, -0.269815, -0.704168, 0.0299284, 0.942388, -0.33318, 0.753496, 0.197748, 0.627008, 85.2411, 36.9344, 43.5572)
 top_level = true
 current = true
 
@@ -522,9 +503,9 @@ transform = Transform3D(9.86059, 0, 0, 0, 9.86059, 0, 0, 0, 9.86059, 313.635, 11
 [node name="mars" parent="." instance=ExtResource("17_kw5b8")]
 transform = Transform3D(60.9203, 0, 0, 0, 60.9203, 0, 0, 0, 60.9203, 313.579, 46.927, 384.524)
 
+[connection signal="value_changed" from="UI/audioSlider" to="UI" method="_on_audio_slider_value_changed"]
 [connection signal="pressed" from="UI/startBtn" to="UI" method="_on_button_pressed"]
 [connection signal="pressed" from="UI/collectBtn" to="UI" method="collect_athon"]
-[connection signal="value_changed" from="UI/audioSlider" to="UI" method="_on_audio_slider_value_changed"]
 [connection signal="animation_finished" from="UI/Transition/AnimationPlayer" to="UI" method="_on_animation_player_animation_finished"]
 
 [editable path="UI/Transition"]
