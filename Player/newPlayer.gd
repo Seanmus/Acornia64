@@ -64,7 +64,8 @@ func jump():
 
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
-	$runCloud.add_child(cloud)
+	$SpotLight3D.add_child(cloud)
+	
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
@@ -81,7 +82,6 @@ func _physics_process(delta):
 			if landing:
 				landSound.play()
 				animationState.travel("land");
-				addPoofCloud()
 				landing = false	
 			if Input.is_action_just_pressed("jump"):
 				jump()
@@ -121,17 +121,17 @@ func _physics_process(delta):
 		if input_dir.x > 0 && input_dir.y > 0:
 			auri.rotation_degrees.y = 225	
 		
+		
+		if is_on_floor() && Input.is_action_pressed("sprint") && (velocity.x !=0 || velocity.z != 0):
+			runCloud.emitting = true
+		else:
+			runCloud.emitting = false
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 
 			#Forward
 			velocity.z = direction.z * speed * sprintMultiplier
 			velocity.x = direction.x * speed * sprintMultiplier 
-
-			if is_on_floor() && Input.is_action_pressed("sprint") && (velocity.x !=0 || velocity.z != 0):
-				runCloud.emitting = true
-			else:
-				runCloud.emitting = false
 		else:
 			velocity.x = move_toward(velocity.x, 0, speed * sprintMultiplier)
 			velocity.z = move_toward(velocity.z, 0, speed * sprintMultiplier)

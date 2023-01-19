@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b760vvlgreu4y"]
+[gd_scene load_steps=18 format=3 uid="uid://b760vvlgreu4y"]
 
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="1_2tm05"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_a1lhs"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0umwj"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_ui6yu"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="14_5i4fd"]
+[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="16_m4wnl"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -29,24 +30,6 @@ adjustment_saturation = 1.7
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_vwc2s")
 nextLevel = "space_level"
-
-[node name="mushroom" parent="." instance=ExtResource("6_fjf3j")]
-transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 88.1521, 8.97728, -47.0136)
-
-[node name="mushroom2" parent="." instance=ExtResource("6_fjf3j")]
-transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 153.359, 8.97728, -47.0136)
-
-[node name="mushroom3" parent="." instance=ExtResource("6_fjf3j")]
-transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 250.927, 8.97728, 193.727)
-
-[node name="mushroom4" parent="." instance=ExtResource("6_fjf3j")]
-transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 299.825, 11.0218, 193.727)
-
-[node name="mushroom5" parent="." instance=ExtResource("6_fjf3j")]
-transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 321.968, 15.2677, 193.727)
-
-[node name="mushroom6" parent="." instance=ExtResource("6_fjf3j")]
-transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 345.308, 19.9311, 193.727)
 
 [node name="Player" parent="." instance=ExtResource("1_2tm05")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2352, 3, 5.49094)
@@ -257,6 +240,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.375, 12.2356, -50.1806)
 
 [node name="Bounce" type="Node3D" parent="."]
 
+[node name="mushroom" parent="Bounce" instance=ExtResource("6_fjf3j")]
+transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 88.1521, 8.97728, -47.0136)
+
+[node name="mushroom2" parent="Bounce" instance=ExtResource("6_fjf3j")]
+transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 153.359, 8.97728, -47.0136)
+
+[node name="mushroom3" parent="Bounce" instance=ExtResource("6_fjf3j")]
+transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 250.927, 8.97728, 193.727)
+
+[node name="mushroom4" parent="Bounce" instance=ExtResource("6_fjf3j")]
+transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 299.825, 11.0218, 193.727)
+
+[node name="mushroom5" parent="Bounce" instance=ExtResource("6_fjf3j")]
+transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 321.968, 15.2677, 193.727)
+
+[node name="mushroom6" parent="Bounce" instance=ExtResource("6_fjf3j")]
+transform = Transform3D(7.37504, 0, 0, 0, 7.37504, 0, 0, 0, 7.37504, 345.308, 19.9311, 193.727)
+
 [node name="Cheese" type="Node3D" parent="."]
 
 [node name="cheese" parent="Cheese" instance=ExtResource("13_ui6yu")]
@@ -356,6 +357,50 @@ transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 322.16, 28.7196, 193.61
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 345.193, 24.3868, 193.611)
 
 [node name="UI" parent="." instance=ExtResource("14_5i4fd")]
+
+[node name="timeLabel" parent="UI" index="0"]
+visible = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 44.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.85098, 0.231373, 0.721569, 1)
+
+[node name="SprintLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9485, 14.0621, -28.8612)
+pixel_size = 0.02
+billboard = 1
+text = "Press Shift To Sprint!"
+font = ExtResource("16_m4wnl")
+font_size = 64
+
+[node name="SprintLabel2" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.3108, 27.151, -45.1089)
+pixel_size = 0.02
+billboard = 1
+text = "You can Also Double Jump!"
+font = ExtResource("16_m4wnl")
+font_size = 64
+
+[node name="MouseControls" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34681, 7.76006, -13.7909)
+pixel_size = 0.02
+billboard = 1
+text = "Rotate the Camera Using your mouse"
+font = ExtResource("16_m4wnl")
+font_size = 64
+
+[node name="MouseControls2" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43444, 7.76006, 6.99239)
+pixel_size = 0.02
+billboard = 1
+text = "Nice!"
+font = ExtResource("16_m4wnl")
+font_size = 64
 
 [connection signal="won" from="endLevel" to="Player" method="Win"]
 
