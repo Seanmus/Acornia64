@@ -400,6 +400,9 @@ transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 97.
 [node name="tire" parent="." instance=ExtResource("9_0l7ae")]
 transform = Transform3D(1.91416, 0, 0, 0, 2.66142, 0, 0, 0, 1.84589, 282.251, 27.3041, -74.8829)
 
+[node name="purpleBricks" parent="." instance=ExtResource("3_i4c1r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.389, 75.1201, 296.843)
+
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 
 [editable path="BounceBlocks/BouncePillar"]

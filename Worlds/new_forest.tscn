@@ -211,9 +211,6 @@ transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -4
 
 [node name="Cannons" type="Node3D" parent="."]
 
-[node name="cannon" parent="Cannons" instance=ExtResource("8_15aww")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.608, 12.2356, -50.5593)
-
 [node name="cannon2" parent="Cannons" instance=ExtResource("8_15aww")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 123.34, 12.2356, -41.983)
 
