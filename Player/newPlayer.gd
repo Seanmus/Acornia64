@@ -80,6 +80,7 @@ func _physics_process(delta):
 				animationState.travel("walking")
 			if landing:
 				landSound.play()
+				animationState.travel("land");
 				addPoofCloud()
 				landing = false	
 			if Input.is_action_just_pressed("jump"):

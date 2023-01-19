@@ -263,7 +263,7 @@ offset_right = 261.0
 offset_bottom = 464.0
 max_value = 1.0
 step = 0.05
-value = 1.0
+value = 0.8
 
 [node name="Transition" parent="UI" instance=ExtResource("20_pne6m")]
 visible = true
