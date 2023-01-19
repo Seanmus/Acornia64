@@ -34,7 +34,7 @@ func Bounce():
 #Starts the proccess of the players death	
 func kill():
 	animationState.travel("die")
-	$auriModel/AnimationPlayer.play("die")
+	#$auriModel/AnimationPlayer.play("die")
 	$DeathSound.play()
 	velocity.y = 0
 	velocity.x = 0
@@ -154,5 +154,6 @@ func _on_deathFinished():
 
 #Occurs when another area enters the player area
 func _on_area_3d_area_entered(area):
+	print("you should be dead")
 	if area.is_in_group("deadly"):
 		kill()

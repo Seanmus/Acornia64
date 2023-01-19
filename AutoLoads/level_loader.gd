@@ -15,3 +15,4 @@ func _on_animation_player_animation_finished(_anim_name):
 func _loadLevel(nextLevelInput):
 	nextLevel = nextLevelInput
 	transitionAnimation.play("end")
+	transitionAnimation.seek(0, true) 

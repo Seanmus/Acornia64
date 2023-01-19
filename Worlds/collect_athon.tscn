@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://buebv7vsgn6hc" path="res://WorldBlocks/circle_bricks.tscn" id="10_auh44"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/flower_pot.tscn" id="11_ogieb"]
 [ext_resource type="PackedScene" uid="uid://bwhgtiehdvn0x" path="res://WorldBlocks/tree_base.tscn" id="12_srass"]
-[ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/MushRoomBounce.tscn" id="13_457dw"]
+[ext_resource type="PackedScene" uid="uid://cr0isgu1vapvj" path="res://WorldBlocks/Interactive/MushRoomBounce.tscn" id="13_457dw"]
 [ext_resource type="PackedScene" uid="uid://bjs7yqqn42gwf" path="res://UI/double_jump_billboard.tscn" id="17_0bb88"]
 [ext_resource type="PackedScene" uid="uid://bfflm1e5s65r5" path="res://UI/platflowers_billboard.tscn" id="18_5d5f5"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="18_67700"]
