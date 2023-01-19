@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://tfv2r57qdmok" path="res://WorldBlocks/Interactive/sunflower.tscn" id="9_yw6hj"]
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="11_j8c2i"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0umwj"]
-[ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_ui6yu"]
+[ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_ui6yu"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="14_5i4fd"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="16_m4wnl"]
 
@@ -368,15 +368,15 @@ grow_horizontal = 0
 theme_override_colors/font_color = Color(0.85098, 0.231373, 0.721569, 1)
 
 [node name="SprintLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9485, 14.0621, -28.8612)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.217, 13.5958, -38.3079)
 pixel_size = 0.02
 billboard = 1
 text = "Press Shift To Sprint!"
 font = ExtResource("16_m4wnl")
 font_size = 64
 
-[node name="SprintLabel2" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.3108, 27.151, -45.1089)
+[node name="DoubleJumpLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.6953, 24.9142, -45.1089)
 pixel_size = 0.02
 billboard = 1
 text = "You can Also Double Jump!"
@@ -384,7 +384,7 @@ font = ExtResource("16_m4wnl")
 font_size = 64
 
 [node name="MouseControls" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34681, 7.76006, -13.7909)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.2149, 8.60849, -29.817)
 pixel_size = 0.02
 billboard = 1
 text = "Rotate the Camera Using your mouse"

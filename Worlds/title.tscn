@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
 [ext_resource type="Texture2D" uid="uid://bavvqgm4m3koh" path="res://UI/Images/acorn.png" id="3_lkekw"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="5_edqm6"]
+[ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="7_hgnnl"]
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="8_ex5jf"]
 [ext_resource type="PackedScene" uid="uid://cmmv8wa104po2" path="res://WorldBlocks/LongPink.tscn" id="9_pbc24"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
@@ -85,18 +86,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [true]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Label:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_55taj"]
 resource_name = "end"
@@ -160,16 +149,6 @@ _data = {
 "end": SubResource("Animation_55taj"),
 "endFast": SubResource("Animation_wh74x")
 }
-
-[sub_resource type="Environment" id="Environment_han10"]
-background_mode = 1
-background_color = Color(0.00784314, 0, 0.0588235, 1)
-ambient_light_source = 2
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.0
-ambient_light_energy = 1.53
-adjustment_enabled = true
-adjustment_saturation = 1.7
 
 [node name="Title" type="Node3D"]
 script = ExtResource("1_gp50i")
@@ -263,7 +242,7 @@ top_level = true
 current = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_han10")
+environment = ExtResource("7_hgnnl")
 
 [node name="Blocks" type="Node3D" parent="."]
 

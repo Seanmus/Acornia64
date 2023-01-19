@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" path="res://WorldBlocks/BouncePillar.tscn" id="10_q6q5a"]
 [ext_resource type="PackedScene" uid="uid://bg6wx1omgx1ge" path="res://WorldBlocks/mars.scn" id="11_w5gmy"]
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="12_n6b2p"]
-[ext_resource type="PackedScene" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_dbood"]
+[ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_dbood"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -230,10 +230,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 202.312, -0.895312, -78.6672)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 281.864, 58.1295, 285.513)
 
 [node name="BouncePillar5" parent="BounceBlocks" instance=ExtResource("10_q6q5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 296.716, 62.5399, 311.02)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 295.073, 62.5399, 311.02)
 
 [node name="BouncePillar6" parent="BounceBlocks" instance=ExtResource("10_q6q5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.852, 62.8366, 300.513)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.12, 62.8366, 304.38)
 
 [node name="purpleBricks12" parent="BounceBlocks/BouncePillar6" index="0"]
 transform = Transform3D(0.9446, 0, 0, 0, 14.5047, 0, 0, 0, 0.9446, 0, 0, 0)
@@ -386,22 +386,31 @@ transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 281.719, 72
 transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 281.719, 73.0742, 268.424)
 
 [node name="cheese30" parent="Cheese" instance=ExtResource("13_dbood")]
-transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 88.3047, 300.693)
+transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 282.428, 88.3047, 304.56)
 
 [node name="cheese31" parent="Cheese" instance=ExtResource("13_dbood")]
-transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 91.5785, 300.693)
+transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 282.428, 91.5785, 304.56)
 
 [node name="cheese32" parent="Cheese" instance=ExtResource("13_dbood")]
-transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 94.4554, 300.693)
+transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 282.428, 94.4554, 304.56)
 
 [node name="cheese33" parent="Cheese" instance=ExtResource("13_dbood")]
-transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 283.16, 97.6559, 300.693)
+transform = Transform3D(3.20055, 0, 0, 0, 3.20055, 0, 0, 0, 3.20055, 282.428, 97.6559, 304.56)
 
 [node name="tire" parent="." instance=ExtResource("9_0l7ae")]
 transform = Transform3D(1.91416, 0, 0, 0, 2.66142, 0, 0, 0, 1.84589, 282.251, 27.3041, -74.8829)
 
 [node name="purpleBricks" parent="." instance=ExtResource("3_i4c1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.389, 75.1201, 296.843)
+transform = Transform3D(0.941333, 0, 0, 0, 1, 0, 0, 0, 1, 295.08, 75.6378, 304.476)
+
+[node name="purpleBricks2" parent="." instance=ExtResource("3_i4c1r")]
+transform = Transform3D(0.941333, 0, 0, 0, 1, 0, 0, 0, 1, 295.08, 75.6378, 297.616)
+
+[node name="purpleBricks3" parent="." instance=ExtResource("3_i4c1r")]
+transform = Transform3D(0.913176, -0.242752, 0, 0.22851, 0.970088, 0, 0, 0, 1, 289.038, 74.8905, 297.616)
+
+[node name="purpleBricks4" parent="." instance=ExtResource("3_i4c1r")]
+transform = Transform3D(0.913176, -0.242752, 0, 0.22851, 0.970088, 0, 0, 0, 1, 282.71, 73.3072, 297.616)
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 

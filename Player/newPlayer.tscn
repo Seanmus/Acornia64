@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=13 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
@@ -40,9 +40,6 @@ material = SubResource("StandardMaterial3D_cejdx")
 size = Vector2(1.551, 0.406)
 orientation = 2
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tli1s"]
-size = Vector3(0.171077, 1, 0.730695)
-
 [node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
 floor_snap_length = 0.31
@@ -62,6 +59,7 @@ spring_length = 15.0
 margin = 5.397
 
 [node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+current = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_2iij6")
@@ -100,10 +98,6 @@ volume_db = -80.0
 
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57631, 0)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.998498, 0.0639569, 0.00496229, -0.0547904, 1.16849, 0.0874124, -0.000510577, -0.316125, 0.324107, -0.00024122, -0.338866, 0.0008495)
-shape = SubResource("BoxShape3D_tli1s")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.09941, 0)
