@@ -55,7 +55,6 @@ script = ExtResource("1_lxx2y")
 transform = Transform3D(1, 0, 0, 0, 0.208, 0, 0, 0, 1, 0, 0.0669541, 0)
 
 [node name="23547" type="CollisionShape3D" parent="collider"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_o0spx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

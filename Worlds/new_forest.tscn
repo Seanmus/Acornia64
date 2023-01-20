@@ -376,7 +376,7 @@ font = ExtResource("16_m4wnl")
 font_size = 64
 
 [node name="DoubleJumpLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.6953, 24.9142, -45.1089)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.4426, 11.0637, -45.1089)
 pixel_size = 0.02
 billboard = 1
 text = "You can Also Double Jump!"
