@@ -196,12 +196,6 @@ libraries = {
 "": SubResource("AnimationLibrary_2q7uk")
 }
 
-[node name="TextureRect" type="TextureRect" parent="UI"]
-visible = false
-offset_top = 361.0
-offset_right = 891.0
-offset_bottom = 544.0
-
 [node name="audioSlider" type="HSlider" parent="UI"]
 offset_left = 38.0
 offset_top = 444.0
@@ -227,6 +221,12 @@ offset_bottom = 377.0
 theme = SubResource("Theme_vaimv")
 text = "Collect A thon"
 
+[node name="TextureRect" type="TextureRect" parent="UI"]
+visible = false
+offset_top = 361.0
+offset_right = 891.0
+offset_bottom = 544.0
+
 [node name="Transition" parent="UI" instance=ExtResource("20_pne6m")]
 visible = true
 offset_right = 640.0
@@ -235,6 +235,9 @@ offset_right = 640.0
 libraries = {
 "": SubResource("AnimationLibrary_v6pmb")
 }
+
+[node name="loadingLBL" parent="UI/Transition" index="1"]
+layout_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.656771, -0.269815, -0.704168, 0.0299284, 0.942388, -0.33318, 0.753496, 0.197748, 0.627008, 85.2411, 36.9344, 43.5572)

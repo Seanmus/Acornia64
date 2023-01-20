@@ -224,7 +224,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.8071, 9.7073, -52.5627)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.46852, 26.6364, 57.0168)
 
 [node name="sunflowerSeed5" parent="SunflowerSeeds" instance=ExtResource("9_3dkmm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.3882, 7.89561, -98.3003)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.3882, 6.75743, -98.3003)
 
 [node name="doubleJumpBillboard" parent="." instance=ExtResource("17_0bb88")]
 transform = Transform3D(2.25205, 0, 0, 0, 2.25205, 0, 0, 0, 2.25205, 36.4863, 8.58582, -7.16566)

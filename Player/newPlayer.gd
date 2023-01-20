@@ -1,10 +1,11 @@
 extends CharacterBody3D
 
-var speed = 15.0
+var maxSpeed = 15.0
+var speed = 0
 var airSpeed = 10.0
 var groundSpeed = 15.0
 var sprintMultiplier = 1.0
-const ACCELERATION = 5
+var acceleration = 60
 const JUMP_VELOCITY = 7
 var mouse_sensitivty = 0.002 #radiains/pixel
 var canDoubleJump = true
@@ -72,12 +73,14 @@ func addPoofCloud():
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
 	if is_on_floor():
-		speed = groundSpeed
+		acceleration = 60
 	else:
-		speed = airSpeed
+		acceleration = 40
 	if Input.is_action_pressed("sprint"):
 		sprintMultiplier = 1.5
+		maxSpeed = 22.5
 	else:
+		maxSpeed = 15
 		sprintMultiplier = 1.0
 		runCloud.emitting = false
 	if not Manager.won && not dead:
@@ -135,12 +138,17 @@ func _physics_process(delta):
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			#Forward
-			velocity.z = direction.z * speed * sprintMultiplier
-			velocity.x = direction.x * speed * sprintMultiplier 
+			speed += acceleration * sprintMultiplier * delta;
+			if speed > maxSpeed:
+				speed = maxSpeed
+			velocity.z = direction.z * speed 
+			velocity.x = direction.x * speed
 		else:
-			velocity.x = move_toward(velocity.x, 0, speed * sprintMultiplier)
-			velocity.z = move_toward(velocity.z, 0, speed * sprintMultiplier)
-		
+			velocity.x = move_toward(velocity.x, 0, speed)
+			velocity.z = move_toward(velocity.z, 0, speed)
+			speed -= acceleration * 3 * delta;
+			if(speed < 0):
+				speed = 0
 		var _returnValue = move_and_slide()
 
 #Starts the win animation
