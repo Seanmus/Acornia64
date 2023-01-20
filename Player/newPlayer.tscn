@@ -54,9 +54,10 @@ shape = SubResource("CapsuleShape3D_ys4sl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.67053)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+collision_mask = 986895
 shape = SubResource("BoxShape3D_ot4tj")
 spring_length = 15.0
-margin = 5.397
+margin = 10.0
 
 [node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
 current = true

@@ -14,5 +14,6 @@ func _on_animation_player_animation_finished(_anim_name):
 #Triggers the transisition anim and sets the next level to be loaded
 func _loadLevel(nextLevelInput):
 	nextLevel = nextLevelInput
-	transitionAnimation.play("end")
-	transitionAnimation.seek(0, true) 
+	if transitionAnimation.is_playing() == false:
+		transitionAnimation.play("end")
+		transitionAnimation.seek(0, true) 

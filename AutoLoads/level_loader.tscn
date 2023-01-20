@@ -11,6 +11,9 @@ offset_right = 640.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
+[node name="loadingLBL" parent="Transition" index="1"]
+layout_mode = 1
+
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="Transition"]

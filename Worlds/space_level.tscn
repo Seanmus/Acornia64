@@ -53,10 +53,10 @@ transform = Transform3D(0.818678, 0, 0, 0, 0.376457, 0, 0, 0, 0.818678, 128.582,
 transform = Transform3D(1.75919, 0, 0, 0, 17.2274, 0, 0, 0, 1.75919, 84.6864, -24.7452, -78.5826)
 
 [node name="purpleBricks31" parent="Blocks" instance=ExtResource("3_i4c1r")]
-transform = Transform3D(1.75919, 0, 0, 0, 17.2274, 0, 0, 0, 1.75919, 108.686, -27.7452, -78.5826)
+transform = Transform3D(1.73451, 2.87536, 0, -0.29362, 16.9857, 0, 0, 0, 1.75919, 104.282, -25.4101, -78.5826)
 
 [node name="purpleBricks32" parent="Blocks" instance=ExtResource("3_i4c1r")]
-transform = Transform3D(1.75919, 0, 0, 0, 17.2274, 0, 0, 0, 1.75919, 120.686, -27.7452, -78.5826)
+transform = Transform3D(1.73451, 2.87536, 0, -0.29362, 16.9857, 0, 0, 0, 1.75919, 116.114, -27.4129, -78.5826)
 
 [node name="purpleBricks8" parent="Blocks" instance=ExtResource("3_i4c1r")]
 transform = Transform3D(1.75919, 0, 0, 0, 17.2274, 0, 0, 0, 1.75919, 96.7301, -24.7452, -78.5826)
