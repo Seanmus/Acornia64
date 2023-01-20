@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b760vvlgreu4y"]
+[gd_scene load_steps=19 format=3 uid="uid://b760vvlgreu4y"]
 
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="1_2tm05"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_a1lhs"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_ui6yu"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="14_5i4fd"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="16_m4wnl"]
+[ext_resource type="PackedScene" uid="uid://cmmv8wa104po2" path="res://WorldBlocks/LongPink.tscn" id="17_7ydwf"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -59,14 +60,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6628, 0, 0)
 [node name="greenBricks4" parent="Tiles/LargeTile" instance=ExtResource("1_a1lhs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73411, 0, 6.85135)
 
-[node name="LargeTile2" parent="Tiles" instance=ExtResource("4_sc7s5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.971, 9.47949, -49.7893)
-
-[node name="LargeTile3" parent="Tiles" instance=ExtResource("4_sc7s5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.819, 9.47949, -49.7893)
-
-[node name="LargeTile4" parent="Tiles" instance=ExtResource("4_sc7s5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 180.607, 9.47949, -23.4033)
+[node name="purpleBricks15" parent="Tiles" instance=ExtResource("7_shn2v")]
+transform = Transform3D(1.56602, 0, 0, 0, 1, 0, 0, 0, 1.49423, 183.865, 9.47949, -20.6069)
 
 [node name="LargeTile5" parent="Tiles" instance=ExtResource("4_sc7s5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200.057, 9.47949, 20.9455)
@@ -131,10 +126,10 @@ transform = Transform3D(0.888382, -0.102981, 0.447405, 0.153939, 0.98492, -0.078
 [node name="greenBricks6" parent="Tiles" instance=ExtResource("1_a1lhs")]
 transform = Transform3D(0.888382, -0.102981, 0.447405, 0.153939, 0.98492, -0.0789641, -0.432526, 0.139024, 0.890838, 14.6509, 0.612111, -30.0632)
 
-[node name="greenBricks2" parent="Tiles" instance=ExtResource("1_a1lhs")]
+[node name="purpleBricks14" parent="Tiles" instance=ExtResource("7_shn2v")]
 transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 184.089, 9.50333, -1.61477)
 
-[node name="greenBricks3" parent="Tiles" instance=ExtResource("1_a1lhs")]
+[node name="purpleBricks13" parent="Tiles" instance=ExtResource("7_shn2v")]
 transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 184.089, 9.50333, 24.1704)
 
 [node name="greenBricks4" parent="Tiles" instance=ExtResource("1_a1lhs")]
@@ -150,10 +145,10 @@ transform = Transform3D(0.08214, -0.338626, -0.937329, 0.362761, 0.886149, -0.28
 transform = Transform3D(0.357699, 0.019908, -0.933625, -0.243062, 0.967298, -0.072498, 0.90165, 0.252861, 0.35084, 35.26, 2.72142, -42.5876)
 
 [node name="LargeTile29" parent="Tiles" instance=ExtResource("4_sc7s5")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 318.456, 14.2341, 154.711)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 332.287, 17.3265, 154.711)
 
 [node name="LargeTile30" parent="Tiles" instance=ExtResource("4_sc7s5")]
-transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 318.521, 14.2341, 140.867)
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 332.352, 17.3265, 140.867)
 
 [node name="purpleBricks" parent="Tiles" instance=ExtResource("7_shn2v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 220.723, 9.49168, 96.2849)
@@ -212,7 +207,7 @@ transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -4
 [node name="Cannons" type="Node3D" parent="."]
 
 [node name="cannon2" parent="Cannons" instance=ExtResource("8_15aww")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 123.34, 12.2356, -41.983)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 117.512, 12.2356, -41.983)
 
 [node name="cannon4" parent="Cannons" instance=ExtResource("8_15aww")]
 transform = Transform3D(-3.9642, 0, 3.46561e-07, 0, 3.9642, 0, -3.46561e-07, 0, -3.9642, 184.07, 15.3577, 42.6913)
@@ -227,7 +222,7 @@ transform = Transform3D(0, 0, -5.9086, 0.364004, 5.89694, 0, 5.78568, -0.371004,
 transform = Transform3D(0, 0, -5.9086, 0.364004, 5.89694, 0, 5.78568, -0.371004, 0, 247.607, 15.6316, 149.352)
 
 [node name="cannon9" parent="Cannons" instance=ExtResource("8_15aww")]
-transform = Transform3D(5.79712, 0, 0, 0, 5.9086, 0, 0, 0, 5.9086, 321.485, 23.2814, 148.681)
+transform = Transform3D(5.79712, 0, 0, 0, 5.9086, 0, 0, 0, 5.9086, 335.316, 26.3738, 148.681)
 
 [node name="cannon8" parent="Cannons" instance=ExtResource("8_15aww")]
 transform = Transform3D(0.363348, 5.8863, -0.354741, 0.0218541, 0.35404, 5.89794, 5.78568, -0.371005, -7.04359e-07, 266.76, -1.69805, 193.825)
@@ -368,7 +363,7 @@ grow_horizontal = 0
 theme_override_colors/font_color = Color(0.85098, 0.231373, 0.721569, 1)
 
 [node name="SprintLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.217, 13.5958, -38.3079)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.217, 12.0164, -38.3079)
 pixel_size = 0.02
 billboard = 1
 text = "Press Shift To Sprint!"
@@ -398,6 +393,9 @@ billboard = 1
 text = "Nice!"
 font = ExtResource("16_m4wnl")
 font_size = 64
+
+[node name="Long" parent="." instance=ExtResource("17_7ydwf")]
+transform = Transform3D(-8.69058e-08, 0, 2.14164, 0, 1, 0, -1.98817, 0, -9.3614e-08, 123.529, 9.49454, -46.3704)
 
 [connection signal="won" from="endLevel" to="Player" method="Win"]
 
