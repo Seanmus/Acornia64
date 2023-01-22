@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhqwfseggqvok"]
+
+[ext_resource type="PackedScene" uid="uid://66cmat25mk2y" path="res://WorldBlocks/SnowBlocks/Imports/snowBlock.glb" id="1_qbcv1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f33cr"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="snowBlock" instance=ExtResource("1_qbcv1")]
+transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_f33cr")

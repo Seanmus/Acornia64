@@ -20,7 +20,7 @@
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
-background_color = Color(0.00784314, 0, 0.0588235, 1)
+background_color = Color(0.0156863, 0, 0.117647, 1)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d03x1pkl6xej2"]
+
+[ext_resource type="PackedScene" uid="uid://bl7rtp4thqe40" path="res://WorldBlocks/SnowBlocks/Imports/snowBarrier.glb" id="1_0to3i"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6iypj"]
+data = PackedVector3Array(-0.9511, -1, -0.309, 0.4405, -1, 0.809, 0.9511, -1, -0.309, -0.9511, -1, -0.309, -0.4405, -1, 0.809, 0.4405, -1, 0.809, 0.9511, -1, -0.309, 0.4405, 1, 0.809, 0.9511, 1, -0.309, 0.9511, -1, -0.309, 0.4405, -1, 0.809, 0.4405, 1, 0.809, 0.4405, -1, 0.809, -0.4405, 1, 0.809, 0.4405, 1, 0.809, 0.4405, -1, 0.809, -0.4405, -1, 0.809, -0.4405, 1, 0.809, -0.9511, -1, -0.309, 0.9511, 1, -0.309, -0.9511, 1, -0.309, -0.9511, -1, -0.309, 0.9511, -1, -0.309, 0.9511, 1, -0.309, -0.4405, -1, 0.809, -0.9511, 1, -0.309, -0.4405, 1, 0.809, -0.4405, -1, 0.809, -0.9511, -1, -0.309, -0.9511, 1, -0.309, 0.4405, 1, 0.809, -0.9511, 1, -0.309, 0.9511, 1, -0.309, 0.4405, 1, 0.809, -0.4405, 1, 0.809, -0.9511, 1, -0.309)
+
+[node name="snowBarrier" instance=ExtResource("1_0to3i")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_6iypj")

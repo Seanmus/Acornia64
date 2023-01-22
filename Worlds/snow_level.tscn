@@ -1,3 +1,27 @@
-[gd_scene format=3 uid="uid://n1yxuh3574k2"]
+[gd_scene load_steps=4 format=3 uid="uid://n1yxuh3574k2"]
+
+[ext_resource type="PackedScene" uid="uid://64qocm8e5c27" path="res://WorldBlocks/SnowBlocks/snow_block_huge.tscn" id="2_eg3cq"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="3_ip3wf"]
+
+[sub_resource type="Environment" id="Environment_yjbyy"]
+background_mode = 1
+background_color = Color(0.341176, 0.329412, 0.337255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 1.53
+adjustment_enabled = true
+adjustment_saturation = 1.7
 
 [node name="SnowLevel" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yjbyy")
+
+[node name="Blocks" type="Node" parent="."]
+
+[node name="newPlayer" parent="." instance=ExtResource("3_ip3wf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172452, 3.10939, -0.242364)
+
+[node name="snowBlockHuge" parent="." instance=ExtResource("2_eg3cq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.849794, -46.4881)

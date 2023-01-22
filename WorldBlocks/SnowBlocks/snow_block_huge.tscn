@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://64qocm8e5c27"]
+
+[ext_resource type="PackedScene" uid="uid://d06jsrefbe43m" path="res://WorldBlocks/SnowBlocks/Imports/snowBlockHuge.glb" id="1_yww0q"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_as8uw"]
+data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1)
+
+[node name="snowBlockHuge" instance=ExtResource("1_yww0q")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_as8uw")
