@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://qmt8a6ndl4wl"]
+[gd_scene load_steps=19 format=3 uid="uid://qmt8a6ndl4wl"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="5_edqm6"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="7_hgnnl"]
 [ext_resource type="PackedScene" uid="uid://btn1fjffa1mtp" path="res://Player/acornModel.tscn" id="8_n7m35"]
+[ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0oq3f"]
 [ext_resource type="Script" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
 [ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/transition.tscn" id="20_pne6m"]
@@ -233,10 +234,10 @@ current = true
 environment = ExtResource("7_hgnnl")
 
 [node name="acorn" parent="." instance=ExtResource("8_n7m35")]
-transform = Transform3D(-1.44392, -0.128933, -2.3297, 0.0162128, 2.73909, -0.161638, 2.33321, -0.0988239, -1.44062, 89.412, 36.8792, 31.2321)
+transform = Transform3D(-1.44392, -0.128933, -2.3297, 0.0162128, 2.73909, -0.161638, 2.33321, -0.0988239, -1.44062, 90.107, 36.8792, 31.2321)
 
 [node name="body" parent="acorn" index="0"]
-transform = Transform3D(-0.00209209, -0.0625555, -0.570421, 0.0382305, 0.569143, -0.0625554, 0.572566, -0.0382305, 0.00209257, -0.0394592, 1.37484, 0.0167084)
+transform = Transform3D(-0.00209209, -0.0625555, -0.570421, 0.0382305, 0.569143, -0.0625555, 0.572566, -0.0382305, 0.00209257, -0.0394602, 1.37484, 0.0167046)
 
 [node name="hat" parent="acorn" index="1"]
 transform = Transform3D(-0.0025751, 0.021051, -0.702154, 0.0470595, -0.191527, -0.0770019, 0.704794, 0.0128652, 0.00257587, -0.0941544, 1.87247, -0.016716)
@@ -248,7 +249,10 @@ transform = Transform3D(0.0368122, -0.0968357, -0.371935, 0.0191879, 0.187379, -
 transform = Transform3D(-0.00751558, -0.0609637, -0.404927, 0.0504683, 0.198452, -0.122302, 0.281116, -0.0372577, 0.0111311, 0.066803, 0.790279, 0.253975)
 
 [node name="Earth" parent="." instance=ExtResource("12_0oq3f")]
-transform = Transform3D(5.55167, 0, -2.62972, 0, 6.143, 0, 2.62972, 0, 5.55167, 86.0189, 30.1236, 30.6598)
+transform = Transform3D(5.55167, 0, -2.62972, 0, 6.143, 0, 2.62972, 0, 5.55167, 84.465, 30.1236, 30.6598)
+
+[node name="Moon" parent="." instance=ExtResource("11_g3ylg")]
+transform = Transform3D(1.31126, 0, 0, 0, 1.31126, 0, 0, 0, 1.31126, 96.3835, 37.1756, 28.0037)
 
 [connection signal="value_changed" from="UI/audioSlider" to="UI" method="_on_audio_slider_value_changed"]
 [connection signal="pressed" from="UI/startBtn" to="UI" method="_on_button_pressed"]
