@@ -1,18 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://n1yxuh3574k2"]
+[gd_scene load_steps=6 format=3 uid="uid://n1yxuh3574k2"]
 
 [ext_resource type="PackedScene" uid="uid://c032uq2x08vpu" path="res://WorldBlocks/SnowBlocks/snow_block_beveled.tscn" id="2_v41ye"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_hpw4e"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="3_ip3wf"]
+[ext_resource type="PackedScene" uid="uid://cr0isgu1vapvj" path="res://WorldBlocks/Interactive/MushRoomBounce.tscn" id="4_j5sqt"]
 
 [sub_resource type="Environment" id="Environment_yjbyy"]
 background_mode = 1
-background_color = Color(0.0901961, 0.109804, 0.341176, 1)
+background_color = Color(0.0156863, 0.0235294, 0.129412, 1)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.0
 ambient_light_energy = 1.53
 adjustment_enabled = true
-adjustment_saturation = 4.4
+adjustment_saturation = 1.7
 
 [node name="SnowLevel" type="Node3D"]
 
@@ -22,15 +23,54 @@ environment = SubResource("Environment_yjbyy")
 [node name="Blocks" type="Node" parent="."]
 
 [node name="newPlayer" parent="." instance=ExtResource("3_ip3wf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172452, 5.99372, 1.4854)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.172452, 3.4586, 14.5724)
 
 [node name="snowBlockBeveled" parent="." instance=ExtResource("2_v41ye")]
+transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 11.9981, 0, 0, 5.5637)
 
 [node name="snowBlockBeveled2" parent="." instance=ExtResource("2_v41ye")]
-transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, -23)
+transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 11.9981, 0, 0, -27.4363)
 
 [node name="snowBlockBeveled3" parent="." instance=ExtResource("2_v41ye")]
-transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, -48)
+transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 11.9981, 0, 0, -62.4363)
+
+[node name="snowBlockBeveled5" parent="." instance=ExtResource("2_v41ye")]
+transform = Transform3D(27.7216, 0, 0, 0, 11.7485, 0, 0, 0, 12.6629, 0, -7.80119, -92.1913)
+
+[node name="snowBlockBeveled4" parent="." instance=ExtResource("2_v41ye")]
+transform = Transform3D(37.9924, 0, 0, 0, 29.3329, 0, 0, 0, 11.9981, 0, 3.57297, -114.436)
 
 [node name="Death" parent="." instance=ExtResource("3_hpw4e")]
-transform = Transform3D(4.46193, 0, 0, 0, 1, 0, 0, 0, 5.45376, -22.4685, -3.44448, -16.6293)
+transform = Transform3D(5.90193, 0, 0, 0, 5.90193, 0, 0, 0, 5.90193, -22.4685, -20.544, -16.6293)
+
+[node name="MushRoomBounce" parent="." instance=ExtResource("4_j5sqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6056, -14.0048, -97.2176)
+
+[node name="mushroom2" parent="MushRoomBounce" index="0"]
+transform = Transform3D(9.74936, 0, 0, 0, 9.74936, 0, 0, 0, 9.74936, 0, 13.5179, 4)
+
+[node name="treeBase2" parent="MushRoomBounce" index="1"]
+visible = false
+
+[node name="MushRoomBounce2" parent="." instance=ExtResource("4_j5sqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39441, -4.21184, -97.2176)
+
+[node name="mushroom2" parent="MushRoomBounce2" index="0"]
+transform = Transform3D(9.74936, 0, 0, 0, 9.74936, 0, 0, 0, 9.74936, 0, 12.412, 4)
+
+[node name="treeBase2" parent="MushRoomBounce2" index="1"]
+visible = false
+
+[node name="MushRoomBounce3" parent="." instance=ExtResource("4_j5sqt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.3944, 0.788164, -97.2176)
+
+[node name="mushroom2" parent="MushRoomBounce3" index="0"]
+transform = Transform3D(9.74936, 0, 0, 0, 9.74936, 0, 0, 0, 9.74936, 0, 12.5236, 4)
+
+[node name="treeBase2" parent="MushRoomBounce3" index="1"]
+visible = false
+
+[editable path="MushRoomBounce"]
+[editable path="MushRoomBounce/treeBase2"]
+[editable path="MushRoomBounce2"]
+[editable path="MushRoomBounce3"]

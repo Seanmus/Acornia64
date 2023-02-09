@@ -1,0 +1,142 @@
+[gd_scene load_steps=8 format=3 uid="uid://nt2mkthdyyc0"]
+
+[ext_resource type="PackedScene" uid="uid://blw4vn6yj802f" path="res://WorldBlocks/Imports/OnOff.glb" id="1_jyjdy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qs4c3"]
+transparency = 1
+albedo_color = Color(0.737255, 0.498039, 0.231373, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oumgp"]
+transparency = 1
+albedo_color = Color(0.498039, 0.294118, 0.0823529, 1)
+albedo_texture_force_srgb = true
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1x7eu"]
+data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1.0365, -0.8249, 1.0365, -1.0365, 0.8249, -1.0365, -1.0365, 0.8249, 1.0365, -1.0365, -0.8249, 1.0365, -1.0365, -0.8249, -1.0365, -1.0365, 0.8249, -1.0365, -1.0365, -0.8249, -1.0365, 1.0365, 0.8249, -1.0365, -1.0365, 0.8249, -1.0365, -1.0365, -0.8249, -1.0365, 1.0365, -0.8249, -1.0365, 1.0365, 0.8249, -1.0365, 1.0365, -0.8249, -1.0365, 1.0365, 0.8249, 1.0365, 1.0365, 0.8249, -1.0365, 1.0365, -0.8249, -1.0365, 1.0365, -0.8249, 1.0365, 1.0365, 0.8249, 1.0365, 1.0365, -0.8249, 1.0365, -1.0365, 0.8249, 1.0365, 1.0365, 0.8249, 1.0365, 1.0365, -0.8249, 1.0365, -1.0365, -0.8249, 1.0365, -1.0365, 0.8249, 1.0365, -1, -0.8249, -1, -1.0365, -0.8249, 1.0365, -1, -0.8249, 1, 1.0365, -0.8249, -1.0365, 1, -0.8249, 1, 1.0365, -0.8249, 1.0365, 1.0365, -0.8249, -1.0365, 1, -0.8249, -1, 1, -0.8249, 1, -1, -0.8249, -1, -1.0365, -0.8249, -1.0365, -1.0365, -0.8249, 1.0365, 1.0365, -0.8249, -1.0365, -1, -0.8249, -1, 1, -0.8249, -1, -1.0365, -0.8249, -1.0365, -1, -0.8249, -1, 1.0365, -0.8249, -1.0365, 1.0365, -0.8249, 1.0365, -1, -0.8249, 1, -1.0365, -0.8249, 1.0365, 1.0365, -0.8249, 1.0365, 1, -0.8249, 1, -1, -0.8249, 1, -1, 0.8249, -1, -1.0365, 0.8249, 1.0365, -1.0365, 0.8249, -1.0365, -1.0365, 0.8249, 1.0365, 1, 0.8249, 1, 1.0365, 0.8249, 1.0365, -1, 0.8249, 1, -1.0365, 0.8249, 1.0365, -1, 0.8249, -1, -1.0365, 0.8249, 1.0365, -1, 0.8249, 1, 1, 0.8249, 1, 1, 0.8249, 1, 1.0365, 0.8249, -1.0365, 1.0365, 0.8249, 1.0365, 1.0365, 0.8249, -1.0365, -1, 0.8249, -1, -1.0365, 0.8249, -1.0365, 1, 0.8249, -1, 1.0365, 0.8249, -1.0365, 1, 0.8249, 1, 1.0365, 0.8249, -1.0365, 1, 0.8249, -1, -1, 0.8249, -1, -1, 0.8249, 1, -1, -0.8249, -1, -1, -0.8249, 1, -1, 0.8249, 1, -1, 0.8249, -1, -1, -0.8249, -1, -1, 0.8249, -1, 1, -0.8249, -1, -1, -0.8249, -1, -1, 0.8249, -1, 1, 0.8249, -1, 1, -0.8249, -1, 1, -0.8249, -1, 1, 0.8249, 1, 1, -0.8249, 1, 1, -0.8249, -1, 1, 0.8249, -1, 1, 0.8249, 1, 1, -0.8249, 1, -1, 0.8249, 1, -1, -0.8249, 1, 1, -0.8249, 1, 1, 0.8249, 1, -1, 0.8249, 1)
+
+[sub_resource type="Animation" id="Animation_mmtka"]
+resource_name = "on_off"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.737255, 0.498039, 0.231373, 1), Color(0.737255, 0.498039, 0.231373, 1), Color(0.737255, 0.498039, 0.231373, 0), Color(0.737255, 0.498039, 0.231373, 0), Color(0.737255, 0.498039, 0.231373, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube:surface_material_override/1:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3.5, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.498039, 0.294118, 0.0823529, 1), Color(0.498039, 0.294118, 0.0823529, 1), Color(0.498039, 0.294118, 0.0823529, 0), Color(0.498039, 0.294118, 0.0823529, 0), Color(0.498039, 0.294118, 0.0823529, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube:surface_material_override/1:transparency")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 5.3, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cube/StaticBody3D/CollisionShape3D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.5, 4.5, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, false]
+}
+
+[sub_resource type="Animation" id="Animation_dwt2c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:surface_material_override/0:albedo_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.737255, 0.498039, 0.231373, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube:surface_material_override/1:albedo_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.498039, 0.294118, 0.0823529, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube:surface_material_override/1:transparency")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Cube/StaticBody3D/CollisionShape3D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vdets"]
+_data = {
+"RESET": SubResource("Animation_dwt2c"),
+"on_off": SubResource("Animation_mmtka")
+}
+
+[node name="OnOff" instance=ExtResource("1_jyjdy")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_qs4c3")
+surface_material_override/1 = SubResource("StandardMaterial3D_oumgp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_1x7eu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+autoplay = "on_off"
+libraries = {
+"": SubResource("AnimationLibrary_vdets")
+}

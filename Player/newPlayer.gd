@@ -49,7 +49,7 @@ func _unhandled_input(event):
 		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-event.relative.x * mouse_sensitivty)
 			$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
-			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, 0.9)
+			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
 			
 			
 func jump():
@@ -57,7 +57,7 @@ func jump():
 		return
 	$JumpSound.play()
 	set_position(get_position() + Vector3(0,0.1,0));
-	if velocity.y >= -1:
+	if velocity.y >= 0:
 		velocity.y += JUMP_VELOCITY
 	else:
 		velocity.y = JUMP_VELOCITY
