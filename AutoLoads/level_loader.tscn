@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://qneuffvgw0jc"]
 
 [ext_resource type="Script" path="res://AutoLoads/level_loader.gd" id="1_qey6j"]
-[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/transition.tscn" id="1_s6k0h"]
+[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/Transition.tscn" id="1_s6k0h"]
 
 [node name="LevelLoader" type="Node2D"]
 script = ExtResource("1_qey6j")
@@ -13,6 +13,7 @@ size_flags_vertical = 3
 
 [node name="loadingLBL" parent="Transition" index="1"]
 layout_mode = 1
+anchors_preset = -1
 
 [connection signal="animation_finished" from="Transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 

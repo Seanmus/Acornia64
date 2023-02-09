@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0oq3f"]
 [ext_resource type="Script" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
-[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/transition.tscn" id="20_pne6m"]
+[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/Transition.tscn" id="20_pne6m"]
 
 [sub_resource type="Animation" id="Animation_8ovnh"]
 length = 0.001

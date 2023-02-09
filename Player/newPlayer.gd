@@ -56,8 +56,8 @@ func jump():
 	if dead:
 		return
 	$JumpSound.play()
-	set_position(get_position() + Vector3(0,0.2,0));
-	if velocity.y >= 0:
+	set_position(get_position() + Vector3(0,0.1,0));
+	if velocity.y >= -1:
 		velocity.y += JUMP_VELOCITY
 	else:
 		velocity.y = JUMP_VELOCITY
