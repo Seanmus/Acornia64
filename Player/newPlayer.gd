@@ -37,7 +37,6 @@ func Bounce():
 #Starts the proccess of the players death	
 func kill():
 	animationState.travel("die")
-	#$auriModel/AnimationPlayer.play("die")
 	$DeathSound.play()
 	velocity.y = 0
 	velocity.x = 0
@@ -57,14 +56,14 @@ func jump():
 	if dead:
 		return
 	$JumpSound.play()
+	set_position(get_position() + Vector3(0,0.2,0));
 	if velocity.y >= 0:
-		animationState.travel("jump")
-		anim.play("jump")
 		velocity.y += JUMP_VELOCITY
 	else:
 		velocity.y = JUMP_VELOCITY
-		animationState.travel("jump")
-
+	animationState.travel("jump")
+	
+	
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
 	$SpotLight3D.add_child(cloud)

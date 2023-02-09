@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://i81ajv45prur" path="res://UI/Images/sunFlowerSeedRenderDark.png" id="1_dirqc"]
 [ext_resource type="Script" path="res://AutoLoads/ui.gd" id="1_khvck"]
 [ext_resource type="Texture2D" uid="uid://cklipsrkepll7" path="res://UI/Images/sunflowerLight.png" id="3_7hxp4"]
-[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/Transition.tscn" id="4_0ybnu"]
+[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/transition.tscn" id="4_0ybnu"]
 [ext_resource type="FontData" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="5_nhe20"]
 
 [sub_resource type="Theme" id="Theme_k752p"]

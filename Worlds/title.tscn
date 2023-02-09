@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://db6kio2sqop4m"]
+[gd_scene load_steps=26 format=3 uid="uid://qmt8a6ndl4wl"]
 
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="1_3shc3"]
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="17_18jp2"]
 [ext_resource type="PackedScene" uid="uid://bg6wx1omgx1ge" path="res://WorldBlocks/mars.scn" id="17_kw5b8"]
 [ext_resource type="Script" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
-[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/Transition.tscn" id="20_pne6m"]
+[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/transition.tscn" id="20_pne6m"]
 
 [sub_resource type="Animation" id="Animation_8ovnh"]
 length = 0.001
@@ -237,8 +237,6 @@ libraries = {
 }
 
 [node name="loadingLBL" parent="UI/Transition" index="1"]
-layout_mode = 0
-anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

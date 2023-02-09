@@ -6,7 +6,7 @@
 points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
 
 [node name="snowBlock" instance=ExtResource("1_qbcv1")]
-transform = Transform3D(6, 0, 0, 0, 3, 0, 0, 0, 6, 0, 0, 0)
+transform = Transform3D(12, 0, 0, 0, 6, 0, 0, 0, 12, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 

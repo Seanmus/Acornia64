@@ -42,8 +42,7 @@ orientation = 2
 
 [node name="newPlayer" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
-floor_snap_length = 0.31
-platform_on_leave = 1
+floor_snap_length = 0.24
 script = ExtResource("1_c1cwn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
