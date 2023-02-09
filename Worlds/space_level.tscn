@@ -213,7 +213,7 @@ transform = Transform3D(21.2531, 0, 0, 0, 1, 0, 0, 0, 21.0325, 0, -7.83223, 0)
 
 [node name="endLevel" parent="Blocks" instance=ExtResource("12_n6b2p")]
 transform = Transform3D(9.86059, 0, 0, 0, 9.86059, 0, 0, 0, 9.86059, 313.635, 118.39, 375.848)
-nextLevel = "title"
+nextLevel = "on_off_level"
 
 [node name="BounceBlocks" type="Node3D" parent="."]
 

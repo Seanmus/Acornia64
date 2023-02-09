@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c3mu4b1jgda32"]
+
+[ext_resource type="Shader" path="res://UI/transition.gdshader" id="1_lcctf"]
+
+[resource]
+shader = ExtResource("1_lcctf")
+shader_parameter/circle_size = 1.05
+shader_parameter/screen_width = 600.0
+shader_parameter/screen_height = 600.0
