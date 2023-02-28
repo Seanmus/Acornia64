@@ -1,13 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxt2snnlcra4g"]
+[gd_scene load_steps=9 format=3 uid="uid://bxt2snnlcra4g"]
 
-[ext_resource type="Shader" path="res://UI/transition.gdshader" id="1_q5tex"]
+[ext_resource type="Material" uid="uid://o3lda4ay6fsq" path="res://UI/transition.tres" id="1_obwoq"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="2_1t1oi"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_7srvv"]
-shader = ExtResource("1_q5tex")
-shader_parameter/circle_size = 1.05
-shader_parameter/screen_width = 600.0
-shader_parameter/screen_height = 600.0
 
 [sub_resource type="Animation" id="Animation_ew4jo"]
 length = 0.001
@@ -145,7 +139,7 @@ default_font = ExtResource("2_1t1oi")
 
 [node name="Transition" type="ColorRect"]
 visible = false
-material = SubResource("ShaderMaterial_7srvv")
+material = ExtResource("1_obwoq")
 offset_right = 1000.0
 offset_bottom = 480.0
 color = Color(0, 0, 0, 1)

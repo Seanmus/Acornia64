@@ -2,11 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://i81ajv45prur" path="res://UI/Images/sunFlowerSeedRenderDark.png" id="1_dirqc"]
 [ext_resource type="Script" path="res://AutoLoads/ui.gd" id="1_khvck"]
+[ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="2_0cki4"]
 [ext_resource type="Texture2D" uid="uid://cklipsrkepll7" path="res://UI/Images/sunflowerLight.png" id="3_7hxp4"]
-[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="5_nhe20"]
-
-[sub_resource type="Theme" id="Theme_0vefq"]
-default_font = ExtResource("5_nhe20")
+[ext_resource type="Texture2D" uid="uid://4q1qry2cbxwo" path="res://Textures/cheese.png" id="3_hcjgx"]
 
 [sub_resource type="Theme" id="Theme_gmcgj"]
 
@@ -16,21 +14,74 @@ default_font_size = 36
 [node name="UI" type="Node"]
 script = ExtResource("1_khvck")
 
-[node name="timeLabel" type="Label" parent="."]
-visible = false
-offset_left = 532.0
-offset_top = 260.0
-offset_right = 792.0
-offset_bottom = 520.0
-theme = SubResource("Theme_0vefq")
-theme_override_colors/font_color = Color(1, 0, 0, 1)
+[node name="standard" type="Node2D" parent="."]
+
+[node name="timeLabel" type="Label" parent="standard"]
+offset_left = 2.0
+offset_top = 29.0
+offset_right = 120.0
+offset_bottom = 73.0
+theme = ExtResource("2_0cki4")
+theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "hello"
 
+[node name="lblTIME" type="Label" parent="standard"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme = ExtResource("2_0cki4")
+theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Time"
+
+[node name="lblTIME2" type="Label" parent="standard"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 120.0
+offset_bottom = 46.0
+theme = ExtResource("2_0cki4")
+theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Time"
+
+[node name="Cheese" type="Sprite2D" parent="standard"]
+position = Vector2(247, 37.4)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_hcjgx")
+
+[node name="cheeseCounter" type="Label" parent="standard"]
+offset_left = 284.0
+offset_top = 15.0
+offset_right = 402.0
+offset_bottom = 59.0
+theme = ExtResource("2_0cki4")
+theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "X0"
+
+[node name="totalCheese" type="Label" parent="standard"]
+offset_left = 284.0
+offset_top = 36.6
+offset_right = 402.0
+offset_bottom = 80.6
+theme = ExtResource("2_0cki4")
+theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "/0"
+
 [node name="collect_athon" type="Node2D" parent="."]
-visible = false
 
 [node name="Seed1" type="TextureRect" parent="collect_athon"]
 offset_left = -57.0
@@ -81,19 +132,19 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Flower" type="TextureRect" parent="collect_athon"]
-offset_left = 633.0
-offset_top = -1.0
-offset_right = 2553.0
-offset_bottom = 1079.0
+offset_left = 442.0
+offset_top = -19.0
+offset_right = 2362.0
+offset_bottom = 1061.0
 scale = Vector2(0.1, 0.1)
 theme = SubResource("Theme_gmcgj")
 texture = ExtResource("3_7hxp4")
 
 [node name="Label" type="Label" parent="collect_athon"]
-modulate = Color(0.556863, 0.176471, 1, 1)
-offset_left = 762.0
+modulate = Color(1, 0.215686, 0.815686, 1)
+offset_left = 571.0
 offset_top = 33.0
-offset_right = 814.0
+offset_right = 623.0
 offset_bottom = 86.0
 theme = SubResource("Theme_k752p")
 theme_override_constants/outline_size = 4

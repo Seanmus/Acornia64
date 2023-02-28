@@ -146,6 +146,7 @@ _data = {
 [node name="Title" type="Node3D"]
 script = ExtResource("1_gp50i")
 nextLevel = ""
+gameMode = "title"
 
 [node name="UI" type="Node" parent="."]
 script = ExtResource("17_vbvrs")

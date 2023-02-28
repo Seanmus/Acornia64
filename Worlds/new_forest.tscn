@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b760vvlgreu4y"]
+[gd_scene load_steps=18 format=3 uid="uid://b760vvlgreu4y"]
 
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="1_2tm05"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_a1lhs"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="11_j8c2i"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0umwj"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_ui6yu"]
-[ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="14_5i4fd"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="16_m4wnl"]
 [ext_resource type="PackedScene" uid="uid://cmmv8wa104po2" path="res://WorldBlocks/LongPink.tscn" id="17_7ydwf"]
 
@@ -348,20 +347,6 @@ transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 322.16, 28.7196, 193.61
 [node name="cheese30" parent="Cheese" instance=ExtResource("13_ui6yu")]
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 345.193, 24.3868, 193.611)
 
-[node name="UI" parent="." instance=ExtResource("14_5i4fd")]
-
-[node name="timeLabel" parent="UI" index="0"]
-visible = true
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -192.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 44.0
-grow_horizontal = 0
-theme_override_colors/font_color = Color(0.85098, 0.231373, 0.721569, 1)
-
 [node name="SprintLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.217, 12.0164, -38.3079)
 pixel_size = 0.02
@@ -398,5 +383,3 @@ font_size = 64
 transform = Transform3D(-8.69058e-08, 0, 2.14164, 0, 1, 0, -1.98817, 0, -9.3614e-08, 123.529, 9.49454, -46.3704)
 
 [connection signal="won" from="endLevel" to="Player" method="Win"]
-
-[editable path="UI"]

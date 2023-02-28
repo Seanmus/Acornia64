@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://duhbpukphe4ns"]
+[gd_scene load_steps=14 format=3 uid="uid://duhbpukphe4ns"]
 
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="1_0svfu"]
+[ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_71ksk"]
 [ext_resource type="PackedScene" uid="uid://nt2mkthdyyc0" path="res://WorldBlocks/PuzzleElements/on_off.tscn" id="2_dwhw5"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="3_wqt6d"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/LongBoi.tscn" id="4_bjo48"]
@@ -15,6 +16,7 @@
 
 [node name="on_off_level" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8186, 0, 0)
+script = ExtResource("1_71ksk")
 
 [node name="newPlayer" parent="." instance=ExtResource("5_f8apw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.765, 3.72378, 0.458313)

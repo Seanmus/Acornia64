@@ -15,9 +15,10 @@ func _setGameMode(newGameMode):
 	gameMode = newGameMode
 	if(gameMode == "collect_athon"):
 		UI._collect_athon()
-	if(gameMode == "standard"):
+	elif(gameMode == "standard"):
 		UI._standard()
-
+	else:
+		UI.hide()
 #Increases the seed count
 func _seed_Collected():
 	seedCount += 1
