@@ -70,7 +70,7 @@ tracks/2/keys = {
 "values": [false, false, true]
 }
 
-[sub_resource type="Animation" id="Animation_bys6r"]
+[sub_resource type="Animation" id="Animation_s7o71"]
 resource_name = "endFast"
 length = 0.6
 tracks/0/type = "value"
@@ -98,7 +98,7 @@ tracks/1/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_6veuw"]
+[sub_resource type="Animation" id="Animation_6rn7d"]
 resource_name = "endFaster"
 length = 0.6
 tracks/0/type = "value"
@@ -130,8 +130,8 @@ tracks/1/keys = {
 _data = {
 "RESET": SubResource("Animation_ew4jo"),
 "end": SubResource("Animation_55taj"),
-"endFast": SubResource("Animation_bys6r"),
-"endFaster": SubResource("Animation_6veuw")
+"endFast": SubResource("Animation_s7o71"),
+"endFaster": SubResource("Animation_6rn7d")
 }
 
 [sub_resource type="Theme" id="Theme_ih8fp"]

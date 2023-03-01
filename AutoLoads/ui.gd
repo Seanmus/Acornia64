@@ -26,18 +26,19 @@ func CollectCoin():
 
 func GotSeed():
 	Manager.totalSeedCount += 1
+	var lightSunflowerSeed = ResourceLoader.load("res://UI/Images/sunFlowerSeedRenderLight.png")
 	if Manager.totalSeedCount == 6:
-		$collect_athon/Seed6.texture = load("res://UI/Images/sunFlowerSeedRenderLight.png")
+		$collect_athon/Seed6.texture = lightSunflowerSeed
 	elif Manager.totalSeedCount == 5:
-		$collect_athon/Seed5.texture = load("res://UI/Images/sunFlowerSeedRenderLight.png")
+		$collect_athon/Seed5.texture = lightSunflowerSeed
 	elif Manager.totalSeedCount == 4:
-		$collect_athon/Seed4.texture = load("res://UI/Images/sunFlowerSeedRenderLight.png")
+		$collect_athon/Seed4.texture = lightSunflowerSeed
 	elif Manager.totalSeedCount == 3:
-		$collect_athon/Seed3.texture = load("res://UI/Images/sunFlowerSeedRenderLight.png")
+		$collect_athon/Seed3.texture = lightSunflowerSeed
 	elif Manager.totalSeedCount == 2:
-		$collect_athon/Seed2.texture = load("res://UI/Images/sunFlowerSeedRenderLight.png")
+		$collect_athon/Seed2.texture = lightSunflowerSeed
 	elif Manager.totalSeedCount == 1:
-		$collect_athon/Seed1.texture = load("res://UI/Images/sunFlowerSeedRenderLight.png")
+		$collect_athon/Seed1.texture = lightSunflowerSeed
 
 
 func FlowerPlanted():
