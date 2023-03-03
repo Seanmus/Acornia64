@@ -1,0 +1,338 @@
+commit 6edeb45b51d6d384e43c7bd4a49ca640ffb19fcb
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Tue Feb 28 23:19:53 2023 -0600
+
+    Changed to release canidate 4.0 and revised export settings
+
+commit d78b18d1c47d689b114fdf44f247139fbb6070c5
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Tue Feb 28 15:03:28 2023 -0600
+
+    Updated hud to include coin counter and timer for each level
+
+commit 55f065caadb5b277a911777cde5e78e7b555175e
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Mon Feb 27 17:32:34 2023 -0600
+
+    Lengthed and polished the on_off level
+
+commit 4079398f763316c84b5308e7f8ab4e150093ed41
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Fri Feb 10 23:54:33 2023 -0600
+
+    Added a world to make promo art in
+
+commit 68b6f7666d8333e52dff11009c59e543d374f2e1
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Feb 9 16:51:18 2023 -0600
+
+    Cleaned up editor orginization for on_off_level
+
+commit 8c947fb47ebf04950930c61b9d506bc75b438fd2
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Feb 9 16:47:37 2023 -0600
+
+    Fixed spacing between platforms on disapearing platform level to make the gameplay more fluid
+
+commit 7b65e50812ee7e38c9683c09a116dc5b701b5bec
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Feb 9 16:06:46 2023 -0600
+
+    Built out unpolished level using a dissapearing platform mechanic
+
+commit 0c906891f4d86331dfc6082b369a1da7a2466229
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Feb 9 10:04:57 2023 -0600
+
+    Made adjustments to the camera to make it less snappy, also lessened the jump height offset to 0.1 from 0.2
+
+commit ee9b211254effe28d4d5c6b3dda7e7da4ecbc06f
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Wed Feb 8 23:13:10 2023 -0600
+
+    Made a minor tweak to Auri's position on the title screen
+
+commit d7d63666215b8fff0d1bbef27e9734650d7d8fef
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Wed Feb 8 22:45:40 2023 -0600
+
+    Overhauled the title screen to add Auri to it jumping off of earth
+
+commit 6eb8c5b25b2c53da34a14290fee7fe2837b4702d
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Wed Feb 8 21:28:19 2023 -0600
+
+    Updated to godot4 release canidate 1, also made a small fix for getting caught on moving platforms still needs some work
+
+commit 3342242bc4f5b02a92b76d8973f5586cc40113b0
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Mon Feb 6 17:33:23 2023 -0600
+
+    Added some test platforms to the snow level
+
+commit 2c3ea073246aff0e4aa523a5b2b54520ade9944a
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Sat Feb 4 13:37:09 2023 -0600
+
+    Updated to godot beta version 17
+    
+    Updated to godot beta version 17
+
+commit 1d0a838ae4485f8b97a59308aa0795a686db44bd
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Sat Jan 21 22:53:29 2023 -0600
+
+    built basic blocks for snow level
+
+commit 47747472477cfbcacafbfa9bf13bb1baa2490514
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Sat Jan 21 22:20:06 2023 -0600
+
+    Uploaded inital snow level models and created empty snow_level
+
+commit 28bdd3c4f44aabe5bb80d5c1b9bd0d65688dd517
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 20 17:00:34 2023 -0600
+
+    Fixed camera clipping a bit, and prevented the spaming of the transition animation
+
+commit d20065feb51bc839cbf19499e52ad8f47499e0cf
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 20 16:26:10 2023 -0600
+
+    added a few additional puzzles to the end level and made it clearer that the planet is the end destination
+
+commit 519ab0dcdbd9eeaf18b64e315d9764ccfbd2b4b0
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 20 14:32:26 2023 -0600
+
+    Added physics based movement
+
+commit eeee20c1f6fb35c3d14970d114281300975240f5
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 20 14:10:11 2023 -0600
+
+    Tweaked tool tip text placement to make it easier to notice
+
+commit 8021e0f82771f67a8c48bb02578d6a0836b0885c
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 19 17:31:42 2023 -0600
+
+    Fixed level design of end level after feedback
+
+commit 2a7094bcd9088508bf51e1d323ea4f720e73f5e2
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 19 16:14:39 2023 -0600
+
+    Fixed collect sound audio balancing in the audio manager and tweaked level design of space level at the end
+
+commit 7ed7e329324f3e185e700f43848d2eb89d386000
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 19 16:04:10 2023 -0600
+
+    added tutorial text to first level, and removed poof cloud from landing
+
+commit 9f133958102838ac41a863f8432787e205912935
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 19 15:35:11 2023 -0600
+
+    Fixed convex collision not supported error for tires
+
+commit b97929f165ce90471ca97efff826ef2414439ef4
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 19 11:28:35 2023 -0600
+
+    Changed start menu buttons and background
+
+commit ab14393b4416802a890c9c140a830f98fa8fd19c
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Wed Jan 18 23:59:09 2023 -0600
+
+    Tweaked menu screen
+
+commit 76941849506f04dfc691657d6c727b0c671e79b9
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Wed Jan 18 23:36:22 2023 -0600
+
+    Finally adjusted the default volume on the menu screen to be more quiet. Also fixed animation transition to the landing animation
+
+commit f14596d13b70d707802476eb0a0d082a9c0eb342
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Wed Jan 18 17:25:19 2023 -0600
+
+    Added in a land animation that makes Auri feel like a marshmallow.
+
+commit e27bbced0b98645f56496892335a7a0065070af7
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Sun Jan 15 23:59:00 2023 -0600
+
+    Fixed missing file pathway reference
+
+commit 501b3e1127fb4a2491851ec7293dd74417b334e1
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Sun Jan 15 12:43:49 2023 -0600
+
+    Added loading text to loading screen and ensured win sound finished playing before moving to the next level
+
+commit 872143c9ffcda067c2f4c94ac1a9bda7b43f8b16
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Sat Jan 14 00:54:50 2023 -0600
+
+    cleaned up file system significantly
+
+commit 83412723fa0bb514eeeb36e147fcc4eba5ac1bec
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 17:14:23 2023 -0600
+
+    Fixed auri's shadows
+
+commit 40e49be171b04086cafddca9743f392938d4e42b
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 16:44:31 2023 -0600
+
+    Deleted world old world enviroment asset, and shadow from player for now
+
+commit 72b3c4be1296cfa1d9ae4614db7ffe33bfe1607b
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 12:59:10 2023 -0600
+
+    Added a shadow to Auri as per player feedback
+
+commit e4d4234daec8abe046d8717b406aa9108ddcf41a
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 12:43:36 2023 -0600
+
+    Fixed problem with character not being able to jump off of vertial platforms when said platforms were moving upwards, did this by adding a vertical pillar collider that collided with the platform
+
+commit 50931bf1bb716cc8357dd075592ea029e6be2fb3
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 11:20:27 2023 -0600
+
+    Fixed bug where jump sound would not always play
+
+commit 35a142dc8a6f3b98fcaf09f7d6b60cea37c05b0b
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 10:44:44 2023 -0600
+
+    Updated player death to be handled in a place, any deadly object now is to be given the deadly grouping that will trigger the series of events that take place when the player dies
+
+commit 201cb98cbd3c89c44c80f7b7ffb19722df58fe6c
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Fri Jan 13 10:33:28 2023 -0600
+
+    Fixed bug where death animation might play a couple frames after respawning, or where it wouldnt play at all
+
+commit 0945345dc3b5bc7262c548fa62c063b19403d5ea
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 12 16:33:59 2023 -0600
+
+    Added box collider to bottom of player in addition to capsule component, this allows the player to jump off of moving platforms however it causes them to get caught on lips so still a bit of work to do
+
+commit 2a78083ee1abab374aac239a3c99d0e431e5ea0b
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 12 13:03:01 2023 -0600
+
+    Made improvements to the space levels level design to introduce the player to the mechanics
+
+commit 101e0012a59b9547b506517d833fb64bb8b24f60
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 12 11:19:54 2023 -0600
+
+    shortened level transition time
+
+commit 29865007a33265c58f3f8592f94d4fab45ad4d0e
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Wed Jan 11 17:03:19 2023 -0600
+
+    Re-added win animation for player when finishing levels.
+
+commit ce4f0ac88a3b5894566cd184ed8211b50cf83622
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Mon Jan 9 17:05:43 2023 -0600
+
+    Fixed run cloud, now can be seen properly from all angles, also has more volume.
+
+commit cacf58b8b03c9865a66848ac3f0f4d8ca1fa605d
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 5 16:05:50 2023 -0600
+
+    Modified position of smoke cloud for landing and double jumping to be lower down
+
+commit 639bcec10c13c4f06046fedd509a78b22efc5082
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Thu Jan 5 13:18:21 2023 -0600
+
+    fixed some pain points within the platforming levels, fixed bug where player would get stuck on mushroom if pressing space at the exact right/wrong time
+
+commit b111faa3acefd8ab55d811e122740e900a7c66b9
+Author: Sean Piche <spiche91@academic.rrc.ca>
+Date:   Wed Jan 4 10:41:11 2023 -0600
+
+    changed explode cloud to be an instatiated object with a lifetime of 1 second, done to fix bug with cloud not emmiting every time when player jumps, additionaly added an explosion cloud that emits when the cannonball blows up.
+
+commit 5d683d3c3ddb0454fc07f5015381e1bb8c7f57e5
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Mon Jan 2 19:18:34 2023 -0600
+
+    Changed auri's player model out to have glasses a face and a nose.
+
+commit a40138bc3cd2a4fe1dba5b3aa0df2fd7ffc29c69
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Tue Dec 27 23:35:15 2022 -0600
+
+    commented player movement code
+
+commit 7d54f182a81d11dfba22d411437564c662fb514c
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Tue Dec 27 20:06:08 2022 -0600
+
+    player model will rotate in 8 directions depending on player input
+
+commit acc0a2cf5faa5e8c7377bfaa92ef5d3e11219a4b
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Tue Dec 27 01:58:20 2022 -0600
+
+    player rotates in four directions depending on direction of movement
+
+commit 1f7341876530819e2369f07a26a49457c721bafd
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Mon Dec 26 22:10:46 2022 -0600
+
+    removed extra mesh on mushroom
+
+commit 34a42b785630001ddd2f955f231577f3674d3e95
+Author: Seanmus <seanpiche718@gmail.com>
+Date:   Mon Dec 26 21:55:30 2022 -0600
+
+    set background music to loop after changing engine to godot beta v10
+
+commit dd2455fa97676637fdfc81b1f7cca762f53c3945
+Merge: 1bf0445 c63f1c2
+Author: spiche91 <spiche91@ITS1053577>
+Date:   Tue Nov 15 16:20:07 2022 -0600
+
+    Removed local read me
+
+commit 1bf0445701be9185c7dd0936b4c6eeefe61962f5
+Author: spiche91 <spiche91@ITS1053577>
+Date:   Tue Nov 15 16:18:06 2022 -0600
+
+    Moved world enviroment to worlds folder
+
+commit 11cf466052e9b345cd4817e1a6ee74ff35f63510
+Author: spiche91 <spiche91@ITS1053577>
+Date:   Tue Nov 15 16:16:14 2022 -0600
+
+    Moved world enviroment to worlds folder
+
+commit c63f1c2c631f6def1e187e7a3d58ee14fb7a65fa
+Author: Seanmus <64453063+Seanmus@users.noreply.github.com>
+Date:   Tue Nov 15 11:46:08 2022 -0600
+
+    Create README.md
+
+commit 11778d6f6e96aaf093613f3e87309e2eb31e8951
+Author: spiche91 <spiche91@ITS1053577>
+Date:   Tue Nov 15 11:42:12 2022 -0600
+
+    Initial commit
