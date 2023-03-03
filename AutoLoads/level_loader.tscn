@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwpmenfe7c3xn"]
 
 [ext_resource type="Script" path="res://AutoLoads/level_loader.gd" id="1_qey6j"]
-[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/transition.tscn" id="1_s6k0h"]
+[ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/Transition.tscn" id="1_s6k0h"]
 [ext_resource type="Material" uid="uid://c3mu4b1jgda32" path="res://UI/newTransition.tres" id="3_xvord"]
 
 [node name="LevelLoader" type="Node2D"]
