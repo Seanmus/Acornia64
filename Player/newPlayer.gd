@@ -19,7 +19,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var landSound = $LandSound
 @onready var runCloud = $runCloud
 @onready var auri = $auriModel
-@onready var poofCloud = load("res://Player/explodeCloud.tscn")
+@onready var poofCloud = load("res://Player/jumpCloud.tscn")
 
 
 var spawnPos;
