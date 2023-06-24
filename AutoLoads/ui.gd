@@ -3,7 +3,6 @@ extends Node
 signal win
 var won = true
 var time = 0
-var cheese = 0
 @onready var cheeseCounter = $standard/cheeseCounter
 @onready var lightSunflowerSeed = ResourceLoader.load("res://UI/Images/sunFlowerSeedRenderLight.png")
 @onready var darkSunflowerSeed = ResourceLoader.load("res://UI/Images/sunFlowerSeedRenderDark.png")
@@ -11,7 +10,6 @@ func _ready():
 	LevelLoader.level_loaded.connect(_reset)
 
 func _reset():
-	cheese = 0
 	$collect_athon/Seed1.texture = darkSunflowerSeed
 	$collect_athon/Seed2.texture = darkSunflowerSeed
 	$collect_athon/Seed3.texture = darkSunflowerSeed
@@ -31,12 +29,10 @@ func _process(_delta):
 
 func SetCheeseTotal(cheeseAmount):
 	$standard/totalCheese.text = "/" + str(cheeseAmount)
-	cheese = 0
-	cheeseCounter.text = "x" + str(cheese)
+	cheeseCounter.text = "x 0" 
 
-func CollectCoin():
-	cheese+= 1
-	cheeseCounter.text = "x" + str(cheese)
+func _CollectCheese(cheeseCount):
+	cheeseCounter.text = "x" + str(cheeseCount)
 
 func GotSeed():
 	Manager.totalSeedCount += 1

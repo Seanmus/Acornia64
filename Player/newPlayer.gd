@@ -21,10 +21,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 
+var spawnPos
 
-var spawnPos;
 #Occurs when the game is loaded
 func _ready():
+	Manager.on_win.connect(Win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	spawnPos = global_transform
 	
@@ -130,7 +131,7 @@ func _physics_process(delta):
 			auri.rotation_degrees.y = 225	
 		
 		
-		if is_on_floor() && Input.is_action_pressed("sprint") && (velocity.x !=0 || velocity.z != 0):
+		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
 			runCloud.emitting = true
 		else:
 			runCloud.emitting = false
@@ -153,7 +154,6 @@ func _physics_process(delta):
 #Starts the win animation
 func Win():
 	animationState.travel("win")
-	Manager._win()
 
 func Reset():
 	$acorn/AnimationPlayer.play("Reset")

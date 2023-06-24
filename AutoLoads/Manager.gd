@@ -1,17 +1,21 @@
 extends Node
 
+var cheeseCount : int
 var seedCount : int
 var totalSeedCount : int
 var plantedCount : int
 var won
 var nextLevel
 var gameMode
+
+signal on_win
 #Sets win to false
 func _ready():
 	won = false
 	LevelLoader.level_loaded.connect(_reset)
 
 func _reset():
+	cheeseCount = 0
 	plantedCount = 0
 	totalSeedCount = 0
 	seedCount = 0
@@ -35,6 +39,10 @@ func _planted():
 	UI.FlowerPlanted()
 	if(plantedCount >= 6):
 		_win()
+
+func _Collect_Cheese():
+	cheeseCount+=1
+	UI._CollectCheese(cheeseCount)
 		
 #Plays the win sound and sets win to true	
 func _win():
@@ -42,6 +50,7 @@ func _win():
 	plantedCount = 0
 	MusicPlayer.playing = false
 	$winSound.play()
+	on_win.emit()
 	LevelLoader._loadLevel(nextLevel)
 
 
