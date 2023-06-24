@@ -3,13 +3,18 @@ extends Node
 var seedCount : int
 var totalSeedCount : int
 var plantedCount : int
-var flowerCount : int
 var won
 var nextLevel
 var gameMode
 #Sets win to false
 func _ready():
 	won = false
+	LevelLoader.level_loaded.connect(_reset)
+
+func _reset():
+	plantedCount = 0
+	totalSeedCount = 0
+	seedCount = 0
 
 func _setGameMode(newGameMode):
 	gameMode = newGameMode
@@ -34,7 +39,7 @@ func _planted():
 #Plays the win sound and sets win to true	
 func _win():
 	won = true
-	#player.Won()
+	plantedCount = 0
 	MusicPlayer.playing = false
 	$winSound.play()
 	LevelLoader._loadLevel(nextLevel)

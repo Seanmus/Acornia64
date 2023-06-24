@@ -5,9 +5,6 @@ extends Node
 
 func _ready():
 	MusicPlayer.playing = true
-	Manager.seedCount = 0
-	Manager.flowerCount = 0
-	Manager.totalSeedCount = 0
 	Manager.won = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	$Transition.visible = false

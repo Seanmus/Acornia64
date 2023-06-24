@@ -5,6 +5,20 @@ var won = true
 var time = 0
 var cheese = 0
 @onready var cheeseCounter = $standard/cheeseCounter
+@onready var lightSunflowerSeed = ResourceLoader.load("res://UI/Images/sunFlowerSeedRenderLight.png")
+@onready var darkSunflowerSeed = ResourceLoader.load("res://UI/Images/sunFlowerSeedRenderDark.png")
+func _ready():
+	LevelLoader.level_loaded.connect(_reset)
+
+func _reset():
+	cheese = 0
+	$collect_athon/Seed1.texture = darkSunflowerSeed
+	$collect_athon/Seed2.texture = darkSunflowerSeed
+	$collect_athon/Seed3.texture = darkSunflowerSeed
+	$collect_athon/Seed4.texture = darkSunflowerSeed
+	$collect_athon/Seed5.texture = darkSunflowerSeed
+	$collect_athon/Seed6.texture = darkSunflowerSeed
+	$collect_athon/Label.text = "x 0"
 
 func _process(_delta):
 	time += _delta
@@ -26,7 +40,7 @@ func CollectCoin():
 
 func GotSeed():
 	Manager.totalSeedCount += 1
-	var lightSunflowerSeed = ResourceLoader.load("res://UI/Images/sunFlowerSeedRenderLight.png")
+
 	if Manager.totalSeedCount == 6:
 		$collect_athon/Seed6.texture = lightSunflowerSeed
 	elif Manager.totalSeedCount == 5:
