@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
-[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="2_ijyan"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1

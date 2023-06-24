@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cig4ygd524arc"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_b0lrj"]
-[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="2_3oio8"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_3oio8"]
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="3_i4c1r"]
 [ext_resource type="PackedScene" uid="uid://cmmv8wa104po2" path="res://WorldBlocks/LongPink.tscn" id="4_mwucn"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_1rfsr"]

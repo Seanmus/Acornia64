@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c032uq2x08vpu" path="res://WorldBlocks/SnowBlocks/snow_block_beveled.tscn" id="2_v41ye"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_hpw4e"]
-[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="3_ip3wf"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="3_ip3wf"]
 [ext_resource type="PackedScene" uid="uid://cr0isgu1vapvj" path="res://WorldBlocks/Interactive/MushRoomBounce.tscn" id="4_j5sqt"]
 
 [sub_resource type="Environment" id="Environment_yjbyy"]

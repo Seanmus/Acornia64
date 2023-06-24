@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://b760vvlgreu4y"]
 
-[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/newPlayer.tscn" id="1_2tm05"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="1_2tm05"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_a1lhs"]
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_vwc2s"]
 [ext_resource type="PackedScene" uid="uid://ioatt6ckkfy3" path="res://WorldBlocks/green_brick_corner.tscn" id="3_s08up"]

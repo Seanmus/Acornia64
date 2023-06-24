@@ -66,7 +66,7 @@ func jump():
 	
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
-	$SpotLight3D.add_child(cloud)
+	$JumpCloudSpawnPoint.add_child(cloud)
 	
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
