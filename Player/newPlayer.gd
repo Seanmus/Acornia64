@@ -8,6 +8,7 @@ var sprintMultiplier = 1.0
 var acceleration = 60
 const JUMP_VELOCITY = 7
 var mouse_sensitivty = 0.002 #radiains/pixel
+var controller_sensitivity = 0.02
 var canDoubleJump = true
 var landing : bool
 var dead : bool
@@ -105,31 +106,40 @@ func _physics_process(delta):
 			if !landing:
 				landing = true
 
+		var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
+		if cameraInput:
+			rotate_y(-cameraInput.x * controller_sensitivity)
+			$Pivot.rotate_x(-cameraInput.y * controller_sensitivity)
+			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
+
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		#Turn right
-		if input_dir.x > 0 && input_dir.y == 0:
+		if input_dir.x > 0 && abs(input_dir.y) <= 0.35:
 			auri.rotation_degrees.y = -90
-		#Turn right forward	
-		if input_dir.x > 0 && input_dir.y < 0:
-			auri.rotation_degrees.y = -45
+		elif input_dir.y < 0 && abs(input_dir.x) <= 0.35:
+			auri.rotation_degrees.y = 0
+		elif input_dir.y > 0 && abs(input_dir.x) <= 0.35:
+			auri.rotation_degrees.y = 180
 		#Turn left	
-		if input_dir.x < 0 && input_dir.y == 0:
+		elif input_dir.x < 0 && abs(input_dir.y) <= 0.35:
 			auri.rotation_degrees.y = 90
 		#Turn left forward	
-		if input_dir.x < 0 && input_dir.y < 0:
+		elif input_dir.x < 0 && input_dir.y < 0:
 			auri.rotation_degrees.y = 45
-		#	
-		if input_dir.y < 0 && input_dir.x == 0:
-			auri.rotation_degrees.y = 0
+		#
+		#Turn right forward	
+		elif input_dir.x > 0 && input_dir.y < 0:
+			auri.rotation_degrees.y = -45	
+
 			
-		if input_dir.x < 0 && input_dir.y > 0:
+		elif input_dir.x < 0 && input_dir.y > 0:
 			auri.rotation_degrees.y = 135	
 			
-		if input_dir.y > 0 && input_dir.x == 0:
-			auri.rotation_degrees.y = 180
-		if input_dir.x > 0 && input_dir.y > 0:
+
+		elif input_dir.x > 0 && input_dir.y > 0:
 			auri.rotation_degrees.y = 225	
 		
+		print(abs(input_dir.y))
 		
 		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
 			runCloud.emitting = true

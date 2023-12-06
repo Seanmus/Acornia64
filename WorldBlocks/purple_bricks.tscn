@@ -9,6 +9,6 @@ data = PackedVector3Array(-1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1
 
 [node name="collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.4643, 0, 0, 0, 1.58738, 0, 0, 0, 3.4643, 0, 0, 0)
-shape = SubResource( "ConcavePolygonShape3D_phed8" )
+shape = SubResource("ConcavePolygonShape3D_phed8")
 
-[node name="purpleBricks" parent="." instance=ExtResource( "1_mkcrw" )]
+[node name="purpleBricks" parent="." instance=ExtResource("1_mkcrw")]

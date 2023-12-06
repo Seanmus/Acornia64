@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://o00d2x4kdyqf"]
 
 [ext_resource type="PackedScene" uid="uid://chwbaktui0ou2" path="res://WorldBlocks/Imports/cannon.glb" id="1_pxxev"]
 [ext_resource type="Script" path="res://Traps/cannon.gd" id="2_148ru"]

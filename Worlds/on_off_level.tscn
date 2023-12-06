@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="4_c8vhb"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="5_f8apw"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="6_kt6ef"]
-[ext_resource type="PackedScene" path="res://Traps/cannon.tscn" id="8_nl422"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://Traps/cannon.tscn" id="8_nl422"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="9_77pfi"]
 [ext_resource type="PackedScene" uid="uid://cr0isgu1vapvj" path="res://WorldBlocks/Interactive/MushRoomBounce.tscn" id="10_13aw8"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="11_fvqa5"]

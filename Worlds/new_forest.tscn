@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="4_sc7s5"]
 [ext_resource type="PackedScene" uid="uid://cn4e8rnx1wmb7" path="res://WorldBlocks/Forest/mushroom.tscn" id="6_fjf3j"]
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="7_shn2v"]
-[ext_resource type="PackedScene" path="res://Traps/cannon.tscn" id="8_15aww"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://Traps/cannon.tscn" id="8_15aww"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="8_hxn28"]
 [ext_resource type="PackedScene" uid="uid://tfv2r57qdmok" path="res://WorldBlocks/Interactive/sunflower.tscn" id="9_yw6hj"]
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="11_j8c2i"]
@@ -60,7 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6628, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73411, 0, 6.85135)
 
 [node name="purpleBricks15" parent="Tiles" instance=ExtResource("7_shn2v")]
-transform = Transform3D(1.56602, 0, 0, 0, 1, 0, 0, 0, 1.49423, 183.865, 9.47949, -20.6069)
+transform = Transform3D(1.56602, 0, 0, 0, 1, 0, 0, 0, 1.49423, 183.865, 9.47949, -21.5785)
 
 [node name="LargeTile5" parent="Tiles" instance=ExtResource("4_sc7s5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 200.057, 9.47949, 20.9455)
@@ -126,16 +126,19 @@ transform = Transform3D(0.888382, -0.102981, 0.447405, 0.153939, 0.98492, -0.078
 transform = Transform3D(0.888382, -0.102981, 0.447405, 0.153939, 0.98492, -0.0789641, -0.432526, 0.139024, 0.890838, 14.6509, 0.612111, -30.0632)
 
 [node name="purpleBricks14" parent="Tiles" instance=ExtResource("7_shn2v")]
-transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 184.089, 9.50333, -1.61477)
+transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 184.089, 9.50333, 3.74379)
 
 [node name="purpleBricks13" parent="Tiles" instance=ExtResource("7_shn2v")]
-transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 184.089, 9.50333, 24.1704)
+transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 184.089, 9.50333, 29.529)
 
 [node name="greenBricks4" parent="Tiles" instance=ExtResource("1_a1lhs")]
-transform = Transform3D(1.61544, 0, 0, 0, 1, 0, 0, 0, 1.95568, 184.089, 9.50333, 46.2208)
+transform = Transform3D(1.61544, 0, 0, 0, 1, 0, 0, 0, 1.95568, 184.089, 9.50333, 50.2208)
 
 [node name="greenBricks5" parent="Tiles" instance=ExtResource("1_a1lhs")]
-transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 175.369, 9.50333, 11.3328)
+transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 175.369, 9.50333, 16.6914)
+
+[node name="greenBricks7" parent="Tiles" instance=ExtResource("1_a1lhs")]
+transform = Transform3D(1.3, 0, 0, 0, 1, 0, 0, 0, 1.3, 175.369, 9.50333, -9.08192)
 
 [node name="LongBoi2" parent="Tiles" instance=ExtResource("4_pmunq")]
 transform = Transform3D(0.08214, -0.338626, -0.937329, 0.362761, 0.886149, -0.288347, 0.928256, -0.316341, 0.195628, 62.1589, 5.5549, -42.5876)
@@ -206,10 +209,10 @@ transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -4
 [node name="Cannons" type="Node3D" parent="."]
 
 [node name="cannon2" parent="Cannons" instance=ExtResource("8_15aww")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 117.512, 12.2356, -41.983)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 118.354, 12.2356, -41.983)
 
 [node name="cannon4" parent="Cannons" instance=ExtResource("8_15aww")]
-transform = Transform3D(-3.9642, 0, 3.46561e-07, 0, 3.9642, 0, -3.46561e-07, 0, -3.9642, 184.07, 15.3577, 42.6913)
+transform = Transform3D(-3.9642, 0, 3.46561e-07, 0, 3.9642, 0, -3.46561e-07, 0, -3.9642, 184.07, 15.3577, 46.6913)
 
 [node name="cannon5" parent="Cannons" instance=ExtResource("8_15aww")]
 transform = Transform3D(0, 0, -5.9086, 0.364004, 5.89694, 0, 5.78568, -0.371004, 0, 247.607, 15.6316, 118.182)
@@ -264,7 +267,7 @@ transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 34.6639, 6.09465, -42.0
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 60.0127, 8.93888, -43.237)
 
 [node name="cheese5" parent="Cheese" instance=ExtResource("13_ui6yu")]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 112.363, 12.4125, -46.3018)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 113.18, 12.4125, -46.3018)
 
 [node name="cheese6" parent="Cheese" instance=ExtResource("13_ui6yu")]
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 123.398, 12.4125, -46.3018)
@@ -279,16 +282,19 @@ transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 153.789, 15.1856, -47.1
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 181.826, 12.4125, -41.2652)
 
 [node name="cheese10" parent="Cheese" instance=ExtResource("13_ui6yu")]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 183.849, 12.4125, -20.7056)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 183.849, 12.4125, -21.6772)
 
 [node name="cheese11" parent="Cheese" instance=ExtResource("13_ui6yu")]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 183.849, 12.4125, -1.6211)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 183.849, 12.4125, 3.73746)
 
 [node name="cheese12" parent="Cheese" instance=ExtResource("13_ui6yu")]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 175.479, 12.4125, 11.1995)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 175.479, 12.4125, 16.7045)
+
+[node name="cheese33" parent="Cheese" instance=ExtResource("13_ui6yu")]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 175.479, 12.4125, -8.71025)
 
 [node name="cheese13" parent="Cheese" instance=ExtResource("13_ui6yu")]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 184.215, 12.4125, 24.368)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 184.215, 12.4125, 28.368)
 
 [node name="cheese14" parent="Cheese" instance=ExtResource("13_ui6yu")]
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 222.132, 12.4125, 24.368)

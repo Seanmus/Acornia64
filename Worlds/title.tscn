@@ -190,6 +190,8 @@ offset_left = 35.0
 offset_top = 256.0
 offset_right = 152.0
 offset_bottom = 314.0
+focus_neighbor_bottom = NodePath("../collectBtn")
+focus_next = NodePath("../collectBtn")
 theme = SubResource("Theme_vaimv")
 text = "Start"
 
@@ -198,6 +200,9 @@ offset_left = 35.0
 offset_top = 319.0
 offset_right = 152.0
 offset_bottom = 377.0
+focus_neighbor_top = NodePath("../startBtn")
+focus_next = NodePath("../startBtn")
+focus_previous = NodePath("../startBtn")
 theme = SubResource("Theme_vaimv")
 text = "Collect A thon"
 

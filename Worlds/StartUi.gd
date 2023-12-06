@@ -4,6 +4,7 @@ extends Node
 
 
 func _ready():
+	$startBtn.grab_focus()
 	MusicPlayer.playing = true
 	Manager.won = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
