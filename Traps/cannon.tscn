@@ -36,7 +36,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Icosphere001:position")
+tracks/2/path = NodePath("Icosphere_001:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -76,14 +76,14 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Icosphere001:position")
+tracks/2/path = NodePath("Icosphere_001:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(-0.6, -0.285036, -1.45841), Vector3(-0.6, -0.285036, -2.78157), Vector3(-0.6, -0.285036, -1.45841)]
+"values": [Vector3(-0.6, -0.285036, -1.45841), Vector3(-0.6, -0.285, -2.782), Vector3(-0.6, -0.285036, -1.45841)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wyv4a"]
@@ -102,9 +102,6 @@ shape = SubResource("ConcavePolygonShape3D_atlma")
 
 [node name="Icosphere" parent="." index="1"]
 transform = Transform3D(0.425809, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, -0.285036, -1.45841)
-
-[node name="Icosphere001" parent="." index="2"]
-transform = Transform3D(0.425809, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, -0.285036, -1.45841)
 
 [node name="muzzle" type="Marker3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0837)
