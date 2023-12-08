@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cn4e8rnx1wmb7"]
 
-[ext_resource type="Script" path="res://WorldBlocks/Forest/mushroom.gd" id="1_lxx2y"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/mushroom.gd" id="1_lxx2y"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="2_sk03l"]
 [ext_resource type="PackedScene" uid="uid://cfm3exmfcx7iy" path="res://WorldBlocks/Imports/mushroom.glb" id="3_d7qvo"]
 

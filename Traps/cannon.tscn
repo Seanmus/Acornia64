@@ -103,6 +103,9 @@ shape = SubResource("ConcavePolygonShape3D_atlma")
 [node name="Icosphere" parent="." index="1"]
 transform = Transform3D(0.425809, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, -0.285036, -1.45841)
 
+[node name="Icosphere_001" parent="." index="2"]
+transform = Transform3D(0.425809, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, -0.285036, -1.45841)
+
 [node name="muzzle" type="Marker3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0837)
 

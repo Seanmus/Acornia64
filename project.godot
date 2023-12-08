@@ -130,6 +130,7 @@ look_right={
 
 [rendering]
 
+renderer/rendering_method.web="forward_plus"
 environment/ssao/quality=0
 environment/ssil/quality=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
