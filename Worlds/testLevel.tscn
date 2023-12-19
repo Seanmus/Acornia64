@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=8 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
+[ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="3_tuby2"]
+[ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="4_csgss"]
+[ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_jlbwc"]
+[ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="6_atxbo"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -64,8 +68,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7585, 0, -27.5595)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.7585, 0, -41.3337)
 
 [node name="newPlayer" parent="." instance=ExtResource("2_ijyan")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38541, 2.9604, 3.85019)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 6.12522, 2.9604, -9.05173)
 floor_snap_length = 0.0
 
 [node name="WorldEnvironment2" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0ucfl")
+
+[node name="MetalBox" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6, 1.78549, 19.1253)
+
+[node name="MetalBox2" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6, 2.7311, 38.3583)
+
+[node name="MetalBox4" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 6, 2.7311, 46.3583)
+
+[node name="MetalBox3" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6, 7.03809, 68.7728)
+
+[node name="tire" parent="." instance=ExtResource("4_csgss")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02463, 3.70914, 39.9439)
+
+[node name="Death" parent="." instance=ExtResource("5_jlbwc")]
+transform = Transform3D(8.181, 0, 0, 0, 0.918, 0, 0, 0, 10, -11.1515, -2.97989, 15.8365)
+
+[node name="speedBoost" parent="." instance=ExtResource("6_atxbo")]
+transform = Transform3D(2.62201e-05, 0, -1.5, 0, 1.5, 0, 1.5, 0, 2.62201e-05, 5.24755, 1.52211, -1.80067)

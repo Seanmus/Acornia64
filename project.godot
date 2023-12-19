@@ -39,6 +39,7 @@ window/size/fullscreen=true
 
 [filesystem]
 
+import/fbx/enabled=false
 import/fbx/use_fbx=true
 
 [input]

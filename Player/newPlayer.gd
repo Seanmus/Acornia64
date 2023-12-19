@@ -113,33 +113,7 @@ func _physics_process(delta):
 			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
-		#Turn right
-		if input_dir.x > 0 && abs(input_dir.y) <= 0.35:
-			auri.rotation_degrees.y = -90
-		elif input_dir.y < 0 && abs(input_dir.x) <= 0.35:
-			auri.rotation_degrees.y = 0
-		elif input_dir.y > 0 && abs(input_dir.x) <= 0.35:
-			auri.rotation_degrees.y = 180
-		#Turn left	
-		elif input_dir.x < 0 && abs(input_dir.y) <= 0.35:
-			auri.rotation_degrees.y = 90
-		#Turn left forward	
-		elif input_dir.x < 0 && input_dir.y < 0:
-			auri.rotation_degrees.y = 45
-		#
-		#Turn right forward	
-		elif input_dir.x > 0 && input_dir.y < 0:
-			auri.rotation_degrees.y = -45	
-
-			
-		elif input_dir.x < 0 && input_dir.y > 0:
-			auri.rotation_degrees.y = 135	
-			
-
-		elif input_dir.x > 0 && input_dir.y > 0:
-			auri.rotation_degrees.y = 225	
-		
-		print(abs(input_dir.y))
+		_RotatePlayerModelInInputDirection(input_dir)
 		
 		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
 			runCloud.emitting = true
@@ -161,6 +135,31 @@ func _physics_process(delta):
 				speed = 0
 		var _returnValue = move_and_slide()
 
+
+func _RotatePlayerModelInInputDirection(input_dir):
+	#Turn right
+	if input_dir.x > 0 && abs(input_dir.y) <= 0.35:
+		auri.rotation_degrees.y = -90
+	elif input_dir.y < 0 && abs(input_dir.x) <= 0.35:
+		auri.rotation_degrees.y = 0
+	elif input_dir.y > 0 && abs(input_dir.x) <= 0.35:
+		auri.rotation_degrees.y = 180
+	#Turn left	
+	elif input_dir.x < 0 && abs(input_dir.y) <= 0.35:
+		auri.rotation_degrees.y = 90
+	#Turn left forward	
+	elif input_dir.x < 0 && input_dir.y < 0:
+		auri.rotation_degrees.y = 45
+	#
+	#Turn right forward	
+	elif input_dir.x > 0 && input_dir.y < 0:
+		auri.rotation_degrees.y = -45			
+	elif input_dir.x < 0 && input_dir.y > 0:
+		auri.rotation_degrees.y = 135	
+	elif input_dir.x > 0 && input_dir.y > 0:
+		auri.rotation_degrees.y = 225		
+	print(abs(input_dir.y))
+
 #Starts the win animation
 func Win():
 	animationState.travel("win")
@@ -168,6 +167,9 @@ func Win():
 func Reset():
 	$acorn/AnimationPlayer.play("Reset")
 	$acorn/AnimationPlayer.play("walking")
+
+func _SetSpawnPoint(spawnPoint):
+	spawnPos = spawnPoint
 	
 #Teleports the player back to its spawn position on player death.
 func _on_deathFinished():

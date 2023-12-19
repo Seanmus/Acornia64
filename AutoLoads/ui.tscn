@@ -18,6 +18,7 @@ script = ExtResource("1_khvck")
 [node name="standard" type="Node2D" parent="."]
 
 [node name="WoodPanel" type="TextureRect" parent="standard"]
+visible = false
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 105.0
@@ -26,6 +27,7 @@ scale = Vector2(1.04, 1)
 texture = ExtResource("2_s5yp6")
 
 [node name="WoodPanel2" type="TextureRect" parent="standard"]
+visible = false
 offset_left = 224.0
 offset_top = 2.0
 offset_right = 327.0
@@ -89,6 +91,7 @@ text = "/0"
 [node name="collect_athon" type="Node2D" parent="."]
 
 [node name="WoodPanel3" type="TextureRect" parent="collect_athon"]
+visible = false
 offset_left = 503.0
 offset_top = 1.0
 offset_right = 606.0
