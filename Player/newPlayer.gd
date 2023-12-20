@@ -24,7 +24,9 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var spawnPos
 var homingAttack = false
-
+var overlappedTargets = []
+var homingTarget
+var homingSpeed = 30
 
 #Occurs when the game is loaded
 func _ready():
@@ -46,6 +48,19 @@ func kill():
 	velocity.x = 0
 	velocity.z = 0
 	dead = true
+
+#Sends the player flying towards the homingTargets position
+func _HomingAttack(delta):
+	print(homingTarget.name)
+	position = position.move_toward(homingTarget.position, delta * homingSpeed)
+	#Checks if the players has reached the target position
+	if position == homingTarget.position:	
+		#Freeze frame
+		#Triggers the cameras screen shake	
+		homingTarget._Hit()
+		velocity.y = JUMP_VELOCITY
+		homingAttack = false
+		canDoubleJump = true
 		
 #Occurs when an input that has not been previously handled occurs.
 func _unhandled_input(event):
@@ -75,6 +90,9 @@ func addPoofCloud():
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
+	if homingAttack:
+		_HomingAttack(delta)
+		return
 	if is_on_floor():
 		acceleration = 60
 	else:
@@ -87,7 +105,7 @@ func _physics_process(delta):
 		sprintMultiplier = 1.0
 		runCloud.emitting = false
 	if not Manager.won && not dead:
-		if is_on_floor():
+		if is_on_floor() && !dead:
 			canDoubleJump = true
 			if not dead:
 				animationState.travel("walking")
@@ -98,10 +116,16 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("jump"):
 				jump()
 		else:
-			if Input.is_action_just_pressed("jump") && canDoubleJump && !dead:
-				canDoubleJump = false
-				addPoofCloud()
-				jump()
+			if Input.is_action_just_pressed("jump"):
+				homingTarget = _GetClosestTarget()
+				if(homingTarget):
+					homingAttack = true
+					_HomingAttack(delta)
+				else:
+					if canDoubleJump:
+						jump()
+						canDoubleJump = false
+						addPoofCloud()
 			velocity.y -= gravity * 1.2 * delta
 			if(velocity.y < 0):
 				velocity.y -= gravity * 5 * delta
@@ -186,3 +210,33 @@ func _on_deathFinished():
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("deadly"):
 		kill()
+
+func _on_target_detection_area_area_entered(area):
+	if area.is_in_group("targets"):
+		overlappedTargets.append(area)
+
+
+func _on_target_detection_area_area_exited(area):
+	if area.is_in_group("targets"):
+		overlappedTargets.erase(area)
+
+#If the player is not on the ground, finds a new homing target if it exists and starts the homing attack
+func _GetClosestTarget():
+	if overlappedTargets:
+		var closestTarget
+		for target in overlappedTargets:
+			#Raycasts towards the target to ensure a clear path
+			var space_state = get_world_3d().direct_space_state
+			var query = PhysicsRayQueryParameters3D.create(position, target.position)
+			var result = space_state.intersect_ray(query)
+			if(result):
+				if result.position != target.position:
+					continue
+			if not closestTarget:
+				closestTarget = target
+			#Checks if the distance to the target is less then the distance to the previous closest target
+			if position.distance_to(target.position) < position.distance_to(closestTarget.position):
+				closestTarget = target
+		#If a closest target was found returns the one otherwise null is returned
+		print(closestTarget)
+		return closestTarget

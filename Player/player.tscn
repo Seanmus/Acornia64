@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=16 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -41,6 +41,8 @@ particles_anim_loop = false
 material = SubResource("StandardMaterial3D_cejdx")
 size = Vector2(1.551, 0.406)
 orientation = 2
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5ocpv"]
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
@@ -115,5 +117,13 @@ distance_fade_enabled = true
 distance_fade_begin = 30.0
 cull_mask = 1048573
 
+[node name="TargetDetectionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetDetectionArea"]
+transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 0, 0, -3.86294)
+shape = SubResource("SphereShape3D_5ocpv")
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
+[connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
+[connection signal="area_exited" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_exited"]
