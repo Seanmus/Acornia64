@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ioatt6ckkfy3" path="res://WorldBlocks/green_brick_corner.tscn" id="3_s08up"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/LongBoi.tscn" id="4_pmunq"]
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="4_sc7s5"]
-[ext_resource type="PackedScene" uid="uid://cn4e8rnx1wmb7" path="res://WorldBlocks/Forest/mushroom.tscn" id="6_fjf3j"]
+[ext_resource type="PackedScene" uid="uid://cn4e8rnx1wmb7" path="res://WorldBlocks/Interactive/mushroom.tscn" id="6_fjf3j"]
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="7_shn2v"]
 [ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://Traps/cannon.tscn" id="8_15aww"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="8_hxn28"]

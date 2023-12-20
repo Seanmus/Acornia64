@@ -23,6 +23,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 
 var spawnPos
+var homingAttack = false
+
 
 #Occurs when the game is loaded
 func _ready():
@@ -104,6 +106,11 @@ func _physics_process(delta):
 			if(velocity.y < 0):
 				velocity.y -= gravity * 5 * delta
 			if !landing:
+				var targets = get_tree().get_nodes_in_group("targets")
+				for target in targets:
+					print("reseting target")
+					target as homingAttackTarget
+					target._Reset()
 				landing = true
 
 		var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
@@ -158,7 +165,6 @@ func _RotatePlayerModelInInputDirection(input_dir):
 		auri.rotation_degrees.y = 135	
 	elif input_dir.x > 0 && input_dir.y > 0:
 		auri.rotation_degrees.y = 225		
-	print(abs(input_dir.y))
 
 #Starts the win animation
 func Win():

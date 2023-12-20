@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=9 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="4_csgss"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_jlbwc"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="6_atxbo"]
+[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_nd0eu"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -94,3 +95,6 @@ transform = Transform3D(8.181, 0, 0, 0, 0.918, 0, 0, 0, 10, -11.1515, -2.97989, 
 
 [node name="speedBoost" parent="." instance=ExtResource("6_atxbo")]
 transform = Transform3D(2.62201e-05, 0, -1.5, 0, 1.5, 0, 1.5, 0, 2.62201e-05, 5.24755, 1.52211, -1.80067)
+
+[node name="HomingAttackTarget" parent="." instance=ExtResource("7_nd0eu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 4.09082, -6.98706)
