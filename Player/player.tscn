@@ -42,7 +42,8 @@ material = SubResource("StandardMaterial3D_cejdx")
 size = Vector2(1.551, 0.406)
 orientation = 2
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_5ocpv"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lhts0"]
+height = 1.273
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_max_angle = 1.11177
@@ -121,8 +122,8 @@ cull_mask = 1048573
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TargetDetectionArea"]
-transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, 0, -3.86294)
-shape = SubResource("SphereShape3D_5ocpv")
+transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 0, -9.17213)
+shape = SubResource("CylinderShape3D_lhts0")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
