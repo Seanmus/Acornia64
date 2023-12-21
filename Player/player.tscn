@@ -118,9 +118,10 @@ distance_fade_begin = 30.0
 cull_mask = 1048573
 
 [node name="TargetDetectionArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TargetDetectionArea"]
-transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 0, 0, -3.86294)
+transform = Transform3D(13, 0, 0, 0, 13, 0, 0, 0, 13, 0, 0, -3.86294)
 shape = SubResource("SphereShape3D_5ocpv")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

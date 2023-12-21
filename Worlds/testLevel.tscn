@@ -109,7 +109,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, 3.01294)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, 19.6407)
 
 [node name="HomingAttackTarget5" parent="." instance=ExtResource("7_nd0eu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, 31.148)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.6944, 4.09082, 31.148)
 
 [node name="HomingAttackTarget6" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24924, 5.85757, 31.148)

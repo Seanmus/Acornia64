@@ -56,6 +56,7 @@ func _HomingAttack(delta):
 	#Checks if the players has reached the target position
 	if position == homingTarget.position:	
 		#Freeze frame
+		OS.delay_msec(40)
 		#Triggers the cameras screen shake	
 		homingTarget._Hit()
 		velocity.y = JUMP_VELOCITY
