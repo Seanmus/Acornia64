@@ -1,0 +1,191 @@
+[gd_scene load_steps=14 format=3 uid="uid://d0mcpw1h1jqxw"]
+
+[ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
+[ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_8cas3"]
+[ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="6_b7wtq"]
+[ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="9_8bvpm"]
+[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="9_q46w8"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://Traps/cannon.tscn" id="10_7negx"]
+[ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="10_wxahf"]
+[ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="11_4gwdo"]
+[ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="11_nxixn"]
+[ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="12_ej2tk"]
+[ext_resource type="PackedScene" uid="uid://bg6wx1omgx1ge" path="res://WorldBlocks/mars.scn" id="12_xx1uu"]
+
+[sub_resource type="Environment" id="Environment_eei7c"]
+background_mode = 1
+background_color = Color(0.00784314, 0, 0.0588235, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 1.53
+adjustment_enabled = true
+adjustment_saturation = 1.7
+
+[node name="spaceLevel" type="Node3D"]
+script = ExtResource("1_dmlmg")
+
+[node name="Player" parent="." instance=ExtResource("2_iqfuu")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 0, 2.1864, 3)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_eei7c")
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Death" parent="Blocks" instance=ExtResource("5_8cas3")]
+transform = Transform3D(21.2531, 0, 0, 0, 1, 0, 0, 0, 21.0325, 0, -7.83223, 0)
+
+[node name="endLevel" parent="Blocks" instance=ExtResource("6_b7wtq")]
+transform = Transform3D(9.86059, 0, 0, 0, 9.86059, 0, 0, 0, 9.86059, 313.635, 118.39, 375.848)
+nextLevel = "on_off_level"
+
+[node name="MetalBox" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, 0.0966396)
+
+[node name="MetalBox2" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -9.90336)
+
+[node name="MetalBox3" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -19.9034)
+
+[node name="MetalBox4" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -29.9034)
+
+[node name="MetalBox5" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1495, 0, -29.9034)
+
+[node name="MetalBox6" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8505, 0, -29.9034)
+
+[node name="MetalBox7" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -49.9034)
+
+[node name="MetalBox23" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -39.9034)
+
+[node name="MetalBox8" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1495, 0, -39.9034)
+
+[node name="MetalBox9" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8505, 0, -39.9034)
+
+[node name="MetalBox10" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -80.9034)
+
+[node name="MetalBox11" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1495, 0, -80.9034)
+
+[node name="MetalBox12" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8505, 0, -80.9034)
+
+[node name="MetalBox13" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -90.9034)
+
+[node name="MetalBox14" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1495, 0, -90.9034)
+
+[node name="MetalBox15" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8505, 0, -90.9034)
+
+[node name="MetalBox16" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -131.903)
+
+[node name="MetalBox17" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1495, 0, -131.903)
+
+[node name="MetalBox18" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8505, 0, -131.903)
+
+[node name="MetalBox19" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -141.903)
+
+[node name="MetalBox22" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -151.903)
+
+[node name="MetalBox25" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1495, 0, -179.903)
+
+[node name="MetalBox29" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.9501, 9.17703, -179.903)
+
+[node name="MetalBox30" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.9501, 9.17703, -179.903)
+
+[node name="MetalBox36" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 57.4944, 7.92025, -179.903)
+
+[node name="MetalBox31" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.9506, 12.2342, -179.9)
+
+[node name="MetalBox34" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100.951, 12.2342, -179.9)
+
+[node name="MetalBox35" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 110.951, 12.2342, -179.9)
+
+[node name="MetalBox32" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.9506, 12.2342, -169.9)
+
+[node name="MetalBox33" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.9506, 12.2342, -189.9)
+
+[node name="MetalBox26" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(0.951186, -0.308619, 0, 0.308619, 0.951186, 0, 0, 0, 1, 9.49841, 1.5242, -179.903)
+
+[node name="MetalBox27" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(0.951186, -0.308619, 0, 0.308619, 0.951186, 0, 0, 0, 1, 19.0103, 4.61039, -179.903)
+
+[node name="MetalBox28" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(0.951186, -0.308619, 0, 0.308619, 0.951186, 0, 0, 0, 1, 28.5221, 7.69657, -179.903)
+
+[node name="MetalBox20" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1495, 0, -141.903)
+
+[node name="MetalBox21" parent="Blocks" instance=ExtResource("9_8bvpm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8505, 0, -141.903)
+
+[node name="Cannons" type="Node3D" parent="."]
+
+[node name="Planets" type="Node3D" parent="."]
+
+[node name="Moon" parent="Planets" instance=ExtResource("10_wxahf")]
+transform = Transform3D(25.9279, 0, 0, 0, 25.9279, 0, 0, 0, 25.9279, -50.5078, 55.9431, -140.099)
+
+[node name="Earth" parent="Planets" instance=ExtResource("11_nxixn")]
+transform = Transform3D(1189.04, 0, 0, 0, 1189.04, 0, 0, 0, 1189.04, -31.1022, -2054.23, -133.517)
+
+[node name="mars" parent="Planets" instance=ExtResource("12_xx1uu")]
+transform = Transform3D(96.2374, 0, 0, 0, 96.2374, 0, 0, 0, 96.2374, 312.587, 4.6729, 380.06)
+
+[node name="Cheese" type="Node3D" parent="."]
+
+[node name="HomingAttackTarget" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142236, 3.96738, -69.4055)
+
+[node name="HomingAttackTarget2" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142236, 3.96738, -104.896)
+
+[node name="HomingAttackTarget3" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142236, 3.96738, -120.896)
+
+[node name="HomingAttackTarget4" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142236, 3.96738, -165.896)
+
+[node name="HomingAttackTarget5" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.8578, 12.9674, -179.896)
+
+[node name="HomingAttackTarget6" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.5956, 14.8802, -179.896)
+
+[node name="cannon" parent="." instance=ExtResource("10_7negx")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -11.5491, 2.09156, -34.7682)
+
+[node name="SpawnPoint" parent="." instance=ExtResource("11_4gwdo")]
+transform = Transform3D(32.776, 0, 0, 0, 32.776, 0, 0, 0, 32.776, -0.0743242, 3.30552, -144.659)
+
+[node name="tire" parent="." instance=ExtResource("12_ej2tk")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 111.115, 13.3258, -179.925)
+
+[connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]

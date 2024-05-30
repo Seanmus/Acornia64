@@ -13,7 +13,7 @@ config_version=5
 config/name="Acornia64"
 run/main_scene="res://Worlds/title.tscn"
 config/use_hidden_project_data_directory=false
-config/features=PackedStringArray("4.1")
+config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0.172549, 0.0196078, 0.545098, 1)
 boot_splash/image="res://UI/Images/acorn.png"
 config/icon="res://UI/AcorniaIcon.ico"
@@ -32,7 +32,6 @@ LevelLoader="*res://AutoLoads/level_loader.tscn"
 
 window/size/viewport_width=640
 window/size/viewport_height=480
-window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/size/fullscreen=true

@@ -7,6 +7,9 @@ size = Vector3(2.00083, 2.01209, 2.00451)
 
 [node name="MetalBox" instance=ExtResource("1_o3hid")]
 
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(5, 0, 0, 0, 1.085, 0, 0, 0, 5, 0, 0, 0)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4qn3cbbb3fru"]
+
+[ext_resource type="Script" path="res://WorldBlocks/spawn_point.gd" id="1_tmlt8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ecf85"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ig2bo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku7tm"]
+albedo_color = Color(0, 1, 0.0705882, 1)
+
+[node name="SpawnPoint" type="Area3D"]
+script = ExtResource("1_tmlt8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ecf85")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0, 0, 0)
+mesh = SubResource("SphereMesh_ig2bo")
+material = SubResource("StandardMaterial3D_ku7tm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

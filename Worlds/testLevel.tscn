@@ -76,19 +76,19 @@ floor_snap_length = 0.0
 environment = SubResource("Environment_0ucfl")
 
 [node name="MetalBox" parent="." instance=ExtResource("3_tuby2")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6, 1.78549, 19.1253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1.78549, 19.1253)
 
 [node name="MetalBox2" parent="." instance=ExtResource("3_tuby2")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6, 2.7311, 38.3583)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2.7311, 39.3583)
 
 [node name="MetalBox4" parent="." instance=ExtResource("3_tuby2")]
-transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 6, 2.7311, 46.3583)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 2.7311, 49.3583)
 
 [node name="MetalBox3" parent="." instance=ExtResource("3_tuby2")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6, 7.03809, 68.7728)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7.03809, 68.7728)
 
 [node name="tire" parent="." instance=ExtResource("4_csgss")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02463, 3.70914, 39.9439)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02463, 3.93871, 51.4438)
 
 [node name="Death" parent="." instance=ExtResource("5_jlbwc")]
 transform = Transform3D(8.181, 0, 0, 0, 0.918, 0, 0, 0, 10, -11.1515, -2.97989, 15.8365)

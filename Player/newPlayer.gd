@@ -1,11 +1,9 @@
+class_name player
 extends CharacterBody3D
 
 var maxSpeed = 15.0
-var speed = 0
-var airSpeed = 10.0
-var groundSpeed = 15.0
-var sprintMultiplier = 1.0
-var acceleration = 60
+var acceleration = 120
+var air_acceleration = 40
 const JUMP_VELOCITY = 7
 var mouse_sensitivty = 0.002 #radiains/pixel
 var controller_sensitivity = 0.02
@@ -17,22 +15,25 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var animationTree = $auriModel/AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
 @onready var anim = $auriModel/AnimationPlayer
+@onready var cameraAnimPlayer = $Pivot/SpringArm3D/Camera3D/AnimationPlayer
 @onready var landSound = $LandSound
 @onready var runCloud = $runCloud
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 
 var spawnPos
+var spawnRotation
 var homingAttack = false
 var overlappedTargets = []
 var homingTarget
-var homingSpeed = 30
+var homingSpeed = 60
 
 #Occurs when the game is loaded
 func _ready():
 	Manager.on_win.connect(Win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	spawnPos = global_transform
+	spawnPos = position
+	spawnRotation = rotation
 	
 #Makes the player bounce when hitting a bouncing object		
 func Bounce():
@@ -54,7 +55,8 @@ func _HomingAttack(delta):
 	print(homingTarget.name)
 	position = position.move_toward(homingTarget.position, delta * homingSpeed)
 	#Checks if the players has reached the target position
-	if position == homingTarget.position:	
+	if position == homingTarget.position:
+		cameraAnimPlayer.play("ScreenShake")
 		#Freeze frame
 		OS.delay_msec(40)
 		#Triggers the cameras screen shake	
@@ -94,16 +96,14 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	if is_on_floor():
-		acceleration = 60
-	else:
-		acceleration = 40
+	#if is_on_floor():
+	#	acceleration = 60
+	#else:
+	#	acceleration = 40
 	if Input.is_action_pressed("sprint"):
-		sprintMultiplier = 1.5
 		maxSpeed = 22.5
 	else:
-		maxSpeed = 15
-		sprintMultiplier = 1.0
+		#maxSpeed = 15
 		runCloud.emitting = false
 	if not Manager.won && not dead:
 		if is_on_floor() && !dead:
@@ -154,17 +154,37 @@ func _physics_process(delta):
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			#Forward
-			speed += acceleration * sprintMultiplier * delta;
-			if speed > maxSpeed:
-				speed = maxSpeed
-			velocity.z = direction.z * speed 
-			velocity.x = direction.x * speed
+			print(direction)
+			if is_on_floor():
+				velocity.z += direction.z * acceleration * delta
+				velocity.x += direction.x * acceleration * delta
+			else:
+				velocity.z += direction.z * air_acceleration * delta
+				velocity.x += direction.x * air_acceleration * delta
+			var movementVelocity = Vector3(velocity.x, 0, velocity.z)
+			movementVelocity = movementVelocity.limit_length(maxSpeed)
+			velocity.x = movementVelocity.x
+			velocity.z = movementVelocity.z
 		else:
-			velocity.x = move_toward(velocity.x, 0, speed)
-			velocity.z = move_toward(velocity.z, 0, speed)
-			speed -= acceleration * 3 * delta;
-			if(speed < 0):
-				speed = 0
+			if is_on_floor():
+				velocity.x = move_toward(velocity.x , 0, 70 * delta)
+				velocity.z = move_toward(velocity.z , 0, 70 * delta)
+			else:
+				velocity.x = move_toward(velocity.x , 0, 20 * delta)
+				velocity.z = move_toward(velocity.z , 0, 20 * delta)
+		if is_on_floor():
+			pass
+	
+			#if abs(direction.x) <= 0.2:
+			#	velocity.x = move_toward(velocity.x , 0, 120 * delta)
+			#if abs(direction.z) <= 0.2:
+			#	velocity.z = move_toward(velocity.z , 0, 120 * delta)
+		else:
+			pass
+			#if abs(direction.x) <= 0.2:
+			#	velocity.x = move_toward(velocity.x , 0, 60 * delta)
+			#if abs(direction.z) <= 0.2:
+			#	velocity.z = move_toward(velocity.z , 0, 60 * delta)
 		var _returnValue = move_and_slide()
 
 
@@ -199,12 +219,13 @@ func Reset():
 	$acorn/AnimationPlayer.play("Reset")
 	$acorn/AnimationPlayer.play("walking")
 
-func _SetSpawnPoint(spawnPoint):
+func _SetSpawnPoint(spawnPoint, spawnerRotation):
 	spawnPos = spawnPoint
+	spawnRotation = spawnerRotation
 	
 #Teleports the player back to its spawn position on player death.
 func _on_deathFinished():
-	global_transform = spawnPos
+	position = spawnPos
 	dead = false
 
 #Occurs when another area enters the player area

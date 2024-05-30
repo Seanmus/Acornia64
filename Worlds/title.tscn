@@ -171,10 +171,10 @@ size_flags_horizontal = 4
 texture = ExtResource("3_lkekw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
-autoplay = "SunflowerSpin"
 libraries = {
 "": SubResource("AnimationLibrary_2q7uk")
 }
+autoplay = "SunflowerSpin"
 
 [node name="audioSlider" type="HSlider" parent="UI"]
 offset_left = 38.0
