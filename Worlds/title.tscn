@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://bgugy0v18el3f"]
+[gd_scene load_steps=20 format=3 uid="uid://bgugy0v18el3f"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
 [ext_resource type="Texture2D" uid="uid://bavvqgm4m3koh" path="res://UI/Images/acorn.png" id="3_lkekw"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="5_edqm6"]
+[ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="7_gw8r6"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="7_hgnnl"]
 [ext_resource type="PackedScene" uid="uid://btn1fjffa1mtp" path="res://Player/acornModel.tscn" id="8_n7m35"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
@@ -193,6 +194,11 @@ offset_bottom = 314.0
 focus_neighbor_bottom = NodePath("../collectBtn")
 focus_next = NodePath("../collectBtn")
 theme = SubResource("Theme_vaimv")
+theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.694118, 0.568627, 1)
+theme_override_colors/font_focus_color = Color(1, 0.892918, 0.807838, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
+theme_override_constants/outline_size = 12
 text = "Start"
 
 [node name="collectBtn" type="Button" parent="UI"]
@@ -204,6 +210,11 @@ focus_neighbor_top = NodePath("../startBtn")
 focus_next = NodePath("../startBtn")
 focus_previous = NodePath("../startBtn")
 theme = SubResource("Theme_vaimv")
+theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
+theme_override_colors/font_hover_color = Color(0.808594, 0.6939, 0.567736, 1)
+theme_override_colors/font_focus_color = Color(1, 0.894118, 0.807843, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
+theme_override_constants/outline_size = 12
 text = "Collect A thon"
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
@@ -230,6 +241,22 @@ offset_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Volume Label" type="Label" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.064
+anchor_top = 0.817
+anchor_right = 0.278
+anchor_bottom = 0.921
+offset_left = 0.0399971
+offset_top = -0.160004
+offset_right = 0.0799866
+offset_bottom = -0.0800171
+theme = ExtResource("7_gw8r6")
+theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
+theme_override_constants/outline_size = 12
+text = "Volume"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2411, 36.9344, 43.5572)

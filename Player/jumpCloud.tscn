@@ -8,9 +8,9 @@ emission_sphere_radius = 3.84
 direction = Vector3(0, 0, 0)
 spread = 86.34
 flatness = 0.27
-gravity = Vector3(0, -3, 0)
 initial_velocity_min = 5.0
 initial_velocity_max = 5.0
+gravity = Vector3(0, -3, 0)
 hue_variation_min = 0.1
 hue_variation_max = 0.13
 

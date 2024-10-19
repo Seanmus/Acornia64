@@ -108,6 +108,7 @@ orientation = 2
 size = Vector3(0.955, 1.142, 2)
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
+floor_constant_speed = true
 floor_max_angle = 1.11177
 floor_snap_length = 0.31
 platform_on_leave = 1

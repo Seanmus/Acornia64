@@ -6,11 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ddakc78pntrem" path="res://UI/Images/UIWoodPanel.png" id="2_s5yp6"]
 [ext_resource type="Texture2D" uid="uid://cklipsrkepll7" path="res://UI/Images/sunflowerLight.png" id="3_7hxp4"]
 [ext_resource type="Texture2D" uid="uid://4q1qry2cbxwo" path="res://Textures/cheese.png" id="3_hcjgx"]
+[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="7_yeygk"]
 
 [sub_resource type="Theme" id="Theme_gmcgj"]
-
-[sub_resource type="Theme" id="Theme_k752p"]
-default_font_size = 36
 
 [node name="UI" type="Node"]
 script = ExtResource("1_khvck")
@@ -44,6 +42,7 @@ theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 24
 text = "hello"
 
@@ -56,6 +55,7 @@ theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 24
 text = "Time"
 
@@ -73,6 +73,7 @@ theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 24
 text = "X0"
 
@@ -85,6 +86,7 @@ theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 0.215686, 0.815686, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 24
 text = "/0"
 
@@ -158,10 +160,11 @@ texture = ExtResource("3_7hxp4")
 
 [node name="Label" type="Label" parent="collect_athon"]
 modulate = Color(1, 0.215686, 0.815686, 1)
-offset_left = 576.0
+offset_left = 561.0
 offset_top = 20.0
-offset_right = 628.0
-offset_bottom = 73.0
-theme = SubResource("Theme_k752p")
+offset_right = 629.0
+offset_bottom = 80.0
+theme = ExtResource("2_0cki4")
 theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("7_yeygk")
 text = "X 0"

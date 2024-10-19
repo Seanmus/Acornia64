@@ -2,8 +2,10 @@ class_name player
 extends CharacterBody3D
 
 var maxSpeed = 15.0
-var acceleration = 120
-var air_acceleration = 40
+var acceleration = 130
+var air_acceleration = 90
+var decceleration = 130
+var air_decceleration = 90
 const JUMP_VELOCITY = 7
 var mouse_sensitivty = 0.002 #radiains/pixel
 var controller_sensitivity = 0.02
@@ -61,6 +63,8 @@ func _HomingAttack(delta):
 		OS.delay_msec(40)
 		#Triggers the cameras screen shake	
 		homingTarget._Hit()
+		velocity.x = 0
+		velocity.z = 0
 		velocity.y = JUMP_VELOCITY
 		homingAttack = false
 		canDoubleJump = true
@@ -146,45 +150,34 @@ func _physics_process(delta):
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		_RotatePlayerModelInInputDirection(input_dir)
-		
+		print(velocity)
 		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
 			runCloud.emitting = true
 		else:
 			runCloud.emitting = false
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		var movementVelocity = Vector3(velocity.x, 0, velocity.z)
 		if direction:
 			#Forward
-			print(direction)
 			if is_on_floor():
-				velocity.z += direction.z * acceleration * delta
-				velocity.x += direction.x * acceleration * delta
+				movementVelocity.z += direction.z * acceleration * delta
+				movementVelocity.x += direction.x * acceleration * delta
 			else:
-				velocity.z += direction.z * air_acceleration * delta
-				velocity.x += direction.x * air_acceleration * delta
-			var movementVelocity = Vector3(velocity.x, 0, velocity.z)
-			movementVelocity = movementVelocity.limit_length(maxSpeed)
-			velocity.x = movementVelocity.x
-			velocity.z = movementVelocity.z
+				movementVelocity.z += direction.z * air_acceleration * delta
+				movementVelocity.x += direction.x * air_acceleration * delta
+
 		else:
+			#Fix bug with y velocity when you get back!
 			if is_on_floor():
-				velocity.x = move_toward(velocity.x , 0, 70 * delta)
-				velocity.z = move_toward(velocity.z , 0, 70 * delta)
+				movementVelocity = movementVelocity.move_toward(Vector3.ZERO, decceleration * delta)
 			else:
-				velocity.x = move_toward(velocity.x , 0, 20 * delta)
-				velocity.z = move_toward(velocity.z , 0, 20 * delta)
-		if is_on_floor():
-			pass
-	
-			#if abs(direction.x) <= 0.2:
-			#	velocity.x = move_toward(velocity.x , 0, 120 * delta)
-			#if abs(direction.z) <= 0.2:
-			#	velocity.z = move_toward(velocity.z , 0, 120 * delta)
-		else:
-			pass
-			#if abs(direction.x) <= 0.2:
-			#	velocity.x = move_toward(velocity.x , 0, 60 * delta)
-			#if abs(direction.z) <= 0.2:
-			#	velocity.z = move_toward(velocity.z , 0, 60 * delta)
+				movementVelocity = movementVelocity.move_toward(Vector3.ZERO, air_decceleration * delta)
+				#velocity.x = move_toward(velocity.x , 0, air_decceleration * delta)
+				#velocity.z = move_toward(velocity.z , 0, air_decceleration * delta)
+		movementVelocity = movementVelocity.limit_length(maxSpeed)
+		velocity.x = movementVelocity.x
+		velocity.z = movementVelocity.z		
+				
 		var _returnValue = move_and_slide()
 
 
@@ -226,6 +219,7 @@ func _SetSpawnPoint(spawnPoint, spawnerRotation):
 #Teleports the player back to its spawn position on player death.
 func _on_deathFinished():
 	position = spawnPos
+	rotation = spawnRotation
 	dead = false
 
 #Occurs when another area enters the player area
