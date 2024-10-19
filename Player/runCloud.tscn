@@ -5,9 +5,9 @@ emission_shape = 1
 emission_sphere_radius = 1.0
 direction = Vector3(0, 0, 0)
 spread = 86.34
-gravity = Vector3(0, -27.228, 0)
 initial_velocity_min = 5.0
 initial_velocity_max = 5.0
+gravity = Vector3(0, -27.228, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cejdx"]
 transparency = 1

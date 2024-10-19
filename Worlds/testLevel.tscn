@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ba8mxcwjmigv0"]
 
-[ext_resource type="PackedScene" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
+[ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
 [ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="3_tuby2"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="4_csgss"]

@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=3 format=3 uid="uid://cxyn1nduhea11"]
 
 [ext_resource type="PackedScene" uid="uid://bs0tmtukbibam" path="res://WorldBlocks/purple_bricks.tscn" id="1_jionq"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="2_ugi01"]
 
 [node name="BouncePillar" type="Node3D"]
 
-[node name="purpleBricks12" parent="." instance=ExtResource( "1_jionq" )]
+[node name="purpleBricks12" parent="." instance=ExtResource("1_jionq")]
 transform = Transform3D(0.9446, 0, 0, 0, 9.25027, 0, 0, 0, 0.9446, 0, 0, 0)
 
-[node name="tire4" parent="." instance=ExtResource( "2_ugi01" )]
+[node name="tire4" parent="." instance=ExtResource("2_ugi01")]
 transform = Transform3D(1.41223, 0, 0, 0, 2.19337, 0, 0, 0, 1.41223, 0, 14.9055, 0)

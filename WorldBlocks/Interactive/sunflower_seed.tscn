@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://d26yarpap0ugh"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/sunflower_seed.gd" id="1_6wvcf"]
 [ext_resource type="AudioStream" uid="uid://gkhtfsmk3exg" path="res://Audio/Effects/collect.wav" id="2_a8lhl"]

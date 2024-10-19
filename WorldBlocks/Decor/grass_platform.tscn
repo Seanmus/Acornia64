@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://nies1g46eiis"]
+
+[ext_resource type="PackedScene" uid="uid://lk5xak4qhqum" path="res://WorldBlocks/Decor/GrassPlatform.glb" id="1_86m3h"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fxmro"]
+data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1)
+
+[node name="GrassPlatform" instance=ExtResource("1_86m3h")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_fxmro")

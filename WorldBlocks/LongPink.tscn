@@ -4,8 +4,8 @@
 
 [node name="Long" type="Node3D"]
 
-[node name="purpleBricks5" parent="." instance=ExtResource( "1_0653s" )]
+[node name="purpleBricks5" parent="." instance=ExtResource("1_0653s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.39416)
 
-[node name="purpleBricks6" parent="." instance=ExtResource( "1_0653s" )]
+[node name="purpleBricks6" parent="." instance=ExtResource("1_0653s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.52102)

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dphslg0nm2cdf" path="res://FlowerPower/imports/sunflower.glb" id="1_bw5k0"]
 
-[node name="sunflower" instance=ExtResource( "1_bw5k0" )]
+[node name="sunflower" instance=ExtResource("1_bw5k0")]
 
 [node name="Cylinder" parent="." index="0"]
 layers = 524288
