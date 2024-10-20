@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6qtwfvoecn5d"
-path="res://godot/imported/MetalPillar.glb-89a50921ba80d6724518ca32bcb82520.scn"
+uid="uid://doqf7sqyp40my"
+path="res://godot/imported/TallBuildingBricks.glb-2038d3119739f316a3a7b12101bdf8f8.scn"
 
 [deps]
 
-source_file="res://WorldBlocks/Decor/MetalPillar.glb"
-dest_files=["res://godot/imported/MetalPillar.glb-89a50921ba80d6724518ca32bcb82520.scn"]
+source_file="res://WorldBlocks/Decor/tallbuildings/TallBuildingBricks.glb"
+dest_files=["res://godot/imported/TallBuildingBricks.glb-2038d3119739f316a3a7b12101bdf8f8.scn"]
 
 [params]
 

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1mqdgd5tc4hj"]
+
+[ext_resource type="Script" path="res://WorldBlocks/MovingPlatforms/moving_platform.gd" id="1_i0ofh"]
+[ext_resource type="PackedScene" uid="uid://brmucovv6o51u" path="res://WorldBlocks/Imports/MetalBox.glb" id="1_t215k"]
+
+[sub_resource type="Curve3D" id="Curve3D_n8mtg"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gcqvb"]
+size = Vector3(4.06293, 0.846596, 4.02505)
+
+[node name="MovingPlatform" type="Path3D"]
+curve = SubResource("Curve3D_n8mtg")
+script = ExtResource("1_i0ofh")
+ease = 2
+transition = 4
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+rotation_mode = 0
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="PathFollow3D"]
+remote_path = NodePath("../../AnimatableBody3D")
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0.0420475, 0.0525951, 0.000343323)
+shape = SubResource("BoxShape3D_gcqvb")
+
+[node name="MetalBox2" parent="AnimatableBody3D" instance=ExtResource("1_t215k")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)

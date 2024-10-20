@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxm65kw507ine"]
+
+[ext_resource type="PackedScene" uid="uid://6qtwfvoecn5d" path="res://WorldBlocks/Decor/imports/MetalPillar.glb" id="1_5ecu5"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iwxr0"]
+data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1)
+
+[node name="MetalPillar" instance=ExtResource("1_5ecu5")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_iwxr0")

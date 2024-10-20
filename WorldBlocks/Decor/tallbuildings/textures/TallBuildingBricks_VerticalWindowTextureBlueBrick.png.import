@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b66ii81tmc625"
-path="res://godot/imported/TallBuilding_VerticalWindowTexture-export.png-5e25d3910e6c4bc4ff935f2a73d46d08.ctex"
+uid="uid://wqxdjggth7sv"
+path="res://godot/imported/TallBuildingBricks_VerticalWindowTextureBlueBrick.png-1bdaad4cf010e984ad5af0bd35b401e1.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "fd5428c493589a11fadfac5b87eafefb"
+"md5": "90e6764a359680ccaa637d22a649a79e"
 }
 
 [deps]
 
-source_file="res://WorldBlocks/Decor/TallBuilding_VerticalWindowTexture-export.png"
-dest_files=["res://godot/imported/TallBuilding_VerticalWindowTexture-export.png-5e25d3910e6c4bc4ff935f2a73d46d08.ctex"]
+source_file="res://WorldBlocks/Decor/tallbuildings/textures/TallBuildingBricks_VerticalWindowTextureBlueBrick.png"
+dest_files=["res://godot/imported/TallBuildingBricks_VerticalWindowTextureBlueBrick.png-1bdaad4cf010e984ad5af0bd35b401e1.ctex"]
 
 [params]
 

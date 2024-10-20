@@ -2,24 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dimqq3dh042p8"
-path.s3tc="res://godot/imported/TallBuilding_stone.png-91fbba03dc560e9cf2833fda926b1dd8.s3tc.ctex"
+uid="uid://b66ii81tmc625"
+path="res://godot/imported/TallBuilding_VerticalWindowTexture-export.png-c6e6bf85c5aee6f9ee05348a03bfe7f6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
-"md5": "9c2724b719e5560c6be4d0820f46f719"
+"md5": "fd5428c493589a11fadfac5b87eafefb"
 }
 
 [deps]
 
-source_file="res://WorldBlocks/Decor/TallBuilding_stone.png"
-dest_files=["res://godot/imported/TallBuilding_stone.png-91fbba03dc560e9cf2833fda926b1dd8.s3tc.ctex"]
+source_file="res://WorldBlocks/Decor/tallbuildings/textures/TallBuilding_VerticalWindowTexture-export.png"
+dest_files=["res://godot/imported/TallBuilding_VerticalWindowTexture-export.png-c6e6bf85c5aee6f9ee05348a03bfe7f6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

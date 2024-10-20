@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://kigmch4mcex6"]
+
+[ext_resource type="PackedScene" uid="uid://ddvhfms1xsfaj" path="res://WorldBlocks/Decor/tallbuildings/blue_tall_building_bricks.tscn" id="1_qtlds"]
+[ext_resource type="Texture2D" uid="uid://bybwd5c00w266" path="res://WorldBlocks/Decor/tallbuildings/textures/VerticalWindowTextureLightBlueBrick.png" id="2_ge3oj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lgr8u"]
+albedo_texture = ExtResource("2_ge3oj")
+
+[node name="TallBuildingBricks" instance=ExtResource("1_qtlds")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_lgr8u")

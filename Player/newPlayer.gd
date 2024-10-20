@@ -67,7 +67,7 @@ func _HomingAttack(delta):
 		velocity.z = 0
 		velocity.y = JUMP_VELOCITY
 		homingAttack = false
-		canDoubleJump = true
+		canDoubleJump = false
 		
 #Occurs when an input that has not been previously handled occurs.
 func _unhandled_input(event):

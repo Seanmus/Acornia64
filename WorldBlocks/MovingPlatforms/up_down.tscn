@@ -46,10 +46,10 @@ data = PackedVector3Array(-1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1
 [node name="UpDown" type="Node3D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "UpDown"
 libraries = {
 "": SubResource("AnimationLibrary_3rht8")
 }
+autoplay = "UpDown"
 
 [node name="greenBricks2" parent="." instance=ExtResource("2_ba702")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.97282, 0)
