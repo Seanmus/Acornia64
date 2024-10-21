@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=19 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -107,14 +107,6 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
 size = Vector3(0.955, 1.142, 2)
 
-[sub_resource type="Curve3D" id="Curve3D_rdlgx"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.26173, 1.13734, -6.26293),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
-
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
 floor_max_angle = 1.11177
@@ -199,25 +191,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TargetDetectionArea"]
 transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 0, -7.70165)
+visible = false
 shape = SubResource("BoxShape3D_fpp87")
-
-[node name="TargetLine" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.559363, 0, 0)
-
-[node name="Path3D" type="Path3D" parent="TargetLine"]
-curve = SubResource("Curve3D_rdlgx")
-
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="TargetLine"]
-mode = 2
-path_node = NodePath("../Path3D")
-path_interval_type = 0
-path_interval = 1.0
-path_simplify_angle = 0.0
-path_rotation = 2
-path_local = false
-path_continuous_u = true
-path_u_distance = 1.0
-path_joined = false
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]

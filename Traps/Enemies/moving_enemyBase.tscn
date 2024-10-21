@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnpr4aq0nt4j3"]
+
+[ext_resource type="Script" path="res://Traps/Enemies/moving_enemyBase.gd" id="1_sbal5"]
+
+[sub_resource type="Curve3D" id="Curve3D_n8mtg"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="MovingPlatform" type="Path3D"]
+curve = SubResource("Curve3D_n8mtg")
+script = ExtResource("1_sbal5")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+rotation_mode = 4
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="PathFollow3D"]

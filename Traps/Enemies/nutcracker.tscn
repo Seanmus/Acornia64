@@ -417,6 +417,33 @@ _data = {
 radius = 1.69237
 height = 7.88134
 
+[sub_resource type="Animation" id="Animation_uhq6f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lever:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.524942, -6.95581e-09, -3.14159)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lever:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.07772e-07, 1.5249, 1.34465)]
+}
+
 [sub_resource type="Animation" id="Animation_b005k"]
 resource_name = "lever_openClose"
 length = 0.8
@@ -431,22 +458,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(2.61506, 0, 0), Vector3(2.85092, 0, 0), Vector3(2.61506, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_uhq6f"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Lever:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(2.61506, 0, 0)]
+"values": [Vector3(0.524942, -6.95581e-09, -3.14159), Vector3(0.323462, 1.28497e-09, -3.14159), Vector3(0.524942, -6.95581e-09, -3.14159)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nl6mg"]
@@ -456,49 +468,50 @@ _data = {
 }
 
 [node name="nutcracker" type="AnimatableBody3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="HatBrim" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.54058, 0, -5.01985e-07, 0, 0.188134, 0, 5.01985e-07, 0, -1.54058, 0, 5.09537, 0.240581)
+transform = Transform3D(1.54058, 0, 3.67303e-07, 0, 0.188134, 0, -3.67303e-07, 0, 1.54058, 1.40453e-08, 5.09537, -0.048781)
 mesh = SubResource("ArrayMesh_y33ph")
 skeleton = NodePath("")
 
 [node name="Hat" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.08962, 0, -3.55043e-07, 0, 0.917211, 0, 3.55043e-07, 0, -1.08962, 0, 6.03952, 0.240581)
+transform = Transform3D(1.08962, 0, 2.59785e-07, 0, 0.917211, 0, -2.59785e-07, 0, 1.08962, 1.40453e-08, 6.03952, -0.048781)
 mesh = SubResource("ArrayMesh_nlxj8")
 skeleton = NodePath("")
 
 [node name="Head" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.08962, 8.43188e-14, 0, -1.00168e-13, -0.917211, 0, 0, 0, 1.08962, 0, 4.19179, 0.240581)
+transform = Transform3D(1.08962, -8.43188e-14, 9.52576e-08, -1.00168e-13, -0.917211, 0, 9.52576e-08, -7.37138e-21, -1.08962, 1.40453e-08, 4.19179, -0.048781)
 mesh = SubResource("ArrayMesh_qlt23")
 skeleton = NodePath("")
 
 [node name="Body" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.21803, 9.42556e-14, 0, -1.11973e-13, -1.0253, 0, 0, 0, 1.21803, 0, 1.53913, 0.240581)
+transform = Transform3D(1.21803, -9.42556e-14, 1.06484e-07, -1.11973e-13, -1.0253, 0, 1.06484e-07, -8.24009e-21, -1.21803, 1.40453e-08, 1.53913, -0.048781)
 mesh = SubResource("ArrayMesh_l0jcw")
 skeleton = NodePath("")
 
 [node name="LeftArm" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.391563, 7.34037e-14, 0, -3.59962e-14, -0.798478, 0, 0, 0, 0.391563, -1.23, 1.53913, 0.240581)
+transform = Transform3D(0.391563, -7.34037e-14, 3.42315e-08, -3.59962e-14, -0.798478, 0, 3.42315e-08, -6.41716e-21, -0.391563, 1.23, 1.53913, -0.0487809)
 mesh = SubResource("ArrayMesh_c4psq")
 skeleton = NodePath("")
 
 [node name="RightArm" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.391563, 7.34037e-14, 0, -3.59962e-14, -0.798478, 0, 0, 0, 0.391563, 1.23, 1.53913, 0.240581)
+transform = Transform3D(0.391563, -7.34037e-14, 3.42315e-08, -3.59962e-14, -0.798478, 0, 3.42315e-08, -6.41716e-21, -0.391563, -1.23, 1.53913, -0.0487811)
 mesh = SubResource("ArrayMesh_4qpj5")
 skeleton = NodePath("")
 
 [node name="Wheel" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.78116e-08, 0.105636, 0, -0.865028, -4.6175e-09, 0, 0, 0, 0.865028, 0, 0.214944, 0.240581)
+transform = Transform3D(-3.13139e-06, 0.105636, 0, -0.865028, -3.82401e-07, 0, 0, 0, 0.865028, 1.40453e-08, 0.214944, -0.048781)
 mesh = SubResource("ArrayMesh_kysyh")
 skeleton = NodePath("")
 
 [node name="Lever" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.345699, 0, 0, 0, -0.189423, -0.889915, 0, 0.110107, -1.53097, 0, 1.5249, -1.15285)
+transform = Transform3D(-0.345699, 3.38469e-08, -1.0659e-08, -4.51706e-08, -0.189598, -0.887472, -2.85649e-08, -0.109805, 1.53239, -1.07772e-07, 1.5249, 1.34465)
 mesh = SubResource("ArrayMesh_cq3v1")
 skeleton = NodePath("")
 
 [node name="Hat_001" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.3488, 0, 0, 0, 1.08598, 0, 0, 0, 1.11096, 0, 3.93519, 0.240581)
+transform = Transform3D(-1.3488, 0, 9.71232e-08, 0, 1.08598, 0, -1.17916e-07, 0, -1.11096, 1.40453e-08, 3.93519, -0.048781)
 mesh = SubResource("ArrayMesh_g64ki")
 skeleton = NodePath("")
 
@@ -509,7 +522,7 @@ libraries = {
 autoplay = "wheelSpin"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.14417, 0.187202)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.37873e-09, 3.14417, 0.00459802)
 shape = SubResource("CapsuleShape3D_qhrxg")
 
 [node name="LeverAnim" type="AnimationPlayer" parent="."]

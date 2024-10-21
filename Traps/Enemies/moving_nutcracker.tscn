@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvfsbrumep3x8"]
+
+[ext_resource type="PackedScene" uid="uid://dnpr4aq0nt4j3" path="res://Traps/Enemies/moving_enemyBase.tscn" id="1_t146q"]
+[ext_resource type="PackedScene" uid="uid://cpkh0rswkyyd6" path="res://Traps/Enemies/nutcracker.tscn" id="2_811ye"]
+
+[sub_resource type="Curve3D" id="Curve3D_fcbh8"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="MovingNutcracker" instance=ExtResource("1_t146q")]
+curve = SubResource("Curve3D_fcbh8")
+
+[node name="RemoteTransform3D" parent="PathFollow3D" index="0"]
+remote_path = NodePath("../../nutcracker")
+
+[node name="nutcracker" parent="." index="1" instance=ExtResource("2_811ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

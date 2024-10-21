@@ -1,14 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://boe2lngb6cfv"]
+[gd_scene load_steps=5 format=3 uid="uid://boe2lngb6cfv"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/homing_attack_target.gd" id="1_aomp8"]
 [ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="2_02f7w"]
-[ext_resource type="Texture2D" uid="uid://c285omu0gxx5u" path="res://Textures/DeathMarker.png" id="2_52lgu"]
+[ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="2_xo7sn"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2g0oc"]
-albedo_color = Color(1, 0.0235294, 0.0470588, 1)
-albedo_texture = ExtResource("2_52lgu")
 
 [node name="HomingAttackTarget" type="Area3D" groups=["targets"]]
 script = ExtResource("1_aomp8")
@@ -19,7 +15,7 @@ shape = SubResource("SphereShape3D_l7bm5")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 radius = 1.0
-material = SubResource("StandardMaterial3D_2g0oc")
+material = ExtResource("2_xo7sn")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_02f7w")

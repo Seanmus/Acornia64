@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=25 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bxm65kw507ine" path="res://WorldBlocks/Decor/metal_pillar.tscn" id="18_ao8uu"]
 [ext_resource type="PackedScene" uid="uid://tfv2r57qdmok" path="res://WorldBlocks/Interactive/sunflower.tscn" id="18_snp1a"]
 [ext_resource type="PackedScene" uid="uid://di5nyeks84eyp" path="res://FlowerPower/imports/flowerPot.glb" id="19_3j6rf"]
-[ext_resource type="PackedScene" uid="uid://cpkh0rswkyyd6" path="res://Traps/Enemies/nutcracker.tscn" id="20_pc4i1"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="20_s8nnt"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="21_aa5io"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
@@ -46,6 +46,14 @@ _data = {
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_culiw"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 20.835, 0, -13.915, 30, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
 
 [node name="spaceLevel" type="Node3D"]
 script = ExtResource("1_dmlmg")
@@ -730,7 +738,8 @@ transform = Transform3D(43.605, 0, 0, 0, 43.605, 0, 0, 0, 43.605, -27.539, 60.38
 [node name="SpawnPoint3" parent="." instance=ExtResource("11_4gwdo")]
 transform = Transform3D(43.605, 0, 0, 0, 43.605, 0, 0, 0, 43.605, 199.484, 29.7618, -85.8835)
 
-[node name="nutcracker" parent="." instance=ExtResource("20_pc4i1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.37329, 1.77116, -21.7539)
+[node name="MovingNutcracker" parent="." instance=ExtResource("20_s8nnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81617, 1.78747, -16.8145)
+curve = SubResource("Curve3D_culiw")
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]

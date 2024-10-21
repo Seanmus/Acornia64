@@ -22,7 +22,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var runCloud = $runCloud
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
-@onready var targetPath = $TargetLine/Path3D
 
 
 var spawnPos
@@ -99,16 +98,17 @@ func addPoofCloud():
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
-	if(homingTarget):
-		$TargetLine.visible = true
-		targetPath.curve.set_point_in(0, position)
-		targetPath.curve.set_point_in(1, global_position - homingTarget.global_position)
-	else:
-		$TargetLine.visible = false
 	if homingAttack:
 		_HomingAttack(delta)
 		return
+	
+	var previousTarget = homingTarget
 	homingTarget = _GetClosestTarget()
+	if(previousTarget != homingTarget):
+		if(homingTarget):
+			homingTarget._HighLight()
+		if(previousTarget):
+			previousTarget._UnHighLight()
 
 	#if is_on_floor():
 	#	acceleration = 60
