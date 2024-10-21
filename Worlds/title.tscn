@@ -153,23 +153,23 @@ gameMode = "title"
 script = ExtResource("17_vbvrs")
 
 [node name="Sunflower" type="TextureRect" parent="UI"]
-offset_left = -192.0
-offset_top = -145.0
-offset_right = 448.0
-offset_bottom = 335.0
-scale = Vector2(0.4, 0.4)
+offset_right = 640.0
+offset_bottom = 480.0
 pivot_offset = Vector2(320, 240)
 texture = ExtResource("2_bwv21")
 
 [node name="Acorn" type="TextureRect" parent="UI"]
-offset_left = -192.0
-offset_top = -145.0
-offset_right = 448.0
-offset_bottom = 335.0
-scale = Vector2(0.4, 0.4)
+anchors_preset = -1
+anchor_top = -0.00208333
+anchor_right = 0.4
+anchor_bottom = 0.397917
+offset_top = 2.0
+offset_right = 128.0
+offset_bottom = 98.0
 pivot_offset = Vector2(320, 240)
 size_flags_horizontal = 4
 texture = ExtResource("3_lkekw")
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
 libraries = {
@@ -178,19 +178,23 @@ libraries = {
 autoplay = "SunflowerSpin"
 
 [node name="audioSlider" type="HSlider" parent="UI"]
-offset_left = 38.0
-offset_top = 444.0
-offset_right = 219.0
-offset_bottom = 460.0
+anchors_preset = -1
+anchor_left = 0.059375
+anchor_top = 0.895833
+anchor_right = 0.342187
+anchor_bottom = 0.929167
 max_value = 1.0
 step = 0.05
 value = 0.8
+metadata/_edit_use_anchors_ = true
 
 [node name="startBtn" type="Button" parent="UI"]
-offset_left = 35.0
-offset_top = 256.0
-offset_right = 152.0
-offset_bottom = 314.0
+anchors_preset = -1
+anchor_left = 0.065625
+anchor_top = 0.554167
+anchor_right = 0.495313
+anchor_bottom = 0.675
+grow_vertical = 0
 focus_neighbor_bottom = NodePath("../collectBtn")
 focus_next = NodePath("../collectBtn")
 theme = SubResource("Theme_vaimv")
@@ -200,12 +204,16 @@ theme_override_colors/font_focus_color = Color(1, 0.892918, 0.807838, 1)
 theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
 theme_override_constants/outline_size = 12
 text = "Start"
+metadata/_edit_use_anchors_ = true
 
 [node name="collectBtn" type="Button" parent="UI"]
-offset_left = 35.0
-offset_top = 319.0
-offset_right = 152.0
-offset_bottom = 377.0
+anchors_preset = -1
+anchor_left = 0.065625
+anchor_top = 0.69
+anchor_right = 0.495313
+anchor_bottom = 0.810417
+offset_top = -0.400024
+grow_vertical = 0
 focus_neighbor_top = NodePath("../startBtn")
 focus_next = NodePath("../startBtn")
 focus_previous = NodePath("../startBtn")
@@ -216,6 +224,7 @@ theme_override_colors/font_focus_color = Color(1, 0.894118, 0.807843, 1)
 theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
 theme_override_constants/outline_size = 12
 text = "Collect A thon"
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
 visible = false
@@ -225,7 +234,14 @@ offset_bottom = 544.0
 
 [node name="Transition" parent="UI" instance=ExtResource("20_pne6m")]
 visible = true
-offset_right = 640.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" parent="UI/Transition" index="0"]
 libraries = {
@@ -244,19 +260,16 @@ grow_vertical = 1
 
 [node name="Volume Label" type="Label" parent="UI"]
 anchors_preset = -1
-anchor_left = 0.064
-anchor_top = 0.817
-anchor_right = 0.278
-anchor_bottom = 0.921
-offset_left = 0.0399971
-offset_top = -0.160004
-offset_right = 0.0799866
-offset_bottom = -0.0800171
+anchor_left = 0.0640625
+anchor_top = 0.816667
+anchor_right = 0.278125
+anchor_bottom = 0.920833
 theme = ExtResource("7_gw8r6")
 theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
 theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
 theme_override_constants/outline_size = 12
 text = "Volume"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2411, 36.9344, 43.5572)

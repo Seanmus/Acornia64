@@ -38,6 +38,7 @@ offset_left = 13.0
 offset_top = 28.0
 offset_right = 131.0
 offset_bottom = 72.0
+scale = Vector2(1.49, 1.49)
 theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -51,6 +52,7 @@ offset_left = 13.0
 offset_top = 1.0
 offset_right = 131.0
 offset_bottom = 45.0
+scale = Vector2(1.49, 1.49)
 theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -60,15 +62,16 @@ theme_override_font_sizes/font_size = 24
 text = "Time"
 
 [node name="Cheese" type="Sprite2D" parent="standard"]
-position = Vector2(36.4, 91.4)
-scale = Vector2(0.7, 0.7)
+position = Vector2(53.68, 124)
+scale = Vector2(1.49, 1.49)
 texture = ExtResource("3_hcjgx")
 
 [node name="cheeseCounter" type="Label" parent="standard"]
-offset_left = 62.4
-offset_top = 60.0
-offset_right = 180.4
-offset_bottom = 104.0
+offset_left = 109.0
+offset_top = 69.0
+offset_right = 227.0
+offset_bottom = 113.0
+scale = Vector2(1.49, 1.49)
 theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -78,10 +81,11 @@ theme_override_font_sizes/font_size = 24
 text = "X0"
 
 [node name="totalCheese" type="Label" parent="standard"]
-offset_left = 62.4
-offset_top = 81.6
-offset_right = 180.4
-offset_bottom = 125.6
+offset_left = 109.0
+offset_top = 101.0
+offset_right = 227.0
+offset_bottom = 145.0
+scale = Vector2(1.49, 1.49)
 theme = ExtResource("2_0cki4")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -102,69 +106,70 @@ scale = Vector2(1.29174, 1.24694)
 texture = ExtResource("2_s5yp6")
 
 [node name="Seed1" type="TextureRect" parent="collect_athon"]
-offset_left = -57.0
-offset_top = 372.0
-offset_right = 1863.0
-offset_bottom = 1452.0
+offset_left = -1.0
+offset_top = 780.0
+offset_right = 1919.0
+offset_bottom = 1860.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Seed2" type="TextureRect" parent="collect_athon"]
-offset_left = 14.0
-offset_top = 371.0
-offset_right = 1934.0
-offset_bottom = 1451.0
+offset_left = 70.0
+offset_top = 779.0
+offset_right = 1990.0
+offset_bottom = 1859.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Seed3" type="TextureRect" parent="collect_athon"]
-offset_left = 80.0001
-offset_top = 372.0
-offset_right = 2000.0
-offset_bottom = 1452.0
+offset_left = 136.0
+offset_top = 780.0
+offset_right = 2056.0
+offset_bottom = 1860.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Seed4" type="TextureRect" parent="collect_athon"]
-offset_left = 146.0
-offset_top = 371.0
-offset_right = 2066.0
-offset_bottom = 1451.0
+offset_left = 202.0
+offset_top = 779.0
+offset_right = 2122.0
+offset_bottom = 1859.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Seed5" type="TextureRect" parent="collect_athon"]
-offset_left = 211.0
-offset_top = 372.0
-offset_right = 2131.0
-offset_bottom = 1452.0
+offset_left = 267.0
+offset_top = 780.0
+offset_right = 2187.0
+offset_bottom = 1860.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Seed6" type="TextureRect" parent="collect_athon"]
-offset_left = 274.0
-offset_top = 373.0
-offset_right = 2194.0
-offset_bottom = 1453.0
+offset_left = 330.0
+offset_top = 781.0
+offset_right = 2250.0
+offset_bottom = 1861.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_dirqc")
 
 [node name="Flower" type="TextureRect" parent="collect_athon"]
-offset_left = 446.0
-offset_top = -20.0
-offset_right = 2366.0
-offset_bottom = 1060.0
+offset_left = 836.0
+offset_top = -43.0
+offset_right = 5089.0
+offset_bottom = 2358.0
 scale = Vector2(0.0943032, 0.0932791)
 theme = SubResource("Theme_gmcgj")
 texture = ExtResource("3_7hxp4")
 
 [node name="Label" type="Label" parent="collect_athon"]
 modulate = Color(1, 0.215686, 0.815686, 1)
-offset_left = 561.0
-offset_top = 20.0
-offset_right = 629.0
-offset_bottom = 80.0
+offset_left = 1091.0
+offset_top = 55.0
+offset_right = 1274.0
+offset_bottom = 213.0
 theme = ExtResource("2_0cki4")
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("7_yeygk")
+theme_override_font_sizes/font_size = 96
 text = "X 0"

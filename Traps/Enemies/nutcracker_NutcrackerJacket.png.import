@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmmtglvv0mki8"
-path="res://godot/imported/TallBuildingBricks_VerticalWindowTextureBlueBrick.png-10070303f13454732642223b0b7008f7.ctex"
+uid="uid://dpsqh3ql25j8j"
+path="res://godot/imported/nutcracker_NutcrackerJacket.png-64bd421fe530be3904e63ceb5b21371d.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "90e6764a359680ccaa637d22a649a79e"
+"md5": "0d1ae334510e3a8062a42dbe3c91603d"
 }
 
 [deps]
 
-source_file="res://WorldBlocks/Decor/tallbuildings/TallBuildingBricks_VerticalWindowTextureBlueBrick.png"
-dest_files=["res://godot/imported/TallBuildingBricks_VerticalWindowTextureBlueBrick.png-10070303f13454732642223b0b7008f7.ctex"]
+source_file="res://Traps/Enemies/nutcracker_NutcrackerJacket.png"
+dest_files=["res://godot/imported/nutcracker_NutcrackerJacket.png-64bd421fe530be3904e63ceb5b21371d.ctex"]
 
 [params]
 
@@ -24,7 +24,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
