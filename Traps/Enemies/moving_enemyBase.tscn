@@ -10,7 +10,7 @@ _data = {
 }
 point_count = 2
 
-[node name="MovingPlatform" type="Path3D"]
+[node name="MovingPlatform" type="Path3D" groups=["enemies"]]
 curve = SubResource("Curve3D_n8mtg")
 script = ExtResource("1_sbal5")
 

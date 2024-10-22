@@ -1,7 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://cpkh0rswkyyd6"]
+[gd_scene load_steps=34 format=3 uid="uid://cpkh0rswkyyd6"]
 
 [ext_resource type="Texture2D" uid="uid://dfkcuakvlp66i" path="res://Traps/Enemies/nutcracker_nutcrackerFace.png" id="1_vda04"]
 [ext_resource type="Texture2D" uid="uid://dpsqh3ql25j8j" path="res://Traps/Enemies/nutcracker_NutcrackerJacket.png" id="2_q7b8q"]
+[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="3_tsrsw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mx0i"]
 resource_name = "Hat"
@@ -506,7 +507,7 @@ mesh = SubResource("ArrayMesh_kysyh")
 skeleton = NodePath("")
 
 [node name="Lever" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.345699, 3.38469e-08, -1.0659e-08, -4.51706e-08, -0.189598, -0.887472, -2.85649e-08, -0.109805, 1.53239, -1.07772e-07, 1.5249, 1.34465)
+transform = Transform3D(-0.345699, 5.5622e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
 mesh = SubResource("ArrayMesh_cq3v1")
 skeleton = NodePath("")
 
@@ -530,3 +531,8 @@ libraries = {
 "": SubResource("AnimationLibrary_nl6mg")
 }
 autoplay = "lever_openClose"
+
+[node name="HomingAttackTarget" parent="." instance=ExtResource("3_tsrsw")]
+transform = Transform3D(0.954155, 0, -7.10543e-15, 0, 0.954155, 0, 7.10543e-15, 0, 0.954155, 0, 4, 0)
+
+[connection signal="onHit" from="HomingAttackTarget" to="." method="_on_homing_attack_target_on_hit"]

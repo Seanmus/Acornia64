@@ -55,10 +55,12 @@ func kill():
 
 #Sends the player flying towards the homingTargets position
 func _HomingAttack(delta):
+	$CollisionShape3D.disabled = true
 	print(homingTarget.name)
-	position = position.move_toward(homingTarget.position, delta * homingSpeed)
+	position = position.move_toward(homingTarget.global_position, delta * homingSpeed)
 	#Checks if the players has reached the target position
-	if position == homingTarget.position:
+	if position == homingTarget.global_position:
+		$CollisionShape3D.disabled = false
 		cameraAnimPlayer.play("ScreenShake")
 		#Freeze frame
 		OS.delay_msec(40)
@@ -230,6 +232,11 @@ func _on_deathFinished():
 	position = spawnPos
 	rotation = spawnRotation
 	dead = false
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	for enemy in enemies:
+		print("reseting target")
+		enemy as MovingEnemiesBase
+		enemy._Reset()
 
 #Occurs when another area enters the player area
 func _on_area_3d_area_entered(area):
@@ -254,13 +261,13 @@ func _GetClosestTarget():
 			var space_state = get_world_3d().direct_space_state
 			var query = PhysicsRayQueryParameters3D.create(position, target.position)
 			var result = space_state.intersect_ray(query)
-			if(result):
-				if result.position != target.position:
-					continue
+			#if(result):
+				#if result.position != target.position:
+					#continue
 			if not closestTarget:
 				closestTarget = target
 			#Checks if the distance to the target is less then the distance to the previous closest target
-			if position.distance_to(target.position) < position.distance_to(closestTarget.position):
+			if position.distance_to(target.global_position) < position.distance_to(closestTarget.global_position):
 				closestTarget = target
 		#If a closest target was found returns the one otherwise null is returned
 		print(closestTarget)

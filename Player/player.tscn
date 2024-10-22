@@ -105,7 +105,7 @@ size = Vector2(1.551, 0.406)
 orientation = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
-size = Vector3(0.955, 1.142, 2)
+size = Vector3(0.955, 1.53419, 2)
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
@@ -190,7 +190,7 @@ cull_mask = 1048573
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TargetDetectionArea"]
-transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 0, -7.70165)
+transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 3.1605e-09, -11.0723)
 visible = false
 shape = SubResource("BoxShape3D_fpp87")
 

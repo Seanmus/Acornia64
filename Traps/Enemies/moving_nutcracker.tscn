@@ -19,3 +19,7 @@ remote_path = NodePath("../../nutcracker")
 
 [node name="nutcracker" parent="." index="1" instance=ExtResource("2_811ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[connection signal="onHit" from="nutcracker/HomingAttackTarget" to="." method="_on_homing_attack_target_on_hit"]
+
+[editable path="nutcracker"]

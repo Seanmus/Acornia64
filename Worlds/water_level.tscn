@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=28 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -47,13 +47,37 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_culiw"]
+[sub_resource type="Curve3D" id="Curve3D_r6gwy"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 20.835, 0, -13.915, 30, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, -1.955, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 3.825, 0, 0, 30, 0, 11, 0, 0, 0, -1.945, 0, 0.15, 30, 0, 3.46, 5.335, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
-point_count = 4
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_axkjn"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8.5, 0, 0, 0, 0, 0, 0, 17, 0, 8.5, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_7fcew"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_p0uai"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
 
 [node name="spaceLevel" type="Node3D"]
 script = ExtResource("1_dmlmg")
@@ -496,7 +520,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -78, -119.322)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -151.175, -119.322)
 
 [node name="TallBuildingBricks4" parent="." instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -6.63963, 37.678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -1.63963, 37.678)
 
 [node name="TallBuildingBricks21" parent="." instance=ExtResource("14_8g0gu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -84, 37.678)
@@ -508,7 +532,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -164, 37.678)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6927, -3.81107, 23.6191)
 
 [node name="TallBuildingBricks3" parent="." instance=ExtResource("15_qx6ul")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, 16.1889, -39.3809)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, 9.1889, -39.3809)
 
 [node name="TallBuildingBricks10" parent="." instance=ExtResource("15_qx6ul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, 16.1889, -223.381)
@@ -691,7 +715,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.9267, 40.4543, -25.0085)
 curve = SubResource("Curve3D_edf57")
 
 [node name="HomingAttackTarget13" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5386, 36.7671, 40.2755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5386, 41.7671, 40.2755)
 
 [node name="HomingAttackTarget24" parent="." instance=ExtResource("9_q46w8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.4614, 39.8781, 27.2755)
@@ -700,46 +724,72 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 87.4614, 39.8781, 27.2755)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.9317, 44.7943, 27.2755)
 
 [node name="HomingAttackTarget14" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5386, 38.7671, 48.2755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5386, 43.7671, 48.2755)
 
 [node name="HomingAttackTarget15" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.5386, 42.7671, 39.2755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.5386, 46.7671, 39.2755)
 
 [node name="HomingAttackTarget16" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.5386, 46.7671, 37.2755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.5386, 51.7671, 37.2755)
 
 [node name="HomingAttackTarget17" parent="." instance=ExtResource("9_q46w8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.5386, 53.7671, 22.2755)
 
 [node name="HomingAttackTarget18" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.5386, 53.7671, -12.7245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.5386, 52.7671, -12.7245)
 
 [node name="HomingAttackTarget19" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.5386, 57.7671, -27.7245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.5386, 55.7671, -27.7245)
 
 [node name="HomingAttackTarget20" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.5386, 60.7671, -34.7245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.5386, 57.7671, -34.7245)
 
 [node name="HomingAttackTarget21" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5386, 65.7671, -34.7245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.5386, 58.7671, -34.7245)
 
 [node name="HomingAttackTarget22" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.461449, 54.7671, -34.7245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.461449, 52.7671, -34.7245)
 
 [node name="HomingAttackTarget23" parent="." instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4614, 47.7671, -34.7245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4614, 47.7671, -34.7245)
 
 [node name="SpawnPoint2" parent="." instance=ExtResource("11_4gwdo")]
 transform = Transform3D(43.605, 0, 0, 0, 43.605, 0, 0, 0, 43.605, 103.711, 40.7931, 27.5884)
 
 [node name="SpawnPoint4" parent="." instance=ExtResource("11_4gwdo")]
-transform = Transform3D(43.605, 0, 0, 0, 43.605, 0, 0, 0, 43.605, -27.539, 60.3803, -39.0868)
+transform = Transform3D(43.605, 0, 0, 0, 43.605, 0, 0, 0, 43.605, -27.539, 55.3803, -39.0868)
 
 [node name="SpawnPoint3" parent="." instance=ExtResource("11_4gwdo")]
 transform = Transform3D(43.605, 0, 0, 0, 43.605, 0, 0, 0, 43.605, 199.484, 29.7618, -85.8835)
 
 [node name="MovingNutcracker" parent="." instance=ExtResource("20_s8nnt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81617, 1.78747, -16.8145)
-curve = SubResource("Curve3D_culiw")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6329, 1.83119, -18.3545)
+curve = SubResource("Curve3D_r6gwy")
+
+[node name="MovingNutcracker2" parent="." instance=ExtResource("20_s8nnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.78623, 2.22757, -90.5364)
+curve = SubResource("Curve3D_axkjn")
+
+[node name="MovingNutcracker3" parent="." instance=ExtResource("20_s8nnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199.78, 27.1223, -153.952)
+curve = SubResource("Curve3D_7fcew")
+timeToCompletePath = 4
+
+[node name="PathFollow3D" parent="MovingNutcracker3" index="0"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="nutcracker" parent="MovingNutcracker3" index="1"]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" parent="MovingNutcracker3/nutcracker/HomingAttackTarget" index="2"]
+transform = Transform3D(0.282973, 0, 0, 0, 0.282973, 0, 0, 0, 0.282973, 0, 0, 0)
+
+[node name="MovingNutcracker4" parent="." instance=ExtResource("20_s8nnt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.64405, 1.63392, -37.2439)
+curve = SubResource("Curve3D_p0uai")
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
+
+[editable path="MovingNutcracker3"]
+[editable path="MovingNutcracker3/nutcracker"]
+[editable path="MovingNutcracker3/nutcracker/HomingAttackTarget"]
