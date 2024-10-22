@@ -523,7 +523,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -151.175, -119.322)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -1.63963, 37.678)
 
 [node name="TallBuildingBricks21" parent="." instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -84, 37.678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -82, 37.678)
 
 [node name="TallBuildingBricks22" parent="." instance=ExtResource("14_8g0gu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -164, 37.678)
@@ -780,6 +780,9 @@ transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="nutcracker" parent="MovingNutcracker3" index="1"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="Lever" parent="MovingNutcracker3/nutcracker" index="7"]
+transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
 
 [node name="AudioStreamPlayer3D" parent="MovingNutcracker3/nutcracker/HomingAttackTarget" index="2"]
 transform = Transform3D(0.282973, 0, 0, 0, 0.282973, 0, 0, 0, 0.282973, 0, 0, 0)

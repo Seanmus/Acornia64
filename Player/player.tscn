@@ -172,8 +172,9 @@ draw_pass_1 = SubResource("QuadMesh_bu1i1")
 stream = ExtResource("6_ulqlb")
 volume_db = -80.0
 
-[node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
+[node name="acornModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.57631, 0)
+visible = false
 
 [node name="JumpCloudSpawnPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.09941, 0)
@@ -194,7 +195,12 @@ transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 
 visible = false
 shape = SubResource("BoxShape3D_fpp87")
 
+[node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
+[connection signal="deathFinished" from="acornModel" to="." method="_on_deathFinished"]
 [connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
 [connection signal="area_exited" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_exited"]
+[connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
+[connection signal="jumpFinished" from="auriModel" to="." method="_JumpFinished"]

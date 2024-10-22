@@ -507,7 +507,7 @@ mesh = SubResource("ArrayMesh_kysyh")
 skeleton = NodePath("")
 
 [node name="Lever" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.345699, 5.5622e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
+transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
 mesh = SubResource("ArrayMesh_cq3v1")
 skeleton = NodePath("")
 

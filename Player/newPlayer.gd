@@ -272,3 +272,9 @@ func _GetClosestTarget():
 		#If a closest target was found returns the one otherwise null is returned
 		print(closestTarget)
 		return closestTarget
+
+func _JumpFinished():
+	animationState.travel("inAir")
+
+
+
