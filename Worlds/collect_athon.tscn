@@ -339,10 +339,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9426, -0.122484, 2.54629)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9426, -0.122484, -4.33546)
 
 [node name="greenBricks18" parent="." instance=ExtResource("1_x40l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0574, 2.41413, 2.54629)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93535, 2.41413, 2.54629)
 
 [node name="greenBricks19" parent="." instance=ExtResource("1_x40l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.0574, 2.41413, -4.33546)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.93535, 2.41413, -4.33546)
 
 [node name="greenBricks20" parent="." instance=ExtResource("1_x40l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0574, 2.41413, 2.54629)

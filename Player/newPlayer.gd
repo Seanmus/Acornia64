@@ -108,6 +108,10 @@ func addPoofCloud():
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
+	if(Manager.won):
+		$auriModel/AnimationTree.active = false
+		$auriModel/AnimationPlayer.play("win")
+		return
 	if homingAttack:
 		_HomingAttack(delta)
 		return
@@ -132,7 +136,7 @@ func _physics_process(delta):
 	else:
 		#maxSpeed = 15
 		runCloud.emitting = false
-	if not Manager.won && not dead:
+	if not dead:
 		if is_on_floor() && !dead && !bouncing:
 			canDoubleJump = true
 			if not dead:
@@ -226,6 +230,7 @@ func _RotatePlayerModelInInputDirection(input_dir):
 
 #Starts the win animation
 func Win():
+	print("won")
 	animationState.travel("win")
 
 func Reset():
