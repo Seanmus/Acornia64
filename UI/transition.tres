@@ -4,6 +4,6 @@
 
 [resource]
 shader = ExtResource("1_gy0d6")
-shader_parameter/circle_size = 1.05
+shader_parameter/circle_size = null
 shader_parameter/screen_width = 600.0
 shader_parameter/screen_height = 600.0

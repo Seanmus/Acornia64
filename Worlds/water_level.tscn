@@ -429,6 +429,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4865, 60.1889, -2.2961)
 [node name="cheese10" parent="Cheese" instance=ExtResource("8_fsgbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4865, 60.1889, -5.2961)
 
+[node name="cheese40" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -117.296)
+
+[node name="cheese41" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -117.296)
+
+[node name="cheese42" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -117.296)
+
+[node name="cheese43" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -117.296)
+
+[node name="cheese44" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -113.296)
+
+[node name="cheese45" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -113.296)
+
+[node name="cheese46" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -113.296)
+
+[node name="cheese47" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -113.296)
+
+[node name="cheese48" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -109.296)
+
+[node name="cheese49" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -109.296)
+
+[node name="cheese50" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -109.296)
+
+[node name="cheese51" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -109.296)
+
+[node name="cheese52" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -121.296)
+
+[node name="cheese53" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -121.296)
+
+[node name="cheese54" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -121.296)
+
+[node name="cheese55" parent="Cheese" instance=ExtResource("8_fsgbp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -121.296)
+
 [node name="cheese11" parent="Cheese" instance=ExtResource("8_fsgbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.4865, 60.1889, -5.2961)
 
@@ -922,6 +970,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.932, 89.7943, 4.2755)
 [node name="HomingAttackTarget29" parent="." instance=ExtResource("9_q46w8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.932, 94.7943, 4.2755)
 
+[node name="HomingAttackTarget30" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 147.932, 89.7943, -38.7245)
+
+[node name="HomingAttackTarget31" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.932, 81.7943, -53.7245)
+
+[node name="HomingAttackTarget32" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.932, 72.7943, -74.7245)
+
+[node name="HomingAttackTarget33" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.932, 64.7943, -90.7245)
+
+[node name="HomingAttackTarget34" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.932, 55.7943, -105.725)
+
+[node name="HomingAttackTarget35" parent="." instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 132.932, 48.7943, -119.725)
+
 [node name="HomingAttackTarget14" parent="." instance=ExtResource("9_q46w8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.5386, 43.7671, 48.2755)
 
@@ -979,9 +1045,6 @@ transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
 [node name="nutcracker" parent="MovingNutcracker3" index="1"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
-
-[node name="Wheel" parent="MovingNutcracker3/nutcracker" index="6"]
-transform = Transform3D(-3.13139e-06, 0.105636, 0, -0.865028, -3.82401e-07, 0, 0, 0, 0.865028, 1.40453e-08, 0.214944, -0.048781)
 
 [node name="Lever" parent="MovingNutcracker3/nutcracker" index="7"]
 transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
