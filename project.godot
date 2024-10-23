@@ -36,6 +36,10 @@ window/size/mode=3
 window/stretch/mode="viewport"
 window/size/fullscreen=true
 
+[editor]
+
+movie_writer/movie_file="D:/AcorniaFiles/Videos/homingAttack.avi"
+
 [filesystem]
 
 import/fbx/enabled=false

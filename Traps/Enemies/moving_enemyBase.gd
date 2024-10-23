@@ -7,6 +7,7 @@ class_name MovingEnemiesBase
 @export var transition : Tween.TransitionType
 @export var timeToCompletePath : int
 @export var hitEffect : PackedScene
+@export var hitSoundEffect : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	move_tween()
@@ -23,6 +24,9 @@ func _on_homing_attack_target_on_hit():
 	var cloud = hitEffect.instantiate()
 	get_tree().root.add_child(cloud)
 	cloud.position = $nutcracker/Hat.global_position
+
+	var soundEffect  = hitSoundEffect.instantiate()
+	get_tree().root.add_child(soundEffect)
 	process_mode = Node.PROCESS_MODE_DISABLED
 	visible = false
 	

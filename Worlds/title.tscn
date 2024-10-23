@@ -50,10 +50,6 @@ _data = {
 "SunflowerSpin": SubResource("Animation_danpn")
 }
 
-[sub_resource type="Theme" id="Theme_vaimv"]
-default_font = ExtResource("5_edqm6")
-default_font_size = 30
-
 [sub_resource type="Animation" id="Animation_ew4jo"]
 length = 0.001
 tracks/0/type = "value"
@@ -144,6 +140,10 @@ _data = {
 "endFast": SubResource("Animation_wh74x")
 }
 
+[sub_resource type="Theme" id="Theme_vaimv"]
+default_font = ExtResource("5_edqm6")
+default_font_size = 30
+
 [node name="Title" type="Node3D"]
 script = ExtResource("1_gp50i")
 nextLevel = ""
@@ -183,49 +183,11 @@ anchor_left = 0.059375
 anchor_top = 0.895833
 anchor_right = 0.342187
 anchor_bottom = 0.929167
+offset_top = 47.9996
+offset_bottom = 47.9996
 max_value = 1.0
 step = 0.05
 value = 0.8
-metadata/_edit_use_anchors_ = true
-
-[node name="startBtn" type="Button" parent="UI"]
-anchors_preset = -1
-anchor_left = 0.065625
-anchor_top = 0.554167
-anchor_right = 0.457031
-anchor_bottom = 0.675
-grow_vertical = 0
-focus_neighbor_bottom = NodePath("../collectBtn")
-focus_next = NodePath("../collectBtn")
-theme = SubResource("Theme_vaimv")
-theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
-theme_override_colors/font_hover_color = Color(0.807843, 0.694118, 0.568627, 1)
-theme_override_colors/font_focus_color = Color(1, 0.892918, 0.807838, 1)
-theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
-theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 50
-text = "Start"
-metadata/_edit_use_anchors_ = true
-
-[node name="collectBtn" type="Button" parent="UI"]
-anchors_preset = -1
-anchor_left = 0.065625
-anchor_top = 0.69
-anchor_right = 0.457031
-anchor_bottom = 0.810417
-offset_top = -0.400024
-grow_vertical = 0
-focus_neighbor_top = NodePath("../startBtn")
-focus_next = NodePath("../startBtn")
-focus_previous = NodePath("../startBtn")
-theme = SubResource("Theme_vaimv")
-theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
-theme_override_colors/font_hover_color = Color(0.808594, 0.6939, 0.567736, 1)
-theme_override_colors/font_focus_color = Color(1, 0.894118, 0.807843, 1)
-theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
-theme_override_constants/outline_size = 12
-theme_override_font_sizes/font_size = 50
-text = "Collect A thon"
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="UI"]
@@ -266,12 +228,66 @@ anchor_left = 0.0640625
 anchor_top = 0.816667
 anchor_right = 0.278125
 anchor_bottom = 0.920833
+offset_top = 47.9996
+offset_bottom = 47.9996
 theme = ExtResource("7_gw8r6")
 theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
 theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 50
 text = "Volume"
+metadata/_edit_use_anchors_ = true
+
+[node name="FlowContainer" type="FlowContainer" parent="UI"]
+offset_left = 83.0
+offset_top = 524.0
+offset_right = 536.0
+offset_bottom = 805.0
+alignment = 1
+vertical = true
+
+[node name="startBtn" type="Button" parent="UI/FlowContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../collectBtn")
+focus_next = NodePath("../collectBtn")
+theme = SubResource("Theme_vaimv")
+theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
+theme_override_colors/font_hover_color = Color(0.807843, 0.694118, 0.568627, 1)
+theme_override_colors/font_focus_color = Color(1, 0.892918, 0.807838, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "Start"
+metadata/_edit_use_anchors_ = true
+
+[node name="collectBtn" type="Button" parent="UI/FlowContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../startBtn")
+focus_next = NodePath("../startBtn")
+focus_previous = NodePath("../startBtn")
+theme = SubResource("Theme_vaimv")
+theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
+theme_override_colors/font_hover_color = Color(0.808594, 0.6939, 0.567736, 1)
+theme_override_colors/font_focus_color = Color(1, 0.894118, 0.807843, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "Collect A thon"
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitBtn" type="Button" parent="UI/FlowContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../startBtn")
+focus_next = NodePath("../startBtn")
+focus_previous = NodePath("../startBtn")
+theme = SubResource("Theme_vaimv")
+theme_override_colors/font_color = Color(0.980392, 0.835294, 0.686275, 1)
+theme_override_colors/font_hover_color = Color(0.808594, 0.6939, 0.567736, 1)
+theme_override_colors/font_focus_color = Color(1, 0.894118, 0.807843, 1)
+theme_override_colors/font_outline_color = Color(0.6, 0.372549, 0.12549, 1)
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 50
+text = "Quit"
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -304,9 +320,10 @@ transform = Transform3D(5.55167, 0, -2.62972, 0, 6.143, 0, 2.62972, 0, 5.55167, 
 transform = Transform3D(1.31126, 0, 0, 0, 1.31126, 0, 0, 0, 1.31126, 96.3835, 37.1756, 28.0037)
 
 [connection signal="value_changed" from="UI/audioSlider" to="UI" method="_on_audio_slider_value_changed"]
-[connection signal="pressed" from="UI/startBtn" to="UI" method="_on_button_pressed"]
-[connection signal="pressed" from="UI/collectBtn" to="UI" method="collect_athon"]
 [connection signal="animation_finished" from="UI/Transition/AnimationPlayer" to="UI" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="UI/FlowContainer/startBtn" to="UI" method="_on_button_pressed"]
+[connection signal="pressed" from="UI/FlowContainer/collectBtn" to="UI" method="collect_athon"]
+[connection signal="pressed" from="UI/FlowContainer/QuitBtn" to="UI" method="_on_quit_btn_pressed"]
 
 [editable path="UI/Transition"]
 [editable path="acorn"]

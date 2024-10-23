@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=35 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://di5nyeks84eyp" path="res://FlowerPower/imports/flowerPot.glb" id="19_3j6rf"]
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="20_s8nnt"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="21_aa5io"]
+[ext_resource type="PackedScene" uid="uid://drky6f8fiwrv7" path="res://WorldBlocks/Decor/video_player.tscn" id="22_lduvi"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -103,6 +104,13 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ijgwa"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxvrb"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_ijgwa")
 
 [node name="spaceLevel" type="Node3D"]
 script = ExtResource("1_dmlmg")
@@ -430,52 +438,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4865, 60.1889, -2.2961)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.4865, 60.1889, -5.2961)
 
 [node name="cheese40" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -117.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -138.363)
 
 [node name="cheese41" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -117.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -138.363)
 
 [node name="cheese42" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -117.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -138.139)
 
 [node name="cheese43" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -117.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -138.363)
 
 [node name="cheese44" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -113.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -134.363)
 
 [node name="cheese45" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -113.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -134.363)
 
 [node name="cheese46" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -113.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -134.363)
 
 [node name="cheese47" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -113.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -134.363)
 
 [node name="cheese48" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -109.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -130.363)
 
 [node name="cheese49" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -109.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -130.363)
 
 [node name="cheese50" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -109.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -130.363)
 
 [node name="cheese51" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -109.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -130.363)
 
 [node name="cheese52" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -121.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.487, 42.1889, -142.363)
 
 [node name="cheese53" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -121.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.487, 42.1889, -142.363)
 
 [node name="cheese54" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -121.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.487, 42.1889, -142.363)
 
 [node name="cheese55" parent="Cheese" instance=ExtResource("8_fsgbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -121.296)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137.487, 42.1889, -142.363)
 
 [node name="cheese11" parent="Cheese" instance=ExtResource("8_fsgbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.4865, 60.1889, -5.2961)
@@ -794,13 +802,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2866, -80, -36.322)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2866, -160, -36.322)
 
 [node name="TallBuildingBricks5" parent="Buildings" instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, 0.719555, -119.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, 0.719555, -140.389)
 
 [node name="TallBuildingBricks6" parent="Buildings" instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -78, -119.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -78, -140.389)
 
 [node name="TallBuildingBricks7" parent="Buildings" instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -151.175, -119.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -151.175, -140.389)
 
 [node name="TallBuildingBricks4" parent="Buildings" instance=ExtResource("14_8g0gu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -1.63963, 37.678)
@@ -864,6 +872,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, -34, -134.533)
 
 [node name="TallBuildingBricksPink26" parent="Buildings" instance=ExtResource("16_ibq87")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, 7, 10.4666)
+
+[node name="TallBuildingBricksPink29" parent="Buildings" instance=ExtResource("16_ibq87")]
+transform = Transform3D(0.838288, 0, 0, 0, 0.838288, 0, 0, 0, 1.0576, -27.8874, 0.376141, -17.6624)
 
 [node name="TallBuildingBricksPink27" parent="Buildings" instance=ExtResource("16_ibq87")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82, -73, 10.4666)
@@ -1046,9 +1057,6 @@ transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 [node name="nutcracker" parent="MovingNutcracker3" index="1"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
-[node name="Lever" parent="MovingNutcracker3/nutcracker" index="7"]
-transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
-
 [node name="AudioStreamPlayer3D" parent="MovingNutcracker3/nutcracker/HomingAttackTarget" index="2"]
 transform = Transform3D(0.282973, 0, 0, 0, 0.282973, 0, 0, 0, 0.282973, 0, 0, 0)
 
@@ -1060,7 +1068,7 @@ curve = SubResource("Curve3D_p0uai")
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.55434, 1.09156, 13.9377)
 
 [node name="MovingNutcracker5" parent="." instance=ExtResource("20_s8nnt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.721, 41.9227, -121.921)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.721, 41.9227, -142.988)
 curve = SubResource("Curve3D_wpykm")
 
 [node name="MovingPlatform3" parent="." instance=ExtResource("21_aa5io")]
@@ -1070,6 +1078,14 @@ curve = SubResource("Curve3D_oh1jp")
 [node name="MovingNutcracker6" parent="." instance=ExtResource("20_s8nnt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7671, 59.2032, -11.2092)
 curve = SubResource("Curve3D_jvowb")
+
+[node name="VideoPlayer" parent="." instance=ExtResource("22_lduvi")]
+transform = Transform3D(-3.36401e-07, 7.69596, -3.36401e-07, 0, -3.36401e-07, -7.69596, -7.69596, -3.36401e-07, 1.47046e-14, -13.9157, 18.1889, -14.7495)
+surface_material_override/0 = SubResource("StandardMaterial3D_vxvrb")
+
+[node name="VideoPlayer2" parent="." instance=ExtResource("22_lduvi")]
+transform = Transform3D(13.247, -4.89222e-14, -2.91599e-21, -2.80517e-21, -5.79047e-07, -13.247, 4.89222e-14, 13.247, -5.79047e-07, 62.0843, 18.1889, -252.749)
+surface_material_override/0 = SubResource("StandardMaterial3D_vxvrb")
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 

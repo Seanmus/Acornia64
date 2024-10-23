@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://g8mv2e0r1xbe"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_qn2y7"]
+file = "Video/HomingAttack.ogg"
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(640, 480)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -363.0
+offset_top = -318.0
+offset_right = 918.0
+offset_bottom = 641.0
+stream = SubResource("VideoStreamTheora_qn2y7")
+autoplay = true
+loop = true
+
+[node name="Camera2D" type="Camera2D" parent="."]

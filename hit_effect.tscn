@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://csrx61krieddt"]
+
+[ext_resource type="Script" path="res://soundEffect.gd" id="1_0g75l"]
+[ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="1_w74jv"]
+
+[node name="HitEffect" type="AudioStreamPlayer"]
+stream = ExtResource("1_w74jv")
+autoplay = true
+script = ExtResource("1_0g75l")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

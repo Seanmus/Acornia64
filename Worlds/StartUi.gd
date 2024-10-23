@@ -4,7 +4,7 @@ extends Node
 
 
 func _ready():
-	$startBtn.grab_focus()
+	$FlowContainer/startBtn.grab_focus()
 	MusicPlayer.playing = true
 	Manager.won = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -27,3 +27,7 @@ func _on_audio_slider_value_changed(value):
 func collect_athon():
 	LevelLoader._loadLevel("collect_athon")
 	#get_tree().change_scene_to_file("res://Worlds/collect_athon.tscn")
+
+
+func _on_quit_btn_pressed():
+	get_tree().quit()

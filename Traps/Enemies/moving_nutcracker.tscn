@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvfsbrumep3x8"]
+[gd_scene load_steps=7 format=3 uid="uid://dvfsbrumep3x8"]
 
 [ext_resource type="PackedScene" uid="uid://dnpr4aq0nt4j3" path="res://Traps/Enemies/moving_enemyBase.tscn" id="1_t146q"]
 [ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_7ght2"]
 [ext_resource type="PackedScene" uid="uid://cpkh0rswkyyd6" path="res://Traps/Enemies/nutcracker.tscn" id="2_811ye"]
+[ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_gyynb"]
 
 [sub_resource type="Curve3D" id="Curve3D_fcbh8"]
 resource_local_to_scene = true
@@ -19,15 +20,13 @@ height = 8.0
 [node name="MovingNutcracker" instance=ExtResource("1_t146q")]
 curve = SubResource("Curve3D_fcbh8")
 hitEffect = ExtResource("2_7ght2")
+hitSoundEffect = ExtResource("3_gyynb")
 
 [node name="RemoteTransform3D" parent="PathFollow3D" index="0"]
 remote_path = NodePath("../../nutcracker")
 
 [node name="nutcracker" parent="." index="1" instance=ExtResource("2_811ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="Wheel" parent="nutcracker" index="6"]
-transform = Transform3D(-3.13139e-06, 0.105636, 0, -0.865028, -3.82401e-07, 0, 0, 0, 0.865028, 1.40453e-08, 0.214944, -0.048781)
 
 [node name="Lever" parent="nutcracker" index="7"]
 transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
