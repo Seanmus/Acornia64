@@ -1,4 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://drky6f8fiwrv7"]
+[gd_scene load_steps=6 format=3 uid="uid://drky6f8fiwrv7"]
+
+[ext_resource type="Script" path="res://WorldBlocks/Decor/video_player.gd" id="1_c63hl"]
+[ext_resource type="VideoStream" uid="uid://dmmyhcuv1jwpt" path="res://WorldBlocks/Decor/video_player.tres" id="2_1jc1f"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_kki3p"]
 
@@ -9,13 +12,11 @@ viewport_path = NodePath("SubViewportContainer/SubViewport")
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_8412p")
 
-[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_0i72r"]
-file = "Video/HomingAttack.ogg"
-
 [node name="VideoPlayer" type="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("PlaneMesh_kki3p")
 surface_material_override/0 = SubResource("StandardMaterial3D_05ssc")
+script = ExtResource("1_c63hl")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_left = -894.0
@@ -36,7 +37,7 @@ offset_left = 320.0
 offset_top = 240.0
 offset_right = 960.0
 offset_bottom = 720.0
-stream = SubResource("VideoStreamTheora_0i72r")
+stream = ExtResource("2_1jc1f")
 autoplay = true
 expand = true
 loop = true

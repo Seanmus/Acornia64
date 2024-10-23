@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=37 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -111,6 +111,13 @@ viewport_path = NodePath("SubViewportContainer/SubViewport")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxvrb"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_ijgwa")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ynym2"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1k3fp"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_ynym2")
 
 [node name="spaceLevel" type="Node3D"]
 script = ExtResource("1_dmlmg")
@@ -1057,6 +1064,12 @@ transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 [node name="nutcracker" parent="MovingNutcracker3" index="1"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
 
+[node name="Wheel" parent="MovingNutcracker3/nutcracker" index="6"]
+transform = Transform3D(-3.13139e-06, 0.105636, 0, -0.865028, -3.82401e-07, 0, 0, 0, 0.865028, 1.40453e-08, 0.214944, -0.048781)
+
+[node name="Lever" parent="MovingNutcracker3/nutcracker" index="7"]
+transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
+
 [node name="AudioStreamPlayer3D" parent="MovingNutcracker3/nutcracker/HomingAttackTarget" index="2"]
 transform = Transform3D(0.282973, 0, 0, 0, 0.282973, 0, 0, 0, 0.282973, 0, 0, 0)
 
@@ -1085,7 +1098,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vxvrb")
 
 [node name="VideoPlayer2" parent="." instance=ExtResource("22_lduvi")]
 transform = Transform3D(13.247, -4.89222e-14, -2.91599e-21, -2.80517e-21, -5.79047e-07, -13.247, 4.89222e-14, 13.247, -5.79047e-07, 62.0843, 18.1889, -252.749)
-surface_material_override/0 = SubResource("StandardMaterial3D_vxvrb")
+surface_material_override/0 = SubResource("StandardMaterial3D_1k3fp")
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 

@@ -2,7 +2,7 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://dur2gmwqgq7t0"
+uid="uid://bsyup31ani82n"
 path="res://godot/imported/HomingAttack.ogg-9087ec1738b56793eeb733259b47e69a.oggvorbisstr"
 
 [deps]
@@ -12,7 +12,7 @@ dest_files=["res://godot/imported/HomingAttack.ogg-9087ec1738b56793eeb733259b47e
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
 bpm=0
 beat_count=0

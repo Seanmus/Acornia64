@@ -1,0 +1,5 @@
+[gd_resource type="VideoStreamTheora" format=3 uid="uid://dmmyhcuv1jwpt"]
+
+[resource]
+resource_local_to_scene = true
+file = "res://Video/HomingAttack.ogv"

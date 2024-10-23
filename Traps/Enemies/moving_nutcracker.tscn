@@ -28,6 +28,9 @@ remote_path = NodePath("../../nutcracker")
 [node name="nutcracker" parent="." index="1" instance=ExtResource("2_811ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
+[node name="Wheel" parent="nutcracker" index="6"]
+transform = Transform3D(-3.13139e-06, 0.105636, 0, -0.865028, -3.82401e-07, 0, 0, 0, 0.865028, 1.40453e-08, 0.214944, -0.048781)
+
 [node name="Lever" parent="nutcracker" index="7"]
 transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.189598, -0.887472, -4.41629e-07, -0.109804, 1.53239, -1.07772e-07, 1.5249, 1.34465)
 
