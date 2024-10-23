@@ -6,7 +6,7 @@ var acceleration = 130
 var air_acceleration = 90
 var decceleration = 130
 var air_decceleration = 90
-const JUMP_VELOCITY = 7
+const JUMP_VELOCITY = 11
 var mouse_sensitivty = 0.002 #radiains/pixel
 var controller_sensitivity = 0.02
 var canDoubleJump = true
@@ -30,6 +30,7 @@ var homingAttack = false
 var overlappedTargets = []
 var homingTarget : Node3D
 var homingSpeed = 60
+var bouncing = true
 
 #Occurs when the game is loaded
 func _ready():
@@ -40,9 +41,15 @@ func _ready():
 	
 #Makes the player bounce when hitting a bouncing object		
 func Bounce():
-	velocity.y = JUMP_VELOCITY * 2
+	bouncing = true
+	print("bounce")
+	velocity.y = JUMP_VELOCITY * 1.3
 	canDoubleJump = true
+	#gets player off the ground before transitioning to jump state
+	set_position(get_position() + Vector3(0,0.1,0))
+	landing = false
 	animationState.travel("jump")
+
 	
 #Starts the proccess of the players death	
 func kill():
@@ -56,11 +63,12 @@ func kill():
 #Sends the player flying towards the homingTargets position
 func _HomingAttack(delta):
 	$CollisionShape3D.disabled = true
-	print(homingTarget.name)
+	$Area3D.monitoring = false
 	position = position.move_toward(homingTarget.global_position, delta * homingSpeed)
 	#Checks if the players has reached the target position
 	if position == homingTarget.global_position:
 		$CollisionShape3D.disabled = false
+		$Area3D.monitoring = true
 		cameraAnimPlayer.play("ScreenShake")
 		#Freeze frame
 		OS.delay_msec(40)
@@ -85,7 +93,7 @@ func jump():
 	if dead:
 		return
 	$JumpSound.play()
-	set_position(get_position() + Vector3(0,0.1,0));
+	set_position(get_position() + Vector3(0,0.1,0))
 	if velocity.y >= 0:
 		velocity.y += JUMP_VELOCITY
 	else:
@@ -103,6 +111,9 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
+	
+	if(velocity.y < 0 && !is_on_floor()):
+		animationState.travel("jump")
 	
 	var previousTarget = homingTarget
 	homingTarget = _GetClosestTarget()
@@ -122,7 +133,7 @@ func _physics_process(delta):
 		#maxSpeed = 15
 		runCloud.emitting = false
 	if not Manager.won && not dead:
-		if is_on_floor() && !dead:
+		if is_on_floor() && !dead && !bouncing:
 			canDoubleJump = true
 			if not dead:
 				animationState.travel("walking")
@@ -148,7 +159,6 @@ func _physics_process(delta):
 			if !landing:
 				var targets = get_tree().get_nodes_in_group("targets")
 				for target in targets:
-					print("reseting target")
 					target as homingAttackTarget
 					target._Reset()
 				landing = true
@@ -161,7 +171,6 @@ func _physics_process(delta):
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		_RotatePlayerModelInInputDirection(input_dir)
-		print(velocity)
 		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
 			runCloud.emitting = true
 		else:
@@ -188,7 +197,7 @@ func _physics_process(delta):
 		movementVelocity = movementVelocity.limit_length(maxSpeed)
 		velocity.x = movementVelocity.x
 		velocity.z = movementVelocity.z		
-				
+		bouncing = false		
 		var _returnValue = move_and_slide()
 
 
@@ -231,10 +240,10 @@ func _SetSpawnPoint(spawnPoint, spawnerRotation):
 func _on_deathFinished():
 	position = spawnPos
 	rotation = spawnRotation
+	$Pivot.rotation.x = spawnRotation.x
 	dead = false
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in enemies:
-		print("reseting target")
 		enemy as MovingEnemiesBase
 		enemy._Reset()
 
@@ -270,7 +279,6 @@ func _GetClosestTarget():
 			if position.distance_to(target.global_position) < position.distance_to(closestTarget.global_position):
 				closestTarget = target
 		#If a closest target was found returns the one otherwise null is returned
-		print(closestTarget)
 		return closestTarget
 
 func _JumpFinished():

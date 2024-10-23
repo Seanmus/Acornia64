@@ -9,11 +9,12 @@
 script = ExtResource("1_jq5t0")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 0, 0)
 billboard = 1
 texture = ExtResource("1_fvdsd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["cheese"]]
-transform = Transform3D(0.881746, 0, 0, 0, 0.881746, 0, 0, 0, 0.881746, 0, 0, 0)
+transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 0, 0)
 shape = SubResource("SphereShape3D_1y7ae")
 
 [connection signal="body_entered" from="." to="." method="_on_cheese_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4qn3cbbb3fru"]
+[gd_scene load_steps=6 format=3 uid="uid://b4qn3cbbb3fru"]
 
 [ext_resource type="Script" path="res://WorldBlocks/spawn_point.gd" id="1_tmlt8"]
 
@@ -8,6 +8,9 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku7tm"]
 albedo_color = Color(0, 1, 0.0705882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5m1do"]
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="SpawnPoint" type="Area3D"]
 script = ExtResource("1_tmlt8")
@@ -19,5 +22,9 @@ shape = SubResource("SphereShape3D_ecf85")
 transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0, 0, 0)
 mesh = SubResource("SphereMesh_ig2bo")
 material = SubResource("StandardMaterial3D_ku7tm")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1.48311e-16, 3.69328e-09, 0.0271463, 0.0271463, -3.69328e-09, 0, 1.1866e-09, 0.0844923, -1.1866e-09, -0.005, 0, -0.065)
+material = SubResource("StandardMaterial3D_5m1do")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
