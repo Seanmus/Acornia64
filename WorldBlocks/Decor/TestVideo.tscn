@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://g8mv2e0r1xbe"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_qn2y7"]
-file = "Video/HomingAttack.ogg"
+file = "Video/HomingAttack.ogv"
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(640, 480)

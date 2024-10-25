@@ -288,6 +288,3 @@ func _GetClosestTarget():
 
 func _JumpFinished():
 	animationState.travel("inAir")
-
-
-

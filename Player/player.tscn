@@ -11,7 +11,7 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_hdmwl"]
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_lj47o"]
 
 [sub_resource type="Animation" id="Animation_ppe4r"]
 length = 0.001
@@ -125,7 +125,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099351)
 
 [node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
 collision_mask = 986895
-shape = SubResource("SeparationRayShape3D_hdmwl")
+shape = SubResource("SeparationRayShape3D_lj47o")
 spring_length = 15.0
 margin = 1.39
 

@@ -52,5 +52,3 @@ func _win():
 	$winSound.play()
 	on_win.emit()
 	LevelLoader._loadLevel(nextLevel)
-
-

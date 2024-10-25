@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dyb7fsbl524vs"]
+
+[ext_resource type="Shader" path="res://Player/outLine.gdshader" id="1_v1ng2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c88o"]
+albedo_color = Color(0.496405, 0.281326, 0.230394, 1)
+
+[resource]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_6c88o")
+shader = ExtResource("1_v1ng2")
