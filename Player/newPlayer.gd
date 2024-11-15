@@ -140,7 +140,9 @@ func _physics_process(delta):
 		if is_on_floor() && !dead && !bouncing:
 			canDoubleJump = true
 			if not dead:
-				animationState.travel("walking")
+				animationState.travel("idle")
+				if(velocity.x != 0 || velocity.z != 0):
+					animationState.travel("walking")
 			if landing:
 				landSound.play()
 				animationState.travel("land");
@@ -175,6 +177,7 @@ func _physics_process(delta):
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		_RotatePlayerModelInInputDirection(input_dir)
+		print(input_dir)
 		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
 			runCloud.emitting = true
 		else:
@@ -184,6 +187,7 @@ func _physics_process(delta):
 		if direction:
 			#Forward
 			if is_on_floor():
+				#rotate_y(input_dir.x * -0.01)
 				movementVelocity.z += direction.z * acceleration * delta
 				movementVelocity.x += direction.x * acceleration * delta
 			else:
@@ -235,7 +239,7 @@ func Win():
 
 func Reset():
 	$acorn/AnimationPlayer.play("Reset")
-	$acorn/AnimationPlayer.play("walking")
+	$acorn/AnimationPlayer.play("idle")
 
 func _SetSpawnPoint(spawnPoint, spawnerRotation):
 	spawnPos = spawnPoint

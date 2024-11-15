@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u202cu763j3p"
+uid="uid://c2cqtawclmh5w"
 path.s3tc="res://godot/imported/snowBarrier_snowPic.jpg-e819aa5abd6895f265f4fd33e61f9122.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "fa6b37745dc784622bb9a18de128236c"
 }
 
 [deps]
