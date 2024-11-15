@@ -85,6 +85,7 @@ func _unhandled_input(event):
 	if not Manager.won:
 		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-event.relative.x * mouse_sensitivty)
+			auri.rotate_y(event.relative.x * mouse_sensitivty)
 			$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
 			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
 			
@@ -185,6 +186,7 @@ func _physics_process(delta):
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		var movementVelocity = Vector3(velocity.x, 0, velocity.z)
 		if direction:
+			#auri.rotation = Vector3(0,0,0)
 			#Forward
 			if is_on_floor():
 				#rotate_y(input_dir.x * -0.01)
