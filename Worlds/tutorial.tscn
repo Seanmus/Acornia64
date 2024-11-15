@@ -40,9 +40,6 @@ transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l3x7x")
 
-[node name="Earth" parent="." instance=ExtResource("11_jmqux")]
-transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -479.274, 40.7078)
-
 [node name="Cheese" type="Node" parent="."]
 
 [node name="cheese" parent="Cheese" instance=ExtResource("14_1csn6")]
@@ -198,433 +195,435 @@ transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926
 [node name="cheese44" parent="Cheese" instance=ExtResource("14_1csn6")]
 transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -187.2)
 
-[node name="MetalBox" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalPathways" type="Node" parent="."]
+
+[node name="MetalBox" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.85922, 0.899408, 5.33518)
 
-[node name="MetalBox2" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox2" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14078, 0.899408, 5.33518)
 
-[node name="MetalBox3" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox3" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1408, 0.899408, 5.33518)
 
-[node name="MetalBox4" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox4" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.85922, 0.899408, -4.66482)
 
-[node name="MetalBox5" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox5" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14078, 0.899408, -4.66482)
 
-[node name="MetalBox6" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox6" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1408, 0.899408, -4.66482)
 
-[node name="MetalBox7" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox7" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.85922, 0.899408, 15.3352)
 
-[node name="MetalBox10" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox10" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8592, 0.899408, 5.33518)
 
-[node name="MetalBox11" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox11" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8592, 0.899408, -4.66482)
 
-[node name="MetalBox12" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox12" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8592, 0.899408, 15.3352)
 
-[node name="MetalBox8" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox8" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14078, 0.899408, 15.3352)
 
-[node name="MetalBox9" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox9" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1408, 0.899408, 15.3352)
 
-[node name="MetalBox13" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox13" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1408, 0.899408, 5.33518)
 
-[node name="MetalBox14" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox14" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1408, 0.899408, -4.66482)
 
-[node name="MetalBox15" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox15" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1408, 0.899408, 15.3352)
 
-[node name="MetalBox16" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox16" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1408, 0.899408, 5.33518)
 
-[node name="MetalBox17" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox17" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1408, 0.899408, -4.66482)
 
-[node name="MetalBox18" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox18" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1408, 0.899408, 15.3352)
 
-[node name="MetalBox19" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox19" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 5.33518)
 
-[node name="MetalBox20" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox20" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, -4.66482)
 
-[node name="MetalBox21" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox21" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 15.3352)
 
-[node name="MetalBox22" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox22" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 5.33518)
 
-[node name="MetalBox23" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox23" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, -4.66482)
 
-[node name="MetalBox24" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox24" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 15.3352)
 
-[node name="MetalBox25" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox25" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 5.33518)
 
-[node name="MetalBox26" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox26" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, -4.66482)
 
-[node name="MetalBox27" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox27" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 15.3352)
 
-[node name="MetalBox28" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox28" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 25.3352)
 
-[node name="MetalBox29" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox29" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 25.3352)
 
-[node name="MetalBox30" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox30" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 25.3352)
 
-[node name="MetalBox31" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox31" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 35.3352)
 
-[node name="MetalBox32" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox32" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 35.3352)
 
-[node name="MetalBox33" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox33" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 35.3352)
 
-[node name="MetalBox34" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox34" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 45.3352)
 
-[node name="MetalBox35" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox35" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 45.3352)
 
-[node name="MetalBox36" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox36" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 45.3352)
 
-[node name="MetalBox37" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox37" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 55.3352)
 
-[node name="MetalBox38" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox38" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 55.3352)
 
-[node name="MetalBox39" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox39" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 55.3352)
 
-[node name="MetalBox40" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox40" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.1408, 0.899408, 65.3352)
 
-[node name="MetalBox41" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox41" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 65.3352)
 
-[node name="MetalBox42" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox42" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 65.3352)
 
-[node name="MetalBox43" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox43" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 41.1408, 2.09941, 71.5352)
 
-[node name="MetalBox44" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox44" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 51.1408, 2.09941, 71.5352)
 
-[node name="MetalBox45" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox45" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 61.1408, 2.09941, 71.5352)
 
-[node name="MetalBox46" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox46" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 77.5352)
 
-[node name="MetalBox47" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox47" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 77.5352)
 
-[node name="MetalBox48" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox48" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 77.5352)
 
-[node name="MetalBox49" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox49" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 87.5352)
 
-[node name="MetalBox50" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox50" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 87.5352)
 
-[node name="MetalBox51" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox51" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 87.5352)
 
-[node name="MetalBox52" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox52" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 97.5352)
 
-[node name="MetalBox53" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox53" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 97.5352)
 
-[node name="MetalBox54" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox54" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 97.5352)
 
-[node name="MetalBox55" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox55" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 118.535)
 
-[node name="MetalBox56" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox56" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 118.535)
 
-[node name="MetalBox57" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox57" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 118.535)
 
-[node name="MetalBox58" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox58" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 128.535)
 
-[node name="MetalBox59" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox59" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 128.535)
 
-[node name="MetalBox60" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox60" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 128.535)
 
-[node name="MetalBox61" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox61" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 150.935)
 
-[node name="MetalBox62" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox62" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 150.935)
 
-[node name="MetalBox63" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox63" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 150.935)
 
-[node name="MetalBox64" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox64" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 160.935)
 
-[node name="MetalBox65" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox65" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 160.935)
 
-[node name="MetalBox66" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox66" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 160.935)
 
-[node name="MetalBox67" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox67" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 170.935)
 
-[node name="MetalBox68" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox68" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 170.935)
 
-[node name="MetalBox69" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox69" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 170.935)
 
-[node name="MetalBox70" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox70" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 180.935)
 
-[node name="MetalBox71" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox71" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 51.1408, 6.09941, 180.935)
 
-[node name="MetalBox72" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox72" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 61.1408, 6.09941, 180.935)
 
-[node name="MetalBox73" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox73" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 71.1408, 6.09941, 180.935)
 
-[node name="MetalBox74" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox74" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 81.1408, 6.09941, 180.935)
 
-[node name="MetalBox75" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox75" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 71.1408, 6.09941, 170.935)
 
-[node name="MetalBox76" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox76" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 81.1408, 6.09941, 170.935)
 
-[node name="MetalBox77" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox77" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 91.1408, 6.09941, 180.935)
 
-[node name="MetalBox78" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox78" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 101.141, 6.09941, 180.935)
 
-[node name="MetalBox81" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox81" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 120.741, 8.89941, 180.935)
 
-[node name="MetalBox82" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox82" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 130.741, 8.89941, 180.935)
 
-[node name="MetalBox83" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox83" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 151.741, 11.4994, 180.935)
 
-[node name="MetalBox84" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox84" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 161.741, 11.4994, 180.935)
 
-[node name="MetalBox85" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox85" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 161.741, 11.4994, 190.935)
 
-[node name="MetalBox86" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox86" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 171.741, 11.4994, 190.935)
 
-[node name="MetalBox88" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox88" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 161.741, 11.4994, 200.935)
 
-[node name="MetalBox89" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox89" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 171.741, 11.4994, 200.935)
 
-[node name="MetalBox90" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox90" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 161.741, 14.8994, 215.535)
 
-[node name="MetalBox91" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox91" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 171.741, 14.8994, 215.535)
 
-[node name="MetalBox92" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox92" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 161.741, 14.8994, 225.135)
 
-[node name="MetalBox93" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox93" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 171.741, 14.8994, 225.135)
 
-[node name="MetalBox94" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox94" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 161.741, 14.8994, 234.935)
 
-[node name="MetalBox95" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox95" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 171.741, 14.8994, 234.935)
 
-[node name="MetalBox96" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox96" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 133.341, 18.2994, 234.935)
 
-[node name="MetalBox97" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox97" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 143.341, 18.2994, 234.935)
 
-[node name="MetalBox98" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox98" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 107.141, 21.4994, 234.935)
 
-[node name="MetalBox100" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox100" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 0.959982, -0.280064, 0, 0.280064, 0.959982, 107.141, 22.8737, 226.135)
 
-[node name="MetalBox101" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox101" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 0.959982, -0.280064, 0, 0.280064, 0.959982, 107.141, 25.6744, 216.535)
 
-[node name="MetalBox102" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox102" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 0.959982, -0.280064, 0, 0.280064, 0.959982, 107.141, 28.475, 206.935)
 
-[node name="MetalBox103" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox103" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.141, 29.8333, 197.423)
 
-[node name="MetalBox104" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox104" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 0.999757, -0.0220592, 0, 0.0220592, 0.999757, 160.141, 34.9225, 209.949)
 
-[node name="MetalBox105" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox105" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 0.999757, -0.0220592, 0, 0.0220592, 0.999757, 170.141, 34.9225, 209.949)
 
-[node name="MetalBox106" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox106" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 0.999757, -0.0220592, 0, 0.0220592, 0.999757, 180.141, 34.9225, 209.949)
 
-[node name="MetalBox107" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox107" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 208.141, 35.2, 209.949)
 
-[node name="MetalBox108" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox108" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 35.2, 209.949)
 
-[node name="MetalBox109" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox109" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 208.141, 35.2, 199.949)
 
-[node name="MetalBox110" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox110" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 35.2, 199.949)
 
-[node name="MetalBox111" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox111" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 208.141, 35.2, 189.949)
 
-[node name="MetalBox112" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox112" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 35.2, 189.949)
 
-[node name="MetalBox113" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox113" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 35.2, 179.949)
 
-[node name="MetalBox114" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox114" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 35.2, 169.949)
 
-[node name="MetalBox115" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox115" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 39.2, 149.149)
 
-[node name="MetalBox116" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox116" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 39.2, 139.149)
 
-[node name="MetalBox117" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox117" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.141, 39.2, 129.149)
 
-[node name="MetalBox118" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox118" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 206.141, 39.2, 106.349)
 
-[node name="MetalBox119" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox119" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 206.141, 39.2, 96.349)
 
-[node name="MetalBox120" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox120" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 227.741, 39.2, 77.549)
 
-[node name="MetalBox121" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox121" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 227.741, 39.2, 67.549)
 
-[node name="MetalBox122" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox122" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.341, 39.2, 46.149)
 
-[node name="MetalBox123" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox123" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 207.341, 39.2, 36.149)
 
-[node name="MetalBox124" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox124" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, 11.149)
 
-[node name="MetalBox125" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox125" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, 1.149)
 
-[node name="MetalBox126" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox126" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -8.851)
 
-[node name="MetalBox127" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox127" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -18.851)
 
-[node name="MetalBox132" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox132" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -28.851)
 
-[node name="MetalBox133" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox133" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -38.851)
 
-[node name="MetalBox134" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox134" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -82.251)
 
-[node name="MetalBox135" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox135" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -92.251)
 
-[node name="MetalBox136" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox136" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -102.251)
 
-[node name="MetalBox137" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox137" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -182.051)
 
-[node name="MetalBox138" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox138" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -192.051)
 
-[node name="MetalBox139" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox139" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -202.051)
 
-[node name="MetalBox140" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox140" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 39.2, -212.051)
 
-[node name="MetalBox141" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox141" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 43, -231.651)
 
-[node name="MetalBox142" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox142" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 43, -241.651)
 
-[node name="MetalBox143" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox143" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.141, 43, -251.651)
 
-[node name="MetalBox128" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox128" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.141, 39.2, -8.851)
 
-[node name="MetalBox129" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox129" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.141, 39.2, -18.851)
 
-[node name="MetalBox130" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox130" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 211.141, 39.2, -8.851)
 
-[node name="MetalBox131" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox131" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 211.141, 39.2, -18.851)
 
-[node name="MetalBox99" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox99" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 117.141, 21.4994, 234.935)
 
-[node name="MetalBox87" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox87" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 171.741, 11.4994, 180.935)
 
-[node name="MetalBox79" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox79" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 91.1408, 6.09941, 170.935)
 
-[node name="MetalBox80" parent="." instance=ExtResource("5_78ujj")]
+[node name="MetalBox80" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 101.141, 6.09941, 170.935)
 
 [node name="Buildings" type="Node" parent="."]
@@ -684,7 +683,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.72, -9.10158, 98.0039)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.32, -9.54433, 208.4)
 
 [node name="TallBuildingBricksPink12" parent="Buildings" instance=ExtResource("8_flyew")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.32, -89.9016, 210.204)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.32, -89.9016, 208.404)
 
 [node name="TallBuildingBricks8" parent="Buildings" instance=ExtResource("10_4qhhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44065, -10.2191, 171.825)
@@ -692,7 +691,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44065, -10.2191, 171.825)
 [node name="TallBuildingBricks9" parent="Buildings" instance=ExtResource("10_4qhhw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44065, -90.6191, 171.825)
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="endLevel" parent="." instance=ExtResource("16_6gx50")]
+transform = Transform3D(4.47342, 0, 0, 0, 4.47342, 0, 0, 0, 4.47342, 221.122, 52.4815, -253.044)
+nextLevel = "water_level"
+
+[node name="TutorialText" type="Node" parent="."]
+
+[node name="CameraText" type="Label3D" parent="TutorialText"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3278, 11.3591, 6.22171)
 billboard = 1
 text = "You can rotate your camera 
@@ -701,7 +706,7 @@ font = ExtResource("15_6gg0y")
 font_size = 260
 outline_size = 100
 
-[node name="Label3D2" type="Label3D" parent="."]
+[node name="JumpText" type="Label3D" parent="TutorialText"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.1278, 11.3591, 53.0217)
 billboard = 1
 text = "You can also
@@ -710,39 +715,46 @@ font = ExtResource("15_6gg0y")
 font_size = 260
 outline_size = 100
 
-[node name="tire" parent="." instance=ExtResource("12_v4bch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.777, 31.148, 210.049)
+[node name="SpawnPoints" type="Node" parent="."]
 
-[node name="tire4" parent="." instance=ExtResource("12_v4bch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 166.777, 12.748, 201.449)
+[node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("13_c5ddo")]
+transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 122.027, 34.1668, 210.683)
 
-[node name="tire2" parent="." instance=ExtResource("12_v4bch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 218.22, 36.9723, 169.249)
-
-[node name="tire3" parent="." instance=ExtResource("12_v4bch")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 221.02, 40.5723, -212.351)
-
-[node name="SpawnPoint" parent="." instance=ExtResource("13_c5ddo")]
-transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 129.427, 34.1668, 210.683)
-
-[node name="SpawnPoint2" parent="." instance=ExtResource("13_c5ddo")]
+[node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("13_c5ddo")]
 transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 221.227, 42.1668, -7.317)
 
-[node name="Moon" parent="." instance=ExtResource("14_55uax")]
-transform = Transform3D(33.7868, 0, 0, 0, 33.7868, 0, 0, 0, 33.7868, 132.968, 86.9195, -47.3825)
+[node name="Tire" type="Node" parent="."]
 
-[node name="HomingAttackTarget" parent="." instance=ExtResource("15_xnc2d")]
+[node name="tire" parent="Tire" instance=ExtResource("12_v4bch")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.777, 31.148, 210.049)
+
+[node name="tire4" parent="Tire" instance=ExtResource("12_v4bch")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 166.777, 12.748, 201.449)
+
+[node name="tire2" parent="Tire" instance=ExtResource("12_v4bch")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 218.22, 36.9723, 169.249)
+
+[node name="tire3" parent="Tire" instance=ExtResource("12_v4bch")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 221.02, 40.5723, -212.351)
+
+[node name="HomingAttackTargets" type="Node" parent="."]
+
+[node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("15_xnc2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -60.1033)
 
-[node name="HomingAttackTarget2" parent="." instance=ExtResource("15_xnc2d")]
+[node name="HomingAttackTarget2" parent="HomingAttackTargets" instance=ExtResource("15_xnc2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -122.503)
 
-[node name="HomingAttackTarget3" parent="." instance=ExtResource("15_xnc2d")]
+[node name="HomingAttackTarget3" parent="HomingAttackTargets" instance=ExtResource("15_xnc2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -145.903)
 
-[node name="HomingAttackTarget4" parent="." instance=ExtResource("15_xnc2d")]
+[node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("15_xnc2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -165.303)
 
-[node name="endLevel" parent="." instance=ExtResource("16_6gx50")]
-transform = Transform3D(4.47342, 0, 0, 0, 4.47342, 0, 0, 0, 4.47342, 221.122, 52.4815, -253.044)
-nextLevel = "water_level"
+[node name="Planets" type="Node" parent="."]
+
+[node name="Earth" parent="Planets" instance=ExtResource("11_jmqux")]
+transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -479.274, 40.7078)
+
+[node name="Moon" parent="Planets" instance=ExtResource("14_55uax")]
+transform = Transform3D(33.7868, 0, 0, 0, 33.7868, 0, 0, 0, 33.7868, 132.968, 86.9195, -47.3825)
