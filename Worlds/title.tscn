@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bgugy0v18el3f"]
+[gd_scene load_steps=21 format=3 uid="uid://bgugy0v18el3f"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="7_gw8r6"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="7_hgnnl"]
 [ext_resource type="PackedScene" uid="uid://btn1fjffa1mtp" path="res://Player/acornModel.tscn" id="8_n7m35"]
+[ext_resource type="Script" path="res://WorldBlocks/Imports/titleearth.gd" id="11_2abwn"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0oq3f"]
 [ext_resource type="Script" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
@@ -298,6 +299,10 @@ current = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("7_hgnnl")
 
+[node name="Moon" parent="." instance=ExtResource("11_g3ylg")]
+transform = Transform3D(1.31126, 0, 0, 0, 1.31126, 0, -1.19209e-07, -3.72529e-09, 1.31126, 96.3835, 37.1756, 28.0037)
+script = ExtResource("11_2abwn")
+
 [node name="acorn" parent="." instance=ExtResource("8_n7m35")]
 transform = Transform3D(-1.44392, -0.128933, -2.3297, 0.0162128, 2.73909, -0.161638, 2.33321, -0.0988239, -1.44062, 90.107, 36.8792, 31.2321)
 
@@ -315,9 +320,7 @@ transform = Transform3D(-0.00751558, -0.0609637, -0.404927, 0.0504683, 0.198452,
 
 [node name="Earth" parent="." instance=ExtResource("12_0oq3f")]
 transform = Transform3D(5.55167, 0, -2.62972, 0, 6.143, 0, 2.62972, 0, 5.55167, 89.465, 30.1236, 30.6598)
-
-[node name="Moon" parent="." instance=ExtResource("11_g3ylg")]
-transform = Transform3D(1.31126, 0, 0, 0, 1.31126, 0, 0, 0, 1.31126, 96.3835, 37.1756, 28.0037)
+script = ExtResource("11_2abwn")
 
 [connection signal="value_changed" from="UI/audioSlider" to="UI" method="_on_audio_slider_value_changed"]
 [connection signal="animation_finished" from="UI/Transition/AnimationPlayer" to="UI" method="_on_animation_player_animation_finished"]

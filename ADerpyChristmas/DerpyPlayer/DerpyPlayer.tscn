@@ -1,0 +1,909 @@
+[gd_scene load_steps=37 format=3 uid="uid://bleqbt5f1cfj2"]
+
+[ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/Derpy.gd" id="1_fuj54"]
+[ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="2_6d2vt"]
+[ext_resource type="AudioStream" uid="uid://tifgi4mvk5h5" path="res://ADerpyChristmas/DerpyPlayer/LandSqueakReSaved.mp3" id="3_ed4i6"]
+[ext_resource type="Texture2D" uid="uid://bmv1vabd5wc1n" path="res://ADerpyChristmas/DerpyPlayer/PresentCrunchy.png" id="5_1a8fc"]
+[ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/DerpyUI.gd" id="5_yq0re"]
+[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="6_hpwsy"]
+[ext_resource type="AudioStream" uid="uid://c1h1frpyok5m6" path="res://ADerpyChristmas/DerpyPlayer/PresentCollected.wav" id="8_tcujn"]
+[ext_resource type="AudioStream" uid="uid://cdusrnndmi2bl" path="res://ADerpyChristmas/DerpyPlayer/PP_Collect_Coin_1_2.wav" id="9_u5m70"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lgsit"]
+radius = 0.615924
+
+[sub_resource type="Animation" id="Animation_eo3mg"]
+resource_name = "Hover"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Derpy/LeftWing_001:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 6.51683e-07, 0), Vector3(-0.671166, 1.5708, -1.5708), Vector3(-1.5708, 6.51683e-07, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Derpy/LeftWing:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -3.14159, 0), Vector3(-0.592103, -1.57079, -1.5708), Vector3(-1.5708, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pwx0c"]
+resource_name = "InAir"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Derpy/LeftWing_001:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 6.51683e-07, 0), Vector3(-0.671166, 1.5708, -1.5708), Vector3(-1.5708, 6.51683e-07, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Derpy/LeftWing:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -3.14159, 0), Vector3(-0.592103, -1.57079, -1.5708), Vector3(-1.5708, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_heg8d"]
+resource_name = "Jump"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Derpy/LeftWing:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -3.14159, 0), Vector3(-0.872665, -1.5708, -1.5708), Vector3(-1.5708, -3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Derpy/LeftWing:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.6, 0.256785, -4.71597e-08), Vector3(0.6, 0.256785, -4.71597e-08)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Derpy/Sunfglasses:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-5.21184e-08, 0.3838, -0.596165), Vector3(-5.21184e-08, 0.3838, -0.596165)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Derpy/HairTuft:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0.781998, 0), Vector3(0, 0.781998, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Derpy/LeftFoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.2, -0.513494, -1.74846e-08), Vector3(0.2, -0.513494, -1.74846e-08)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Derpy/RightFoot:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.2, -0.513494, 1.74846e-08), Vector3(-0.2, -0.513494, 1.74846e-08)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Derpy/LeftWing_001:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.6, 0.256785, 5.77477e-08), Vector3(-0.6, 0.256785, 5.77477e-08)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Derpy/LeftWing_001:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 6.51683e-07, 0), Vector3(-0.872665, 1.5708, -1.5708), Vector3(-1.5708, 6.51683e-07, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Derpy/Body_001:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-5.70553e-08, 0.214111, -0.652636), Vector3(-5.70553e-08, 0.214111, -0.652636)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Derpy/Body_001:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(4.37114e-08, -3.14159, -1.22465e-16), Vector3(4.37114e-08, -3.14159, -1.22465e-16)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Derpy:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(0.8, 1.2, 0.8), Vector3(1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Derpy/LeftFoot:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -1.5708, 0), Vector3(-1.14776, -1.94126, 0.402674)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Derpy/RightFoot:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -1.5708, 0), Vector3(-1.15366, -1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m41vt"]
+resource_name = "Land"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Derpy:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.4, 0.5, 1.4), Vector3(1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Derpy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.266725, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eeojd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Derpy/Sunfglasses:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, -0.233874, 0.240855)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Derpy/Sunfglasses:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.21184e-08, 0.3838, -0.596165)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Derpy:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Derpy:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Derpy/LeftWing:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.6, 0.256785, -4.71597e-08)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Derpy/LeftWing:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, -3.14159, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Derpy/HairTuft:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.781998, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Derpy/HairTuft:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, -2.18166, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Derpy/LeftFoot:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.2, -0.513494, -1.74846e-08)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Derpy/LeftFoot:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, -1.5708, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Derpy/RightFoot:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.2, -0.513494, 1.74846e-08)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Derpy/RightFoot:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, -1.5708, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Derpy/LeftWing_001:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.6, 0.256785, 5.77477e-08)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Derpy/LeftWing_001:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5708, 6.51683e-07, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Derpy/Body_001:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-5.70553e-08, 0.214111, -0.652636)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Derpy/Body_001:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(4.37114e-08, -3.14159, -1.22465e-16)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Derpy:scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("UI/PresentSprite:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PresentCollectedEffect:playing")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_7deyc"]
+resource_name = "Walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Derpy/LeftWing:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.6, 0.256785, -4.71597e-08), Vector3(0.7097, 0.133389, -4.47035e-08), Vector3(0.6, 0.256785, -4.71597e-08), Vector3(0.513592, 0.390762, -4.47035e-08), Vector3(0.6, 0.256785, -4.71597e-08)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Derpy/Sunfglasses:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -0.233874, 0.240855), Vector3(-1.35902, 1.5708, -1.56382), Vector3(-1.5708, -0.233874, 0.240855), Vector3(-1.38588, -1.5708, 1.57778), Vector3(-1.5708, -0.233874, 0.240855)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Derpy/Sunfglasses:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-5.21184e-08, 0.3838, -0.596165), Vector3(0.149803, 0.383686, -0.596165), Vector3(-5.21184e-08, 0.3838, -0.596165), Vector3(-0.0995325, 0.405293, -0.596165), Vector3(-5.21184e-08, 0.3838, -0.596165)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Derpy/HairTuft:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.781998, 0), Vector3(0.233504, 0.772988, 0), Vector3(0, 0.781998, 0), Vector3(-0.172747, 0.796702, 0), Vector3(0, 0.781998, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Derpy/HairTuft:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -2.18166, 0), Vector3(-1.35902, 1.57079, 2.53074), Vector3(-1.5708, -2.18166, 0), Vector3(-1.38588, -1.57079, -0.610875), Vector3(-1.5708, -2.18166, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Derpy/LeftFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -1.5708, 0), Vector3(-1.5708, -1.5708, 0), Vector3(-1.5708, -1.5708, 0), Vector3(-1.5708, -1.5708, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Derpy/LeftFoot:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.2, -0.513494, -1.74846e-08), Vector3(0.2, -0.513494, -1.74846e-08), Vector3(0.2, -0.513494, -1.74846e-08), Vector3(0.2, -0.4, 0), Vector3(0.2, -0.513494, -1.74846e-08)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Derpy/RightFoot:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, -1.5708, 0), Vector3(-1.5708, -1.5708, 0), Vector3(-1.5708, -1.5708, 0), Vector3(-1.5708, -1.5708, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Derpy/RightFoot:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.2, -0.513494, 1.74846e-08), Vector3(-0.2, -0.4, 0), Vector3(-0.2, -0.513494, 1.74846e-08), Vector3(-0.2, -0.513494, 1.74846e-08), Vector3(-0.2, -0.513494, 1.74846e-08)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Derpy/LeftWing_001:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5708, 6.51683e-07, 0), Vector3(-1.5708, 6.51683e-07, 0), Vector3(-0.0160258, -2.36066e-12, 6.51683e-07), Vector3(-1.5708, 6.51683e-07, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Derpy/LeftWing_001:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.6, 0.256785, 5.77477e-08), Vector3(-0.463491, 0.385628, 5.96046e-08), Vector3(-0.6, 0.256785, 5.77477e-08), Vector3(-0.665949, 0.170124, 5.96046e-08), Vector3(-0.6, 0.256785, 5.77477e-08)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Derpy/Body_001:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(4.37114e-08, -3.14159, -1.22465e-16), Vector3(-4.90157e-07, -3.14159, 0.211778), Vector3(4.37114e-08, -3.14159, -1.22465e-16), Vector3(5.09099e-07, -3.14159, -0.184918), Vector3(4.37114e-08, -3.14159, -1.22465e-16)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Derpy/Body_001:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-5.70553e-08, 0.214111, -0.652636), Vector3(0.114134, 0.217788, -0.652636), Vector3(-5.70553e-08, 0.214111, -0.652636), Vector3(-0.0683325, 0.238497, -0.652636), Vector3(-5.70553e-08, 0.214111, -0.652636)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Derpy/LeftWing:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.52421, 1.90023e-10, -3.14159), Vector3(0.0292203, 9.50608e-12, -3.14159), Vector3(-1.52421, 1.90023e-10, -3.14159)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0csh3"]
+_data = {
+"Hover": SubResource("Animation_eo3mg"),
+"InAir": SubResource("Animation_pwx0c"),
+"Jump": SubResource("Animation_heg8d"),
+"Land": SubResource("Animation_m41vt"),
+"RESET": SubResource("Animation_eeojd"),
+"Walk": SubResource("Animation_7deyc")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xvg6f"]
+animation = &"Hover"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oljhs"]
+animation = &"InAir"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vraha"]
+animation = &"Jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_juv8b"]
+animation = &"Land"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3eyxj"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lsbma"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0a6jd"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_37vwb"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2vkgr"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y4xjk"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ww54o"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rxvs8"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7y4yr"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_uy886"]
+states/Hover/node = SubResource("AnimationNodeAnimation_xvg6f")
+states/Hover/position = Vector2(914, 279)
+states/InAir/node = SubResource("AnimationNodeAnimation_oljhs")
+states/InAir/position = Vector2(703, 239)
+states/Jump/node = SubResource("AnimationNodeAnimation_vraha")
+states/Jump/position = Vector2(703, 112)
+states/Land/node = SubResource("AnimationNodeAnimation_juv8b")
+states/Land/position = Vector2(703, 377)
+states/Walk/node = SubResource("AnimationNodeAnimation_3eyxj")
+states/Walk/position = Vector2(493, 168)
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_lsbma"), "Walk", "Jump", SubResource("AnimationNodeStateMachineTransition_0a6jd"), "Land", "Walk", SubResource("AnimationNodeStateMachineTransition_37vwb"), "Jump", "InAir", SubResource("AnimationNodeStateMachineTransition_2vkgr"), "InAir", "Land", SubResource("AnimationNodeStateMachineTransition_y4xjk"), "InAir", "Hover", SubResource("AnimationNodeStateMachineTransition_ww54o"), "Hover", "Land", SubResource("AnimationNodeStateMachineTransition_rxvs8"), "Hover", "InAir", SubResource("AnimationNodeStateMachineTransition_7y4yr")]
+graph_offset = Vector2(-114, -16)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5ax8n"]
+
+[sub_resource type="Theme" id="Theme_4pgsk"]
+default_font = ExtResource("6_hpwsy")
+default_font_size = 30
+
+[sub_resource type="Animation" id="Animation_4oytq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PresentSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.66, 0.66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PresentSprite:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1le4e"]
+resource_name = "presentCollected"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PresentSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.66, 0.66), Vector2(0.91, 0.91), Vector2(0.66, 0.66)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PresentSprite:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.172788, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1x077"]
+resource_name = "scoreIncreased"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xnidj"]
+_data = {
+"RESET": SubResource("Animation_4oytq"),
+"presentCollected": SubResource("Animation_1le4e"),
+"scoreIncreased": SubResource("Animation_1x077")
+}
+
+[node name="DerpyPlayer" type="CharacterBody3D" groups=["player"]]
+floor_max_angle = 1.04894
+script = ExtResource("1_fuj54")
+
+[node name="Derpy" parent="." instance=ExtResource("2_6d2vt")]
+
+[node name="LeftWing" parent="Derpy" index="0"]
+transform = Transform3D(-22.0247, 8.98355e-05, 4.11459e-10, 0, -0.000128276, 44.8343, 5.58367e-05, 35.4355, 0.0001623, 0.6, 0.256785, -4.71597e-08)
+
+[node name="Sunfglasses" parent="Derpy" index="1"]
+transform = Transform3D(36.1156, -0.0231852, 1.20616e-05, -3.11861e-05, -1.16757e-05, 14.3775, -0.252127, -3.32113, -5.06294e-05, -5.21184e-08, 0.3838, -0.596165)
+
+[node name="HairTuft" parent="Derpy" index="2"]
+transform = Transform3D(-1.68555, 4.70529, 1.06049e-05, 0, -2.07935e-05, 3.5763, 2.40723, 3.29467, 7.4256e-06, 0, 0.781998, 0)
+
+[node name="LeftFoot" parent="Derpy" index="3"]
+transform = Transform3D(-0.000146044, 22.811, 5.14182e-05, 0, -8.25756e-05, 14.204, 40.3438, 8.25756e-05, 1.86133e-10, 0.2, -0.513494, -1.74846e-08)
+
+[node name="RightFoot" parent="Derpy" index="4"]
+transform = Transform3D(-0.000146044, 22.811, 5.14182e-05, 0, -8.25756e-05, 14.204, 40.3438, 8.25756e-05, 1.86133e-10, -0.2, -0.513494, 1.74846e-08)
+
+[node name="LeftWing_001" parent="Derpy" index="5"]
+transform = Transform3D(22.0247, -2.30927e-05, -1.05768e-10, 0, -0.000128276, 44.8343, -1.43531e-05, -35.4355, -0.0001623, -0.6, 0.256785, 5.77477e-08)
+
+[node name="Body_001" parent="Derpy" index="6"]
+transform = Transform3D(-16.3185, -1.533e-12, -4.13704e-05, -1.99845e-15, 13.8185, -7.13305e-07, 4.13704e-05, -6.04025e-07, -16.3185, -5.70553e-08, 0.214111, -0.652636)
+
+[node name="LandEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ed4i6")
+
+[node name="JumpEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ed4i6")
+volume_db = -3.692
+pitch_scale = 0.93
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_lgsit")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0csh3")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_uy886")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+shape = SubResource("SphereShape3D_5ax8n")
+spring_length = 6.12
+
+[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.892117, 2.49008)
+
+[node name="UI" type="Control" parent="." node_paths=PackedStringArray("player")]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.995
+offset_right = 2.0
+offset_bottom = 0.239929
+mouse_filter = 2
+script = ExtResource("5_yq0re")
+player = NodePath("..")
+
+[node name="PresentSprite" type="Sprite2D" parent="UI"]
+position = Vector2(575, 53)
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("5_1a8fc")
+
+[node name="PresentsLbl" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.846
+anchor_top = 0.186
+anchor_right = 1.0
+anchor_bottom = 0.297
+offset_left = 0.867981
+offset_top = 0.121773
+offset_bottom = 0.0815277
+theme = SubResource("Theme_4pgsk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "0/3"
+
+[node name="ScoreLbl" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.002
+anchor_right = 0.412
+anchor_bottom = 0.171
+offset_left = -0.198001
+offset_top = 0.0443201
+offset_right = 0.279968
+offset_bottom = 0.0393295
+theme = SubResource("Theme_4pgsk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+text = "Score: 0"
+
+[node name="PresentCollectedAnim" type="AnimationPlayer" parent="UI"]
+libraries = {
+"": SubResource("AnimationLibrary_xnidj")
+}
+
+[node name="PresentCollectedEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_tcujn")
+
+[node name="CollectibleCollected" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_u5m70")
+
+[editable path="Derpy"]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://0t0jkd864kt"]
+
+[ext_resource type="PackedScene" uid="uid://d4alr58co4efe" path="res://BlenderMeshes/Derpy.fbx" id="1_0w4dh"]
+
+[node name="Derpy" instance=ExtResource("1_0w4dh")]
