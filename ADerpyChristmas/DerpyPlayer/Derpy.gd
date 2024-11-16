@@ -64,7 +64,6 @@ func _process(delta):
 
 
 func _physics_process(delta):
-	derpy.rotate_y(10)
 	if won:
 		return
 		

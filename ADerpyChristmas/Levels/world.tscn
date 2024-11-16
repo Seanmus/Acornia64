@@ -67,23 +67,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2884, 20.755, -3.87883)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3494, 2.93926, -8.96682)
 presentsParent = NodePath("../Presents")
 
-[node name="LeftWing" parent="Player/Derpy" index="0"]
-transform = Transform3D(-22.0247, 8.98354e-05, 4.11459e-10, 0, -0.000128276, 44.8343, 5.58366e-05, 35.4355, 0.0001623, 0.6, 0.256785, -4.71597e-08)
-
-[node name="Sunfglasses" parent="Player/Derpy" index="1"]
-transform = Transform3D(36.1156, -0.0231852, 1.20616e-05, -3.11861e-05, -1.16757e-05, 14.3775, -0.252127, -3.32113, -5.06295e-05, -5.21184e-08, 0.3838, -0.596165)
-
-[node name="HairTuft" parent="Player/Derpy" index="2"]
-transform = Transform3D(-1.68555, 4.70529, 1.06049e-05, 0, -2.07936e-05, 3.5763, 2.40723, 3.29467, 7.4256e-06, 0, 0.781998, 0)
-
-[node name="Body_001" parent="Player/Derpy" index="6"]
-transform = Transform3D(-16.3185, -1.53301e-12, -4.13704e-05, -1.99845e-15, 13.8185, -7.13304e-07, 4.13704e-05, -6.04026e-07, -16.3185, -5.70553e-08, 0.214111, -0.652636)
-
-[node name="Camera3D" parent="Player/Pivot/SpringArm3D" index="0"]
-current = true
-
 [node name="winterTree" parent="." instance=ExtResource("5_qyr14")]
 transform = Transform3D(4.49043, 0, 0, 0, 4.49043, 0, 0, 0, 4.49043, 4.94017, 9.17006, 13.2491)
+nextLevel = "res://ADerpyChristmas/Levels/world2.tscn"
 
 [node name="MovingPlatform" parent="." instance=ExtResource("7_hbycc")]
 transform = Transform3D(4.48721, 0, 0, 0, 4.48721, 0, 0, 0, 4.48721, -16.878, -3, -25.001)
@@ -332,6 +318,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.281, 3.76649, -48.7412)
 
 [node name="CollectibleLowLevel27" parent="Collectibles" instance=ExtResource("12_1gbk2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.196, 3.76649, -45.8305)
-
-[editable path="Player"]
-[editable path="Player/Derpy"]

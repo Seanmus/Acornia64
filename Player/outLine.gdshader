@@ -3,7 +3,7 @@ shader_type spatial;
 render_mode cull_front, unshaded, depth_draw_never;
 
 global uniform vec4 outline_color;
-global uniform float outline_width;
+global uniform float outline_widthDerpy;
 
 void vertex() {
 	vec4 clip_position = 
@@ -16,7 +16,7 @@ void vertex() {
 			normalize(clip_normal.xy) /
 			VIEWPORT_SIZE *
 			clip_position.w *
-			outline_width;
+			outline_widthDerpy;
 	POSITION = clip_position;
 }
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://bleqbt5f1cfj2"]
+[gd_scene load_steps=38 format=3 uid="uid://bleqbt5f1cfj2"]
 
 [ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/Derpy.gd" id="1_fuj54"]
 [ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="2_6d2vt"]
 [ext_resource type="AudioStream" uid="uid://tifgi4mvk5h5" path="res://ADerpyChristmas/DerpyPlayer/LandSqueakReSaved.mp3" id="3_ed4i6"]
+[ext_resource type="Material" uid="uid://rkppha3v4vdb" path="res://ADerpyChristmas/DerpyPlayer/Derpy.tres" id="3_kfaps"]
 [ext_resource type="Texture2D" uid="uid://bmv1vabd5wc1n" path="res://ADerpyChristmas/DerpyPlayer/PresentCrunchy.png" id="5_1a8fc"]
 [ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/DerpyUI.gd" id="5_yq0re"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="6_hpwsy"]
@@ -299,190 +300,178 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Derpy:rotation")
+tracks/3/path = NodePath("Derpy/LeftWing:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(0.6, 0.256785, -4.71597e-08)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Derpy/LeftWing:position")
+tracks/4/path = NodePath("Derpy/LeftWing:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.6, 0.256785, -4.71597e-08)]
+"values": [Vector3(-1.5708, -3.14159, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Derpy/LeftWing:rotation")
+tracks/5/path = NodePath("Derpy/HairTuft:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.5708, -3.14159, 0)]
+"values": [Vector3(0, 0.781998, 0)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Derpy/HairTuft:position")
+tracks/6/path = NodePath("Derpy/HairTuft:rotation")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0.781998, 0)]
+"values": [Vector3(-1.5708, -2.18166, 0)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Derpy/HairTuft:rotation")
+tracks/7/path = NodePath("Derpy/LeftFoot:position")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.5708, -2.18166, 0)]
+"values": [Vector3(0.2, -0.513494, -1.74846e-08)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Derpy/LeftFoot:position")
+tracks/8/path = NodePath("Derpy/LeftFoot:rotation")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.2, -0.513494, -1.74846e-08)]
+"values": [Vector3(-1.5708, -1.5708, 0)]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Derpy/LeftFoot:rotation")
+tracks/9/path = NodePath("Derpy/RightFoot:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.5708, -1.5708, 0)]
+"values": [Vector3(-0.2, -0.513494, 1.74846e-08)]
 }
 tracks/10/type = "value"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Derpy/RightFoot:position")
+tracks/10/path = NodePath("Derpy/RightFoot:rotation")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.2, -0.513494, 1.74846e-08)]
+"values": [Vector3(-1.5708, -1.5708, 0)]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Derpy/RightFoot:rotation")
+tracks/11/path = NodePath("Derpy/LeftWing_001:position")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.5708, -1.5708, 0)]
+"values": [Vector3(-0.6, 0.256785, 5.77477e-08)]
 }
 tracks/12/type = "value"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Derpy/LeftWing_001:position")
+tracks/12/path = NodePath("Derpy/LeftWing_001:rotation")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.6, 0.256785, 5.77477e-08)]
+"values": [Vector3(-1.5708, 6.51683e-07, 0)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Derpy/LeftWing_001:rotation")
+tracks/13/path = NodePath("Derpy/Body_001:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.5708, 6.51683e-07, 0)]
+"values": [Vector3(-5.70553e-08, 0.214111, -0.652636)]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Derpy/Body_001:position")
+tracks/14/path = NodePath("Derpy/Body_001:rotation")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-5.70553e-08, 0.214111, -0.652636)]
+"values": [Vector3(4.37114e-08, -3.14159, -1.22465e-16)]
 }
 tracks/15/type = "value"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Derpy/Body_001:rotation")
+tracks/15/path = NodePath("Derpy:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(4.37114e-08, -3.14159, -1.22465e-16)]
+"values": [Vector3(1, 1, 1)]
 }
 tracks/16/type = "value"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Derpy:scale")
+tracks/16/path = NodePath("UI/PresentSprite:rotation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(1, 1, 1)]
+"values": [0.0]
 }
 tracks/17/type = "value"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("UI/PresentSprite:rotation")
+tracks/17/path = NodePath("PresentCollectedEffect:playing")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("PresentCollectedEffect:playing")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -801,6 +790,7 @@ script = ExtResource("1_fuj54")
 
 [node name="LeftWing" parent="Derpy" index="0"]
 transform = Transform3D(-22.0247, 8.98354e-05, 4.11459e-10, 0, -0.000128276, 44.8343, 5.58366e-05, 35.4355, 0.0001623, 0.6, 0.256785, -4.71597e-08)
+surface_material_override/0 = ExtResource("3_kfaps")
 
 [node name="Sunfglasses" parent="Derpy" index="1"]
 transform = Transform3D(36.1156, -0.0231852, 1.20616e-05, -3.11861e-05, -1.16757e-05, 14.3775, -0.252128, -3.32113, -5.06295e-05, -5.21184e-08, 0.3838, -0.596165)
@@ -816,9 +806,11 @@ transform = Transform3D(-0.000146044, 22.811, 5.14183e-05, 0, -8.25756e-05, 14.2
 
 [node name="LeftWing_001" parent="Derpy" index="5"]
 transform = Transform3D(22.0247, -2.30927e-05, -1.05768e-10, 0, -0.000128276, 44.8343, -1.43531e-05, -35.4355, -0.0001623, -0.6, 0.256785, 5.77477e-08)
+surface_material_override/0 = ExtResource("3_kfaps")
 
 [node name="Body_001" parent="Derpy" index="6"]
 transform = Transform3D(-16.3185, -1.53301e-12, -4.13704e-05, -1.99845e-15, 13.8185, -7.13304e-07, 4.13704e-05, -6.04026e-07, -16.3185, -5.70553e-08, 0.214111, -0.652636)
+surface_material_override/0 = ExtResource("3_kfaps")
 
 [node name="LandEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ed4i6")
