@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://rkppha3v4vdb"]
 
-[ext_resource type="Shader" path="res://outline.gdshader" id="1_totgd"]
+[ext_resource type="Shader" path="res://Player/outLine.gdshader" id="1_totgd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jj88p"]
 vertex_color_use_as_albedo = true

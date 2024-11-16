@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://toaqihy6veuo"]
+
+[ext_resource type="PackedScene" uid="uid://c3kfadecg3r27" path="res://ADerpyChristmas/Imports/SnowBlock.fbx" id="1_557ig"]
+[ext_resource type="Texture2D" uid="uid://dagbjagiwcgxi" path="res://ADerpyChristmas/Imports/SnowBlock-4cc1df1a4020f7817e24b15f0b0664df_snowTexture.png" id="2_tp42d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwwxi"]
+albedo_texture = ExtResource("2_tp42d")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mmtgd"]
+data = PackedVector3Array(-0.01, -0.01, 0.01, -0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, -0.01, 0.01, -0.01, -0.01, 0.01, -0.01, -0.01, 0.01, 0.01, -0.01, 0.01, 0.01, -0.01, -0.01, 0.01, -0.01, -0.01, -0.01, -0.01, -0.01, -0.01, -0.01, 0.01, -0.01, 0.01, 0.01, -0.01, -0.01, 0.01, -0.01, -0.01, -0.01, -0.01, -0.01, -0.01, -0.01, 0.01, -0.01, -0.01, 0.01, 0.01, 0.01, -0.01, -0.01, 0.01, 0.01, -0.01, -0.01, 0.01, -0.01, -0.01, 0.01, -0.01, -0.01, -0.01, -0.01, 0.01, -0.01, -0.01, 0.01, -0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, -0.01, 0.01, 0.01, -0.01, 0.01, -0.01, -0.01, 0.01, -0.01, 0.01, 0.01, 0.01, 0.01, -0.01, 0.01, 0.01, -0.01, 0.01, -0.01, -0.01, 0.01, -0.01, 0.01, 0.01, -0.01, 0.01, 0.01, 0.01)
+
+[node name="SnowBlock" instance=ExtResource("1_557ig")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_vwwxi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_mmtgd")

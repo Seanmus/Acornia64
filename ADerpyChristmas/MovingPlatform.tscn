@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxit1nfe7bfp8"]
+
+[ext_resource type="Script" path="res://ADerpyChristmas/MovingPlatform.gd" id="1_3lo44"]
+[ext_resource type="PackedScene" uid="uid://bsfqtvqfygsy6" path="res://ADerpyChristmas/snow_cylinder.tscn" id="1_dpix4"]
+
+[node name="MovingPlatform" type="Node3D"]
+script = ExtResource("1_3lo44")
+
+[node name="SnowCylinder" parent="." instance=ExtResource("1_dpix4")]
+
+[node name="WaitTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

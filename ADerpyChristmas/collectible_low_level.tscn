@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://8col2kodst17"]
+
+[ext_resource type="Texture2D" uid="uid://cxnwg83e2agyi" path="res://ADerpyChristmas/Collectible.png" id="1_c88jw"]
+[ext_resource type="Script" path="res://ADerpyChristmas/collectible.gd" id="2_y6oaj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fhnmc"]
+radius = 0.940816
+
+[node name="CollectibleLowLevel" type="Sprite3D"]
+pixel_size = 0.04
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_c88jw")
+script = ExtResource("2_y6oaj")
+scoreValue = 500
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_fhnmc")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

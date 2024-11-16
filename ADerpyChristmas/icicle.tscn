@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c02lle0fs3pqb"]
+
+[ext_resource type="PackedScene" uid="uid://cmom4xu8eclg3" path="res://ADerpyChristmas/Imports/icicle.fbx" id="1_0jjs1"]
+[ext_resource type="Texture2D" uid="uid://dxgh4otga6yam" path="res://ADerpyChristmas/Imports/icicle-f89961c60bf959a135b884c11c694106_iceTexture.png" id="2_1jytc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6oisy"]
+albedo_texture = ExtResource("2_1jytc")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nmctc"]
+data = PackedVector3Array(0.0087, 0.005, -0.01, 0, 0, 0.01, 0, 0.01, -0.01, 0.0087, -0.005, -0.01, 0, 0, 0.01, 0.0087, 0.005, -0.01, 0, -0.01, -0.01, 0, 0, 0.01, 0.0087, -0.005, -0.01, -0.0087, -0.005, -0.01, 0, 0, 0.01, 0, -0.01, -0.01, 0.0087, -0.005, -0.01, 0, 0.01, -0.01, -0.0087, 0.005, -0.01, 0.0087, -0.005, -0.01, 0.0087, 0.005, -0.01, 0, 0.01, -0.01, 0.0087, -0.005, -0.01, -0.0087, -0.005, -0.01, 0, -0.01, -0.01, 0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, -0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, 0, 0, 0.01, -0.0087, -0.005, -0.01, 0, 0.01, -0.01, 0, 0, 0.01, -0.0087, 0.005, -0.01)
+
+[node name="icicle" instance=ExtResource("1_0jjs1")]
+
+[node name="Cone" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6oisy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cone" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_nmctc")

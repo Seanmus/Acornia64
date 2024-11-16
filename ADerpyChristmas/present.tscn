@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=4 uid="uid://bdyyk6uwj022r"]
+
+[ext_resource type="PackedScene" uid="uid://bpqleofo6cyk3" path="res://ADerpyChristmas/Imports/present.fbx" id="1_uppu2"]
+[ext_resource type="Script" path="res://ADerpyChristmas/present.gd" id="2_pjacp"]
+[ext_resource type="Shader" path="res://Player/outLine.gdshader" id="3_sffnt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_23a4t"]
+resource_name = "Present"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.517647, 0.760784, 0.290196, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_iqpaw"]
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAAAADAAQABAAFAAAAAQAAAAUABQAGAAEABAAHAAYABgAFAAQAAwACAAcABwAEAAMAAgABAAYABgAHAAIA"),
+"name": "Present",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("CtcjvArXI7wK1yM8CtcjvArXIzwK1yM8CtcjPArXIzwK1yM8CtcjPArXI7wK1yM8CtcjPArXI7wK1yO8CtcjvArXI7wK1yO8CtcjvArXIzwK1yO8CtcjPArXIzwK1yO8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mviqx"]
+resource_name = "Cube"
+_surfaces = [{
+"aabb": AABB(-0.01, -0.01, -0.01, 0.02, 0.02, 0.02),
+"attribute_data": PackedByteArray("AABgPwAAgD4AAGA/AAAAPwAAID8AAAA/AAAgPwAAgD4AACA/AAAAAAAAID8AAIA+AADAPgAAgD4AAMA+AAAAAAAAID8AAEA/AAAgPwAAgD8AAMA+AACAPwAAwD4AAEA/AADAPgAAgD4AAMA+AAAAPwAAAD4AAAA/AAAAPgAAgD4AACA/AACAPgAAID8AAAA/AADAPgAAAD8AAMA+AACAPgAAID8AAAA/AAAgPwAAQD8AAMA+AABAPwAAwD4AAAA/"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQA"),
+"material": SubResource("StandardMaterial3D_23a4t"),
+"name": "Present",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("CtcjvArXI7wK1yM8CtcjvArXIzwK1yM8CtcjPArXIzwK1yM8CtcjPArXI7wK1yM8CtcjvArXI7wK1yM8CtcjPArXI7wK1yM8CtcjPArXI7wK1yO8CtcjvArXI7wK1yO8CtcjvArXIzwK1yM8CtcjvArXI7wK1yM8CtcjvArXI7wK1yO8CtcjvArXIzwK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yO8CtcjvArXIzwK1yO8CtcjvArXI7wK1yO8CtcjPArXI7wK1yM8CtcjPArXIzwK1yM8CtcjPArXIzwK1yO8CtcjPArXI7wK1yO8CtcjPArXIzwK1yM8CtcjvArXIzwK1yM8CtcjvArXIzwK1yO8CtcjPArXIzwK1yO8/3//fwAA/7//f/9/AAD/v/9//38AAP+//3//fwAA/7//fwAA/3//v/9/AAD/f/+//38AAP9//7//fwAA/3//vwAA/3//f/+/AAD/f/9//78AAP9//3//vwAA/3//f/+//////////7//////////v/////////+//////////7////9//3//v////3//f/+/////f/9//7////9//3//v/9/////f/+//3////9//7//f////3//v/9/////f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_iqpaw")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ytrn"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.515625, 0.757813, 0.289063, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yjhml"]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_5ytrn")
+shader = ExtResource("3_sffnt")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yovqs"]
+radius = 0.0127736
+
+[node name="present" instance=ExtResource("1_uppu2")]
+script = ExtResource("2_pjacp")
+
+[node name="RootNode#Cube" type="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+mesh = SubResource("ArrayMesh_mviqx")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_yjhml")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.467665, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+shape = SubResource("SphereShape3D_yovqs")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

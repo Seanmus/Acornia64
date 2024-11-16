@@ -1,0 +1,103 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvqq628c8eb0i"]
+
+[ext_resource type="PackedScene" uid="uid://bmufvi3xkwaw5" path="res://ADerpyChristmas/Imports/winterTree.fbx" id="1_wum78"]
+[ext_resource type="Script" path="res://ADerpyChristmas/winter_tree.gd" id="2_1dbdp"]
+[ext_resource type="AudioStream" uid="uid://brh7o6bi31aml" path="res://ADerpyChristmas/PP_Win_Stinger.wav" id="3_v3xvm"]
+[ext_resource type="Shader" path="res://UI/transition.gdshader" id="4_13h7t"]
+[ext_resource type="Texture2D" uid="uid://swbnqqxyljou" path="res://ADerpyChristmas/Imports/winterTree-4dc5491586be577aa94e3b73368f6a58_winterTreeTexture.png" id="5_bjd5i"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_5dl84"]
+data = PackedVector3Array(0, 0.0297, 0.0031, 0.0297, 0, 0.0031, 0, 0, 0.0314, 0.0297, 0, 0.0031, 0, -0.0297, 0.0031, 0, 0, 0.0314, 0, 0.0297, 0.0031, 0, -0.0297, 0.0031, 0.0297, 0, 0.0031, 0, 0.0297, 0.0031, -0.0297, 0, 0.0031, 0, -0.0297, 0.0031, 0, -0.0297, 0.0031, -0.0297, 0, 0.0031, 0, 0, 0.0314, -0.0297, 0, 0.0031, 0, 0.0297, 0.0031, 0, 0, 0.0314, -0.0244, 0, 0.0145, 0, 0.0244, 0.0145, 0, 0, 0.0414, 0, 0.0244, 0.0145, 0.0244, 0, 0.0145, 0, 0, 0.0414, 0.0244, 0, 0.0145, 0, 0.0244, 0.0145, -0.0244, 0, 0.0145, -0.0244, 0, 0.0145, 0, -0.0244, 0.0145, 0.0244, 0, 0.0145, 0.0244, 0, 0.0145, 0, -0.0244, 0.0145, 0, 0, 0.0414, 0, -0.0244, 0.0145, -0.0244, 0, 0.0145, 0, 0, 0.0414, 0.0162, 0, 0.0299, 0, -0.0162, 0.0299, 0, 0, 0.0453, 0, -0.0162, 0.0299, -0.0162, 0, 0.0299, 0, 0, 0.0453, 0, 0.0162, 0.0299, -0.0162, 0, 0.0299, 0.0162, 0, 0.0299, 0.0162, 0, 0.0299, -0.0162, 0, 0.0299, 0, -0.0162, 0.0299, -0.0162, 0, 0.0299, 0, 0.0162, 0.0299, 0, 0, 0.0453, 0, 0.0162, 0.0299, 0.0162, 0, 0.0299, 0, 0, 0.0453, 0.0087, 0.005, -0.01, 0, 0.01, -0.01, -0.0087, 0.005, -0.01, 0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, -0.0087, -0.005, -0.01, 0.0087, -0.005, -0.01, 0.0087, 0.005, -0.01, -0.0087, 0.005, -0.01, -0.0087, -0.005, -0.01, 0, -0.01, -0.01, 0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, 0, 0.01, -0.01, 0, 0.01, 0.01, 0, 0.01, 0.01, -0.0087, 0.005, 0.01, -0.0087, 0.005, -0.01, -0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, -0.0087, 0.005, 0.01, -0.0087, 0.005, 0.01, -0.0087, -0.005, 0.01, -0.0087, -0.005, -0.01, 0.0087, 0.005, 0.01, 0.0087, -0.005, 0.01, -0.0087, 0.005, 0.01, -0.0087, 0.005, 0.01, 0, 0.01, 0.01, 0.0087, 0.005, 0.01, 0.0087, -0.005, 0.01, -0.0087, -0.005, 0.01, -0.0087, 0.005, 0.01, 0, -0.01, 0.01, -0.0087, -0.005, 0.01, 0.0087, -0.005, 0.01, 0, -0.01, -0.01, -0.0087, -0.005, -0.01, -0.0087, -0.005, 0.01, -0.0087, -0.005, 0.01, 0, -0.01, 0.01, 0, -0.01, -0.01, 0.0087, -0.005, -0.01, 0, -0.01, -0.01, 0, -0.01, 0.01, 0, -0.01, 0.01, 0.0087, -0.005, 0.01, 0.0087, -0.005, -0.01, 0.0087, 0.005, -0.01, 0.0087, -0.005, -0.01, 0.0087, -0.005, 0.01, 0.0087, -0.005, 0.01, 0.0087, 0.005, 0.01, 0.0087, 0.005, -0.01, 0, 0.01, -0.01, 0.0087, 0.005, -0.01, 0.0087, 0.005, 0.01, 0.0087, 0.005, 0.01, 0, 0.01, 0.01, 0, 0.01, -0.01)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_07f6y"]
+height = 2.35995
+radius = 1.61606
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oxi1r"]
+shader = ExtResource("4_13h7t")
+shader_parameter/circle_size = 1.05
+shader_parameter/screen_width = 600.0
+shader_parameter/screen_height = 600.0
+
+[sub_resource type="Animation" id="Animation_kif3x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.05]
+}
+
+[sub_resource type="Animation" id="Animation_fh4p0"]
+resource_name = "transition"
+length = 2.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition:material:shader_parameter/circle_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.05, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wd6kw"]
+_data = {
+"RESET": SubResource("Animation_kif3x"),
+"transition": SubResource("Animation_fh4p0")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pnaw1"]
+albedo_texture = ExtResource("5_bjd5i")
+
+[node name="winterTree" instance=ExtResource("1_wum78")]
+script = ExtResource("2_1dbdp")
+nextLevel = "res://Worlds/world2.tscn"
+
+[node name="RootNode_Cylinder_StaticBody3D#CollisionShape3D" type="CollisionShape3D" parent="." index="0"]
+shape = SubResource("ConcavePolygonShape3D_5dl84")
+
+[node name="RootNode_Cylinder#StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="Area3D" type="Area3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.490588, 0)
+shape = SubResource("CylinderShape3D_07f6y")
+
+[node name="Transition" type="ColorRect" parent="." index="3"]
+material = SubResource("ShaderMaterial_oxi1r")
+anchors_preset = -1
+anchor_right = 1.00156
+anchor_bottom = 1.00208
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Transition" index="0"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_wd6kw")
+}
+autoplay = "RESET"
+
+[node name="WinEffect" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("3_v3xvm")
+
+[node name="Cylinder" parent="." index="5"]
+surface_material_override/1 = SubResource("StandardMaterial3D_pnaw1")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="animation_finished" from="Transition/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="WinEffect" to="." method="_on_win_effect_finished"]

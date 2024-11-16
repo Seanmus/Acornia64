@@ -31,7 +31,7 @@ var score = 0
 signal scoreUpdated
 @onready var collectibleCollectedEffect = $CollectibleCollected
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = 9.8
 
 var won = false
 
@@ -59,12 +59,12 @@ func _unhandled_input(event):
 		$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, 0)
 
 func _process(delta):
-	if Input.is_action_just_pressed("exit"):
-		get_tree().change_scene_to_file("res://Worlds/title_screen.tscn")
+	if Input.is_action_just_pressed("escape"):
+		get_tree().change_scene_to_file("res://Worlds/title.tscn")
 
 
 func _physics_process(delta):
-	
+	derpy.rotate_y(10)
 	if won:
 		return
 		
@@ -114,7 +114,7 @@ func _physics_process(delta):
 		$Pivot.rotate_x(-cameraInput.y * controller_sensitivity)
 		$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
 	
-	var input_dir = Input.get_vector("left", "right", "forward", "backward")
+	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	#Handles the direction the player model faces when moving
@@ -131,19 +131,14 @@ func _physics_process(delta):
 	#Turn left forward	
 	elif input_dir.x < 0 && input_dir.y < 0:
 		derpy.rotation_degrees.y = 45
-	#
 	#Turn right forward	
 	elif input_dir.x > 0 && input_dir.y < 0:
-		derpy.rotation_degrees.y = -45	
-
-		
+		derpy.rotation_degrees.y = -45		
 	elif input_dir.x < 0 && input_dir.y > 0:
 		derpy.rotation_degrees.y = 135	
-			
-
 	elif input_dir.x > 0 && input_dir.y > 0:
 		derpy.rotation_degrees.y = 225	
-		
+	
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED

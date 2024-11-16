@@ -1,0 +1,119 @@
+[gd_scene load_steps=14 format=4 uid="uid://b1qsgqyhc51wh"]
+
+[ext_resource type="PackedScene" uid="uid://b8xik5nm5itcq" path="res://ADerpyChristmas/Imports/bouncePad.fbx" id="1_00et1"]
+[ext_resource type="Script" path="res://ADerpyChristmas/bounce_pad.gd" id="2_cyaln"]
+[ext_resource type="AudioStream" uid="uid://c14fmn03hd2ti" path="res://ADerpyChristmas/PP_Jump_1_1.wav" id="3_1s0ex"]
+[ext_resource type="Shader" path="res://Player/outLine.gdshader" id="3_yargr"]
+
+[sub_resource type="Animation" id="Animation_tvt4j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IcoSphere:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(100, 100, 30.1127)]
+}
+
+[sub_resource type="Animation" id="Animation_0rxyo"]
+resource_name = "bounce"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IcoSphere:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(100, 100, 30.1127), Vector3(150, 150, 15), Vector3(100, 100, 30.1127)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a4d14"]
+_data = {
+"RESET": SubResource("Animation_tvt4j"),
+"bounce": SubResource("Animation_0rxyo")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5xlh"]
+resource_name = "SpringTop"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.796079, 0.117647, 0.160784, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_84pqp"]
+_surfaces = [{
+"aabb": AABB(-0.00951058, -0.01, -0.01, 0.0190212, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 240,
+"index_data": PackedByteArray("AAABAAIAAwABAAQABQAAAAIABgAFAAIABwAGAAIACAADAAQACQAKAAsADAANAA4ADwAQABEAEgATABQAFQAIAAQAFgAJAAsAFwAMAA4AGAAPABEAGQASABQAGgAbABwAHQAeAB8AIAAhACIAIwAkACUAJgAnACgAKQAjACYAIwAnACYAIwAlACcAKQAgACMAIAAkACMAIAAiACQAKQAdACAAHQAhACAAHQAfACEAKQAaAB0AGgAeAB0AGgAcAB4AKQAmABoAJgAbABoAJgAoABsAKAAnABkAJwASABkAJwAlABIAJQAkABgAJAAPABgAJAAiAA8AIgAhABcAIQAMABcAIQAfAAwAHwAeABYAHgAJABYAHgAcAAkAHAAbABUAGwAIABUAGwAoAAgAJQAYABIAGAATABIAGAARABMAIgAXAA8AFwAQAA8AFwAOABAAHwAWAAwAFgANAAwAFgALAA0AHAAVAAkAFQAKAAkAFQAEAAoAKAAZAAgAGQADAAgAGQAUAAMAFAATAAcAEwAGAAcAEwARAAYAEQAQAAYAEAAFAAYAEAAOAAUADgANAAUADQAAAAUADQALAAAAFAAHAAMABwABAAMABwACAAEACwAKAAAACgABAAAACgAEAAEA"),
+"lods": [0.00460956, PackedByteArray("FgABAAIABAABABYAKQAaABYAGgAcABYAHAAEABYAHAAoAAQAGgAoABwAJgAoABoAKQAmABoAKAAUAAQAFAAHAAQABwABAAQABwACAAEAJQAUACgAJgAlACgAIwAlACYAKQAjACYAJQARABQAFAARAAYAFAAGAAcABwAGAAIAIgARACUAIwAiACUAIAAiACMAKQAgACMAIgAOABEAEQAOAAUAEQAFAAYABgAFAAIAIgAWAA4ADgAWAAUABQAWAAIAFgAiACAAKQAWACAA")],
+"name": "SpringTop",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 42,
+"vertex_data": PackedByteArray("Cu/UuqTWo7sIXwu8p16LO4ODSrsGXwu8AAAAAAAAAAAK1yO8wl4LPAAAAADtRay7lBztOwlFrLt+i5K7aUWsuwAAAADrXgu8Cu/UuqTWozsIXwu8p16LO4ODSjsGXwu8QtIbPLeDSrsAAAAAAAAAAArXI7wAAAAAEkYsO2iMBLwSRqy7NyI1u9FeC7yFi5K7QtIbvLeDSrsAAAAAg4Hhu8jWo7vzRay79IoSvAAAAAAqi5K7CJvAu5+MBDwAAAAAg4Hhu8jWozvzRay7NyI1u9FeCzyFi5K7CJvAO5+MBDwAAAAAEkYsO2iMBDwSRqy7lBztOwlFrDt+i5K7CJvAO5+MBLwAAAAACJvAu5+MBLwAAAAAQtIbvLeDSjsAAAAAAAAAAArXIzwAAAAAQtIbPLeDSjsAAAAACu/UOqTWo7sIXws8g4HhO8jWo7vzRaw7NyI1O9FeC7yFi5I7p16Lu4ODSrsGXws8EkYsu2iMBLwSRqw7lBztuwlFrLt+i5I7p16Lu4ODSjsGXws8wl4LvAAAAADtRaw7lBztuwlFrDt+i5I7Cu/UOqTWozsIXws8EkYsu2iMBDwSRqw7NyI1O9FeCzyFi5I7aUWsOwAAAADrXgs8g4HhO8jWozvzRaw79IoSPAAAAAAqi5I7AAAAAAAAAAAK1yM8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4ejms"]
+resource_name = "Icosphere"
+_surfaces = [{
+"aabb": AABB(-0.00951058, -0.01, -0.01, 0.0190212, 0.02, 0.02),
+"attribute_data": PackedByteArray("NxddP1HYaz9n0UU/UdhrP090UT8AAIA/sOgiP6OwVz+Yiy4/UdhrP38uOj+jsFc/36ILPlHYaz9/Ljo9UdhrP38uuj0AAIA/sOiiPlHYaz8gumg+UdhrP+Ciiz4AAIA/8P//PlHYaz9PdNE+UdhrPx+66D4AAIA/mIsuP/yIQz83F10//IhDP090UT+jsFc/H7poP6OwVz/fogs+/IhDP38uuj2jsFc/fy46PqOwVz+w6KI+/IhDP9+iiz6jsFc/fy66PqOwVz/w//8+/IhDPyC66D6jsFc/4KILP6OwVz9n0UU//IhDPxBddD/8iEM/ILpoPvyIQz9PdNE+/IhDP8hFFz/8iEM/Z9FFP6g5Gz+ALjo/VmEvP090UT9WYS8/EF10P6g5Gz8oumg/VmEvPwAAgD9WYS8/ILpoPqg5Gz+ALjo+VmEvP+Ciiz5WYS8/T3TRPqg5Gz+ALro+VmEvPx+66D5WYS8/yEUXP6g5Gz/gogs/VmEvP7DoIj9WYS8/4KILP/kRBz/w//8+qDkbP38uuj75EQc/sOiiPqg5Gz9/Ljo++REHP9+iCz6oORs/fy66PVZhLz8fumg/+REHPzcXXT+oORs/fy46P/kRBz+Yiy4/qDkbP38uOj38iEM/AAAAAKOwVz/IRRc/UdhrP7DoIj8AAIA/"),
+"format": 34359742487,
+"index_count": 240,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwADAAUAEAARABIAEwAUABUAFgAXABgAGQAaABsAHAAPAAUAHQAQABIAHgATABUAHwAWABgAIAAZABsAIQAiACMAJAAlACYAJwAoACkAKgArACwALQAuAC8AMAAxAC0AMQAuAC0AMQAsAC4AMgAzACoAMwArACoAMwApACsANAA1ACcANQAoACcANQA2ACgANwA4ACQAOAAlACQAOAAjACUAOQA6ACEAOgAiACEAOgAvACIALwAuACAALgAZACAALgAsABkALAArAB8AKwAWAB8AKwApABYAKQAoAB4AKAATAB4AKAA2ABMAJgAlAB0AJQAQAB0AJQAjABAAIwAiABwAIgAPABwAIgAvAA8ALAAfABkAHwAaABkAHwAYABoAKQAeABYAHgAXABYAHgAVABcANgA7ABMAOwAUABMAOwA8ABQAIwAcABAAHAARABAAHAAFABEALwAgAA8AIAADAA8AIAAbAAMAGwAaAAwAGgANAAwAGgAYAA0AGAAXAAkAFwAKAAkAFwAVAAoAFQAUAAYAFAAHAAYAFAA8AAcAGwA9AAMAPQAEAAMAPQA+AAQAEgARAAAAEQABAAAAEQAFAAEA"),
+"lods": [0.00460956, PackedByteArray("HQABAAIABQABAB0ANwA4AB0AOAAjAB0AIwAFAB0AIwAvAAUAIQAvACMAOgAvACEAOQA6ACEALwAbAAUAGwA9AAUAPQAEAAUAPQA+AAQALAAbAC8ALQAsAC8AMQAsAC0AMAAxAC0ALAAYABsAGwAYAA0AGwANAAwADAANAA4AKQAYACwAKgApACwAMwApACoAMgAzACoAKQAVABgAGAAVAAoAGAAKAAkACQAKAAsAKQA7ABUAFQA7AAYABgA7AAgAOwApACcANAA7ACcA")],
+"material": SubResource("StandardMaterial3D_p5xlh"),
+"name": "SpringTop",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 63,
+"vertex_data": PackedByteArray("Cu/UuqTWo7sIXwu8p16LO4ODSrsGXwu8AAAAAAAAAAAK1yO8wl4LPAAAAADtRay7p16LO4ODSrsGXwu8lBztOwlFrLt+i5K7aUWsuwAAAADrXgu8Cu/UuqTWo7sIXwu8AAAAAAAAAAAK1yO8Cu/UuqTWozsIXwu8aUWsuwAAAADrXgu8AAAAAAAAAAAK1yO8p16LO4ODSjsGXwu8Cu/UuqTWozsIXwu8AAAAAAAAAAAK1yO8QtIbPLeDSrsAAAAAAAAAAArXI7wAAAAAEkYsO2iMBLwSRqy7NyI1u9FeC7yFi5K7QtIbvLeDSrsAAAAAg4Hhu8jWo7vzRay79IoSvAAAAAAqi5K7CJvAu5+MBDwAAAAAg4Hhu8jWozvzRay7NyI1u9FeCzyFi5K7CJvAO5+MBDwAAAAAEkYsO2iMBDwSRqy7lBztOwlFrDt+i5K7CJvAO5+MBLwAAAAACJvAu5+MBLwAAAAAQtIbvLeDSjsAAAAAAAAAAArXIzwAAAAAQtIbPLeDSjsAAAAACu/UOqTWo7sIXws8g4HhO8jWo7vzRaw7NyI1O9FeC7yFi5I7p16Lu4ODSrsGXws8EkYsu2iMBLwSRqw7lBztuwlFrLt+i5I7p16Lu4ODSjsGXws8wl4LvAAAAADtRaw7lBztuwlFrDt+i5I7Cu/UOqTWozsIXws8EkYsu2iMBDwSRqw7NyI1O9FeCzyFi5I7aUWsOwAAAADrXgs8g4HhO8jWozvzRaw79IoSPAAAAAAqi5I7AAAAAAAAAAAK1yM8Cu/UOqTWozsIXws8AAAAAAAAAAAK1yM8p16Lu4ODSjsGXws8AAAAAAAAAAAK1yM8p16Lu4ODSrsGXws8lBztuwlFrLt+i5I7AAAAAAAAAAAK1yM8Cu/UOqTWo7sIXws8AAAAAAAAAAAK1yM8aUWsOwAAAADrXgs8CJvAu5+MBLwAAAAANyI1u9FeC7yFi5K7p16LO4ODSjsGXwu8AAAAAAAAAAAK1yO8Syq+DSkk3UUK51gi7yViXQAAAABjH7FP///jsP9//n8K51giYG/la1XYlzYiShFlAADkMLtduBtLKr4NTzTGGwAAAAAiSu4aSypA8oy32CUAAOQwcLchEQAAAADcte4aCuem3TrF91JLKkDyQ/QUUgAAAACb4LFPm+CbYLthkm7/fwAAuQX/Py2/DxVjH7FPKUV4Fqsl7zVjH5tgu2FsEVclZTMiSu4aAACqqv9/AAAiSiLKusfwJVclmczcte4aKUWG6ZvgTTDctSLKuscOWi2/7+qb4LFPVdhnydy1EWXctdw1HTQhXCJK3DUdNN0jYx9jn9miIQ//f/////8jPZvgY5/Zot1wvY2zVU80OGRks6haIkoRZXiW1TpjH7FPpl0LZ+8lnSLvai4/Yx9NMGdJVVjcNUAapl3zmDOoTwjkMP9//38AAGdJqafcte4avY1LqkP06i3vatDAm+BNMHiWKcWb4LFP47D/f3C33W5ks1al3LURZVTV/3//f/5//3//f9y1EWW9jUuqjLcnWv9//3+b4E0wpl3zmDrFCC3/f/9//38AAKZdC2dgbxoUZ0lVWEJWpxz/f/9/Yx9NML2Ns1UpJCI6/3//fyJKEWXjsP9/u11GZCJK3DUdNN0jKUV4FtEiRiMK56bdM6ivdwAAAAD/f/5/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_84pqp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f0gav"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.792969, 0.117188, 0.160156, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d36hy"]
+render_priority = 0
+next_pass = SubResource("StandardMaterial3D_f0gav")
+shader = ExtResource("3_yargr")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v8oly"]
+points = PackedVector3Array(-0.00164522, 0.00060462, -0.00940774, 0.000479837, 0.000608076, 0.00973685, 0.00138772, 0.00242678, 0.009099, 0.00928121, -0.00333707, -0.000302333, -0.00587189, -0.00786232, 0.000604357, -0.00529886, 0.00821275, -0.000607999, 0.00590373, 0.00784127, -0.000602739, -0.00919431, 0.00301997, 0.000905044, 0.001694, -0.00941425, 0.000302519, 0.00413763, -0.00304803, -0.00853487, -0.00678033, -0.00483814, -0.00544457, -0.00409412, -0.00304782, 0.00853963, -0.00255462, 0.00788948, 0.0054618, 0.00681076, -0.00482781, 0.00543081, 0.00681076, 0.00482781, 0.00543081, 0.00442705, 0.00333926, -0.0081988, -0.00678033, 0.00483814, -0.00544457, 0.00108379, 0.00787586, -0.00545237, 0.00259982, -0.00788207, -0.00545667, -0.00255462, -0.00788948, 0.0054618, -0.00828747, -0.000905141, 0.00513734, 0.00899725, 0.00182387, -0.00243183, -0.00409412, 0.00304782, 0.00853963, 0.000481109, 0.00976399, 0.000609772, -0.00919807, -0.00332427, -0.00060424, 0.00198442, -0.00512935, 0.00814684, -0.00283831, -0.00813287, -0.00482045, -0.00194672, -0.00454914, -0.0084921, 0.00503886, -0.00030279, 0.00851049, 0.00867395, 0.000606559, 0.00455204, -0.0071131, 0.00546512, 0.00425107, 0.00288011, 0.00811635, 0.00481067)
+
+[node name="bouncePad" instance=ExtResource("1_00et1")]
+script = ExtResource("2_cyaln")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_a4d14")
+}
+
+[node name="BounceEffect" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("3_1s0ex")
+
+[node name="IcoSphere" type="MeshInstance3D" parent="." index="2"]
+transform = Transform3D(100, 0, 0, 0, -4.37114e-06, 30.1127, 0, -100, -1.31627e-06, 0, -0.0345683, 0)
+mesh = SubResource("ArrayMesh_4ejms")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_d36hy")
+
+[node name="Area3D" type="Area3D" parent="IcoSphere" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="IcoSphere/Area3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_v8oly")
+
+[connection signal="body_entered" from="IcoSphere/Area3D" to="." method="_on_area_body_entered"]

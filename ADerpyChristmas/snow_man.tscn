@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4ljevw7hy3s5"]
+
+[ext_resource type="PackedScene" uid="uid://bkohn1kltkv8p" path="res://ADerpyChristmas/Imports/snowMan.fbx" id="1_y3dqa"]
+[ext_resource type="Texture2D" uid="uid://cwr33aliq1s3e" path="res://ADerpyChristmas/Imports/SnowCylinder-78229ff56e1128e71c8b0706ecbc7e0d_snowTexture.png" id="2_81211"]
+[ext_resource type="Texture2D" uid="uid://dagbjagiwcgxi" path="res://ADerpyChristmas/Imports/SnowBlock-4cc1df1a4020f7817e24b15f0b0664df_snowTexture.png" id="3_b6181"]
+[ext_resource type="Texture2D" uid="uid://jhqeufcpj57k" path="res://ADerpyChristmas/Imports/snowManEvil-fa410bb49241dd786c92c3eb42f50167_snowMan.png" id="4_28w7x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8tmi"]
+albedo_texture = ExtResource("2_81211")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1h8cj"]
+height = 4.09223
+radius = 1.01227
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rw5v"]
+albedo_texture = ExtResource("3_b6181")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mppa"]
+albedo_texture = ExtResource("4_28w7x")
+
+[node name="snowMan" instance=ExtResource("1_y3dqa")]
+
+[node name="bottom" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_u8tmi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3574, 0)
+shape = SubResource("CylinderShape3D_1h8cj")
+
+[node name="middle" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_1rw5v")
+
+[node name="face" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6mppa")
