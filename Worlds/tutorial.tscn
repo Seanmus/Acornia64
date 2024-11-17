@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bo58r58xchokn"]
+[gd_scene load_steps=19 format=3 uid="uid://bo58r58xchokn"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_y5d1u"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ntrnj"]
@@ -16,6 +16,7 @@
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="15_6gg0y"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="15_xnc2d"]
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="16_6gx50"]
+[ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_gh1tw"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -31,169 +32,15 @@ adjustment_saturation = 1.7
 script = ExtResource("1_y5d1u")
 nextLevel = "space_level"
 
-[node name="Player" parent="." instance=ExtResource("2_ntrnj")]
+[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_ntrnj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.2352, 3, 5.49094)
+UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("8_gohtk")]
 transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l3x7x")
-
-[node name="Cheese" type="Node" parent="."]
-
-[node name="cheese" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.2, 5.6)
-
-[node name="cheese2" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3.2, 5.6)
-
-[node name="cheese3" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8, 3.2, 5.6)
-
-[node name="cheese5" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 3.2, 20.2)
-
-[node name="cheese6" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 3.2, 29.6)
-
-[node name="cheese7" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 3.2, 39.2)
-
-[node name="cheese8" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 82)
-
-[node name="cheese9" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 91.6)
-
-[node name="cheese10" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 123.4)
-
-[node name="cheese11" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 160.8)
-
-[node name="cheese12" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 167.2)
-
-[node name="cheese13" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 175.6)
-
-[node name="cheese14" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.4, 8.8, 181)
-
-[node name="cheese15" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.8, 8.8, 181)
-
-[node name="cheese16" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.4, 8.8, 181)
-
-[node name="cheese4" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2, 3.2, 5.6)
-
-[node name="cheese17" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.4, 8.8, 181)
-
-[node name="cheese18" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 8.8, 181)
-
-[node name="cheese19" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.4, 11.4, 181)
-
-[node name="cheese20" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.8, 13.8, 188.4)
-
-[node name="cheese21" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.8, 13.8, 197.8)
-
-[node name="cheese22" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.8, 17.2, 220.2)
-
-[node name="cheese23" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.2, 17.2, 231.6)
-
-[node name="cheese24" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.4, 20.8, 235)
-
-[node name="cheese25" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.8, 24, 235)
-
-[node name="cheese26" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 107.4, 26.4, 221.8)
-
-[node name="cheese27" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 107.4, 29.2, 213.2)
-
-[node name="cheese28" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 165, 37.4, 210)
-
-[node name="cheese29" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 174.8, 37.4, 210)
-
-[node name="cheese30" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 218, 37.4, 200)
-
-[node name="cheese31" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 218, 37.4, 190.2)
-
-[node name="cheese32" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 218, 37.4, 180)
-
-[node name="cheese33" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 227.8, 41.8, 68)
-
-[node name="cheese34" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 227.8, 41.8, 77.2)
-
-[node name="cheese35" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 206.2, 41.8, 96.4)
-
-[node name="cheese36" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 206.2, 41.8, 106.2)
-
-[node name="cheese37" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 207.4, 41.8, 36.4)
-
-[node name="cheese38" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 207.4, 41.8, 46.2)
-
-[node name="cheese39" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -18.8)
-
-[node name="cheese46" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 211.6, 41.8, -18.8)
-
-[node name="cheese47" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 211.6, 41.8, -13.6)
-
-[node name="cheese48" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 211.6, 41.8, -8.60001)
-
-[node name="cheese49" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 230.8, 41.8, -18.8)
-
-[node name="cheese50" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 230.8, 41.8, -13.6)
-
-[node name="cheese51" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 230.8, 41.8, -8.60001)
-
-[node name="cheese40" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -9.00001)
-
-[node name="cheese41" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -96)
-
-[node name="cheese42" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -86.2)
-
-[node name="cheese43" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -197)
-
-[node name="cheese45" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -206.2)
-
-[node name="cheese44" parent="Cheese" instance=ExtResource("14_1csn6")]
-transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -187.2)
 
 [node name="MetalPathways" type="Node" parent="."]
 
@@ -758,3 +605,161 @@ transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -4
 
 [node name="Moon" parent="Planets" instance=ExtResource("14_55uax")]
 transform = Transform3D(33.7868, 0, 0, 0, 33.7868, 0, 0, 0, 33.7868, 132.968, 86.9195, -47.3825)
+
+[node name="Cheese" type="Node3D" parent="."]
+
+[node name="cheese" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.2, 5.6)
+
+[node name="cheese2" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3.2, 5.6)
+
+[node name="cheese3" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8, 3.2, 5.6)
+
+[node name="cheese5" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 3.2, 20.2)
+
+[node name="cheese6" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 3.2, 29.6)
+
+[node name="cheese7" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 3.2, 39.2)
+
+[node name="cheese8" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 82)
+
+[node name="cheese9" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 91.6)
+
+[node name="cheese10" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 123.4)
+
+[node name="cheese11" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 160.8)
+
+[node name="cheese12" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 167.2)
+
+[node name="cheese13" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2, 8.8, 175.6)
+
+[node name="cheese14" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.4, 8.8, 181)
+
+[node name="cheese15" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.8, 8.8, 181)
+
+[node name="cheese16" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.4, 8.8, 181)
+
+[node name="cheese4" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.2, 3.2, 5.6)
+
+[node name="cheese17" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.4, 8.8, 181)
+
+[node name="cheese18" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 8.8, 181)
+
+[node name="cheese19" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 125.4, 11.4, 181)
+
+[node name="cheese20" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.8, 13.8, 188.4)
+
+[node name="cheese21" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.8, 13.8, 197.8)
+
+[node name="cheese22" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 166.8, 17.2, 220.2)
+
+[node name="cheese23" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.2, 17.2, 231.6)
+
+[node name="cheese24" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.4, 20.8, 235)
+
+[node name="cheese25" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.8, 24, 235)
+
+[node name="cheese26" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 107.4, 26.4, 221.8)
+
+[node name="cheese27" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 107.4, 29.2, 213.2)
+
+[node name="cheese28" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 165, 37.4, 210)
+
+[node name="cheese29" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 174.8, 37.4, 210)
+
+[node name="cheese30" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 218, 37.4, 200)
+
+[node name="cheese31" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 218, 37.4, 190.2)
+
+[node name="cheese32" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 218, 37.4, 180)
+
+[node name="cheese33" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 227.8, 41.8, 68)
+
+[node name="cheese34" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 227.8, 41.8, 77.2)
+
+[node name="cheese35" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 206.2, 41.8, 96.4)
+
+[node name="cheese36" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 206.2, 41.8, 106.2)
+
+[node name="cheese37" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 207.4, 41.8, 36.4)
+
+[node name="cheese38" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 207.4, 41.8, 46.2)
+
+[node name="cheese39" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -18.8)
+
+[node name="cheese46" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 211.6, 41.8, -18.8)
+
+[node name="cheese47" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 211.6, 41.8, -13.6)
+
+[node name="cheese48" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 211.6, 41.8, -8.60001)
+
+[node name="cheese49" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 230.8, 41.8, -18.8)
+
+[node name="cheese50" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 230.8, 41.8, -13.6)
+
+[node name="cheese51" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 230.8, 41.8, -8.60001)
+
+[node name="cheese40" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -9.00001)
+
+[node name="cheese41" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -96)
+
+[node name="cheese42" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -86.2)
+
+[node name="cheese43" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -197)
+
+[node name="cheese45" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -206.2)
+
+[node name="cheese44" parent="Cheese" instance=ExtResource("14_1csn6")]
+transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -187.2)
+
+[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("17_gh1tw")]
+cheeseParent = NodePath("../Cheese")

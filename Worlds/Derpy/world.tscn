@@ -1,18 +1,18 @@
 [gd_scene load_steps=15 format=3 uid="uid://cr3b01fixy1u7"]
 
-[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="1_k8myh"]
-[ext_resource type="PackedScene" uid="uid://bleqbt5f1cfj2" path="res://ADerpyChristmas/DerpyPlayer/DerpyPlayer.tscn" id="2_67di5"]
-[ext_resource type="PackedScene" uid="uid://bdyyk6uwj022r" path="res://ADerpyChristmas/present.tscn" id="5_86g65"]
-[ext_resource type="PackedScene" uid="uid://cvqq628c8eb0i" path="res://ADerpyChristmas/winter_tree.tscn" id="5_qyr14"]
-[ext_resource type="PackedScene" uid="uid://toaqihy6veuo" path="res://ADerpyChristmas/snow_block.tscn" id="5_s6s7i"]
-[ext_resource type="PackedScene" uid="uid://c02lle0fs3pqb" path="res://ADerpyChristmas/icicle.tscn" id="6_0onkk"]
-[ext_resource type="PackedScene" uid="uid://bxit1nfe7bfp8" path="res://ADerpyChristmas/MovingPlatform.tscn" id="7_hbycc"]
-[ext_resource type="PackedScene" uid="uid://d4ljevw7hy3s5" path="res://ADerpyChristmas/snow_man.tscn" id="8_lf6ng"]
-[ext_resource type="PackedScene" uid="uid://b1qsgqyhc51wh" path="res://ADerpyChristmas/bounce_pad.tscn" id="10_5kqxk"]
-[ext_resource type="PackedScene" uid="uid://c2itevfqko5w1" path="res://ADerpyChristmas/tree_log.tscn" id="11_telt1"]
-[ext_resource type="PackedScene" uid="uid://8col2kodst17" path="res://ADerpyChristmas/collectible_low_level.tscn" id="12_1gbk2"]
-[ext_resource type="PackedScene" uid="uid://dpiwodnfpma4x" path="res://ADerpyChristmas/TreeDecor.tscn" id="12_hsrrc"]
-[ext_resource type="PackedScene" uid="uid://b4y3go14ybper" path="res://ADerpyChristmas/collectible_high_level.tscn" id="13_w1i37"]
+[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="1_pp4yi"]
+[ext_resource type="PackedScene" uid="uid://bdyyk6uwj022r" path="res://ADerpyChristmas/present.tscn" id="2_crlb6"]
+[ext_resource type="PackedScene" uid="uid://bleqbt5f1cfj2" path="res://ADerpyChristmas/DerpyPlayer/DerpyPlayer.tscn" id="3_4fpnl"]
+[ext_resource type="PackedScene" uid="uid://cvqq628c8eb0i" path="res://ADerpyChristmas/winter_tree.tscn" id="4_ed5wp"]
+[ext_resource type="PackedScene" uid="uid://bxit1nfe7bfp8" path="res://ADerpyChristmas/MovingPlatform.tscn" id="5_ij2v2"]
+[ext_resource type="PackedScene" uid="uid://8col2kodst17" path="res://ADerpyChristmas/collectible_low_level.tscn" id="6_p6dcy"]
+[ext_resource type="PackedScene" uid="uid://b4y3go14ybper" path="res://ADerpyChristmas/collectible_high_level.tscn" id="7_knkqt"]
+[ext_resource type="PackedScene" uid="uid://c02lle0fs3pqb" path="res://ADerpyChristmas/icicle.tscn" id="8_wwtw0"]
+[ext_resource type="PackedScene" uid="uid://d4ljevw7hy3s5" path="res://ADerpyChristmas/snow_man.tscn" id="9_6bguj"]
+[ext_resource type="PackedScene" uid="uid://toaqihy6veuo" path="res://ADerpyChristmas/snow_block.tscn" id="10_ifyfh"]
+[ext_resource type="PackedScene" uid="uid://c2itevfqko5w1" path="res://ADerpyChristmas/tree_log.tscn" id="11_w6oma"]
+[ext_resource type="PackedScene" uid="uid://b1qsgqyhc51wh" path="res://ADerpyChristmas/bounce_pad.tscn" id="12_m0ghy"]
+[ext_resource type="PackedScene" uid="uid://dpiwodnfpma4x" path="res://ADerpyChristmas/TreeDecor.tscn" id="13_go62n"]
 
 [sub_resource type="Environment" id="Environment_kskn3"]
 background_mode = 1
@@ -36,7 +36,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9028, 19.4408, -57.1189)
 billboard = 1
 modulate = Color(1, 0, 1, 1)
 text = "Hold SPACE to slow your fall!"
-font = ExtResource("1_k8myh")
+font = ExtResource("1_pp4yi")
 font_size = 128
 
 [node name="PresentsTxt" type="Label3D" parent="."]
@@ -45,54 +45,54 @@ billboard = 1
 modulate = Color(1, 0, 1, 1)
 text = "Collect all the presents and return 
 them to the tree to save Christmas!"
-font = ExtResource("1_k8myh")
+font = ExtResource("1_pp4yi")
 font_size = 168
 outline_size = 60
 
 [node name="Presents" type="Node3D" parent="."]
 
-[node name="present" parent="Presents" instance=ExtResource("5_86g65")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.1343, 4.22362, -58.4047)
+[node name="present" parent="Presents" instance=ExtResource("2_crlb6")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 39.1343, 4.22362, -58.4047)
 
-[node name="present6" parent="Presents" instance=ExtResource("5_86g65")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7931, 4.06258, -101.671)
+[node name="present6" parent="Presents" instance=ExtResource("2_crlb6")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -7.7931, 4.06258, -101.671)
 
-[node name="present2" parent="Presents" instance=ExtResource("5_86g65")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 20.755, -61)
+[node name="present2" parent="Presents" instance=ExtResource("2_crlb6")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 98, 20.755, -61)
 
-[node name="present3" parent="Presents" instance=ExtResource("5_86g65")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.2884, 20.755, -3.87883)
+[node name="present3" parent="Presents" instance=ExtResource("2_crlb6")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 51.2884, 20.755, -3.87883)
 
-[node name="Player" parent="." node_paths=PackedStringArray("presentsParent") instance=ExtResource("2_67di5")]
+[node name="Player" parent="." node_paths=PackedStringArray("presentsParent") instance=ExtResource("3_4fpnl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3494, 2.93926, -8.96682)
 presentsParent = NodePath("../Presents")
 
-[node name="winterTree" parent="." instance=ExtResource("5_qyr14")]
+[node name="winterTree" parent="." instance=ExtResource("4_ed5wp")]
 transform = Transform3D(4.49043, 0, 0, 0, 4.49043, 0, 0, 0, 4.49043, 4.94017, 9.17006, 13.2491)
-nextLevel = "res://ADerpyChristmas/Levels/world2.tscn"
+nextLevel = "res://Worlds/Derpy/world2.tscn"
 
-[node name="MovingPlatform" parent="." instance=ExtResource("7_hbycc")]
+[node name="MovingPlatform" parent="." instance=ExtResource("5_ij2v2")]
 transform = Transform3D(4.48721, 0, 0, 0, 4.48721, 0, 0, 0, 4.48721, -16.878, -3, -25.001)
 targetPos = Vector3(-16.878, 10, -25.001)
 waitTime = 3
 timeToTarget = 4
 
-[node name="CollectibleLowLevel6" parent="MovingPlatform" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel6" parent="MovingPlatform" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(0.222856, 0, 0, 0, 0.222856, 0, 0, 0, 0.222856, 0.705243, 1.31463, 0.00242138)
 
-[node name="CollectibleLowLevel7" parent="MovingPlatform" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel7" parent="MovingPlatform" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(0.222856, 0, 0, 0, 0.222856, 0, 0, 0, 0.222856, 0.0366766, 1.31463, -0.666145)
 
-[node name="CollectibleLowLevel8" parent="MovingPlatform" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel8" parent="MovingPlatform" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(0.222856, 0, 0, 0, 0.222856, 0, 0, 0, 0.222856, -0.706608, 1.31463, 0.130471)
 
-[node name="CollectibleLowLevel9" parent="MovingPlatform" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel9" parent="MovingPlatform" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(0.222856, 0, 0, 0, 0.222856, 0, 0, 0, 0.222856, -0.0159352, 1.31463, 0.799039)
 
-[node name="CollectibleHighLevel2" parent="MovingPlatform" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel2" parent="MovingPlatform" instance=ExtResource("7_knkqt")]
 transform = Transform3D(0.222856, 0, 0, 0, 0.222856, 0, 0, 0, 0.222856, 0.0412214, 1.30217, -0.00275278)
 
-[node name="MovingPlatform2" parent="." instance=ExtResource("7_hbycc")]
+[node name="MovingPlatform2" parent="." instance=ExtResource("5_ij2v2")]
 transform = Transform3D(4.48721, 0, 0, 0, 4.48721, 0, 0, 0, 4.48721, -5.878, -2, -74.001)
 targetPos = Vector3(-5.878, 15, -74.001)
 waitTime = 3
@@ -100,221 +100,221 @@ timeToTarget = 7
 
 [node name="WorldBlocks" type="Node3D" parent="."]
 
-[node name="icicle3" parent="WorldBlocks" instance=ExtResource("6_0onkk")]
+[node name="icicle3" parent="WorldBlocks" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.801756, 2.87875, -83.8966)
 
-[node name="icicle4" parent="WorldBlocks" instance=ExtResource("6_0onkk")]
+[node name="icicle4" parent="WorldBlocks" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95603, 2.87875, -102.908)
 
-[node name="icicle5" parent="WorldBlocks" instance=ExtResource("6_0onkk")]
+[node name="icicle5" parent="WorldBlocks" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.0457, 2.87875, -84.2228)
 
-[node name="snowMan" parent="WorldBlocks" instance=ExtResource("8_lf6ng")]
+[node name="snowMan" parent="WorldBlocks" instance=ExtResource("9_6bguj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.62377, 2.87875, -104.376)
 
-[node name="icicle2" parent="WorldBlocks" instance=ExtResource("6_0onkk")]
+[node name="icicle2" parent="WorldBlocks" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.20937, 0.615865, -0.927823)
 
-[node name="icicle" parent="WorldBlocks" instance=ExtResource("6_0onkk")]
+[node name="icicle" parent="WorldBlocks" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.17017, 0.615864, -7.55948)
 
-[node name="SnowBlock" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(8.55827, 0, 0, 0, 1.88644, 0, 0, 0, 10.3943, -7.39615, -1.42296, -0.0104618)
 
-[node name="SnowBlock5" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock5" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(5.94064, 0, 0, 0, 3.98018, 0, 0, 0, 7.2151, -7.39615, -1.42296, -94.0105)
 
-[node name="SnowBlock7" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock7" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(5.94064, 0, 0, 0, 3.98018, 0, 0, 0, 7.2151, 31.6039, -1.42296, -49.0105)
 
-[node name="SnowBlock9" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock9" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(5.73822, 0, 1.86741, 0, 3.98018, 0, -1.53755, 0, 6.96925, 74.0407, 4.70231, -56.8293)
 
-[node name="SnowBlock10" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock10" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(0.943847, 0, 0, 0, 0.63237, 0, 0, 0, 1.14633, 96.6039, 18.7023, -44.6062)
 
-[node name="SnowBlock2" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock2" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(1.30456, 0, 0, 0, 1.312, 0, 0, 0, 1.58443, -16.9438, 13.209, -33.1377)
 
-[node name="SnowBlock3" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock3" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(1.30456, 0, 0, 0, 1.312, 0, 0, 0, 1.58443, -16.9438, 13.209, -44.0173)
 
-[node name="SnowBlock4" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock4" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(1.30456, 0, 0, 0, 1.312, 0, 0, 0, 1.58443, -16.9438, 13.209, -54.0798)
 
-[node name="SnowBlock6" parent="WorldBlocks" instance=ExtResource("5_s6s7i")]
+[node name="SnowBlock6" parent="WorldBlocks" instance=ExtResource("10_ifyfh")]
 transform = Transform3D(1.30456, 0, 0, 0, 1.312, 0, 0, 0, 1.58443, -16.9438, 13.209, -65.4126)
 
-[node name="snowMan2" parent="WorldBlocks" instance=ExtResource("8_lf6ng")]
+[node name="snowMan2" parent="WorldBlocks" instance=ExtResource("9_6bguj")]
 transform = Transform3D(0.612397, 0, -0.790551, 0, 1, 0, 0.790551, 0, 0.612397, 99.3549, 19.9265, -62.1604)
 
-[node name="TreeLog" parent="WorldBlocks" instance=ExtResource("11_telt1")]
+[node name="TreeLog" parent="WorldBlocks" instance=ExtResource("11_w6oma")]
 transform = Transform3D(0.10596, 0.606854, -0.108581, 0.0011892, 0.17462, 0.400612, 0.418531, -0.154134, 0.0263514, 42.9778, 3.23467, -49.2838)
 
-[node name="snowMan3" parent="WorldBlocks" instance=ExtResource("8_lf6ng")]
+[node name="snowMan3" parent="WorldBlocks" instance=ExtResource("9_6bguj")]
 transform = Transform3D(0.927445, 0, -0.373959, 0, 1, 0, 0.373959, 0, 0.927445, 40.2038, 2.87875, -60.3428)
 
 [node name="BouncePads" type="Node3D" parent="."]
 
-[node name="bouncePad" parent="BouncePads" instance=ExtResource("10_5kqxk")]
+[node name="bouncePad" parent="BouncePads" instance=ExtResource("12_m0ghy")]
 transform = Transform3D(2.06081, 0, 0.552192, 0, 2.13351, 0, -0.552192, 0, 2.06081, 79.8749, 10.2337, -57.3774)
 
-[node name="bouncePad3" parent="BouncePads" instance=ExtResource("10_5kqxk")]
+[node name="bouncePad3" parent="BouncePads" instance=ExtResource("12_m0ghy")]
 transform = Transform3D(2.06081, 0, 0.552192, 0, 2.13351, 0, -0.552192, 0, 2.06081, 61.8749, 15.2337, -4.3774)
 
-[node name="bouncePad4" parent="BouncePads" instance=ExtResource("10_5kqxk")]
+[node name="bouncePad4" parent="BouncePads" instance=ExtResource("12_m0ghy")]
 transform = Transform3D(2.06081, 0, 0.552192, 0, 2.13351, 0, -0.552192, 0, 2.06081, 24.8749, 10.2337, -4.3774)
 
-[node name="bouncePad5" parent="BouncePads" instance=ExtResource("10_5kqxk")]
+[node name="bouncePad5" parent="BouncePads" instance=ExtResource("12_m0ghy")]
 transform = Transform3D(2.06081, 0, 0.552192, 0, 2.13351, 0, -0.552192, 0, 2.06081, 39.8749, 10.2337, -3.3774)
 
-[node name="bouncePad2" parent="BouncePads" instance=ExtResource("10_5kqxk")]
+[node name="bouncePad2" parent="BouncePads" instance=ExtResource("12_m0ghy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.673, 20.2337, -44.6827)
 
 [node name="Icicle" type="Node3D" parent="."]
 
-[node name="icicle" parent="Icicle" instance=ExtResource("6_0onkk")]
+[node name="icicle" parent="Icicle" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(3.74102, -3.2705e-07, 3.34274, -4.3859e-07, -5.01688, 1.01644e-20, 3.34274, -2.92232e-07, -3.74102, 93, 19, -59)
 
-[node name="icicle3" parent="Icicle" instance=ExtResource("6_0onkk")]
+[node name="icicle3" parent="Icicle" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(3.74102, -3.2705e-07, 3.34274, -4.3859e-07, -5.01688, 1.01644e-20, 3.34274, -2.92232e-07, -3.74102, 5.23017, 4.16017, -52)
 
-[node name="icicle2" parent="Icicle" instance=ExtResource("6_0onkk")]
+[node name="icicle2" parent="Icicle" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(3.74102, -3.2705e-07, 3.34274, -4.3859e-07, -5.01688, 1.01644e-20, 3.34274, -2.92232e-07, -3.74102, 93, 23, -27)
 
-[node name="icicle4" parent="Icicle" instance=ExtResource("6_0onkk")]
+[node name="icicle4" parent="Icicle" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(3.74102, -3.2705e-07, 3.34274, -4.3859e-07, -5.01688, 1.01644e-20, 3.34274, -2.92232e-07, -3.74102, 70, 13, -3)
 
-[node name="icicle5" parent="Icicle" instance=ExtResource("6_0onkk")]
+[node name="icicle5" parent="Icicle" instance=ExtResource("8_wwtw0")]
 transform = Transform3D(3.74102, -3.2705e-07, 3.34274, -4.3859e-07, -5.01688, 1.01644e-20, 3.34274, -2.92232e-07, -3.74102, 33, 8, -3)
 
-[node name="TreeDecor" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8993, 2.43755, 8.86549)
 
-[node name="TreeDecor2" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor2" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100658, 2.43755, -14.875)
 
-[node name="TreeDecor3" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor3" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(0.883643, 0, 0.468161, 0, 1, 0, -0.468161, 0, 0.883643, -15.8993, 4.43755, -100.875)
 
-[node name="TreeDecor4" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor4" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(0.883643, 0, 0.468161, 0, 1, 0, -0.468161, 0, 0.883643, -1.89934, 4.43755, -92.875)
 
-[node name="TreeDecor5" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor5" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(0.883643, 0, 0.468161, 0, 1, 0, -0.468161, 0, 0.883643, 27.1007, 4.43755, -39.875)
 
-[node name="TreeDecor6" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor6" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(0.29379, 0, 0.95587, 0, 1, 0, -0.95587, 0, 0.29379, 34.1007, 4.43755, -42.875)
 
-[node name="TreeDecor7" parent="." instance=ExtResource("12_hsrrc")]
+[node name="TreeDecor7" parent="." instance=ExtResource("13_go62n")]
 transform = Transform3D(0.95587, 0, -0.29379, 0, 1, 0, 0.29379, 0, 0.95587, 27.1007, 4.43755, -57.875)
 
 [node name="Collectibles" type="Node" parent="."]
 
-[node name="CollectibleLowLevel" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7134, 4.83785, -24.9901)
 
-[node name="CollectibleHighLevel" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6653, 2.24379, -15.279)
 
-[node name="CollectibleLowLevel2" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel2" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7134, 6.83785, -24.9901)
 
-[node name="CollectibleLowLevel3" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel3" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7134, 8.83785, -24.9901)
 
-[node name="CollectibleLowLevel4" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel4" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7134, 10.8379, -24.9901)
 
-[node name="CollectibleLowLevel5" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel5" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7134, 12.8379, -24.9901)
 
-[node name="CollectibleHighLevel3" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel3" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9205, 20.2444, -74.489)
 
-[node name="CollectibleHighLevel4" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel4" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9205, 20.2444, -74.489)
 
-[node name="CollectibleHighLevel5" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel5" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9205, 20.2444, -70.489)
 
-[node name="CollectibleHighLevel6" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel6" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.89638, 20.2444, -74.489)
 
-[node name="CollectibleHighLevel7" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel7" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96464, 20.3742, -77.4182)
 
-[node name="CollectibleLowLevel6" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel6" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0588, 16.6362, -59.6776)
 
-[node name="CollectibleLowLevel7" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel7" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0588, 16.6362, -48.6776)
 
-[node name="CollectibleLowLevel8" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel8" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0588, 16.6362, -38.6776)
 
-[node name="CollectibleLowLevel9" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel9" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.3033, 5.15346, -49.5691)
 
-[node name="CollectibleLowLevel10" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel10" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3033, 6.56803, -51.0946)
 
-[node name="CollectibleLowLevel11" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel11" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.7534, 7.66668, -51.8882)
 
-[node name="CollectibleLowLevel12" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel12" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7007, 9.02002, -53.4695)
 
-[node name="CollectibleHighLevel8" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel8" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.8145, 15.3889, -57.4645)
 
-[node name="CollectibleLowLevel13" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel13" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.5415, 21.8622, -44.7001)
 
-[node name="CollectibleLowLevel14" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel14" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.6529, 24.8622, -27.7001)
 
-[node name="CollectibleLowLevel15" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel15" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6118, 3.7716, -92.0045)
 
-[node name="CollectibleLowLevel16" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel16" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38824, 3.7716, -94.0045)
 
-[node name="CollectibleHighLevel9" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel9" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74072, 3.70036, -105.227)
 
-[node name="CollectibleLowLevel17" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel17" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.14524, 3.67124, -84.3203)
 
-[node name="CollectibleLowLevel18" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel18" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2186, 5.78814, -53.8381)
 
-[node name="CollectibleLowLevel19" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel19" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.11267, 5.78814, -43.545)
 
-[node name="CollectibleLowLevel20" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel20" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1127, 5.78814, -50.0378)
 
-[node name="CollectibleLowLevel21" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel21" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.1459, 5.78814, -59.4932)
 
-[node name="CollectibleLowLevel22" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel22" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22573, 5.78814, -60.5424)
 
-[node name="CollectibleLowLevel23" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel23" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.615446, 5.78814, -45.5424)
 
-[node name="CollectibleHighLevel10" parent="Collectibles" instance=ExtResource("13_w1i37")]
+[node name="CollectibleHighLevel10" parent="Collectibles" instance=ExtResource("7_knkqt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.56997, 5.65888, -52.4813)
 
-[node name="CollectibleLowLevel24" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel24" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.196, 3.76649, -59.8305)
 
-[node name="CollectibleLowLevel25" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel25" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.281, 3.76649, -37.8305)
 
-[node name="CollectibleLowLevel26" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel26" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.281, 3.76649, -48.7412)
 
-[node name="CollectibleLowLevel27" parent="Collectibles" instance=ExtResource("12_1gbk2")]
+[node name="CollectibleLowLevel27" parent="Collectibles" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.196, 3.76649, -45.8305)

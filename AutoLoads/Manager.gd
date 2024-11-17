@@ -22,27 +22,27 @@ func _reset():
 
 func _setGameMode(newGameMode):
 	gameMode = newGameMode
-	if(gameMode == "collect_athon"):
-		UI._collect_athon()
-	elif(gameMode == "standard"):
-		UI._standard()
-	else:
-		UI.hide()
+	#if(gameMode == "collect_athon"):
+	#	UI._collect_athon()
+	#elif(gameMode == "standard"):
+	#	UI._standard()
+	#else:
+	#	UI.hide()
 #Increases the seed count
 func _seed_Collected():
 	seedCount += 1
-	UI.GotSeed()
+	#UI.GotSeed()
 	
 #Increases the planted count	
 func _planted():
 	plantedCount += 1
-	UI.FlowerPlanted()
+	#UI.FlowerPlanted()
 	if(plantedCount >= 6):
 		_win()
 
 func _Collect_Cheese():
 	cheeseCount+=1
-	UI._CollectCheese(cheeseCount)
+	#UI._CollectCheese(cheeseCount)
 		
 #Plays the win sound and sets win to true	
 func _win():

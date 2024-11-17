@@ -4,13 +4,12 @@ extends Node3D
 @export var gameMode = "standard"
 
 @onready var totalCheese = 0
-
-# Called when the node enters the scene tree for the first time.
+@export var UINode : Node
+# Called when the node enters the scene tree for the first time.d
 func _ready():
+	print(UINode)
 	Manager.nextLevel = nextLevel
 	Manager._setGameMode(gameMode)
-	if gameMode == "standard":
-		totalCheese = $Cheese.get_child_count()
-		print("Cheese count "+ str($Cheese.get_child_count()))
-		UI.SetCheeseTotal(totalCheese)
+
+
 	

@@ -22,7 +22,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var runCloud = $runCloud
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
-
+@export var UI : Node
 
 var spawnPos
 var spawnRotation
@@ -34,6 +34,8 @@ var bouncing = true
 
 #Occurs when the game is loaded
 func _ready():
+	if UI == null:
+		UI = get_node("/root/UI")
 	Manager.on_win.connect(Win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	spawnPos = position

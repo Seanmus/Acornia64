@@ -23,8 +23,10 @@ albedo_texture = ExtResource("4_28w7x")
 [node name="bottom" parent="." index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_u8tmi")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3574, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
 shape = SubResource("CylinderShape3D_1h8cj")
 
 [node name="middle" parent="." index="2"]

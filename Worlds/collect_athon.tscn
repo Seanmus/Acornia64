@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dey3jnwy7ideg"]
+[gd_scene load_steps=23 format=3 uid="uid://dey3jnwy7ideg"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_8e3gr"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_x40l4"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="18_67700"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="19_bmfn4"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="20_28yr6"]
+[ext_resource type="PackedScene" uid="uid://cl4gkvxur3be" path="res://AutoLoads/UICollectAthonAuri.tscn" id="20_663ie"]
 
 [sub_resource type="Environment" id="Environment_ngah3"]
 background_mode = 1
@@ -374,5 +375,7 @@ curve = SubResource("Curve3D_b7o2c")
 
 [node name="HomingAttackTarget" parent="." instance=ExtResource("20_28yr6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5821, 33.0937, 43.1721)
+
+[node name="UI" parent="." instance=ExtResource("20_663ie")]
 
 [editable path="FlowerPots/flowerPot3"]

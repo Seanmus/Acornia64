@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=38 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="20_s8nnt"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="21_aa5io"]
 [ext_resource type="PackedScene" uid="uid://drky6f8fiwrv7" path="res://WorldBlocks/Decor/video_player.tscn" id="22_lduvi"]
+[ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="23_hp43g"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -119,12 +120,14 @@ viewport_path = NodePath("SubViewportContainer/SubViewport")
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_ynym2")
 
-[node name="spaceLevel" type="Node3D"]
+[node name="spaceLevel" type="Node3D" node_paths=PackedStringArray("UINode")]
 script = ExtResource("1_dmlmg")
+UINode = NodePath("UI")
 
-[node name="Player" parent="." instance=ExtResource("2_iqfuu")]
+[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_iqfuu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 42, 2.1864, 0)
 floor_block_on_wall = false
+UI = NodePath("../UI")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eei7c")
@@ -136,7 +139,7 @@ transform = Transform3D(21.2531, 0, 0, 0, 1, 0, 0, 0, 21.0325, 0, -7.83223, 0)
 
 [node name="endLevel" parent="Blocks" instance=ExtResource("6_b7wtq")]
 transform = Transform3D(-9.86059, 0, -8.6204e-07, 0, 9.86059, 0, 8.6204e-07, 0, -9.86059, 176.635, 107.39, -40.152)
-nextLevel = "title"
+nextLevel = "Derpy/world"
 
 [node name="MetalBox" parent="Blocks" instance=ExtResource("9_8bvpm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0186936, 0, 0.0135364)
@@ -1099,6 +1102,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vxvrb")
 [node name="VideoPlayer2" parent="." instance=ExtResource("22_lduvi")]
 transform = Transform3D(13.247, -4.89222e-14, -2.91599e-21, -2.80517e-21, -5.79047e-07, -13.247, 4.89222e-14, 13.247, -5.79047e-07, 62.0843, 18.1889, -252.749)
 surface_material_override/0 = SubResource("StandardMaterial3D_1k3fp")
+
+[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("23_hp43g")]
+cheeseParent = NodePath("../Cheese")
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 
