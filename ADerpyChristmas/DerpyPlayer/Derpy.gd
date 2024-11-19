@@ -2,11 +2,11 @@ class_name Player
 extends CharacterBody3D
 
 
-const SPEED = 5.0
+const SPEED = 6.5
 const JUMP_VELOCITY = 6
 const HOVERFALLVELOCITY = -2.5
 var mouse_sensitivty = 0.002
-var controller_sensitivity = 0.02
+var controller_sensitivity = 0.04
 var wasInAir
 
 @onready var spawnPos = position
@@ -54,6 +54,7 @@ func _PresentCollected():
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		$Derpy.rotate_y(event.relative.x * mouse_sensitivty)
 		rotate_y(-event.relative.x * mouse_sensitivty)
 		$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
 		$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, 0)
@@ -109,6 +110,7 @@ func _physics_process(delta):
 	
 	var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 	if cameraInput:
+		$Derpy.rotate_y(cameraInput.x * controller_sensitivity)
 		rotate_y(-cameraInput.x * controller_sensitivity)
 		$Pivot.rotate_x(-cameraInput.y * controller_sensitivity)
 		$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)

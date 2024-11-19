@@ -1,14 +1,15 @@
-[gd_scene load_steps=38 format=3 uid="uid://bleqbt5f1cfj2"]
+[gd_scene load_steps=39 format=3 uid="uid://bleqbt5f1cfj2"]
 
 [ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/Derpy.gd" id="1_fuj54"]
 [ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="2_6d2vt"]
-[ext_resource type="AudioStream" uid="uid://tifgi4mvk5h5" path="res://ADerpyChristmas/DerpyPlayer/LandSqueakReSaved.mp3" id="3_ed4i6"]
 [ext_resource type="Material" uid="uid://rkppha3v4vdb" path="res://ADerpyChristmas/DerpyPlayer/Derpy.tres" id="3_kfaps"]
+[ext_resource type="AudioStream" uid="uid://ccyvfmfaycmc7" path="res://ADerpyChristmas/JumpSqueak.wav" id="4_k446v"]
 [ext_resource type="Texture2D" uid="uid://bmv1vabd5wc1n" path="res://ADerpyChristmas/DerpyPlayer/PresentCrunchy.png" id="5_1a8fc"]
 [ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/DerpyUI.gd" id="5_yq0re"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="6_hpwsy"]
 [ext_resource type="AudioStream" uid="uid://c1h1frpyok5m6" path="res://ADerpyChristmas/DerpyPlayer/PresentCollected.wav" id="8_tcujn"]
 [ext_resource type="AudioStream" uid="uid://cdusrnndmi2bl" path="res://ADerpyChristmas/DerpyPlayer/PP_Collect_Coin_1_2.wav" id="9_u5m70"]
+[ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="10_x4iat"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_lgsit"]
 radius = 0.615924
@@ -813,12 +814,12 @@ transform = Transform3D(-16.3185, -1.53301e-12, -4.13704e-05, -1.99845e-15, 13.8
 surface_material_override/0 = ExtResource("3_kfaps")
 
 [node name="LandEffect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ed4i6")
+stream = ExtResource("4_k446v")
 
 [node name="JumpEffect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_ed4i6")
-volume_db = -3.692
-pitch_scale = 0.93
+stream = ExtResource("4_k446v")
+volume_db = -17.138
+pitch_scale = 0.9
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_lgsit")
@@ -852,7 +853,7 @@ script = ExtResource("5_yq0re")
 player = NodePath("..")
 
 [node name="PresentSprite" type="Sprite2D" parent="UI"]
-position = Vector2(575, 53)
+position = Vector2(968.97, 171.98)
 scale = Vector2(0.66, 0.66)
 texture = ExtResource("5_1a8fc")
 
@@ -863,9 +864,10 @@ anchor_left = 0.846
 anchor_top = 0.186
 anchor_right = 1.0
 anchor_bottom = 0.297
-offset_left = 0.867981
-offset_top = 0.121773
-offset_bottom = 0.0815277
+offset_left = -58.162
+offset_top = -26.8982
+offset_right = -59.03
+offset_bottom = -26.9385
 theme = SubResource("Theme_4pgsk")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
@@ -897,5 +899,16 @@ stream = ExtResource("8_tcujn")
 
 [node name="CollectibleCollected" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_u5m70")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 940.0
+offset_top = 42.0
+offset_right = 1250.0
+offset_bottom = 154.0
+theme = ExtResource("10_x4iat")
+theme_override_constants/outline_size = 12
+theme_override_font_sizes/font_size = 16
+text = "Collect the presents and return them to the tree to save Christmas"
+autowrap_mode = 2
 
 [editable path="Derpy"]

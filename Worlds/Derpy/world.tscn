@@ -39,16 +39,6 @@ text = "Hold SPACE to slow your fall!"
 font = ExtResource("1_pp4yi")
 font_size = 128
 
-[node name="PresentsTxt" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39481, 4.028, 7.37649)
-billboard = 1
-modulate = Color(1, 0, 1, 1)
-text = "Collect all the presents and return 
-them to the tree to save Christmas!"
-font = ExtResource("1_pp4yi")
-font_size = 168
-outline_size = 60
-
 [node name="Presents" type="Node3D" parent="."]
 
 [node name="present" parent="Presents" instance=ExtResource("2_crlb6")]
@@ -73,9 +63,9 @@ nextLevel = "res://Worlds/Derpy/world2.tscn"
 
 [node name="MovingPlatform" parent="." instance=ExtResource("5_ij2v2")]
 transform = Transform3D(4.48721, 0, 0, 0, 4.48721, 0, 0, 0, 4.48721, -16.878, -3, -25.001)
-targetPos = Vector3(-16.878, 10, -25.001)
+targetPos = Vector3(-16.878, 15, -25.001)
 waitTime = 3
-timeToTarget = 4
+timeToTarget = 7
 
 [node name="CollectibleLowLevel6" parent="MovingPlatform" instance=ExtResource("6_p6dcy")]
 transform = Transform3D(0.222856, 0, 0, 0, 0.222856, 0, 0, 0, 0.222856, 0.705243, 1.31463, 0.00242138)

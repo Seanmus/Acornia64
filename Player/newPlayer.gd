@@ -1,14 +1,14 @@
 class_name player
 extends CharacterBody3D
 
-var maxSpeed = 15.0
+var maxSpeed = 22.5
 var acceleration = 130
 var air_acceleration = 90
 var decceleration = 130
 var air_decceleration = 90
 const JUMP_VELOCITY = 11
 var mouse_sensitivty = 0.002 #radiains/pixel
-var controller_sensitivity = 0.02
+var controller_sensitivity = 0.04
 var canDoubleJump = true
 var landing : bool
 var dead : bool
@@ -137,8 +137,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("sprint"):
 		maxSpeed = 22.5
 	else:
+		pass
 		#maxSpeed = 15
-		runCloud.emitting = false
+		#runCloud.emitting = false
 	if not dead:
 		if is_on_floor() && !dead && !bouncing:
 			canDoubleJump = true
@@ -181,7 +182,7 @@ func _physics_process(delta):
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		_RotatePlayerModelInInputDirection(input_dir)
 		print(input_dir)
-		if is_on_floor() && Input.is_action_pressed("sprint") && (input_dir.length() > 0):
+		if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
 			runCloud.emitting = true
 		else:
 			runCloud.emitting = false
