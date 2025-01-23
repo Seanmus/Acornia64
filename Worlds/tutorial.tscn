@@ -42,7 +42,7 @@ transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_l3x7x")
 
-[node name="MetalPathways" type="Node" parent="."]
+[node name="MetalPathways" type="Node3D" parent="."]
 
 [node name="MetalBox" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.85922, 0.899408, 5.33518)
@@ -473,7 +473,7 @@ transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 91.1408,
 [node name="MetalBox80" parent="MetalPathways" instance=ExtResource("5_78ujj")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 101.141, 6.09941, 170.935)
 
-[node name="Buildings" type="Node" parent="."]
+[node name="Buildings" type="Node3D" parent="."]
 
 [node name="TallBuildingBricks" parent="Buildings" instance=ExtResource("6_tsmsw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.6505, 0, -25.7919)
@@ -542,7 +542,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44065, -90.6191, 171.825)
 transform = Transform3D(4.47342, 0, 0, 0, 4.47342, 0, 0, 0, 4.47342, 221.122, 52.4815, -253.044)
 nextLevel = "water_level"
 
-[node name="TutorialText" type="Node" parent="."]
+[node name="TutorialText" type="Node3D" parent="."]
 
 [node name="CameraText" type="Label3D" parent="TutorialText"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3278, 11.3591, 6.22171)
@@ -562,7 +562,7 @@ font = ExtResource("15_6gg0y")
 font_size = 260
 outline_size = 100
 
-[node name="SpawnPoints" type="Node" parent="."]
+[node name="SpawnPoints" type="Node3D" parent="."]
 
 [node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("13_c5ddo")]
 transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 122.027, 34.1668, 210.683)
@@ -570,7 +570,7 @@ transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("13_c5ddo")]
 transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 221.227, 42.1668, -7.317)
 
-[node name="Tire" type="Node" parent="."]
+[node name="Tire" type="Node3D" parent="."]
 
 [node name="tire" parent="Tire" instance=ExtResource("12_v4bch")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.777, 31.148, 210.049)
@@ -584,7 +584,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 218.22, 36.9723, 169.249)
 [node name="tire3" parent="Tire" instance=ExtResource("12_v4bch")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 221.02, 40.5723, -212.351)
 
-[node name="HomingAttackTargets" type="Node" parent="."]
+[node name="HomingAttackTargets" type="Node3D" parent="."]
 
 [node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("15_xnc2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -60.1033)
@@ -598,7 +598,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -145.903)
 [node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("15_xnc2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -165.303)
 
-[node name="Planets" type="Node" parent="."]
+[node name="Planets" type="Node3D" parent="."]
 
 [node name="Earth" parent="Planets" instance=ExtResource("11_jmqux")]
 transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -479.274, 40.7078)
