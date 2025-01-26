@@ -1,0 +1,8 @@
+[gd_resource type="Terrain3DTexture" load_steps=2 format=3 uid="uid://c3nfg4xqfgaq"]
+
+[ext_resource type="Texture2D" uid="uid://c4lppftkrcu8u" path="res://WorldBlocks/Decor/GrassPlatform_GrassTexture.png" id="1_r4xpn"]
+
+[resource]
+name = "GrassPlatform_GrassTexture"
+albedo_texture = ExtResource("1_r4xpn")
+normal_texture = ExtResource("1_r4xpn")
