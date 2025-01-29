@@ -74,7 +74,7 @@ _shader_parameters = {
 }
 show_checkered = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mgvmt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrebb"]
 transparency = 4
 cull_mode = 2
 vertex_color_use_as_albedo = true
@@ -84,14 +84,14 @@ distance_fade_mode = 1
 distance_fade_min_distance = 960.0
 distance_fade_max_distance = 480.0
 
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_7fbu4"]
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_i67ek"]
 height_offset = 0.5
 density = 10.0
-material_override = SubResource("StandardMaterial3D_mgvmt")
+material_override = SubResource("StandardMaterial3D_vrebb")
 generated_type = 1
 
-[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_cdsi1"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_7fbu4")])
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_xuo68"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_i67ek")])
 
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_ak3a3")
@@ -459,6 +459,6 @@ curve = SubResource("Curve3D_cwowy")
 
 [node name="Terrain3D" type="Terrain3D" parent="."]
 material = SubResource("Terrain3DMaterial_3uu23")
-assets = SubResource("Terrain3DAssets_cdsi1")
+assets = SubResource("Terrain3DAssets_xuo68")
 top_level = true
 metadata/_edit_lock_ = true
