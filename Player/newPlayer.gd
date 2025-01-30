@@ -8,7 +8,8 @@ var decceleration = 130
 var air_decceleration = 90
 const JUMP_VELOCITY = 11
 var mouse_sensitivty = 0.002 #radiains/pixel
-var controller_sensitivity = 0.04
+var rotationSpeed = 0.00
+var controller_sensitivity = 0.025
 var canDoubleJump = true
 var landing : bool
 var dead : bool
@@ -31,6 +32,7 @@ var overlappedTargets = []
 var homingTarget : Node3D
 var homingSpeed = 60
 var bouncing = true
+var turnHeldDownTime = 0
 
 #Occurs when the game is loaded
 func _ready():
@@ -118,7 +120,6 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	
 	if(velocity.y < 0 && !is_on_floor()):
 		animationState.travel("jump")
 	
@@ -174,6 +175,7 @@ func _physics_process(delta):
 				landing = true
 
 		var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
+		#controller camera controls
 		if cameraInput:
 			rotate_y(-cameraInput.x * controller_sensitivity)
 			$Pivot.rotate_x(-cameraInput.y * controller_sensitivity)
@@ -181,7 +183,7 @@ func _physics_process(delta):
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		_RotatePlayerModelInInputDirection(input_dir)
-		print(input_dir)
+		#print(input_dir)
 		if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
 			runCloud.emitting = true
 		else:
@@ -191,6 +193,17 @@ func _physics_process(delta):
 		if direction:
 			#auri.rotation = Vector3(0,0,0)
 			#Forward
+			if(input_dir.x != 0):
+				turnHeldDownTime += delta
+				if(turnHeldDownTime >= 3):
+					turnHeldDownTime = 3
+			else:
+				turnHeldDownTime -= delta * 5
+				if(turnHeldDownTime <= 0):
+					turnHeldDownTime = 0
+			if(turnHeldDownTime >= 0.5):
+				rotate_y(-input_dir.x * rotationSpeed * (turnHeldDownTime / 1.5))
+				auri.rotate_y(input_dir.x * rotationSpeed * (turnHeldDownTime / 1.5))
 			if is_on_floor():
 				#rotate_y(input_dir.x * -0.01)
 				movementVelocity.z += direction.z * acceleration * delta
@@ -263,7 +276,7 @@ func _on_deathFinished():
 
 #Occurs when another area enters the player area
 func _on_area_3d_area_entered(area):
-	if area.is_in_group("deadly"):
+	if area.is_in_group("deadly") or area.is_in_group("moving_platform"):
 		kill()
 
 func _on_target_detection_area_area_entered(area):
@@ -297,3 +310,8 @@ func _GetClosestTarget():
 
 func _JumpFinished():
 	animationState.travel("inAir")
+
+
+func _on_area_3d_body_entered(body):
+	if(body.is_in_group("moving_platform") && is_on_floor()):
+		kill()

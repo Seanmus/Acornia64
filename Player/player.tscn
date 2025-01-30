@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=20 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -107,6 +107,9 @@ orientation = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
 size = Vector3(0.955, 1.53419, 2)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_t5txg"]
+radius = 0.573245
+
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
 floor_max_angle = 1.11177
@@ -195,8 +198,20 @@ shape = SubResource("BoxShape3D_fpp87")
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 
+[node name="CrushDetector" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984555, 0)
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CrushDetector"]
+transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
+shape = SubResource("SphereShape3D_t5txg")
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
 [connection signal="area_exited" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_exited"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
 [connection signal="jumpFinished" from="auriModel" to="." method="_JumpFinished"]
+[connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]
+[connection signal="body_entered" from="CrushDetector" to="." method="_on_crush_detector_body_entered"]

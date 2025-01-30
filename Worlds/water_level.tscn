@@ -2071,6 +2071,10 @@ timeToCompletePathOneWay = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.8829, 40.4543, -25.0085)
 curve = SubResource("Curve3D_edf57")
 
+[node name="MovingPlatform5" parent="MovingPlatforms" instance=ExtResource("21_aa5io")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.994, -41.9114, 189.412)
+curve = SubResource("Curve3D_edf57")
+
 [node name="MovingPlatform3" parent="MovingPlatforms" instance=ExtResource("21_aa5io")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.1951, 57.2706, 4.83104)
 curve = SubResource("Curve3D_oh1jp")
