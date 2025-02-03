@@ -6,6 +6,7 @@ var acceleration = 130
 var air_acceleration = 90
 var decceleration = 130
 var air_decceleration = 90
+var push_force = 10
 const JUMP_VELOCITY = 11
 var mouse_sensitivty = 0.002 #radiains/pixel
 var rotationSpeed = 0.00
@@ -225,6 +226,12 @@ func _physics_process(delta):
 		velocity.z = movementVelocity.z		
 		bouncing = false		
 		var _returnValue = move_and_slide()
+		
+		for i in get_slide_collision_count():
+			var c = get_slide_collision(i)
+			if c.get_collider() is RigidBody3D:
+				c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
+		
 
 
 func _RotatePlayerModelInInputDirection(input_dir):

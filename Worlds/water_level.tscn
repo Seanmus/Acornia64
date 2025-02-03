@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=42 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -59,6 +59,14 @@ _data = {
 point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_edf57"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16.9, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_en8p3"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16.9, 0),
@@ -2073,7 +2081,7 @@ curve = SubResource("Curve3D_edf57")
 
 [node name="MovingPlatform5" parent="MovingPlatforms" instance=ExtResource("21_aa5io")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.994, -41.9114, 189.412)
-curve = SubResource("Curve3D_edf57")
+curve = SubResource("Curve3D_en8p3")
 
 [node name="MovingPlatform3" parent="MovingPlatforms" instance=ExtResource("21_aa5io")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.1951, 57.2706, 4.83104)
