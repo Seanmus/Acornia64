@@ -45,10 +45,10 @@ func _ready():
 	spawnRotation = rotation
 	
 #Makes the player bounce when hitting a bouncing object		
-func Bounce():
+func Bounce(bounceMultiplier):
 	bouncing = true
 	print("bounce")
-	velocity.y = JUMP_VELOCITY * 1.3
+	velocity.y = JUMP_VELOCITY * bounceMultiplier
 	canDoubleJump = true
 	#gets player off the ground before transitioning to jump state
 	set_position(get_position() + Vector3(0,0.1,0))

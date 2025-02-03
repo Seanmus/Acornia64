@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://sup7uh5i734r"]
+
+[ext_resource type="PackedScene" uid="uid://b4avpwbdx03lv" path="res://WorldBlocks/Imports/forestFloor.glb" id="1_0413u"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y748c"]
+data = PackedVector3Array(-1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="forestFloor" instance=ExtResource("1_0413u")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_y748c")

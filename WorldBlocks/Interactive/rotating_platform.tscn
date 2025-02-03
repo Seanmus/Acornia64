@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://byvqee5bllch1"]
+
+[ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="1_catu0"]
+[ext_resource type="Script" path="res://ADerpyChristmas/Rotator.gd" id="1_dong5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bgobq"]
+size = Vector3(9.72418, 1.66647, 55.0688)
+
+[node name="RotatingPlatform" type="AnimatableBody3D"]
+script = ExtResource("1_dong5")
+
+[node name="MetalBox" parent="." instance=ExtResource("1_catu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+
+[node name="StaticBody3D" parent="MetalBox/Cube" index="0"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="MetalBox2" parent="." instance=ExtResource("1_catu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="StaticBody3D" parent="MetalBox2/Cube" index="0"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="MetalBox3" parent="." instance=ExtResource("1_catu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.53674e-07)
+
+[node name="StaticBody3D" parent="MetalBox3/Cube" index="0"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="MetalBox4" parent="." instance=ExtResource("1_catu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+
+[node name="StaticBody3D" parent="MetalBox4/Cube" index="0"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="MetalBox5" parent="." instance=ExtResource("1_catu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
+
+[node name="StaticBody3D" parent="MetalBox5/Cube" index="0"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0105286, 0.333237, -1.29858)
+shape = SubResource("BoxShape3D_bgobq")
+
+[editable path="MetalBox"]
+[editable path="MetalBox2"]
+[editable path="MetalBox3"]
+[editable path="MetalBox4"]
+[editable path="MetalBox5"]
