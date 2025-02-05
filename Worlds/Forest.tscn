@@ -80,7 +80,7 @@ environment = SubResource("Environment_l3x7x")
 
 [node name="endLevel" parent="." instance=ExtResource("4_2d46h")]
 transform = Transform3D(11.0416, 0, 0, 0, 11.0416, 0, 0, 0, 11.0416, 173.722, 335.882, -111.444)
-nextLevel = "water_level"
+nextLevel = "title"
 
 [node name="circleBricks" parent="." instance=ExtResource("7_pufmb")]
 transform = Transform3D(-15.1264, 0, -26.1997, 0, 30.2528, 0, 26.1997, 0, -15.1264, 203.663, 152.075, -148.082)
