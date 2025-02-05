@@ -7,6 +7,7 @@
 size = Vector3(9.72418, 1.66647, 55.0688)
 
 [node name="RotatingPlatform" type="AnimatableBody3D"]
+sync_to_physics = false
 script = ExtResource("1_dong5")
 
 [node name="MetalBox" parent="." instance=ExtResource("1_catu0")]

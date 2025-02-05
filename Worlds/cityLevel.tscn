@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://ykq50oa7fr8n"]
+[gd_scene load_steps=21 format=3 uid="uid://ykq50oa7fr8n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_ak3a3"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_rfkxa"]
@@ -36,62 +36,6 @@ _data = {
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
-
-[sub_resource type="Gradient" id="Gradient_kj5xc"]
-offsets = PackedFloat32Array(0.2, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_qljky"]
-noise_type = 2
-frequency = 0.03
-cellular_jitter = 3.0
-cellular_return_type = 0
-domain_warp_enabled = true
-domain_warp_type = 1
-domain_warp_amplitude = 50.0
-domain_warp_fractal_type = 2
-domain_warp_fractal_lacunarity = 1.5
-domain_warp_fractal_gain = 1.0
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jquqo"]
-seamless = true
-color_ramp = SubResource("Gradient_kj5xc")
-noise = SubResource("FastNoiseLite_qljky")
-
-[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_3uu23"]
-_shader_parameters = {
-"blend_sharpness": 0.87,
-"height_blending": true,
-"macro_variation1": Color(1, 1, 1, 1),
-"macro_variation2": Color(1, 1, 1, 1),
-"noise1_angle": 0.0,
-"noise1_offset": Vector2(0.5, 0.5),
-"noise1_scale": 0.04,
-"noise2_scale": 0.076,
-"noise3_scale": 0.225,
-"noise_texture": SubResource("NoiseTexture2D_jquqo"),
-"vertex_normals_distance": 128.0
-}
-show_checkered = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vrebb"]
-transparency = 4
-cull_mode = 2
-vertex_color_use_as_albedo = true
-backlight_enabled = true
-backlight = Color(0.5, 0.5, 0.5, 1)
-distance_fade_mode = 1
-distance_fade_min_distance = 960.0
-distance_fade_max_distance = 480.0
-
-[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_i67ek"]
-height_offset = 0.5
-density = 10.0
-material_override = SubResource("StandardMaterial3D_vrebb")
-generated_type = 1
-
-[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_xuo68"]
-mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_i67ek")])
 
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_ak3a3")
@@ -456,9 +400,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5775, 18.7562, 74.3709)
 [node name="MovingPlatform" parent="." instance=ExtResource("18_woq7g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5784, 18.7875, 64.3696)
 curve = SubResource("Curve3D_cwowy")
-
-[node name="Terrain3D" type="Terrain3D" parent="."]
-material = SubResource("Terrain3DMaterial_3uu23")
-assets = SubResource("Terrain3DAssets_xuo68")
-top_level = true
-metadata/_edit_lock_ = true

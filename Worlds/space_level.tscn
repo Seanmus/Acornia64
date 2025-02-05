@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cig4ygd524arc"]
+[gd_scene load_steps=16 format=3 uid="uid://cig4ygd524arc"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_b0lrj"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_3oio8"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bg6wx1omgx1ge" path="res://WorldBlocks/mars.scn" id="11_w5gmy"]
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="12_n6b2p"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="13_dbood"]
+[ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="14_aqntr"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -27,8 +28,9 @@ adjustment_saturation = 1.7
 [node name="spaceLevel" type="Node3D"]
 script = ExtResource("1_b0lrj")
 
-[node name="Player" parent="." instance=ExtResource("2_3oio8")]
+[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_3oio8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.18637, 0)
+UI = NodePath("../UI")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eei7c")
@@ -435,6 +437,9 @@ transform = Transform3D(0.913176, -0.242752, 0, 0.22851, 0.970088, 0, 0, 0, 1, 2
 
 [node name="purpleBricks4" parent="." instance=ExtResource("3_i4c1r")]
 transform = Transform3D(0.913176, -0.242752, 0, 0.22851, 0.970088, 0, 0, 0, 1, 282.71, 73.3072, 297.616)
+
+[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("14_aqntr")]
+cheeseParent = NodePath("../Cheese")
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 
