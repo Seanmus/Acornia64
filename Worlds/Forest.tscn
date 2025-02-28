@@ -330,7 +330,7 @@ transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-
 transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, -21.6643, 38.765, -458.476)
 
 [node name="hollowLog2" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, -1.90735e-05, 0, 81.6491, 0, 1.90735e-05, 0, 105.208, -21.6643, 403.765, -458.476)
+transform = Transform3D(-2.67029e-05, 0, -105.208, 0, 81.6491, 0, 105.208, 0, -2.67029e-05, -21.6643, 403.765, -458.476)
 
 [node name="hollowLog3" parent="." instance=ExtResource("19_ulbx0")]
 transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, -150.664, 38.765, 321.924)
