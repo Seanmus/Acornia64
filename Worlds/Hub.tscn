@@ -43,7 +43,7 @@ environment = SubResource("Environment_l3x7x")
 [node name="MetalPathways" type="Node3D" parent="."]
 
 [node name="endLevel" parent="." instance=ExtResource("9_m6i5f")]
-transform = Transform3D(4.47342, 0, 0, 0, 4.47342, 0, 0, 0, 4.47342, 221.122, 52.4815, -253.044)
+transform = Transform3D(5.66767, 0, 0, 0, 5.66767, 0, 0, 0, 5.66767, -57.278, 9.8815, -35.444)
 nextLevel = "water_level"
 
 [node name="TutorialText" type="Node3D" parent="."]

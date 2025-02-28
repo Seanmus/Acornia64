@@ -121,7 +121,7 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	if(velocity.y < 0 && !is_on_floor()):
+	if(velocity.y != 0 && !is_on_floor()):
 		animationState.travel("jump")
 	
 	var previousTarget = homingTarget
