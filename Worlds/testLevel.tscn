@@ -50,6 +50,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.5595)
 [node name="LargeTile11" parent="." instance=ExtResource("1_pbe0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -41.3337)
 
+[node name="LargeTile18" parent="." instance=ExtResource("1_pbe0x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17, 24, -80.3337)
+
 [node name="LargeTile12" parent="." instance=ExtResource("1_pbe0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8416, 0, -27.5595)
 
@@ -98,6 +101,12 @@ transform = Transform3D(2.62201e-05, 0, -1.5, 0, 1.5, 0, 1.5, 0, 2.62201e-05, 5.
 
 [node name="HomingAttackTarget" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 4.09082, -6.98706)
+
+[node name="HomingAttackTarget8" parent="." instance=ExtResource("7_nd0eu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 13.0908, -38.9871)
+
+[node name="HomingAttackTarget9" parent="." instance=ExtResource("7_nd0eu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 29.0908, -60.9871)
 
 [node name="HomingAttackTarget2" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, -6.98706)

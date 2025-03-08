@@ -94,10 +94,6 @@ transparency = 1
 blend_mode = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
-billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
 
 [sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
 material = SubResource("StandardMaterial3D_71gfw")
@@ -110,31 +106,29 @@ size = Vector3(0.955, 1.53419, 2)
 [sub_resource type="SphereShape3D" id="SphereShape3D_t5txg"]
 radius = 0.573245
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mgyc2"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hgjr5"]
 emission_shape = 1
 emission_sphere_radius = 1.0
 direction = Vector3(0, 0, 0)
-spread = 3.614
-initial_velocity_max = 69.66
-gravity = Vector3(0, 0, 0)
-color = Color(0, 0.435294, 0.819608, 0.858824)
+spread = 5.01
+initial_velocity_min = 5.0
+initial_velocity_max = 147.24
+gravity = Vector3(0, -1, 0)
+color = Color(1, 1, 0.431373, 1)
 hue_variation_min = -0.42
 hue_variation_max = 0.26
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_480qx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0r51"]
 transparency = 1
 blend_mode = 1
 shading_mode = 0
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.195434, 0.740467, 0.305355, 1)
-billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
+albedo_color = Color(0.168627, 0.737255, 0.447059, 0.435294)
+billboard_mode = 2
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_8sf7c"]
-material = SubResource("StandardMaterial3D_480qx")
-size = Vector2(0.496, 0.296)
+[sub_resource type="PlaneMesh" id="PlaneMesh_on6gc"]
+material = SubResource("StandardMaterial3D_i0r51")
+size = Vector2(0.321, 0.446)
 orientation = 2
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
@@ -235,14 +229,15 @@ transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
 shape = SubResource("SphereShape3D_t5txg")
 
 [node name="Homing" type="GPUParticles3D" parent="."]
-transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.39388, 1.03302)
+transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.0568525, 0.396422)
 layers = 2
-amount = 3000
+emitting = false
+amount = 1000
 lifetime = 0.16
 randomness = 1.0
 collision_base_size = 0.1
-process_material = SubResource("ParticleProcessMaterial_mgyc2")
-draw_pass_1 = SubResource("PlaneMesh_8sf7c")
+process_material = SubResource("ParticleProcessMaterial_hgjr5")
+draw_pass_1 = SubResource("PlaneMesh_on6gc")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
