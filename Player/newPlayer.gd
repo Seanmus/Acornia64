@@ -84,6 +84,7 @@ func _HomingAttack(delta):
 		velocity.y = JUMP_VELOCITY
 		homingAttack = false
 		canDoubleJump = false
+		$Homing.emitting = false
 		
 #Occurs when an input that has not been previously handled occurs.
 func _unhandled_input(event):
@@ -159,6 +160,7 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("jump"):
 				if(homingTarget):
 					homingAttack = true
+					$Homing.emitting = true
 					_HomingAttack(delta)
 				else:
 					if canDoubleJump:

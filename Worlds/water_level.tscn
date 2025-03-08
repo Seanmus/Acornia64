@@ -28,7 +28,7 @@
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
-background_color = Color(0.00784314, 0, 0.0588235, 1)
+background_color = Color(0.0340309, 2.25252e-05, 0.154776, 1)
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_sky_contribution = 0.0
@@ -2041,6 +2041,9 @@ outline_size = 100
 
 [node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("11_4gwdo")]
 transform = Transform3D(31.7753, 0, 2.6148e-12, 0, 31.7753, 0, -2.6148e-12, 0, 31.7753, 511, -7.833, 95.283)
+
+[node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("11_4gwdo")]
+transform = Transform3D(-1.38894e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, -1.38894e-06, 293.2, 0.567, 0.0829957)
 
 [node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("11_4gwdo")]
 transform = Transform3D(-1.90604e-06, 0, 43.605, 0, 43.605, 0, -43.605, 0, -1.90604e-06, 103.711, 40.7931, 27.5884)
