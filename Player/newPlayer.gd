@@ -71,9 +71,9 @@ func _HomingAttack(delta):
 	$Area3D.monitoring = false
 
 	position = position.move_toward(homingTarget.global_position, delta * homingSpeed)
-	if position.distance_to(homingTarget.global_position) > 1 && abs(position.y - homingTarget.position.y) > 1:
-		var homingRot = position.direction_to(homingTarget.position)
-		$Homing.rotation.x = homingRot.x
+	#if position.distance_to(homingTarget.global_position) > 1 && abs(position.y - homingTarget.position.y) > 5:
+		#var homingRot = position.direction_to(homingTarget.position)
+		#$Homing.rotation.x = homingRot.x
 	#$Homing.process_material.set("direction", position.direction_to(prevPos))
 	#Checks if the players has reached the target position
 	if position == homingTarget.global_position:
