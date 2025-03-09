@@ -8,10 +8,13 @@
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="7_0jk04"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
+[ext_resource type="Material" uid="uid://50fpmhiuqqje" path="res://Player/HomingTrail.tres" id="9_s57er"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_lj47o"]
+length = 2.0
+slide_on_slope = true
 
 [sub_resource type="Animation" id="Animation_ppe4r"]
 length = 0.001
@@ -118,18 +121,8 @@ color = Color(1, 1, 0.431373, 1)
 hue_variation_min = -0.42
 hue_variation_max = 0.26
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0r51"]
-transparency = 1
-blend_mode = 1
-shading_mode = 0
-vertex_color_use_as_albedo = true
-albedo_color = Color(0.168627, 0.737255, 0.447059, 0.435294)
-billboard_mode = 2
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_on6gc"]
-material = SubResource("StandardMaterial3D_i0r51")
-size = Vector2(0.321, 0.446)
-orientation = 2
+[sub_resource type="BoxMesh" id="BoxMesh_qhmb7"]
+material = ExtResource("9_s57er")
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
@@ -150,7 +143,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099351)
 [node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
 collision_mask = 986895
 shape = SubResource("SeparationRayShape3D_lj47o")
-spring_length = 15.0
+spring_length = 20.08
 margin = 1.39
 
 [node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
@@ -229,15 +222,15 @@ transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
 shape = SubResource("SphereShape3D_t5txg")
 
 [node name="Homing" type="GPUParticles3D" parent="."]
-transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.0568525, 0.396422)
+transform = Transform3D(0.355692, 0, 0, 0, 0.15653, 0, 0, 0, 0.355692, -0.0208757, -0.0568525, 0.396422)
 layers = 2
 emitting = false
-amount = 1000
-lifetime = 0.16
+amount = 300
+lifetime = 0.1
 randomness = 1.0
 collision_base_size = 0.1
 process_material = SubResource("ParticleProcessMaterial_hgjr5")
-draw_pass_1 = SubResource("PlaneMesh_on6gc")
+draw_pass_1 = SubResource("BoxMesh_qhmb7")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
