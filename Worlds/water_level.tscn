@@ -170,7 +170,7 @@ transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.3258, 17.0309)
 
 [node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_iqfuu")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.71, -39.5648, 275.095)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.71, -38.6662, 266.005)
 floor_block_on_wall = false
 UI = NodePath("../UI")
 

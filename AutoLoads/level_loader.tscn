@@ -11,8 +11,8 @@ script = ExtResource("1_qey6j")
 
 [node name="Transition" parent="." instance=ExtResource("1_s6k0h")]
 material = ExtResource("3_xvord")
-offset_right = 1280.0
-offset_bottom = 960.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 

@@ -2,14 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwpb711kc6e40"
+uid="uid://cusa17i0t7jgd"
 path.s3tc="res://godot/imported/snowBlockBeveled_snowPic.jpg-8223d3d886e9bc8216d369c890af0331.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
-}
-generator_parameters={
-"md5": "fa6b37745dc784622bb9a18de128236c"
 }
 
 [deps]

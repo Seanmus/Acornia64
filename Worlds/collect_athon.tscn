@@ -378,8 +378,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5821, 33.0937, 43.1721)
 
 [node name="UI" parent="." instance=ExtResource("20_663ie")]
 
-[connection signal="seedPlanted" from="FlowerPots/flowerPot" to="UI" method="_on_flower_pot_seed_planted"]
 [connection signal="seedPlanted" from="FlowerPots/flowerPot" to="UI" method="FlowerPlanted"]
+[connection signal="seedPlanted" from="FlowerPots/flowerPot" to="UI" method="_on_flower_pot_seed_planted"]
 [connection signal="seedPlanted" from="FlowerPots/flowerPot6" to="UI" method="FlowerPlanted"]
 [connection signal="seedPlanted" from="FlowerPots/flowerPot2" to="UI" method="FlowerPlanted"]
 [connection signal="seedPlanted" from="FlowerPots/flowerPot4" to="UI" method="FlowerPlanted"]

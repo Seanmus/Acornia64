@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=18 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://qoh3nf7d6c53" path="res://Player/Imports/acorn.glb" id="14_jo5n0"]
 [ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="15_mov07"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="15_nxpkx"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://Traps/cannon.tscn" id="16_dy7u7"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="16_sm1qr"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_xpbca"]
 
@@ -108,3 +109,6 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.3047
 
 [node name="Derpy2" parent="." instance=ExtResource("15_mov07")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -52.3781, -0.686995, -49.9988)
+
+[node name="cannon" parent="." instance=ExtResource("16_dy7u7")]
+transform = Transform3D(0.536637, 0, -0.843813, 0, 1, 0, 0.843813, 0, 0.536637, -61.1848, -1.32425, 66.398)

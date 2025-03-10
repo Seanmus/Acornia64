@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjehqaj4qxuj6"
+uid="uid://cb2ai2ld2dlvg"
 path.s3tc="res://godot/imported/mushroom_mushroom.png-4edfad4de453d3920dbedf80ca8db46d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
@@ -22,7 +22,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
