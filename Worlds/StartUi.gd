@@ -17,7 +17,7 @@ func _process(_delta):
 		
 #Loads the first level
 func _on_button_pressed():
-	LevelLoader._loadLevel("water_level")
+	LevelLoader._loadLevel("Hub")
 
 #Sets the audio bus volume to the sliders value
 func _on_audio_slider_value_changed(value):
