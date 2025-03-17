@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4hmq46yu8r14"]
+
+[ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="1_5pavq"]
+[ext_resource type="Texture2D" uid="uid://b6rhimq661wf8" path="res://Textures/lava2.png" id="2_x4ef8"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_60bo5"]
+frames = 2
+frame_0/texture = ExtResource("1_5pavq")
+frame_1/texture = ExtResource("2_x4ef8")
+frame_1/duration = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qr1m5"]
+albedo_texture = SubResource("AnimatedTexture_60bo5")
+uv1_scale = Vector3(20, 20, 20)
+
+[node name="Lava" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000308879, -0.4995, -0.00135362)
+size = Vector3(1, 0.001, 1)
+material = SubResource("StandardMaterial3D_qr1m5")
