@@ -1,19 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=16 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_c2buu"]
-[ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="9_m6i5f"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="10_vav66"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="11_3y7bn"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="12_uyxvc"]
 [ext_resource type="PackedScene" uid="uid://cgu4whrv1kmrr" path="res://WorldBlocks/Forest/hub_world.tscn" id="13_4mtf7"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="13_8phuy"]
 [ext_resource type="PackedScene" uid="uid://8sqqtuym0cmo" path="res://WorldBlocks/Forest/hub_tree.tscn" id="13_x5o8x"]
-[ext_resource type="PackedScene" uid="uid://qoh3nf7d6c53" path="res://Player/Imports/acorn.glb" id="14_jo5n0"]
-[ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="15_mov07"]
+[ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="14_i4j4k"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="15_nxpkx"]
-[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://Traps/cannon.tscn" id="16_dy7u7"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="16_sm1qr"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_xpbca"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="17_y6leu"]
@@ -33,7 +30,7 @@ script = ExtResource("1_m4e2o")
 nextLevel = "space_level"
 
 [node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_qhnpu")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.9936, 3, 5.49094)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -27.3936, 3, 5.49094)
 UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("3_c2buu")]
@@ -44,17 +41,12 @@ environment = SubResource("Environment_l3x7x")
 
 [node name="MetalPathways" type="Node3D" parent="."]
 
-[node name="endLevel" parent="." instance=ExtResource("9_m6i5f")]
-transform = Transform3D(5.66767, 0, 0, 0, 5.66767, 0, 0, 0, 5.66767, -57.278, 9.8815, -35.444)
-nextLevel = "water_level"
-
 [node name="TutorialText" type="Node3D" parent="."]
 
 [node name="CameraText" type="Label3D" parent="TutorialText"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3278, 11.3591, 6.22171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2722, 11.3591, 4.42171)
 billboard = 1
-text = "You can rotate your camera 
-with your mouse!"
+text = "Jump in the Cannon to Go To the Next Planet"
 font = ExtResource("10_vav66")
 font_size = 260
 outline_size = 100
@@ -93,20 +85,53 @@ transform = Transform3D(122.806, 0, 0, 0, 122.806, 0, 0, 0, 122.806, -12.3049, -
 [node name="hubTree" parent="." instance=ExtResource("13_x5o8x")]
 transform = Transform3D(0.321583, 0, 0, 0, 0.321583, 0, 0, 0, 0.321583, 12.0298, 8.25057, 14.5879)
 
-[node name="acorn2" parent="." instance=ExtResource("14_jo5n0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.0044, -1.5567, -45.2485)
-
-[node name="acorn4" parent="." instance=ExtResource("14_jo5n0")]
-transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 60.6038, -2.48251, 4.475)
-
-[node name="Derpy" parent="." instance=ExtResource("15_mov07")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.304791, -1.08131, -64.6323)
-
-[node name="Derpy2" parent="." instance=ExtResource("15_mov07")]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -52.3781, -0.686995, -49.9988)
-
-[node name="cannon" parent="." instance=ExtResource("16_dy7u7")]
-transform = Transform3D(0.536637, 0, -0.843813, 0, 1, 0, 0.843813, 0, 0.536637, -61.1848, -1.32425, 66.398)
-
 [node name="StartCannon" parent="." instance=ExtResource("17_y6leu")]
 transform = Transform3D(-1.95874e-07, 0, -4.48106, 0, 4.48106, 0, 4.48106, 0, -1.95874e-07, -76.6231, 3.54344, 4.86287)
+
+[node name="GratePathway" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2177, 2.83383, -16.4671)
+
+[node name="GratePathway2" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.4177, 2.83383, -16.4671)
+
+[node name="GratePathway3" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.6177, 2.83383, -16.4671)
+
+[node name="GratePathway4" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.8177, 2.83383, -16.4671)
+
+[node name="GratePathway5" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.018, 2.83383, -16.4671)
+
+[node name="GratePathway6" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.218, 2.83383, -16.4671)
+
+[node name="GratePathway7" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.418, 2.83383, -16.4671)
+
+[node name="GratePathway8" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.618, 2.83383, -16.4671)
+
+[node name="GratePathway9" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -160.092, 4.50921, -16.4671)
+
+[node name="GratePathway10" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -172.843, 7.92563, -16.4671)
+
+[node name="GratePathway11" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -185.593, 11.342, -16.4671)
+
+[node name="GratePathway12" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -198.343, 14.7584, -16.4671)
+
+[node name="GratePathway13" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.741, 16.3738, -16.4671)
+
+[node name="GratePathway14" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -223.941, 16.3738, -16.4671)
+
+[node name="GratePathway15" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -237.141, 16.3738, -16.4671)
+
+[node name="GratePathway16" parent="." instance=ExtResource("14_i4j4k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -250.341, 16.3738, -16.4671)

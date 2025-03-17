@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://slerfwo8ytes"]
+
+[ext_resource type="PackedScene" uid="uid://bovwfb41blhj2" path="res://WorldBlocks/grate.tscn" id="1_dd3at"]
+[ext_resource type="PackedScene" uid="uid://bxm65kw507ine" path="res://WorldBlocks/Decor/metal_pillar.tscn" id="2_7wei7"]
+
+[node name="GratePathway" type="Node3D"]
+
+[node name="grate" parent="." instance=ExtResource("1_dd3at")]
+transform = Transform3D(6.61702, 0, 0, 0, 6.61702, 0, 0, 0, 6.61702, 0, 0, 0)
+
+[node name="MetalPillar3" parent="." instance=ExtResource("2_7wei7")]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.6, 7.6)
+
+[node name="MetalPillar2" parent="." instance=ExtResource("2_7wei7")]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.6, -7.6)
