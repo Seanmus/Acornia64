@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck7d128a3d3s5"]
+
+[ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="1_ieatf"]
+
+[node name="GratePathway" instance=ExtResource("1_ieatf")]
+
+[node name="MetalPillar3" parent="." index="1"]
+transform = Transform3D(1.91069e-15, -4.27189e-08, -1, -1, -4.27189e-08, 0, -4.37114e-08, 0.977295, -4.37114e-08, -7.6, 0.6, 1.19209e-07)
