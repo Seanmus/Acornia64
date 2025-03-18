@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://chx8nc7gqiuis"]
+[gd_scene load_steps=25 format=3 uid="uid://chx8nc7gqiuis"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_n27il"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="2_xh2n1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="4_njel1"]
 [ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="5_512im"]
 [ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="6_oag7i"]
+[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_fm1tq"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="8_gghaw"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="9_x30ud"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="10_2mo60"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="14_srfn2"]
 [ext_resource type="PackedScene" uid="uid://bjrghd434hmf1" path="res://metal_pillar_proper_scale.tscn" id="15_m5tni"]
 [ext_resource type="PackedScene" uid="uid://ck7d128a3d3s5" path="res://WorldBlocks/Grate_Corner.tscn" id="16_eenwa"]
+[ext_resource type="PackedScene" uid="uid://bpokyy4dpbopg" path="res://Traps/lava_plume.tscn" id="18_d1e8r"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2s6p4"]
 panorama = ExtResource("5_512im")
@@ -150,8 +152,22 @@ environment = SubResource("Environment_dldff")
 transform = Transform3D(-9.86059, 0, -8.6204e-07, 0, 9.86059, 0, 8.6204e-07, 0, -9.86059, 176.635, 107.39, -40.152)
 nextLevel = "Forest"
 
-[node name="HomingAttackTargets" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 301.355, -42.92, 221.23)
+[node name="HomingAttackTargets" type="Node" parent="."]
+
+[node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.8, -80.8, -15.2)
+
+[node name="HomingAttackTarget2" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 186.6, -79.4, -15.2)
+
+[node name="HomingAttackTarget3" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199.8, -81.6, -127.6)
+
+[node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 243.6, -81.6, -185.2)
+
+[node name="HomingAttackTarget5" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 263.2, -81.6, -185.2)
 
 [node name="Tires" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 301.355, -42.92, 221.23)
@@ -186,7 +202,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 319.453, -28.6394, 32.9656)
 curve = SubResource("Curve3D_an5yb")
 
 [node name="Lava" parent="." instance=ExtResource("13_7hmqa")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434.636, -147.075, -713.898)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 434.636, -119.215, -713.898)
 size = Vector3(3000, 0.001, 3000)
 
 [node name="GratePaths" type="Node" parent="."]
@@ -371,6 +387,18 @@ transform = Transform3D(0.965926, -0.258819, 0, 0.258819, 0.965926, 0, 0, 0, 1, 
 [node name="GratePathway36" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146.617, -85.47, 65.065)
 
+[node name="GratePathway46" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 173.017, -85.47, 78.265)
+
+[node name="GratePathway54" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 186.217, -85.47, 78.265)
+
+[node name="GratePathway45" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 159.817, -85.47, 78.265)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway45" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.624359, -7.6)
+
 [node name="GratePathway37" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146.617, -85.47, 51.865)
 
@@ -386,16 +414,110 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146.61
 [node name="GratePathway41" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146.617, -85.47, -0.934986)
 
-[node name="GratePathway42" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 159.817, -85.47, -14.135)
+[node name="GratePathway49" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, 65.065)
 
-[node name="MetalPillar3" parent="GratePaths/GratePathway42" index="1"]
-transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.61, 7.6)
+[node name="MetalPillar3" parent="GratePaths/GratePathway49" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.61306, 7.60001)
+
+[node name="GratePathway50" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, 51.865)
+
+[node name="GratePathway53" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, 12.265)
+
+[node name="GratePathway55" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -0.934986)
+
+[node name="GratePathway56" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -14.135)
+
+[node name="GratePathway57" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -27.335)
+
+[node name="GratePathway58" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -40.535)
+
+[node name="GratePathway59" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -53.735)
+
+[node name="GratePathway61" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -80.135)
+
+[node name="GratePathway62" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -93.335)
+
+[node name="GratePathway63" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -106.535)
+
+[node name="GratePathway66" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -146.135)
+
+[node name="GratePathway67" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -159.335)
+
+[node name="GratePathway68" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 199.417, -85.47, -172.535)
+
+[node name="GratePathway69" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 212.617, -85.47, -185.735)
+
+[node name="GratePathway70" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 225.817, -85.47, -185.735)
+
+[node name="GratePathway71" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 282.017, -85.47, -185.735)
+
+[node name="GratePathway72" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 295.217, -85.47, -185.735)
+
+[node name="GratePathway73" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.06581e-14, 0, 1, 0, 1.06581e-14, 0, 1, 308.417, -85.47, -185.735)
 
 [node name="GratePathway43" parent="GratePaths" instance=ExtResource("16_eenwa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.617, -85.47, -14.184)
 
+[node name="GratePathway44" parent="GratePaths" instance=ExtResource("16_eenwa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 146.617, -85.47, 78.216)
+
+[node name="GratePathway48" parent="GratePaths" instance=ExtResource("16_eenwa")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 199.417, -85.47, 78.216)
+
+[node name="GratePathway51" parent="GratePaths" instance=ExtResource("16_eenwa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199.417, -85.47, -185.784)
+
+[node name="LavaPlume" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.738, -121.024, -127.843)
+
+[node name="LavaPlume2" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 321.538, -121.024, -127.843)
+
+[node name="LavaPlume3" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 321.538, -121.024, -62.6431)
+
+[node name="LavaPlume4" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.5379, -121.024, -62.6431)
+
+[node name="LavaPlume5" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.138, -121.024, -216.043)
+
+[node name="LavaPlume6" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.538, -121.024, 43.3569)
+
+[node name="LavaPlume7" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.738, -121.024, 95.7569)
+
+[node name="LavaPlume8" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.138, -121.024, 150.957)
+
+[node name="LavaPlume9" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 453.738, -121.024, 150.957)
+
+[node name="LavaPlume10" parent="." instance=ExtResource("18_d1e8r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.538, -121.024, 45.1569)
+
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 
 [editable path="Player"]
-[editable path="GratePaths/GratePathway42"]
+[editable path="GratePaths/GratePathway45"]
+[editable path="GratePaths/GratePathway49"]

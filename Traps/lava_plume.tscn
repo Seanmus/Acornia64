@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpokyy4dpbopg"]
+
+[ext_resource type="Script" path="res://Traps/lava_plume.gd" id="1_l05el"]
+[ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="1_w36sv"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qrc58"]
+direction = Vector3(0, 1, 0)
+spread = 4.0
+initial_velocity_min = 28.77
+initial_velocity_max = 28.77
+scale_min = 0.1
+scale_max = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e8mkj"]
+albedo_texture = ExtResource("1_w36sv")
+
+[sub_resource type="BoxMesh" id="BoxMesh_epon5"]
+material = SubResource("StandardMaterial3D_e8mkj")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_q6ako"]
+height = 9.57169
+radius = 2.18516
+
+[node name="LavaPlume" type="Area3D"]
+script = ExtResource("1_l05el")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+emitting = false
+amount = 1114
+lifetime = 5.0
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_qrc58")
+draw_pass_1 = SubResource("BoxMesh_epon5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.57043, 0)
+shape = SubResource("CylinderShape3D_q6ako")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
