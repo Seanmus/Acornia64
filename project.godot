@@ -42,6 +42,7 @@ movie_writer/movie_file="D:/AcorniaFiles/Videos/homingAttack.avi"
 
 [filesystem]
 
+import/blender/enabled=false
 import/fbx/enabled=false
 import/fbx/use_fbx=true
 
