@@ -578,7 +578,7 @@ _data = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer"]
-autoplay = "walking"
 libraries = {
 "": SubResource("AnimationLibrary_fagwc")
 }
+autoplay = "walking"

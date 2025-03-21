@@ -58,7 +58,9 @@ func Bounce(bounceMultiplier):
 	
 #Starts the proccess of the players death	
 func kill():
-	animationState.travel("die")
+	$auriModel/AnimationTree.active = false
+	$auriModel/AnimationPlayer.play("die")
+	#animationState.travel("die")
 	$DeathSound.play()
 	velocity.y = 0
 	velocity.x = 0
@@ -127,7 +129,7 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	if(velocity.y != 0 && !is_on_floor()):
+	if(abs(velocity.y) > 6 && !is_on_floor()):
 		animationState.travel("jump")
 	
 	var previousTarget = homingTarget
@@ -151,14 +153,12 @@ func _physics_process(delta):
 	if not dead:
 		if is_on_floor() && !dead && !bouncing:
 			canDoubleJump = true
-			if not dead:
-				animationState.travel("idle")
-				if(velocity.x != 0 || velocity.z != 0):
-					animationState.travel("walking")
-			if landing:
-				landSound.play()
-				animationState.travel("land");
-				landing = false	
+			if(velocity.x != 0 || velocity.z != 0):
+				animationState.travel("walking")
+			else:
+				if landing:
+					landing = false
+					animationState.travel("idle")
 			if Input.is_action_just_pressed("jump"):
 				jump()
 		else:
@@ -283,6 +283,8 @@ func _on_deathFinished():
 	rotation = spawnRotation
 	$Pivot.rotation.x = spawnRotation.x
 	dead = false
+	$auriModel/AnimationPlayer.play("idle")
+	$auriModel/AnimationTree.active = true
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in enemies:
 		enemy as MovingEnemiesBase
@@ -328,4 +330,6 @@ func _JumpFinished():
 
 func _on_area_3d_body_entered(body):
 	if(body.is_in_group("moving_platform") && is_on_floor()):
+		$Pivot/SpringArm3D/Camera3D.current = false
+		$DeathCam.current = true
 		kill()

@@ -32,7 +32,6 @@ GameManager="*res://ADerpyChristmas/game_manager.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/stretch/mode="viewport"
 window/size/fullscreen=true
 
@@ -42,6 +41,7 @@ movie_writer/movie_file="D:/AcorniaFiles/Videos/homingAttack.avi"
 
 [filesystem]
 
+import/blender/enabled=false
 import/fbx/enabled=false
 import/fbx/use_fbx=true
 

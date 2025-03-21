@@ -128,6 +128,7 @@ material = ExtResource("9_s57er")
 floor_constant_speed = true
 floor_max_angle = 1.11177
 floor_snap_length = 0.31
+platform_on_leave = 1
 platform_floor_layers = 4294967293
 platform_wall_layers = 2
 safe_margin = 0.1
@@ -231,6 +232,10 @@ randomness = 1.0
 collision_base_size = 0.1
 process_material = SubResource("ParticleProcessMaterial_hgjr5")
 draw_pass_1 = SubResource("BoxMesh_qhmb7")
+
+[node name="DeathCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 3.98414, 3)
+environment = ExtResource("2_pbjct")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
