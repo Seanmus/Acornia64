@@ -600,7 +600,7 @@ environment = SubResource("Environment_eei7c")
 
 [node name="endLevel" parent="Blocks" instance=ExtResource("6_b7wtq")]
 transform = Transform3D(-9.86059, 0, -8.6204e-07, 0, 9.86059, 0, 8.6204e-07, 0, -9.86059, 176.635, 107.39, -40.152)
-nextLevel = "Forest"
+nextLevel = "lava_level"
 
 [node name="MetalBox" parent="Blocks" instance=ExtResource("9_8bvpm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0186936, 0, 0.0135364)

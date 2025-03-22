@@ -333,3 +333,10 @@ func _on_area_3d_body_entered(body):
 		$Pivot/SpringArm3D/Camera3D.current = false
 		$DeathCam.current = true
 		kill()
+
+#fixes bug with spin anim on vertical moving platform
+func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
+	if body.is_in_group("moving_platform"):
+		print("moving platform on bottom")
+		velocity.y = -1000
+		animationState.travel("land")

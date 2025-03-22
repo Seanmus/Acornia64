@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=24 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -124,6 +124,8 @@ hue_variation_max = 0.26
 [sub_resource type="BoxMesh" id="BoxMesh_qhmb7"]
 material = ExtResource("9_s57er")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_2ymgt"]
+
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
 floor_max_angle = 1.11177
@@ -237,6 +239,12 @@ draw_pass_1 = SubResource("BoxMesh_qhmb7")
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 3.98414, 3)
 environment = ExtResource("2_pbjct")
 
+[node name="MovingPlatformDetector" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.539592, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MovingPlatformDetector"]
+shape = SubResource("SphereShape3D_2ymgt")
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
@@ -245,3 +253,4 @@ environment = ExtResource("2_pbjct")
 [connection signal="jumpFinished" from="auriModel" to="." method="_JumpFinished"]
 [connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]
 [connection signal="body_entered" from="CrushDetector" to="." method="_on_crush_detector_body_entered"]
+[connection signal="body_entered" from="MovingPlatformDetector" to="." method="_on_moving_platform_detector_body_entered"]

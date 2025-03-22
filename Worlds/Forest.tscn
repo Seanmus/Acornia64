@@ -70,7 +70,7 @@ _data = {
 }
 point_count = 2
 
-[node name="newForest" type="Node3D"]
+[node name="newForest2" type="Node3D"]
 script = ExtResource("1_6fxah")
 nextLevel = "space_level"
 
