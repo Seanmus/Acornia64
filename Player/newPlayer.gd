@@ -129,7 +129,7 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	if(abs(velocity.y) > 6 && !is_on_floor()):
+	if(abs(velocity.y) > 3 && !is_on_floor()):
 		animationState.travel("jump")
 	
 	var previousTarget = homingTarget
@@ -155,6 +155,8 @@ func _physics_process(delta):
 			canDoubleJump = true
 			if(velocity.x != 0 || velocity.z != 0):
 				animationState.travel("walking")
+				if landing:
+					landing = false
 			else:
 				if landing:
 					landing = false
@@ -175,12 +177,12 @@ func _physics_process(delta):
 			velocity.y -= gravity * 1.2 * delta
 			if(velocity.y < 0):
 				velocity.y -= gravity * 5 * delta
-			if !landing:
-				var targets = get_tree().get_nodes_in_group("targets")
-				for target in targets:
-					target as homingAttackTarget
-					target._Reset()
-				landing = true
+		if !landing:
+			var targets = get_tree().get_nodes_in_group("targets")
+			for target in targets:
+				target as homingAttackTarget
+				target._Reset()
+			landing = true
 
 		var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
 		#controller camera controls
