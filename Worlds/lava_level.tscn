@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://chx8nc7gqiuis"]
+[gd_scene load_steps=27 format=3 uid="uid://chx8nc7gqiuis"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_n27il"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="2_xh2n1"]
@@ -56,6 +56,22 @@ _data = {
 point_count = 5
 
 [sub_resource type="Curve3D" id="Curve3D_an5yb"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, 0, 0, 0, -6.195, 0, 0, -25.815, 0, 0, -2.215, 0, 0, 0, 0, 0, -26.205, 0, 12.755, 0, 0, 0, 2.895, 0, 0, 0, 0, 13.26, 7.345, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_jeetq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, -1.955, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 3.825, 0, 0, 30, 0, 11, 0, 0, 0, -1.945, 0, 0.15, 30, 0, 3.46, 5.335, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_rwe1c"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, 0, 0, 0, -6.195, 0, 0, -25.815, 0, 0, -2.215, 0, 0, 0, 0, 0, -26.205, 0, 12.755, 0, 0, 0, 2.895, 0, 0, 0, 0, 13.26, 7.345, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -376,11 +392,11 @@ curve = SubResource("Curve3D_an5yb")
 
 [node name="MovingNutcracker3" parent="Nutcrackers" instance=ExtResource("12_g2puy")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 309.457, 30.6871, 11.3804)
-curve = SubResource("Curve3D_h8ocm")
+curve = SubResource("Curve3D_jeetq")
 
 [node name="MovingNutcracker4" parent="Nutcrackers" instance=ExtResource("12_g2puy")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 285.604, 30.6871, -16.2816)
-curve = SubResource("Curve3D_an5yb")
+curve = SubResource("Curve3D_rwe1c")
 
 [node name="Lava" parent="." instance=ExtResource("13_7hmqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.044, -119.215, -90.1806)
@@ -423,6 +439,21 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0.258819, 0.965926, 1.13133e-08, -0.
 
 [node name="GratePathway12" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0.258819, 0.965926, 1.13133e-08, -0.965926, 0.258819, -4.2222e-08, 306.901, -30.7314, 138.123)
+
+[node name="GratePathway42" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e-08, -0.866025, -0.5, -3.78552e-08, 306.939, -20.0558, 326.896)
+
+[node name="GratePathway196" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, 1.76391e-16, 1, -1, -2.08616e-07, -4.37114e-08, 2.08616e-07, -1, 5.86198e-14, 306.939, -10.8558, 332.496)
+
+[node name="GratePathway47" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e-08, -0.866025, -0.5, -3.78552e-08, 306.901, -26.6563, 315.464)
+
+[node name="GratePathway162" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e-08, -0.866025, -0.5, -3.78552e-08, 306.901, -33.2561, 304.032)
+
+[node name="GratePathway163" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e-08, -0.866025, -0.5, -3.78552e-08, 306.901, -39.856, 292.601)
 
 [node name="GratePathway13" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, -8.88178e-16, -1, 0, -4.37114e-08, 306.901, -29.056, 125.648)

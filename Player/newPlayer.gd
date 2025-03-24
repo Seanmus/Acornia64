@@ -295,8 +295,7 @@ func _on_deathFinished():
 #Occurs when another area enters the player area
 func _on_area_3d_area_entered(area):
 	if area.is_in_group("deadly") or area.is_in_group("moving_platform"):
-		if not dead:
-			kill()
+		kill()
 
 func _on_target_detection_area_area_entered(area):
 	if area.is_in_group("targets"):
