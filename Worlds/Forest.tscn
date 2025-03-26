@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_6fxah"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_wxx5d"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_0r6t5"]
-[ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="4_2d46h"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_05mqp"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="6_b5hto"]
 [ext_resource type="PackedScene" uid="uid://buebv7vsgn6hc" path="res://WorldBlocks/circle_bricks.tscn" id="7_pufmb"]
@@ -16,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://d2pg8s6s68vkj" path="res://WorldBlocks/Forest/forest_block.tscn" id="17_7i0tx"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_opd30"]
 [ext_resource type="PackedScene" uid="uid://byvqee5bllch1" path="res://WorldBlocks/Interactive/rotating_platform.tscn" id="18_so85a"]
+[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="19_3in2f"]
 [ext_resource type="PackedScene" uid="uid://cdi7tnu4t431f" path="res://WorldBlocks/Forest/forest_block_diamond.tscn" id="19_ifote"]
 [ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="19_las8y"]
 [ext_resource type="PackedScene" uid="uid://2n5hg0ladvf3" path="res://WorldBlocks/Imports/hollowLog.glb" id="19_ulbx0"]
@@ -77,10 +77,6 @@ transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828
 environment = SubResource("Environment_l3x7x")
 
 [node name="MetalPathways" type="Node" parent="."]
-
-[node name="endLevel" parent="." instance=ExtResource("4_2d46h")]
-transform = Transform3D(11.0416, 0, 0, 0, 11.0416, 0, 0, 0, 11.0416, 173.722, 335.882, -111.444)
-nextLevel = "title"
 
 [node name="circleBricks" parent="." instance=ExtResource("7_pufmb")]
 transform = Transform3D(-15.1264, 0, -26.1997, 0, 30.2528, 0, 26.1997, 0, -15.1264, 203.663, 152.075, -148.082)
@@ -373,3 +369,15 @@ transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6492, 0, -91.113, 0, -52.6041
 
 [node name="hollowLog16" parent="." instance=ExtResource("19_ulbx0")]
 transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6491, 0, -91.113, 0, -52.6041, 489.336, 403.765, -260.476)
+
+[node name="StartCannon" parent="." instance=ExtResource("19_3in2f")]
+transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 172.056, 320.375, -112.794)
+nextLevel = "Title"
+
+[node name="Cylinder" parent="StartCannon" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.327838, -0.944734, 0, 0.944734, 0.327838, 0, 0, 0)
+
+[node name="Muzzle" parent="StartCannon" index="6"]
+transform = Transform3D(0.994314, 0.00598476, -0.106319, 0.0206157, 0.968712, 0.247331, 0.104473, -0.248116, 0.96308, 0, 0.888893, 0.711109)
+
+[editable path="StartCannon"]

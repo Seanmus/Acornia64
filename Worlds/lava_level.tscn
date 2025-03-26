@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="3_ukj2j"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="4_njel1"]
 [ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="5_512im"]
-[ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="6_oag7i"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_fm1tq"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="8_gghaw"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="9_x30ud"]
@@ -17,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="14_srfn2"]
 [ext_resource type="PackedScene" uid="uid://bjrghd434hmf1" path="res://metal_pillar_proper_scale.tscn" id="15_m5tni"]
 [ext_resource type="PackedScene" uid="uid://ck7d128a3d3s5" path="res://WorldBlocks/Grate_Corner.tscn" id="16_eenwa"]
+[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="18_3kqsl"]
 [ext_resource type="PackedScene" uid="uid://bpokyy4dpbopg" path="res://Traps/lava_plume.tscn" id="18_d1e8r"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2s6p4"]
@@ -235,10 +235,6 @@ transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, 
 environment = SubResource("Environment_dldff")
 
 [node name="Blocks" type="Node3D" parent="."]
-
-[node name="endLevel" parent="Blocks" instance=ExtResource("6_oag7i")]
-transform = Transform3D(-9.86059, 0, -8.6204e-07, 0, 9.86059, 0, 8.6204e-07, 0, -9.86059, 366.58, 39.3556, -342.853)
-nextLevel = "Forest"
 
 [node name="HomingAttackTargets" type="Node" parent="."]
 
@@ -1305,7 +1301,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 453.738, -121.024, 150.957)
 [node name="LavaPlume10" parent="." instance=ExtResource("18_d1e8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.538, -121.024, 45.1569)
 
-[connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
+[node name="StartCannon" parent="." instance=ExtResource("18_3kqsl")]
+transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 365.919, 29.1736, -338.28)
+nextLevel = "Forest"
 
 [editable path="Player"]
 [editable path="GratePaths/GratePathway45"]
