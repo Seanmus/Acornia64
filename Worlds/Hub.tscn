@@ -44,7 +44,7 @@ environment = SubResource("Environment_l3x7x")
 [node name="TutorialText" type="Node3D" parent="."]
 
 [node name="CameraText" type="Label3D" parent="TutorialText"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2722, 11.3591, 4.42171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2722, 11.3591, 43.1825)
 billboard = 1
 text = "Jump in the Cannon to Go To the Next Planet"
 font = ExtResource("10_vav66")
@@ -87,6 +87,7 @@ transform = Transform3D(0.321583, 0, 0, 0, 0.321583, 0, 0, 0, 0.321583, 12.0298,
 
 [node name="StartCannon" parent="." instance=ExtResource("17_y6leu")]
 transform = Transform3D(-1.95874e-07, 0, -4.48106, 0, 4.48106, 0, 4.48106, 0, -1.95874e-07, -76.6231, 3.54344, 4.86287)
+nextLevel = "water_level"
 
 [node name="GratePathway" parent="." instance=ExtResource("14_i4j4k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2177, 2.83383, -16.4671)

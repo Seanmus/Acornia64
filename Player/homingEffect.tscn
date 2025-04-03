@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu1gleum7faqc"]
+
+[ext_resource type="Material" uid="uid://50fpmhiuqqje" path="res://Player/HomingTrail.tres" id="1_1ry08"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hgjr5"]
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, 0, 0)
+spread = 5.01
+initial_velocity_min = 5.0
+initial_velocity_max = 147.24
+gravity = Vector3(0, -1, 0)
+color = Color(1, 1, 0.431373, 1)
+hue_variation_min = -0.42
+hue_variation_max = 0.26
+
+[sub_resource type="BoxMesh" id="BoxMesh_qhmb7"]
+material = ExtResource("1_1ry08")
+
+[node name="Homing" type="GPUParticles3D"]
+transform = Transform3D(0.355692, 0, 0, 0, 0.15653, 0, 0, 0, 0.355692, -0.0208757, -0.0568525, 0.396422)
+layers = 2
+emitting = false
+amount = 300
+lifetime = 0.1
+randomness = 1.0
+collision_base_size = 0.1
+process_material = SubResource("ParticleProcessMaterial_hgjr5")
+draw_pass_1 = SubResource("BoxMesh_qhmb7")

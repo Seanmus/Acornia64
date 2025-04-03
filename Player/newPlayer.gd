@@ -131,7 +131,7 @@ func _physics_process(delta):
 		return
 	if(abs(velocity.y) > 3 && !is_on_floor()):
 		animationState.travel("jump")
-	
+	$Area3D.monitoring = true
 	var previousTarget = homingTarget
 	homingTarget = _GetClosestTarget()
 	if(previousTarget != homingTarget):

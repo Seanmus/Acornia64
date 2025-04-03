@@ -4,7 +4,7 @@ var entered = false
 
 #Preloads the cannonball asset so that it can be spawned in as many times as needed.
 @onready var seedShot = load("res://Traps/auri_cannonBall.tscn")
-
+@export var nextLevel : String
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") && entered == false:
 		entered = true
@@ -19,4 +19,4 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	LevelLoader._loadLevel("water_level")
+	LevelLoader._loadLevel(nextLevel)

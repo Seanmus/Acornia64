@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=22 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="7_0jk04"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
-[ext_resource type="Material" uid="uid://50fpmhiuqqje" path="res://Player/HomingTrail.tres" id="9_s57er"]
+[ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
@@ -108,21 +108,6 @@ size = Vector3(0.955, 1.53419, 2)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_t5txg"]
 radius = 0.573245
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hgjr5"]
-emission_shape = 1
-emission_sphere_radius = 1.0
-direction = Vector3(0, 0, 0)
-spread = 5.01
-initial_velocity_min = 5.0
-initial_velocity_max = 147.24
-gravity = Vector3(0, -1, 0)
-color = Color(1, 1, 0.431373, 1)
-hue_variation_min = -0.42
-hue_variation_max = 0.26
-
-[sub_resource type="BoxMesh" id="BoxMesh_qhmb7"]
-material = ExtResource("9_s57er")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_2ymgt"]
 
@@ -224,16 +209,7 @@ collision_mask = 15
 transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
 shape = SubResource("SphereShape3D_t5txg")
 
-[node name="Homing" type="GPUParticles3D" parent="."]
-transform = Transform3D(0.355692, 0, 0, 0, 0.15653, 0, 0, 0, 0.355692, -0.0208757, -0.0568525, 0.396422)
-layers = 2
-emitting = false
-amount = 300
-lifetime = 0.1
-randomness = 1.0
-collision_base_size = 0.1
-process_material = SubResource("ParticleProcessMaterial_hgjr5")
-draw_pass_1 = SubResource("BoxMesh_qhmb7")
+[node name="Homing" parent="." instance=ExtResource("9_5nfe0")]
 
 [node name="DeathCam" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 3.98414, 3)

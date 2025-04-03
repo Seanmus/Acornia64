@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_8cas3"]
-[ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="6_b7wtq"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="8_fsgbp"]
 [ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="9_8bvpm"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="9_q46w8"]
@@ -25,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="23_hp43g"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="24_7qk7f"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="25_euv7j"]
+[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="25_rp05u"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -597,10 +597,6 @@ transform = Transform3D(-4.37114e-08, -0.258819, -0.965926, 0, -0.965926, 0.2588
 environment = SubResource("Environment_eei7c")
 
 [node name="Blocks" type="Node3D" parent="."]
-
-[node name="endLevel" parent="Blocks" instance=ExtResource("6_b7wtq")]
-transform = Transform3D(-9.86059, 0, -8.6204e-07, 0, 9.86059, 0, 8.6204e-07, 0, -9.86059, 176.635, 107.39, -40.152)
-nextLevel = "lava_level"
 
 [node name="MetalBox" parent="Blocks" instance=ExtResource("9_8bvpm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0186936, 0, 0.0135364)
@@ -2140,7 +2136,9 @@ curve = SubResource("Curve3D_wpykm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7671, 59.2032, -11.2092)
 curve = SubResource("Curve3D_jvowb")
 
-[connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
+[node name="StartCannon" parent="." instance=ExtResource("25_rp05u")]
+transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 175.294, 94.7894, -34.2862)
+nextLevel = "lava_level"
 
 [editable path="Nutcrackers/MovingNutcracker3"]
 [editable path="Nutcrackers/MovingNutcracker3/nutcracker"]
