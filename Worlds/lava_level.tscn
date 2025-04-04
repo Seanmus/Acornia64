@@ -445,6 +445,12 @@ transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e
 [node name="GratePathway196" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 1.76391e-16, 1, -1, -2.08616e-07, -4.37114e-08, 2.08616e-07, -1, 5.86198e-14, 306.939, -10.8558, 332.496)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway196" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 1.2229e-20, -1, -4.27189e-08, 0, 0, 2.2922e-21, 1, 0, 0.600006, 7.62634)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway196" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 1.2229e-20, -1, -4.27189e-08, 0, 0, 2.2922e-21, 1, 0, 0.600006, -7.63583)
+
 [node name="GratePathway47" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e-08, -0.866025, -0.5, -3.78552e-08, 306.901, -26.6563, 315.464)
 
@@ -453,6 +459,12 @@ transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e
 
 [node name="GratePathway163" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, -1.36198e-15, 1, -0.5, 0.866025, -2.18558e-08, -0.866025, -0.5, -3.78552e-08, 306.901, -39.856, 292.601)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway163" index="1"]
+transform = Transform3D(-5.96046e-08, 0.977295, 0, -1, 0, 0, 0, 3.55271e-15, 1, -1.52588e-05, 0.600006, 7.63724)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway163" index="2"]
+transform = Transform3D(-5.96046e-08, 0.977295, 0, -1, 0, 0, 0, 3.55271e-15, 1, -1.52588e-05, 0.600006, -7.63803)
 
 [node name="GratePathway13" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, -8.88178e-16, -1, 0, -4.37114e-08, 306.901, -29.056, 125.648)
@@ -898,6 +910,12 @@ transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 363.81
 [node name="GratePathway121" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 363.817, -51.0536, -263.328)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway121" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, 7.61972)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway121" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, -7.57526)
+
 [node name="GratePathway124" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-2.18557e-07, 0, -1, 0, 1, 0, 1, 0, -2.18557e-07, 363.817, -44.28, -225.278)
 
@@ -964,8 +982,20 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 482.617,
 [node name="GratePathway155" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 482.617, -44.28, -0.878183)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway155" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, 7.62555)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway155" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, -7.61899)
+
 [node name="GratePathway156" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 482.617, -34.0647, 49.9418)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway156" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, 7.629)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway156" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, -3.8147e-06, 0.599998, -7.62881)
 
 [node name="GratePathway161" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-1, 0, 8.74224e-08, 0, 1, 0, -8.74224e-08, 0, -1, 456.217, -34.0647, 63.1418)
@@ -973,11 +1003,26 @@ transform = Transform3D(-1, 0, 8.74224e-08, 0, 1, 0, -8.74224e-08, 0, -1, 456.21
 [node name="GratePathway164" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-1, 0, 8.74224e-08, 0, 1, 0, -8.74224e-08, 0, -1, 416.617, -34.0647, 63.1418)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway164" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.629215, 7.6)
+
 [node name="GratePathway165" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711e-08, 403.417, -34.0647, 49.9418)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway165" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, 7.58588)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway165" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, -7.61618)
+
 [node name="GratePathway168" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711e-08, 403.417, -27.3091, 12.0073)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway168" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.6, 7.62329)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway168" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, -9.53674e-07, 0.6, -7.62213)
 
 [node name="GratePathway169" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, -0.258819, 0.965926, 1.13132e-08, 0.965926, 0.258819, -4.22216e-08, 403.417, -25.6418, -0.792741)
@@ -994,6 +1039,9 @@ transform = Transform3D(-4.3711e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711e-08, 403.417,
 [node name="GratePathway173" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711e-08, 403.417, -9.4091, -130.793)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway173" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.624462, 7.60001)
+
 [node name="GratePathway174" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1, 0, 3.87246e-13, 0, 1, 0, -3.87246e-13, 0, 1, 390.217, -9.4091, -143.993)
 
@@ -1008,6 +1056,9 @@ transform = Transform3D(1, 0, 3.87246e-13, 0, 1, 0, -3.87246e-13, 0, 1, 317.617,
 
 [node name="GratePathway178" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711e-08, 304.417, -2.6091, -130.793)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway178" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, -0.110641, 0.628726, -7.52283)
 
 [node name="GratePathway179" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711e-08, 304.417, -2.6091, -117.593)
@@ -1078,8 +1129,20 @@ transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.21
 [node name="GratePathway201" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 60.8909, -119.193)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway201" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, 7.57806)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway201" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, -7.57623)
+
 [node name="GratePathway205" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 50.7909, -170.093)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway205" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, 7.62018)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway205" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, -7.59555)
 
 [node name="GratePathway206" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 50.7909, -183.293)
@@ -1117,8 +1180,14 @@ transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.21
 [node name="GratePathway192" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-1, 0, -8.74232e-08, 0, 1, 0, 8.74232e-08, 0, -1, 297.917, 37.8909, 80.2073)
 
+[node name="MetalPillar3" parent="GratePaths/GratePathway192" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.621826, 7.6)
+
 [node name="GratePathway185" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 389.617, 16.5909, -43.3927)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway185" index="2"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.621614, -7.60001)
 
 [node name="GratePathway166" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.3711e-08, 0, -1, -0.258819, 0.965926, 1.13132e-08, 0.965926, 0.258819, -4.22216e-08, 403.417, -32.3729, 37.3169)
@@ -1152,6 +1221,12 @@ transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1,
 
 [node name="GratePathway135" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, -0.258819, 0.965926, 3.39399e-08, -0.965926, -0.258819, 1.26666e-07, 363.817, -36.08, -105.478)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway135" index="1"]
+transform = Transform3D(-2.98023e-08, 0.977295, 1.42109e-14, -1, -2.98023e-08, 0, -3.55271e-15, 0, 1, 0, 0.599998, 7.5531)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway135" index="2"]
+transform = Transform3D(-2.98023e-08, 0.977295, 1.42109e-14, -1, -2.98023e-08, 0, -3.55271e-15, 0, 1, -7.62939e-06, 0.599998, -7.57248)
 
 [node name="GratePathway136" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 363.817, -34.48, -93.2782)
@@ -1314,6 +1389,8 @@ flip_faces = true
 material = SubResource("StandardMaterial3D_qgtj0")
 
 [editable path="Player"]
+[editable path="GratePaths/GratePathway196"]
+[editable path="GratePaths/GratePathway163"]
 [editable path="GratePaths/GratePathway45"]
 [editable path="GratePaths/GratePathway49"]
 [editable path="GratePaths/GratePathway69"]
@@ -1324,15 +1401,28 @@ material = SubResource("StandardMaterial3D_qgtj0")
 [editable path="GratePaths/GratePathway109"]
 [editable path="GratePaths/GratePathway112"]
 [editable path="GratePaths/GratePathway118"]
+[editable path="GratePaths/GratePathway121"]
 [editable path="GratePaths/GratePathway130"]
 [editable path="GratePaths/GratePathway132"]
 [editable path="GratePaths/GratePathway153"]
+[editable path="GratePaths/GratePathway155"]
+[editable path="GratePaths/GratePathway156"]
+[editable path="GratePaths/GratePathway164"]
+[editable path="GratePaths/GratePathway165"]
+[editable path="GratePaths/GratePathway168"]
+[editable path="GratePaths/GratePathway173"]
+[editable path="GratePaths/GratePathway178"]
 [editable path="GratePaths/GratePathway186"]
 [editable path="GratePaths/GratePathway187"]
 [editable path="GratePaths/GratePathway188"]
 [editable path="GratePaths/GratePathway189"]
+[editable path="GratePaths/GratePathway201"]
+[editable path="GratePaths/GratePathway205"]
+[editable path="GratePaths/GratePathway192"]
+[editable path="GratePaths/GratePathway185"]
 [editable path="GratePaths/GratePathway160"]
 [editable path="GratePaths/GratePathway141"]
+[editable path="GratePaths/GratePathway135"]
 [editable path="GratePaths/GratePathway107"]
 [editable path="GratePaths/GratePathway89"]
 [editable path="GratePaths/GratePathway115"]
