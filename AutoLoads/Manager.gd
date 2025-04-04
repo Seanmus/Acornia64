@@ -8,9 +8,16 @@ var won
 var nextLevel
 var gameMode
 
+var AppID = "3572080"
+
+func _init() -> void:
+	OS.set_environment("SteamAppID", AppID)
+	OS.set_environment("SteamGameID", AppID)
+
 signal on_win
 #Sets win to false
 func _ready():
+	Steam.steamInit()
 	won = false
 	LevelLoader.level_loaded.connect(_reset)
 
