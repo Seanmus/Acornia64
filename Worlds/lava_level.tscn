@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://chx8nc7gqiuis"]
+[gd_scene load_steps=28 format=3 uid="uid://chx8nc7gqiuis"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_n27il"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="2_xh2n1"]
@@ -78,6 +78,9 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgtj0"]
+albedo_texture = ExtResource("5_512im")
 
 [node name="lavaLevel" type="Node3D" node_paths=PackedStringArray("UINode")]
 script = ExtResource("1_n27il")
@@ -1304,6 +1307,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.538, -121.024, 45.1569)
 [node name="StartCannon" parent="." instance=ExtResource("18_3kqsl")]
 transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 365.919, 29.1736, -338.28)
 nextLevel = "Forest"
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1124.84, 0, 0, 0, 1124.84, 0, 0, 0, 1124.84, 356.84, 0, -81.7769)
+flip_faces = true
+material = SubResource("StandardMaterial3D_qgtj0")
 
 [editable path="Player"]
 [editable path="GratePaths/GratePathway45"]
