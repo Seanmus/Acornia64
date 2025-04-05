@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=48 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
@@ -25,6 +25,9 @@
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="24_7qk7f"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="25_euv7j"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="25_rp05u"]
+[ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="26_morw6"]
+[ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="27_dcah4"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="28_2mneb"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -129,6 +132,25 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_unn8f"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fbh6g"]
+frames = 2
+frame_0/texture = ExtResource("26_morw6")
+frame_1/texture = ExtResource("27_dcah4")
+frame_1/duration = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c81fr"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.580392)
+albedo_texture = SubResource("AnimatedTexture_fbh6g")
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6of7h"]
+albedo_color = Color(0.154876, 0.154876, 0.154876, 1)
+albedo_texture = ExtResource("28_2mneb")
+uv1_scale = Vector3(20, 20, 20)
 
 [node name="spaceLevel" type="Node3D" node_paths=PackedStringArray("UINode")]
 script = ExtResource("1_dmlmg")
@@ -936,6 +958,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_1k3fp")
 
 [node name="Earth" parent="Planets" instance=ExtResource("11_nxixn")]
 transform = Transform3D(1189.04, 0, 0, 0, 1189.04, 0, 0, 0, 1189.04, -31.1022, -2054.23, -133.517)
+visible = false
 
 [node name="mars" parent="Planets" instance=ExtResource("12_xx1uu")]
 transform = Transform3D(96.2374, 0, 0, 0, 96.2374, 0, 0, 0, 96.2374, 312.587, 4.6729, 512.06)
@@ -2139,6 +2162,16 @@ curve = SubResource("Curve3D_jvowb")
 [node name="StartCannon" parent="." instance=ExtResource("25_rp05u")]
 transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 175.294, 94.7894, -34.2862)
 nextLevel = "lava_level"
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1335.08, 0, 0, 0, 1335.08, 0, 0, 0, 1335.08, 0, -212.005, 0)
+mesh = SubResource("PlaneMesh_unn8f")
+material = SubResource("StandardMaterial3D_c81fr")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_6of7h")
 
 [editable path="Nutcrackers/MovingNutcracker3"]
 [editable path="Nutcrackers/MovingNutcracker3/nutcracker"]

@@ -139,7 +139,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -237.141, 16.3738, -16.4671)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -250.341, 16.3738, -16.4671)
 
 [node name="Umbrella" parent="." instance=ExtResource("15_jragk")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.9848, -0.10079, 22.4452)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.9848, -0.10079, 13.0452)
 
 [node name="Umbrella2" parent="." instance=ExtResource("15_jragk")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -62.6322, -0.385653, 30.2054)
