@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://sflulgc7j0pc"]
+
+[ext_resource type="PackedScene" uid="uid://cdi7tnu4t431f" path="res://WorldBlocks/Forest/forest_block_diamond.tscn" id="1_mssod"]
+[ext_resource type="PackedScene" uid="uid://d2pg8s6s68vkj" path="res://WorldBlocks/Forest/forest_block.tscn" id="2_ugb3t"]
+[ext_resource type="PackedScene" uid="uid://bovwfb41blhj2" path="res://WorldBlocks/grate.tscn" id="3_8yc1d"]
+[ext_resource type="PackedScene" uid="uid://ck7d128a3d3s5" path="res://WorldBlocks/Grate_Corner.tscn" id="4_trt43"]
+[ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="5_jdi6d"]
+
+[node name="GridMap" type="Node3D"]
+
+[node name="ForestBlockDiamond" parent="." instance=ExtResource("1_mssod")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.2)
+
+[node name="ForestBlock" parent="." instance=ExtResource("2_ugb3t")]
+
+[node name="grate" parent="." instance=ExtResource("3_8yc1d")]
+transform = Transform3D(6.167, 0, 0, 0, 6.167, 0, 0, 0, 6.167, 24.2, 0, 0)
+
+[node name="GratePathway" parent="." instance=ExtResource("4_trt43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, -3.78105, -24.2051)
+
+[node name="MetalBox" parent="." instance=ExtResource("5_jdi6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.6097, 0, -20.5673)

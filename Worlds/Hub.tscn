@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=17 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="13_8phuy"]
 [ext_resource type="PackedScene" uid="uid://8sqqtuym0cmo" path="res://WorldBlocks/Forest/hub_tree.tscn" id="13_x5o8x"]
 [ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="14_i4j4k"]
+[ext_resource type="PackedScene" uid="uid://bqmus5lks2lj0" path="res://WorldBlocks/Imports/umbrella.tscn" id="15_jragk"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="15_nxpkx"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="16_sm1qr"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_xpbca"]
@@ -136,3 +137,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -237.141, 16.3738, -16.4671)
 
 [node name="GratePathway16" parent="." instance=ExtResource("14_i4j4k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -250.341, 16.3738, -16.4671)
+
+[node name="Umbrella" parent="." instance=ExtResource("15_jragk")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.9848, -0.10079, 22.4452)
+
+[node name="Umbrella2" parent="." instance=ExtResource("15_jragk")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -62.6322, -0.385653, 30.2054)
