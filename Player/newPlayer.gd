@@ -131,6 +131,16 @@ func _physics_process(delta):
 		return
 	if(abs(velocity.y) > 3 && !is_on_floor()):
 		animationState.travel("jump")
+	
+	if $RayCast3D.is_colliding():
+		var origin = $RayCast3D.global_transform.origin
+		var collision_point = $RayCast3D.get_collision_point()
+		var distance = origin.distance_to(collision_point)
+		#adds 0.6 for slopes
+		$Decal.size.y = distance + 0.6
+		$Decal.position.y = -distance/1.8 
+	
+	
 	$Area3D.monitoring = true
 	var previousTarget = homingTarget
 	homingTarget = _GetClosestTarget()
@@ -139,7 +149,6 @@ func _physics_process(delta):
 			homingTarget._HighLight()
 		if(previousTarget):
 			previousTarget._UnHighLight()
-
 	#if is_on_floor():
 	#	acceleration = 60
 	#else:

@@ -933,7 +933,7 @@ transform = Transform3D(0.258819, -0.667598, 0, 0.965926, 0.178882, 0, 0, 0, 1, 
 transform = Transform3D(0.258819, -0.667598, 0, 0.965926, 0.178882, 0, 0, 0, 1, 509.381, -13.6093, 119.091)
 
 [node name="MetalPillar5" parent="Blocks" instance=ExtResource("18_ao8uu")]
-transform = Transform3D(0.0494425, -0.903288, 0, 0.998777, 0.0447155, 0, 0, 0, 1, 499.006, -12.1438, 119.091)
+transform = Transform3D(0.0494425, -0.903288, 0, 0.998777, 0.0447155, 0, 0, 0, 1, 499.006, -12.1438, 119.105)
 
 [node name="MetalPillar6" parent="Blocks" instance=ExtResource("18_ao8uu")]
 transform = Transform3D(-1.3027e-15, 3.95323e-08, 1, 1, 1.94988e-08, 0, -2.98023e-08, 0.904395, -4.37114e-08, 493.086, -11.8044, 114.091)
@@ -2173,6 +2173,7 @@ transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_6of7h")
 
+[editable path="MetalPathways/MetalBox103"]
 [editable path="Nutcrackers/MovingNutcracker3"]
 [editable path="Nutcrackers/MovingNutcracker3/nutcracker"]
 [editable path="Nutcrackers/MovingNutcracker3/nutcracker/HomingAttackTarget"]
