@@ -148,7 +148,7 @@ albedo_texture = SubResource("AnimatedTexture_fbh6g")
 uv1_scale = Vector3(50, 50, 50)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6of7h"]
-albedo_color = Color(0.154876, 0.154876, 0.154876, 1)
+albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
 albedo_texture = ExtResource("28_2mneb")
 uv1_scale = Vector3(20, 20, 20)
 
@@ -1316,7 +1316,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2866, 0, -36.322)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2866, -80, -36.322)
 
 [node name="TallBuildingBricks14" parent="Buildings" instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2866, -160, -36.322)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2866, -160.8, -36.322)
 
 [node name="TallBuildingBricks5" parent="Buildings" instance=ExtResource("14_8g0gu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, 0.719555, -140.389)
@@ -1349,7 +1349,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -1.63963, 37.678)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -82, 37.678)
 
 [node name="TallBuildingBricks22" parent="Buildings" instance=ExtResource("14_8g0gu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -164, 37.678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71336, -162.7, 37.678)
 
 [node name="TallBuildingBricks3" parent="Buildings" instance=ExtResource("15_qx6ul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, 9.1889, -39.3809)
@@ -1361,13 +1361,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, 16.1889, -223.381)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -63.8326, -223.381)
 
 [node name="TallBuildingBricks12" parent="Buildings" instance=ExtResource("15_qx6ul")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -142.833, -223.381)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -144.633, -223.381)
 
 [node name="TallBuildingBricks9" parent="Buildings" instance=ExtResource("15_qx6ul")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -63.8111, -39.3809)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -71.6111, -39.3809)
 
 [node name="TallBuildingBricks13" parent="Buildings" instance=ExtResource("15_qx6ul")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -143.811, -39.3809)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3073, -152.411, -39.3809)
 
 [node name="TallBuildingBricks18" parent="Buildings" instance=ExtResource("15_qx6ul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.693, 79.1889, 105.619)
@@ -2163,12 +2163,12 @@ curve = SubResource("Curve3D_jvowb")
 transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 175.294, 94.7894, -34.2862)
 nextLevel = "lava_level"
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+[node name="Water" type="CSGMesh3D" parent="."]
 transform = Transform3D(1335.08, 0, 0, 0, 1335.08, 0, 0, 0, 1335.08, 0, -212.005, 0)
 mesh = SubResource("PlaneMesh_unn8f")
 material = SubResource("StandardMaterial3D_c81fr")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+[node name="Sky" type="CSGSphere3D" parent="."]
 transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_6of7h")
