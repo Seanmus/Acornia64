@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ykq50oa7fr8n"]
+[gd_scene load_steps=20 format=3 uid="uid://ykq50oa7fr8n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_ujiww"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ut5iy"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_j2say"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="6_hq0jy"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="7_0337l"]
-[ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="8_xgk55"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="9_pv2ui"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="10_2s1sy"]
 [ext_resource type="PackedScene" uid="uid://ct2wpvuqmgj4u" path="res://WorldBlocks/road_block.tscn" id="11_w5ael"]
@@ -86,11 +85,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.664, 44.2916, 13.6967)
 
 [node name="tire" parent="HomingAttackTargets" instance=ExtResource("7_0337l")]
 transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, -42.5153, 41.9664, -19.6368)
-
-[node name="Planets" type="Node" parent="."]
-
-[node name="Earth" parent="Planets" instance=ExtResource("8_xgk55")]
-transform = Transform3D(284.238, 0, 0, 0, 284.238, 0, 0, 0, 284.238, 241.844, -479.274, 40.7078)
 
 [node name="Cheese" type="Node3D" parent="."]
 
