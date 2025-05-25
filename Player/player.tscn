@@ -183,7 +183,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.
 
 [node name="Decal" type="Decal" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.18185, 0)
-size = Vector3(2, 9.02747, 2)
+size = Vector3(2, 10, 2)
 texture_albedo = ExtResource("7_0jk04")
 distance_fade_enabled = true
 distance_fade_begin = 30.0
