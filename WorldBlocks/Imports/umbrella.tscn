@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqmus5lks2lj0"]
+[gd_scene load_steps=10 format=3 uid="uid://bqmus5lks2lj0"]
 
 [ext_resource type="PackedScene" uid="uid://c568cxij86dcc" path="res://WorldBlocks/Imports/Umbrella.glb" id="1_auy42"]
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/mushroom.gd" id="2_jpamu"]
@@ -71,6 +71,9 @@ _data = {
 "bounce": SubResource("Animation_w84br")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_hwhla"]
+size = Vector3(3.05078, 0.134277, 3.30438)
+
 [node name="Umbrella" instance=ExtResource("1_auy42")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("2_jpamu")
@@ -95,5 +98,12 @@ libraries = {
 
 [node name="sound" type="AudioStreamPlayer" parent="." index="3"]
 stream = ExtResource("3_twpd1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91894, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0979649, 0.432861, 0.0283508)
+shape = SubResource("BoxShape3D_hwhla")
 
 [connection signal="body_entered" from="Cone/Area3D" to="." method="_on_area_3d_body_entered"]

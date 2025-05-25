@@ -1,0 +1,109 @@
+[gd_scene load_steps=19 format=3 uid="uid://fqldr7uiywa5"]
+
+[ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_bjcff"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_1wssh"]
+[ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_treqs"]
+[ext_resource type="PackedScene" uid="uid://v2s8u6f3bd10" path="res://WorldBlocks/Interactive/end_level.tscn" id="4_xaol4"]
+[ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_5afxl"]
+[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="6_n4dxb"]
+[ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="7_ejwm7"]
+[ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="8_oic0r"]
+[ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="9_6qx6g"]
+[ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="10_7rotr"]
+[ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="11_e6yc3"]
+[ext_resource type="PackedScene" uid="uid://bqmus5lks2lj0" path="res://WorldBlocks/Imports/umbrella.tscn" id="12_ynwdr"]
+
+[sub_resource type="Environment" id="Environment_nj0sx"]
+background_mode = 1
+background_color = Color(0.0156863, 0, 0.117647, 1)
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 1.53
+adjustment_enabled = true
+adjustment_saturation = 1.7
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bcs3n"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_pvb7r"]
+frames = 2
+frame_0/texture = ExtResource("10_7rotr")
+frame_1/texture = ExtResource("11_e6yc3")
+frame_1/duration = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgk7p"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.172549)
+albedo_texture = SubResource("AnimatedTexture_pvb7r")
+uv1_scale = Vector3(500, 500, 500)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6fnva"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ydfn"]
+
+[node name="newForest" type="Node3D"]
+script = ExtResource("1_bjcff")
+nextLevel = "space_level"
+
+[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_1wssh")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.0352, 3, 5.49094)
+UI = NodePath("../UI")
+
+[node name="Death" parent="." instance=ExtResource("3_treqs")]
+transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nj0sx")
+
+[node name="MetalPathways" type="Node" parent="."]
+
+[node name="endLevel" parent="." instance=ExtResource("4_xaol4")]
+transform = Transform3D(4.47342, 0, 0, 0, 4.47342, 0, 0, 0, 4.47342, 221.122, 52.4815, -253.044)
+nextLevel = "water_level"
+
+[node name="SpawnPoints" type="Node" parent="."]
+
+[node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("5_5afxl")]
+transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 122.027, 34.1668, 210.683)
+
+[node name="HomingAttackTargets" type="Node" parent="."]
+
+[node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.336, 7.2916, 39.8967)
+
+[node name="tire" parent="HomingAttackTargets" instance=ExtResource("7_ejwm7")]
+transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, -42.5153, 41.9664, -19.6368)
+
+[node name="Cheese" type="Node3D" parent="."]
+
+[node name="cheese" parent="Cheese" instance=ExtResource("8_oic0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.2, 5.6)
+
+[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("9_6qx6g")]
+cheeseParent = NodePath("../Cheese")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(1302.39, 0, 0, 0, 1302.39, 0, 0, 0, 1302.39, 0, 0, 0)
+mesh = SubResource("PlaneMesh_bcs3n")
+material = SubResource("StandardMaterial3D_hgk7p")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+transform = Transform3D(18.6179, 0, 0, 0, 1, 0, 0, 0, 32.5376, -19.087, 0, 0)
+mesh = SubResource("BoxMesh_6fnva")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGMesh3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
+shape = SubResource("BoxShape3D_8ydfn")
+
+[node name="Umbrella" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
+transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, -0.0742415, 0.5, -0.211415)
+
+[node name="Umbrella2" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
+transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, 1.25244, 0.5, -0.211415)
+
+[node name="Umbrella3" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
+transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, 2.43947, 0.5, 0.768989)
+
+[node name="Umbrella4" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
+transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, 4.00248, 0.5, -0.337423)

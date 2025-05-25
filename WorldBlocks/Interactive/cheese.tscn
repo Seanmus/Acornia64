@@ -11,6 +11,7 @@ script = ExtResource("1_jq5t0")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 0, 0)
 billboard = 1
+alpha_cut = 2
 texture = ExtResource("1_fvdsd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["cheese"]]
