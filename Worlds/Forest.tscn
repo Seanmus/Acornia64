@@ -403,7 +403,7 @@ transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6491, 0, -91.113, 0, -52.6041
 
 [node name="StartCannon" parent="." instance=ExtResource("19_3in2f")]
 transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 172.056, 320.375, -112.794)
-nextLevel = "Title"
+nextLevel = "title"
 
 [node name="Cylinder" parent="StartCannon" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.327838, -0.944734, 0, 0.944734, 0.327838, 0, 0, 0)

@@ -10,12 +10,13 @@ config_version=5
 
 [application]
 
-config/name="Acornia64"
+config/name="AcorniaOfTheStars"
 run/main_scene="res://Worlds/title.tscn"
 config/use_hidden_project_data_directory=false
 config/features=PackedStringArray("4.3")
 boot_splash/bg_color=Color(0.172549, 0.0196078, 0.545098, 1)
-boot_splash/image="res://UI/Images/acorn.png"
+boot_splash/image="res://UI/Images/AuriRendered.png"
+boot_splash/fullsize=false
 config/icon="res://UI/AcorniaIcon.ico"
 config/macos_native_icon="res://UI/AcorniaIcon.ico"
 config/windows_native_icon="res://UI/AcorniaIcon.ico"
