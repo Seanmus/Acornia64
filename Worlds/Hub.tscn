@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=19 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
@@ -9,9 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cgu4whrv1kmrr" path="res://WorldBlocks/Forest/hub_world.tscn" id="13_4mtf7"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="13_8phuy"]
 [ext_resource type="PackedScene" uid="uid://8sqqtuym0cmo" path="res://WorldBlocks/Forest/hub_tree.tscn" id="13_x5o8x"]
-[ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="14_i4j4k"]
+[ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="15_cgy34"]
 [ext_resource type="PackedScene" uid="uid://bqmus5lks2lj0" path="res://WorldBlocks/Imports/umbrella.tscn" id="15_jragk"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="15_nxpkx"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="16_sbbpd"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="16_sm1qr"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_xpbca"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="17_y6leu"]
@@ -25,6 +26,11 @@ ambient_light_sky_contribution = 0.0
 ambient_light_energy = 1.53
 adjustment_enabled = true
 adjustment_saturation = 1.7
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2jcp"]
+albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
+albedo_texture = ExtResource("16_sbbpd")
+uv1_scale = Vector3(20, 20, 20)
 
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_m4e2o")
@@ -45,8 +51,7 @@ environment = SubResource("Environment_l3x7x")
 [node name="TutorialText" type="Node3D" parent="."]
 
 [node name="CameraText" type="Label3D" parent="TutorialText"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2722, 11.3591, 43.1825)
-billboard = 1
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -84.0722, 11.3591, 5.5825)
 text = "Jump in the Cannon to Go To the Next Planet"
 font = ExtResource("10_vav66")
 font_size = 260
@@ -57,20 +62,32 @@ outline_size = 100
 [node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("11_3y7bn")]
 transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 122.027, 34.1668, 210.683)
 
-[node name="Tire" type="Node3D" parent="."]
-
-[node name="tire" parent="Tire" instance=ExtResource("12_uyxvc")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.777, 31.148, 210.049)
-
 [node name="HomingAttackTargets" type="Node3D" parent="."]
 
 [node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("13_8phuy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.336, 45.2916, -60.1033)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46401, 55.6916, 65.6967)
+
+[node name="HomingAttackTarget2" parent="HomingAttackTargets" instance=ExtResource("13_8phuy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.936, 63.4916, 65.6967)
+
+[node name="HomingAttackTarget3" parent="HomingAttackTargets" instance=ExtResource("13_8phuy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.936, 70.2916, 56.4967)
+
+[node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("13_8phuy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.336, 92.2916, -11.1033)
+
+[node name="tire" parent="HomingAttackTargets" instance=ExtResource("12_uyxvc")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 49.7547, 71.5969, 35.2944)
+bounceMultiplier = 2.0
+
+[node name="tire2" parent="HomingAttackTargets" instance=ExtResource("12_uyxvc")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 8.25808, 91.3763, -31.9056)
+bounceMultiplier = 3.2
 
 [node name="Planets" type="Node3D" parent="."]
 
 [node name="Moon" parent="Planets" instance=ExtResource("15_nxpkx")]
-transform = Transform3D(33.7868, 0, 0, 0, 33.7868, 0, 0, 0, 33.7868, 132.968, 86.9195, -47.3825)
+transform = Transform3D(33.7868, 0, 0, 0, 33.7868, 0, 0, 0, 33.7868, -210.906, 86.9195, -126.867)
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -90,56 +107,25 @@ transform = Transform3D(0.321583, 0, 0, 0, 0.321583, 0, 0, 0, 0.321583, 12.0298,
 transform = Transform3D(-1.95874e-07, 0, -4.48106, 0, 4.48106, 0, 4.48106, 0, -1.95874e-07, -76.6231, 3.54344, 4.86287)
 nextLevel = "city_level"
 
-[node name="GratePathway" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2177, 2.83383, -16.4671)
-
-[node name="GratePathway2" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.4177, 2.83383, -16.4671)
-
-[node name="GratePathway3" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.6177, 2.83383, -16.4671)
-
-[node name="GratePathway4" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -94.8177, 2.83383, -16.4671)
-
-[node name="GratePathway5" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.018, 2.83383, -16.4671)
-
-[node name="GratePathway6" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -121.218, 2.83383, -16.4671)
-
-[node name="GratePathway7" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -134.418, 2.83383, -16.4671)
-
-[node name="GratePathway8" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -147.618, 2.83383, -16.4671)
-
-[node name="GratePathway9" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -160.092, 4.50921, -16.4671)
-
-[node name="GratePathway10" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -172.843, 7.92563, -16.4671)
-
-[node name="GratePathway11" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -185.593, 11.342, -16.4671)
-
-[node name="GratePathway12" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0, 1, -198.343, 14.7584, -16.4671)
-
-[node name="GratePathway13" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -210.741, 16.3738, -16.4671)
-
-[node name="GratePathway14" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -223.941, 16.3738, -16.4671)
-
-[node name="GratePathway15" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -237.141, 16.3738, -16.4671)
-
-[node name="GratePathway16" parent="." instance=ExtResource("14_i4j4k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -250.341, 16.3738, -16.4671)
+[node name="StartCannon2" parent="." instance=ExtResource("17_y6leu")]
+transform = Transform3D(5.87621e-07, 0, 4.48106, 0, 4.48106, 0, -4.48106, 0, 5.87621e-07, 19.3769, 140.543, 17.6629)
+nextLevel = "lava_level"
 
 [node name="Umbrella" parent="." instance=ExtResource("15_jragk")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.9848, -0.10079, 13.0452)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.9848, -0.10079, 28.4452)
+
+[node name="Umbrella3" parent="." instance=ExtResource("15_jragk")]
+transform = Transform3D(3.41231, 0, 0, 0, 3.41231, 0, 0, 0, 3.41231, -73.1373, -2.1837, 41.2452)
+bounceMultiplier = 1.5
 
 [node name="Umbrella2" parent="." instance=ExtResource("15_jragk")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -62.6322, -0.385653, 30.2054)
+transform = Transform3D(6.46741, 0, 0, 0, 6.46741, 0, 0, 0, 6.46741, -62.6322, -3.28585, 67.0426)
+bounceMultiplier = 3.2
+
+[node name="Earth" parent="." instance=ExtResource("15_cgy34")]
+transform = Transform3D(31.7727, 0, 0, 0, 31.7727, 0, 0, 0, 31.7727, 787.192, -7.84505, 66.9405)
+
+[node name="Sky" type="CSGSphere3D" parent="."]
+transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_t2jcp")

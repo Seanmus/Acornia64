@@ -5,6 +5,7 @@ extends Node2D
 signal level_loaded
 #Loads level after transition anim has finished
 func _on_animation_player_animation_finished(_anim_name):
+	get_tree().paused = false
 	Manager.won = false
 	MusicPlayer.play()
 	$Transition.visible = false

@@ -7,6 +7,8 @@ var plantedCount : int
 var won
 var nextLevel
 var gameMode
+var busLevel = 0.65
+
 
 var AppID = "3572080"
 

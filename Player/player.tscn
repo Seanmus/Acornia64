@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=26 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="7_0jk04"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
+[ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
+[ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="11_jep6i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
@@ -110,6 +112,11 @@ size = Vector3(0.955, 1.53419, 2)
 radius = 0.573245
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_2ymgt"]
+
+[sub_resource type="Theme" id="Theme_8b5sv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evvd"]
+bg_color = Color(0.101961, 0, 0.247059, 0.917647)
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
@@ -224,6 +231,71 @@ shape = SubResource("SphereShape3D_2ymgt")
 [node name="RayCast3D" type="RayCast3D" parent="."]
 target_position = Vector3(0, -10, 0)
 
+[node name="PauseMenu" type="Panel" parent="."]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -441.5
+offset_top = -250.0
+offset_right = 441.5
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8b5sv")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8evvd")
+script = ExtResource("10_1woap")
+
+[node name="VFlowContainer" type="VFlowContainer" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.023
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = 9.49997
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("11_jep6i")
+theme_override_constants/h_separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="PauseMenu/VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Game is Paused!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/VFlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Resume?" type="Button" parent="PauseMenu/VFlowContainer"]
+layout_mode = 2
+text = "Resume?"
+
+[node name="Quit to Start?" type="Button" parent="PauseMenu/VFlowContainer"]
+layout_mode = 2
+text = "Quit to Start?"
+
+[node name="Volume Label" type="Label" parent="PauseMenu/VFlowContainer"]
+layout_mode = 2
+text = "Volume"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="audioSlider" type="HSlider" parent="PauseMenu/VFlowContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.8
+metadata/_edit_use_anchors_ = true
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
@@ -233,3 +305,6 @@ target_position = Vector3(0, -10, 0)
 [connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]
 [connection signal="body_entered" from="CrushDetector" to="." method="_on_crush_detector_body_entered"]
 [connection signal="body_entered" from="MovingPlatformDetector" to="." method="_on_moving_platform_detector_body_entered"]
+[connection signal="pressed" from="PauseMenu/VFlowContainer/Resume?" to="PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="PauseMenu/VFlowContainer/Quit to Start?" to="PauseMenu" method="_on_quit_to_start_pressed"]
+[connection signal="value_changed" from="PauseMenu/VFlowContainer/audioSlider" to="PauseMenu" method="_on_audio_slider_value_changed"]

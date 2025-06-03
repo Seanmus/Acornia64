@@ -43,6 +43,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	spawnPos = position
 	spawnRotation = rotation
+
+
 	
 #Makes the player bounce when hitting a bouncing object		
 func Bounce(bounceMultiplier):

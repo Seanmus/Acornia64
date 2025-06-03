@@ -5,6 +5,7 @@
 [ext_resource type="Material" uid="uid://c3mu4b1jgda32" path="res://UI/newTransition.tres" id="3_xvord"]
 
 [node name="LevelLoader" type="Node2D"]
+process_mode = 3
 z_index = 255
 z_as_relative = false
 script = ExtResource("1_qey6j")

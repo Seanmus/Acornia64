@@ -2164,7 +2164,7 @@ transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 
 nextLevel = "lava_level"
 
 [node name="Water" type="CSGMesh3D" parent="."]
-transform = Transform3D(1335.08, 0, 0, 0, 1335.08, 0, 0, 0, 1335.08, 0, -212.005, 0)
+transform = Transform3D(1335.08, 0, 0, 0, 1335.08, 0, 0, 0, 1335.08, 0, -104.777, 0)
 mesh = SubResource("PlaneMesh_unn8f")
 material = SubResource("StandardMaterial3D_c81fr")
 
