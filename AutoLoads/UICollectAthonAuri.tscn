@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="3_84nwp"]
 [ext_resource type="Texture2D" uid="uid://i81ajv45prur" path="res://UI/Images/sunFlowerSeedRenderDark.png" id="5_s2171"]
 [ext_resource type="Texture2D" uid="uid://cklipsrkepll7" path="res://UI/Images/sunflowerLight.png" id="6_8vjqs"]
-[ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="7_75nij"]
+[ext_resource type="FontFile" uid="uid://boiewx4478ao" path="res://UI/ZCOOLKuaiLe-Regular.ttf" id="6_q0ptd"]
 
 [sub_resource type="Theme" id="Theme_gmcgj"]
 
@@ -24,70 +24,70 @@ scale = Vector2(1.29174, 1.24694)
 texture = ExtResource("2_tpm3u")
 
 [node name="Seed1" type="TextureRect" parent="collect_athon"]
-offset_left = -1.0
-offset_top = 780.0
-offset_right = 1919.0
-offset_bottom = 1860.0
+offset_left = 3.0
+offset_top = 942.0
+offset_right = 1923.0
+offset_bottom = 2022.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_s2171")
 
 [node name="Seed2" type="TextureRect" parent="collect_athon"]
-offset_left = 70.0
-offset_top = 779.0
-offset_right = 1990.0
-offset_bottom = 1859.0
+offset_left = 74.0
+offset_top = 941.0
+offset_right = 1994.0
+offset_bottom = 2021.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_s2171")
 
 [node name="Seed3" type="TextureRect" parent="collect_athon"]
-offset_left = 136.0
-offset_top = 780.0
-offset_right = 2056.0
-offset_bottom = 1860.0
+offset_left = 140.0
+offset_top = 942.0
+offset_right = 2060.0
+offset_bottom = 2022.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_s2171")
 
 [node name="Seed4" type="TextureRect" parent="collect_athon"]
-offset_left = 202.0
-offset_top = 779.0
-offset_right = 2122.0
-offset_bottom = 1859.0
+offset_left = 206.0
+offset_top = 941.0
+offset_right = 2126.0
+offset_bottom = 2021.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_s2171")
 
 [node name="Seed5" type="TextureRect" parent="collect_athon"]
-offset_left = 267.0
-offset_top = 780.0
-offset_right = 2187.0
-offset_bottom = 1860.0
+offset_left = 271.0
+offset_top = 942.0
+offset_right = 2191.0
+offset_bottom = 2022.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_s2171")
 
 [node name="Seed6" type="TextureRect" parent="collect_athon"]
-offset_left = 330.0
-offset_top = 781.0
-offset_right = 2250.0
-offset_bottom = 1861.0
+offset_left = 334.0
+offset_top = 943.0
+offset_right = 2254.0
+offset_bottom = 2023.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_s2171")
 
 [node name="Flower" type="TextureRect" parent="collect_athon"]
-offset_left = 836.0
-offset_top = -43.0
-offset_right = 5089.0
-offset_bottom = 2358.0
+offset_left = 1477.0
+offset_top = 7.0
+offset_right = 5730.0
+offset_bottom = 2408.0
 scale = Vector2(0.0943032, 0.0932791)
 theme = SubResource("Theme_gmcgj")
 texture = ExtResource("6_8vjqs")
 
 [node name="Label" type="Label" parent="collect_athon"]
 modulate = Color(1, 0.215686, 0.815686, 1)
-offset_left = 1091.0
-offset_top = 55.0
-offset_right = 1274.0
-offset_bottom = 213.0
+offset_left = 1732.0
+offset_top = 105.0
+offset_right = 1915.0
+offset_bottom = 263.0
 theme = ExtResource("3_84nwp")
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("7_75nij")
+theme_override_fonts/font = ExtResource("6_q0ptd")
 theme_override_font_sizes/font_size = 96
 text = "X 0"
