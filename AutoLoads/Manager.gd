@@ -18,10 +18,22 @@ func _init() -> void:
 
 signal on_win
 #Sets win to false
-func _ready():
-	Steam.steamInit()
+func _ready():	
 	won = false
 	LevelLoader.level_loaded.connect(_reset)
+	Steam.steamInit()
+	var isRunning = Steam.isSteamRunning()
+	if !isRunning:
+		print("Error: Steam not running")
+		return
+	print("Steam is running")
+	var id = Steam.getSteamID()
+	var name = Steam.getFriendPersonaName(id)
+	print(name)
+	print(id)
+	
+func _process(delta: float) -> void:
+	Steam.run_callbacks()
 
 func _reset():
 	cheeseCount = 0
