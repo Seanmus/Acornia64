@@ -195,7 +195,7 @@ transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.3258, 16.4309)
 
 [node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_iqfuu")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.71, -38.6662, 266.005)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 306.71, -38.6662, 266.005)
 floor_block_on_wall = false
 UI = NodePath("../UI")
 
@@ -1015,13 +1015,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.936, 45.2916, -196.503)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 159.536, 45.2916, -196.503)
 
 [node name="HomingAttackTarget7" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.336, 45.2916, -217.503)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.936, 45.2916, -212.703)
 
 [node name="HomingAttackTarget8" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 145.536, 45.2916, -247.103)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.336, 45.2916, -236.303)
+
+[node name="HomingAttackTarget52" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.536, 45.2916, -266.703)
 
 [node name="HomingAttackTarget9" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158.536, 45.2916, -273.703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 149.136, 45.2916, -277.503)
+
+[node name="HomingAttackTarget55" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.936, 45.2916, -277.503)
 
 [node name="HomingAttackTarget10" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 185.136, 50.4916, -275.503)

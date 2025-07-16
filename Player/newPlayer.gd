@@ -298,6 +298,8 @@ func _on_deathFinished():
 	dead = false
 	$auriModel/AnimationPlayer.play("idle")
 	$auriModel/AnimationTree.active = true
+	$Pivot/SpringArm3D/Camera3D.current = true
+	$DeathCam.current = false
 	var enemies = get_tree().get_nodes_in_group("enemies")
 	for enemy in enemies:
 		enemy as MovingEnemiesBase
