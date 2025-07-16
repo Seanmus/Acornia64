@@ -12,7 +12,9 @@ var mouse_sensitivty = 0.002 #radiains/pixel
 var rotationSpeed = 0.00
 var controller_sensitivity = 0.025
 var canDoubleJump = true
+var coyoteTime = false
 var landing : bool
+var wasOnGround : bool
 var dead : bool
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -161,8 +163,9 @@ func _physics_process(delta):
 		pass
 		#maxSpeed = 15
 		#runCloud.emitting = false
-	if not dead:
+	if not dead:		
 		if is_on_floor() && !dead && !bouncing:
+			wasOnGround = true
 			canDoubleJump = true
 			if(velocity.x != 0 || velocity.z != 0):
 				animationState.travel("walking")
@@ -175,16 +178,25 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("jump"):
 				jump()
 		else:
+			if wasOnGround:
+				coyoteTime = true
+				$coyoteTimer.start()
+				wasOnGround = false
 			if Input.is_action_just_pressed("jump"):
 				if(homingTarget):
 					homingAttack = true
 					$Homing.emitting = true
 					_HomingAttack(delta)
 				else:
-					if canDoubleJump:
+					if coyoteTime:
+						jump()
+						coyoteTime = false
+						addPoofCloud()
+					elif canDoubleJump:
 						jump()
 						canDoubleJump = false
 						addPoofCloud()
+						
 			velocity.y -= gravity * 1.2 * delta
 			if(velocity.y < 0):
 				velocity.y -= gravity * 5 * delta
@@ -355,3 +367,7 @@ func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
 		print("moving platform on bottom")
 		velocity.y = -1000
 		animationState.travel("land")
+
+
+func _on_coyote_timer_timeout() -> void:
+	coyoteTime = false

@@ -296,6 +296,9 @@ step = 0.05
 value = 0.8
 metadata/_edit_use_anchors_ = true
 
+[node name="coyoteTimer" type="Timer" parent="."]
+wait_time = 0.2
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
@@ -308,3 +311,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="PauseMenu/VFlowContainer/Resume?" to="PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/VFlowContainer/Quit to Start?" to="PauseMenu" method="_on_quit_to_start_pressed"]
 [connection signal="value_changed" from="PauseMenu/VFlowContainer/audioSlider" to="PauseMenu" method="_on_audio_slider_value_changed"]
+[connection signal="timeout" from="coyoteTimer" to="." method="_on_coyote_timer_timeout"]
