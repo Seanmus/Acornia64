@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://fqldr7uiywa5"]
+[gd_scene load_steps=18 format=3 uid="uid://fqldr7uiywa5"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_bjcff"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_1wssh"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="10_7rotr"]
 [ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="11_e6yc3"]
 [ext_resource type="PackedScene" uid="uid://bqmus5lks2lj0" path="res://WorldBlocks/Imports/umbrella.tscn" id="12_ynwdr"]
+[ext_resource type="PackedScene" uid="uid://b46kdbpvrxptv" path="res://WorldBlocks/island.tscn" id="13_41sjg"]
 
 [sub_resource type="Environment" id="Environment_nj0sx"]
 background_mode = 1
@@ -37,16 +38,12 @@ albedo_color = Color(1, 1, 1, 0.172549)
 albedo_texture = SubResource("AnimatedTexture_pvb7r")
 uv1_scale = Vector3(500, 500, 500)
 
-[sub_resource type="BoxMesh" id="BoxMesh_6fnva"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_8ydfn"]
-
-[node name="newForest" type="Node3D"]
+[node name="beachLevel" type="Node3D"]
 script = ExtResource("1_bjcff")
 nextLevel = "space_level"
 
 [node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_1wssh")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.0352, 3, 5.49094)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.8352, 3, -5.60906)
 UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("3_treqs")]
@@ -82,28 +79,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.2, 5.6)
 [node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("9_6qx6g")]
 cheeseParent = NodePath("../Cheese")
 
+[node name="Umbrella" parent="." instance=ExtResource("12_ynwdr")]
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, -20.4692, 0.5, -6.87894)
+
+[node name="Umbrella2" parent="." instance=ExtResource("12_ynwdr")]
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 4.2308, 0.5, -6.87894)
+
+[node name="Umbrella3" parent="." instance=ExtResource("12_ynwdr")]
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 26.3308, 0.5, 25.0211)
+
+[node name="Umbrella4" parent="." instance=ExtResource("12_ynwdr")]
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 55.4308, 0.5, -10.9789)
+
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(1302.39, 0, 0, 0, 1302.39, 0, 0, 0, 1302.39, 0, 0, 0)
 mesh = SubResource("PlaneMesh_bcs3n")
 material = SubResource("StandardMaterial3D_hgk7p")
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
-transform = Transform3D(18.6179, 0, 0, 0, 1, 0, 0, 0, 32.5376, -19.087, 0, 0)
-mesh = SubResource("BoxMesh_6fnva")
+[node name="Island" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(7.33247, 0, 0, 0, 7.33247, 0, 0, 0, 7.33247, 4.89678, -1.3, -7.34868)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGMesh3D2"]
+[node name="Island4" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(16.8301, 0, 1.43051e-06, 0, 16.8301, 0, -1.43051e-06, 0, 16.8301, -31.0032, -3.9, -7.34868)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGMesh3D2/StaticBody3D"]
-shape = SubResource("BoxShape3D_8ydfn")
+[node name="Island2" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(7.51466, 0, 7.51466, 0, 10.6273, 0, -7.51466, 0, 7.51466, 28.0968, -2.03703, 25.3794)
 
-[node name="Umbrella" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
-transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, -0.0742415, 0.5, -0.211415)
-
-[node name="Umbrella2" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
-transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, 1.25244, 0.5, -0.211415)
-
-[node name="Umbrella3" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
-transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, 2.43947, 0.5, 0.768989)
-
-[node name="Umbrella4" parent="CSGMesh3D2/StaticBody3D" instance=ExtResource("12_ynwdr")]
-transform = Transform3D(0.114747, 0, 0, 0, 2.13634, 0, 0, 0, 0.0656577, 4.00248, 0.5, -0.337423)
+[node name="Island3" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(0, 0, -7.33247, 0, 7.33247, 0, 7.33247, 0, 0, 56.0968, -1.3, -10.1487)
