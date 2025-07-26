@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bkr5oqxa38fcj"]
+
+[ext_resource type="Texture2D" uid="uid://do2lt86ofp08r" path="res://WorldBlocks/Imports/Island_SandTexture.png" id="1_s2k4m"]
+
+[resource]
+albedo_color = Color(0.751881, 0.751881, 0.751881, 1)
+albedo_texture = ExtResource("1_s2k4m")

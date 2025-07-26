@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://fqldr7uiywa5"]
+[gd_scene load_steps=21 format=3 uid="uid://fqldr7uiywa5"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_bjcff"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_1wssh"]
@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="10_7rotr"]
 [ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="11_e6yc3"]
 [ext_resource type="PackedScene" uid="uid://bqmus5lks2lj0" path="res://WorldBlocks/Imports/umbrella.tscn" id="12_ynwdr"]
+[ext_resource type="Texture2D" uid="uid://do2lt86ofp08r" path="res://WorldBlocks/Imports/Island_SandTexture.png" id="13_8gjmn"]
 [ext_resource type="PackedScene" uid="uid://b46kdbpvrxptv" path="res://WorldBlocks/island.tscn" id="13_41sjg"]
+[ext_resource type="PackedScene" uid="uid://dqn68rhtv5d6e" path="res://WorldBlocks/island_2.tscn" id="14_o568c"]
 
 [sub_resource type="Environment" id="Environment_nj0sx"]
 background_mode = 1
@@ -38,12 +40,19 @@ albedo_color = Color(1, 1, 1, 0.172549)
 albedo_texture = SubResource("AnimatedTexture_pvb7r")
 uv1_scale = Vector3(500, 500, 500)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_km4mx"]
+transparency = 1
+blend_mode = 3
+albedo_color = Color(1, 1, 1, 0.12549)
+albedo_texture = ExtResource("13_8gjmn")
+uv1_scale = Vector3(500, 500, 500)
+
 [node name="beachLevel" type="Node3D"]
 script = ExtResource("1_bjcff")
 nextLevel = "space_level"
 
 [node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_1wssh")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.8352, 3, -5.60906)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -46.7352, 4.4, -10.9091)
 UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("3_treqs")]
@@ -66,7 +75,16 @@ transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1
 [node name="HomingAttackTargets" type="Node" parent="."]
 
 [node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.336, 7.2916, 39.8967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.036, 7.2916, 57.4967)
+
+[node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.936, 7.2916, 82.1967)
+
+[node name="HomingAttackTarget2" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
+transform = Transform3D(0.966972, -0.135885, -0.215641, 0.145682, 0.988872, 0.0301319, 0.209147, -0.0605518, 0.976008, 28.536, 7.2916, 148.197)
+
+[node name="HomingAttackTarget3" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
+transform = Transform3D(0.966972, -0.135885, -0.215641, 0.145682, 0.988872, 0.0301319, 0.209147, -0.0605518, 0.976008, 14.436, 7.2916, 124.197)
 
 [node name="tire" parent="HomingAttackTargets" instance=ExtResource("7_ejwm7")]
 transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, -42.5153, 41.9664, -19.6368)
@@ -96,6 +114,11 @@ transform = Transform3D(1302.39, 0, 0, 0, 1302.39, 0, 0, 0, 1302.39, 0, 0, 0)
 mesh = SubResource("PlaneMesh_bcs3n")
 material = SubResource("StandardMaterial3D_hgk7p")
 
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+transform = Transform3D(1302.39, 0, 0, 0, 1302.39, 0, 0, 0, 1302.39, 0, -33.7618, 0)
+mesh = SubResource("PlaneMesh_bcs3n")
+material = SubResource("StandardMaterial3D_km4mx")
+
 [node name="Island" parent="." instance=ExtResource("13_41sjg")]
 transform = Transform3D(7.33247, 0, 0, 0, 7.33247, 0, 0, 0, 7.33247, 4.89678, -1.3, -7.34868)
 
@@ -105,5 +128,23 @@ transform = Transform3D(16.8301, 0, 1.43051e-06, 0, 16.8301, 0, -1.43051e-06, 0,
 [node name="Island2" parent="." instance=ExtResource("13_41sjg")]
 transform = Transform3D(7.51466, 0, 7.51466, 0, 10.6273, 0, -7.51466, 0, 7.51466, 28.0968, -2.03703, 25.3794)
 
+[node name="Umbrella5" parent="." instance=ExtResource("12_ynwdr")]
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 5.13081, 0.5, 97.3211)
+
+[node name="Island9" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(7.51466, 0, 7.51466, 0, 10.6273, 0, -7.51466, 0, 7.51466, 6.89678, -2.03703, 97.6794)
+
 [node name="Island3" parent="." instance=ExtResource("13_41sjg")]
 transform = Transform3D(0, 0, -7.33247, 0, 7.33247, 0, 7.33247, 0, 0, 56.0968, -1.3, -10.1487)
+
+[node name="Island5" parent="." instance=ExtResource("14_o568c")]
+transform = Transform3D(14.6405, 0, -8.45269, 0, 16.9054, 0, 8.45269, 0, 14.6405, -33.9, -3, -17.5)
+
+[node name="Island7" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(4.35595, 0, -16.2566, 0, 16.8301, 0, 16.2566, 0, 4.35595, 28.8205, -3.9, 183.288)
+
+[node name="Island8" parent="." instance=ExtResource("14_o568c")]
+transform = Transform3D(-4.37543, 0, -16.3293, 0, 16.9054, 0, 16.3293, 0, -4.37543, 37.8762, -3, 177.863)
+
+[node name="Island6" parent="." instance=ExtResource("14_o568c")]
+transform = Transform3D(16.3439, 0.0540865, 4.3205, -0.0504218, 16.9053, -0.0208913, -4.32055, 0.00731092, 16.3439, -38.3, -3, -12.5)
