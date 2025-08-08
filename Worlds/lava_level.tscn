@@ -100,6 +100,19 @@ UI = NodePath("../UI")
 [node name="Camera3D" parent="Player/Pivot/SpringArm3D" index="0"]
 environment = null
 
+[node name="body" parent="Player/auriModel" index="0"]
+surface_material_override/0 = null
+
+[node name="hat" parent="Player/auriModel" index="1"]
+transform = Transform3D(0.706368, 0, 1.79077e-06, 0, -0.193109, 0, -1.79077e-06, 0, 0.706368, 0.00496591, 1.87453, 0)
+surface_material_override/0 = null
+
+[node name="leftFoot" parent="Player/auriModel" index="2"]
+surface_material_override/0 = null
+
+[node name="rightFoot" parent="Player/auriModel" index="3"]
+surface_material_override/0 = null
+
 [node name="Cheese" type="Node3D" parent="."]
 
 [node name="cheese" parent="Cheese" instance=ExtResource("4_njel1")]
@@ -1389,6 +1402,8 @@ flip_faces = true
 material = SubResource("StandardMaterial3D_qgtj0")
 
 [editable path="Player"]
+[editable path="Player/auriModel"]
+[editable path="Player/auriModel/SKM_Auri"]
 [editable path="GratePaths/GratePathway196"]
 [editable path="GratePaths/GratePathway163"]
 [editable path="GratePaths/GratePathway45"]

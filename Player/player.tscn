@@ -209,6 +209,19 @@ shape = SubResource("BoxShape3D_fpp87")
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 
+[node name="body" parent="auriModel" index="0"]
+surface_material_override/0 = null
+
+[node name="hat" parent="auriModel" index="1"]
+transform = Transform3D(0.706368, 0, 1.79077e-06, 0, -0.193109, 0, -1.79077e-06, 0, 0.706368, 0.00496591, 1.87453, 0)
+surface_material_override/0 = null
+
+[node name="leftFoot" parent="auriModel" index="2"]
+surface_material_override/0 = null
+
+[node name="rightFoot" parent="auriModel" index="3"]
+surface_material_override/0 = null
+
 [node name="AnimationTree" parent="auriModel" index="5"]
 advance_expression_base_node = NodePath("../..")
 
@@ -220,14 +233,11 @@ bones/4/position = Vector3(-0.0326295, 0.0266106, -0.0168654)
 bones/5/position = Vector3(-0.0137777, -0.194252, 0.025841)
 bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
 bones/7/position = Vector3(-0.0137777, 0.194252, 0.025841)
-bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
 bones/9/position = Vector3(-0.0210603, 0.0486971, -0.0181665)
 bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
 bones/11/position = Vector3(-0.066525, -0.0356637, -0.200116)
 bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
 bones/13/position = Vector3(-0.0210603, -0.048697, -0.0181665)
-bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
-bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
 bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
