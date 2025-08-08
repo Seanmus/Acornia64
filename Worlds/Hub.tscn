@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=21 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
@@ -14,8 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="15_nxpkx"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="16_sbbpd"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="16_sm1qr"]
+[ext_resource type="PackedScene" uid="uid://qoh3nf7d6c53" path="res://Player/Imports/acorn.glb" id="17_128e6"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_xpbca"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="17_y6leu"]
+[ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="18_ujk3i"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -129,3 +131,9 @@ transform = Transform3D(31.7727, 0, 0, 0, 31.7727, 0, 0, 0, 31.7727, 787.192, -7
 transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_t2jcp")
+
+[node name="acorn" parent="." instance=ExtResource("17_128e6")]
+transform = Transform3D(-1.75224e-07, 0, -4.00865, 0, 4.00865, 0, 4.00865, 0, -1.75224e-07, -31.1319, -2.69889, -34.4003)
+
+[node name="Derpy" parent="." instance=ExtResource("18_ujk3i")]
+transform = Transform3D(-2.63375, 0, -2.63375, 0, 3.72469, 0, 2.63375, 0, -2.63375, -69.8005, 0.264067, -38.5558)
