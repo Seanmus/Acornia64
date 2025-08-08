@@ -200,42 +200,8 @@ shape = SubResource("BoxShape3D_fpp87")
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 
-[node name="body" parent="auriModel" index="0"]
-surface_material_override/0 = null
-
-[node name="hat" parent="auriModel" index="1"]
-surface_material_override/0 = null
-
-[node name="leftFoot" parent="auriModel" index="2"]
-surface_material_override/0 = null
-
-[node name="rightFoot" parent="auriModel" index="3"]
-surface_material_override/0 = null
-
-[node name="AnimationTree" parent="auriModel" index="5"]
-advance_expression_base_node = NodePath("../..")
-
-[node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-bones/1/position = Vector3(0.145624, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.407353, -0.000572296, -0.00293532)
-bones/3/position = Vector3(0.0669373, -0.000100429, 0.00295223)
-bones/4/position = Vector3(-0.030072, 0.0245249, -0.0155435)
-bones/5/position = Vector3(-0.0078204, -0.189281, 0.0282424)
-bones/5/rotation = Quaternion(-0.146928, 0.650456, 0.733008, -0.134233)
-bones/7/position = Vector3(-0.0143858, 0.192501, 0.0241189)
-bones/7/rotation = Quaternion(-0.673256, 0.290367, 0.0483402, 0.678289)
-bones/9/position = Vector3(-0.0226144, 0.0486971, -0.0217107)
-bones/9/rotation = Quaternion(0.722049, -0.681298, 0.100366, -0.0663646)
-bones/11/position = Vector3(-0.0754191, 0.00557167, -0.192448)
-bones/11/rotation = Quaternion(0, 0, 0, 1)
-bones/13/position = Vector3(-0.0215799, -0.0479481, -0.0215761)
-bones/13/rotation = Quaternion(0.0724672, -0.0249428, -0.729358, 0.679826)
-bones/15/position = Vector3(0.0754186, -0.00557159, 0.192448)
-bones/15/rotation = Quaternion(1.73472e-18, -3.46945e-18, 2.1684e-18, 1)
-
-[node name="L_Hand1" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.56661e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+[node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
+transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bud8gsinu5ptc"]
+[gd_scene load_steps=28 format=3 uid="uid://bud8gsinu5ptc"]
 
 [ext_resource type="Script" path="res://Player/auriModel.gd" id="1_6e5jk"]
 [ext_resource type="PackedScene" uid="uid://bw2grm4jocus3" path="res://Player/Imports/SKM_Auri.fbx" id="5_jvaca"]
@@ -795,7 +795,7 @@ advance_expression = "velocity.length() == 0
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_o6jnm"]
 advance_mode = 2
-advance_expression = "!is_on_floor()"
+advance_expression = "!is_on_floor() && abs(velocity.y > 3)"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_32bl2"]
 xfade_time = 0.1
@@ -805,7 +805,7 @@ advance_expression = "velocity.length() > 0"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c40ay"]
 advance_mode = 2
-advance_expression = "!is_on_floor()"
+advance_expression = "!is_on_floor() && abs(velocity.y) > 6"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_468w6"]
 advance_mode = 2
@@ -821,11 +821,7 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_co2c0"]
 advance_mode = 2
-advance_expression = "(is_on_floor() && velocity.y <= 3) || (is_on_floor_only() && get_floor_angle() > 1.2)"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_puke5"]
-advance_mode = 2
-advance_expression = "!is_on_floor()"
+advance_expression = "(is_on_floor() && velocity.y <= 5) || (is_on_floor() && get_floor_angle() > 1.2)"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hnfup"]
 states/End/position = Vector2(1126, 71)
@@ -840,8 +836,8 @@ states/land/node = SubResource("AnimationNodeAnimation_bpgx1")
 states/land/position = Vector2(736, -48)
 states/walking/node = SubResource("AnimationNodeAnimation_f7yoi")
 states/walking/position = Vector2(917, -187)
-transitions = ["idle", "walking", SubResource("AnimationNodeStateMachineTransition_quvtx"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_7qavu"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_o6jnm"), "land", "walking", SubResource("AnimationNodeStateMachineTransition_32bl2"), "walking", "jump", SubResource("AnimationNodeStateMachineTransition_c40ay"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_468w6"), "land", "idle", SubResource("AnimationNodeStateMachineTransition_pll5x"), "jump", "air_spin", SubResource("AnimationNodeStateMachineTransition_b0bqk"), "air_spin", "land", SubResource("AnimationNodeStateMachineTransition_co2c0"), "land", "air_spin", SubResource("AnimationNodeStateMachineTransition_puke5")]
-graph_offset = Vector2(-544, -490)
+transitions = ["idle", "walking", SubResource("AnimationNodeStateMachineTransition_quvtx"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_7qavu"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_o6jnm"), "land", "walking", SubResource("AnimationNodeStateMachineTransition_32bl2"), "walking", "jump", SubResource("AnimationNodeStateMachineTransition_c40ay"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_468w6"), "land", "idle", SubResource("AnimationNodeStateMachineTransition_pll5x"), "jump", "air_spin", SubResource("AnimationNodeStateMachineTransition_b0bqk"), "air_spin", "land", SubResource("AnimationNodeStateMachineTransition_co2c0")]
+graph_offset = Vector2(192, -577)
 
 [node name="acorn" type="Node3D"]
 script = ExtResource("1_6e5jk")
@@ -896,7 +892,7 @@ transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.81
 layers = 2
 
 [node name="L_Hand1" parent="SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.56661e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
 layers = 2
 
 [node name="R_Foot" parent="SKM_Auri/Auri_Full/Skeleton3D" index="7"]

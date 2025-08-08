@@ -116,7 +116,6 @@ func addPoofCloud():
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
-	print(get_floor_angle())
 	if(Manager.won):
 		$auriModel/AnimationTree.active = false
 		$auriModel/AnimationPlayer.play("win")
