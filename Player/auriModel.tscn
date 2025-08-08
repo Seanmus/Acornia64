@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=4 uid="uid://bud8gsinu5ptc"]
+[gd_scene load_steps=85 format=4 uid="uid://bud8gsinu5ptc"]
 
 [ext_resource type="Script" path="res://Player/auriModel.gd" id="1_6e5jk"]
 [ext_resource type="Shader" path="res://Player/outLine.gdshader" id="2_7evxc"]
@@ -11,7 +11,7 @@
 [ext_resource type="Animation" uid="uid://bgaoi2svc78ev" path="res://Player/animations/jumpLoopAnim.res" id="9_d43kj"]
 [ext_resource type="Animation" uid="uid://b05il8myy086r" path="res://Player/animations/landAnim.res" id="10_htxpv"]
 
-[sub_resource type="Image" id="Image_o0ito"]
+[sub_resource type="Image" id="Image_demme"]
 data = {
 "data": PackedByteArray("jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f/+/+X/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv/+/+X//v/l//7/5f8SChr//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL//v/l/xIKGv/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/Egoa//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X//v/l/xIKGv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f/+/+X//v/l//7/5f/+/+X/Egoa/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC//7/5f8SChr/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/41aQv+NWkL/jVpC/w=="),
 "format": "RGBA8",
@@ -21,7 +21,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_xv0wy"]
-image = SubResource("Image_o0ito")
+image = SubResource("Image_demme")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ax14"]
 resource_name = "auriSmile"
@@ -1284,8 +1284,475 @@ states/win/position = Vector2(864.5, 481)
 transitions = ["walking", "jump", SubResource("AnimationNodeStateMachineTransition_86vmn"), "jump", "win", SubResource("AnimationNodeStateMachineTransition_wji3m"), "walking", "win", SubResource("AnimationNodeStateMachineTransition_mmnb5"), "win", "jump", SubResource("AnimationNodeStateMachineTransition_880f3"), "jump", "land", SubResource("AnimationNodeStateMachineTransition_q06fx"), "land", "walking", SubResource("AnimationNodeStateMachineTransition_72pp0"), "land", "jump", SubResource("AnimationNodeStateMachineTransition_6ebed"), "jump", "inAir", SubResource("AnimationNodeStateMachineTransition_3ppwk"), "inAir", "land", SubResource("AnimationNodeStateMachineTransition_s6yfu"), "inAir", "win", SubResource("AnimationNodeStateMachineTransition_6y1l8"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_xmeup"), "idle", "walking", SubResource("AnimationNodeStateMachineTransition_hr1s2"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_jl3nu"), "jump", "idle", SubResource("AnimationNodeStateMachineTransition_5avks"), "idle", "win", SubResource("AnimationNodeStateMachineTransition_ywfia"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_6o1ni"), "land", "idle", SubResource("AnimationNodeStateMachineTransition_vmb5d")]
 graph_offset = Vector2(-571.93, -96.142)
 
+[sub_resource type="Animation" id="Animation_8etvs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D/Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton3D/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton3D/Shades:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton3D/Shades:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton3D/Nose:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton3D/Nose:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton3D/Mouth:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton3D/Mouth:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton3D/Body:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton3D/Body:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton3D/R_Hand:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton3D/R_Hand:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton3D/L_Hand1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton3D/L_Hand1:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton3D/R_Foot:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton3D/R_Foot:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton3D/L_Foot:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton3D/L_Foot:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton3D:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_53nj4"]
+resource_name = "air_spin"
+length = 0.300005
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton3D/Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.0713814, 0), Vector3(5.92054e-09, -0.0331606, -0.067723), Vector3(7.65834e-09, 0.0688982, -0.087601), Vector3(-6.92085e-10, 0.0934339, 0.00791651), Vector3(-5.80243e-09, 0.0614728, 0.0663719), Vector3(-5.65153e-09, -0.0468321, 0.0646458), Vector3(0, -0.0713814, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton3D/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.42109e-14, 0), Vector3(1.04365, 8.63577e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 1.42109e-14, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton3D/Shades:position")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(4.92167e-10, -0.0167427, -0.00562972), Vector3(2.0399e-09, -0.000808358, -0.0233337), Vector3(1.30468e-09, 0.0232215, -0.0149237), Vector3(-5.8181e-10, 0.0272849, 0.00665512), Vector3(-1.57508e-09, 0.0163168, 0.0180168), Vector3(-9.47526e-10, -0.00833482, 0.0108384), Vector3(4.92167e-10, -0.0167427, -0.00562972)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton3D/Shades:rotation")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.42109e-14, 0), Vector3(1.04365, 8.63577e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 1.42109e-14, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton3D/Nose:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(5.27313e-10, 0.00274885, -0.00603174), Vector3(5.07847e-10, 0.00983045, -0.00580907), Vector3(3.68227e-11, 0.0127136, -0.000421202), Vector3(-2.30027e-10, 0.0112493, 0.0026312), Vector3(-2.47886e-10, 0.00574887, 0.00283547), Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton3D/Nose:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.04365, 8.63576e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton3D/Mouth:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(5.27313e-10, 0.00274885, -0.00603174), Vector3(5.07847e-10, 0.00983045, -0.00580907), Vector3(3.68227e-11, 0.0127136, -0.000421202), Vector3(-2.30027e-10, 0.0112493, 0.0026312), Vector3(-2.47886e-10, 0.00574887, 0.00283547), Vector3(0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton3D/Mouth:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.04365, 8.63576e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton3D/Body:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(5.27313e-10, 0.00274885, -0.00603174), Vector3(5.07847e-10, 0.00983045, -0.00580907), Vector3(3.68227e-11, 0.0127136, -0.000421202), Vector3(-2.30027e-10, 0.0112493, 0.0026312), Vector3(-2.47886e-10, 0.00574887, 0.00283547), Vector3(0, 0, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton3D/Body:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.04365, 8.63576e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton3D/R_Hand:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.0270028, 0, 2.36066e-09), Vector3(0.0270028, 0.00274885, -0.00603174), Vector3(0.0270028, 0.00983045, -0.00580907), Vector3(0.0270028, 0.0127136, -0.0004212), Vector3(0.0270028, 0.0112493, 0.0026312), Vector3(0.0270028, 0.00574887, 0.00283548), Vector3(0.0270028, 0, 2.36066e-09)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton3D/R_Hand:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.960106, 6.50324e-08, -1.24899e-07), Vector3(0.0835488, 3.06012e-10, 7.32115e-09), Vector3(1.24038, 2.20454e-07, 2.8467e-07), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(-1.32126, 3.14159, -3.14159), Vector3(-0.960106, 6.50324e-08, -1.24899e-07)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton3D/L_Hand1:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.0170239, 0, -1.48828e-09), Vector3(-0.0170239, 0.00274885, -0.00603174), Vector3(-0.0170239, 0.00983045, -0.00580908), Vector3(-0.0170239, 0.0127136, -0.000421204), Vector3(-0.0170239, 0.0112493, 0.00263119), Vector3(-0.0170239, 0.00574887, 0.00283547), Vector3(-0.0170239, 0, -1.48828e-09)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton3D/L_Hand1:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.786376, 3.63328e-08, -8.7594e-08), Vector3(0.257279, 2.97539e-09, 2.30019e-08), Vector3(1.23918, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(-1.49499, 3.14159, -3.14159), Vector3(-0.786376, 3.63328e-08, -8.7594e-08)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton3D/R_Foot:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.0744363, 0), Vector3(-5.09674e-09, 0.0401952, 0.0582997), Vector3(-4.24723e-09, -0.0314156, 0.0485825), Vector3(7.96921e-10, -0.0549922, -0.00911569), Vector3(4.5475e-09, -0.0296558, -0.0520172), Vector3(4.20033e-09, 0.0512543, -0.0480461), Vector3(0, 0.0744363, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton3D/R_Foot:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 7.10543e-15, 0), Vector3(1.04365, 8.63577e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 7.10543e-15, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton3D/L_Foot:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.073264, 0), Vector3(-5.00816e-09, 0.0396054, 0.0572865), Vector3(-4.17233e-09, -0.030766, 0.0477258), Vector3(7.84953e-10, -0.0539259, -0.0089788), Vector3(4.47226e-09, -0.0290115, -0.0511566), Vector3(4.13027e-09, 0.0505377, -0.0472447), Vector3(0, 0.073264, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton3D/L_Foot:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.42109e-14, 0), Vector3(1.04365, 8.63577e-08, 1.5019e-07), Vector3(2.35619, 0, 0), Vector3(3.14159, 0, 0), Vector3(4.10152, 0, 0), Vector3(5.49779, 0, 0), Vector3(0, 1.42109e-14, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton3D:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5xdch"]
 _data = {
+"RESET": SubResource("Animation_8etvs"),
+"air_spin": SubResource("Animation_53nj4"),
 "idle": ExtResource("6_cuieg"),
 "inAir": ExtResource("9_d43kj"),
 "jump": ExtResource("7_adny6"),
@@ -1293,11 +1760,11 @@ _data = {
 "walking": ExtResource("7_atlxu")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nxt8a"]
+animation = &"air_spin"
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vqm5i"]
 animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8fdyh"]
-animation = &"inAir"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_o4g02"]
 animation = &"jump"
@@ -1333,11 +1800,6 @@ advance_expression = "velocity.length() == 0
 advance_mode = 2
 advance_expression = "!is_on_floor()"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_sndwe"]
-break_loop_at_end = true
-switch_mode = 2
-advance_mode = 2
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_32bl2"]
 xfade_time = 0.2
 switch_mode = 1
@@ -1351,10 +1813,6 @@ advance_expression = "!is_on_floor()"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_468w6"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_hxeoq"]
-advance_mode = 2
-advance_expression = "is_on_floor()"
-
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_23ixd"]
 advance_mode = 2
 advance_expression = "!is_on_floor()"
@@ -1364,21 +1822,29 @@ switch_mode = 2
 advance_mode = 2
 advance_expression = "velocity.length() == 0"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b0bqk"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_co2c0"]
+advance_mode = 2
+advance_expression = "is_on_floor()"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_hnfup"]
 states/End/position = Vector2(1126, 71)
 states/Start/position = Vector2(-401, -236)
+states/air_spin/node = SubResource("AnimationNodeAnimation_nxt8a")
+states/air_spin/position = Vector2(295, -33)
 states/idle/node = SubResource("AnimationNodeAnimation_vqm5i")
 states/idle/position = Vector2(-134, -236)
-states/inAir/node = SubResource("AnimationNodeAnimation_8fdyh")
-states/inAir/position = Vector2(339, -40)
 states/jump/node = SubResource("AnimationNodeAnimation_o4g02")
 states/jump/position = Vector2(345, -526)
 states/land/node = SubResource("AnimationNodeAnimation_bpgx1")
 states/land/position = Vector2(736, -48)
 states/walking/node = SubResource("AnimationNodeAnimation_f7yoi")
 states/walking/position = Vector2(918, -187)
-transitions = ["idle", "walking", SubResource("AnimationNodeStateMachineTransition_quvtx"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_7qavu"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_o6jnm"), "jump", "inAir", SubResource("AnimationNodeStateMachineTransition_sndwe"), "land", "walking", SubResource("AnimationNodeStateMachineTransition_32bl2"), "walking", "jump", SubResource("AnimationNodeStateMachineTransition_c40ay"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_468w6"), "inAir", "land", SubResource("AnimationNodeStateMachineTransition_hxeoq"), "land", "jump", SubResource("AnimationNodeStateMachineTransition_23ixd"), "land", "idle", SubResource("AnimationNodeStateMachineTransition_pll5x")]
-graph_offset = Vector2(-517, -573)
+transitions = ["idle", "walking", SubResource("AnimationNodeStateMachineTransition_quvtx"), "walking", "idle", SubResource("AnimationNodeStateMachineTransition_7qavu"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_o6jnm"), "land", "walking", SubResource("AnimationNodeStateMachineTransition_32bl2"), "walking", "jump", SubResource("AnimationNodeStateMachineTransition_c40ay"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_468w6"), "land", "jump", SubResource("AnimationNodeStateMachineTransition_23ixd"), "land", "idle", SubResource("AnimationNodeStateMachineTransition_pll5x"), "jump", "air_spin", SubResource("AnimationNodeStateMachineTransition_b0bqk"), "air_spin", "land", SubResource("AnimationNodeStateMachineTransition_co2c0")]
+graph_offset = Vector2(-693, -591)
 
 [node name="acorn" type="Node3D"]
 script = ExtResource("1_6e5jk")
@@ -1393,12 +1859,14 @@ surface_material_override/0 = SubResource("ShaderMaterial_fllr8")
 
 [node name="sunglasses" type="MeshInstance3D" parent="body"]
 transform = Transform3D(3.53604e-08, 0, 0.769137, 0, 0.138497, 0, -0.0640199, 0, 4.24821e-07, 4.90449e-07, 0.328728, -0.914263)
+visible = false
 layers = 2
 mesh = SubResource("ArrayMesh_l1t8j")
 skeleton = NodePath("")
 
 [node name="Cone" type="MeshInstance3D" parent="body"]
 transform = Transform3D(0.125611, 5.62866e-08, 0.213872, -0.213872, 9.2792e-09, 0.125611, 3.56795e-08, -0.142537, 9.26335e-08, 5.39392e-07, -0.0364347, -1.0055)
+visible = false
 layers = 2
 mesh = SubResource("ArrayMesh_tvnyv")
 skeleton = NodePath("")
@@ -1441,29 +1909,29 @@ anim_player = NodePath("../AnimationPlayer")
 transform = Transform3D(-2.9627, 0, -2.59008e-07, 0, 2.9627, 0, 2.59008e-07, 0, -2.9627, 0, 1.25015, 0)
 
 [node name="Skeleton3D" parent="SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.268958, 4.52995e-08, 0.00375401)
-bones/2/position = Vector3(0.420882, -0.000624544, 0.00608145)
-bones/3/position = Vector3(0.0939696, -0.00010897, 0.000309105)
+bones/1/position = Vector3(0.142662, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.407997, -0.000555295, -0.00284812)
+bones/3/position = Vector3(0.0534103, -9.68876e-05, 0.00284812)
 bones/3/rotation = Quaternion(0, 0, -0.707107, 0.707107)
 bones/3/scale = Vector3(1, 1, 1)
-bones/4/position = Vector3(-0.0321878, 0.0454625, -0.0232489)
+bones/4/position = Vector3(-0.0290115, 0.0236601, -0.0149954)
 bones/4/rotation = Quaternion(0, 0, 0, 1)
-bones/5/position = Vector3(-0.0407892, -0.194473, -0.015635)
-bones/5/rotation = Quaternion(0.0105841, 0.745121, 0.596824, -0.297462)
+bones/5/position = Vector3(-0.00824806, -0.194252, 0.025841)
+bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
 bones/6/position = Vector3(0.0830682, 0, 8.32667e-17)
 bones/6/rotation = Quaternion(0, 2.77556e-17, -6.93889e-18, 1)
-bones/7/position = Vector3(-0.0382659, 0.195086, -0.0140307)
-bones/7/rotation = Quaternion(-0.611703, 0.191154, -0.0165197, 0.767468)
+bones/7/position = Vector3(-0.00824806, 0.194252, 0.025841)
+bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
 bones/8/rotation = Quaternion(-6.93889e-18, -2.60209e-17, -6.93889e-18, 1)
-bones/9/position = Vector3(0.0874936, 0.0486971, -0.0345573)
-bones/9/rotation = Quaternion(0.638458, -0.61258, 0.351815, -0.30552)
-bones/11/position = Vector3(-0.0641856, -0.0555659, -0.173789)
-bones/11/rotation = Quaternion(-0.0232457, -0.115839, -0.104259, 0.987507)
-bones/13/position = Vector3(0.0882005, -0.048697, -0.0359801)
-bones/13/rotation = Quaternion(0.377038, -0.301808, -0.616463, 0.621875)
+bones/9/position = Vector3(-0.0210603, 0.0486971, -0.0181665)
+bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
+bones/11/position = Vector3(-0.066525, -0.0356637, -0.200116)
+bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
+bones/13/position = Vector3(-0.0210603, -0.048697, -0.0181665)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
 bones/14/rotation = Quaternion(1.73472e-18, -3.46945e-18, 2.1684e-18, 1)
-bones/15/position = Vector3(0.054548, 0.0726295, 0.200278)
-bones/15/rotation = Quaternion(-0.309624, -0.0479172, -0.0887848, 0.945492)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
 
 [node name="Head" parent="SKM_Auri/Auri_Full/Skeleton3D" index="0"]
 layers = 2
@@ -1500,6 +1968,7 @@ libraries = {
 autoplay = "walking"
 
 [node name="AnimationTree" type="AnimationTree" parent="SKM_Auri"]
+active = false
 root_node = NodePath("../Auri_Full")
 tree_root = SubResource("AnimationNodeStateMachine_hnfup")
 anim_player = NodePath("../AnimationPlayer")
