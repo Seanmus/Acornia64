@@ -18,9 +18,6 @@ var wasOnGround : bool
 var dead : bool
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-@onready var animationTree = $auriModel/AnimationTree
-@onready var animationState = animationTree.get("parameters/playback")
-@onready var anim = $auriModel/AnimationPlayer
 @onready var cameraAnimPlayer = $Pivot/SpringArm3D/Camera3D/AnimationPlayer
 @onready var landSound = $LandSound
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
@@ -57,13 +54,12 @@ func Bounce(bounceMultiplier):
 	#gets player off the ground before transitioning to jump state
 	set_position(get_position() + Vector3(0,0.1,0))
 	landing = false
-	animationState.travel("jump")
 
 	
 #Starts the proccess of the players death	
 func kill():
-	$auriModel/AnimationTree.active = false
-	$auriModel/AnimationPlayer.play("die")
+	$auriModel/SKM_Auri/AnimationTree.active = false
+	$auriModel/SKM_Auri/AnimationPlayer.play("die")
 	#animationState.travel("die")
 	$DeathSound.play()
 	velocity.y = 0
@@ -77,11 +73,6 @@ func _HomingAttack(delta):
 	$Area3D.monitoring = false
 
 	position = position.move_toward(homingTarget.global_position, delta * homingSpeed)
-	#if position.distance_to(homingTarget.global_position) > 1 && abs(position.y - homingTarget.position.y) > 5:
-		#var homingRot = position.direction_to(homingTarget.position)
-		#$Homing.rotation.x = homingRot.x
-	#$Homing.process_material.set("direction", position.direction_to(prevPos))
-	#Checks if the players has reached the target position
 	if position == homingTarget.global_position:
 		$CollisionShape3D.disabled = false
 		$Area3D.monitoring = true
@@ -116,7 +107,6 @@ func jump():
 		velocity.y += JUMP_VELOCITY
 	else:
 		velocity.y = JUMP_VELOCITY
-	animationState.travel("jump")
 	
 	
 func addPoofCloud():
@@ -126,6 +116,7 @@ func addPoofCloud():
 		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
+	print(get_floor_angle())
 	if(Manager.won):
 		$auriModel/AnimationTree.active = false
 		$auriModel/AnimationPlayer.play("win")
@@ -133,8 +124,8 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	if(abs(velocity.y) > 3 && !is_on_floor()):
-		animationState.travel("jump")
+	#if(abs(velocity.y) > 3 && !is_on_floor()):
+	#	animationState.travel("jump")
 	
 	if $RayCast3D.is_colliding():
 		var origin = $RayCast3D.global_transform.origin
@@ -168,13 +159,11 @@ func _physics_process(delta):
 			wasOnGround = true
 			canDoubleJump = true
 			if(velocity.x != 0 || velocity.z != 0):
-				animationState.travel("walking")
 				if landing:
 					landing = false
 			else:
 				if landing:
 					landing = false
-					animationState.travel("idle")
 			if Input.is_action_just_pressed("jump"):
 				jump()
 		else:
@@ -292,11 +281,9 @@ func _RotatePlayerModelInInputDirection(input_dir):
 #Starts the win animation
 func Win():
 	print("won")
-	animationState.travel("win")
-
-func Reset():
-	$acorn/AnimationPlayer.play("Reset")
-	$acorn/AnimationPlayer.play("idle")
+	$auriModel/SKM_Auri/AnimationTree.active = false
+	$auriModel/SKM_Auri/AnimationPlayer.play("RESET")
+	$auriModel/SKM_Auri/AnimationPlayer.play("win")
 
 func _SetSpawnPoint(spawnPoint, spawnerRotation):
 	spawnPos = spawnPoint
@@ -308,8 +295,8 @@ func _on_deathFinished():
 	rotation = spawnRotation
 	$Pivot.rotation.x = spawnRotation.x
 	dead = false
-	$auriModel/AnimationPlayer.play("idle")
-	$auriModel/AnimationTree.active = true
+	$auriModel/SKM_Auri/AnimationPlayer.play("idle")
+	$auriModel/SKM_Auri/AnimationTree.active = true
 	$Pivot/SpringArm3D/Camera3D.current = true
 	$DeathCam.current = false
 	var enemies = get_tree().get_nodes_in_group("enemies")
@@ -351,9 +338,6 @@ func _GetClosestTarget():
 		#If a closest target was found returns the one otherwise null is returned
 		return closestTarget
 
-func _JumpFinished():
-	animationState.travel("inAir")
-
 
 func _on_area_3d_body_entered(body):
 	if(body.is_in_group("moving_platform") && is_on_floor()):
@@ -366,7 +350,6 @@ func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("moving_platform"):
 		print("moving platform on bottom")
 		velocity.y = -1000
-		animationState.travel("land")
 
 
 func _on_coyote_timer_timeout() -> void:

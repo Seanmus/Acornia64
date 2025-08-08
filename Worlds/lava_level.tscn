@@ -100,8 +100,8 @@ UI = NodePath("../UI")
 [node name="Camera3D" parent="Player/Pivot/SpringArm3D" index="0"]
 environment = null
 
-[node name="hat" parent="Player/auriModel" index="1"]
-transform = Transform3D(0.706368, 0, 1.79077e-06, 0, -0.193109, 0, -1.79077e-06, 0, 0.706368, 0.00496591, 1.87453, 0)
+[node name="R_Hand" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
+transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
 
 [node name="Cheese" type="Node3D" parent="."]
 
