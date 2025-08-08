@@ -55,7 +55,19 @@ func Bounce(bounceMultiplier):
 	set_position(get_position() + Vector3(0,0.1,0))
 	landing = false
 
-	
+#Jumps the player does a double jump if already in the air
+func jump():
+	if dead:
+		return
+	$JumpSound.play()
+	set_position(get_position() + Vector3(0,0.1,0))
+	#if falling sets velocity to jump velocity, if going up adds onto the jump velocity
+	if velocity.y >= 0:
+		velocity.y += JUMP_VELOCITY
+	else:
+		velocity.y = JUMP_VELOCITY
+
+
 #Starts the proccess of the players death	
 func kill():
 	$auriModel/SKM_Auri/AnimationTree.active = false
@@ -98,17 +110,6 @@ func _unhandled_input(event):
 			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
 			
 			
-func jump():
-	if dead:
-		return
-	$JumpSound.play()
-	set_position(get_position() + Vector3(0,0.1,0))
-	if velocity.y >= 0:
-		velocity.y += JUMP_VELOCITY
-	else:
-		velocity.y = JUMP_VELOCITY
-	
-	
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
 	$JumpCloudSpawnPoint.add_child(cloud)
@@ -143,16 +144,8 @@ func _physics_process(delta):
 			homingTarget._HighLight()
 		if(previousTarget):
 			previousTarget._UnHighLight()
-	#if is_on_floor():
-	#	acceleration = 60
-	#else:
-	#	acceleration = 40
-	if Input.is_action_pressed("sprint"):
-		maxSpeed = 22.5
-	else:
-		pass
-		#maxSpeed = 15
-		#runCloud.emitting = false
+
+
 	if not dead:		
 		if is_on_floor() && !dead && !bouncing:
 			wasOnGround = true
@@ -203,8 +196,6 @@ func _physics_process(delta):
 			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
-		_RotatePlayerModelInInputDirection(input_dir)
-		#print(input_dir)
 		if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
 			runCloud.emitting = true
 		else:
@@ -254,28 +245,7 @@ func _physics_process(delta):
 		
 
 
-func _RotatePlayerModelInInputDirection(input_dir):
-	#Turn right
-	if input_dir.x > 0 && abs(input_dir.y) <= 0.35:
-		auri.rotation_degrees.y = -90
-	elif input_dir.y < 0 && abs(input_dir.x) <= 0.35:
-		auri.rotation_degrees.y = 0
-	elif input_dir.y > 0 && abs(input_dir.x) <= 0.35:
-		auri.rotation_degrees.y = 180
-	#Turn left	
-	elif input_dir.x < 0 && abs(input_dir.y) <= 0.35:
-		auri.rotation_degrees.y = 90
-	#Turn left forward	
-	elif input_dir.x < 0 && input_dir.y < 0:
-		auri.rotation_degrees.y = 45
-	#
-	#Turn right forward	
-	elif input_dir.x > 0 && input_dir.y < 0:
-		auri.rotation_degrees.y = -45			
-	elif input_dir.x < 0 && input_dir.y > 0:
-		auri.rotation_degrees.y = 135	
-	elif input_dir.x > 0 && input_dir.y > 0:
-		auri.rotation_degrees.y = 225		
+
 
 #Starts the win animation
 func Win():
@@ -337,7 +307,7 @@ func _GetClosestTarget():
 		#If a closest target was found returns the one otherwise null is returned
 		return closestTarget
 
-
+#crush monitor
 func _on_area_3d_body_entered(body):
 	if(body.is_in_group("moving_platform") && is_on_floor()):
 		$Pivot/SpringArm3D/Camera3D.current = false
