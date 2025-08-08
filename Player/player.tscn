@@ -82,6 +82,9 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_iqq1t"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
+size = Vector3(0.955, 1.53419, 2)
+
 [sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
 emission_shape = 1
 emission_sphere_radius = 1.0
@@ -100,14 +103,13 @@ blend_mode = 4
 shading_mode = 0
 vertex_color_use_as_albedo = true
 albedo_color = Color(1, 1, 1, 0.00392157)
+billboard_mode = 1
+billboard_keep_scale = true
 
 [sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
 material = SubResource("StandardMaterial3D_71gfw")
-size = Vector2(1.551, 0.406)
+size = Vector2(0.656, 0.406)
 orientation = 2
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
-size = Vector3(0.955, 1.53419, 2)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_t5txg"]
 radius = 0.573245
@@ -172,17 +174,6 @@ current = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_iqq1t")
 
-[node name="runCloud" type="GPUParticles3D" parent="."]
-transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
-visible = false
-layers = 2
-amount = 400
-lifetime = 0.16
-randomness = 1.0
-collision_base_size = 0.1
-process_material = SubResource("ParticlesMaterial_qbyin")
-draw_pass_1 = SubResource("QuadMesh_bu1i1")
-
 [node name="coinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ulqlb")
 volume_db = -80.0
@@ -213,7 +204,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 surface_material_override/0 = null
 
 [node name="hat" parent="auriModel" index="1"]
-transform = Transform3D(0.706368, 0, 1.79077e-06, 0, -0.193109, 0, -1.79077e-06, 0, 0.706368, 0.00496591, 1.87453, 0)
 surface_material_override/0 = null
 
 [node name="leftFoot" parent="auriModel" index="2"]
@@ -226,22 +216,35 @@ surface_material_override/0 = null
 advance_expression_base_node = NodePath("../..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.148191, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.41191, -0.000624544, -0.00320331)
-bones/3/position = Vector3(0.060071, -0.00010897, 0.00320331)
-bones/4/position = Vector3(-0.0326295, 0.0266106, -0.0168654)
-bones/5/position = Vector3(-0.0137777, -0.194252, 0.025841)
-bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
-bones/7/position = Vector3(-0.0137777, 0.194252, 0.025841)
-bones/9/position = Vector3(-0.0210603, 0.0486971, -0.0181665)
-bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
-bones/11/position = Vector3(-0.066525, -0.0356637, -0.200116)
-bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
-bones/13/position = Vector3(-0.0210603, -0.048697, -0.0181665)
-bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
+bones/1/position = Vector3(0.145624, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.407353, -0.000572296, -0.00293532)
+bones/3/position = Vector3(0.0669373, -0.000100429, 0.00295223)
+bones/4/position = Vector3(-0.030072, 0.0245249, -0.0155435)
+bones/5/position = Vector3(-0.0078204, -0.189281, 0.0282424)
+bones/5/rotation = Quaternion(-0.146928, 0.650456, 0.733008, -0.134233)
+bones/7/position = Vector3(-0.0143858, 0.192501, 0.0241189)
+bones/7/rotation = Quaternion(-0.673256, 0.290367, 0.0483402, 0.678289)
+bones/9/position = Vector3(-0.0226144, 0.0486971, -0.0217107)
+bones/9/rotation = Quaternion(0.722049, -0.681298, 0.100366, -0.0663646)
+bones/11/position = Vector3(-0.0754191, 0.00557167, -0.192448)
+bones/11/rotation = Quaternion(0, 0, 0, 1)
+bones/13/position = Vector3(-0.0215799, -0.0479481, -0.0215761)
+bones/13/rotation = Quaternion(0.0724672, -0.0249428, -0.729358, 0.679826)
+bones/15/position = Vector3(0.0754186, -0.00557159, 0.192448)
+bones/15/rotation = Quaternion(1.73472e-18, -3.46945e-18, 2.1684e-18, 1)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
+
+[node name="runCloud" type="GPUParticles3D" parent="auriModel/SKM_Auri" index="5"]
+transform = Transform3D(-0.120057, -1.17691e-09, 1.01493e-08, 0, 0.0510896, 0.030591, -1.04957e-08, 0.0134622, -0.116094, 0.00704619, -0.179804, -0.133804)
+layers = 2
+amount = 400
+lifetime = 0.16
+randomness = 1.0
+collision_base_size = 0.1
+process_material = SubResource("ParticlesMaterial_qbyin")
+draw_pass_1 = SubResource("QuadMesh_bu1i1")
 
 [node name="CrushDetector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984555, 0)
