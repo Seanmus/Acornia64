@@ -73,3 +73,10 @@ func _win():
 	$winSound.play()
 	on_win.emit()
 	LevelLoader._loadLevel(nextLevel)
+
+
+func _ResetLevel():
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	for enemy in enemies:
+		enemy as MovingEnemiesBase
+		enemy._Reset()

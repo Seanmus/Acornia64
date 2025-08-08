@@ -1,13 +1,15 @@
-[gd_scene load_steps=26 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=28 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
 [ext_resource type="AudioStream" uid="uid://tp6w0yea4480" path="res://Audio/Effects/Land.wav" id="4_ocmxn"]
 [ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="5_olqky"]
+[ext_resource type="Script" path="res://Player/crush_monitor.gd" id="6_4jg1v"]
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="7_0jk04"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
+[ext_resource type="Script" path="res://Player/shadowDecal.gd" id="8_auqq3"]
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
 [ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
 [ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="11_jep6i"]
@@ -169,9 +171,11 @@ stream = ExtResource("5_olqky")
 [node name="AudioListener3D" type="AudioListener3D" parent="."]
 current = true
 
-[node name="Area3D" type="Area3D" parent="." groups=["seed"]]
+[node name="HurtMonitor" type="Area3D" parent="." node_paths=PackedStringArray("player") groups=["seed"]]
+script = ExtResource("6_4jg1v")
+player = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtMonitor"]
 shape = SubResource("SphereShape3D_iqq1t")
 
 [node name="coinSound" type="AudioStreamPlayer" parent="."]
@@ -181,13 +185,18 @@ volume_db = -80.0
 [node name="JumpCloudSpawnPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.09941, 0)
 
-[node name="Decal" type="Decal" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -10, 0)
+
+[node name="ShadowDecal" type="Decal" parent="RayCast3D" node_paths=PackedStringArray("raycast")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.27512, 0)
 size = Vector3(2, 9, 2)
 texture_albedo = ExtResource("7_0jk04")
 distance_fade_enabled = true
 distance_fade_begin = 30.0
 cull_mask = 1048573
+script = ExtResource("8_auqq3")
+raycast = NodePath("..")
 
 [node name="TargetDetectionArea" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
@@ -236,9 +245,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.539592, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MovingPlatformDetector"]
 shape = SubResource("SphereShape3D_2ymgt")
-
-[node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, -10, 0)
 
 [node name="PauseMenu" type="Panel" parent="."]
 process_mode = 3
@@ -308,8 +314,8 @@ metadata/_edit_use_anchors_ = true
 [node name="coyoteTimer" type="Timer" parent="."]
 wait_time = 0.2
 
-[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
+[connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]
 [connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
 [connection signal="area_exited" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_exited"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]

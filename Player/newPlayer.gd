@@ -6,7 +6,6 @@ var acceleration = 130
 var air_acceleration = 90
 var decceleration = 130
 var air_decceleration = 90
-var push_force = 10
 const JUMP_VELOCITY = 11
 var mouse_sensitivty = 0.002 #radiains/pixel
 var rotationSpeed = 0.00
@@ -18,12 +17,14 @@ var wasOnGround : bool
 var dead : bool
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+@onready var pivot = $Pivot
 @onready var cameraAnimPlayer = $Pivot/SpringArm3D/Camera3D/AnimationPlayer
 @onready var landSound = $LandSound
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 @export var UI : Node
+@onready var hurtMonitor = $HurtMonitor
 
 var spawnPos
 var spawnRotation
@@ -70,6 +71,8 @@ func jump():
 
 #Starts the proccess of the players death	
 func kill():
+	$Pivot/SpringArm3D/Camera3D.current = false
+	$DeathCam.current = true
 	$auriModel/SKM_Auri/AnimationTree.active = false
 	$auriModel/SKM_Auri/AnimationPlayer.play("die")
 	#animationState.travel("die")
@@ -82,12 +85,12 @@ func kill():
 #Sends the player flying towards the homingTargets position
 func _HomingAttack(delta):
 	$CollisionShape3D.disabled = true
-	$Area3D.monitoring = false
+	hurtMonitor.monitoring = false
 
 	position = position.move_toward(homingTarget.global_position, delta * homingSpeed)
 	if position == homingTarget.global_position:
 		$CollisionShape3D.disabled = false
-		$Area3D.monitoring = true
+		hurtMonitor.monitoring = true
 		cameraAnimPlayer.play("ScreenShake")
 		#Freeze frame
 		OS.delay_msec(40)
@@ -106,8 +109,8 @@ func _unhandled_input(event):
 		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-event.relative.x * mouse_sensitivty)
 			auri.rotate_y(event.relative.x * mouse_sensitivty)
-			$Pivot.rotate_x(-event.relative.y * mouse_sensitivty)
-			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
+			pivot.rotate_x(-event.relative.y * mouse_sensitivty)
+			pivot.rotation.x = clamp(pivot.rotation.x, -0.9, -0.1)
 			
 			
 func addPoofCloud():
@@ -118,25 +121,14 @@ func addPoofCloud():
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
 	if(Manager.won):
-		$auriModel/AnimationTree.active = false
-		$auriModel/AnimationPlayer.play("win")
+		$auriModel/SKM_Auri/AnimationTree.active = false
+		$auriModel/SKM_Auri/AnimationPlayer.play("win")
 		return
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-	#if(abs(velocity.y) > 3 && !is_on_floor()):
-	#	animationState.travel("jump")
-	
-	if $RayCast3D.is_colliding():
-		var origin = $RayCast3D.global_transform.origin
-		var collision_point = $RayCast3D.get_collision_point()
-		var distance = origin.distance_to(collision_point)
-		#adds 0.6 for slopes
-		$Decal.size.y = distance + 0.6
-		$Decal.position.y = -distance/1.8 
-	
-	
-	$Area3D.monitoring = true
+
+	hurtMonitor.monitoring = true
 	var previousTarget = homingTarget
 	homingTarget = _GetClosestTarget()
 	if(previousTarget != homingTarget):
@@ -192,8 +184,8 @@ func _physics_process(delta):
 		#controller camera controls
 		if cameraInput:
 			rotate_y(-cameraInput.x * controller_sensitivity)
-			$Pivot.rotate_x(-cameraInput.y * controller_sensitivity)
-			$Pivot.rotation.x = clamp($Pivot.rotation.x, -0.9, -0.1)
+			pivot.rotate_x(-cameraInput.y * controller_sensitivity)
+			pivot.rotation.x = clamp(pivot.rotation.x, -0.9, -0.1)
 
 		var input_dir = Input.get_vector("left", "right", "forward", "back")
 		if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
@@ -236,13 +228,7 @@ func _physics_process(delta):
 		velocity.x = movementVelocity.x
 		velocity.z = movementVelocity.z		
 		bouncing = false		
-		var _returnValue = move_and_slide()
-		
-		for i in get_slide_collision_count():
-			var c = get_slide_collision(i)
-			if c.get_collider() is RigidBody3D:
-				c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
-		
+		var _returnValue = move_and_slide()	
 
 
 
@@ -262,21 +248,15 @@ func _SetSpawnPoint(spawnPoint, spawnerRotation):
 func _on_deathFinished():
 	position = spawnPos
 	rotation = spawnRotation
-	$Pivot.rotation.x = spawnRotation.x
+	pivot.rotation.x = spawnRotation.x
 	dead = false
 	$auriModel/SKM_Auri/AnimationPlayer.play("idle")
 	$auriModel/SKM_Auri/AnimationTree.active = true
 	$Pivot/SpringArm3D/Camera3D.current = true
 	$DeathCam.current = false
-	var enemies = get_tree().get_nodes_in_group("enemies")
-	for enemy in enemies:
-		enemy as MovingEnemiesBase
-		enemy._Reset()
+	Manager._ResetLevel()
 
-#Occurs when another area enters the player area
-func _on_area_3d_area_entered(area):
-	if area.is_in_group("deadly") or area.is_in_group("moving_platform"):
-		kill()
+
 
 func _on_target_detection_area_area_entered(area):
 	if area.is_in_group("targets"):
@@ -307,12 +287,7 @@ func _GetClosestTarget():
 		#If a closest target was found returns the one otherwise null is returned
 		return closestTarget
 
-#crush monitor
-func _on_area_3d_body_entered(body):
-	if(body.is_in_group("moving_platform") && is_on_floor()):
-		$Pivot/SpringArm3D/Camera3D.current = false
-		$DeathCam.current = true
-		kill()
+
 
 #fixes bug with spin anim on vertical moving platform
 func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
