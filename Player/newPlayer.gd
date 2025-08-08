@@ -25,11 +25,11 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 @export var UI : Node
 @onready var hurtMonitor = $HurtMonitor
+@onready var homingTargetDetector = $HomingTargetDetector
 
 var spawnPos
 var spawnRotation
 var homingAttack = false
-var overlappedTargets = []
 var homingTarget : Node3D
 var homingSpeed = 60
 var bouncing = true
@@ -41,10 +41,11 @@ func _ready():
 		UI = get_node("/root/UI")
 	Manager.on_win.connect(Win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	spawnPos = position
-	spawnRotation = rotation
+	_SetSpawnPoint(position, rotation)
 
-
+func _SetSpawnPoint(spawnPoint, spawnerRotation):
+	spawnPos = spawnPoint
+	spawnRotation = spawnerRotation
 	
 #Makes the player bounce when hitting a bouncing object		
 func Bounce(bounceMultiplier):
@@ -61,6 +62,7 @@ func jump():
 	if dead:
 		return
 	$JumpSound.play()
+	#gets player off the ground before transitioning to jump state
 	set_position(get_position() + Vector3(0,0.1,0))
 	#if falling sets velocity to jump velocity, if going up adds onto the jump velocity
 	if velocity.y >= 0:
@@ -130,7 +132,7 @@ func _physics_process(delta):
 
 	hurtMonitor.monitoring = true
 	var previousTarget = homingTarget
-	homingTarget = _GetClosestTarget()
+	homingTarget = homingTargetDetector._GetClosestTarget()
 	if(previousTarget != homingTarget):
 		if(homingTarget):
 			homingTarget._HighLight()
@@ -240,9 +242,6 @@ func Win():
 	$auriModel/SKM_Auri/AnimationPlayer.play("RESET")
 	$auriModel/SKM_Auri/AnimationPlayer.play("win")
 
-func _SetSpawnPoint(spawnPoint, spawnerRotation):
-	spawnPos = spawnPoint
-	spawnRotation = spawnerRotation
 	
 #Teleports the player back to its spawn position on player death.
 func _on_deathFinished():
@@ -255,39 +254,6 @@ func _on_deathFinished():
 	$Pivot/SpringArm3D/Camera3D.current = true
 	$DeathCam.current = false
 	Manager._ResetLevel()
-
-
-
-func _on_target_detection_area_area_entered(area):
-	if area.is_in_group("targets"):
-		overlappedTargets.append(area)
-
-
-func _on_target_detection_area_area_exited(area):
-	if area.is_in_group("targets"):
-		overlappedTargets.erase(area)
-
-#If the player is not on the ground, finds a new homing target if it exists and starts the homing attack
-func _GetClosestTarget():
-	if overlappedTargets:
-		var closestTarget
-		for target in overlappedTargets:
-			#Raycasts towards the target to ensure a clear path
-			var space_state = get_world_3d().direct_space_state
-			var query = PhysicsRayQueryParameters3D.create(position, target.position)
-			var result = space_state.intersect_ray(query)
-			#if(result):
-				#if result.position != target.position:
-					#continue
-			if not closestTarget:
-				closestTarget = target
-			#Checks if the distance to the target is less then the distance to the previous closest target
-			if position.distance_to(target.global_position) < position.distance_to(closestTarget.global_position):
-				closestTarget = target
-		#If a closest target was found returns the one otherwise null is returned
-		return closestTarget
-
-
 
 #fixes bug with spin anim on vertical moving platform
 func _on_moving_platform_detector_body_entered(body: Node3D) -> void:

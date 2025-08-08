@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=29 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Player/shadowDecal.gd" id="8_auqq3"]
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
 [ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
+[ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
 [ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="11_jep6i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
@@ -198,10 +199,12 @@ cull_mask = 1048573
 script = ExtResource("8_auqq3")
 raycast = NodePath("..")
 
-[node name="TargetDetectionArea" type="Area3D" parent="."]
+[node name="HomingTargetDetector" type="Area3D" parent="." node_paths=PackedStringArray("player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
+script = ExtResource("10_hdytl")
+player = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetDetectionArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingTargetDetector"]
 transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 3.1605e-09, -11.0723)
 visible = false
 shape = SubResource("BoxShape3D_fpp87")
@@ -316,8 +319,8 @@ wait_time = 0.2
 
 [connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]
-[connection signal="area_entered" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_entered"]
-[connection signal="area_exited" from="TargetDetectionArea" to="." method="_on_target_detection_area_area_exited"]
+[connection signal="area_entered" from="HomingTargetDetector" to="HomingTargetDetector" method="_on_target_detection_area_area_entered"]
+[connection signal="area_exited" from="HomingTargetDetector" to="HomingTargetDetector" method="_on_target_detection_area_area_exited"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
 [connection signal="jumpFinished" from="auriModel" to="." method="_JumpFinished"]
 [connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]
