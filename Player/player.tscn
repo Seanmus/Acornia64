@@ -96,9 +96,10 @@ hue_variation_max = 0.26
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71gfw"]
 transparency = 1
-blend_mode = 1
+blend_mode = 4
 shading_mode = 0
 vertex_color_use_as_albedo = true
+albedo_color = Color(1, 1, 1, 0.00392157)
 
 [sub_resource type="PlaneMesh" id="QuadMesh_bu1i1"]
 material = SubResource("StandardMaterial3D_71gfw")
@@ -173,6 +174,7 @@ shape = SubResource("SphereShape3D_iqq1t")
 
 [node name="runCloud" type="GPUParticles3D" parent="."]
 transform = Transform3D(0.355692, 0, 0, 0, 0.151363, 0.090632, 0, -0.0398846, 0.343952, -0.0208757, -0.858554, 0.396422)
+visible = false
 layers = 2
 amount = 400
 lifetime = 0.16
@@ -206,6 +208,32 @@ shape = SubResource("BoxShape3D_fpp87")
 
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
+
+[node name="AnimationTree" parent="auriModel" index="5"]
+advance_expression_base_node = NodePath("../..")
+
+[node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
+bones/1/position = Vector3(0.138455, 4.52995e-08, -0.0148348)
+bones/1/rotation = Quaternion(0, -0.0495851, 0, 0.99877)
+bones/2/position = Vector3(0.400363, -0.000624544, -0.015448)
+bones/2/rotation = Quaternion(0, 0.0197107, 0, 0.999806)
+bones/3/position = Vector3(0.0500516, -0.00010897, 0.00425668)
+bones/4/position = Vector3(-0.0326295, 0.0207073, -0.0158683)
+bones/5/position = Vector3(-0.00522951, -0.19342, 0.0279913)
+bones/5/rotation = Quaternion(-0.024463, 0.708573, 0.696162, -0.112623)
+bones/7/position = Vector3(-0.00444356, 0.193836, 0.0287812)
+bones/7/rotation = Quaternion(-0.695191, 0.0751832, -0.0364913, 0.71395)
+bones/9/position = Vector3(-0.0210603, 0.0486971, -0.0181665)
+bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
+bones/11/position = Vector3(-0.066525, -0.0356637, -0.200116)
+bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
+bones/13/position = Vector3(-0.0210603, -0.048697, -0.0181665)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
+
+[node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
+advance_expression_base_node = NodePath("../../..")
 
 [node name="CrushDetector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984555, 0)
@@ -312,3 +340,6 @@ wait_time = 0.2
 [connection signal="pressed" from="PauseMenu/VFlowContainer/Quit to Start?" to="PauseMenu" method="_on_quit_to_start_pressed"]
 [connection signal="value_changed" from="PauseMenu/VFlowContainer/audioSlider" to="PauseMenu" method="_on_audio_slider_value_changed"]
 [connection signal="timeout" from="coyoteTimer" to="." method="_on_coyote_timer_timeout"]
+
+[editable path="auriModel"]
+[editable path="auriModel/SKM_Auri"]

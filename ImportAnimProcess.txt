@@ -1,0 +1,4 @@
+1.Set anim to import as skeleton
+2.Click on animation in the heirarchy
+3.Save to file
+4.Add library to animation player

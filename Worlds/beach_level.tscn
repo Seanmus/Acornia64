@@ -75,7 +75,10 @@ transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1
 [node name="HomingAttackTargets" type="Node" parent="."]
 
 [node name="HomingAttackTarget" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.036, 7.2916, 57.4967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2931, 8.58684, 57.8249)
+
+[node name="HomingAttackTarget5" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0931, 8.58684, 33.8249)
 
 [node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("6_n4dxb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.936, 7.2916, 82.1967)
@@ -104,10 +107,13 @@ transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, -20.4692, 0
 transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 4.2308, 0.5, -6.87894)
 
 [node name="Umbrella3" parent="." instance=ExtResource("12_ynwdr")]
-transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 26.3308, 0.5, 25.0211)
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 29.9308, 0.5, 10.8211)
 
 [node name="Umbrella4" parent="." instance=ExtResource("12_ynwdr")]
 transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 55.4308, 0.5, -10.9789)
+
+[node name="Umbrella6" parent="." instance=ExtResource("12_ynwdr")]
+transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 71.0308, 0.5, -27.9789)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
 transform = Transform3D(1302.39, 0, 0, 0, 1302.39, 0, 0, 0, 1302.39, 0, 0, 0)
@@ -126,7 +132,7 @@ transform = Transform3D(7.33247, 0, 0, 0, 7.33247, 0, 0, 0, 7.33247, 4.89678, -1
 transform = Transform3D(16.8301, 0, 1.43051e-06, 0, 16.8301, 0, -1.43051e-06, 0, 16.8301, -31.0032, -3.9, -7.34868)
 
 [node name="Island2" parent="." instance=ExtResource("13_41sjg")]
-transform = Transform3D(7.51466, 0, 7.51466, 0, 10.6273, 0, -7.51466, 0, 7.51466, 28.0968, -2.03703, 25.3794)
+transform = Transform3D(7.51466, 0, 7.51466, 0, 10.6273, 0, -7.51466, 0, 7.51466, 31.6968, -2.03703, 11.1794)
 
 [node name="Umbrella5" parent="." instance=ExtResource("12_ynwdr")]
 transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 5.13081, 0.5, 97.3211)
@@ -135,7 +141,19 @@ transform = Transform3D(2.13635, 0, 0, 0, 2.13634, 0, 0, 0, 2.13634, 5.13081, 0.
 transform = Transform3D(7.51466, 0, 7.51466, 0, 10.6273, 0, -7.51466, 0, 7.51466, 6.89678, -2.03703, 97.6794)
 
 [node name="Island3" parent="." instance=ExtResource("13_41sjg")]
-transform = Transform3D(0, 0, -7.33247, 0, 7.33247, 0, 7.33247, 0, 0, 56.0968, -1.3, -10.1487)
+transform = Transform3D(0, 0, -14.7968, 0, 14.7968, 0, 14.7968, 0, 0, 56.0968, -3.69597, -10.1487)
+
+[node name="Island14" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(5.18484, 0, -5.18484, 0, 7.33247, 0, 5.18484, 0, 5.18484, 68.4505, -1.3, -19.1487)
+
+[node name="Island16" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(5.18484, 0, -5.18484, 0, 7.33247, 0, 5.18484, 0, 5.18484, 70.6505, -1.3, -26.9487)
+
+[node name="Island15" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(7.71535, 0, -7.71535, 0, 10.9112, 0, 7.71535, 0, 7.71535, 103.851, -2.1, -30.3487)
+
+[node name="Island13" parent="." instance=ExtResource("13_41sjg")]
+transform = Transform3D(7.15697, 0, 1.59466, 0, 7.33247, 0, -1.59466, 0, 7.15697, 58.6712, -2.41865, -26.1571)
 
 [node name="Island5" parent="." instance=ExtResource("14_o568c")]
 transform = Transform3D(14.6405, 0, -8.45269, 0, 16.9054, 0, 8.45269, 0, 14.6405, -33.9, -3, -17.5)

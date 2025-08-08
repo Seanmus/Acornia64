@@ -1,0 +1,10 @@
+[gd_resource type="AnimationLibrary" load_steps=3 format=3 uid="uid://bdhc41vc17r5b"]
+
+[ext_resource type="Animation" uid="uid://daubhxk5m0y1c" path="res://Player/animations/idleAnim.res" id="1_x183b"]
+[ext_resource type="Animation" uid="uid://cer3ijd6gq3ai" path="res://Player/animations/runAnim.res" id="2_xjodx"]
+
+[resource]
+_data = {
+"idleAnim": ExtResource("1_x183b"),
+"runAnim": ExtResource("2_xjodx")
+}
