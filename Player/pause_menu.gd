@@ -30,6 +30,7 @@ func _togglePause():
 	visible = paused
 	get_tree().paused = paused
 	if paused:
+		$"VFlowContainer/Resume?".grab_focus()
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
 	else:		
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
