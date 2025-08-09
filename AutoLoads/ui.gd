@@ -5,13 +5,15 @@ signal win
 var won = true
 var time = 0
 @onready var cheeseCounter = $standard/cheeseCounter
-@export var cheeseParent : Node3D
-
 func _ready() -> void:
-	#if(cheeseParent == null):
-	#	cheeseParent = get_tree().get_node($"root/../Cheese")
-	SetCheeseTotal(cheeseParent.get_child_count()) 
-
+	var cheeseNodes = get_tree().get_nodes_in_group("cheese")
+	var cheeseCount = 0
+	for cheese in cheeseNodes:
+		cheeseCount += 1
+		cheese.cheeseCollected.connect(_CollectCheese)
+	#.size was giving array callable as the print out	
+	SetCheeseTotal(cheeseCount)
+	
 func _process(_delta):
 	time += _delta
 	var secs = fmod(time,60)

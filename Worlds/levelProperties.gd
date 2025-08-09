@@ -5,7 +5,7 @@ extends Node3D
 
 @onready var totalCheese = 0
 @export var UINode : Node
-# Called when the node enters the scene tree for the first time.d
+# Called when the node enters the scene tree for the first time
 func _ready():
 	print(UINode)
 	Manager.nextLevel = nextLevel

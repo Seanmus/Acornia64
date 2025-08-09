@@ -21,7 +21,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
-@export var UI : Node
 @onready var hurtMonitor = $HurtMonitor
 @onready var homingTargetDetector = $HomingTargetDetector
 
@@ -35,8 +34,6 @@ var turnHeldDownTime = 0
 
 #Occurs when the game is loaded
 func _ready():
-	if UI == null:
-		UI = get_node("/root/UI")
 	Manager.on_win.connect(Win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	_SetSpawnPoint(position, rotation)

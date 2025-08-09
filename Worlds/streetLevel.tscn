@@ -40,9 +40,8 @@ point_count = 2
 script = ExtResource("1_ujiww")
 nextLevel = "space_level"
 
-[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_ut5iy")]
+[node name="Player" parent="." instance=ExtResource("2_ut5iy")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25.0352, 3, 5.49094)
-UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("3_vi80y")]
 transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828, 0)
@@ -169,8 +168,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61, 3.2, 5.6)
 [node name="cheese7" parent="Cheese" instance=ExtResource("9_pv2ui")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 72.6, 3.2, 5.6)
 
-[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("10_2s1sy")]
-cheeseParent = NodePath("../Cheese")
+[node name="UI" parent="." instance=ExtResource("10_2s1sy")]
 
 [node name="RoadBlock" parent="." instance=ExtResource("11_w5ael")]
 transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, -10, 0, 5.556)

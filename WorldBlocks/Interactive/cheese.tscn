@@ -14,7 +14,7 @@ billboard = 1
 alpha_cut = 2
 texture = ExtResource("1_fvdsd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["cheese"]]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 0, 0)
 shape = SubResource("SphereShape3D_1y7ae")
 

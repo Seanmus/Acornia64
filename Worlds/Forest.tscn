@@ -76,9 +76,8 @@ font = ExtResource("3_m2ork")
 font_size = 532
 outline_size = 127
 
-[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_wxx5d")]
+[node name="Player" parent="." instance=ExtResource("2_wxx5d")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -77.0805, 5.31911, 14.0534)
-UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("3_0r6t5")]
 transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -35.0828, 0)
@@ -193,8 +192,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.336, 225.692, -139.333)
 [node name="cheese" parent="Cheese" instance=ExtResource("9_r8tfj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.2, 5.6)
 
-[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("10_5gopa")]
-cheeseParent = NodePath("../Cheese")
+[node name="UI" parent="." instance=ExtResource("10_5gopa")]
 
 [node name="ForestBlockDiamond" parent="." instance=ExtResource("19_ifote")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.903, -7.21801, -11.4324)
