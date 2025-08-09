@@ -27,7 +27,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var spawnPos
 var spawnRotation
 var homingAttack = false
-var homingTarget : Node3D
 var homingSpeed = 60
 var bouncing = true
 var turnHeldDownTime = 0
@@ -65,44 +64,30 @@ func jump():
 	else:
 		velocity.y = JUMP_VELOCITY
 
-
-#Starts the proccess of the players death	
-func kill():
-	mainCamera.current = false
-	$DeathCam.current = true
-	$auriModel/SKM_Auri/AnimationTree.active = false
-	$auriModel/SKM_Auri/AnimationPlayer.play("die")
-	#animationState.travel("die")
-	$DeathSound.play()
-	velocity.y = 0
-	velocity.x = 0
-	velocity.z = 0
-	dead = true
-
+#Gives the player a short amount of time in which they can do their first jump even when not on the ground
+func _on_coyote_timer_timeout() -> void:
+	coyoteTime = false
+	
 #Sends the player flying towards the homingTargets position
 func _HomingAttack(delta):
 	$CollisionShape3D.disabled = true
 	hurtMonitor.monitoring = false
-
-	position = position.move_toward(homingTarget.global_position, delta * homingSpeed)
-	if position == homingTarget.global_position:
+	position = position.move_toward(homingTargetDetector.homingTarget.global_position, delta * homingSpeed)
+	if position == homingTargetDetector.homingTarget.global_position:
 		$CollisionShape3D.disabled = false
 		hurtMonitor.monitoring = true
 		cameraAnimPlayer.play("ScreenShake")
 		#Freeze frame
 		OS.delay_msec(40)
 		#Triggers the cameras screen shake	
-		homingTarget._Hit()
+		homingTargetDetector.homingTarget._Hit()
 		velocity.x = 0
 		velocity.z = 0
 		velocity.y = JUMP_VELOCITY
 		homingAttack = false
 		canDoubleJump = false
 		$Homing.emitting = false
-		
-
 	
-
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
 	$JumpCloudSpawnPoint.add_child(cloud)
@@ -117,17 +102,8 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
-
 	hurtMonitor.monitoring = true
-	var previousTarget = homingTarget
-	homingTarget = homingTargetDetector._GetClosestTarget()
-	if(previousTarget != homingTarget):
-		if(homingTarget):
-			homingTarget._HighLight()
-		if(previousTarget):
-			previousTarget._UnHighLight()
-
-
+	
 	if not dead:		
 		if is_on_floor() && !dead && !bouncing:
 			wasOnGround = true
@@ -146,7 +122,7 @@ func _physics_process(delta):
 				$coyoteTimer.start()
 				wasOnGround = false
 			if Input.is_action_just_pressed("jump"):
-				if(homingTarget):
+				if(homingTargetDetector.homingTarget):
 					homingAttack = true
 					$Homing.emitting = true
 					_HomingAttack(delta)
@@ -225,5 +201,15 @@ func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
 		velocity.y = -1000
 
 
-func _on_coyote_timer_timeout() -> void:
-	coyoteTime = false
+#Starts the proccess of the players death	
+func kill():
+	mainCamera.current = false
+	$DeathCam.current = true
+	$auriModel/SKM_Auri/AnimationTree.active = false
+	$auriModel/SKM_Auri/AnimationPlayer.play("die")
+	#animationState.travel("die")
+	$DeathSound.play()
+	velocity.y = 0
+	velocity.x = 0
+	velocity.z = 0
+	dead = true

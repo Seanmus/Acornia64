@@ -2,6 +2,20 @@ extends Area3D
 
 var overlappedTargets = []
 @export var player : CharacterBody3D
+var homingTarget
+
+func _physics_process(delta: float) -> void:
+	_ActivateClosestTarget()
+
+func _ActivateClosestTarget():
+	var previousTarget = homingTarget
+	homingTarget = _GetClosestTarget()
+	if(previousTarget != homingTarget):
+		if(homingTarget):
+			homingTarget._HighLight()
+		if(previousTarget):
+			previousTarget._UnHighLight()
+
 
 func _on_target_detection_area_area_entered(area):
 	if area.is_in_group("targets"):
