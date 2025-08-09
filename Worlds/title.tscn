@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=4 uid="uid://bgugy0v18el3f"]
+[gd_scene load_steps=70 format=4 uid="uid://bgugy0v18el3f"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
@@ -15,7 +15,6 @@
 [ext_resource type="AudioStream" uid="uid://tp6w0yea4480" path="res://Audio/Effects/Land.wav" id="14_caulo"]
 [ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="15_qc2fs"]
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="16_7snxn"]
-[ext_resource type="Script" path="res://Player/auriModel.gd" id="17_fpjki"]
 [ext_resource type="Script" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
 [ext_resource type="Texture2D" uid="uid://bh47axo8vvpbt" path="res://Player/Imports/acorn_auriSmileStraight.png" id="18_gvllg"]
 [ext_resource type="Shader" path="res://Player/outLine.gdshader" id="19_8mykd"]
@@ -1767,7 +1766,6 @@ volume_db = -80.0
 
 [node name="auriModel" type="Node3D" parent="player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
-script = ExtResource("17_fpjki")
 
 [node name="body" type="MeshInstance3D" parent="player/auriModel"]
 transform = Transform3D(0.573845, 0, 0, 0, 0.573845, 0, 0, 0, 0.573845, -0.0234142, 1.37278, -0.00546402)
@@ -1832,7 +1830,5 @@ rotationRate = -0.4
 [connection signal="pressed" from="UI/FlowContainer/QuitBtn" to="UI" method="_on_quit_btn_pressed"]
 [connection signal="area_entered" from="player/Area3D" to="player" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="player/Area3D" to="player" method="_on_area_3d_body_entered"]
-[connection signal="deathFinished" from="player/auriModel" to="player" method="_on_deathFinished"]
-[connection signal="jumpFinished" from="player/auriModel" to="player" method="_JumpFinished"]
 
 [editable path="UI/Transition"]

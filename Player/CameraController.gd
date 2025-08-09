@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var playerModel : Node3D
-@export var rootNode : Node3D
+@export var player : Node3D
 var mouse_sensitivty = 0.002 #radiains/pixel
 var rotationSpeed = 0.00
 var controller_sensitivity = 0.025
@@ -14,7 +14,7 @@ func _unhandled_input(event):
 
 func _CameraController(input_dir, sensitivity):
 	if not Manager.won:
-		rootNode.rotate_y(-input_dir.x * sensitivity)
+		player.rotate_y(-input_dir.x * sensitivity)
 		playerModel.rotate_y(input_dir.x * sensitivity)
 		rotate_x(-input_dir.y * sensitivity)
 		rotation.x = clamp(rotation.x, -0.9, -0.1)

@@ -51,48 +51,7 @@ func Bounce(bounceMultiplier):
 	set_position(get_position() + Vector3(0,0.1,0))
 	landing = false
 
-#Jumps the player does a double jump if already in the air
-func jump():
-	if dead:
-		return
-	$JumpSound.play()
-	#gets player off the ground before transitioning to jump state
-	set_position(get_position() + Vector3(0,0.1,0))
-	#if falling sets velocity to jump velocity, if going up adds onto the jump velocity
-	if velocity.y >= 0:
-		velocity.y += JUMP_VELOCITY
-	else:
-		velocity.y = JUMP_VELOCITY
-
-#Gives the player a short amount of time in which they can do their first jump even when not on the ground
-func _on_coyote_timer_timeout() -> void:
-	coyoteTime = false
 	
-#Sends the player flying towards the homingTargets position
-func _HomingAttack(delta):
-	$CollisionShape3D.disabled = true
-	hurtMonitor.monitoring = false
-	position = position.move_toward(homingTargetDetector.homingTarget.global_position, delta * homingSpeed)
-	if position == homingTargetDetector.homingTarget.global_position:
-		$CollisionShape3D.disabled = false
-		hurtMonitor.monitoring = true
-		cameraAnimPlayer.play("ScreenShake")
-		#Freeze frame
-		OS.delay_msec(40)
-		#Triggers the cameras screen shake	
-		homingTargetDetector.homingTarget._Hit()
-		velocity.x = 0
-		velocity.z = 0
-		velocity.y = JUMP_VELOCITY
-		homingAttack = false
-		canDoubleJump = false
-		$Homing.emitting = false
-	
-func addPoofCloud():
-	var cloud = poofCloud.instantiate()
-	$JumpCloudSpawnPoint.add_child(cloud)
-	
-		
 #Occurs every frame with a delta to ensure that player movement is consistent no matter the frame rate
 func _physics_process(delta):
 	if(Manager.won):
@@ -102,8 +61,18 @@ func _physics_process(delta):
 	if homingAttack:
 		_HomingAttack(delta)
 		return
+	if dead:
+		return
+	#If the game is not over and the player is not performing a homing attack
 	hurtMonitor.monitoring = true
-	
+	HandleAerialMovements(delta)		
+	MovePlayer(delta)
+
+#########################################################################################################################################
+#All in air activities
+
+#Handles jumping and homing attacks
+func HandleAerialMovements(delta):
 	if not dead:		
 		if is_on_floor() && !dead && !bouncing:
 			wasOnGround = true
@@ -135,7 +104,7 @@ func _physics_process(delta):
 						jump()
 						canDoubleJump = false
 						addPoofCloud()
-						
+			#Makes the player fall
 			velocity.y -= gravity * 1.2 * delta
 			if(velocity.y < 0):
 				velocity.y -= gravity * 5 * delta
@@ -146,33 +115,86 @@ func _physics_process(delta):
 				target._Reset()
 			landing = true
 
-		var input_dir = Input.get_vector("left", "right", "forward", "back")	
-		if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
-			runCloud.emitting = true
+#Jumps the player does a double jump if already in the air
+func jump():
+	if dead:
+		return
+	$JumpSound.play()
+	#gets player off the ground before transitioning to jump state
+	set_position(get_position() + Vector3(0,0.1,0))
+	#if falling sets velocity to jump velocity, if going up adds onto the jump velocity
+	if velocity.y >= 0:
+		velocity.y += JUMP_VELOCITY
+	else:
+		velocity.y = JUMP_VELOCITY
+
+#Gives the player a short amount of time in which they can do their first jump even when not on the ground
+func _on_coyote_timer_timeout() -> void:
+	coyoteTime = false
+
+	
+func addPoofCloud():
+	var cloud = poofCloud.instantiate()
+	$JumpCloudSpawnPoint.add_child(cloud)
+
+#########################################################################################################################################
+
+#Sends the player flying towards the homingTargets position
+func _HomingAttack(delta):
+	$CollisionShape3D.disabled = true
+	hurtMonitor.monitoring = false
+	position = position.move_toward(homingTargetDetector.homingTarget.global_position, delta * homingSpeed)
+	if position == homingTargetDetector.homingTarget.global_position:
+		$CollisionShape3D.disabled = false
+		hurtMonitor.monitoring = true
+		cameraAnimPlayer.play("ScreenShake")
+		#Freeze frame
+		OS.delay_msec(40)
+		#Triggers the cameras screen shake	
+		homingTargetDetector.homingTarget._Hit()
+		velocity.x = 0
+		velocity.z = 0
+		velocity.y = JUMP_VELOCITY
+		homingAttack = false
+		canDoubleJump = false
+		$Homing.emitting = false
+#########################################################################################################################################
+
+
+#########################################################################################################################################
+#Player Movement
+func MovePlayer(delta):
+	var input_dir = Input.get_vector("left", "right", "forward", "back")	
+	if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
+		runCloud.emitting = true
+	else:
+		runCloud.emitting = false	
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var movementVelocity = Vector3(velocity.x, 0, velocity.z)
+	if direction:
+		if is_on_floor():
+			movementVelocity.z += direction.z * acceleration * delta
+			movementVelocity.x += direction.x * acceleration * delta
 		else:
-			runCloud.emitting = false
-			
-			
-		#Movement	
-		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-		var movementVelocity = Vector3(velocity.x, 0, velocity.z)
-		if direction:
-			if is_on_floor():
-				movementVelocity.z += direction.z * acceleration * delta
-				movementVelocity.x += direction.x * acceleration * delta
-			else:
-				movementVelocity.z += direction.z * air_acceleration * delta
-				movementVelocity.x += direction.x * air_acceleration * delta
+			movementVelocity.z += direction.z * air_acceleration * delta
+			movementVelocity.x += direction.x * air_acceleration * delta
+	else:
+		if is_on_floor():
+			movementVelocity = movementVelocity.move_toward(Vector3.ZERO, decceleration * delta)
 		else:
-			if is_on_floor():
-				movementVelocity = movementVelocity.move_toward(Vector3.ZERO, decceleration * delta)
-			else:
-				movementVelocity = movementVelocity.move_toward(Vector3.ZERO, air_decceleration * delta)
-		movementVelocity = movementVelocity.limit_length(maxSpeed)
-		velocity.x = movementVelocity.x
-		velocity.z = movementVelocity.z		
-		bouncing = false		
-		var _returnValue = move_and_slide()	
+			movementVelocity = movementVelocity.move_toward(Vector3.ZERO, air_decceleration * delta)
+	movementVelocity = movementVelocity.limit_length(maxSpeed)
+	velocity.x = movementVelocity.x
+	velocity.z = movementVelocity.z		
+	bouncing = false		
+	var _returnValue = move_and_slide()	
+#########################################################################################################################################
+
+
+
+#########################################################################################################################################
+#Auxiallary functionality 
+
 
 #Starts the win animation
 func Win():
@@ -180,6 +202,19 @@ func Win():
 	$auriModel/SKM_Auri/AnimationTree.active = false
 	$auriModel/SKM_Auri/AnimationPlayer.play("RESET")
 	$auriModel/SKM_Auri/AnimationPlayer.play("win")
+
+#Starts the proccess of the players death	
+func kill():
+	mainCamera.current = false
+	$DeathCam.current = true
+	$auriModel/SKM_Auri/AnimationTree.active = false
+	$auriModel/SKM_Auri/AnimationPlayer.play("die")
+	#animationState.travel("die")
+	$DeathSound.play()
+	velocity.y = 0
+	velocity.x = 0
+	velocity.z = 0
+	dead = true
 
 	
 #Teleports the player back to its spawn position on player death.
@@ -201,15 +236,4 @@ func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
 		velocity.y = -1000
 
 
-#Starts the proccess of the players death	
-func kill():
-	mainCamera.current = false
-	$DeathCam.current = true
-	$auriModel/SKM_Auri/AnimationTree.active = false
-	$auriModel/SKM_Auri/AnimationPlayer.play("die")
-	#animationState.travel("die")
-	$DeathSound.play()
-	velocity.y = 0
-	velocity.x = 0
-	velocity.z = 0
-	dead = true
+#########################################################################################################################################

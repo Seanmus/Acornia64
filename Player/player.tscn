@@ -139,11 +139,11 @@ script = ExtResource("1_c1cwn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0440736, 0)
 shape = SubResource("CapsuleShape3D_ys4sl")
 
-[node name="CameraControllerPivot" type="Node3D" parent="." node_paths=PackedStringArray("playerModel", "rootNode")]
+[node name="CameraControllerPivot" type="Node3D" parent="." node_paths=PackedStringArray("playerModel", "player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099351)
 script = ExtResource("2_ufdal")
 playerModel = NodePath("../auriModel")
-rootNode = NodePath("..")
+player = NodePath("..")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="CameraControllerPivot"]
 collision_mask = 986895
