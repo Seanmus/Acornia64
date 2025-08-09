@@ -1,7 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=30 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
+[ext_resource type="Script" path="res://Player/CameraController.gd" id="2_ufdal"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
 [ext_resource type="AudioStream" uid="uid://tp6w0yea4480" path="res://Audio/Effects/Land.wav" id="4_ocmxn"]
 [ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="5_olqky"]
@@ -138,20 +139,23 @@ script = ExtResource("1_c1cwn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0440736, 0)
 shape = SubResource("CapsuleShape3D_ys4sl")
 
-[node name="Pivot" type="Node3D" parent="."]
+[node name="CameraControllerPivot" type="Node3D" parent="." node_paths=PackedStringArray("playerModel", "rootNode")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099351)
+script = ExtResource("2_ufdal")
+playerModel = NodePath("../auriModel")
+rootNode = NodePath("..")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraControllerPivot"]
 collision_mask = 986895
 shape = SubResource("SeparationRayShape3D_lj47o")
 spring_length = 20.08
 margin = 1.39
 
-[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="CameraControllerPivot/SpringArm3D"]
 environment = ExtResource("2_pbjct")
 current = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Pivot/SpringArm3D/Camera3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraControllerPivot/SpringArm3D/Camera3D"]
 libraries = {
 "": SubResource("AnimationLibrary_uh4y7")
 }

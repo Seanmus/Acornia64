@@ -7,9 +7,6 @@ var air_acceleration = 90
 var decceleration = 130
 var air_decceleration = 90
 const JUMP_VELOCITY = 11
-var mouse_sensitivty = 0.002 #radiains/pixel
-var rotationSpeed = 0.00
-var controller_sensitivity = 0.025
 var canDoubleJump = true
 var coyoteTime = false
 var landing : bool
@@ -17,8 +14,9 @@ var wasOnGround : bool
 var dead : bool
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-@onready var pivot = $Pivot
-@onready var cameraAnimPlayer = $Pivot/SpringArm3D/Camera3D/AnimationPlayer
+@onready var pivot = $CameraControllerPivot
+@onready var cameraAnimPlayer = $CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer
+@onready var mainCamera = $CameraControllerPivot/SpringArm3D/Camera3D
 @onready var landSound = $LandSound
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
 @onready var auri = $auriModel
@@ -73,7 +71,7 @@ func jump():
 
 #Starts the proccess of the players death	
 func kill():
-	$Pivot/SpringArm3D/Camera3D.current = false
+	mainCamera.current = false
 	$DeathCam.current = true
 	$auriModel/SKM_Auri/AnimationTree.active = false
 	$auriModel/SKM_Auri/AnimationPlayer.play("die")
@@ -105,16 +103,9 @@ func _HomingAttack(delta):
 		canDoubleJump = false
 		$Homing.emitting = false
 		
-#Occurs when an input that has not been previously handled occurs.
-func _unhandled_input(event):
-	if not Manager.won:
-		if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			rotate_y(-event.relative.x * mouse_sensitivty)
-			auri.rotate_y(event.relative.x * mouse_sensitivty)
-			pivot.rotate_x(-event.relative.y * mouse_sensitivty)
-			pivot.rotation.x = clamp(pivot.rotation.x, -0.9, -0.1)
-			
-			
+
+	
+
 func addPoofCloud():
 	var cloud = poofCloud.instantiate()
 	$JumpCloudSpawnPoint.add_child(cloud)
@@ -182,58 +173,33 @@ func _physics_process(delta):
 				target._Reset()
 			landing = true
 
-		var cameraInput = Input.get_vector("look_left", "look_right", "look_up", "look_down")
-		#controller camera controls
-		if cameraInput:
-			rotate_y(-cameraInput.x * controller_sensitivity)
-			pivot.rotate_x(-cameraInput.y * controller_sensitivity)
-			pivot.rotation.x = clamp(pivot.rotation.x, -0.9, -0.1)
-
-		var input_dir = Input.get_vector("left", "right", "forward", "back")
+		var input_dir = Input.get_vector("left", "right", "forward", "back")	
 		if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
 			runCloud.emitting = true
 		else:
 			runCloud.emitting = false
+			
+			
+		#Movement	
 		var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		var movementVelocity = Vector3(velocity.x, 0, velocity.z)
 		if direction:
-			#auri.rotation = Vector3(0,0,0)
-			#Forward
-			if(input_dir.x != 0):
-				turnHeldDownTime += delta
-				if(turnHeldDownTime >= 3):
-					turnHeldDownTime = 3
-			else:
-				turnHeldDownTime -= delta * 5
-				if(turnHeldDownTime <= 0):
-					turnHeldDownTime = 0
-			if(turnHeldDownTime >= 0.5):
-				rotate_y(-input_dir.x * rotationSpeed * (turnHeldDownTime / 1.5))
-				auri.rotate_y(input_dir.x * rotationSpeed * (turnHeldDownTime / 1.5))
 			if is_on_floor():
-				#rotate_y(input_dir.x * -0.01)
 				movementVelocity.z += direction.z * acceleration * delta
 				movementVelocity.x += direction.x * acceleration * delta
 			else:
 				movementVelocity.z += direction.z * air_acceleration * delta
 				movementVelocity.x += direction.x * air_acceleration * delta
-
 		else:
-			#Fix bug with y velocity when you get back!
 			if is_on_floor():
 				movementVelocity = movementVelocity.move_toward(Vector3.ZERO, decceleration * delta)
 			else:
 				movementVelocity = movementVelocity.move_toward(Vector3.ZERO, air_decceleration * delta)
-				#velocity.x = move_toward(velocity.x , 0, air_decceleration * delta)
-				#velocity.z = move_toward(velocity.z , 0, air_decceleration * delta)
 		movementVelocity = movementVelocity.limit_length(maxSpeed)
 		velocity.x = movementVelocity.x
 		velocity.z = movementVelocity.z		
 		bouncing = false		
 		var _returnValue = move_and_slide()	
-
-
-
 
 #Starts the win animation
 func Win():
@@ -251,7 +217,7 @@ func _on_deathFinished():
 	dead = false
 	$auriModel/SKM_Auri/AnimationPlayer.play("idle")
 	$auriModel/SKM_Auri/AnimationTree.active = true
-	$Pivot/SpringArm3D/Camera3D.current = true
+	mainCamera.current = true
 	$DeathCam.current = false
 	Manager._ResetLevel()
 
