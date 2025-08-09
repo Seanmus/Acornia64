@@ -15,7 +15,6 @@ var dead : bool
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pivot = $CameraControllerPivot
-@onready var cameraAnimPlayer = $CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer
 @onready var mainCamera = $CameraControllerPivot/SpringArm3D/Camera3D
 @onready var landSound = $LandSound
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
@@ -137,10 +136,11 @@ func addPoofCloud():
 	$JumpCloudSpawnPoint.add_child(cloud)
 
 #########################################################################################################################################
+#END OF AERIAL
 
 
-#########################################################################################################################################
 #Player Movement
+#########################################################################################################################################
 func MovePlayer(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "back")	
 	if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
@@ -167,7 +167,7 @@ func MovePlayer(delta):
 	bouncing = false		
 	var _returnValue = move_and_slide()	
 #########################################################################################################################################
-
+#END OF PLAYER MOVEMENT
 
 
 #########################################################################################################################################
@@ -212,6 +212,4 @@ func _on_moving_platform_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("moving_platform"):
 		print("moving platform on bottom")
 		velocity.y = -1000
-
-
 #########################################################################################################################################
