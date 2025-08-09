@@ -2,10 +2,39 @@ extends Area3D
 
 var overlappedTargets = []
 @export var player : CharacterBody3D
+@export var hurtMonitor : Area3D
+@export var cameraAnimPlayer : AnimationPlayer
+@export var homingEffect : GPUParticles3D
+@export var playerCollider : CollisionShape3D
 var homingTarget
+var homingSpeed = 60
+var homingAttackBounceVelocity = 11
+
+#Sends the player flying towards the homingTargets position
+func _HomingAttack(delta):
+	homingEffect.emitting = true
+	playerCollider.disabled = true
+	hurtMonitor.monitoring = false
+	player.position = player.position.move_toward(homingTarget.global_position, delta * homingSpeed)
+	if player.position == homingTarget.global_position:
+		playerCollider.disabled = false
+		hurtMonitor.monitoring = true
+		cameraAnimPlayer.play("ScreenShake")
+		#Freeze frame
+		OS.delay_msec(40)
+		#Triggers the cameras screen shake	
+		homingTarget._Hit()
+		player.velocity.x = 0
+		player.velocity.z = 0
+		player.velocity.y = homingAttackBounceVelocity
+		player.homingAttack = false
+		player.canDoubleJump = false
+		homingEffect.emitting = false 
 
 func _physics_process(delta: float) -> void:
-	_ActivateClosestTarget()
+	if not player.homingAttack:
+		_ActivateClosestTarget()
+		print(homingTarget)
 
 func _ActivateClosestTarget():
 	var previousTarget = homingTarget

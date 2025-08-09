@@ -203,16 +203,14 @@ cull_mask = 1048573
 script = ExtResource("8_auqq3")
 raycast = NodePath("..")
 
-[node name="HomingAttackComponent" type="Area3D" parent="." node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider")]
+[node name="HomingTargetDetector" type="Area3D" parent="." node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
 script = ExtResource("10_hdytl")
 player = NodePath("..")
 hurtMonitor = NodePath("../HurtMonitor")
 cameraAnimPlayer = NodePath("../CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer")
-homingEffect = NodePath("../Homing")
-playerCollider = NodePath("../CollisionShape3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackComponent"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingTargetDetector"]
 transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 3.1605e-09, -11.0723)
 visible = false
 shape = SubResource("BoxShape3D_fpp87")
@@ -327,8 +325,8 @@ wait_time = 0.2
 
 [connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]
-[connection signal="area_entered" from="HomingAttackComponent" to="HomingAttackComponent" method="_on_target_detection_area_area_entered"]
-[connection signal="area_exited" from="HomingAttackComponent" to="HomingAttackComponent" method="_on_target_detection_area_area_exited"]
+[connection signal="area_entered" from="HomingTargetDetector" to="HomingTargetDetector" method="_on_target_detection_area_area_entered"]
+[connection signal="area_exited" from="HomingTargetDetector" to="HomingTargetDetector" method="_on_target_detection_area_area_exited"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
 [connection signal="jumpFinished" from="auriModel" to="." method="_JumpFinished"]
 [connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]

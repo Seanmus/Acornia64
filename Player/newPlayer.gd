@@ -22,7 +22,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 @onready var hurtMonitor = $HurtMonitor
-@onready var homingTargetDetector = $HomingTargetDetector
+@onready var HomingAttackComponent = $HomingAttackComponent
 
 var spawnPos
 var spawnRotation
@@ -59,7 +59,7 @@ func _physics_process(delta):
 		$auriModel/SKM_Auri/AnimationPlayer.play("win")
 		return
 	if homingAttack:
-		_HomingAttack(delta)
+		HomingAttackComponent._HomingAttack(delta)
 		return
 	if dead:
 		return
@@ -91,10 +91,9 @@ func HandleAerialMovements(delta):
 				$coyoteTimer.start()
 				wasOnGround = false
 			if Input.is_action_just_pressed("jump"):
-				if(homingTargetDetector.homingTarget):
+				if(HomingAttackComponent.homingTarget):
 					homingAttack = true
-					$Homing.emitting = true
-					_HomingAttack(delta)
+					HomingAttackComponent._HomingAttack(delta)
 				else:
 					if coyoteTime:
 						jump()
@@ -137,27 +136,6 @@ func addPoofCloud():
 	var cloud = poofCloud.instantiate()
 	$JumpCloudSpawnPoint.add_child(cloud)
 
-#########################################################################################################################################
-
-#Sends the player flying towards the homingTargets position
-func _HomingAttack(delta):
-	$CollisionShape3D.disabled = true
-	hurtMonitor.monitoring = false
-	position = position.move_toward(homingTargetDetector.homingTarget.global_position, delta * homingSpeed)
-	if position == homingTargetDetector.homingTarget.global_position:
-		$CollisionShape3D.disabled = false
-		hurtMonitor.monitoring = true
-		cameraAnimPlayer.play("ScreenShake")
-		#Freeze frame
-		OS.delay_msec(40)
-		#Triggers the cameras screen shake	
-		homingTargetDetector.homingTarget._Hit()
-		velocity.x = 0
-		velocity.z = 0
-		velocity.y = JUMP_VELOCITY
-		homingAttack = false
-		canDoubleJump = false
-		$Homing.emitting = false
 #########################################################################################################################################
 
 
