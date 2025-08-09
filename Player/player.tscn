@@ -223,6 +223,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
 
+[node name="L_Hand1" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
+transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
 
