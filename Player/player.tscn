@@ -220,11 +220,27 @@ shape = SubResource("BoxShape3D_fpp87")
 [node name="auriModel" parent="." instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 
+[node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
+bones/1/position = Vector3(0.144794, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.412859, -0.000564904, -0.00289741)
+bones/3/position = Vector3(0.0543345, -6.28802e-05, 0.00310274)
+bones/3/rotation = Quaternion(-0.110205, -0.110205, -0.698466, 0.698466)
+bones/4/position = Vector3(-0.0295135, 0.0240695, -0.0152548)
+bones/5/position = Vector3(-0.0109764, -0.193341, 0.0258413)
+bones/5/rotation = Quaternion(0.0335293, 0.680274, 0.722571, -0.118298)
+bones/7/position = Vector3(-0.0112472, 0.194252, 0.025841)
+bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
+bones/9/position = Vector3(-0.0206901, 0.0486971, -0.0175667)
+bones/9/rotation = Quaternion(0.728902, -0.684303, 0.0114131, 0.0173555)
+bones/11/position = Vector3(-0.0665787, -0.0356425, -0.198839)
+bones/11/rotation = Quaternion(-0.033798, -0.0185059, -0.0404626, 0.998438)
+bones/13/position = Vector3(-0.020523, -0.0486161, -0.0174875)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
+
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
-
-[node name="L_Hand1" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
@@ -251,7 +267,7 @@ shape = SubResource("SphereShape3D_t5txg")
 [node name="Homing" parent="." instance=ExtResource("9_5nfe0")]
 
 [node name="DeathCam" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 3.98414, 3)
+transform = Transform3D(-1, -6.18172e-08, 6.18172e-08, -4.37114e-08, 0.965926, 0.258819, -7.57103e-08, 0.258819, -0.965926, 0, 1.67897, -8.17205)
 environment = ExtResource("2_pbjct")
 
 [node name="MovingPlatformDetector" type="Area3D" parent="."]
