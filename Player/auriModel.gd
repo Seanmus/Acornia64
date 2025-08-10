@@ -3,6 +3,9 @@ extends Node3D
 signal deathFinished
 signal jumpFinished
 
+
+@export var player : CharacterBody3D
+
 func death_Finished():
 	emit_signal("deathFinished")
 	$SKM_Auri/AnimationPlayer.play("RESET")
@@ -18,6 +21,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _RotatePlayerModelInInputDirection(input_dir):
+	if player.dead:
+		return
 	#Turn right
 	if input_dir.x > 0 && abs(input_dir.y) <= 0.35:
 		rotation_degrees.y = -90
