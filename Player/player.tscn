@@ -221,23 +221,23 @@ shape = SubResource("BoxShape3D_fpp87")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.149809, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.41255, -0.000587494, -0.00301328)
-bones/3/position = Vector3(0.0564948, -6.69735e-05, 0.003226)
-bones/3/rotation = Quaternion(-0.11039, -0.11039, -0.698437, 0.698437)
-bones/4/position = Vector3(-0.030687, 0.0250264, -0.0158613)
-bones/5/position = Vector3(-0.0182986, -0.194252, 0.025841)
-bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
-bones/7/position = Vector3(-0.0177119, 0.192122, 0.0258879)
-bones/7/rotation = Quaternion(-0.708133, 0.172145, -0.0192824, 0.684501)
-bones/9/position = Vector3(-0.0208907, 0.0486971, -0.0178916)
-bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
-bones/11/position = Vector3(-0.0665369, -0.0356566, -0.199836)
-bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
-bones/13/position = Vector3(-0.0202971, -0.048697, -0.0169634)
-bones/13/rotation = Quaternion(-0.00911449, 0.0757034, -0.722568, 0.687082)
-bones/15/position = Vector3(0.0660916, 0.0178179, 0.161187)
-bones/15/rotation = Quaternion(0.0499645, -0.011713, -0.0135435, 0.99859)
+bones/1/position = Vector3(0.145018, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.41337, -0.000565913, -0.00290259)
+bones/3/position = Vector3(0.0544316, -6.71338e-05, 0.0030986)
+bones/3/rotation = Quaternion(-0.106046, -0.106046, -0.69911, 0.69911)
+bones/4/position = Vector3(-0.0295663, 0.0241125, -0.0152821)
+bones/5/position = Vector3(-0.0112706, -0.193243, 0.0258413)
+bones/5/rotation = Quaternion(0.0294923, 0.680708, 0.721573, -0.122876)
+bones/7/position = Vector3(-0.0115624, 0.194252, 0.025841)
+bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
+bones/9/position = Vector3(-0.0204958, 0.0486971, -0.0172518)
+bones/9/rotation = Quaternion(0.728919, -0.684275, 0.0102753, 0.0184237)
+bones/11/position = Vector3(-0.0665837, -0.035643, -0.198718)
+bones/11/rotation = Quaternion(-0.0322466, -0.0183471, -0.0404242, 0.998494)
+bones/13/position = Vector3(-0.0209582, -0.0486816, -0.0180374)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999728)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
@@ -265,10 +265,6 @@ transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
 shape = SubResource("SphereShape3D_t5txg")
 
 [node name="Homing" parent="." instance=ExtResource("9_5nfe0")]
-
-[node name="DeathCam" type="Camera3D" parent="."]
-transform = Transform3D(-1, -6.18172e-08, 6.18172e-08, -4.37114e-08, 0.965926, 0.258819, -7.57103e-08, 0.258819, -0.965926, 0, 1.67897, -8.17205)
-environment = ExtResource("2_pbjct")
 
 [node name="MovingPlatformDetector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.539592, 0)
@@ -343,6 +339,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="coyoteTimer" type="Timer" parent="."]
 wait_time = 0.2
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+spring_length = 10.0
+
+[node name="DeathCam" type="Camera3D" parent="SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0)
+environment = ExtResource("2_pbjct")
 
 [connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]

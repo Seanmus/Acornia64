@@ -184,7 +184,7 @@ func Win():
 #Starts the proccess of the players death	
 func kill():
 	mainCamera.current = false
-	$DeathCam.current = true
+	$SpringArm3D/DeathCam.current = true
 	$auriModel/SKM_Auri/AnimationTree.active = false
 	var rand = randi_range(0, 1)
 	if rand == 0:
@@ -208,7 +208,7 @@ func _on_deathFinished():
 	$auriModel/SKM_Auri/AnimationPlayer.play("idle")
 	$auriModel/SKM_Auri/AnimationTree.active = true
 	mainCamera.current = true
-	$DeathCam.current = false
+	$SpringArm3D/DeathCam.current = false
 	Manager._ResetLevel()
 
 #fixes bug with spin anim on vertical moving platform
