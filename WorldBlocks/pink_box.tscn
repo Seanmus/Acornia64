@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cimcbk5kfcrlp"]
+
+[ext_resource type="Texture2D" uid="uid://cmaphvru1a0i4" path="res://Textures/NewPinkBrick.png" id="1_1v4k2"]
+[ext_resource type="Script" path="res://WorldBlocks/pink_box.gd" id="2_y063n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcrnq"]
+albedo_texture = ExtResource("1_1v4k2")
+uv1_scale = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_28bko"]
+resource_local_to_scene = true
+
+[node name="PinkBox" type="CSGBox3D"]
+material = SubResource("StandardMaterial3D_rcrnq")
+script = ExtResource("2_y063n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_28bko")

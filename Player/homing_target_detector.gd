@@ -34,7 +34,6 @@ func _HomingAttack(delta):
 func _physics_process(delta: float) -> void:
 	if not player.homingAttack:
 		_ActivateClosestTarget()
-		print(homingTarget)
 
 func _ActivateClosestTarget():
 	var previousTarget = homingTarget

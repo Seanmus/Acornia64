@@ -74,6 +74,21 @@ shadow_mesh = SubResource("ArrayMesh_4av2e")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovuqx"]
 size = Vector3(3.08533, 0.961472, 1.66878)
 
+[sub_resource type="Animation" id="Animation_oqj55"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:mesh:surface_0/material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_qdapl"]
 resource_name = "speed_boost_cycle"
 length = 0.333
@@ -89,21 +104,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector3(0, 5, 0), Vector3(0, 1.775, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_oqj55"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cube:mesh:surface_0/material:uv1_offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_312dh"]

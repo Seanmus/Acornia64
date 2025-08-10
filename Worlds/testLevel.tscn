@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=10 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_jlbwc"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="6_atxbo"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_nd0eu"]
+[ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/pink_box.tscn" id="8_i3vs7"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -253,7 +254,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 7.03809, 68.7728)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02463, 3.93871, 51.4438)
 
 [node name="Death" parent="." instance=ExtResource("5_jlbwc")]
-transform = Transform3D(8.181, 0, 0, 0, 0.918, 0, 0, 0, 10, -11.1515, -2.97989, 15.8365)
+transform = Transform3D(28.4041, 0, 0, 0, 3.18726, 0, 0, 0, 34.7196, -11.1515, -31.1175, 15.8365)
 
 [node name="speedBoost" parent="." instance=ExtResource("6_atxbo")]
 transform = Transform3D(-6.29094e-05, 0, 3.61701, 0, 3.61701, 0, -3.61701, 0, -6.29094e-05, 4.38204, 1.52211, -24.5638)
@@ -296,3 +297,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24924, 5.85757, 31.148)
 
 [node name="HomingAttackTarget7" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29649, 5.85757, 31.148)
+
+[node name="PinkBox" parent="." instance=ExtResource("8_i3vs7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9245, 1, -168.046)
+size = Vector3(16.4, 1, 247.352)
+
+[node name="PinkBox2" parent="." instance=ExtResource("8_i3vs7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3632, 4.47554, -45.7247)
