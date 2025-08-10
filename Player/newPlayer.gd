@@ -186,7 +186,11 @@ func kill():
 	mainCamera.current = false
 	$DeathCam.current = true
 	$auriModel/SKM_Auri/AnimationTree.active = false
-	$auriModel/SKM_Auri/AnimationPlayer.play("die")
+	var rand = randi_range(0, 1)
+	if rand == 0:
+		$auriModel/SKM_Auri/AnimationPlayer.play("newDeathAnim")
+	else:
+		$auriModel/SKM_Auri/AnimationPlayer.play("die")
 	#animationState.travel("die")
 	$DeathSound.play()
 	velocity.y = 0
