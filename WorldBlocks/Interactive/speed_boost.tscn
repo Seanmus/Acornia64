@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://byhxv7tqydcf7"]
+[gd_scene load_steps=11 format=4 uid="uid://byhxv7tqydcf7"]
 
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/speed_boost.gd" id="1_3de51"]
 [ext_resource type="Texture2D" uid="uid://bu4mpl65el83e" path="res://WorldBlocks/Imports/speedBoost_speedBoostTexture.png" id="1_s6uu8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_br5ro"]
@@ -21,22 +22,22 @@ _surfaces = [{
 "aabb": AABB(-1, 1, -1, 2.00001, 1.00136e-05, 2),
 "format": 34359742465,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAIAAAABAAMA"),
 "name": "BoostMaterial",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63)
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAPwAAgD8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA/")
 }, {
 "aabb": AABB(-1, -1, -1, 2.00001, 2.00001, 2),
 "format": 34359742465,
 "index_count": 30,
-"index_data": PackedByteArray(3, 0, 6, 0, 2, 0, 3, 0, 7, 0, 6, 0, 7, 0, 4, 0, 6, 0, 7, 0, 5, 0, 4, 0, 5, 0, 3, 0, 1, 0, 5, 0, 7, 0, 3, 0, 1, 0, 2, 0, 0, 0, 1, 0, 3, 0, 2, 0, 5, 0, 0, 0, 4, 0, 5, 0, 1, 0, 0, 0),
+"index_data": PackedByteArray("AwAGAAIAAwAHAAYABwAEAAYABwAFAAQABQADAAEABQAHAAMAAQACAAAAAQADAAIABQAAAAQABQABAAAA"),
 "name": "BaseMat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 8,
-"vertex_data": PackedByteArray(0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63)
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIA/AACAPwAAgL8AAIA/AACAvwAAgD8AAIC/AACAvwAAgL8AAIC/AACAvwAAgD8AAIA/AACAvwAAgL8AAIA/")
 }]
 blend_shape_mode = 0
 
@@ -44,36 +45,75 @@ blend_shape_mode = 0
 resource_name = "speedBoost_Cube"
 _surfaces = [{
 "aabb": AABB(-1, 1, -1, 2.00001, 1.00136e-05, 2),
-"attribute_data": PackedByteArray(0, 58, 193, 187, 240, 221, 3, 192, 252, 148, 128, 63, 240, 221, 3, 192, 240, 121, 117, 186, 8, 170, 57, 64, 134, 55, 129, 63, 8, 170, 57, 64),
+"attribute_data": PackedByteArray("ADrBu/DdA8D8lIA/8N0DwPB5dboIqjlAhjeBPwiqOUA="),
 "format": 34359742487,
 "index_count": 6,
-"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 0, 0, 1, 0, 3, 0),
+"index_data": PackedByteArray("AAADAAIAAAABAAMA"),
 "material": SubResource("StandardMaterial3D_br5ro"),
 "name": "BoostMaterial",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
-"vertex_data": PackedByteArray(0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 191)
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAPwAAgD8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIA//3////9//7//f////3//v/9/////f/+//3////9//78=")
 }, {
 "aabb": AABB(-1, -1, -1, 2.00001, 2.00001, 2),
-"attribute_data": PackedByteArray(0, 0, 32, 63, 0, 0, 0, 63, 0, 0, 32, 63, 0, 0, 0, 63, 0, 0, 192, 62, 0, 0, 0, 63, 0, 0, 192, 62, 0, 0, 0, 63, 0, 0, 192, 62, 0, 0, 0, 63, 0, 0, 32, 63, 0, 0, 128, 62, 0, 0, 32, 63, 0, 0, 128, 62, 0, 0, 192, 62, 0, 0, 128, 62, 0, 0, 192, 62, 0, 0, 128, 62, 0, 0, 192, 62, 0, 0, 128, 62, 0, 0, 32, 63, 0, 0, 64, 63, 0, 0, 32, 63, 0, 0, 64, 63, 0, 0, 192, 62, 0, 0, 64, 63, 0, 0, 0, 62, 0, 0, 0, 63, 0, 0, 192, 62, 0, 0, 64, 63, 0, 0, 32, 63, 0, 0, 128, 63, 0, 0, 32, 63, 0, 0, 0, 0, 0, 0, 192, 62, 0, 0, 128, 63, 0, 0, 0, 62, 0, 0, 128, 62, 0, 0, 192, 62, 0, 0, 0, 0),
+"attribute_data": PackedByteArray("AAAgPwAAAD8AACA/AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAID8AAIA+AAAgPwAAgD4AAMA+AACAPgAAwD4AAIA+AADAPgAAgD4AACA/AABAPwAAID8AAEA/AADAPgAAQD8AAAA+AAAAPwAAwD4AAEA/AAAgPwAAgD8AACA/AAAAAAAAwD4AAIA/AAAAPgAAgD4AAMA+AAAAAA=="),
 "format": 34359742487,
 "index_count": 30,
-"index_data": PackedByteArray(8, 0, 16, 0, 5, 0, 8, 0, 19, 0, 16, 0, 17, 0, 10, 0, 15, 0, 17, 0, 12, 0, 10, 0, 13, 0, 7, 0, 2, 0, 13, 0, 18, 0, 7, 0, 4, 0, 6, 0, 1, 0, 4, 0, 9, 0, 6, 0, 14, 0, 0, 0, 11, 0, 14, 0, 3, 0, 0, 0),
+"index_data": PackedByteArray("CAAQAAUACAATABAAEQAKAA8AEQAMAAoADQAHAAIADQASAAcABAAGAAEABAAJAAYADgAAAAsADgADAAAA"),
 "material": SubResource("StandardMaterial3D_puvnf"),
 "name": "BaseMat",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 20,
-"vertex_data": PackedByteArray(0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 191, 255, 255, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 191, 255, 127, 255, 127, 255, 127, 255, 255, 255, 255, 255, 127, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 255, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 191, 255, 255, 255, 255, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 127, 255, 127, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 0, 0, 255, 255, 255, 191, 255, 127, 255, 127, 255, 127, 255, 255)
+"vertex_data": PackedByteArray("AACAPwAAgD8AAIC/AACAPwAAgD8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgL8AAIC/AACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAPwAAgL8AAIA/AACAvwAAgD8AAIC/AACAvwAAgD8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgL8AAIC/AACAvwAAgD8AAIA/AACAvwAAgD8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIA/AACAvwAAgL8AAIA///////9///////9//3////9/AAD///+///////9///////9//3////9//3//f///////f/9/////fwAA////v/9//3//f///////f/9///8AAP9//3//////////f///AAD/f/9/////fwAA////v///////f///AAD/f/9/////f/9//3///wAA/3//f////38AAP///7//f/9//3///w==")
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4av2e")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovuqx"]
-size = Vector3(3.08533, 0.324311, 1.66878)
+size = Vector3(3.08533, 0.961472, 1.66878)
+
+[sub_resource type="Animation" id="Animation_qdapl"]
+resource_name = "speed_boost_cycle"
+length = 0.333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:mesh:surface_0/material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 5, 0), Vector3(0, 1.775, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_oqj55"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:mesh:surface_0/material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_312dh"]
+_data = {
+"RESET": SubResource("Animation_oqj55"),
+"speed_boost_cycle": SubResource("Animation_qdapl")
+}
 
 [node name="speedBoost" type="Area3D"]
+script = ExtResource("1_3de51")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.54691, 0, 0, 0, 0.0552505, 0, 0, 0, 1, 0, 0, 0)
@@ -81,5 +121,13 @@ mesh = SubResource("ArrayMesh_52u6s")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.111233, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.429813, 0)
 shape = SubResource("BoxShape3D_ovuqx")
+
+[node name="SpeedBoostCycle" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_312dh")
+}
+autoplay = "speed_boost_cycle"
+
+[connection signal="body_entered" from="." to="." method="_on_speed_boost_body_entered"]

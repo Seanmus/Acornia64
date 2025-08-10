@@ -12,6 +12,8 @@ var coyoteTime = false
 var landing : bool
 var wasOnGround : bool
 var dead : bool
+const speedLimit = 22.5
+const speedLossRate = 10
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pivot = $CameraControllerPivot
@@ -162,6 +164,8 @@ func MovePlayer(delta):
 		else:
 			movementVelocity = movementVelocity.move_toward(Vector3.ZERO, air_decceleration * delta)
 	movementVelocity = movementVelocity.limit_length(maxSpeed)
+	if maxSpeed > speedLimit:
+		maxSpeed -= delta * speedLossRate
 	velocity.x = movementVelocity.x
 	velocity.z = movementVelocity.z		
 	bouncing = false		
@@ -172,6 +176,9 @@ func MovePlayer(delta):
 
 #########################################################################################################################################
 #Auxiallary functionality 
+
+func _SpeedBoost(newMaxSpeed):
+	maxSpeed = newMaxSpeed
 
 
 #Starts the win animation
