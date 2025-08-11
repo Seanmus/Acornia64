@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_jlbwc"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="6_atxbo"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_nd0eu"]
-[ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/pink_box.tscn" id="8_i3vs7"]
+[ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/BaseWorldBlock.tscn" id="8_i3vs7"]
 [ext_resource type="Material" uid="uid://dkitafkl1rfl1" path="res://Materials/blue_bricks.tres" id="9_ba5qt"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="10_4d3bk"]
 
@@ -305,8 +305,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.122, 1, -168.046)
 size = Vector3(198.794, 1, 247.352)
 
 [node name="PinkBox2" parent="." instance=ExtResource("8_i3vs7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.727, 1.39387, -168.046)
-size = Vector3(54.056, 1.70654, 247.352)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.727, 1.39387, -180.895)
+size = Vector3(54.056, 1.70654, 154.119)
 material = ExtResource("9_ba5qt")
 
 [node name="LevelBlock2" parent="." instance=ExtResource("8_i3vs7")]
