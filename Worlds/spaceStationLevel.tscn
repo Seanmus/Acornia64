@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=20 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="9_6vk6g"]
 [ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/BaseWorldBlock.tscn" id="11_dx50o"]
 [ext_resource type="Material" uid="uid://c4uuxea266872" path="res://Materials/metal_Mat.tres" id="12_8ypx4"]
+[ext_resource type="Material" uid="uid://b0i1v0ixlrvcg" path="res://Materials/green_bricks.tres" id="12_c5myv"]
 [ext_resource type="Material" uid="uid://bm8g2dtbrpeky" path="res://Materials/grey_bricks.tres" id="12_npbsa"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="13_0hu8e"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="14_n7o4n"]
@@ -87,10 +88,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.336, 68.6916, 173.297)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.336, 72.8916, 155.497)
 
 [node name="HomingAttackTarget18" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.336, 76.4916, 141.897)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.336, 73.3306, 141.897)
 
 [node name="HomingAttackTarget19" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.336, 76.4916, 119.097)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 231.336, 73.544, 119.097)
 
 [node name="HomingAttackTarget7" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.536, 7.2916, 184.097)
@@ -183,7 +184,7 @@ curve = SubResource("Curve3D_cwowy")
 
 [node name="BrickBox" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.4342, 1.13558, 63.1195)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(185.341, 1, 155.712)
 material = ExtResource("12_npbsa")
 
@@ -200,62 +201,80 @@ size = Vector3(185.341, 1, 40.7591)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox9" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 82.8804, 20.5994, 90.6589)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 127.11, 20.5994, 142.03)
 material_override = ExtResource("15_gcvop")
-size = Vector3(146.173, 1, 107.627)
+size = Vector3(248.916, 1, 196.087)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox22" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 81.9404, 24.7994, 90.6589)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(146.173, 1, 105.747)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox13" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.19895, 36.6964, 94.214)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(139.062, 1, 49.041)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox27" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 207.634, 36.6964, 104.705)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(86.2784, 1, 78.108)
 material = ExtResource("12_npbsa")
 
+[node name="BrickBox35" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(-4.37114e-08, 0, 1, -0.5, 0.866025, -2.18557e-08, -0.866025, -0.5, -3.78552e-08, 230.918, 15.1342, 109.762)
+material_override = ExtResource("12_c5myv")
+size = Vector3(86.2784, 1, 31.5392)
+material = ExtResource("12_npbsa")
+
 [node name="BrickBox20" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.5918, 58.9392, 85.7154)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 79.5725, 58.9392, 85.7154)
+material_override = ExtResource("12_c5myv")
+size = Vector3(50.2423, 1, 336.203)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox33" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 99.5918, 57.2315, 85.7154)
 material_override = ExtResource("15_gcvop")
-size = Vector3(50.2423, 1, 296.164)
+size = Vector3(50.2423, 2.38467, 296.164)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox34" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 79.3963, 86.8703, 153.165)
+material_override = ExtResource("15_gcvop")
+size = Vector3(185.142, 1, 336.555)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox21" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.2222e-08, 0.258819, 0.965926, 1.13133e-08, 0.965926, -0.258819, -1, 0, -4.37114e-08, 60.6377, 28.9307, 85.7154)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(50.2423, 1, 60.2455)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox26" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(1.29645e-07, -0.258819, -0.965926, 1.13133e-08, 0.965926, -0.258819, 1, 2.26267e-08, 1.28155e-07, 139.638, 28.9307, 85.7154)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(50.2423, 1, 60.2455)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox14" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.9508, 36.6964, 94.725)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(139.062, 1, 21.1919)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox15" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.3452, 36.6964, 139.76)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(99.5708, 1, 10.1391)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox16" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.3527, 36.6964, 30.3596)
-material_override = ExtResource("12_8ypx4")
+material_override = ExtResource("12_c5myv")
 size = Vector3(99.5708, 1, 10.1542)
 material = ExtResource("12_npbsa")
 
@@ -290,9 +309,9 @@ size = Vector3(136.634, 1, 39.8021)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox8" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 29.5599, 8.60981, 111.648)
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 29.5599, 8.60981, 164.814)
 material_override = ExtResource("15_gcvop")
-size = Vector3(101.426, 1, 54.7506)
+size = Vector3(207.757, 1, 54.7506)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox23" parent="." instance=ExtResource("11_dx50o")]
@@ -307,46 +326,82 @@ material_override = ExtResource("15_gcvop")
 size = Vector3(177.844, 1, 54.9138)
 material = ExtResource("12_npbsa")
 
-[node name="BrickBox17" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, -48.6401, 48.0516, 85.6312)
+[node name="BrickBox38" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, -88.5232, 12.9376, 98.5643)
 material_override = ExtResource("15_gcvop")
-size = Vector3(77.1349, 1, 22.9649)
+size = Vector3(293.325, 1, 93.62)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox39" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, -88.5232, 115.009, 177.635)
+material_override = ExtResource("15_gcvop")
+size = Vector3(135.304, 1, 110.833)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox40" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, -88.5232, 115.009, 8.03036)
+material_override = ExtResource("15_gcvop")
+size = Vector3(111.694, 1, 110.833)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox41" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, -88.5232, 128.53, 86.9223)
+material_override = ExtResource("15_gcvop")
+size = Vector3(46.7636, 1, 83.7793)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox17" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, -48.6401, 48.0516, 92.3578)
+material_override = ExtResource("15_gcvop")
+size = Vector3(63.6817, 1, 22.9649)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox28" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 245.96, 56.0125, 113.803)
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 245.96, 40.8188, 146.448)
 material_override = ExtResource("15_gcvop")
-size = Vector3(133.479, 1, 38.8866)
+size = Vector3(198.768, 1, 95.6305)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox29" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 215.16, 56.0125, 148.266)
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 215.16, 41.4518, 176.41)
 material_override = ExtResource("15_gcvop")
-size = Vector3(77.8658, 1, 38.8866)
+size = Vector3(134.153, 1, 91.5305)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox36" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 215.16, 16.3295, 44.1487)
+material_override = ExtResource("15_gcvop")
+size = Vector3(134.153, 1, 41.2858)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox18" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, -8.47205, 56.0125, 61.6312)
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, -28.38, 62.1464, 61.6312)
 material_override = ExtResource("15_gcvop")
-size = Vector3(79.6554, 1, 38.8866)
+size = Vector3(119.471, 1, 51.1544)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox24" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 139.302, 50.3767, 61.6312)
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 139.302, 56.1482, 61.6312)
 material_override = ExtResource("15_gcvop")
-size = Vector3(215.887, 1, 50.1582)
+size = Vector3(215.887, 1, 61.7012)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox25" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 123.592, 50.3767, 109.831)
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 123.592, 56.262, 109.831)
 material_override = ExtResource("15_gcvop")
-size = Vector3(183.58, 1, 50.1582)
+size = Vector3(183.58, 1, 61.9287)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox37" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 123.592, 56.262, 242.177)
+material_override = ExtResource("15_gcvop")
+size = Vector3(183.58, 1, 61.9287)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox19" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, -8.24982, 56.0125, 109.831)
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, -28.1935, 62.1116, 109.831)
 material_override = ExtResource("15_gcvop")
-size = Vector3(80.0998, 1, 38.8866)
+size = Vector3(119.987, 1, 51.0849)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox11" parent="." instance=ExtResource("11_dx50o")]
@@ -362,9 +417,9 @@ size = Vector3(100.925, 1, 55.1252)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox6" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 136.302, 1.13558, 68.6995)
+transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 136.302, 1.13558, 121.014)
 material_override = ExtResource("15_gcvop")
-size = Vector3(187.323, 1, 39.8021)
+size = Vector3(291.952, 1, 39.8021)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox4" parent="." instance=ExtResource("11_dx50o")]
@@ -411,8 +466,3 @@ transform = Transform3D(-1.01848e-07, 0, 2.33002, 0, 2.33002, 0, -2.33002, 0, -1
 
 [node name="Earth" parent="." instance=ExtResource("14_n7o4n")]
 transform = Transform3D(555.222, 0, 0, 0, 555.222, 0, 0, 0, 555.222, -83.397, -1029.81, 235.2)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.5674, 18.5951)
-light_energy = 16.0
-light_indirect_energy = 16.0
