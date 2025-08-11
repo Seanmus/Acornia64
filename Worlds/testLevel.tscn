@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=12 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="6_atxbo"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_nd0eu"]
 [ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/pink_box.tscn" id="8_i3vs7"]
+[ext_resource type="Material" uid="uid://dkitafkl1rfl1" path="res://Materials/blue_bricks.tres" id="9_ba5qt"]
+[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="10_4d3bk"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -299,8 +301,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24924, 5.85757, 31.148)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29649, 5.85757, 31.148)
 
 [node name="PinkBox" parent="." instance=ExtResource("8_i3vs7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9245, 1, -168.046)
-size = Vector3(16.4, 1, 247.352)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.122, 1, -168.046)
+size = Vector3(198.794, 1, 247.352)
 
 [node name="PinkBox2" parent="." instance=ExtResource("8_i3vs7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.727, 1.39387, -168.046)
+size = Vector3(54.056, 1.70654, 247.352)
+material = ExtResource("9_ba5qt")
+
+[node name="LevelBlock2" parent="." instance=ExtResource("8_i3vs7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3632, 4.47554, -45.7247)
+
+[node name="StartCannon" parent="." instance=ExtResource("10_4d3bk")]
+transform = Transform3D(4.45232, 0, 0, 0, 4.45232, 0, 0, 0, 4.45232, -128.906, 7.94683, -189.271)
