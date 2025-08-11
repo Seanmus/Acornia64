@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=20 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="8_jwxpj"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="9_6vk6g"]
 [ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/BaseWorldBlock.tscn" id="11_dx50o"]
+[ext_resource type="Material" uid="uid://50fpmhiuqqje" path="res://Player/HomingTrail.tres" id="12_00owu"]
 [ext_resource type="Material" uid="uid://c4uuxea266872" path="res://Materials/metal_Mat.tres" id="12_8ypx4"]
 [ext_resource type="Material" uid="uid://bm8g2dtbrpeky" path="res://Materials/grey_bricks.tres" id="12_npbsa"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="13_0hu8e"]
@@ -326,13 +327,13 @@ material = ExtResource("12_npbsa")
 
 [node name="BrickBox6" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(2.98023e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, -2.98023e-08, -8.88178e-16, 134.56, 1.13558, 68.6995)
-material_override = ExtResource("14_nhgbm")
+material_override = ExtResource("12_00owu")
 size = Vector3(187.323, 1, 39.8021)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox4" parent="." instance=ExtResource("11_dx50o")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 43.6403, 1.13558, -15.2353)
-material_override = ExtResource("14_nhgbm")
+material_override = ExtResource("12_00owu")
 size = Vector3(185.754, 1, 39.8021)
 material = ExtResource("12_npbsa")
 
@@ -352,7 +353,7 @@ transform = Transform3D(-1.01848e-07, 0, -2.33002, 0, 2.33002, 0, 2.33002, 0, -1
 transform = Transform3D(-1.01848e-07, 0, -2.33002, 0, 2.33002, 0, 2.33002, 0, -1.01848e-07, 110.481, 1.63558, 97.2682)
 
 [node name="speedBoost8" parent="." instance=ExtResource("13_0hu8e")]
-transform = Transform3D(2.25401, 0.590278, 1.37473e-14, -0.590278, 2.25401, -3.60012e-15, -1.42109e-14, 4.63248e-22, 2.33002, 66.329, 27.8275, 84.434)
+transform = Transform3D(2.33002, 0, 0, 0, 2.33002, 0, 0, 0, 2.33002, 26.357, 37.315, 85.434)
 
 [node name="speedBoost9" parent="." instance=ExtResource("13_0hu8e")]
 transform = Transform3D(2.33002, 0, 0, 0, 2.33002, 0, 0, 0, 2.33002, 195.346, 37.2204, 84.434)
