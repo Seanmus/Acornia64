@@ -50,11 +50,6 @@ data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 
 
 [node name="RoadBlock" parent="." instance=ExtResource("4_1bfc3")]
 
-[node name="grate" parent="." instance=ExtResource("3_a83li")]
-
-[node name="Grate" parent="grate" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
-
 [node name="MetalBox" parent="." instance=ExtResource("1_2xeha")]
 
 [node name="MetalBox" parent="MetalBox" index="0"]
@@ -72,6 +67,11 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GrassPlatform/Grass/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_fxmro")
 
+[node name="grate" parent="." instance=ExtResource("3_a83li")]
+
+[node name="Grate" parent="grate" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
 [editable path="RoadBlock"]
-[editable path="grate"]
 [editable path="MetalBox"]
+[editable path="grate"]
