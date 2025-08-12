@@ -33,3 +33,9 @@ func _on_homing_attack_target_on_hit():
 func _Reset():
 	process_mode = Node.PROCESS_MODE_INHERIT
 	visible = true
+
+
+func _on_player_detector_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Player"):
+		pass
+		#queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=17 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -9,8 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_nd0eu"]
 [ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/BaseWorldBlock.tscn" id="8_i3vs7"]
 [ext_resource type="Material" uid="uid://dkitafkl1rfl1" path="res://Materials/blue_bricks.tres" id="9_ba5qt"]
+[ext_resource type="Material" uid="uid://bm8g2dtbrpeky" path="res://Materials/grey_bricks.tres" id="9_o8eww"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="10_4d3bk"]
+[ext_resource type="Material" uid="uid://b0i1v0ixlrvcg" path="res://Materials/green_bricks.tres" id="10_qyxdr"]
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="11_jqd2s"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="14_uo65f"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -21,6 +24,14 @@ ambient_light_sky_contribution = 0.0
 ambient_light_energy = 1.53
 adjustment_enabled = true
 adjustment_saturation = 1.7
+
+[sub_resource type="Curve3D" id="Curve3D_6t6fq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
 
 [node name="testLevel" type="Node3D"]
 
@@ -303,10 +314,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29649, 5.85757, 31.148)
 
 [node name="PinkBox" parent="." instance=ExtResource("8_i3vs7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116.122, 1, -168.046)
+material_override = ExtResource("9_o8eww")
 size = Vector3(198.794, 1, 247.352)
 
 [node name="PinkBox2" parent="." instance=ExtResource("8_i3vs7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.727, 1.39387, -180.895)
+material_override = ExtResource("10_qyxdr")
 size = Vector3(54.056, 1.70654, 154.119)
 material = ExtResource("9_ba5qt")
 
@@ -318,3 +331,7 @@ transform = Transform3D(4.45232, 0, 0, 0, 4.45232, 0, 0, 0, 4.45232, -128.906, 7
 
 [node name="SpeedBoostRamp" parent="." instance=ExtResource("11_jqd2s")]
 transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -2.25061, 0.603048, -9.83772e-08, -6.32967, 2.49262, -50.3969)
+
+[node name="MovingNutcracker" parent="." instance=ExtResource("14_uo65f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346821, 2.43865, -106.007)
+curve = SubResource("Curve3D_6t6fq")

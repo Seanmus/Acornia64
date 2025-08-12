@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dta7p3m7batbx"]
+[gd_scene load_steps=12 format=3 uid="uid://dta7p3m7batbx"]
 
 [ext_resource type="PackedScene" uid="uid://14x1dh2ijgdd" path="res://WorldBlocks/Imports/StartCannon.glb" id="1_2wjm5"]
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/start_cannon.gd" id="2_gtnd1"]
+[ext_resource type="Material" uid="uid://c4uuxea266872" path="res://Materials/metal_Mat.tres" id="3_ux4ll"]
 [ext_resource type="AudioStream" uid="uid://dx78t50hvny4y" path="res://Audio/Effects/cannon.wav" id="3_xlawo"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vvqe3"]
@@ -114,6 +115,12 @@ transform = Transform3D(1, 0, 0, 0, 0.0721517, 0.997394, 0, -0.997394, 0.0721517
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/Area3D" index="0"]
 shape = SubResource("BoxShape3D_on85u")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Cylinder" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.883234, 0.468932, 0, -0.468932, 0.883234, -0.0958557, -2.50905, 0.298593)
+use_collision = true
+size = Vector3(1.57867, 3.2757, 0.470184)
+material = ExtResource("3_ux4ll")
 
 [node name="Icosphere" parent="." index="1"]
 transform = Transform3D(0.425809, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, -0.285036, -1.45841)

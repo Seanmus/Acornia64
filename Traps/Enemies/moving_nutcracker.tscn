@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvfsbrumep3x8"]
+[gd_scene load_steps=8 format=3 uid="uid://dvfsbrumep3x8"]
 
 [ext_resource type="PackedScene" uid="uid://dnpr4aq0nt4j3" path="res://Traps/Enemies/moving_enemyBase.tscn" id="1_t146q"]
 [ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_7ght2"]
@@ -16,6 +16,9 @@ point_count = 2
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vqj81"]
 radius = 3.0
 height = 8.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5rcmh"]
+size = Vector3(2.2417, 4.43066, 8.98975)
 
 [node name="MovingNutcracker" instance=ExtResource("1_t146q")]
 curve = SubResource("Curve3D_fcbh8")
@@ -40,6 +43,14 @@ transform = Transform3D(-0.345699, 5.56219e-07, -1.0659e-08, -7.58404e-07, -0.18
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 3.22631, 0)
 shape = SubResource("CapsuleShape3D_vqj81")
 
+[node name="PlayerDetector" type="Area3D" parent="nutcracker" index="14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.38708, -1.68389)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="nutcracker/PlayerDetector" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0598145, -1.71533, -3.99487)
+shape = SubResource("BoxShape3D_5rcmh")
+
 [connection signal="onHit" from="nutcracker/HomingAttackTarget" to="." method="_on_homing_attack_target_on_hit"]
+[connection signal="body_entered" from="nutcracker/PlayerDetector" to="." method="_on_player_detector_body_entered"]
 
 [editable path="nutcracker"]
