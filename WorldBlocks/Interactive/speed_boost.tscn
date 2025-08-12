@@ -1,13 +1,17 @@
-[gd_scene load_steps=11 format=4 uid="uid://byhxv7tqydcf7"]
+[gd_scene load_steps=10 format=4 uid="uid://byhxv7tqydcf7"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/speed_boost.gd" id="1_3de51"]
 [ext_resource type="Texture2D" uid="uid://bu4mpl65el83e" path="res://WorldBlocks/Imports/speedBoost_speedBoostTexture.png" id="1_s6uu8"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/scrollingTexture.gd" id="3_r6w0d"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_do12n"]
+frame_0/texture = ExtResource("1_s6uu8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_br5ro"]
 resource_name = "BoostMaterial"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_s6uu8")
+albedo_texture = SubResource("AnimatedTexture_do12n")
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puvnf"]
@@ -74,44 +78,6 @@ shadow_mesh = SubResource("ArrayMesh_4av2e")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovuqx"]
 size = Vector3(3.08533, 0.961472, 1.66878)
 
-[sub_resource type="Animation" id="Animation_oqj55"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cube:mesh:surface_0/material:uv1_offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qdapl"]
-resource_name = "speed_boost_cycle"
-length = 0.333
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Cube:mesh:surface_0/material:uv1_offset")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.333333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 5, 0), Vector3(0, 1.775, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_312dh"]
-_data = {
-"RESET": SubResource("Animation_oqj55"),
-"speed_boost_cycle": SubResource("Animation_qdapl")
-}
-
 [node name="speedBoost" type="Area3D"]
 script = ExtResource("1_3de51")
 
@@ -119,15 +85,10 @@ script = ExtResource("1_3de51")
 transform = Transform3D(1.54691, 0, 0, 0, 0.0552505, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_52u6s")
 skeleton = NodePath("")
+script = ExtResource("3_r6w0d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.429813, 0)
 shape = SubResource("BoxShape3D_ovuqx")
-
-[node name="SpeedBoostCycle" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_312dh")
-}
-autoplay = "speed_boost_cycle"
 
 [connection signal="body_entered" from="." to="." method="_on_speed_boost_body_entered"]
