@@ -97,23 +97,23 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.91, 
 floor_block_on_wall = false
 
 [node name="Skeleton3D" parent="Player/auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.408439, -0.00055842, -0.00286415)
-bones/3/position = Vector3(0.0540348, 1.12881e-05, 0.00323488)
-bones/3/rotation = Quaternion(-0.202349, -0.202349, -0.677536, 0.677536)
-bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
-bones/5/position = Vector3(-0.00917149, -0.193973, 0.0258149)
-bones/5/rotation = Quaternion(0.0614494, 0.676578, 0.728293, -0.0897544)
-bones/7/position = Vector3(-0.00910607, 0.194043, 0.0258682)
-bones/7/rotation = Quaternion(-0.728671, 0.0848906, 0.0618316, 0.676763)
-bones/9/position = Vector3(-0.0209478, 0.0486971, -0.0179759)
-bones/9/rotation = Quaternion(0.728775, -0.684428, 0.017764, 0.0113921)
-bones/11/position = Vector3(-0.0665848, -0.0350715, -0.199569)
-bones/11/rotation = Quaternion(-0.0424566, -0.0193916, -0.0406747, 0.998082)
-bones/13/position = Vector3(-0.0203883, -0.0485959, -0.0173174)
-bones/13/rotation = Quaternion(0.0193296, 0.0487938, -0.722832, 0.689028)
-bones/15/position = Vector3(0.066084, 0.0113861, 0.164645)
-bones/15/rotation = Quaternion(0.0109451, -0.0143037, -0.0161088, 0.999708)
+bones/1/position = Vector3(0.145549, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.409836, -0.000568303, -0.00291484)
+bones/3/position = Vector3(0.0546615, 4.59686e-05, 0.00333002)
+bones/3/rotation = Quaternion(-0.232899, -0.232899, -0.667651, 0.667651)
+bones/4/position = Vector3(-0.0296912, 0.0242143, -0.0153466)
+bones/5/position = Vector3(-0.0121551, -0.193097, 0.0257346)
+bones/5/rotation = Quaternion(0.0265477, 0.681501, 0.718636, -0.135696)
+bones/7/position = Vector3(-0.0118569, 0.193353, 0.0259556)
+bones/7/rotation = Quaternion(-0.721301, 0.115645, 0.0281082, 0.682321)
+bones/9/position = Vector3(-0.0205757, 0.0486971, -0.0173832)
+bones/9/rotation = Quaternion(0.728983, -0.684077, 0.00360389, 0.0246853)
+bones/11/position = Vector3(-0.0667675, -0.0332286, -0.197948)
+bones/11/rotation = Quaternion(-0.0231493, -0.0174151, -0.0401975, 0.998772)
+bones/13/position = Vector3(-0.0203111, -0.0485842, -0.0172198)
+bones/13/rotation = Quaternion(0.00889737, 0.0594009, -0.724491, 0.686662)
+bones/15/position = Vector3(0.0661809, 0.0142326, 0.163293)
+bones/15/rotation = Quaternion(0.0257167, -0.0138769, -0.0127532, 0.999492)
 
 [node name="R_Hand" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
@@ -1309,7 +1309,7 @@ transform = Transform3D(1, 0, -3.49691e-07, 0, 1, 0, 3.49691e-07, 0, 1, 363.845,
 transform = Transform3D(-1, 0, 4.37114e-07, 0, 1, 0, -4.37114e-07, 0, -1, 363.845, -44.27, -146.139)
 
 [node name="grate" parent="GratePaths/GratePathway89" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(6.67, 0, 0, 0, 6.67, 0, 0, 0, 6.67, 0, 0, 0)
 
 [node name="MetalPillar2" parent="GratePaths/GratePathway89" index="2"]
 transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, -166.885, -7.60001)
@@ -1322,7 +1322,7 @@ transform = Transform3D(1, 0, -5.24537e-07, 0, 1, 0, 5.24537e-07, 0, 1, 311.045,
 transform = Transform3D(4.80825e-07, 0, 1, 0, 1, 0, -1, 0, 4.80825e-07, 311.045, -44.27, -40.539)
 
 [node name="grate" parent="GratePaths/GratePathway115" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(6.67, 0, 0, 0, 6.67, 0, 0, 0, 6.67, 0, 0, 0)
 
 [node name="MetalPillar3" parent="GratePaths/GratePathway115" index="1"]
 transform = Transform3D(1.91069e-15, -4.27189e-08, -1, -1, -4.27189e-08, 0, -4.37114e-08, 0.977295, -4.37114e-08, -7.65878, 0.599998, 0)
@@ -1331,7 +1331,7 @@ transform = Transform3D(1.91069e-15, -4.27189e-08, -1, -1, -4.27189e-08, 0, -4.3
 transform = Transform3D(-3.93402e-07, 0, -1, 0, 1, 0, 1, 0, -3.93402e-07, 482.645, -44.27, -40.539)
 
 [node name="grate" parent="GratePaths/GratePathway119" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(6.67, 0, 0, 0, 6.67, 0, 0, 0, 6.67, 0, 0, 0)
 
 [node name="MetalPillar3" parent="GratePaths/GratePathway119" index="1"]
 transform = Transform3D(1.91069e-15, -4.27189e-08, -1, -1, -4.27189e-08, 0, -4.37114e-08, 0.977295, -4.37114e-08, -7.65878, 0.599998, 0)
@@ -1340,7 +1340,7 @@ transform = Transform3D(1.91069e-15, -4.27189e-08, -1, -1, -4.27189e-08, 0, -4.3
 transform = Transform3D(-1, 0, 4.37114e-07, 0, 1, 0, -4.37114e-07, 0, -1, 482.645, -34.0572, 63.061)
 
 [node name="grate" parent="GratePaths/GratePathway126" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(6.67, 0, 0, 0, 6.67, 0, 0, 0, 6.67, 0, 0, 0)
 
 [node name="MetalPillar3" parent="GratePaths/GratePathway126" index="1"]
 transform = Transform3D(1.91069e-15, -4.27189e-08, -1, -1, -4.27189e-08, 0, -4.37114e-08, 0.977295, -4.37114e-08, -7.65878, 0.599998, 0)
