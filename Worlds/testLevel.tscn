@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=13 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/BaseWorldBlock.tscn" id="8_i3vs7"]
 [ext_resource type="Material" uid="uid://dkitafkl1rfl1" path="res://Materials/blue_bricks.tres" id="9_ba5qt"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="10_4d3bk"]
+[ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="11_jqd2s"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -314,3 +315,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3632, 4.47554, -45.7247)
 
 [node name="StartCannon" parent="." instance=ExtResource("10_4d3bk")]
 transform = Transform3D(4.45232, 0, 0, 0, 4.45232, 0, 0, 0, 4.45232, -128.906, 7.94683, -189.271)
+
+[node name="SpeedBoostRamp" parent="." instance=ExtResource("11_jqd2s")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -2.25061, 0.603048, -9.83772e-08, -6.32967, 2.49262, -50.3969)

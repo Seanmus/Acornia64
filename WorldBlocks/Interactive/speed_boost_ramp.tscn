@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://thsngsxjek5q"]
+[gd_scene load_steps=5 format=3 uid="uid://thsngsxjek5q"]
 
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/speed_boost_ramp.gd" id="1_heapt"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="1_u0ayk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d64uy"]
 size = Vector3(3.16504, 0.108765, 5.96213)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wjjf1"]
+size = Vector3(1, 0.0999146, 5.71152)
+
 [node name="SpeedBoostRamp" type="Node3D"]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
+script = ExtResource("1_heapt")
 
 [node name="speedBoost" parent="." instance=ExtResource("1_u0ayk")]
 
@@ -21,3 +26,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00537109, 0.00115967, -0.00895691)
 shape = SubResource("BoxShape3D_d64uy")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.66852, 0.04808, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0532532, -0.00636282)
+shape = SubResource("BoxShape3D_wjjf1")
+
+[connection signal="body_exited" from="Area3D" to="." method="_on_speed_boost_body_exited"]
