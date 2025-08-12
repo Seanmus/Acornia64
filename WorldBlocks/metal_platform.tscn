@@ -1,16 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://ch3dhotjpeu7h"]
 
-[ext_resource type="PackedScene" uid="uid://brmucovv6o51u" path="res://WorldBlocks/Imports/MetalBox.glb" id="1_o3hid"]
+[ext_resource type="PackedScene" uid="uid://jo5wd2x8noqo" path="res://WorldBlocks/MetalBox.glb" id="1_o3hdi"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lk55w"]
-size = Vector3(2.00083, 2.01209, 2.00451)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e51ko"]
+data = PackedVector3Array(-1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1)
 
-[node name="MetalBox" instance=ExtResource("1_o3hid")]
+[node name="MetalBox" instance=ExtResource("1_o3hdi")]
 
-[node name="Cube" parent="." index="0"]
-transform = Transform3D(5, 0, 0, 0, 1.085, 0, 0, 0, 5, 0, 0, 0)
+[node name="StaticBody3D" type="StaticBody3D" parent="MetalBox" index="0"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
-shape = SubResource("BoxShape3D_lk55w")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MetalBox/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_e51ko")

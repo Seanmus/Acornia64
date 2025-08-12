@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dm0xgjdc1ahib"
-path="res://godot/imported/MetalBox.fbx-3da5824b24a71325c262c8861db5beda.scn"
+uid="uid://jo5wd2x8noqo"
+path="res://godot/imported/MetalBox.glb-ead2377c0c3935a6a29290a2fc365fc5.scn"
 
 [deps]
 
-source_file="res://WorldBlocks/Imports/MetalBox.fbx"
-dest_files=["res://godot/imported/MetalBox.fbx-3da5824b24a71325c262c8861db5beda.scn"]
+source_file="res://WorldBlocks/MetalBox.glb"
+dest_files=["res://godot/imported/MetalBox.glb-ead2377c0c3935a6a29290a2fc365fc5.scn"]
 
 [params]
 
@@ -27,11 +27,10 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
+gltf/naming_version=1
+gltf/embedded_image_handling=1

@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=4 uid="uid://dges11hmnei7l"]
+
+[ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="1_2xeha"]
+[ext_resource type="PackedScene" uid="uid://bovwfb41blhj2" path="res://WorldBlocks/grate.tscn" id="3_a83li"]
+[ext_resource type="PackedScene" uid="uid://ct2wpvuqmgj4u" path="res://WorldBlocks/road_block.tscn" id="4_1bfc3"]
+[ext_resource type="Texture2D" uid="uid://c4lppftkrcu8u" path="res://WorldBlocks/Decor/GrassPlatform_GrassTexture.png" id="4_qcdem"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfjtf"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("4_qcdem")
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xvs3e"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAQAAAACAAYAAwAGAAIAAwAHAAYABwAEAAYABwAFAAQABQADAAEABQAHAAMAAQACAAAAAQADAAIABQAAAAQABQABAAAA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////wAAAAD//wAAAAAAAP///////wAA//8AAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAAAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3be87"]
+resource_name = "GrassPlatform_Cube"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("QsFqoJJOUfKavWqg1H9qoP////98g2qgMME1kJJOg06avTWQ5n81kP//VEB8gzWQQsGgsAbzUfL9vaCw1H+gsJE///8ag6CwMMH/fwbzg079vdXA5n//f5E/VEAag9XA"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AQATAA0AAQAHABMACQASAAYACQAVABIAFwAOABQAFwARAA4AEAAKAAQAEAAWAAoABQAIAAIABQALAAgADwAAAAwADwADAAAA"),
+"material": SubResource("StandardMaterial3D_xfjtf"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(3.93265, 3.94827, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////wAA////////AAD///////8AAFTV//8AAAAA/////wAAAAD/v///AAAAAFTV/////////7///////////////////1TV//8AAP///7///wAA////v///AAD//1TVAAD//wAA//8AAP//AAD//wAA//8AAFTVAAAAAAAA//8AAAAAAAD/vwAAAAAAAFTVAAD//////78AAP///////wAA/////1TVAAAAAP///78AAAAA////vwAAAAD//1TV/7//v/9//7+qKqoq/7//vwAA/3+qKqoq//////9//7+qKqoq/////wAA/3+qKqoq/7//v/9//79U1VTV/7//vwAA/39U1VTV//////9//79U1VTV/////wAA/39U1VTV")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_xvs3e")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fxmro"]
+data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1)
+
+[node name="MeshLibrary" type="Node3D"]
+
+[node name="RoadBlock" parent="." instance=ExtResource("4_1bfc3")]
+
+[node name="grate" parent="." instance=ExtResource("3_a83li")]
+
+[node name="Grate" parent="grate" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="MetalBox" parent="." instance=ExtResource("1_2xeha")]
+
+[node name="MetalBox" parent="MetalBox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="GrassPlatform" type="Node3D" parent="."]
+
+[node name="Grass" type="MeshInstance3D" parent="GrassPlatform"]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_3be87")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GrassPlatform/Grass"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GrassPlatform/Grass/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fxmro")
+
+[editable path="RoadBlock"]
+[editable path="grate"]
+[editable path="MetalBox"]
