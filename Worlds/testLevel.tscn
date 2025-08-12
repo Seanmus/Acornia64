@@ -272,19 +272,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.02463, 3.93871, 51.4438)
 transform = Transform3D(28.4041, 0, 0, 0, 3.18726, 0, 0, 0, 34.7196, -11.1515, -31.1175, 15.8365)
 
 [node name="speedBoost" parent="." instance=ExtResource("6_atxbo")]
-transform = Transform3D(-6.29094e-05, 0, 3.61701, 0, 3.61701, 0, -3.61701, 0, -6.29094e-05, 4.38204, 1.52211, -24.5638)
+transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, 4.38204, 1.52211, -24.5638)
 
 [node name="speedBoost2" parent="." instance=ExtResource("6_atxbo")]
-transform = Transform3D(-6.29094e-05, 0, 3.61701, 0, 3.61701, 0, -3.61701, 0, -6.29094e-05, 13.382, 1.52211, -79.5638)
+transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, 13.382, 1.52211, -79.5638)
 
 [node name="speedBoost3" parent="." instance=ExtResource("6_atxbo")]
-transform = Transform3D(-6.29094e-05, 0, 3.61701, 0, 3.61701, 0, -3.61701, 0, -6.29094e-05, -5.61796, 1.52211, -134.564)
+transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, -5.61796, 1.52211, -134.564)
 
 [node name="speedBoost4" parent="." instance=ExtResource("6_atxbo")]
-transform = Transform3D(-6.29094e-05, 0, 3.61701, 0, 3.61701, 0, -3.61701, 0, -6.29094e-05, 2.38204, 1.52211, -194.564)
+transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, 2.38204, 1.52211, -194.564)
 
 [node name="speedBoost5" parent="." instance=ExtResource("6_atxbo")]
-transform = Transform3D(-6.29094e-05, 0, 3.61701, 0, 3.61701, 0, -3.61701, 0, -6.29094e-05, 2.38204, 1.52211, -280.564)
+transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, 2.38204, 1.52211, -280.564)
 
 [node name="HomingAttackTarget" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 4.09082, -6.98706)

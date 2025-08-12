@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=22 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
@@ -33,6 +33,13 @@ adjustment_saturation = 1.7
 albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
 albedo_texture = ExtResource("16_sbbpd")
 uv1_scale = Vector3(20, 20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj80f"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.290196, 0.686275, 0.784314, 0.0862745)
 
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_m4e2o")
@@ -129,6 +136,11 @@ transform = Transform3D(31.7727, 0, 0, 0, 31.7727, 0, 0, 0, 31.7727, 787.192, -7
 transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_t2jcp")
+
+[node name="Sky2" type="CSGSphere3D" parent="."]
+transform = Transform3D(252.613, 0, 0, 0, 252.613, 0, 0, 0, 252.613, -10.8499, 38.1944, 5.21952)
+flip_faces = true
+material = SubResource("StandardMaterial3D_hj80f")
 
 [node name="acorn" parent="." instance=ExtResource("17_128e6")]
 transform = Transform3D(-1.75224e-07, 0, -4.00865, 0, 4.00865, 0, 4.00865, 0, -1.75224e-07, -31.1319, -2.69889, -34.4003)
