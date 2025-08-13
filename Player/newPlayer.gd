@@ -14,6 +14,7 @@ var wasOnGround : bool
 var dead : bool
 const speedLimit = 22.5
 const speedLossRate = 10
+var heldDownTime = 0
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pivot = $CameraControllerPivot
@@ -144,7 +145,14 @@ func addPoofCloud():
 #Player Movement
 #########################################################################################################################################
 func MovePlayer(delta):
-	var input_dir = Input.get_vector("left", "right", "forward", "back")	
+	var input_dir = Input.get_vector("left", "right", "forward", "back")
+	#AUTO ROTATE WORKS BUT NOT SURE IF I LIKE IT
+	#if abs(input_dir.x) > 0.1:
+	#	heldDownTime +=  delta
+	#	if(heldDownTime > 2):
+	#		pivot._CameraController(Vector2(input_dir.x, 0), 0.05 * (heldDownTime - 2) / 5 )
+	#else:
+	#	heldDownTime = 0
 	if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
 		runCloud.emitting = true
 	else:
