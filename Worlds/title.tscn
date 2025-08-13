@@ -421,6 +421,12 @@ bones/13/rotation = Quaternion(-0.0946542, 0.139961, -0.731084, 0.661036)
 bones/15/position = Vector3(0.0729517, 0.0248087, 0.158794)
 bones/15/rotation = Quaternion(0.154454, 0.00689319, 0.015049, 0.987861)
 
+[node name="R_Hand" parent="acorn/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
+transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
+
+[node name="L_Hand1" parent="acorn/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
+transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+
 [node name="AnimationTree" parent="acorn/SKM_Auri" index="4"]
 active = false
 

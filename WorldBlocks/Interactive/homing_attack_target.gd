@@ -16,7 +16,7 @@ func _UnHighLight():
 
 func _Hit():
 	print("I got hit")
-	emit_signal("onHit")
+	onHit.emit()
 	collision.set_deferred("disabled", true)
 	soundEffect.play()
 	disabled = true

@@ -10,5 +10,5 @@ roughness = 1.46
 normal_enabled = true
 normal_scale = 10.0
 normal_texture = ExtResource("3")
-uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_scale = Vector3(5, 5, 5)
 uv1_triplanar = true
