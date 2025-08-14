@@ -173,8 +173,14 @@ func MovePlayer(delta):
 		else:
 			movementVelocity = movementVelocity.move_toward(Vector3.ZERO, air_decceleration * delta)
 	movementVelocity = movementVelocity.limit_length(maxSpeed)
+	
 	if maxSpeed > speedLimit:
+		if velocity.length() < maxSpeed:
+			maxSpeed = velocity.length()
 		maxSpeed -= delta * speedLossRate
+		if maxSpeed < speedLimit:
+			maxSpeed = speedLimit
+			
 	velocity.x = movementVelocity.x
 	velocity.z = movementVelocity.z		
 	bouncing = false		
