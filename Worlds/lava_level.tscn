@@ -103,12 +103,9 @@ bones/3/position = Vector3(0.0534103, -9.68876e-05, 0.00284812)
 bones/3/rotation = Quaternion(0, 0, -0.707107, 0.707107)
 bones/4/position = Vector3(-0.0290115, 0.0236601, -0.0149954)
 bones/5/position = Vector3(-0.00824806, -0.194252, 0.025841)
-bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
 bones/7/position = Vector3(-0.00824806, 0.194252, 0.025841)
 bones/9/position = Vector3(-0.0210603, 0.0486971, -0.0181665)
-bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
 bones/11/position = Vector3(-0.066525, -0.0356637, -0.200116)
-bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
 bones/13/position = Vector3(-0.0210603, -0.048697, -0.0181665)
 
 [node name="R_Hand" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
