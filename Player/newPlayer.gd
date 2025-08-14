@@ -148,12 +148,12 @@ func addPoofCloud():
 func MovePlayer(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	#AUTO ROTATE WORKS BUT NOT SURE IF I LIKE IT
-	#if abs(input_dir.x) > 0.1:
-	#	heldDownTime +=  delta
-	#	if(heldDownTime > 2):
-	#		pivot._CameraController(Vector2(input_dir.x, 0), 0.05 * (heldDownTime - 2) / 5 )
-	#else:
-	#	heldDownTime = 0
+	if abs(input_dir.x) > 0.1:
+		heldDownTime +=  delta
+		if(heldDownTime > 1):
+			pivot._CameraController(Vector2(input_dir.x, 0), 0.05 * (heldDownTime - 1) / 5 )
+	else:
+		heldDownTime = 0
 	if is_on_floor() && (input_dir.length() > 0) && velocity.length() > maxSpeed / 2:
 		runCloud.emitting = true
 	else:
