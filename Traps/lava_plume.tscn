@@ -22,6 +22,8 @@ height = 9.57169
 radius = 2.18516
 
 [node name="LavaPlume" type="Area3D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_l05el")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]

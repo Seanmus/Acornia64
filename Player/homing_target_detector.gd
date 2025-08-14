@@ -6,9 +6,15 @@ var overlappedTargets = []
 @export var cameraAnimPlayer : AnimationPlayer
 @export var homingEffect : GPUParticles3D
 @export var playerCollider : CollisionShape3D
+@export var raycast : RayCast3D
 var homingTarget
 var homingSpeed = 60
 var homingAttackBounceVelocity = 11
+
+func _ready() -> void:
+	raycast.add_exception(player)
+	raycast.add_exception(hurtMonitor)
+	raycast.add_exception(self)
 
 #Sends the player flying towards the homingTargets position
 func _HomingAttack(delta):
@@ -62,13 +68,22 @@ func _GetClosestTarget():
 		for target in overlappedTargets:
 			#Raycasts towards the target to ensure a clear path
 			var space_state = get_world_3d().direct_space_state
-			var query = PhysicsRayQueryParameters3D.create(player.position, target.position)
-			var result = space_state.intersect_ray(query)
-			if not closestTarget:
+			#var query = PhysicsRayQueryParameters3D.create(player.position, target.position)
+			raycast.target_position = to_local(target.global_position)
+			#raycast.force_raycast_update()
+			#var result = space_state.intersect_ray(query)
+			
+			if not closestTarget && !raycast.is_colliding():
 				closestTarget = target
-				
 			#Checks if the distance to the target is less then the distance to the previous closest target
-			if position.distance_to(target.global_position) < player.position.distance_to(closestTarget.global_position):
+			if closestTarget && position.distance_to(target.global_position) < player.position.distance_to(closestTarget.global_position) && !raycast.is_colliding():
 				closestTarget = target
+			print("Collision point " + str(raycast.is_colliding()) + "Target:" + str(target))
+			
+			#if not closestTarget && raycast.get_collider().global_position == target.global_position:
+				#closestTarget = target
+			#Checks if the distance to the target is less then the distance to the previous closest target
+			#if closestTarget && position.distance_to(target.global_position) < player.position.distance_to(closestTarget.global_position) && raycast.get_collider() == target:
+				#closestTarget = target
 		#If a closest target was found returns the one otherwise null is returned
 		return closestTarget

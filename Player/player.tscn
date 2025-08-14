@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=28 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -8,9 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="5_olqky"]
 [ext_resource type="Script" path="res://Player/crush_monitor.gd" id="6_4jg1v"]
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
-[ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="7_0jk04"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
-[ext_resource type="Script" path="res://Player/shadowDecal.gd" id="8_auqq3"]
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
 [ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
 [ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
@@ -177,6 +175,8 @@ stream = ExtResource("5_olqky")
 current = true
 
 [node name="HurtMonitor" type="Area3D" parent="." node_paths=PackedStringArray("player") groups=["seed"]]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("6_4jg1v")
 player = NodePath("..")
 
@@ -191,19 +191,11 @@ volume_db = -80.0
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.09941, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, -10, 0)
+target_position = Vector3(0, 0, 0)
+hit_back_faces = false
+debug_shape_custom_color = Color(1, 0, 0, 1)
 
-[node name="ShadowDecal" type="Decal" parent="RayCast3D" node_paths=PackedStringArray("raycast")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.27512, 0)
-size = Vector3(2, 9, 2)
-texture_albedo = ExtResource("7_0jk04")
-distance_fade_enabled = true
-distance_fade_begin = 30.0
-cull_mask = 1048573
-script = ExtResource("8_auqq3")
-raycast = NodePath("..")
-
-[node name="HomingAttackComponent" type="Area3D" parent="." node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider")]
+[node name="HomingAttackComponent" type="Area3D" parent="." node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider", "raycast")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
 script = ExtResource("10_hdytl")
 player = NodePath("..")
@@ -211,10 +203,10 @@ hurtMonitor = NodePath("../HurtMonitor")
 cameraAnimPlayer = NodePath("../CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer")
 homingEffect = NodePath("../Homing")
 playerCollider = NodePath("../CollisionShape3D")
+raycast = NodePath("../RayCast3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackComponent"]
 transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 3.1605e-09, -11.0723)
-visible = false
 shape = SubResource("BoxShape3D_fpp87")
 
 [node name="auriModel" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_r22ru")]
@@ -222,23 +214,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.150443, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.412954, -0.000590353, -0.00302794)
-bones/3/position = Vector3(0.0567823, 2.58672e-05, 0.00342508)
-bones/3/rotation = Quaternion(-0.214801, -0.214801, -0.673692, 0.673692)
-bones/4/position = Vector3(-0.0308431, 0.0251538, -0.0159421)
-bones/5/position = Vector3(-0.0191908, -0.194252, 0.025841)
-bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
-bones/7/position = Vector3(-0.0185715, 0.191927, 0.0258922)
-bones/7/rotation = Quaternion(-0.705507, 0.180556, -0.0275111, 0.684765)
-bones/9/position = Vector3(-0.0207707, 0.0486971, -0.0176972)
-bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
-bones/11/position = Vector3(-0.0665454, -0.0356517, -0.199638)
-bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
-bones/13/position = Vector3(-0.0201681, -0.048697, -0.0167773)
-bones/13/rotation = Quaternion(-0.0119323, 0.0783836, -0.722527, 0.686781)
-bones/15/position = Vector3(0.0660877, 0.0184748, 0.160926)
-bones/15/rotation = Quaternion(0.0538392, -0.011468, -0.0132208, 0.998396)
+bones/1/position = Vector3(0.147179, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.418297, -0.000575648, -0.00295252)
+bones/3/position = Vector3(0.055368, -7.94281e-05, 0.00308631)
+bones/3/rotation = Quaternion(-0.0657747, -0.0657747, -0.704041, 0.704041)
+bones/4/position = Vector3(-0.0300749, 0.0245273, -0.015545)
+bones/5/position = Vector3(-0.0141063, -0.192301, 0.0258422)
+bones/5/rotation = Quaternion(-0.0104589, 0.683918, 0.710409, -0.165726)
+bones/7/position = Vector3(-0.014601, 0.194252, 0.025841)
+bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
+bones/9/position = Vector3(-0.0204615, 0.0486971, -0.0171963)
+bones/9/rotation = Quaternion(0.728991, -0.68392, -0.000696041, 0.0287198)
+bones/11/position = Vector3(-0.0666315, -0.0356477, -0.197547)
+bones/11/rotation = Quaternion(-0.017285, -0.0168136, -0.0400496, 0.998907)
+bones/13/position = Vector3(-0.0205826, -0.0486251, -0.0175628)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999728)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)

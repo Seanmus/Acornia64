@@ -99,23 +99,21 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.91, 
 floor_block_on_wall = false
 
 [node name="Skeleton3D" parent="Player/auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.148697, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.421758, -0.000582487, -0.00298759)
-bones/3/position = Vector3(0.0559912, -9.47866e-05, 0.00307124)
-bones/3/rotation = Quaternion(-0.0424475, -0.0424475, -0.705832, 0.705832)
-bones/4/position = Vector3(-0.0304134, 0.0248034, -0.01572)
-bones/5/position = Vector3(-0.016178, -0.191628, 0.0258434)
-bones/5/rotation = Quaternion(-0.0380838, 0.684674, 0.700992, -0.19591)
-bones/7/position = Vector3(-0.0167356, 0.194252, 0.025841)
-bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
-bones/9/position = Vector3(-0.0203105, 0.0486971, -0.0169816)
-bones/9/rotation = Quaternion(0.728942, -0.68358, -0.00840394, 0.035948)
-bones/11/position = Vector3(-0.0666555, -0.0356726, -0.196922)
-bones/11/rotation = Quaternion(-0.00677231, -0.0157346, -0.0397764, 0.999062)
-bones/13/position = Vector3(-0.0208683, -0.0486681, -0.0179238)
-bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
-bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
-bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999728)
+bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.408734, -0.000560507, -0.00287485)
+bones/3/position = Vector3(0.0540348, 2.63423e-05, 0.00326252)
+bones/3/rotation = Quaternion(-0.216409, -0.216409, -0.673177, 0.673177)
+bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
+bones/5/position = Vector3(-0.0098747, -0.194252, 0.025841)
+bones/7/position = Vector3(-0.00974601, 0.193919, 0.0258483)
+bones/7/rotation = Quaternion(-0.727968, 0.0910295, 0.0577094, 0.677087)
+bones/9/position = Vector3(-0.0206229, 0.0486971, -0.0174577)
+bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
+bones/11/position = Vector3(-0.0665558, -0.0356455, -0.199395)
+bones/13/position = Vector3(-0.0208463, -0.048697, -0.0178168)
+bones/13/rotation = Quaternion(0.0174991, 0.0503526, -0.722414, 0.689403)
+bones/15/position = Vector3(0.0660591, 0.0116612, 0.16434)
+bones/15/rotation = Quaternion(0.0133496, -0.0140103, -0.0165868, 0.999675)
 
 [node name="Cheese" type="Node3D" parent="."]
 
