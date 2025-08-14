@@ -6,7 +6,6 @@ extends Area3D
 func _on_speed_boost_body_entered(body):
 	if body.is_in_group("Player"):
 		print("Rotation" + str(global_rotation))
-		#body.velocity = direction * newMaxSpeed
 		print("Speed boost entered")
 		body._SpeedBoost(newMaxSpeed)
 		body.velocity.x = cos(global_rotation.y) * 50
