@@ -77,6 +77,7 @@ func _physics_process(delta):
 func HandleAerialMovements(delta):
 	if not dead:		
 		if is_on_floor() && !dead && !bouncing:
+			velocity.y -= gravity * 1.2 * delta
 			wasOnGround = true
 			canDoubleJump = true
 			if(velocity.x != 0 || velocity.z != 0):
