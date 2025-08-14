@@ -76,7 +76,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4av2e")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovuqx"]
-size = Vector3(3.08533, 0.961472, 1.66878)
+size = Vector3(3.08533, 0.235619, 1.66878)
 
 [node name="speedBoost" type="Area3D"]
 script = ExtResource("1_3de51")
@@ -88,7 +88,7 @@ skeleton = NodePath("")
 script = ExtResource("3_r6w0d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.429813, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0668864, 0)
 shape = SubResource("BoxShape3D_ovuqx")
 
 [connection signal="body_entered" from="." to="." method="_on_speed_boost_body_entered"]
