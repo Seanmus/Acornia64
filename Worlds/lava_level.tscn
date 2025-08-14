@@ -1,12 +1,14 @@
-[gd_scene load_steps=28 format=3 uid="uid://chx8nc7gqiuis"]
+[gd_scene load_steps=30 format=3 uid="uid://chx8nc7gqiuis"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_n27il"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="2_xh2n1"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="3_ukj2j"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="4_njel1"]
 [ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="5_512im"]
+[ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="7_6d88o"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="7_fm1tq"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="8_gghaw"]
+[ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="8_pw0j6"]
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="9_x30ud"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="10_2mo60"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="11_uqrww"]
@@ -97,22 +99,23 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.91, 
 floor_block_on_wall = false
 
 [node name="Skeleton3D" parent="Player/auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.142662, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.407997, -0.000555295, -0.00284812)
-bones/3/position = Vector3(0.0534103, -9.68876e-05, 0.00284812)
-bones/3/rotation = Quaternion(0, 0, -0.707107, 0.707107)
-bones/4/position = Vector3(-0.0290115, 0.0236601, -0.0149954)
-bones/5/position = Vector3(-0.00824806, -0.194252, 0.025841)
-bones/7/position = Vector3(-0.00824806, 0.194252, 0.025841)
-bones/9/position = Vector3(-0.0210603, 0.0486971, -0.0181665)
-bones/11/position = Vector3(-0.066525, -0.0356637, -0.200116)
-bones/13/position = Vector3(-0.0210603, -0.048697, -0.0181665)
-
-[node name="R_Hand" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
-
-[node name="L_Hand1" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+bones/1/position = Vector3(0.148697, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.421758, -0.000582487, -0.00298759)
+bones/3/position = Vector3(0.0559912, -9.47866e-05, 0.00307124)
+bones/3/rotation = Quaternion(-0.0424475, -0.0424475, -0.705832, 0.705832)
+bones/4/position = Vector3(-0.0304134, 0.0248034, -0.01572)
+bones/5/position = Vector3(-0.016178, -0.191628, 0.0258434)
+bones/5/rotation = Quaternion(-0.0380838, 0.684674, 0.700992, -0.19591)
+bones/7/position = Vector3(-0.0167356, 0.194252, 0.025841)
+bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
+bones/9/position = Vector3(-0.0203105, 0.0486971, -0.0169816)
+bones/9/rotation = Quaternion(0.728942, -0.68358, -0.00840394, 0.035948)
+bones/11/position = Vector3(-0.0666555, -0.0356726, -0.196922)
+bones/11/rotation = Quaternion(-0.00677231, -0.0157346, -0.0397764, 0.999062)
+bones/13/position = Vector3(-0.0208683, -0.0486681, -0.0179238)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999728)
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -271,7 +274,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.8, -44.4, -101.6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 304, 7.5, -77.3)
 
 [node name="HomingAttackTarget17" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 304, 16.6, -56.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310, 16.6, -64.5)
 
 [node name="HomingAttackTarget18" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 329.7, 22.3, -56.5)
@@ -320,6 +323,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 263.2, -81.6, -185.6)
 
 [node name="HomingAttackTarget6" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 345, -81.6, -331.6)
+
+[node name="speedBoost" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, -1.01848e-07, 146.874, -85.4975, 40.6749)
+
+[node name="speedBoost3" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 146.874, -85.4975, 78.6749)
+
+[node name="speedBoost4" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 199.859, -85.4975, 78.6749)
+
+[node name="speedBoost2" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(3.05543e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 3.05543e-07, 146.874, -85.4975, 22.4749)
+
+[node name="speedBoost5" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(3.05543e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 3.05543e-07, 199.474, -85.4975, -15.1251)
+
+[node name="speedBoost8" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.33, 0, 2.03695e-07, 0, 2.33, 0, -2.03695e-07, 0, -2.33, 246.274, -28.8975, 32.0749)
+
+[node name="speedBoost12" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.25061, 0.603048, 1.37266e-14, -0.603048, 2.25061, -3.67804e-15, -1.42109e-14, 0, 2.33, 125.674, -48.8975, 32.0749)
+
+[node name="speedBoost13" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.25061, -0.603048, -1.44034e-07, -0.603048, 2.25061, -1.44034e-07, 1.76405e-07, -1.01848e-07, -2.33, 214.274, -65.6975, 32.0749)
+
+[node name="speedBoost6" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(3.05543e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 3.05543e-07, 199.474, -85.4975, -151.725)
+
+[node name="speedBoost7" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 0, -4.0739e-07, 0, 2.33, 0, 4.0739e-07, 0, 2.33, 286.674, -85.4975, -185.725)
+
+[node name="SpeedBoostRamp" parent="HomingAttackTargets" instance=ExtResource("8_pw0j6")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -2.25061, 0.603048, -9.83772e-08, 199.525, -84.7155, 46.2057)
+
+[node name="SpeedBoostRamp2" parent="HomingAttackTargets" instance=ExtResource("8_pw0j6")]
+transform = Transform3D(-9.46189e-08, 0, 2.16463, 0.560247, 2.09087, 2.44892e-08, -2.09087, 0.560247, -9.13949e-08, 366.167, 38.7807, -251.415)
+
+[node name="SpeedBoostRamp3" parent="HomingAttackTargets" instance=ExtResource("8_pw0j6")]
+transform = Transform3D(-9.46189e-08, 0, 2.16463, 0.560247, 2.09087, 2.44892e-08, -2.09087, 0.560247, -9.13949e-08, 366.167, 51.484, -172.351)
+
+[node name="speedBoost9" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, 6.12734)
+
+[node name="speedBoost10" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, -36.8727)
+
+[node name="speedBoost11" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, -102.473)
 
 [node name="Tires" type="Node3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 301.355, -42.92, 221.23)
@@ -1156,9 +1207,6 @@ transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1,
 
 [node name="MetalPillar2" parent="GratePaths/GratePathway205" index="2"]
 transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.599998, -7.59555)
-
-[node name="GratePathway206" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 50.7909, -183.293)
 
 [node name="GratePathway207" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 37.9909, -235.893)
