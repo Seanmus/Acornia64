@@ -1,7 +1,7 @@
 class_name player
 extends CharacterBody3D
 
-var maxSpeed = 22.5
+var maxSpeed = 25
 var acceleration = 130
 var air_acceleration = 90
 var decceleration = 130
@@ -12,7 +12,7 @@ var coyoteTime = false
 var landing : bool
 var wasOnGround : bool
 var dead : bool
-const speedLimit = 22.5
+const speedLimit = 25
 const speedLossRate = 10
 var heldDownTime = 0
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
