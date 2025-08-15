@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://i68tl5frws5w"]
+[gd_scene load_steps=23 format=3 uid="uid://i68tl5frws5w"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_m4e2o"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_qhnpu"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="17_xpbca"]
 [ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="17_y6leu"]
 [ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="18_ujk3i"]
+[ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="19_gn06i"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -110,10 +111,6 @@ transform = Transform3D(122.806, 0, 0, 0, 122.806, 0, 0, 0, 122.806, -12.3049, -
 [node name="hubTree" parent="." instance=ExtResource("13_x5o8x")]
 transform = Transform3D(0.321583, 0, 0, 0, 0.321583, 0, 0, 0, 0.321583, 12.0298, 8.25057, 14.5879)
 
-[node name="StartCannon" parent="." instance=ExtResource("17_y6leu")]
-transform = Transform3D(-1.95874e-07, 0, -4.48106, 0, 4.48106, 0, 4.48106, 0, -1.95874e-07, -76.6231, 3.54344, 4.86287)
-nextLevel = "city_level"
-
 [node name="StartCannon2" parent="." instance=ExtResource("17_y6leu")]
 transform = Transform3D(5.87621e-07, 0, 4.48106, 0, 4.48106, 0, -4.48106, 0, 5.87621e-07, 19.3769, 140.543, 17.6629)
 nextLevel = "lava_level"
@@ -147,3 +144,7 @@ transform = Transform3D(-1.75224e-07, 0, -4.00865, 0, 4.00865, 0, 4.00865, 0, -1
 
 [node name="Derpy" parent="." instance=ExtResource("18_ujk3i")]
 transform = Transform3D(-2.63375, 0, -2.63375, 0, 3.72469, 0, 2.63375, 0, -2.63375, -69.8005, 0.264067, -38.5558)
+
+[node name="catapult" parent="." instance=ExtResource("19_gn06i")]
+transform = Transform3D(-2.49538, -0.151925, 2.18153e-07, -0.151925, 2.49538, 1.32817e-08, -2.18557e-07, 0, -2.5, -73.7069, 6.04202, 2.54506)
+nextLevel = "city_level"

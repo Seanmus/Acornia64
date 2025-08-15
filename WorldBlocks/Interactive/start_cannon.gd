@@ -10,13 +10,15 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		entered = true
 		$Camera3D.current = true
 		body.queue_free()
-		$AudioStreamPlayer.play()
+		#$AudioStreamPlayer.play()
 		print("player entered")
 		$ShootAnim.play("shoot")
-		var s = seedShot.instantiate()
-		$Muzzle.add_child(s)
-		$Timer.start()
 
+
+func _shootProjectile():
+	var s = seedShot.instantiate()
+	$Muzzle.add_child(s)
+	$Timer.start()
 
 func _on_timer_timeout() -> void:
 	LevelLoader._loadLevel(nextLevel)

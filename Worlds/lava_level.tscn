@@ -18,8 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://slerfwo8ytes" path="res://WorldBlocks/grate_pathway.tscn" id="14_srfn2"]
 [ext_resource type="PackedScene" uid="uid://bjrghd434hmf1" path="res://metal_pillar_proper_scale.tscn" id="15_m5tni"]
 [ext_resource type="PackedScene" uid="uid://ck7d128a3d3s5" path="res://WorldBlocks/Grate_Corner.tscn" id="16_eenwa"]
-[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="18_3kqsl"]
 [ext_resource type="PackedScene" uid="uid://bpokyy4dpbopg" path="res://Traps/lava_plume.tscn" id="18_d1e8r"]
+[ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_8wnci"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2s6p4"]
 panorama = ExtResource("5_512im")
@@ -99,21 +99,26 @@ transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.91, 
 floor_block_on_wall = false
 
 [node name="Skeleton3D" parent="Player/auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.408734, -0.000560507, -0.00287485)
-bones/3/position = Vector3(0.0540348, 2.63423e-05, 0.00326252)
-bones/3/rotation = Quaternion(-0.216409, -0.216409, -0.673177, 0.673177)
-bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
-bones/5/position = Vector3(-0.0098747, -0.194252, 0.025841)
-bones/7/position = Vector3(-0.00974601, 0.193919, 0.0258483)
-bones/7/rotation = Quaternion(-0.727968, 0.0910295, 0.0577094, 0.677087)
-bones/9/position = Vector3(-0.0206229, 0.0486971, -0.0174577)
-bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
-bones/11/position = Vector3(-0.0665558, -0.0356455, -0.199395)
-bones/13/position = Vector3(-0.0208463, -0.048697, -0.0178168)
-bones/13/rotation = Quaternion(0.0174991, 0.0503526, -0.722414, 0.689403)
-bones/15/position = Vector3(0.0660591, 0.0116612, 0.16434)
-bones/15/rotation = Quaternion(0.0133496, -0.0140103, -0.0165868, 0.999675)
+bones/1/position = Vector3(0.148361, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.411627, -0.000580971, -0.00297982)
+bones/3/position = Vector3(0.0558799, -7.96785e-05, 0.00314149)
+bones/3/rotation = Quaternion(-0.08434, -0.08434, -0.702059, 0.702059)
+bones/4/position = Vector3(-0.030353, 0.0247541, -0.0156887)
+bones/5/position = Vector3(-0.0160814, -0.191991, 0.025635)
+bones/5/rotation = Quaternion(-0.0186018, 0.68501, 0.702149, -0.193397)
+bones/7/position = Vector3(-0.0154488, 0.192423, 0.0260697)
+bones/7/rotation = Quaternion(-0.70987, 0.154419, -0.0155878, 0.68702)
+bones/9/position = Vector3(-0.0200722, 0.0486971, -0.0166411)
+bones/9/rotation = Quaternion(0.728846, -0.683251, -0.0145457, 0.0417082)
+bones/11/position = Vector3(-0.0669905, -0.0309537, -0.196007)
+bones/11/rotation = Quaternion(0.00160775, -0.0148724, -0.0395636, 0.999105)
+bones/13/position = Vector3(-0.0201217, -0.0485602, -0.0170003)
+bones/13/rotation = Quaternion(-0.00442286, 0.0730286, -0.72636, 0.683409)
+bones/15/position = Vector3(0.0662001, 0.0178953, 0.161904)
+bones/15/rotation = Quaternion(0.0446437, -0.0134003, -0.00846542, 0.998877)
+
+[node name="R_Hand" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
+transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -425,7 +430,7 @@ transform = Transform3D(-2.30105e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -2
 transform = Transform3D(-2.30105e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -2.30105e-06, 430.4, -56.233, -382.517)
 
 [node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("10_2mo60")]
-transform = Transform3D(-31.7753, 0, 3.68999e-06, 0, 31.7753, 0, -3.68999e-06, 0, -31.7753, 364, -42.433, -175.317)
+transform = Transform3D(-31.7753, 0, 3.68999e-06, 0, 31.7753, 0, -3.68999e-06, 0, -31.7753, 364, -42.433, -166.117)
 
 [node name="SpawnPoint6" parent="SpawnPoints" instance=ExtResource("10_2mo60")]
 transform = Transform3D(31.7753, 0, -6.46788e-06, 0, 31.7753, 0, 6.46788e-06, 0, 31.7753, 403.8, -32.433, 63.283)
@@ -1450,14 +1455,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 453.738, -121.024, 150.957)
 [node name="LavaPlume10" parent="." instance=ExtResource("18_d1e8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.538, -121.024, 45.1569)
 
-[node name="StartCannon" parent="." instance=ExtResource("18_3kqsl")]
-transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 365.919, 29.1736, -338.28)
-nextLevel = "spaceStationLevel"
-
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1124.84, 0, 0, 0, 1124.84, 0, 0, 0, 1124.84, 356.84, 0, -81.7769)
 flip_faces = true
 material = SubResource("StandardMaterial3D_qgtj0")
+
+[node name="catapult" parent="." instance=ExtResource("20_8wnci")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 366.527, 30.6244, -333.856)
+nextLevel = "spaceStationLevel"
 
 [editable path="Player"]
 [editable path="Player/auriModel"]

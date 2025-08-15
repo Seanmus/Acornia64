@@ -25,13 +25,13 @@
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="23_hp43g"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="24_7qk7f"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="25_euv7j"]
-[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="25_rp05u"]
 [ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="26_morw6"]
 [ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="27_dcah4"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="28_2mneb"]
 [ext_resource type="MeshLibrary" uid="uid://cypae8l5wdq5f" path="res://WorldBlocks/MeshLibraries/BaseWorldBlocks.tres" id="30_qb1c6"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="31_t27d6"]
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="32_b0rqt"]
+[ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="32_r1bsk"]
 
 [sub_resource type="Environment" id="Environment_eei7c"]
 background_mode = 1
@@ -1069,10 +1069,10 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_1k3fp")
 
 [node name="MetalPillarProperScale" parent="Blocks" instance=ExtResource("10_37vwi")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 298.708, -40.129, 298.31)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 298.708, -40.929, 298.31)
 
 [node name="MetalPillarProperScale2" parent="Blocks" instance=ExtResource("10_37vwi")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 312.207, -40.129, 298.31)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 312.207, -40.929, 298.31)
 
 [node name="Planets" type="Node3D" parent="."]
 
@@ -2458,10 +2458,6 @@ curve = SubResource("Curve3D_wpykm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.7671, 59.2032, -11.2092)
 curve = SubResource("Curve3D_jvowb")
 
-[node name="StartCannon" parent="." instance=ExtResource("25_rp05u")]
-transform = Transform3D(-4.5, 0, -6.79481e-07, 0, 4.5, 0, 6.79481e-07, 0, -4.5, 179.734, 105.789, -420.886)
-nextLevel = "lava_level"
-
 [node name="Water" type="CSGMesh3D" parent="."]
 transform = Transform3D(1335.08, 0, 0, 0, 1335.08, 0, 0, 0, 1335.08, 0, -104.777, 0)
 mesh = SubResource("PlaneMesh_unn8f")
@@ -2495,6 +2491,10 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 
 [node name="SpeedBoostRamp3" parent="." instance=ExtResource("32_b0rqt")]
 transform = Transform3D(-2.25061, 0.603048, -2.00225e-07, 0.603048, 2.25061, 2.63601e-08, 2.00225e-07, -2.63601e-08, -2.33, 260.855, 98.8131, -320.109)
+
+[node name="catapult" parent="." instance=ExtResource("32_r1bsk")]
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 179.665, 109.163, -414.084)
+nextLevel = "lava_level"
 
 [editable path="MetalPathways/MetalBox103"]
 [editable path="Nutcrackers/MovingNutcracker3"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=22 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="11_jqd2s"]
 [ext_resource type="MeshLibrary" uid="uid://cypae8l5wdq5f" path="res://WorldBlocks/MeshLibraries/BaseWorldBlocks.tres" id="13_kavlb"]
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="14_uo65f"]
+[ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="16_g5n33"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -27,6 +28,30 @@ adjustment_enabled = true
 adjustment_saturation = 1.7
 
 [sub_resource type="Curve3D" id="Curve3D_6t6fq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_60m5g"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_oa42u"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_apr66"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -342,15 +367,15 @@ curve = SubResource("Curve3D_6t6fq")
 
 [node name="MovingNutcracker2" parent="." instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346821, 2.43865, -149.203)
-curve = SubResource("Curve3D_6t6fq")
+curve = SubResource("Curve3D_60m5g")
 
 [node name="MovingNutcracker3" parent="." instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1752, 2.43865, -149.203)
-curve = SubResource("Curve3D_6t6fq")
+curve = SubResource("Curve3D_oa42u")
 
 [node name="MovingNutcracker4" parent="." instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1752, 2.43865, -103.161)
-curve = SubResource("Curve3D_6t6fq")
+curve = SubResource("Curve3D_apr66")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("13_kavlb")
@@ -363,3 +388,6 @@ metadata/_editor_floor_ = Vector3(3, 3, 0)
 
 [node name="MetalBox5" parent="." instance=ExtResource("3_tuby2")]
 transform = Transform3D(3.73136, 0, 0, 0, -1.63103e-07, 3.73136, 0, -3.73136, -1.63103e-07, -48.7206, 2, -34.2297)
+
+[node name="catapult" parent="." instance=ExtResource("16_g5n33")]
+transform = Transform3D(-2.51084, 0, -2.19505e-07, 0, 2.51084, 0, 2.19505e-07, 0, -2.51084, -62.4142, 9.20568, -5.5461)

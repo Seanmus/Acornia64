@@ -214,26 +214,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.147179, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.418297, -0.000575648, -0.00295252)
-bones/3/position = Vector3(0.055368, -7.94281e-05, 0.00308631)
-bones/3/rotation = Quaternion(-0.0657747, -0.0657747, -0.704041, 0.704041)
-bones/4/position = Vector3(-0.0300749, 0.0245273, -0.015545)
-bones/5/position = Vector3(-0.0141063, -0.192301, 0.0258422)
-bones/5/rotation = Quaternion(-0.0104589, 0.683918, 0.710409, -0.165726)
-bones/7/position = Vector3(-0.014601, 0.194252, 0.025841)
+bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.40972, -0.000558701, -0.00286559)
+bones/3/position = Vector3(0.0540348, -3.58195e-05, 0.00314838)
+bones/3/rotation = Quaternion(-0.150778, -0.150778, -0.690844, 0.690844)
+bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
+bones/5/position = Vector3(-0.00920325, -0.193932, 0.025841)
+bones/5/rotation = Quaternion(0.058698, 0.676892, 0.728136, -0.0904979)
+bones/7/position = Vector3(-0.00931122, 0.194252, 0.025841)
 bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
-bones/9/position = Vector3(-0.0204615, 0.0486971, -0.0171963)
-bones/9/rotation = Quaternion(0.728991, -0.68392, -0.000696041, 0.0287198)
-bones/11/position = Vector3(-0.0666315, -0.0356477, -0.197547)
-bones/11/rotation = Quaternion(-0.017285, -0.0168136, -0.0400496, 0.998907)
-bones/13/position = Vector3(-0.0205826, -0.0486251, -0.0175628)
+bones/9/position = Vector3(-0.0205422, 0.0486971, -0.017327)
+bones/9/rotation = Quaternion(0.728759, -0.684438, 0.0184018, 0.0107932)
+bones/11/position = Vector3(-0.0665614, -0.0356422, -0.199262)
+bones/11/rotation = Quaternion(-0.043326, -0.0194804, -0.0406959, 0.998042)
+bones/13/position = Vector3(-0.0210188, -0.0486907, -0.0181139)
 bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
 bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
 bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999728)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
+
+[node name="L_Hand1" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
+transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
