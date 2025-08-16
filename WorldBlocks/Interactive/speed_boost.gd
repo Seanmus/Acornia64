@@ -10,3 +10,4 @@ func _on_speed_boost_body_entered(body):
 		body._SpeedBoost(newMaxSpeed)
 		body.velocity.x = cos(global_rotation.y) * 50
 		body.velocity.z  = sin(global_rotation.y) * -50
+		body.velocity.y = -1000
