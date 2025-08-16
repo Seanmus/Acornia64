@@ -15,7 +15,7 @@ alpha_cut = 2
 texture = ExtResource("1_fvdsd")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3.2, 0, 0, 0, 3.2, 0, 0, 0, 3.2, 0, 0, 0)
+transform = Transform3D(4.54032, 0, 0, 0, 4.54032, 0, 0, 0, 4.54032, 0, 0, 0)
 shape = SubResource("SphereShape3D_1y7ae")
 
 [connection signal="body_entered" from="." to="." method="_on_cheese_body_entered"]
