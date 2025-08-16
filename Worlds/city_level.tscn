@@ -2376,6 +2376,9 @@ transform = Transform3D(-1.38894e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, -1
 [node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("11_4gwdo")]
 transform = Transform3D(-1.90604e-06, 0, 43.605, 0, 43.605, 0, -43.605, 0, -1.90604e-06, 103.711, 40.7931, 27.5884)
 
+[node name="SpawnPoint8" parent="SpawnPoints" instance=ExtResource("11_4gwdo")]
+transform = Transform3D(43.605, 0, 5.11591e-12, 0, 43.605, 0, -5.11591e-12, 0, 43.605, 175.32, 94.2226, -2.72263)
+
 [node name="SpawnPoint7" parent="SpawnPoints" instance=ExtResource("11_4gwdo")]
 transform = Transform3D(-43.605, 0, -3.81208e-06, 0, 43.605, 0, 3.81208e-06, 0, -43.605, 104.311, 0.393098, 3.7884)
 
@@ -2494,7 +2497,7 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 transform = Transform3D(-2.25061, 0.603048, -2.00225e-07, 0.603048, 2.25061, 2.63601e-08, 2.00225e-07, -2.63601e-08, -2.33, 260.855, 98.8131, -320.109)
 
 [node name="catapult" parent="." instance=ExtResource("32_r1bsk")]
-transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 179.665, 109.163, -431.438)
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 179.665, 109.163, -435.457)
 nextLevel = "lava_level"
 
 [editable path="MetalPathways/MetalBox103"]
