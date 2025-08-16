@@ -95,33 +95,8 @@ transform = Transform3D(9.89228, 0, 0, 0, 55.7761, 0, 0, 0, 23.645, -84.8822, -1
 transform = Transform3D(23.8333, 0, 0, 0, 1.124, 0, 0, 0, 31.741, 312.171, -120.179, 0)
 
 [node name="Player" parent="." instance=ExtResource("3_ukj2j")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 366.139, 62.6659, 14.4341)
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.973, -40.0968, 278.66)
 floor_block_on_wall = false
-
-[node name="Skeleton3D" parent="Player/auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.409866, -0.000558988, -0.00286707)
-bones/3/position = Vector3(0.0540348, -3.7888e-05, 0.00314458)
-bones/3/rotation = Quaternion(-0.148208, -0.148208, -0.6914, 0.6914)
-bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
-bones/5/position = Vector3(-0.00928367, -0.193905, 0.025841)
-bones/5/rotation = Quaternion(0.0575438, 0.677067, 0.727903, -0.0917946)
-bones/7/position = Vector3(-0.00940072, 0.194252, 0.025841)
-bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674656)
-bones/9/position = Vector3(-0.0208875, 0.0486971, -0.0178864)
-bones/9/rotation = Quaternion(0.728767, -0.684433, 0.0180787, 0.0110966)
-bones/11/position = Vector3(-0.0665469, -0.0356508, -0.199603)
-bones/11/rotation = Quaternion(-0.0428856, -0.0194354, -0.0406852, 0.998062)
-bones/13/position = Vector3(-0.0204715, -0.0486084, -0.0174225)
-bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
-bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
-bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
-
-[node name="R_Hand" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
-
-[node name="L_Hand1" parent="Player/auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -297,6 +272,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.212, 59, 55)
 [node name="HomingAttackTarget22" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.5, 64.6, 28.8)
 
+[node name="HomingAttackTarget23" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.5, 40.422, -311.729)
+
 [node name="HomingAttackTarget8" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.8, -44.4, -81.2)
 
@@ -369,11 +347,8 @@ transform = Transform3D(-9.46189e-08, 0, 2.16463, 0.560247, 2.09087, 2.44892e-08
 [node name="SpeedBoostRamp3" parent="HomingAttackTargets" instance=ExtResource("8_pw0j6")]
 transform = Transform3D(-9.46189e-08, 0, 2.16463, 0.560247, 2.09087, 2.44892e-08, -2.09087, 0.560247, -9.13949e-08, 366.167, 51.484, -172.351)
 
-[node name="speedBoost9" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
-transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, 6.12734)
-
 [node name="speedBoost10" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
-transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, -36.8727)
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, -29.6727)
 
 [node name="speedBoost11" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
 transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 366.218, 60.8634, -102.473)
@@ -1232,6 +1207,9 @@ transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.21
 [node name="GratePathway212" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 23.3909, -338.593)
 
+[node name="GratePathway213" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(-4.37118e-08, 0, 1, 0, 1, 0, -1, 0, -4.37118e-08, 366.217, 23.3909, -351.793)
+
 [node name="GratePathway202" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(-4.37118e-08, 0, 1, -0.258819, 0.965926, -1.13134e-08, -0.965926, -0.258819, -4.22223e-08, 366.217, 59.2619, -131.642)
 
@@ -1464,12 +1442,15 @@ flip_faces = true
 material = SubResource("StandardMaterial3D_qgtj0")
 
 [node name="catapult" parent="." instance=ExtResource("20_8wnci")]
-transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 366.527, 30.6244, -321.45)
+transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 366.527, 30.6244, -340.514)
 nextLevel = "spaceStationLevel"
 
-[editable path="Player"]
-[editable path="Player/auriModel"]
-[editable path="Player/auriModel/SKM_Auri"]
+[node name="speedBoost" parent="." instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 306.887, -42.7401, 234.35)
+
+[node name="speedBoost2" parent="." instance=ExtResource("7_6d88o")]
+transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -2.25061, 0.603048, -9.83772e-08, 306.887, -39.6382, 171.721)
+
 [editable path="GratePaths/GratePathway196"]
 [editable path="GratePaths/GratePathway163"]
 [editable path="GratePaths/GratePathway45"]

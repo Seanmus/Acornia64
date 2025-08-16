@@ -7,6 +7,7 @@ var entered = false
 @export var nextLevel : String
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player") && entered == false:
+		Manager.won = true
 		entered = true
 		$Camera3D.current = true
 		body.queue_free()

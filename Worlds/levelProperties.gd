@@ -10,3 +10,4 @@ func _ready():
 	print(UINode)
 	Manager.nextLevel = nextLevel
 	Manager._setGameMode(gameMode)
+	Manager.won = false
