@@ -2,23 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuoxqcp8mx5ki"
-path="res://godot/imported/squirell_fur_albedo.png-f9685f41588b81c183951253891abbfd.ctex"
+uid="uid://da05mifr4tnjg"
+path.s3tc="res://godot/imported/squirrelScaledUpUV_Water1.png-97882b2c67ee5c5e4e143386e8c41f96.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "6e19fb93f330364d81183de4a18ea442"
+"md5": "ef84d4ac354e91cfefa28829838ec25e"
 }
 
 [deps]
 
-source_file="res://Traps/Enemies/squirell_fur_albedo.png"
-dest_files=["res://godot/imported/squirell_fur_albedo.png-f9685f41588b81c183951253891abbfd.ctex"]
+source_file="res://Traps/Enemies/squirrelScaledUpUV_Water1.png"
+dest_files=["res://godot/imported/squirrelScaledUpUV_Water1.png-97882b2c67ee5c5e4e143386e8c41f96.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

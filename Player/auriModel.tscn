@@ -1,6 +1,8 @@
-[gd_scene load_steps=29 format=3 uid="uid://bud8gsinu5ptc"]
+[gd_scene load_steps=32 format=3 uid="uid://bud8gsinu5ptc"]
 
 [ext_resource type="Script" path="res://Player/auriModel.gd" id="1_6e5jk"]
+[ext_resource type="Material" uid="uid://b00adpswsl2ff" path="res://Materials/AcornDark.tres" id="3_lii2f"]
+[ext_resource type="Material" uid="uid://dyb7fsbl524vs" path="res://Player/AcornOutsideMat.tres" id="4_qlqeu"]
 [ext_resource type="PackedScene" uid="uid://bw2grm4jocus3" path="res://Player/Imports/SKM_Auri.fbx" id="5_jvaca"]
 [ext_resource type="Animation" uid="uid://daubhxk5m0y1c" path="res://Player/animations/idleAnim.res" id="6_cuieg"]
 [ext_resource type="Animation" uid="uid://de4drhl74jbim" path="res://Player/animations/jumpAnim.res" id="7_adny6"]
@@ -8,6 +10,10 @@
 [ext_resource type="Animation" uid="uid://djb2dmtoco4sc" path="res://Player/animations/newDeathAnim.res" id="8_k407s"]
 [ext_resource type="Animation" uid="uid://bgaoi2svc78ev" path="res://Player/animations/jumpLoopAnim.res" id="9_d43kj"]
 [ext_resource type="Animation" uid="uid://b05il8myy086r" path="res://Player/animations/landAnim.res" id="10_htxpv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3skn"]
+next_pass = ExtResource("4_qlqeu")
+albedo_color = Color(0.627451, 0.4, 0.290196, 1)
 
 [sub_resource type="Animation" id="Animation_8etvs"]
 length = 0.001
@@ -848,33 +854,34 @@ script = ExtResource("1_6e5jk")
 transform = Transform3D(-2.9627, 0, -2.59008e-07, 0, 2.9627, 0, 2.59008e-07, 0, -2.9627, 0, 1.25015, 0)
 
 [node name="Skeleton3D" parent="SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.145745, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.409961, -0.000569189, -0.00291938)
-bones/3/position = Vector3(0.0547467, 4.73798e-05, 0.00333689)
-bones/3/rotation = Quaternion(-0.233971, -0.233971, -0.667276, 0.667276)
+bones/1/position = Vector3(0.143236, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.408363, -0.000557885, -0.00286141)
+bones/3/position = Vector3(0.0536595, -9.69863e-05, 0.00287504)
+bones/3/rotation = Quaternion(-0.00730777, -0.00730777, -0.707069, 0.707069)
 bones/3/scale = Vector3(1, 1, 1)
-bones/4/position = Vector3(-0.0297374, 0.024252, -0.0153705)
+bones/4/position = Vector3(-0.0291469, 0.0237704, -0.0150653)
 bones/4/rotation = Quaternion(0, 0, 0, 1)
-bones/5/position = Vector3(-0.0124252, -0.193019, 0.0257275)
-bones/5/rotation = Quaternion(0.0234077, 0.681845, 0.717636, -0.139778)
+bones/5/position = Vector3(-0.00901356, -0.194021, 0.0258194)
+bones/5/rotation = Quaternion(0.0633224, 0.676266, 0.728727, -0.0872462)
 bones/6/position = Vector3(0.0830682, 0, 8.32667e-17)
 bones/6/rotation = Quaternion(0, 2.77556e-17, -6.93889e-18, 1)
-bones/7/position = Vector3(-0.012105, 0.19329, 0.0259635)
-bones/7/rotation = Quaternion(-0.720572, 0.118381, 0.0250724, 0.68274)
+bones/7/position = Vector3(-0.00895933, 0.194079, 0.0258636)
+bones/7/rotation = Quaternion(-0.729034, 0.0832133, 0.0636386, 0.676413)
 bones/8/rotation = Quaternion(-6.93889e-18, -2.60209e-17, -6.93889e-18, 1)
-bones/9/position = Vector3(-0.0205416, 0.0486971, -0.0173306)
-bones/9/rotation = Quaternion(0.728988, -0.684034, 0.00233543, 0.0258755)
-bones/11/position = Vector3(-0.0667835, -0.033065, -0.197808)
-bones/11/rotation = Quaternion(-0.0214194, -0.0172377, -0.040154, 0.998815)
-bones/13/position = Vector3(-0.0203062, -0.0485835, -0.0172136)
-bones/13/rotation = Quaternion(0.00796426, 0.0603518, -0.724632, 0.686443)
+bones/9/position = Vector3(-0.020967, 0.0486971, -0.0180085)
+bones/9/rotation = Quaternion(0.728756, -0.68444, 0.0185294, 0.0106733)
+bones/11/position = Vector3(-0.0665746, -0.0351728, -0.199662)
+bones/11/rotation = Quaternion(-0.0435, -0.0194982, -0.0407001, 0.998034)
+bones/13/position = Vector3(-0.0209023, -0.0486732, -0.0179668)
+bones/13/rotation = Quaternion(0.0198952, 0.0482217, -0.722737, 0.689151)
 bones/14/rotation = Quaternion(1.73472e-18, -3.46945e-18, 2.1684e-18, 1)
-bones/15/position = Vector3(0.0661867, 0.0144883, 0.163181)
-bones/15/rotation = Quaternion(0.0270397, -0.0138406, -0.0124529, 0.999461)
+bones/15/position = Vector3(0.0660754, 0.0112331, 0.164729)
+bones/15/rotation = Quaternion(0.0101466, -0.014329, -0.0162906, 0.999713)
 
 [node name="Head" parent="SKM_Auri/Auri_Full/Skeleton3D" index="0"]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 layers = 2
+surface_material_override/0 = ExtResource("3_lii2f")
 
 [node name="Shades" parent="SKM_Auri/Auri_Full/Skeleton3D" index="1"]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
@@ -888,22 +895,27 @@ layers = 2
 
 [node name="Body" parent="SKM_Auri/Auri_Full/Skeleton3D" index="4"]
 layers = 2
+surface_material_override/0 = SubResource("StandardMaterial3D_u3skn")
 
 [node name="R_Hand" parent="SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
 layers = 2
+material_override = ExtResource("3_lii2f")
 
 [node name="L_Hand1" parent="SKM_Auri/Auri_Full/Skeleton3D" index="6"]
 transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
 layers = 2
+material_override = ExtResource("3_lii2f")
 
 [node name="R_Foot" parent="SKM_Auri/Auri_Full/Skeleton3D" index="7"]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 layers = 2
+material_override = ExtResource("3_lii2f")
 
 [node name="L_Foot" parent="SKM_Auri/Auri_Full/Skeleton3D" index="8"]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 layers = 2
+material_override = ExtResource("3_lii2f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="SKM_Auri"]
 root_node = NodePath("../Auri_Full")

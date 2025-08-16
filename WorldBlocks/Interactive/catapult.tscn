@@ -970,6 +970,7 @@ script = ExtResource("2_ttab6")
 nextLevel = "title"
 
 [node name="RightSide" parent="." index="0"]
+material_override = ExtResource("3_rtak2")
 surface_material_override/0 = ExtResource("2_tx0a2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="RightSide" index="0"]
@@ -978,6 +979,7 @@ surface_material_override/0 = ExtResource("2_tx0a2")
 shape = SubResource("ConcavePolygonShape3D_e03im")
 
 [node name="LeftSide" parent="." index="1"]
+material_override = ExtResource("3_rtak2")
 surface_material_override/0 = ExtResource("2_tx0a2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="LeftSide" index="0"]
