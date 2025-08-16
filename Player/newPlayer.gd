@@ -13,7 +13,7 @@ var landing : bool
 var wasOnGround : bool
 var dead : bool
 const speedLimit = 25
-const speedLossRate = 10
+const speedLossRate = 7
 var heldDownTime = 0
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
