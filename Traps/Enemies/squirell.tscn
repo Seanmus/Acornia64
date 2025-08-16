@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://4ywis8tsrao6"]
+
+[ext_resource type="PackedScene" uid="uid://co4pmmes5pkbl" path="res://Traps/Enemies/squirell.glb" id="1_ae0xo"]
+[ext_resource type="Material" uid="uid://dv6t01t6tmksj" path="res://Materials/fur.tres" id="2_1nm3u"]
+[ext_resource type="Script" path="res://Traps/Enemies/squirell.gd" id="2_rbu4s"]
+[ext_resource type="Material" path="res://Materials/furDark.tres" id="3_ssi5d"]
+
+[sub_resource type="Animation" id="Animation_air3m"]
+resource_name = "hover"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.4, 0), Vector3(0, 0, 0), Vector3(0, 0.4, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2hsw2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wp16p"]
+_data = {
+"RESET": SubResource("Animation_2hsw2"),
+"hover": SubResource("Animation_air3m")
+}
+
+[node name="squirell" instance=ExtResource("1_ae0xo")]
+script = ExtResource("2_rbu4s")
+
+[node name="Head" parent="." index="0"]
+transform = Transform3D(-1.15093e-08, 0, -0.263302, 0, 0.263302, 0, 0.263302, 0, -1.15093e-08, -0.174895, 0.00341929, -0.212003)
+material_override = ExtResource("2_1nm3u")
+
+[node name="Body" parent="." index="1"]
+transform = Transform3D(-1.24247e-08, 0, -0.284244, 0, 0.284244, 0, 0.284244, 0, -1.24247e-08, -0.174895, -0.356177, 0.276482)
+material_override = ExtResource("3_ssi5d")
+
+[node name="Tail" parent="." index="2"]
+transform = Transform3D(-1.98175e-09, -3.44223e-09, -0.0908672, -0.078749, 0.0453372, 0, 0.0453372, 0.078749, -3.97193e-09, -0.174895, -0.63162, 0.485439)
+material_override = ExtResource("3_ssi5d")
+
+[node name="LeftFoot" parent="." index="3"]
+transform = Transform3D(-8.38378e-09, 0, -0.109125, 0, 0.0752095, 0, 0.191798, 0, -4.76999e-09, -0.324895, -0.739861, 0.276482)
+material_override = ExtResource("2_1nm3u")
+
+[node name="RightFoot" parent="." index="4"]
+transform = Transform3D(-8.38378e-09, 0, -0.109125, 0, 0.0752095, 0, 0.191798, 0, -4.76999e-09, -0.0248954, -0.739861, 0.276482)
+material_override = ExtResource("2_1nm3u")
+
+[node name="LeftArm" parent="." index="5"]
+transform = Transform3D(-6.67199e-09, 1.99069e-09, -0.109125, 0.11614, 0.0598533, 0, 0.152637, -0.0455417, -4.76999e-09, -0.344895, -0.301032, -0.0461559)
+material_override = ExtResource("2_1nm3u")
+
+[node name="RightArm" parent="." index="6"]
+transform = Transform3D(-6.67199e-09, 1.99069e-09, -0.109125, 0.11614, 0.0598533, 0, 0.152637, -0.0455417, -4.76999e-09, -0.00489539, -0.301032, -0.0461559)
+material_override = ExtResource("2_1nm3u")
+
+[node name="LeftEar" parent="." index="7"]
+transform = Transform3D(-5.05381e-09, 0, -0.040743, 0, 0.115618, 0, 0.115618, 0, -1.78093e-09, -0.2758, 0.257058, -0.0947307)
+material_override = ExtResource("3_ssi5d")
+
+[node name="RightEar" parent="." index="8"]
+transform = Transform3D(-5.05381e-09, 0, -0.040743, 0, 0.115618, 0, 0.115618, 0, -1.78093e-09, -0.0637778, 0.257058, -0.0947307)
+material_override = ExtResource("3_ssi5d")
+
+[node name="SaucerBase" parent="." index="9"]
+transform = Transform3D(-3.80885e-08, 0, -0.871364, 0, 0.523783, 0, 0.871364, 0, -3.80885e-08, -0.174895, -0.591226, 0.174378)
+
+[node name="SaucerRim" parent="." index="10"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.174895, -0.49856, 0.174378)
+
+[node name="LeftControlStick" parent="." index="11"]
+transform = Transform3D(-2.3252e-09, 0, -0.0531944, 0, 0.127321, 0, 0.0531944, 0, -2.3252e-09, -0.345176, -0.639716, -0.336024)
+
+[node name="RightControlStick" parent="." index="12"]
+transform = Transform3D(-2.04383e-09, 3.26221e-09, -0.0531944, 0.0136541, 0.123055, 0, 0.0514121, -0.0326812, -2.3252e-09, -0.010689, -0.636012, -0.312441)
+
+[node name="ColourPallete" parent="." index="13"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.174895, 1.04582, 0.174378)
+
+[node name="LeftEye" parent="." index="14"]
+transform = Transform3D(-0.02913, 0, -0.0191029, 0, 0.0544059, 0, 0.0459504, 0, -0.0121102, -0.336157, 0.0440904, -0.349959)
+
+[node name="RightEye" parent="." index="15"]
+transform = Transform3D(0.0288782, 0, -0.0189378, 0, 0.0539356, 0, 0.0455533, 0, 0.0120055, -0.0136334, 0.04409, -0.349959)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="16"]
+libraries = {
+"": SubResource("AnimationLibrary_wp16p")
+}
+autoplay = "hover"

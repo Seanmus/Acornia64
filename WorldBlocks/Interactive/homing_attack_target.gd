@@ -8,11 +8,9 @@ var disabled = false
 
 func _HighLight():
 	$CSGSphere3D.material = load("res://WorldBlocks/Interactive/highLightTarget.tres")
-	pass
 
 func _UnHighLight():
 	$CSGSphere3D.material = load("res://WorldBlocks/Interactive/unHighLight.tres")
-	pass
 
 func _Hit():
 	print("I got hit")

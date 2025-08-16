@@ -542,6 +542,9 @@ autoplay = "lever_openClose"
 [node name="HomingAttackTarget" parent="." instance=ExtResource("3_tsrsw")]
 transform = Transform3D(0.954155, 0, -7.10543e-15, 0, 0.954155, 0, 7.10543e-15, 0, 0.954155, 0, 4, 0)
 
+[node name="squirell" parent="HomingAttackTarget" index="3"]
+visible = false
+
 [node name="Area3D" type="Area3D" parent="." groups=["deadly"]]
 collision_layer = 2
 collision_mask = 2
@@ -551,3 +554,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.11494, 0)
 shape = SubResource("CapsuleShape3D_81uym")
 
 [connection signal="onHit" from="HomingAttackTarget" to="." method="_on_homing_attack_target_on_hit"]
+
+[editable path="HomingAttackTarget"]

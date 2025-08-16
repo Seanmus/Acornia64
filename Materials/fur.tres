@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dv6t01t6tmksj"]
+
+[ext_resource type="Texture2D" uid="uid://dkrulvc636it5" path="res://Materials/fur_albedo.png" id="1"]
+
+[resource]
+albedo_color = Color(0.709804, 0.596078, 0.341176, 1)
+albedo_texture = ExtResource("1")
+roughness = 1.07

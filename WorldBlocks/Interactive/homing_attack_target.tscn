@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://boe2lngb6cfv"]
+[gd_scene load_steps=6 format=3 uid="uid://boe2lngb6cfv"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/homing_attack_target.gd" id="1_aomp8"]
 [ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="2_02f7w"]
 [ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="2_xo7sn"]
+[ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://Traps/Enemies/squirell.tscn" id="4_q6rxu"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
 
@@ -14,8 +15,12 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("SphereShape3D_l7bm5")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+visible = false
 radius = 1.0
 material = ExtResource("2_xo7sn")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_02f7w")
+
+[node name="squirell" parent="." instance=ExtResource("4_q6rxu")]
+transform = Transform3D(2.48263, 0, 0, 0, 2.48263, 0, 0, 0, 2.48263, 0, 0, 0)
