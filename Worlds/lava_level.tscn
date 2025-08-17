@@ -1518,7 +1518,7 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 
 [node name="SpeedBoostRamp" parent="." instance=ExtResource("8_pw0j6")]
 transform = Transform3D(-9.59356e-08, 0, -2.19475, 0.568043, 2.11997, -2.483e-08, 2.11997, -0.568043, -9.26667e-08, 310.969, -43.5075, -129.551)
-upwardsVelocity = 18
+upwardsVelocity = 19
 
 [editable path="GratePaths/GratePathway196"]
 [editable path="GratePaths/GratePathway163"]
