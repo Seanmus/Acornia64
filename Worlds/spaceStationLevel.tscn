@@ -1022,8 +1022,14 @@ transform = Transform3D(-2.29103, 0.0350303, 0.422906, -0.129456, 2.15366, -0.87
 [node name="speedBoost20" parent="." instance=ExtResource("13_0hu8e")]
 transform = Transform3D(-2.32933, 0.0206578, -0.0517789, 0.00505846, 2.23352, 0.663526, 0.0555177, 0.663224, -2.23292, -403.536, 57.6939, 89.8261)
 
+[node name="speedBoost35" parent="." instance=ExtResource("13_0hu8e")]
+transform = Transform3D(-2.32933, 0.0206578, -0.0517789, 0.00505846, 2.23352, 0.663526, 0.0555177, 0.663224, -2.23292, -381.561, 57.6939, 89.8261)
+
 [node name="speedBoost23" parent="." instance=ExtResource("13_0hu8e")]
 transform = Transform3D(-1.48854, 1.08758, -1.42489, 0.316708, 1.98256, 1.18238, 1.76433, 0.561696, -1.41441, -500.936, 58.09, 154.026)
+
+[node name="speedBoost34" parent="." instance=ExtResource("13_0hu8e")]
+transform = Transform3D(-1.48854, 1.08758, -1.42489, 0.316708, 1.98256, 1.18238, 1.76433, 0.561696, -1.41441, -490.532, 56.158, 141.825)
 
 [node name="speedBoost5" parent="." instance=ExtResource("13_0hu8e")]
 transform = Transform3D(-1.01848e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, -1.01848e-07, 110.481, 1.63558, 97.2682)
