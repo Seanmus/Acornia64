@@ -15,6 +15,8 @@ var dead : bool
 const speedLimit = 25
 const speedLossRate = 7
 var heldDownTime = 0
+
+@export var spawnPoints : Array[Node3D]
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pivot = $CameraControllerPivot

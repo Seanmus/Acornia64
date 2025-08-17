@@ -131,7 +131,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.389, -27.4967, 32.1056)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 190.389, -27.4967, 32.1056)
 
 [node name="cheese5" parent="Cheese" instance=ExtResource("4_njel1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.989, -42.67, -40.5944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.789, -42.67, -40.5944)
 
 [node name="cheese31" parent="Cheese" instance=ExtResource("4_njel1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.989, -42.67, -145.694)
@@ -142,11 +142,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.989, -42.67, -134.594)
 [node name="cheese28" parent="Cheese" instance=ExtResource("4_njel1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 324.889, -42.67, -40.5944)
 
+[node name="cheese45" parent="Cheese" instance=ExtResource("4_njel1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 317.289, -42.67, -40.5944)
+
+[node name="cheese47" parent="Cheese" instance=ExtResource("4_njel1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320.889, -42.67, -40.5944)
+
 [node name="cheese29" parent="Cheese" instance=ExtResource("4_njel1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 344.489, -42.67, -40.5944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 333.289, -42.67, -40.5944)
 
 [node name="cheese30" parent="Cheese" instance=ExtResource("4_njel1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 361.589, -42.67, -40.5944)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.189, -42.67, -40.5944)
+
+[node name="cheese46" parent="Cheese" instance=ExtResource("4_njel1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.189, -42.67, -40.5944)
 
 [node name="cheese33" parent="Cheese" instance=ExtResource("4_njel1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.289, 32.3665, -2.8944)
@@ -249,7 +258,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 186.6, -79.4, -15.2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 199.6, -81.6, -127.6)
 
 [node name="HomingAttackTarget7" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.8, -44.4, -101.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 364.8, -44.4, -101.6)
 
 [node name="HomingAttackTarget16" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 304, 7.5, -77.3)
@@ -273,31 +282,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.212, 59, 55)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.5, 64.6, 28.8)
 
 [node name="HomingAttackTarget23" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.5, 40.422, -311.729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 366.5, 40.422, -309.529)
 
 [node name="HomingAttackTarget8" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.8, -44.4, -81.2)
-
-[node name="HomingAttackTarget9" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.8, -40.2, -118.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 364.8, -44.4, -81.2)
 
 [node name="HomingAttackTarget10" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 310.8, -40.2, -63.4)
-
-[node name="HomingAttackTarget11" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 435.2, -40.2, -40.4)
-
-[node name="HomingAttackTarget13" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 403.6, -20.2, -18)
-
-[node name="HomingAttackTarget14" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 403.6, -16.4, -36.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 364.8, -40.2, -63.4)
 
 [node name="HomingAttackTarget15" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 403.6, -12.6, -56.8)
 
+[node name="HomingAttackTarget24" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 403.6, -16.8, -34.6)
+
 [node name="HomingAttackTarget12" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 455.2, -40.2, -40.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 445.2, -40.2, -40.4)
 
 [node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("7_fm1tq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 243.6, -81.6, -185.6)
@@ -338,6 +338,84 @@ transform = Transform3D(3.05543e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 3.05543e-07,
 [node name="speedBoost7" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
 transform = Transform3D(2.33, 0, -4.0739e-07, 0, 2.33, 0, 4.0739e-07, 0, 2.33, 286.674, -85.4975, -185.725)
 
+[node name="speedBoost9" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(3.05542e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 3.05542e-07, 321.674, -85.4975, -186.325)
+
+[node name="speedBoost14" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 0, -4.0739e-07, 0, 2.33, 0, 4.0739e-07, 0, 2.33, 363.874, -85.4975, -330.925)
+
+[node name="speedBoost15" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-5.09238e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, -5.09238e-07, 427.074, -85.4975, -330.925)
+
+[node name="speedBoost19" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-5.09238e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, -5.09238e-07, 427.074, -85.4975, -288.525)
+
+[node name="speedBoost16" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.33, 0, 6.11085e-07, 0, 2.33, 0, -6.11085e-07, 0, -2.33, 427.074, -85.4975, -252.125)
+
+[node name="speedBoost17" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(7.12933e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 7.12933e-07, 387.674, -85.4975, -252.125)
+
+[node name="speedBoost18" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(7.12933e-07, 0, 2.33, 0.603048, 2.25061, -1.84521e-07, -2.25061, 0.603048, 6.8864e-07, 387.674, -73.0975, -304.325)
+newMaxSpeed = 40
+
+[node name="speedBoost20" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 5.96046e-08, -8.1478e-07, -5.96046e-08, 2.33, 2.84217e-14, 8.1478e-07, -1.33861e-14, 2.33, 387.674, -65.1624, -382.925)
+
+[node name="speedBoost21" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-9.16628e-07, 1.07807e-14, -2.33, -5.96046e-08, 2.33, 2.84217e-14, 2.33, 5.96046e-08, -9.16628e-07, 456.674, -57.7624, -382.925)
+
+[node name="speedBoost22" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.33, -5.96046e-08, 1.01848e-06, -5.96046e-08, 2.33, 2.84217e-14, -1.01848e-06, 8.17525e-15, -2.33, 456.674, -50.9624, -315.525)
+
+[node name="speedBoost23" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-9.16628e-07, 1.07807e-14, -2.33, -5.96046e-08, 2.33, 2.84217e-14, 2.33, 5.96046e-08, -9.16627e-07, 363.274, -50.9624, -315.525)
+
+[node name="speedBoost24" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-9.16628e-07, 1.07807e-14, -2.33, 0.603048, 2.25061, -2.37241e-07, 2.25061, -0.603048, -8.85394e-07, 363.874, -47.3624, -243.325)
+
+[node name="speedBoost25" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.33, -5.96047e-08, 1.01848e-06, -5.96047e-08, 2.33, 7.10543e-14, -1.01848e-06, 7.0271e-15, -2.33, 357.874, -44.1624, -145.525)
+
+[node name="speedBoost26" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-9.16628e-07, 9.63255e-15, -2.33, -5.96047e-08, 2.33, 7.10543e-14, 2.33, 5.96047e-08, -9.16627e-07, 311.074, -44.1624, -146.325)
+
+[node name="speedBoost27" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 5.96047e-08, -8.1478e-07, -5.96047e-08, 2.33, 7.10543e-14, 8.1478e-07, -1.2238e-14, 2.33, 311.074, -44.1624, -40.5251)
+
+[node name="speedBoost28" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 5.96047e-08, -8.1478e-07, -5.96047e-08, 2.33, 7.10543e-14, 8.1478e-07, -1.2238e-14, 2.33, 473.274, -44.1624, -40.5251)
+
+[node name="speedBoost29" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.33, -5.96047e-08, 1.01848e-06, -5.96047e-08, 2.33, 7.10543e-14, -1.01848e-06, 7.02719e-15, -2.33, 470.074, -33.9624, 63.2849)
+
+[node name="speedBoost30" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(1.01328e-06, -7.99361e-15, 2.33, -5.96047e-08, 2.33, 6.87884e-14, -2.33, -5.96047e-08, 9.53674e-07, 403.674, -27.3624, 13.4849)
+
+[node name="speedBoost31" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(1.01328e-06, -7.99361e-15, 2.33, -5.96047e-08, 2.33, 6.87884e-14, -2.33, -5.96047e-08, 9.53674e-07, 403.674, -16.3624, -80.9151)
+newMaxSpeed = 40
+
+[node name="speedBoost32" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.33, -5.96047e-08, 8.51827e-07, -5.96047e-08, 2.33, 6.87884e-14, -9.11431e-07, 1.05991e-14, -2.33, 403.674, -9.36241, -143.4)
+
+[node name="speedBoost33" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-8.09584e-07, 1.32045e-14, -2.33, -5.96047e-08, 2.33, 6.87884e-14, 2.33, 5.96047e-08, -7.49979e-07, 304.474, -2.56241, -143.4)
+
+[node name="speedBoost34" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-8.09584e-07, 1.32045e-14, -2.33, -5.96047e-08, 2.33, 6.87884e-14, 2.33, 5.96047e-08, -7.49979e-07, 389.474, 16.6376, -44.9999)
+
+[node name="speedBoost37" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(2.33, 5.96047e-08, -7.7486e-07, -5.96047e-08, 2.33, 6.62557e-14, 8.9407e-07, -1.06581e-14, 2.33, 351.474, 16.6376, -55.7999)
+
+[node name="speedBoost35" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-2.25061, 0.603048, 8.22801e-07, 0.603048, 2.25061, -2.20469e-07, -9.11431e-07, 1.05991e-14, -2.33, 375.874, 18.4376, -3.5999)
+
+[node name="speedBoost36" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
+transform = Transform3D(-8.09584e-07, 4.51876e-14, -2.33, -5.96046e-08, 2.33, 7.22708e-14, 2.33, 5.96046e-08, -7.49979e-07, 284.674, 37.8376, 56.8001)
+newMaxSpeed = 40
+
 [node name="SpeedBoostRamp" parent="HomingAttackTargets" instance=ExtResource("8_pw0j6")]
 transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -2.25061, 0.603048, -9.83772e-08, 199.525, -84.7155, 46.2057)
 
@@ -361,15 +439,11 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 567.377, -28.652, 86.2487)
 bounceMultiplier = 1.7
 
 [node name="tire2" parent="Tires" instance=ExtResource("8_gghaw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 603.977, -22.052, 103.049)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 603.977, -22.052, 100.249)
 bounceMultiplier = 1.7
 
 [node name="tire4" parent="Tires" instance=ExtResource("8_gghaw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 321.477, 26.9938, 102.549)
-bounceMultiplier = 1.7
-
-[node name="tire5" parent="Tires" instance=ExtResource("8_gghaw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 365.477, 33.8938, 74.349)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 317.877, 26.9938, 102.549)
 bounceMultiplier = 1.7
 
 [node name="tire6" parent="Tires" instance=ExtResource("8_gghaw")]
@@ -385,7 +459,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.93, 81.1938, 1.04892)
 bounceMultiplier = 1.7
 
 [node name="tire3" parent="Tires" instance=ExtResource("8_gghaw")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 586.377, -14.652, 155.449)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 589.777, -14.652, 155.449)
 bounceMultiplier = 1.7
 
 [node name="UI" parent="." instance=ExtResource("9_x30ud")]
@@ -994,6 +1068,12 @@ transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 324.217,
 [node name="MetalPillar3" parent="GratePaths/GratePathway132" index="1"]
 transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.631405, 7.60001)
 
+[node name="GratePathway135" parent="GratePaths" instance=ExtResource("14_srfn2")]
+transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 337.417, -44.28, -146.078)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway135" index="1"]
+transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.631405, 7.60001)
+
 [node name="GratePathway133" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 311.017, -44.28, -132.878)
 
@@ -1094,7 +1174,13 @@ transform = Transform3D(1, 0, 3.87246e-13, 0, 1, 0, -3.87246e-13, 0, 1, 390.217,
 transform = Transform3D(1, 0, 3.87246e-13, 0, 1, 0, -3.87246e-13, 0, 1, 377.017, -9.4091, -143.993)
 
 [node name="GratePathway176" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1, 0, 3.87246e-13, 0, 1, 0, -3.87246e-13, 0, 1, 330.817, -2.6091, -143.993)
+transform = Transform3D(0.965926, 0.258819, 3.74051e-13, -0.258819, 0.965926, -1.00227e-13, -3.87246e-13, 0, 1, 330.573, -4.31433, -143.993)
+
+[node name="MetalPillar3" parent="GratePaths/GratePathway176" index="1"]
+transform = Transform3D(-2.98023e-08, 0.977295, -5.42101e-20, -1, -2.98023e-08, -1.35525e-20, 1.49154e-20, 1.35525e-19, 1, -0.499329, 0.57769, 7.60001)
+
+[node name="MetalPillar2" parent="GratePaths/GratePathway176" index="2"]
+transform = Transform3D(-2.98023e-08, 0.977295, -5.42101e-20, -1, -2.98023e-08, -1.35525e-20, 1.49154e-20, 1.35525e-19, 1, -0.499329, 0.57769, -7.60001)
 
 [node name="GratePathway177" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1, 0, 3.87246e-13, 0, 1, 0, -3.87246e-13, 0, 1, 317.617, -2.6091, -143.993)
@@ -1255,32 +1341,11 @@ transform = Transform3D(1.31134e-07, 0, 1, -0.258819, 0.965926, 3.39399e-08, -0.
 [node name="GratePathway159" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, -0.258819, 0.965926, 3.39399e-08, -0.965926, -0.258819, 1.26666e-07, 482.617, -35.7015, 37.4454)
 
-[node name="GratePathway149" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 416.617, -44.28, -40.4782)
-
 [node name="GratePathway141" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1, 0, -1.74845e-07, 0, 1, 0, 1.74845e-07, 0, 1, 324.217, -44.28, -40.4782)
 
 [node name="MetalPillar2" parent="GratePaths/GratePathway141" index="2"]
 transform = Transform3D(-4.37114e-08, 0.977295, 0, -1, -4.27189e-08, 0, 0, 0, 1, 0, 0.612381, -7.6)
-
-[node name="GratePathway135" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1.31134e-07, 0, 1, -0.258819, 0.965926, 3.39399e-08, -0.965926, -0.258819, 1.26666e-07, 363.817, -36.08, -105.478)
-
-[node name="MetalPillar3" parent="GratePaths/GratePathway135" index="1"]
-transform = Transform3D(-2.98023e-08, 0.977295, 1.42109e-14, -1, -2.98023e-08, 0, -3.55271e-15, 0, 1, 0, 0.599998, 7.5531)
-
-[node name="MetalPillar2" parent="GratePaths/GratePathway135" index="2"]
-transform = Transform3D(-2.98023e-08, 0.977295, 1.42109e-14, -1, -2.98023e-08, 0, -3.55271e-15, 0, 1, -7.62939e-06, 0.599998, -7.57248)
-
-[node name="GratePathway136" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 363.817, -34.48, -93.2782)
-
-[node name="GratePathway137" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 363.817, -34.48, -80.0782)
-
-[node name="GratePathway142" parent="GratePaths" instance=ExtResource("14_srfn2")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 363.817, -34.48, -66.8782)
 
 [node name="GratePathway139" parent="GratePaths" instance=ExtResource("14_srfn2")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 311.017, -44.28, -53.6782)
@@ -1451,6 +1516,10 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-0
 [node name="speedBoost2" parent="." instance=ExtResource("7_6d88o")]
 transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -2.25061, 0.603048, -9.83772e-08, 306.887, -39.6382, 171.721)
 
+[node name="SpeedBoostRamp" parent="." instance=ExtResource("8_pw0j6")]
+transform = Transform3D(-9.59356e-08, 0, -2.19475, 0.568043, 2.11997, -2.483e-08, 2.11997, -0.568043, -9.26667e-08, 310.969, -43.5075, -129.551)
+upwardsVelocity = 18
+
 [editable path="GratePaths/GratePathway196"]
 [editable path="GratePaths/GratePathway163"]
 [editable path="GratePaths/GratePathway45"]
@@ -1466,6 +1535,7 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 [editable path="GratePaths/GratePathway121"]
 [editable path="GratePaths/GratePathway130"]
 [editable path="GratePaths/GratePathway132"]
+[editable path="GratePaths/GratePathway135"]
 [editable path="GratePaths/GratePathway153"]
 [editable path="GratePaths/GratePathway155"]
 [editable path="GratePaths/GratePathway156"]
@@ -1473,6 +1543,7 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 [editable path="GratePaths/GratePathway165"]
 [editable path="GratePaths/GratePathway168"]
 [editable path="GratePaths/GratePathway173"]
+[editable path="GratePaths/GratePathway176"]
 [editable path="GratePaths/GratePathway178"]
 [editable path="GratePaths/GratePathway186"]
 [editable path="GratePaths/GratePathway187"]
@@ -1484,7 +1555,6 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 [editable path="GratePaths/GratePathway185"]
 [editable path="GratePaths/GratePathway160"]
 [editable path="GratePaths/GratePathway141"]
-[editable path="GratePaths/GratePathway135"]
 [editable path="GratePaths/GratePathway107"]
 [editable path="GratePaths/GratePathway89"]
 [editable path="GratePaths/GratePathway115"]
