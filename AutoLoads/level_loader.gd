@@ -7,7 +7,8 @@ signal level_loaded
 func _on_animation_player_animation_finished(_anim_name):
 	get_tree().paused = false
 	Manager.won = false
-	MusicPlayer.play()
+	if MusicPlayer.playing == false:
+		MusicPlayer.play()
 	$Transition.visible = false
 	var _returnValue = get_tree().change_scene_to_file("res://Worlds/" + nextLevel + ".tscn")
 	level_loaded.emit()
