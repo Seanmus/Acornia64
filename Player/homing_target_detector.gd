@@ -22,9 +22,7 @@ func _HomingAttack(delta):
 	playerCollider.disabled = true
 	hurtMonitor.monitoring = false
 	player.position = player.position.move_toward(homingTarget.global_position, delta * homingSpeed)
-	if player.position == homingTarget.global_position:
-		playerCollider.disabled = false
-		hurtMonitor.monitoring = true
+	if player.position == homingTarget.global_position:		
 		cameraAnimPlayer.play("ScreenShake")
 		#Freeze frame
 		OS.delay_msec(40)
@@ -35,8 +33,14 @@ func _HomingAttack(delta):
 		player.velocity.y = homingAttackBounceVelocity
 		player.homingAttack = false
 		player.canDoubleJump = false
-		homingEffect.emitting = false 
+		_StopHomingAttack()
+		
 
+func _StopHomingAttack():
+	homingEffect.emitting = false 
+	playerCollider.disabled = false
+	hurtMonitor.monitoring = true
+	
 func _physics_process(delta: float) -> void:
 	if not player.homingAttack:
 		_ActivateClosestTarget()

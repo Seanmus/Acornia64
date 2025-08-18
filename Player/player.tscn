@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=30 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
 [ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
 [ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="11_jep6i"]
+[ext_resource type="Script" path="res://Player/homing_attack_hurt_detector.gd" id="14_mw1q2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
@@ -123,6 +124,8 @@ radius = 0.573245
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evvd"]
 bg_color = Color(0.101961, 0, 0.247059, 0.917647)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_aqnfm"]
+
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 floor_constant_speed = true
 floor_max_angle = 1.11177
@@ -214,29 +217,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.150443, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.412954, -0.000590353, -0.00302794)
-bones/3/position = Vector3(0.0567823, -3.08724e-05, 0.00332089)
-bones/3/rotation = Quaternion(-0.158767, -0.158767, -0.689052, 0.689052)
-bones/4/position = Vector3(-0.0308431, 0.0251538, -0.0159421)
-bones/5/position = Vector3(-0.0190609, -0.191186, 0.0255637)
-bones/5/rotation = Quaternion(-0.0522109, 0.685562, 0.687031, -0.235091)
-bones/7/position = Vector3(-0.0181581, 0.191703, 0.0261557)
-bones/7/rotation = Quaternion(-0.699988, 0.182599, -0.0481991, 0.688731)
-bones/9/position = Vector3(-0.0196805, 0.0486971, -0.0161045)
-bones/9/rotation = Quaternion(0.728454, -0.682366, -0.0279819, 0.0542991)
-bones/11/position = Vector3(-0.0671486, -0.0292976, -0.194698)
-bones/11/rotation = Quaternion(0.0277174, -0.0121807, -0.0388685, 0.998786)
-bones/13/position = Vector3(-0.0195802, -0.048495, -0.0163898)
-bones/13/rotation = Quaternion(-0.014249, 0.0831417, -0.727558, 0.680841)
-bones/15/position = Vector3(0.0661395, 0.0206121, 0.161122)
-bones/15/rotation = Quaternion(0.058653, -0.0130977, -0.00530046, 0.998178)
+bones/1/position = Vector3(0.147328, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.410969, -0.000576318, -0.00295595)
+bones/3/position = Vector3(0.0554324, 5.79847e-05, 0.00339123)
+bones/3/rotation = Quaternion(-0.241982, -0.241982, -0.664413, 0.664413)
+bones/4/position = Vector3(-0.0301099, 0.0245558, -0.0155631)
+bones/5/position = Vector3(-0.0148101, -0.194252, 0.025841)
+bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
+bones/7/position = Vector3(-0.014366, 0.19288, 0.0258711)
+bones/7/rotation = Quaternion(-0.717465, 0.138897, 0.01277, 0.682487)
+bones/9/position = Vector3(-0.0206967, 0.0486971, -0.0175773)
+bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
+bones/11/position = Vector3(-0.0665506, -0.0356486, -0.199516)
+bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
+bones/13/position = Vector3(-0.0205221, -0.048697, -0.0172881)
+bones/13/rotation = Quaternion(0.00190766, 0.065216, -0.722623, 0.688156)
+bones/15/position = Vector3(0.0660999, 0.0152533, 0.162276)
+bones/15/rotation = Quaternion(0.0348069, -0.0126661, -0.0148066, 0.999204)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
-
-[node name="L_Hand1" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
@@ -345,6 +345,16 @@ margin = 5.0
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0)
 environment = ExtResource("2_pbjct")
 
+[node name="HomingAttackHurtDetector" type="Area3D" parent="." node_paths=PackedStringArray("player")]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("14_mw1q2")
+player = NodePath("..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackHurtDetector"]
+transform = Transform3D(1.42593, 0, 0, 0, 1.42593, 0, 0, 0, 1.42593, 0, 0, 0)
+shape = SubResource("SphereShape3D_aqnfm")
+
 [connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]
 [connection signal="area_entered" from="HomingAttackComponent" to="HomingAttackComponent" method="_on_target_detection_area_area_entered"]
@@ -358,6 +368,7 @@ environment = ExtResource("2_pbjct")
 [connection signal="pressed" from="PauseMenu/VFlowContainer/Quit to Start?" to="PauseMenu" method="_on_quit_to_start_pressed"]
 [connection signal="value_changed" from="PauseMenu/VFlowContainer/audioSlider" to="PauseMenu" method="_on_audio_slider_value_changed"]
 [connection signal="timeout" from="coyoteTimer" to="." method="_on_coyote_timer_timeout"]
+[connection signal="area_entered" from="HomingAttackHurtDetector" to="HomingAttackHurtDetector" method="_on_area_entered"]
 
 [editable path="auriModel"]
 [editable path="auriModel/SKM_Auri"]

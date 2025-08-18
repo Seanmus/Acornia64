@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=24 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="17_6jhcp"]
 [ext_resource type="PackedScene" uid="uid://xg63xqo7ckwk" path="res://WorldBlocks/different_top_3x_1.tscn" id="18_api8d"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="19_3pew0"]
+[ext_resource type="PackedScene" uid="uid://b2ikene3txguk" path="res://WorldBlocks/Decor/test_tube.tscn" id="20_rh10g"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -1121,3 +1122,15 @@ transform = Transform3D(-1.09299e-07, 0, -2.50047, 0, 2.50047, 0, 2.50047, 0, -1
 [node name="SpeedBoostRamp4" parent="." instance=ExtResource("17_6jhcp")]
 transform = Transform3D(-1.01866e-07, 0, -2.33043, 0.603161, 2.25103, -2.6365e-08, 2.25103, -0.603161, -9.83955e-08, -525.098, 160.63, 832.155)
 upwardsVelocity = 25
+
+[node name="testTube" parent="." instance=ExtResource("20_rh10g")]
+transform = Transform3D(-0.597983, 0, -2.2317, 0, 2.31043, 0, 2.2317, 0, -0.597983, -23.8044, 11.6022, -9.40175)
+
+[node name="testTube2" parent="." instance=ExtResource("20_rh10g")]
+transform = Transform3D(-0.597983, 0, -2.2317, 0, 2.31043, 0, 2.2317, 0, -0.597983, 27.8052, 11.6022, -9.40175)
+
+[node name="testTube4" parent="." instance=ExtResource("20_rh10g")]
+transform = Transform3D(-1.61739, 0, 1.61739, 0, 2.28733, 0, -1.61739, 0, -1.61739, 254.648, 69.613, 231.043)
+
+[node name="testTube3" parent="." instance=ExtResource("20_rh10g")]
+transform = Transform3D(-2.00089, 0, -1.15522, 0, 2.31043, 0, 1.15522, 0, -2.00089, 120.822, 11.6022, -9.40175)

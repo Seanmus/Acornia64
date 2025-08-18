@@ -2,5 +2,5 @@ extends Node3D
 
 @onready var player = get_tree().get_nodes_in_group("Player")
 func _process(delta: float) -> void:
-	if !Manager.won:
+	if !Manager.won and player:
 		look_at(player[0].global_position)

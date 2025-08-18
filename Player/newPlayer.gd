@@ -62,11 +62,12 @@ func _physics_process(delta):
 		$auriModel/SKM_Auri/AnimationTree.active = false
 		$auriModel/SKM_Auri/AnimationPlayer.play("win")
 		return
+	if dead:
+		return
 	if homingAttack:
 		HomingAttackComponent._HomingAttack(delta)
 		return
-	if dead:
-		return
+
 	#If the game is not over and the player is not performing a homing attack
 	hurtMonitor.monitoring = true
 	HandleAerialMovements(delta)		
@@ -221,10 +222,12 @@ func kill():
 	velocity.x = 0
 	velocity.z = 0
 	dead = true
+	homingAttack = false
 
 	
 #Teleports the player back to its spawn position on player death.
 func _on_deathFinished():
+	HomingAttackComponent._StopHomingAttack()
 	position = spawnPos
 	rotation = spawnRotation
 	pivot.rotation.x = spawnRotation.x

@@ -28,9 +28,8 @@ adjustment_saturation = 1.7
 [node name="spaceLevel" type="Node3D"]
 script = ExtResource("1_b0lrj")
 
-[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_3oio8")]
+[node name="Player" parent="." instance=ExtResource("2_3oio8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.18637, 0)
-UI = NodePath("../UI")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_eei7c")
@@ -438,8 +437,7 @@ transform = Transform3D(0.913176, -0.242752, 0, 0.22851, 0.970088, 0, 0, 0, 1, 2
 [node name="purpleBricks4" parent="." instance=ExtResource("3_i4c1r")]
 transform = Transform3D(0.913176, -0.242752, 0, 0.22851, 0.970088, 0, 0, 0, 1, 282.71, 73.3072, 297.616)
 
-[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("14_aqntr")]
-cheeseParent = NodePath("../Cheese")
+[node name="UI" parent="." instance=ExtResource("14_aqntr")]
 
 [connection signal="won" from="Blocks/endLevel" to="Player" method="Win"]
 
