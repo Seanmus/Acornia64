@@ -396,4 +396,7 @@ transform = Transform3D(-2.51084, 0, -2.19505e-07, 0, 2.51084, 0, 2.19505e-07, 0
 [node name="SquirellWithShield" parent="." instance=ExtResource("17_7rlut")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.8698, 9, -32.426)
 
+[node name="squirell" parent="SquirellWithShield" index="5"]
+transform = Transform3D(2.48263, 0, 0, 0, 2.48263, 0, 0, 0, 2.48263, 0, 0, 0)
+
 [editable path="SquirellWithShield"]

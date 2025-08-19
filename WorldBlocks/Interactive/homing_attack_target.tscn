@@ -23,4 +23,4 @@ material = ExtResource("2_xo7sn")
 stream = ExtResource("2_02f7w")
 
 [node name="squirell" parent="." instance=ExtResource("4_q6rxu")]
-transform = Transform3D(2.48263, 0, 0, 0, 2.48263, 0, 0, 0, 2.48263, 0, 0, 0)
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
