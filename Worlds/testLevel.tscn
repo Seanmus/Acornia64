@@ -134,6 +134,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6661, 0, -96.1429)
 [node name="LargeTile32" parent="." instance=ExtResource("1_pbe0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6661, 0, -109.928)
 
+[node name="LargeTile72" parent="." instance=ExtResource("1_pbe0x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 96.6661, 0, -109.928)
+
 [node name="LargeTile33" parent="." instance=ExtResource("1_pbe0x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6661, 0, -123.702)
 
@@ -394,9 +397,7 @@ transform = Transform3D(3.73136, 0, 0, 0, -1.63103e-07, 3.73136, 0, -3.73136, -1
 transform = Transform3D(-2.51084, 0, -2.19505e-07, 0, 2.51084, 0, 2.19505e-07, 0, -2.51084, -62.4142, 9.20568, -5.5461)
 
 [node name="SquirellWithShield" parent="." instance=ExtResource("17_7rlut")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.8698, 9, -32.426)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.1302, 9, -106.426)
 
-[node name="squirell" parent="SquirellWithShield" index="5"]
-transform = Transform3D(2.48263, 0, 0, 0, 2.48263, 0, 0, 0, 2.48263, 0, 0, 0)
-
-[editable path="SquirellWithShield"]
+[node name="SquirellWithShield2" parent="." instance=ExtResource("17_7rlut")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 75.1302, 9, -106.426)
