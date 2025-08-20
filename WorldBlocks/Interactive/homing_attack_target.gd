@@ -1,7 +1,7 @@
 class_name homingAttackTarget
 extends Node3D
 
-@onready var collision = $CollisionShape3D
+@onready var collision = $Shield
 @onready var soundEffect = $AudioStreamPlayer3D
 signal onHit
 var disabled = false

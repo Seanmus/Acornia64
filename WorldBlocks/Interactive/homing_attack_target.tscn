@@ -10,7 +10,7 @@
 [node name="HomingAttackTarget" type="Area3D" groups=["targets"]]
 script = ExtResource("1_aomp8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Shield" type="CollisionShape3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("SphereShape3D_l7bm5")
 
@@ -24,3 +24,5 @@ stream = ExtResource("2_02f7w")
 
 [node name="squirell" parent="." instance=ExtResource("4_q6rxu")]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
+
+[connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
