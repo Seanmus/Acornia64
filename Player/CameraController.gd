@@ -4,7 +4,7 @@ extends Node3D
 @export var playerCharacter : Node3D
 var mouse_sensitivty = 0.002 #radiains/pixel
 var rotationSpeed = 0.00
-var controller_sensitivity = 0.025
+var controller_sensitivity = 0.05
 #Occurs when an input that has not been previously handled occurs.
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:

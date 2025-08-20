@@ -87,8 +87,11 @@ transform = Transform3D(-1.38895e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, -1
 [node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("5_qfb5v")]
 transform = Transform3D(-31.468, 0, -4.40854, 0, 31.7753, 0, 4.40854, 0, -31.468, -524.885, 76.1018, 530.052)
 
+[node name="SpawnPoint6" parent="SpawnPoints" instance=ExtResource("5_qfb5v")]
+transform = Transform3D(-44.0552, 0, -6.17196, 0, 44.4854, 0, 6.17196, 0, -44.0552, -524.885, 164.702, 891.252)
+
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("5_qfb5v")]
-transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 221.227, 42.1668, -7.317)
+transform = Transform3D(-31.7753, 0, 2.77788e-06, 0, 31.7753, 0, -2.77788e-06, 0, -31.7753, -193.773, 162.367, 1576.08)
 
 [node name="HomingAttackTargets" type="Node" parent="."]
 
