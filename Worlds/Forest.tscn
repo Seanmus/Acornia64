@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://c01rhkdvbxs3g"]
+[gd_scene load_steps=28 format=3 uid="uid://c01rhkdvbxs3g"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_6fxah"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_wxx5d"]
@@ -16,10 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://d2pg8s6s68vkj" path="res://WorldBlocks/Forest/forest_block.tscn" id="17_7i0tx"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_opd30"]
 [ext_resource type="PackedScene" uid="uid://byvqee5bllch1" path="res://WorldBlocks/Interactive/rotating_platform.tscn" id="18_so85a"]
-[ext_resource type="PackedScene" uid="uid://dta7p3m7batbx" path="res://WorldBlocks/Interactive/start_cannon.tscn" id="19_3in2f"]
+[ext_resource type="Material" uid="uid://3e8eaaxwdyga" path="res://Materials/furDark.tres" id="19_cgq7m"]
 [ext_resource type="PackedScene" uid="uid://cdi7tnu4t431f" path="res://WorldBlocks/Forest/forest_block_diamond.tscn" id="19_ifote"]
 [ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="19_las8y"]
-[ext_resource type="PackedScene" uid="uid://2n5hg0ladvf3" path="res://WorldBlocks/Imports/hollowLog.glb" id="19_ulbx0"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="20_4wj2a"]
+[ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_jxm1x"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -62,6 +63,11 @@ _data = {
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sp2si"]
+albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
+albedo_texture = ExtResource("20_4wj2a")
+uv1_scale = Vector3(20, 20, 20)
 
 [node name="newForest2" type="Node3D"]
 script = ExtResource("1_6fxah")
@@ -351,62 +357,106 @@ transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-
 [node name="MetalBox14" parent="." instance=ExtResource("19_las8y")]
 transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 231.768, 279.698, -63.1943)
 
-[node name="hollowLog" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, -21.6643, 38.765, -458.476)
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6643, 330.286, -458.476)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog2" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(-2.67029e-05, 0, -105.208, 0, 81.6491, 0, 105.208, 0, -2.67029e-05, -21.6643, 403.765, -458.476)
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -534.605, 330.286, -751.593)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog3" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, -150.664, 38.765, 321.924)
+[node name="CSGCylinder3D15" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.984454, 0, -0.175642, 0, 1, 0, 0.175642, 0, -0.984454, -646.708, 330.286, 759.185)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog4" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, -1.90735e-05, 0, 81.6491, 0, 1.90735e-05, 0, 105.208, -150.664, 403.765, 321.924)
+[node name="CSGCylinder3D16" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.432951, 0, -0.901417, 0, 1, 0, 0.901417, 0, -0.432951, -198.173, 330.286, 1120.95)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog5" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, -381.864, 38.765, 30.5243)
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.942787, 0, 0.333395, 0, 1, 0, -0.333395, 0, -0.942787, -554.859, 330.286, -133.894)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog6" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, -1.90735e-05, 0, 81.6491, 0, 1.90735e-05, 0, 105.208, -381.864, 403.765, 30.5243)
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-0.979907, 0, 0.199453, 0, 1, 0, -0.199453, 0, -0.979907, -268.559, 330.286, 127.473)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog7" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, -381.864, 38.765, 724.124)
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.589309, 0, -0.807908, 0, 1, 0, 0.807908, 0, 0.589309, 202.267, 330.286, 766.45)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog8" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, -1.90735e-05, 0, 81.6491, 0, 1.90735e-05, 0, 105.208, -381.864, 403.765, 724.124)
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 688.948, 330.286, 237.361)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog9" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, 0, 0, 81.6492, 0, 0, 0, 105.208, 178.936, 38.765, 724.124)
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 777.453, 330.286, -410.984)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog10" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(105.208, 0, -1.90735e-05, 0, 81.6491, 0, 1.90735e-05, 0, 105.208, 178.936, 403.765, 724.124)
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1192.67, 330.286, -140.781)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog11" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(-4.5988e-06, 0, 105.208, 0, 81.6492, 0, -105.208, 0, -4.5988e-06, 340.336, 38.765, -636.276)
+[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 582.982, 330.286, 735.987)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog12" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(1.44747e-05, 0, 105.208, 0, 81.6491, 0, -105.208, 0, 1.44747e-05, 340.336, 403.765, -636.276)
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1091.33, 330.286, 573.11)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog13" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6492, 0, -91.113, 0, -52.6041, 489.336, 38.765, 169.724)
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1689.24, 330.286, 281.858)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog14" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6491, 0, -91.113, 0, -52.6041, 489.336, 403.765, 169.724)
+[node name="Sky" type="CSGSphere3D" parent="."]
+transform = Transform3D(4522.24, 0, 0, 0, 4522.24, 0, 0, 0, 4522.24, 47.8745, 330.286, 285.043)
+flip_faces = true
+material = SubResource("StandardMaterial3D_sp2si")
 
-[node name="hollowLog15" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6492, 0, -91.113, 0, -52.6041, 489.336, 38.765, -260.476)
+[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1463.45, 330.286, 1460.21)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="hollowLog16" parent="." instance=ExtResource("19_ulbx0")]
-transform = Transform3D(-52.6041, 0, 91.113, 0, 81.6491, 0, -91.113, 0, -52.6041, 489.336, 403.765, -260.476)
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 409.441, 330.286, -673.078)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="StartCannon" parent="." instance=ExtResource("19_3in2f")]
-transform = Transform3D(4.5, 0, 0, 0, 4.5, 0, 0, 0, 4.5, 172.056, 320.375, -112.794)
-nextLevel = "title"
+[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 866.638, 330.286, -952.156)
+radius = 125.416
+height = 968.81
+material = ExtResource("19_cgq7m")
 
-[node name="Cylinder" parent="StartCannon" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.327838, -0.944734, 0, 0.944734, 0.327838, 0, 0, 0)
-
-[node name="Muzzle" parent="StartCannon" index="6"]
-transform = Transform3D(0.994314, 0.00598476, -0.106319, 0.0206157, 0.968712, 0.247331, 0.104473, -0.248116, 0.96308, 0, 0.888893, 0.711109)
-
-[editable path="StartCannon"]
+[node name="catapult" parent="." instance=ExtResource("20_jxm1x")]
+transform = Transform3D(-0.647048, 0, -2.41481, 0, 2.5, 0, 2.41481, 0, -0.647048, 174.236, 321.84, -114.665)

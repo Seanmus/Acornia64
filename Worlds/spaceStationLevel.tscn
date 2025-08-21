@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=31 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://r2jti3xaltav" path="res://WorldBlocks/Decor/tallbuildings/lightGreen_tall_building_bricks.tscn" id="22_f21f6"]
 [ext_resource type="PackedScene" uid="uid://c4hmq46yu8r14" path="res://WorldBlocks/lava.tscn" id="23_qqvdl"]
 [ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://Traps/Enemies/squirell_with_shield.tscn" id="24_rlgua"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7ffrx"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -47,6 +48,11 @@ uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1ost"]
 size = Vector3(330.2, 10, 108.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6sx0"]
+albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
+albedo_texture = ExtResource("25_7ffrx")
+uv1_scale = Vector3(20, 20, 20)
 
 [node name="SpaceStation" type="Node3D"]
 transform = Transform3D(0.999814, 0, 0, 0, 0.999814, 0, 0, 0, 0.999814, 0, 0, 0)
@@ -1557,3 +1563,8 @@ upwardsVelocity = 20
 
 [node name="HomingAttackTarget" parent="." instance=ExtResource("6_ybxcj")]
 transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, 367.268, 174.833, 1611.1)
+
+[node name="Sky" type="CSGSphere3D" parent="."]
+transform = Transform3D(5164.35, 0, 0, 0, 5164.35, 0, 0, 0, 5164.35, 0, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_b6sx0")

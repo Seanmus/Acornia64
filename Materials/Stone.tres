@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://brpvthl0bmk04"]
+
+[ext_resource type="Texture2D" uid="uid://bhxcqtkpn7rei" path="res://Materials/furDark_albedo.png" id="1_s4yuh"]
+[ext_resource type="Material" uid="uid://dyb7fsbl524vs" path="res://Player/AcornOutsideMat.tres" id="2_d1k62"]
+
+[resource]
+next_pass = ExtResource("2_d1k62")
+albedo_color = Color(0.487576, 0.529523, 0.507567, 1)
+albedo_texture = ExtResource("1_s4yuh")
+roughness = 1.07
+uv1_scale = Vector3(5, 5, 5)
