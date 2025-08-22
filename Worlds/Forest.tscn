@@ -1,9 +1,8 @@
-[gd_scene load_steps=30 format=3 uid="uid://c01rhkdvbxs3g"]
+[gd_scene load_steps=29 format=3 uid="uid://c01rhkdvbxs3g"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_6fxah"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_wxx5d"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_0r6t5"]
-[ext_resource type="FontFile" uid="uid://boiewx4478ao" path="res://UI/ZCOOLKuaiLe-Regular.ttf" id="3_m2ork"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_05mqp"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="6_b5hto"]
 [ext_resource type="PackedScene" uid="uid://buebv7vsgn6hc" path="res://WorldBlocks/circle_bricks.tscn" id="7_pufmb"]
@@ -74,15 +73,6 @@ uv1_scale = Vector3(20, 20, 20)
 [node name="newForest2" type="Node3D"]
 script = ExtResource("1_6fxah")
 nextLevel = "space_level"
-
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.4136, 14.1327, 14.0533)
-text = "This is an unfinished bonus level for the demo!
-
-Thanks for playing this far!"
-font = ExtResource("3_m2ork")
-font_size = 532
-outline_size = 127
 
 [node name="Player" parent="." instance=ExtResource("2_wxx5d")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -77.0805, 5.31911, 14.0534)
