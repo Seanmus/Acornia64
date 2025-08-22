@@ -98,21 +98,18 @@ environment = SubResource("Environment_l3x7x")
 [node name="circleBricks" parent="." instance=ExtResource("7_pufmb")]
 transform = Transform3D(-15.1264, 0, -26.1997, 0, 30.2528, 0, 26.1997, 0, -15.1264, 203.663, 152.075, -148.082)
 
-[node name="circleBricks2" parent="." instance=ExtResource("7_pufmb")]
-transform = Transform3D(48.8976, 0, 28.2311, 0, 56.4621, 0, -28.2311, 0, 48.8976, 171.263, 258.675, -110.567)
-
-[node name="circleBricks3" parent="." instance=ExtResource("7_pufmb")]
-transform = Transform3D(-52.3526, 0, 21.1465, 0, 56.4621, 0, -21.1465, 0, -52.3526, 171.263, 214.875, -110.567)
-
 [node name="TutorialText" type="Node" parent="."]
 
 [node name="SpawnPoints" type="Node" parent="."]
 
 [node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("5_05mqp")]
-transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 183.768, 5.90339, 0.252316)
+transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 244.215, 26.2919, -26.4765)
 
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("5_05mqp")]
 transform = Transform3D(27.6334, 0, 15.6865, 0, 31.7753, 0, -15.6865, 0, 27.6334, 244.188, 164.249, -130.938)
+
+[node name="SpawnPoint4" parent="SpawnPoints" instance=ExtResource("5_05mqp")]
+transform = Transform3D(-31.7745, 0, 0.231793, 0, 31.7753, 0, -0.231793, 0, -31.7745, 109.376, 229.508, -127.566)
 
 [node name="SpawnPoint3" parent="SpawnPoints" instance=ExtResource("5_05mqp")]
 transform = Transform3D(-31.7745, 0, 0.231793, 0, 31.7753, 0, -0.231793, 0, -31.7745, 103.388, 145.449, -63.738)
@@ -123,16 +120,8 @@ transform = Transform3D(-31.7745, 0, 0.231793, 0, 31.7753, 0, -0.231793, 0, -31.
 transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, 218.285, 2.9664, -22.4368)
 bounceMultiplier = 3.0
 
-[node name="tire2" parent="Tires" instance=ExtResource("7_u0ejr")]
-transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, 262.285, 43.1664, -74.6368)
-bounceMultiplier = 3.0
-
-[node name="tire5" parent="Tires" instance=ExtResource("7_u0ejr")]
-transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, 221.885, 222.566, -146.837)
-bounceMultiplier = 4.0
-
 [node name="tire6" parent="Tires" instance=ExtResource("7_u0ejr")]
-transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, 180.885, 266.166, -60.4368)
+transform = Transform3D(2.49024, 0, 0, 0, 2.36432, -0.781834, 0, 0.781834, 2.36432, 195.72, 273.226, -69.7715)
 bounceMultiplier = 4.0
 
 [node name="tire3" parent="Tires" instance=ExtResource("7_u0ejr")]
@@ -202,9 +191,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 3.2, 5.6)
 
 [node name="UI" parent="." instance=ExtResource("10_5gopa")]
 
-[node name="ForestBlockDiamond" parent="." instance=ExtResource("19_ifote")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.903, -7.21801, -11.4324)
-
 [node name="ForestBlockDiamond18" parent="." instance=ExtResource("19_ifote")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.897, -6.78412, 21.7817)
 
@@ -235,17 +221,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30299, -4.40653, 4.7676)
 [node name="ForestBlockDiamond6" parent="." instance=ExtResource("19_ifote")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 31.303, -2.14192, 8.1676)
 
-[node name="ForestBlockDiamond2" parent="." instance=ExtResource("19_ifote")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 153.103, -7.21801, 23.5676)
-
-[node name="ForestBlockDiamond3" parent="." instance=ExtResource("19_ifote")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 186.103, -7.21801, 0.5676)
-
 [node name="ForestBlockDiamond7" parent="." instance=ExtResource("19_ifote")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213.703, -7.21801, -22.4324)
-
-[node name="ForestBlockDiamond10" parent="." instance=ExtResource("19_ifote")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 266.703, 32.982, -74.4324)
 
 [node name="ForestBlockDiamond12" parent="." instance=ExtResource("19_ifote")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 283.703, 107.182, -177.632)
@@ -334,30 +311,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.424, 141.694, 85.5727)
 
 [node name="MetalBox5" parent="." instance=ExtResource("19_las8y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.6238, 141.694, 85.5727)
-
-[node name="MetalBox6" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 205.961, 269.698, -78.0938)
-
-[node name="MetalBox7" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 214.622, 269.698, -73.0938)
-
-[node name="MetalBox8" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 205.961, 279.698, -78.0938)
-
-[node name="MetalBox9" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 214.622, 279.698, -73.0938)
-
-[node name="MetalBox11" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 223.195, 269.698, -68.1441)
-
-[node name="MetalBox13" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 223.195, 279.698, -68.1441)
-
-[node name="MetalBox12" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 231.768, 269.698, -63.1943)
-
-[node name="MetalBox14" parent="." instance=ExtResource("19_las8y")]
-transform = Transform3D(-2.18557e-08, 0.5, 0.866025, -1, -4.37114e-08, 3.61431e-15, 3.78552e-08, -0.866025, 0.5, 231.768, 279.698, -63.1943)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6643, 330.286, -458.476)
@@ -466,6 +419,24 @@ transform = Transform3D(-0.647048, 0, -2.41481, 0, 2.5, 0, 2.41481, 0, -0.647048
 [node name="RotatingHalfHex" parent="." instance=ExtResource("22_4mc8o")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -29.4219, 3.14643, -29.1173)
 
+[node name="RotatingHalfHex3" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 196.976, 215.37, -43.0993)
+
+[node name="RotatingHalfHex4" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 249.892, 215.37, -105.297)
+
+[node name="RotatingHalfHex5" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 209.949, 267.4, -166.211)
+
+[node name="RotatingHalfHex6" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(10.6066, 0, 10.6066, 0, 15, 0, -10.6066, 0, 10.6066, 131.303, 267.4, -157.034)
+
+[node name="RotatingHalfHex7" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(-10.6066, 0, -10.6066, 0, 15, 0, 10.6066, 0, -10.6066, 95.3644, 267.4, -113.602)
+
+[node name="RotatingHalfHex8" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(14.4889, 0, -3.88228, 0, 15, 0, 3.88228, 0, 14.4889, 171.068, 267.4, -46.441)
+
 [node name="RotatingHalfHex2" parent="." instance=ExtResource("22_4mc8o")]
 transform = Transform3D(-15, 0, -2.26494e-06, 0, 15, 0, 2.26494e-06, 0, -15, -84.9592, 3.14643, -29.1173)
 
@@ -481,5 +452,43 @@ transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 171.07
 [node name="RotatingHexPlatform4" parent="." instance=ExtResource("23_bx3xs")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 9.07727, -2.78195, 171.073)
 
+[node name="RotatingHexPlatform6" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 130.055, 0.381025, -11.9855)
+
+[node name="RotatingHexPlatform10" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 110.296, 221.019, -84.4005)
+
+[node name="RotatingHexPlatform11" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 144.755, 213.813, -48.4721)
+
+[node name="RotatingHexPlatform12" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 233.039, 213.813, -55.9223)
+
+[node name="RotatingHexPlatform13" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.046, 266.119, -174.309)
+
+[node name="RotatingHexPlatform14" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 125.454, 266.119, -68.1468)
+
+[node name="TireRotatingHexPlatform" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(12.9904, 0, 7.5, 0, 15, 0, -7.5, 0, 12.9904, 233.039, 219.618, -148.728)
+
+[node name="tire5" parent="TireRotatingHexPlatform" instance=ExtResource("7_u0ejr")]
+transform = Transform3D(0.143774, 0, -0.083008, 0, 0.166016, 0, 0.083008, 0, 0.143774, -0.658516, 0.196515, -0.0440254)
+bounceMultiplier = 4.0
+
+[node name="RotatingHexPlatform7" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 151.224, 0.381025, 35.4167)
+
+[node name="RotatingHexPlatform8" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 197.856, 0.381025, 14.2443)
+
 [node name="RotatingHexPlatform5" parent="." instance=ExtResource("23_bx3xs")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 66.279, -2.78195, 178.497)
+
+[node name="RotatingHexPlatform9" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 269.887, 40.6379, -75.0296)
+
+[node name="tire2" parent="RotatingHexPlatform9" instance=ExtResource("7_u0ejr")]
+transform = Transform3D(0.166016, 0, 0, 0, 0.166016, 0, 0, 0, 0.166016, -0.604206, 0.183153, 0.349171)
+bounceMultiplier = 3.0
