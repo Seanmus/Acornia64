@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b57qtln18tx6w"]
+
+[ext_resource type="PackedScene" uid="uid://nh6rtss008uf" path="res://WorldBlocks/Imports/hexPlatform.glb" id="1_6vxp3"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ynfde"]
+data = PackedVector3Array(0, -1, -1, 0.866, 1, -0.5, 0, 1, -1, 0, -1, -1, 0.866, -1, -0.5, 0.866, 1, -0.5, 0.866, -1, -0.5, 0.866, 1, 0.5, 0.866, 1, -0.5, 0.866, -1, -0.5, 0.866, -1, 0.5, 0.866, 1, 0.5, 0.866, -1, 0.5, 0, 1, 1, 0.866, 1, 0.5, 0.866, -1, 0.5, 0, -1, 1, 0, 1, 1, 0, -1, 1, -0.866, 1, 0.5, 0, 1, 1, 0, -1, 1, -0.866, -1, 0.5, -0.866, 1, 0.5, 0.866, 1, 0.5, 0, 1, -1, 0.866, 1, -0.5, 0, 1, -1, -0.866, 1, 0.5, -0.866, 1, -0.5, -0.866, 1, 0.5, 0.866, 1, 0.5, 0, 1, 1, 0, 1, -1, 0.866, 1, 0.5, -0.866, 1, 0.5, -0.866, -1, 0.5, -0.866, 1, -0.5, -0.866, 1, 0.5, -0.866, -1, 0.5, -0.866, -1, -0.5, -0.866, 1, -0.5, -0.866, -1, -0.5, 0, 1, -1, -0.866, 1, -0.5, -0.866, -1, -0.5, 0, -1, -1, 0, 1, -1, -0.866, -1, -0.5, 0.866, -1, -0.5, 0, -1, -1, 0.866, -1, -0.5, 0, -1, 1, 0.866, -1, 0.5, 0, -1, 1, -0.866, -1, -0.5, -0.866, -1, 0.5, 0.866, -1, -0.5, -0.866, -1, -0.5, 0, -1, 1)
+
+[node name="hexPlatform" instance=ExtResource("1_6vxp3")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_ynfde")

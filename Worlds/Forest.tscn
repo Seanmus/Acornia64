@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c01rhkdvbxs3g"]
+[gd_scene load_steps=30 format=3 uid="uid://c01rhkdvbxs3g"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_6fxah"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_wxx5d"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="19_las8y"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="20_4wj2a"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_jxm1x"]
+[ext_resource type="PackedScene" uid="uid://br4gpi6l8jauk" path="res://WorldBlocks/rotating_half_hex.tscn" id="22_4mc8o"]
+[ext_resource type="PackedScene" uid="uid://d3be7imrni88" path="res://WorldBlocks/rotating_hex_platform.tscn" id="23_bx3xs"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -460,3 +462,24 @@ material = ExtResource("19_cgq7m")
 
 [node name="catapult" parent="." instance=ExtResource("20_jxm1x")]
 transform = Transform3D(-0.647048, 0, -2.41481, 0, 2.5, 0, 2.41481, 0, -0.647048, 174.236, 321.84, -114.665)
+
+[node name="RotatingHalfHex" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -29.4219, 3.14643, -29.1173)
+
+[node name="RotatingHalfHex2" parent="." instance=ExtResource("22_4mc8o")]
+transform = Transform3D(-15, 0, -2.26494e-06, 0, 15, 0, 2.26494e-06, 0, -15, -84.9592, 3.14643, -29.1173)
+
+[node name="RotatingHexPlatform" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 56.2849)
+
+[node name="RotatingHexPlatform2" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 112.178)
+
+[node name="RotatingHexPlatform3" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 171.073)
+
+[node name="RotatingHexPlatform4" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 9.07727, -2.78195, 171.073)
+
+[node name="RotatingHexPlatform5" parent="." instance=ExtResource("23_bx3xs")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 66.279, -2.78195, 178.497)

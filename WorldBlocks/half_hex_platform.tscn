@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw8wy1gkjhb6q"]
+
+[ext_resource type="PackedScene" uid="uid://b1xcwrm6eig84" path="res://WorldBlocks/Imports/halfHexPlatform.glb" id="1_dof08"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_pptm1"]
+data = PackedVector3Array(0, -1, -1, -0.866, -1, 0.5, 0, -1, 1, 0, -1, -1, -0.866, -1, -0.5, -0.866, -1, 0.5, 0, 1, 1, -0.866, 1, -0.5, 0, 1, -1, 0, 1, 1, -0.866, 1, 0.5, -0.866, 1, -0.5, 0, -1, 1, -0.866, 1, 0.5, 0, 1, 1, 0, -1, 1, -0.866, -1, 0.5, -0.866, 1, 0.5, -0.866, -1, 0.5, -0.866, 1, -0.5, -0.866, 1, 0.5, -0.866, -1, 0.5, -0.866, -1, -0.5, -0.866, 1, -0.5, -0.866, -1, -0.5, 0, 1, -1, -0.866, 1, -0.5, -0.866, -1, -0.5, 0, -1, -1, 0, 1, -1, 0, -1, -1, 0, 1, 1, 0, 1, -1, 0, -1, -1, 0, -1, 1, 0, 1, 1)
+
+[node name="halfHexPlatform" instance=ExtResource("1_dof08")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cylinder" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/StaticBody3D" index="0"]
+shape = SubResource("ConcavePolygonShape3D_pptm1")
