@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c01rhkdvbxs3g"]
+[gd_scene load_steps=30 format=3 uid="uid://c01rhkdvbxs3g"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_6fxah"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_wxx5d"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_jxm1x"]
 [ext_resource type="PackedScene" uid="uid://br4gpi6l8jauk" path="res://WorldBlocks/rotating_half_hex.tscn" id="22_4mc8o"]
 [ext_resource type="PackedScene" uid="uid://d3be7imrni88" path="res://WorldBlocks/rotating_hex_platform.tscn" id="23_bx3xs"]
+[ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="23_rjb7i"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -406,9 +407,6 @@ material = ExtResource("19_cgq7m")
 [node name="catapult" parent="." instance=ExtResource("20_jxm1x")]
 transform = Transform3D(-0.647048, 0, -2.41481, 0, 2.5, 0, 2.41481, 0, -0.647048, 174.236, 321.84, -114.665)
 
-[node name="RotatingHalfHex" parent="." instance=ExtResource("22_4mc8o")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -29.4219, 3.14643, -29.1173)
-
 [node name="RotatingHalfHex3" parent="." instance=ExtResource("22_4mc8o")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 196.976, 215.37, -43.0993)
 
@@ -426,21 +424,6 @@ transform = Transform3D(-10.6066, 0, -10.6066, 0, 15, 0, 10.6066, 0, -10.6066, 9
 
 [node name="RotatingHalfHex8" parent="." instance=ExtResource("22_4mc8o")]
 transform = Transform3D(14.4889, 0, -3.88228, 0, 15, 0, 3.88228, 0, 14.4889, 171.068, 267.4, -46.441)
-
-[node name="RotatingHalfHex2" parent="." instance=ExtResource("22_4mc8o")]
-transform = Transform3D(-15, 0, -2.26494e-06, 0, 15, 0, 2.26494e-06, 0, -15, -84.9592, 3.14643, -29.1173)
-
-[node name="RotatingHexPlatform" parent="." instance=ExtResource("23_bx3xs")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 56.2849)
-
-[node name="RotatingHexPlatform2" parent="." instance=ExtResource("23_bx3xs")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 112.178)
-
-[node name="RotatingHexPlatform3" parent="." instance=ExtResource("23_bx3xs")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, -54.6395, -2.78195, 171.073)
-
-[node name="RotatingHexPlatform4" parent="." instance=ExtResource("23_bx3xs")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 9.07727, -2.78195, 171.073)
 
 [node name="RotatingHexPlatform6" parent="." instance=ExtResource("23_bx3xs")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 130.055, 0.381025, -11.9855)
@@ -473,12 +456,15 @@ transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 151.224, 0.381025, 35.4167
 [node name="RotatingHexPlatform8" parent="." instance=ExtResource("23_bx3xs")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 197.856, 0.381025, 14.2443)
 
-[node name="RotatingHexPlatform5" parent="." instance=ExtResource("23_bx3xs")]
-transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 66.279, -2.78195, 178.497)
-
 [node name="RotatingHexPlatform9" parent="." instance=ExtResource("23_bx3xs")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 269.887, 40.6379, -75.0296)
 
 [node name="tire2" parent="RotatingHexPlatform9" instance=ExtResource("7_u0ejr")]
 transform = Transform3D(0.166016, 0, 0, 0, 0.166016, 0, 0, 0, 0.166016, -0.604206, 0.183153, 0.349171)
 bounceMultiplier = 3.0
+
+[node name="speedBoost" parent="." instance=ExtResource("23_rjb7i")]
+transform = Transform3D(-1.98346, 0.581368, -1.07554, 0.521938, 2.2562, 0.257019, 1.10561, -0.0221373, -2.05087, 110.292, 120.524, -205.17)
+
+[node name="speedBoost2" parent="." instance=ExtResource("23_rjb7i")]
+transform = Transform3D(-2.10352, 0.365276, -0.933108, 0.284498, 2.2981, 0.25827, 0.960822, 0.11923, -2.11932, 315.255, 157.225, -148.084)
