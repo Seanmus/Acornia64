@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b5mdes6gsvtra"]
+
+[ext_resource type="Texture2D" uid="uid://bu4mpl65el83e" path="res://WorldBlocks/Imports/speedBoost_speedBoostTexture.png" id="1_ov3f6"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_do12n"]
+frame_0/texture = ExtResource("1_ov3f6")
+
+[resource]
+resource_name = "BoostMaterial"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = SubResource("AnimatedTexture_do12n")
+roughness = 0.5

@@ -1,18 +1,7 @@
-[gd_scene load_steps=10 format=4 uid="uid://byhxv7tqydcf7"]
+[gd_scene load_steps=7 format=4 uid="uid://byhxv7tqydcf7"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/speed_boost.gd" id="1_3de51"]
-[ext_resource type="Texture2D" uid="uid://bu4mpl65el83e" path="res://WorldBlocks/Imports/speedBoost_speedBoostTexture.png" id="1_s6uu8"]
-[ext_resource type="Script" path="res://WorldBlocks/Interactive/scrollingTexture.gd" id="3_r6w0d"]
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_do12n"]
-frame_0/texture = ExtResource("1_s6uu8")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_br5ro"]
-resource_name = "BoostMaterial"
-cull_mode = 2
-vertex_color_use_as_albedo = true
-albedo_texture = SubResource("AnimatedTexture_do12n")
-roughness = 0.5
+[ext_resource type="Material" uid="uid://b5mdes6gsvtra" path="res://Materials/speed_boostMaterial.tres" id="2_2psoy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puvnf"]
 resource_name = "BaseMat"
@@ -53,7 +42,7 @@ _surfaces = [{
 "format": 34359742487,
 "index_count": 6,
 "index_data": PackedByteArray("AAADAAIAAAABAAMA"),
-"material": SubResource("StandardMaterial3D_br5ro"),
+"material": ExtResource("2_2psoy"),
 "name": "BoostMaterial",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -85,7 +74,6 @@ script = ExtResource("1_3de51")
 transform = Transform3D(1.54691, 0, 0, 0, 0.0552505, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_52u6s")
 skeleton = NodePath("")
-script = ExtResource("3_r6w0d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0668864, 0)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cacxsfw7onjre"]
+
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/scrollingTexture.gd" id="1_406fq"]
+[ext_resource type="Material" uid="uid://b5mdes6gsvtra" path="res://Materials/speed_boostMaterial.tres" id="2_waax3"]
+
+[node name="TextureScroller" type="Node"]
+script = ExtResource("1_406fq")
+speed = 4.0
+speedBoostMaterial = ExtResource("2_waax3")

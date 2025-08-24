@@ -28,6 +28,7 @@ AudioManager="*res://AutoLoads/audio_manager.tscn"
 Manager="*res://AutoLoads/manager.tscn"
 LevelLoader="*res://AutoLoads/level_loader.tscn"
 GameManager="*res://ADerpyChristmas/game_manager.tscn"
+TextureScroller="*res://Materials/texture_scroller.tscn"
 
 [display]
 
