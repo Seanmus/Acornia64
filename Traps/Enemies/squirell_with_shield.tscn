@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://deubon21pfc6b"]
+[gd_scene load_steps=11 format=3 uid="uid://deubon21pfc6b"]
 
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="1_2uup0"]
 [ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="2_1wc2y"]
 [ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_8a86s"]
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/homingAttackDestroy.gd" id="2_mp3jg"]
+[ext_resource type="Script" path="res://Traps/Enemies/squirell_with_shield.gd" id="2_ph31v"]
 
 [sub_resource type="Animation" id="Animation_x8ne8"]
 length = 0.001
@@ -100,7 +101,12 @@ shading_mode = 0
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.969968, 0.440666, 0.327818, 0.435294)
 
-[node name="SquirellWithShield" instance=ExtResource("1_2uup0")]
+[node name="SquirellWithShield" node_paths=PackedStringArray("parent") groups=["killable"] instance=ExtResource("1_2uup0")]
+script = ExtResource("2_ph31v")
+startOffset = false
+parent = NodePath(".")
+hitEffect = ExtResource("2_8a86s")
+hitSoundEffect = ExtResource("2_1wc2y")
 
 [node name="Shield" parent="." index="0" node_paths=PackedStringArray("parent") groups=["enemies"]]
 script = ExtResource("2_mp3jg")

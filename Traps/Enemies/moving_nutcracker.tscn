@@ -20,7 +20,7 @@ height = 8.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_5rcmh"]
 size = Vector3(2.2417, 4.43066, 8.98975)
 
-[node name="MovingNutcracker" instance=ExtResource("1_t146q")]
+[node name="MovingNutcracker" groups=["killable"] instance=ExtResource("1_t146q")]
 curve = SubResource("Curve3D_fcbh8")
 hitEffect = ExtResource("2_7ght2")
 hitSoundEffect = ExtResource("3_gyynb")

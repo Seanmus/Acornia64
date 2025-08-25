@@ -1,10 +1,13 @@
-extends CollisionShape3D
+class_name homingAttackDestroy
+
+extends homingAttackTarget
 
 @export var parent : Area3D
 @export var hitEffect : PackedScene
 @export var hitSoundEffect : PackedScene
 
-func _on_homing_attack_target_on_hit() -> void:
+func _Hit():
+	super()
 	var cloud = hitEffect.instantiate()
 	get_tree().root.add_child(cloud)
 	cloud.position = global_position
@@ -15,5 +18,9 @@ func _on_homing_attack_target_on_hit() -> void:
 	parent.visible = false
 
 func _Reset():
+	#I know it breaks inhertitance but its easier for my solo project
+	pass
+
+func _Respawn():	
 	parent.process_mode = Node.PROCESS_MODE_INHERIT
 	parent.visible = true

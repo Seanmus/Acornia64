@@ -34,6 +34,9 @@ func _Reset():
 	process_mode = Node.PROCESS_MODE_INHERIT
 	visible = true
 
+func _Respawn():
+	process_mode = Node.PROCESS_MODE_INHERIT
+	visible = true
 
 func _on_player_detector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):

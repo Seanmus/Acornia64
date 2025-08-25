@@ -398,6 +398,7 @@ transform = Transform3D(-2.51084, 0, -2.19505e-07, 0, 2.51084, 0, 2.19505e-07, 0
 
 [node name="SquirellWithShield" parent="." instance=ExtResource("17_7rlut")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.1302, 9, -106.426)
+startOffset = true
 
 [node name="SquirellWithShield2" parent="." instance=ExtResource("17_7rlut")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 75.1302, 9, -106.426)
