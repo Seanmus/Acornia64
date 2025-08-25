@@ -18,8 +18,7 @@ func _Hit():
 	parent.visible = false
 
 func _Reset():
-	#I know it breaks inhertitance but its easier for my solo project
-	pass
+	super()
 
 func _Respawn():	
 	parent.process_mode = Node.PROCESS_MODE_INHERIT

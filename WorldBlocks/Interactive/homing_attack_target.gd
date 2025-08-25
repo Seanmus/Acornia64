@@ -4,7 +4,6 @@ extends Node3D
 @onready var collision = $Shield
 @onready var soundEffect = $AudioStreamPlayer3D
 signal onHit
-var disabled = false
 
 func _HighLight():
 	$CSGSphere3D.material = load("res://WorldBlocks/Interactive/highLightTarget.tres")
@@ -17,9 +16,8 @@ func _Hit():
 	onHit.emit()
 	collision.set_deferred("disabled", true)
 	soundEffect.play()
-	disabled = true
 	_UnHighLight()
 
 func _Reset():
-	collision.set_deferred("disabled", false)
-	disabled = true	
+	if process_mode == Node.PROCESS_MODE_INHERIT:
+		collision.set_deferred("disabled", false)
