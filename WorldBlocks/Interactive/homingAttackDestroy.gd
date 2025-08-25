@@ -2,7 +2,7 @@ class_name homingAttackDestroy
 
 extends homingAttackTarget
 
-@export var parent : Area3D
+@export var parent : Node3D
 @export var hitEffect : PackedScene
 @export var hitSoundEffect : PackedScene
 

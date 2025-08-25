@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfkcuakvlp66i" path="res://Traps/Enemies/nutcracker_nutcrackerFace.png" id="1_vda04"]
 [ext_resource type="Texture2D" uid="uid://dpsqh3ql25j8j" path="res://Traps/Enemies/nutcracker_NutcrackerJacket.png" id="2_q7b8q"]
-[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="3_tsrsw"]
+[ext_resource type="PackedScene" uid="uid://coagvsyda0tpq" path="res://WorldBlocks/Interactive/homing_attack_component.tscn" id="3_qasow"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mx0i"]
 resource_name = "Hat"
@@ -539,11 +539,7 @@ libraries = {
 }
 autoplay = "lever_openClose"
 
-[node name="HomingAttackTarget" parent="." instance=ExtResource("3_tsrsw")]
-transform = Transform3D(0.954155, 0, -7.10543e-15, 0, 0.954155, 0, 7.10543e-15, 0, 0.954155, 0, 4, 0)
-
-[node name="squirell" parent="HomingAttackTarget" index="3"]
-visible = false
+[node name="HomingAttackTarget" parent="." instance=ExtResource("3_qasow")]
 
 [node name="Area3D" type="Area3D" parent="." groups=["deadly"]]
 collision_layer = 2
@@ -552,7 +548,3 @@ collision_mask = 2
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" groups=["deadly"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.11494, 0)
 shape = SubResource("CapsuleShape3D_81uym")
-
-[connection signal="onHit" from="HomingAttackTarget" to="." method="_on_homing_attack_target_on_hit"]
-
-[editable path="HomingAttackTarget"]

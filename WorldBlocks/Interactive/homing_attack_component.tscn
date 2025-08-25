@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://coagvsyda0tpq"]
+
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/homingAttackDestroy.gd" id="1_r2etj"]
+[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_qqngx"]
+[ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_abxte"]
+[ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="4_uwj2y"]
+[ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="5_awfan"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
+
+[node name="HomingAttackTarget" type="Area3D" groups=["killable", "targets"]]
+transform = Transform3D(0.954155, 0, -7.10543e-15, 0, 0.954155, 0, 7.10543e-15, 0, 0.954155, 0, 4, 0)
+script = ExtResource("1_r2etj")
+hitEffect = ExtResource("2_qqngx")
+hitSoundEffect = ExtResource("3_abxte")
+
+[node name="Shield" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_l7bm5")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+visible = false
+radius = 1.0
+material = ExtResource("4_uwj2y")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_awfan")
+
+[connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
