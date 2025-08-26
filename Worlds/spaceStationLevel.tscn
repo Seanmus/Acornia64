@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=33 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://c4hmq46yu8r14" path="res://WorldBlocks/lava.tscn" id="23_qqvdl"]
 [ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://Traps/Enemies/squirell_with_shield.tscn" id="24_rlgua"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7ffrx"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="26_gpsu8"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -54,6 +55,14 @@ albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
 albedo_texture = ExtResource("25_7ffrx")
 uv1_scale = Vector3(20, 20, 20)
 
+[sub_resource type="Curve3D" id="Curve3D_knpfq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
 [node name="SpaceStation" type="Node3D"]
 transform = Transform3D(0.999814, 0, 0, 0, 0.999814, 0, 0, 0, 0.999814, 0, 0, 0)
 script = ExtResource("1_lbn7d")
@@ -70,7 +79,7 @@ data = {
 metadata/_editor_floor_ = Vector3(-9, 78, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_fk0vd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -79.0839, 2.99013, 2.84952)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -83.285, 2.79013, 2.24949)
 
 [node name="Death" parent="." instance=ExtResource("3_itlwk")]
 transform = Transform3D(119.928, 0, 0, 0, 7.20316, 0, 0, 0, 159.088, 0, -15.0828, 0)
@@ -577,13 +586,13 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -360.1
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -368.642, 159.184, 1462.45)
 
 [node name="cheese111" parent="Cheese" instance=ExtResource("8_jwxpj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -217.914, 159.184, 1462.45)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -211.113, 159.184, 1462.45)
 
 [node name="cheese112" parent="Cheese" instance=ExtResource("8_jwxpj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -213.514, 159.184, 1462.45)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -206.713, 159.184, 1462.45)
 
 [node name="cheese113" parent="Cheese" instance=ExtResource("8_jwxpj")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -222.015, 159.184, 1462.45)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -215.214, 159.184, 1462.45)
 
 [node name="cheese114" parent="Cheese" instance=ExtResource("8_jwxpj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -143.5, 159.184, 1454.45)
@@ -1231,7 +1240,7 @@ transform = Transform3D(8.61055e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, 8.61055e-07,
 transform = Transform3D(2.33, 0, -9.62903e-07, 0, 2.33, 0, 9.62903e-07, 0, 2.33, -374.552, 157.626, 1462.4)
 
 [node name="speedBoost185" parent="." instance=ExtResource("13_0hu8e")]
-transform = Transform3D(2.33, 0, -9.62903e-07, 0, 2.33, 0, 9.62903e-07, 0, 2.33, -227.566, 157.626, 1462.4)
+transform = Transform3D(2.33, 0, -9.62903e-07, 0, 2.33, 0, 9.62903e-07, 0, 2.33, -220.765, 157.626, 1462.4)
 
 [node name="speedBoost190" parent="." instance=ExtResource("13_0hu8e")]
 transform = Transform3D(2.33, 0, -9.62903e-07, 0, 2.33, 0, 9.62903e-07, 0, 2.33, -154.153, 157.626, 1454.4)
@@ -1559,29 +1568,59 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6001, -4.5, 0.800171)
 shape = SubResource("BoxShape3D_h1ost")
 
 [node name="SquirellWithShield7" parent="." instance=ExtResource("24_rlgua")]
-transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 91.017, 164.831, 1643.11)
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 69.3435, 164.831, 1643.11)
 
 [node name="SquirellWithShield8" parent="." instance=ExtResource("24_rlgua")]
-transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 91.017, 164.831, 1581.89)
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 69.3435, 164.831, 1581.89)
+
+[node name="SquirellWithShield9" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 91.5476, 164.831, 1643.11)
+
+[node name="SquirellWithShield11" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 69.3435, 164.831, 1613.1)
+startOffset = true
+
+[node name="SquirellWithShield12" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 91.5476, 164.831, 1613.1)
+startOffset = true
+
+[node name="SquirellWithShield10" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 91.5476, 164.831, 1581.89)
 
 [node name="SquirellWithShield3" parent="." instance=ExtResource("24_rlgua")]
 transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 180.234, 164.831, 1609.1)
+startOffset = true
 
 [node name="SquirellWithShield4" parent="." instance=ExtResource("24_rlgua")]
 transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 210.439, 164.831, 1597.3)
+startOffset = true
 
 [node name="SquirellWithShield5" parent="." instance=ExtResource("24_rlgua")]
 transform = Transform3D(-4.37196e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37196e-08, 235.044, 164.831, 1614.9)
+startOffset = true
 
 [node name="SquirellWithShield6" parent="." instance=ExtResource("24_rlgua")]
 transform = Transform3D(-4.37196e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37196e-08, 267.05, 164.831, 1599.7)
+startOffset = true
+
+[node name="SquirellWithShield13" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 180.234, 164.831, 1629.3)
+
+[node name="SquirellWithShield14" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, 210.439, 164.831, 1617.5)
+
+[node name="SquirellWithShield15" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37196e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37196e-08, 235.044, 164.831, 1635.1)
+
+[node name="SquirellWithShield16" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(-4.37196e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37196e-08, 267.05, 164.831, 1619.9)
 
 [node name="SpeedBoostRamp6" parent="." instance=ExtResource("17_6jhcp")]
 transform = Transform3D(2.25103, -0.603161, 0, 0.603161, 2.25103, 0, 0, 0, 2.33043, 307.857, 158.63, 1612.1)
 upwardsVelocity = 20
 
 [node name="SpeedBoostRamp7" parent="." instance=ExtResource("17_6jhcp")]
-transform = Transform3D(2.25103, -0.603161, 0, 0.603161, 2.25103, 0, 0, 0, 2.33043, -36.207, 158.63, 1612.1)
+transform = Transform3D(2.25103, -0.603161, 0, 0.603161, 2.25103, 0, 0, 0, 2.33043, -36.207, 158.63, 1611.9)
 upwardsVelocity = 20
 
 [node name="HomingAttackTarget" parent="." instance=ExtResource("6_ybxcj")]
@@ -1591,3 +1630,33 @@ transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, 367.268, 17
 transform = Transform3D(5164.35, 0, 0, 0, 5164.35, 0, 0, 0, 5164.35, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_b6sx0")
+
+[node name="MovingNutcracker" parent="." instance=ExtResource("26_gpsu8")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -302.856, 158.43, 1474.27)
+curve = SubResource("Curve3D_knpfq")
+
+[node name="MovingNutcracker3" parent="." instance=ExtResource("26_gpsu8")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -276.251, 158.43, 1474.27)
+curve = SubResource("Curve3D_knpfq")
+
+[node name="MovingNutcracker2" parent="." instance=ExtResource("26_gpsu8")]
+transform = Transform3D(-1.00019, 0, -8.74391e-08, 0, 1.00019, 0, 8.74391e-08, 0, -1.00019, -290.454, 158.43, 1452.27)
+curve = SubResource("Curve3D_knpfq")
+
+[node name="MovingNutcracker4" parent="." instance=ExtResource("26_gpsu8")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -415.477, 158.43, 1552.89)
+curve = SubResource("Curve3D_knpfq")
+
+[node name="MovingNutcracker5" parent="." instance=ExtResource("26_gpsu8")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -388.872, 158.43, 1552.89)
+curve = SubResource("Curve3D_knpfq")
+
+[node name="MovingNutcracker6" parent="." instance=ExtResource("26_gpsu8")]
+transform = Transform3D(-1.00019, 0, -8.74391e-08, 0, 1.00019, 0, 8.74391e-08, 0, -1.00019, -403.075, 158.43, 1530.89)
+curve = SubResource("Curve3D_knpfq")
+
+[node name="HomingAttackTarget2" parent="." instance=ExtResource("6_ybxcj")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, -261.795, 162.63, 1461.87)
+
+[node name="HomingAttackTarget3" parent="." instance=ExtResource("6_ybxcj")]
+transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, -241.191, 162.63, 1461.87)
