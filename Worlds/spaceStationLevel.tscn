@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=38 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -56,6 +56,46 @@ albedo_texture = ExtResource("25_7ffrx")
 uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="Curve3D" id="Curve3D_knpfq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_a12be"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_0txsc"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_pn80m"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_c2l6a"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_la5pk"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -1637,23 +1677,23 @@ curve = SubResource("Curve3D_knpfq")
 
 [node name="MovingNutcracker3" parent="." instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -276.251, 158.43, 1474.27)
-curve = SubResource("Curve3D_knpfq")
+curve = SubResource("Curve3D_a12be")
 
 [node name="MovingNutcracker2" parent="." instance=ExtResource("26_gpsu8")]
 transform = Transform3D(-1.00019, 0, -8.74391e-08, 0, 1.00019, 0, 8.74391e-08, 0, -1.00019, -290.454, 158.43, 1452.27)
-curve = SubResource("Curve3D_knpfq")
+curve = SubResource("Curve3D_0txsc")
 
 [node name="MovingNutcracker4" parent="." instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -415.477, 158.43, 1552.89)
-curve = SubResource("Curve3D_knpfq")
+curve = SubResource("Curve3D_pn80m")
 
 [node name="MovingNutcracker5" parent="." instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -388.872, 158.43, 1552.89)
-curve = SubResource("Curve3D_knpfq")
+curve = SubResource("Curve3D_c2l6a")
 
 [node name="MovingNutcracker6" parent="." instance=ExtResource("26_gpsu8")]
 transform = Transform3D(-1.00019, 0, -8.74391e-08, 0, 1.00019, 0, 8.74391e-08, 0, -1.00019, -403.075, 158.43, 1530.89)
-curve = SubResource("Curve3D_knpfq")
+curve = SubResource("Curve3D_la5pk")
 
 [node name="HomingAttackTarget2" parent="." instance=ExtResource("6_ybxcj")]
 transform = Transform3D(-4.37195e-08, 0, 1.00019, 0, 1.00019, 0, -1.00019, 0, -4.37195e-08, -261.795, 162.63, 1461.87)
