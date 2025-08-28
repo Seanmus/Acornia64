@@ -82,12 +82,5 @@ func _GetClosestTarget():
 			#Checks if the distance to the target is less then the distance to the previous closest target
 			if closestTarget && position.distance_to(target.global_position) < player.position.distance_to(closestTarget.global_position) && !raycast.is_colliding():
 				closestTarget = target
-			print("Collision point " + str(raycast.is_colliding()) + "Target:" + str(target))
-			
-			#if not closestTarget && raycast.get_collider().global_position == target.global_position:
-				#closestTarget = target
-			#Checks if the distance to the target is less then the distance to the previous closest target
-			#if closestTarget && position.distance_to(target.global_position) < player.position.distance_to(closestTarget.global_position) && raycast.get_collider() == target:
-				#closestTarget = target
-		#If a closest target was found returns the one otherwise null is returned
+			#print("Collision point " + str(raycast.is_colliding()) + "Target:" + str(target))
 		return closestTarget
