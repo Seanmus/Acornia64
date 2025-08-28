@@ -5,5 +5,5 @@
 [resource]
 shader = ExtResource("1_lcctf")
 shader_parameter/circle_size = 1.05
-shader_parameter/screen_width = 600.0
+shader_parameter/screen_width = 1000.0
 shader_parameter/screen_height = 600.0
