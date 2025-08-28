@@ -407,13 +407,13 @@ transform = Transform3D(-8.09584e-07, 1.32045e-14, -2.33, -5.96047e-08, 2.33, 6.
 transform = Transform3D(-8.09584e-07, 1.32045e-14, -2.33, -5.96047e-08, 2.33, 6.87884e-14, 2.33, 5.96047e-08, -7.49979e-07, 389.474, 16.6376, -44.9999)
 
 [node name="speedBoost37" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
-transform = Transform3D(2.33, 5.96047e-08, -7.7486e-07, -5.96047e-08, 2.33, 6.62557e-14, 8.9407e-07, -1.06581e-14, 2.33, 351.474, 16.6376, -55.7999)
+transform = Transform3D(2.33, 5.96047e-08, -7.7486e-07, -5.96047e-08, 2.33, 6.62557e-14, 8.9407e-07, -1.06581e-14, 2.33, 351.474, 16.6376, -56.3999)
 
 [node name="speedBoost35" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
-transform = Transform3D(-2.25061, 0.603048, 8.22801e-07, 0.603048, 2.25061, -2.20469e-07, -9.11431e-07, 1.05991e-14, -2.33, 375.874, 18.4376, -3.5999)
+transform = Transform3D(-2.25061, 0.603048, 8.22801e-07, 0.603048, 2.25061, -2.20469e-07, -9.11431e-07, 1.05991e-14, -2.33, 375.874, 18.4376, -3.3999)
 
 [node name="speedBoost36" parent="HomingAttackTargets" instance=ExtResource("7_6d88o")]
-transform = Transform3D(-8.09584e-07, 4.51876e-14, -2.33, -5.96046e-08, 2.33, 7.22708e-14, 2.33, 5.96046e-08, -7.49979e-07, 284.674, 37.8376, 56.8001)
+transform = Transform3D(-8.09584e-07, 4.51876e-14, -2.33, -5.96046e-08, 2.33, 7.22708e-14, 2.33, 5.96046e-08, -7.49979e-07, 284.674, 37.8376, 61.2515)
 newMaxSpeed = 40
 
 [node name="SpeedBoostRamp" parent="HomingAttackTargets" instance=ExtResource("8_pw0j6")]
