@@ -2039,13 +2039,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.1408, 0.899408, 65.3352)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.1408, 0.899408, 65.3352)
 
 [node name="MetalBox43" parent="MetalPathways" instance=ExtResource("9_8bvpm")]
-transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 41.1408, 3.49941, 71.5352)
+transform = Transform3D(1, 0, 0, 0, 3.39129e-08, 1, 0, -1.13793, 2.98023e-08, 41.1408, 3.49941, 71.3427)
 
 [node name="MetalBox44" parent="MetalPathways" instance=ExtResource("9_8bvpm")]
-transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 51.1408, 3.49941, 71.5352)
+transform = Transform3D(1, 0, 0, 0, 3.39129e-08, 1, 0, -1.13793, 2.98023e-08, 51.1408, 3.49941, 71.3427)
 
 [node name="MetalBox45" parent="MetalPathways" instance=ExtResource("9_8bvpm")]
-transform = Transform3D(1, 0, 0, 0, 2.98023e-08, 1, 0, -1, 2.98023e-08, 61.1408, 3.49941, 71.5352)
+transform = Transform3D(1, 0, 0, 0, 3.39129e-08, 1, 0, -1.13793, 2.98023e-08, 61.1408, 3.49941, 71.3427)
 
 [node name="MetalBox46" parent="MetalPathways" instance=ExtResource("9_8bvpm")]
 transform = Transform3D(1, 0, 0, 0, 1, -7.35137e-08, 0, 7.35137e-08, 1, 41.1408, 6.09941, 77.5352)
