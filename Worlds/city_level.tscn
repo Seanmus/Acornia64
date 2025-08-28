@@ -199,19 +199,19 @@ transform = Transform3D(0, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 0, -8.88178
 transform = Transform3D(-4.37114e-08, 0.726, 0, -1, -3.17345e-08, 0, 0, 0, 1, -0.143203, 1.49216, -184.914)
 
 [node name="MetalPillar7" parent="MetalPillars" instance=ExtResource("18_ao8uu")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 189.61, 27.3258, 49.0984)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 189.264, 27.22, 48.9997)
 
 [node name="MetalPillar8" parent="MetalPillars" instance=ExtResource("18_ao8uu")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 203.039, 27.3258, 49.0984)
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 202.763, 27.22, 48.9997)
 
 [node name="MetalPillar9" parent="MetalPillars" instance=ExtResource("18_ao8uu")]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.3258, 29.8592)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.22, 29.8081)
 
 [node name="MetalPillar11" parent="MetalPillars" instance=ExtResource("18_ao8uu")]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.3258, 43.2592)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.22, 43.2592)
 
 [node name="MetalPillar10" parent="MetalPillars" instance=ExtResource("18_ao8uu")]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.3258, 16.4309)
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 210.513, 27.22, 16.3798)
 
 [node name="Player" parent="." node_paths=PackedStringArray("spawnPoints") instance=ExtResource("2_iqfuu")]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 306.807, -39.2971, 341.54)
