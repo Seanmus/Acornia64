@@ -28,11 +28,11 @@ func _ready():
 		return
 	print("Steam is running")
 	var id = Steam.getSteamID()
-	var name = Steam.getFriendPersonaName(id)
-	print(name)
+	var steamName = Steam.getFriendPersonaName(id)
+	print(steamName)
 	print(id)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	Steam.run_callbacks()
 
 func _reset():

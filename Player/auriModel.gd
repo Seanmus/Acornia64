@@ -7,13 +7,13 @@ signal jumpFinished
 @export var player : CharacterBody3D
 
 func death_Finished():
-	emit_signal("deathFinished")
+	deathFinished.emit()
 	$SKM_Auri/AnimationPlayer.play("RESET")
 	$SKM_Auri/AnimationTree.active = true
 	$SKM_Auri/AnimationPlayer.play("idle")
 
 func jump_Finished():
-	emit_signal("jumpFinished")
+	jumpFinished.emit()
 
 func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
