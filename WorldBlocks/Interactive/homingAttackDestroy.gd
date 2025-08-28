@@ -8,14 +8,17 @@ extends homingAttackTarget
 
 func _Hit():
 	super()
-	var cloud = hitEffect.instantiate()
-	get_tree().root.add_child(cloud)
-	cloud.position = global_position
+	_SpawnCloud()
 
 	var soundEffect  = hitSoundEffect.instantiate()
 	get_tree().root.add_child(soundEffect)
 	parent.process_mode = Node.PROCESS_MODE_DISABLED
 	parent.visible = false
+
+func _SpawnCloud():
+	var cloud = hitEffect.instantiate()
+	get_tree().root.add_child(cloud)
+	cloud.position = global_position
 
 func _Reset():
 	super()
@@ -23,3 +26,4 @@ func _Reset():
 func _Respawn():	
 	parent.process_mode = Node.PROCESS_MODE_INHERIT
 	parent.visible = true
+	_SpawnCloud()

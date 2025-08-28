@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://boe2lngb6cfv"]
+[gd_scene load_steps=9 format=3 uid="uid://boe2lngb6cfv"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/homingAttackDestroy.gd" id="1_0go71"]
 [ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="2_02f7w"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="2_xo7sn"]
 [ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_awg5l"]
 [ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://Traps/Enemies/squirell.tscn" id="4_q6rxu"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_0y1e6"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
 
@@ -30,4 +31,12 @@ stream = ExtResource("2_02f7w")
 [node name="squirell" parent="." instance=ExtResource("4_q6rxu")]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
 
+[node name="RespawnTimer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 5.0
+one_shot = true
+script = ExtResource("7_0y1e6")
+
 [connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
+[connection signal="onHit" from="." to="RespawnTimer" method="_on_homing_attack_killed"]
+[connection signal="timeout" from="RespawnTimer" to="." method="_Respawn"]
