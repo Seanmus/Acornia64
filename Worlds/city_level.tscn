@@ -1,6 +1,7 @@
-[gd_scene load_steps=52 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=53 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
+[ext_resource type="AudioStream" uid="uid://cg2u4qo5xroly" path="res://Audio/Music/fever_stadium_bpm165.ogg" id="2_h8y3k"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_iqfuu"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="5_8cas3"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="8_fsgbp"]
@@ -159,6 +160,7 @@ uv1_scale = Vector3(20, 20, 20)
 [node name="spaceLevel" type="Node3D" node_paths=PackedStringArray("UINode")]
 script = ExtResource("1_dmlmg")
 UINode = NodePath("UI")
+levelMusic = ExtResource("2_h8y3k")
 
 [node name="SpeedBoostRamp4" parent="." instance=ExtResource("32_b0rqt")]
 transform = Transform3D(-1.01848e-07, 0, 2.33, 1.165, 2.01784, 5.09238e-08, -2.01784, 1.165, -8.82025e-08, 180.113, 103.579, -365.838)

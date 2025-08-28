@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://c01rhkdvbxs3g"]
+[gd_scene load_steps=31 format=3 uid="uid://c01rhkdvbxs3g"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_6fxah"]
+[ext_resource type="AudioStream" uid="uid://dyocr8h57fva1" path="res://Audio/Music/578066__sirplus__rainbowglazeloop16-mastered.wav" id="2_6nw3k"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_wxx5d"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_0r6t5"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_05mqp"]
@@ -74,6 +75,7 @@ uv1_scale = Vector3(20, 20, 20)
 [node name="newForest2" type="Node3D"]
 script = ExtResource("1_6fxah")
 nextLevel = "space_level"
+levelMusic = ExtResource("2_6nw3k")
 
 [node name="Player" parent="." instance=ExtResource("2_wxx5d")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -77.0805, 5.31911, 14.0534)

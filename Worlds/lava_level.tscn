@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://chx8nc7gqiuis"]
+[gd_scene load_steps=31 format=3 uid="uid://chx8nc7gqiuis"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_n27il"]
+[ext_resource type="AudioStream" uid="uid://coetmktbd0mu0" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 1.wav" id="2_0h673"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="2_xh2n1"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="3_ukj2j"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="4_njel1"]
@@ -87,6 +88,7 @@ albedo_texture = ExtResource("5_512im")
 [node name="lavaLevel" type="Node3D" node_paths=PackedStringArray("UINode")]
 script = ExtResource("1_n27il")
 UINode = NodePath("UI")
+levelMusic = ExtResource("2_0h673")
 
 [node name="Death" parent="." instance=ExtResource("2_xh2n1")]
 transform = Transform3D(9.89228, 0, 0, 0, 55.7761, 0, 0, 0, 23.645, -84.8822, -120.73, 0)

@@ -13,7 +13,7 @@ dest_files=["res://godot/imported/fever_stadium_bpm165.ogg-cd1b123f529c42c8da305
 [params]
 
 loop=true
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

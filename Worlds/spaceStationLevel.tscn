@@ -1,8 +1,9 @@
-[gd_scene load_steps=38 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=39 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
 [ext_resource type="MeshLibrary" uid="uid://cypae8l5wdq5f" path="res://WorldBlocks/MeshLibraries/BaseWorldBlocks.tres" id="2_j6uvp"]
+[ext_resource type="AudioStream" uid="uid://behikmbciywxe" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 3.wav" id="2_y82gb"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_itlwk"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_qfb5v"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="6_ybxcj"]
@@ -107,6 +108,7 @@ point_count = 3
 transform = Transform3D(0.999814, 0, 0, 0, 0.999814, 0, 0, 0, 0.999814, 0, 0, 0)
 script = ExtResource("1_lbn7d")
 nextLevel = "space_level"
+levelMusic = ExtResource("2_y82gb")
 
 [node name="Ground" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.275, -2.5)
