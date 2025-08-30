@@ -1482,7 +1482,7 @@ transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 92.8, 22
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 92.8, -58.6, -364.133)
 
 [node name="TallBuildingBricks24" parent="Buildings" instance=ExtResource("14_8g0gu")]
-transform = Transform3D(-1, 0, -2.22525e-07, 0, 1, 0, 2.22525e-07, 0, -1, 175.4, 47.594, 2.6666)
+transform = Transform3D(-1, 0, -2.22525e-07, 0, 1, 0, 2.22525e-07, 0, -1, 175.41, 47.593, 2.667)
 
 [node name="TallBuildingBricks6" parent="Buildings" instance=ExtResource("14_8g0gu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.287, -80.0836, -140.389)
