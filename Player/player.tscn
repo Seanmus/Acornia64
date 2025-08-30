@@ -18,7 +18,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_lj47o"]
-length = 2.0
+length = 0.1
 slide_on_slope = true
 
 [sub_resource type="Animation" id="Animation_ppe4r"]
@@ -203,23 +203,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.146448, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.410409, -0.000572353, -0.00293561)
-bones/3/position = Vector3(0.055051, 5.24237e-05, 0.00336143)
-bones/3/rotation = Quaternion(-0.237797, -0.237797, -0.665923, 0.665923)
-bones/4/position = Vector3(-0.0299027, 0.0243869, -0.015456)
-bones/5/position = Vector3(-0.0133907, -0.192739, 0.0257021)
-bones/5/rotation = Quaternion(0.0121801, 0.682921, 0.713898, -0.154336)
-bones/7/position = Vector3(-0.0129918, 0.193065, 0.0259917)
-bones/7/rotation = Quaternion(-0.717865, 0.128142, 0.0142189, 0.68414)
-bones/9/position = Vector3(-0.0204199, 0.0486971, -0.0171425)
-bones/9/rotation = Quaternion(0.728988, -0.683859, -0.00219837, 0.0301292)
-bones/11/position = Vector3(-0.066841, -0.03248, -0.197307)
-bones/11/rotation = Quaternion(-0.015236, -0.0166033, -0.0399975, 0.998946)
-bones/13/position = Vector3(-0.0202886, -0.0485809, -0.0171914)
-bones/13/rotation = Quaternion(0.00462904, 0.0637496, -0.725121, 0.685648)
-bones/15/position = Vector3(0.0662074, 0.0154023, 0.162782)
-bones/15/rotation = Quaternion(0.0317678, -0.0137105, -0.0113795, 0.999337)
+bones/1/position = Vector3(0.148717, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.411854, -0.000582578, -0.00298806)
+bones/3/position = Vector3(0.0560004, 4.93196e-05, 0.00341438)
+bones/3/rotation = Quaternion(-0.238389, -0.238389, -0.665711, 0.665711)
+bones/4/position = Vector3(-0.0304184, 0.0248074, -0.0157225)
+bones/5/position = Vector3(-0.0165771, -0.19185, 0.0256222)
+bones/5/rotation = Quaternion(-0.0241606, 0.685256, 0.69966, -0.200789)
+bones/7/position = Vector3(-0.0159025, 0.192306, 0.0260841)
+bones/7/rotation = Quaternion(-0.708213, 0.159361, -0.0210694, 0.687455)
+bones/9/position = Vector3(-0.0200199, 0.0486971, -0.0165695)
+bones/9/rotation = Quaternion(0.728795, -0.683118, -0.0168488, 0.0438646)
+bones/11/position = Vector3(-0.0670191, -0.0306627, -0.195758)
+bones/11/rotation = Quaternion(0.00474853, -0.0145501, -0.0394743, 0.999103)
+bones/13/position = Vector3(-0.0200843, -0.0485557, -0.0169582)
+bones/13/rotation = Quaternion(-0.00611897, 0.074749, -0.726578, 0.682978)
+bones/15/position = Vector3(0.0662051, 0.0183604, 0.161719)
+bones/15/rotation = Quaternion(0.0470434, -0.0133439, -0.00792035, 0.998772)
+
+[node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
+transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")

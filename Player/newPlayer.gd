@@ -21,6 +21,7 @@ var heldDownTime = 0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pivot = $CameraControllerPivot
 @onready var mainCamera = $CameraControllerPivot/SpringArm3D/Camera3D
+@onready var springArm = $CameraControllerPivot/SpringArm3D
 @onready var landSound = $LandSound
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
 @onready var auri = $auriModel
@@ -40,6 +41,7 @@ func _ready():
 	Manager.on_win.connect(Win)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	_SetSpawnPoint(position, rotation)
+	springArm.add_excluded_object(self)
 
 func _SetSpawnPoint(spawnPoint, spawnerRotation):
 	spawnPos = spawnPoint
@@ -67,6 +69,10 @@ func _physics_process(delta):
 	if homingAttack:
 		HomingAttackComponent._HomingAttack(delta)
 		return
+	if springArm.get_hit_length() < 0.55:
+		visible = false
+	else:
+		visible = true
 
 	#If the game is not over and the player is not performing a homing attack
 	hurtMonitor.monitoring = true
