@@ -26,7 +26,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var auri = $auriModel
 @onready var poofCloud = load("res://Player/jumpCloud.tscn")
 @onready var hurtMonitor = $HurtMonitor
-@onready var HomingAttackComponent = $HomingAttackComponent
+@onready var HomingAttackComponent = $auriModel/HomingAttackComponent
 
 var spawnPos
 var spawnRotation

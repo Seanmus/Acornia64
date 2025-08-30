@@ -85,9 +85,6 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_iqq1t"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
-size = Vector3(0.955, 1.94702, 2.17749)
-
 [sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
 emission_shape = 1
 emission_sphere_radius = 1.0
@@ -113,6 +110,9 @@ billboard_keep_scale = true
 material = SubResource("StandardMaterial3D_71gfw")
 size = Vector2(0.656, 0.406)
 orientation = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fpp87"]
+size = Vector3(0.955, 1.94702, 2.17749)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_t5txg"]
 radius = 0.573245
@@ -198,45 +198,28 @@ target_position = Vector3(0, 0, 0)
 hit_back_faces = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 
-[node name="HomingAttackComponent" type="Area3D" parent="." node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider", "raycast")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.03774)
-script = ExtResource("10_hdytl")
-player = NodePath("..")
-hurtMonitor = NodePath("../HurtMonitor")
-cameraAnimPlayer = NodePath("../CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer")
-homingEffect = NodePath("../Homing")
-playerCollider = NodePath("../CollisionShape3D")
-raycast = NodePath("../RayCast3D")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackComponent"]
-transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 1.15369, -13.7557)
-shape = SubResource("BoxShape3D_fpp87")
-
 [node name="auriModel" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.146115, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.410197, -0.000570854, -0.00292793)
-bones/3/position = Vector3(0.0549068, 5.00343e-05, 0.0033498)
-bones/3/rotation = Quaternion(-0.235985, -0.235985, -0.666567, 0.666567)
-bones/4/position = Vector3(-0.0298244, 0.024323, -0.0154155)
-bones/5/position = Vector3(-0.0129333, -0.192872, 0.0257141)
-bones/5/rotation = Quaternion(0.0174998, 0.682442, 0.7157, -0.147446)
-bones/7/position = Vector3(-0.0125717, 0.193172, 0.0259783)
-bones/7/rotation = Quaternion(-0.719167, 0.123521, 0.0193611, 0.683496)
-bones/9/position = Vector3(-0.0204776, 0.0486971, -0.0172316)
-bones/9/rotation = Quaternion(0.728992, -0.683945, -5.05671e-05, 0.0281143)
-bones/11/position = Vector3(-0.0668138, -0.0327571, -0.197545)
-bones/11/rotation = Quaternion(-0.0181653, -0.0169039, -0.0400718, 0.998889)
-bones/13/position = Vector3(-0.0202969, -0.0485821, -0.0172019)
-bones/13/rotation = Quaternion(0.00620906, 0.0621401, -0.724891, 0.686027)
-bones/15/position = Vector3(0.0661976, 0.0149693, 0.162971)
-bones/15/rotation = Quaternion(0.0295281, -0.0137722, -0.011888, 0.999398)
-
-[node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
+bones/1/position = Vector3(0.146448, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.410409, -0.000572353, -0.00293561)
+bones/3/position = Vector3(0.055051, 5.24237e-05, 0.00336143)
+bones/3/rotation = Quaternion(-0.237797, -0.237797, -0.665923, 0.665923)
+bones/4/position = Vector3(-0.0299027, 0.0243869, -0.015456)
+bones/5/position = Vector3(-0.0133907, -0.192739, 0.0257021)
+bones/5/rotation = Quaternion(0.0121801, 0.682921, 0.713898, -0.154336)
+bones/7/position = Vector3(-0.0129918, 0.193065, 0.0259917)
+bones/7/rotation = Quaternion(-0.717865, 0.128142, 0.0142189, 0.68414)
+bones/9/position = Vector3(-0.0204199, 0.0486971, -0.0171425)
+bones/9/rotation = Quaternion(0.728988, -0.683859, -0.00219837, 0.0301292)
+bones/11/position = Vector3(-0.066841, -0.03248, -0.197307)
+bones/11/rotation = Quaternion(-0.015236, -0.0166033, -0.0399975, 0.998946)
+bones/13/position = Vector3(-0.0202886, -0.0485809, -0.0171914)
+bones/13/rotation = Quaternion(0.00462904, 0.0637496, -0.725121, 0.685648)
+bones/15/position = Vector3(0.0662074, 0.0154023, 0.162782)
+bones/15/rotation = Quaternion(0.0317678, -0.0137105, -0.0113795, 0.999337)
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
@@ -250,6 +233,20 @@ randomness = 1.0
 collision_base_size = 0.1
 process_material = SubResource("ParticlesMaterial_qbyin")
 draw_pass_1 = SubResource("QuadMesh_bu1i1")
+
+[node name="HomingAttackComponent" type="Area3D" parent="auriModel" node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider", "raycast")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.576, 1.03774)
+script = ExtResource("10_hdytl")
+player = NodePath("../..")
+hurtMonitor = NodePath("../../HurtMonitor")
+cameraAnimPlayer = NodePath("../../CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer")
+homingEffect = NodePath("../../Homing")
+playerCollider = NodePath("../../CollisionShape3D")
+raycast = NodePath("../../RayCast3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="auriModel/HomingAttackComponent"]
+transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 1.15369, -13.7557)
+shape = SubResource("BoxShape3D_fpp87")
 
 [node name="CrushDetector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984555, 0)
@@ -357,10 +354,10 @@ shape = SubResource("SphereShape3D_aqnfm")
 
 [connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]
-[connection signal="area_entered" from="HomingAttackComponent" to="HomingAttackComponent" method="_on_target_detection_area_area_entered"]
-[connection signal="area_exited" from="HomingAttackComponent" to="HomingAttackComponent" method="_on_target_detection_area_area_exited"]
 [connection signal="deathFinished" from="auriModel" to="." method="_on_deathFinished"]
 [connection signal="jumpFinished" from="auriModel" to="." method="_JumpFinished"]
+[connection signal="area_entered" from="auriModel/HomingAttackComponent" to="auriModel/HomingAttackComponent" method="_on_target_detection_area_area_entered"]
+[connection signal="area_exited" from="auriModel/HomingAttackComponent" to="auriModel/HomingAttackComponent" method="_on_target_detection_area_area_exited"]
 [connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]
 [connection signal="body_entered" from="CrushDetector" to="." method="_on_crush_detector_body_entered"]
 [connection signal="body_entered" from="MovingPlatformDetector" to="." method="_on_moving_platform_detector_body_entered"]
