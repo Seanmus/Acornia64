@@ -1507,7 +1507,7 @@ transform = Transform3D(2.25252, -0.595858, 1.37382e-14, 0.595858, 2.25252, 3.63
 transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-07, 45.4662, 1.63558, 112.282)
 
 [node name="Earth" parent="." instance=ExtResource("14_n7o4n")]
-transform = Transform3D(555.222, 0, 0, 0, 555.222, 0, 0, 0, 555.222, -83.397, -1029.81, 235.2)
+transform = Transform3D(-277.611, 0, -480.836, 0, 555.222, 0, 480.836, 0, -277.611, -83.397, -1029.81, 235.2)
 
 [node name="DifferentTop3x1" parent="." instance=ExtResource("18_api8d")]
 transform = Transform3D(9.89736, 0.411426, 2.52597, 0, 10.0899, -1.64343, -2.55926, 1.5911, 9.76863, -156.698, 54.1196, 81.4827)

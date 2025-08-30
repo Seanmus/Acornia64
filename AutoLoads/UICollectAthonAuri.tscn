@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl4gkvxur3be"]
+[gd_scene load_steps=7 format=3 uid="uid://cl4gkvxur3be"]
 
 [ext_resource type="Script" path="res://AutoLoads/ui_collect_athon_auri.gd" id="1_ev887"]
 [ext_resource type="Texture2D" uid="uid://ddakc78pntrem" path="res://UI/Images/UIWoodPanel.png" id="2_tpm3u"]
 [ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="3_84nwp"]
 [ext_resource type="Texture2D" uid="uid://i81ajv45prur" path="res://UI/Images/sunFlowerSeedRenderDark.png" id="5_s2171"]
 [ext_resource type="Texture2D" uid="uid://cklipsrkepll7" path="res://UI/Images/sunflowerLight.png" id="6_8vjqs"]
-[ext_resource type="FontFile" uid="uid://boiewx4478ao" path="res://UI/ZCOOLKuaiLe-Regular.ttf" id="6_q0ptd"]
 
 [sub_resource type="Theme" id="Theme_gmcgj"]
 
@@ -87,7 +86,7 @@ offset_top = 105.0
 offset_right = 1915.0
 offset_bottom = 263.0
 theme = ExtResource("3_84nwp")
+theme_override_colors/font_color = Color(0.996078, 0.392157, 0.964706, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("6_q0ptd")
 theme_override_font_sizes/font_size = 96
 text = "X 0"

@@ -32,9 +32,8 @@ adjustment_saturation = 1.7
 script = ExtResource("1_y5d1u")
 nextLevel = "space_level"
 
-[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("2_ntrnj")]
+[node name="Player" parent="." instance=ExtResource("2_ntrnj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.2352, 3, 5.49094)
-UI = NodePath("../UI")
 
 [node name="Death" parent="." instance=ExtResource("8_gohtk")]
 transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828, 0)
@@ -761,5 +760,4 @@ transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926
 [node name="cheese44" parent="Cheese" instance=ExtResource("14_1csn6")]
 transform = Transform3D(1, 0, 0, 0, -0.965926, 0.258819, 0, -0.258819, -0.965926, 221.2, 41.8, -187.2)
 
-[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("17_gh1tw")]
-cheeseParent = NodePath("../Cheese")
+[node name="UI" parent="." instance=ExtResource("17_gh1tw")]

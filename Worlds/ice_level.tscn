@@ -49,10 +49,9 @@ transform = Transform3D(9.89228, 0, 0, 0, 55.7761, 0, 0, 0, 23.645, -84.8822, -6
 [node name="Death2" parent="." instance=ExtResource("2_o5lj0")]
 transform = Transform3D(23.8333, 0, 0, 0, 1.124, 0, 0, 0, 31.741, 312.171, -117.179, 0)
 
-[node name="Player" parent="." node_paths=PackedStringArray("UI") instance=ExtResource("4_3tsit")]
+[node name="Player" parent="." instance=ExtResource("4_3tsit")]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.71, -39.5648, 275.095)
 floor_block_on_wall = false
-UI = NodePath("../UI")
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -94,8 +93,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 301.35
 [node name="tire" parent="Tires" instance=ExtResource("15_cnh0n")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.777, 31.148, 210.049)
 
-[node name="UI" parent="." node_paths=PackedStringArray("cheeseParent") instance=ExtResource("21_ehj2b")]
-cheeseParent = NodePath("../Cheese")
+[node name="UI" parent="." instance=ExtResource("21_ehj2b")]
 
 [node name="SpawnPoints" type="Node" parent="."]
 

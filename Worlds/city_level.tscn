@@ -1283,7 +1283,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 159.777, 16.148, 234.849)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 132.377, 19.948, 234.849)
 
 [node name="tire2" parent="Tires" instance=ExtResource("12_ej2tk")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 218.22, 36.9723, 169.249)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 218.22, 36.5829, 169.249)
 
 [node name="tire3" parent="Tires" instance=ExtResource("12_ej2tk")]
 transform = Transform3D(-5.24537e-08, 0, -1.2, 0, 1.2, 0, 1.2, 0, -5.24537e-08, 401.155, 56.3923, -190.24)

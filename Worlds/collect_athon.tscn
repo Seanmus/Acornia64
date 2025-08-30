@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://dey3jnwy7ideg"]
+[gd_scene load_steps=24 format=3 uid="uid://dey3jnwy7ideg"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_8e3gr"]
 [ext_resource type="PackedScene" uid="uid://cjjcne44asy87" path="res://WorldBlocks/green_bricks.tscn" id="1_x40l4"]
+[ext_resource type="AudioStream" uid="uid://dyocr8h57fva1" path="res://Audio/Music/578066__sirplus__rainbowglazeloop16-mastered.wav" id="2_ixsfl"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_vemqm"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_75kvb"]
 [ext_resource type="PackedScene" uid="uid://ct7mwusx3nm41" path="res://FlowerPower/tree.tscn" id="4_ilknr"]
@@ -42,6 +43,7 @@ point_count = 2
 [node name="CollectAthon" type="Node3D"]
 script = ExtResource("1_8e3gr")
 gameMode = "collect_athon"
+levelMusic = ExtResource("2_ixsfl")
 
 [node name="Player" parent="." instance=ExtResource("2_vemqm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.727, 3.04128, 20.7593)
