@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://d0mcpw1h1jqxw"]
+[gd_scene load_steps=55 format=3 uid="uid://d0mcpw1h1jqxw"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_dmlmg"]
 [ext_resource type="AudioStream" uid="uid://cg2u4qo5xroly" path="res://Audio/Music/fever_stadium_bpm165.ogg" id="2_h8y3k"]
@@ -57,6 +57,13 @@ viewport_path = NodePath("SubViewportContainer/SubViewport")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1k3fp"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_ynym2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_02ule"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjlxb"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_02ule")
 
 [sub_resource type="Curve3D" id="Curve3D_1ylxs"]
 resource_local_to_scene = true
@@ -1065,6 +1072,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_vxvrb")
 transform = Transform3D(13.247, -4.89222e-14, -2.91599e-21, -2.80517e-21, -5.79047e-07, -13.247, 4.89222e-14, 13.247, -5.79047e-07, 62.0843, 18.1889, -252.749)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_1k3fp")
+
+[node name="VideoPlayer3" parent="Blocks" instance=ExtResource("22_lduvi")]
+transform = Transform3D(-5.79045e-07, 13.247, -5.79047e-07, -2.80517e-21, -5.79047e-07, -13.247, -13.247, -5.79045e-07, 2.5311e-14, 191.589, 9.20375, -29.8783)
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_vjlxb")
 
 [node name="MetalPillarProperScale" parent="Blocks" instance=ExtResource("10_37vwi")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 298.708, -40.929, 298.31)
