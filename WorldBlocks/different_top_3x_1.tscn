@@ -1,19 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://xg63xqo7ckwk"]
+[gd_scene load_steps=8 format=3 uid="uid://xg63xqo7ckwk"]
 
 [ext_resource type="PackedScene" uid="uid://c2qhg0kdg5njr" path="res://WorldBlocks/Imports/DifferentTop3x1.glb" id="1_wonsy"]
-[ext_resource type="Texture2D" uid="uid://ctftim43y2lex" path="res://Materials/green_bricks_albedo.png" id="2_wfyj4"]
-[ext_resource type="Texture2D" uid="uid://bbs8kxfvrkw03" path="res://Materials/green_bricks_normal.png" id="3_p1b7b"]
+[ext_resource type="Texture2D" uid="uid://d0ymg6h8lp20y" path="res://Textures/BlueBrick.png" id="2_71qbe"]
 [ext_resource type="Texture2D" uid="uid://b1t6rxyl4xsb" path="res://Materials/new_space_station_albedo.png" id="4_6uktm"]
 [ext_resource type="Texture2D" uid="uid://d05oejdhwwj1n" path="res://Materials/new_space_station_normal.png" id="5_x07if"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iy16s"]
-albedo_color = Color(0, 1, 0.917969, 1)
-albedo_texture = ExtResource("2_wfyj4")
-roughness = 1.46
-normal_enabled = true
-normal_scale = 10.0
-normal_texture = ExtResource("3_p1b7b")
-uv1_scale = Vector3(1.455, 1.455, 1.455)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u403l"]
+albedo_color = Color(0, 0.184314, 0.239216, 1)
+albedo_texture = ExtResource("2_71qbe")
+uv1_scale = Vector3(12, 1, 4)
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ps8iy"]
@@ -33,7 +28,7 @@ data = PackedVector3Array(1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, -1, 
 [node name="DifferentTop3x1" instance=ExtResource("1_wonsy")]
 
 [node name="Cube" parent="." index="0"]
-surface_material_override/0 = SubResource("StandardMaterial3D_iy16s")
+surface_material_override/0 = SubResource("StandardMaterial3D_u403l")
 surface_material_override/1 = SubResource("StandardMaterial3D_ps8iy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
