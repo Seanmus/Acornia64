@@ -69,7 +69,7 @@ func _physics_process(delta):
 	if homingAttack:
 		HomingAttackComponent._HomingAttack(delta)
 		return
-	if springArm.get_hit_length() < 0.55:
+	if springArm.get_hit_length() < 0.95:
 		visible = false
 	else:
 		visible = true
