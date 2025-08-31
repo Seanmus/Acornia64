@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://byxrvpl4e341s"]
+
+[ext_resource type="Texture2D" uid="uid://d0ymg6h8lp20y" path="res://Textures/BlueBrick.png" id="1_gs4qf"]
+
+[resource]
+albedo_color = Color(0, 0.184314, 0.239216, 1)
+albedo_texture = ExtResource("1_gs4qf")
+uv1_scale = Vector3(0.2, 0.2, 0.2)
+uv1_triplanar = true
