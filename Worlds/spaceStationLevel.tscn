@@ -45,7 +45,7 @@ uv1_scale = Vector3(1.32, 1.32, 1.32)
 uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1ost"]
-size = Vector3(330.2, 10, 108.2)
+size = Vector3(330.2, 10.2, 108.2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b6sx0"]
 albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
@@ -896,15 +896,21 @@ size = Vector3(151.6, 1, 102)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox58" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 124.958, 154.784, 1672.98)
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 124.958, 134.484, 1672.98)
 material_override = ExtResource("15_gcvop")
-size = Vector3(370.2, 11, 70.6)
+size = Vector3(370.2, 11, 111.2)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox64" parent="." instance=ExtResource("11_dx50o")]
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 7.35137e-08, 1, 1.06602e-14, 3.21339e-15, -1.06602e-14, 1, 124.958, 88.4747, 1611.17)
+material_override = ExtResource("15_gcvop")
+size = Vector3(370.2, 19, 114)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox60" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(-1.17225e-07, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 1.17225e-07, 4.70955e-15, -55.2766, 138.584, 1613.38)
+transform = Transform3D(-1.17225e-07, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 1.17225e-07, 4.70955e-15, -55.2766, 118.184, 1613.38)
 material_override = ExtResource("15_gcvop")
-size = Vector3(130.2, 11, 38.2)
+size = Vector3(130.2, 11, 79)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox61" parent="." instance=ExtResource("11_dx50o")]
@@ -914,9 +920,9 @@ size = Vector3(129.8, 39.6, 38.2)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox59" parent="." instance=ExtResource("11_dx50o")]
-transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 124.958, 154.484, 1553.26)
+transform = Transform3D(1, -7.35137e-08, -2.79886e-15, 0, -4.37114e-08, 1, -7.35137e-08, -1, -4.37114e-08, 124.558, 134.381, 1551.06)
 material_override = ExtResource("15_gcvop")
-size = Vector3(370.2, 12, 70)
+size = Vector3(370.2, 13.2, 110.6)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox54" parent="." instance=ExtResource("11_dx50o")]
@@ -1594,15 +1600,15 @@ transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -405.475, 5
 transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -405.475, -22.9313, 204.638)
 
 [node name="Lava" parent="." instance=ExtResource("23_qqvdl")]
-transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, 126.924, 120.923, 1612.6)
-size = Vector3(364, 0.001, 127.6)
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, 126.924, 111.622, 1612.6)
+size = Vector3(364, 18.6, 127.6)
 
 [node name="Area3D" type="Area3D" parent="Lava" groups=["deadly"]]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lava/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6001, -4.5, 0.800171)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6001, -4.4, 0.800171)
 shape = SubResource("BoxShape3D_h1ost")
 
 [node name="SquirellWithShield7" parent="." instance=ExtResource("24_rlgua")]
