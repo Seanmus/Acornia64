@@ -18,7 +18,8 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_lj47o"]
-length = 0.1
+margin = 0.223
+length = 0.05
 slide_on_slope = true
 
 [sub_resource type="Animation" id="Animation_ppe4r"]
@@ -152,11 +153,13 @@ shape = SubResource("SeparationRayShape3D_lj47o")
 spring_length = 20.08
 margin = 1.39
 
-[node name="Camera3D" type="Camera3D" parent="CameraControllerPivot/SpringArm3D"]
+[node name="Dummy" type="Node3D" parent="CameraControllerPivot/SpringArm3D"]
+
+[node name="Camera3D" type="Camera3D" parent="CameraControllerPivot/SpringArm3D/Dummy"]
 environment = ExtResource("2_pbjct")
 current = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraControllerPivot/SpringArm3D/Camera3D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraControllerPivot/SpringArm3D/Dummy/Camera3D"]
 libraries = {
 "": SubResource("AnimationLibrary_uh4y7")
 }
@@ -203,23 +206,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.148699, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.411843, -0.000582497, -0.00298764)
-bones/3/position = Vector3(0.0560267, -7.66456e-05, 0.00316166)
-bones/3/rotation = Quaternion(-0.0906522, -0.0906522, -0.701272, 0.701272)
-bones/4/position = Vector3(-0.0304327, 0.0248191, -0.0157299)
-bones/5/position = Vector3(-0.0165661, -0.19186, 0.0256234)
-bones/5/rotation = Quaternion(-0.0240757, 0.685244, 0.699837, -0.200223)
-bones/7/position = Vector3(-0.0158895, 0.192306, 0.0260837)
-bones/7/rotation = Quaternion(-0.708357, 0.159025, -0.0208965, 0.68739)
-bones/9/position = Vector3(-0.0200085, 0.0486971, -0.0165539)
-bones/9/rotation = Quaternion(0.7288, -0.683123, -0.0167319, 0.0437574)
-bones/11/position = Vector3(-0.0670163, -0.0306843, -0.195794)
-bones/11/rotation = Quaternion(0.00459053, -0.0145654, -0.0394856, 0.999103)
-bones/13/position = Vector3(-0.0200761, -0.0485547, -0.0169489)
-bones/13/rotation = Quaternion(-0.00602141, 0.0746748, -0.726566, 0.683001)
-bones/15/position = Vector3(0.0661902, 0.0183373, 0.161777)
-bones/15/rotation = Quaternion(0.0469233, -0.0133513, -0.00795067, 0.998778)
+bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.40829, -0.000557372, -0.00285878)
+bones/3/position = Vector3(0.0540348, 3.7308e-06, 0.003221)
+bones/3/rotation = Quaternion(-0.195257, -0.195257, -0.679614, 0.679614)
+bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
+bones/5/position = Vector3(-0.00889628, -0.194252, 0.025841)
+bones/5/rotation = Quaternion(0.0723921, 0.674655, 0.730728, -0.075076)
+bones/7/position = Vector3(-0.008845, 0.194119, 0.0258439)
+bones/7/rotation = Quaternion(-0.72967, 0.0814384, 0.0665447, 0.675664)
+bones/9/position = Vector3(-0.0205935, 0.0486971, -0.0174102)
+bones/9/rotation = Quaternion(0.728652, -0.684485, 0.022239, 0.00718892)
+bones/11/position = Vector3(-0.0665578, -0.0356443, -0.199346)
+bones/11/rotation = Quaternion(-0.0485568, -0.0200149, -0.0408224, 0.997785)
+bones/13/position = Vector3(-0.020975, -0.048697, -0.0180271)
+bones/13/rotation = Quaternion(0.0205893, 0.047403, -0.722332, 0.689613)
+bones/15/position = Vector3(0.0660438, 0.0109576, 0.164819)
+bones/15/rotation = Quaternion(0.00909474, -0.014276, -0.0169388, 0.999713)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
@@ -245,7 +248,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.576, 1.03774)
 script = ExtResource("10_hdytl")
 player = NodePath("../..")
 hurtMonitor = NodePath("../../HurtMonitor")
-cameraAnimPlayer = NodePath("../../CameraControllerPivot/SpringArm3D/Camera3D/AnimationPlayer")
+cameraAnimPlayer = NodePath("../../CameraControllerPivot/SpringArm3D/Dummy/Camera3D/AnimationPlayer")
 homingEffect = NodePath("../../Homing")
 playerCollider = NodePath("../../CollisionShape3D")
 raycast = NodePath("../../RayCast3D")

@@ -20,7 +20,7 @@ var heldDownTime = 0
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var pivot = $CameraControllerPivot
-@onready var mainCamera = $CameraControllerPivot/SpringArm3D/Camera3D
+@onready var mainCamera = $CameraControllerPivot/SpringArm3D/Dummy/Camera3D
 @onready var springArm = $CameraControllerPivot/SpringArm3D
 @onready var landSound = $LandSound
 @onready var runCloud = $auriModel/SKM_Auri/runCloud
