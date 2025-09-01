@@ -8,7 +8,7 @@ var overlappedTargets = []
 @export var playerCollider : CollisionShape3D
 @export var raycast : RayCast3D
 var homingTarget
-var homingSpeed = 60
+var homingSpeed = 85
 var homingAttackBounceVelocity = 11
 
 func _ready() -> void:
