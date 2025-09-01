@@ -14,7 +14,6 @@ func _unhandled_input(event):
 
 func _CameraController(input_dir, sensitivity):
 	if not Manager.won:
-		print(input_dir)
 		playerCharacter.rotate_y(-input_dir.x * sensitivity)
 		playerModel.rotate_y(input_dir.x * sensitivity)
 		rotate_x(-input_dir.y * sensitivity)
