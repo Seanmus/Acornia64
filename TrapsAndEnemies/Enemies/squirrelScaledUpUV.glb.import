@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://co4pmmes5pkbl"
-path="res://godot/imported/squirell.glb-6b7f06ae51c20ec2c4926641727ff70d.scn"
+uid="uid://2ioyj5yioaos"
+path="res://godot/imported/squirrelScaledUpUV.glb-4c93d2b2786fc47deb956097be5393ea.scn"
 
 [deps]
 
-source_file="res://Traps/Enemies/squirell.glb"
-dest_files=["res://godot/imported/squirell.glb-6b7f06ae51c20ec2c4926641727ff70d.scn"]
+source_file="res://TrapsAndEnemies/Enemies/squirrelScaledUpUV.glb"
+dest_files=["res://godot/imported/squirrelScaledUpUV.glb-4c93d2b2786fc47deb956097be5393ea.scn"]
 
 [params]
 

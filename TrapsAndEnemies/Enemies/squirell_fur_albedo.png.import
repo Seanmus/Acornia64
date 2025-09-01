@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpsqh3ql25j8j"
-path="res://godot/imported/nutcracker_NutcrackerJacket.png-64bd421fe530be3904e63ceb5b21371d.ctex"
+uid="uid://cuoxqcp8mx5ki"
+path="res://godot/imported/squirell_fur_albedo.png-9c0f5a93e0b9bbf234ddc890a59b243a.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "0d1ae334510e3a8062a42dbe3c91603d"
+"md5": "6e19fb93f330364d81183de4a18ea442"
 }
 
 [deps]
 
-source_file="res://Traps/Enemies/nutcracker_NutcrackerJacket.png"
-dest_files=["res://godot/imported/nutcracker_NutcrackerJacket.png-64bd421fe530be3904e63ceb5b21371d.ctex"]
+source_file="res://TrapsAndEnemies/Enemies/squirell_fur_albedo.png"
+dest_files=["res://godot/imported/squirell_fur_albedo.png-9c0f5a93e0b9bbf234ddc890a59b243a.ctex"]
 
 [params]
 

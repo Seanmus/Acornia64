@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpokyy4dpbopg"]
 
-[ext_resource type="Script" path="res://Traps/lava_plume.gd" id="1_l05el"]
+[ext_resource type="Script" path="res://TrapsAndEnemies/lava_plume.gd" id="1_l05el"]
 [ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="1_w36sv"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qrc58"]

@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd7a7acwrb1b3"
-path="res://godot/imported/squirell_EdgeTexture.png-52f16619e9f01ed84dc56d06470391c9.ctex"
+uid="uid://cqtefpdieye0q"
+path="res://godot/imported/squirell_Water1.png-9b00d88ff6a06121622d0ad4a4758bee.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "1a25baf08b6fdf171ae3cdb19f1c6378"
+"md5": "ef84d4ac354e91cfefa28829838ec25e"
 }
 
 [deps]
 
-source_file="res://Traps/Enemies/squirell_EdgeTexture.png"
-dest_files=["res://godot/imported/squirell_EdgeTexture.png-52f16619e9f01ed84dc56d06470391c9.ctex"]
+source_file="res://TrapsAndEnemies/Enemies/squirell_Water1.png"
+dest_files=["res://godot/imported/squirell_Water1.png-9b00d88ff6a06121622d0ad4a4758bee.ctex"]
 
 [params]
 

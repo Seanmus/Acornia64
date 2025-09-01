@@ -2,30 +2,29 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da05mifr4tnjg"
-path.s3tc="res://godot/imported/squirrelScaledUpUV_Water1.png-97882b2c67ee5c5e4e143386e8c41f96.s3tc.ctex"
+uid="uid://cd7a7acwrb1b3"
+path="res://godot/imported/squirell_EdgeTexture.png-5bc2b4b9579e02f4421f8440f6f63d49.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
-"md5": "ef84d4ac354e91cfefa28829838ec25e"
+"md5": "1a25baf08b6fdf171ae3cdb19f1c6378"
 }
 
 [deps]
 
-source_file="res://Traps/Enemies/squirrelScaledUpUV_Water1.png"
-dest_files=["res://godot/imported/squirrelScaledUpUV_Water1.png-97882b2c67ee5c5e4e143386e8c41f96.s3tc.ctex"]
+source_file="res://TrapsAndEnemies/Enemies/squirell_EdgeTexture.png"
+dest_files=["res://godot/imported/squirell_EdgeTexture.png-5bc2b4b9579e02f4421f8440f6f63d49.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

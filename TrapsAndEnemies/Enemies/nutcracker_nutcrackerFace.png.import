@@ -2,24 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca6sumua6giyn"
-path.s3tc="res://godot/imported/squirrelScaledUpUV_fur_albedo.png-b28bab2f0c3c8790db45b022192470fd.s3tc.ctex"
+uid="uid://dfkcuakvlp66i"
+path="res://godot/imported/nutcracker_nutcrackerFace.png-e0b0de26f0fcfad09ff2d1a1614bea82.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
-"md5": "6e19fb93f330364d81183de4a18ea442"
+"md5": "f9aa35ebc6b883b6cf49986c2333981f"
 }
 
 [deps]
 
-source_file="res://Traps/Enemies/squirrelScaledUpUV_fur_albedo.png"
-dest_files=["res://godot/imported/squirrelScaledUpUV_fur_albedo.png-b28bab2f0c3c8790db45b022192470fd.s3tc.ctex"]
+source_file="res://TrapsAndEnemies/Enemies/nutcracker_nutcrackerFace.png"
+dest_files=["res://godot/imported/nutcracker_nutcrackerFace.png-e0b0de26f0fcfad09ff2d1a1614bea82.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

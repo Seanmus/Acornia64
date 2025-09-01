@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bxhyamou2angw"]
 
-[ext_resource type="Script" path="res://Traps/cannonBall.gd" id="1_0cr5w"]
+[ext_resource type="Script" path="res://TrapsAndEnemies/cannonBall.gd" id="1_0cr5w"]
 [ext_resource type="PackedScene" uid="uid://bpp4ag7ddnulv" path="res://FlowerPower/imports/cannonBall.glb" id="3_ld7xi"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ye4um"]

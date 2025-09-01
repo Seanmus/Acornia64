@@ -26,9 +26,9 @@
 [ext_resource type="PackedScene" uid="uid://ddvhfms1xsfaj" path="res://WorldBlocks/Decor/tallbuildings/blue_tall_building_bricks.tscn" id="21_i1ntr"]
 [ext_resource type="PackedScene" uid="uid://r2jti3xaltav" path="res://WorldBlocks/Decor/tallbuildings/lightGreen_tall_building_bricks.tscn" id="22_f21f6"]
 [ext_resource type="PackedScene" uid="uid://c4hmq46yu8r14" path="res://WorldBlocks/lava.tscn" id="23_qqvdl"]
-[ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://Traps/Enemies/squirell_with_shield.tscn" id="24_rlgua"]
+[ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://TrapsAndEnemies/Enemies/squirell_with_shield.tscn" id="24_rlgua"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7ffrx"]
-[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="26_gpsu8"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="26_gpsu8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30j66"]
 albedo_texture = ExtResource("14_nader")

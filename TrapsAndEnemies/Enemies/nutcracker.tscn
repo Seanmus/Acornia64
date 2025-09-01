@@ -1,7 +1,7 @@
 [gd_scene load_steps=35 format=4 uid="uid://cpkh0rswkyyd6"]
 
-[ext_resource type="Texture2D" uid="uid://dfkcuakvlp66i" path="res://Traps/Enemies/nutcracker_nutcrackerFace.png" id="1_vda04"]
-[ext_resource type="Texture2D" uid="uid://dpsqh3ql25j8j" path="res://Traps/Enemies/nutcracker_NutcrackerJacket.png" id="2_q7b8q"]
+[ext_resource type="Texture2D" uid="uid://dfkcuakvlp66i" path="res://TrapsAndEnemies/Enemies/nutcracker_nutcrackerFace.png" id="1_vda04"]
+[ext_resource type="Texture2D" uid="uid://dpsqh3ql25j8j" path="res://TrapsAndEnemies/Enemies/nutcracker_NutcrackerJacket.png" id="2_q7b8q"]
 [ext_resource type="PackedScene" uid="uid://coagvsyda0tpq" path="res://WorldBlocks/Interactive/homing_attack_component.tscn" id="3_qasow"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mx0i"]

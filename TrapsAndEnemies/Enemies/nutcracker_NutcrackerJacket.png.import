@@ -2,19 +2,19 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfkcuakvlp66i"
-path="res://godot/imported/nutcracker_nutcrackerFace.png-d39785f1f80534d1bf7f51c0aa0c354a.ctex"
+uid="uid://dpsqh3ql25j8j"
+path="res://godot/imported/nutcracker_NutcrackerJacket.png-5b90612b5bbfd80c0e4e146c3d8d8311.ctex"
 metadata={
 "vram_texture": false
 }
 generator_parameters={
-"md5": "f9aa35ebc6b883b6cf49986c2333981f"
+"md5": "0d1ae334510e3a8062a42dbe3c91603d"
 }
 
 [deps]
 
-source_file="res://Traps/Enemies/nutcracker_nutcrackerFace.png"
-dest_files=["res://godot/imported/nutcracker_nutcrackerFace.png-d39785f1f80534d1bf7f51c0aa0c354a.ctex"]
+source_file="res://TrapsAndEnemies/Enemies/nutcracker_NutcrackerJacket.png"
+dest_files=["res://godot/imported/nutcracker_NutcrackerJacket.png-5b90612b5bbfd80c0e4e146c3d8d8311.ctex"]
 
 [params]
 

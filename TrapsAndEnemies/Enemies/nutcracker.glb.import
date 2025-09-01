@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cbc4k724xcs2c"
-path="res://godot/imported/nutcracker.glb-bf3ebb150b33ff2362f8446e234a83bd.scn"
+path="res://godot/imported/nutcracker.glb-50bef68ef21debf9fdb734671739e428.scn"
 
 [deps]
 
-source_file="res://Traps/Enemies/nutcracker.glb"
-dest_files=["res://godot/imported/nutcracker.glb-bf3ebb150b33ff2362f8446e234a83bd.scn"]
+source_file="res://TrapsAndEnemies/Enemies/nutcracker.glb"
+dest_files=["res://godot/imported/nutcracker.glb-50bef68ef21debf9fdb734671739e428.scn"]
 
 [params]
 

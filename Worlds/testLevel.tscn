@@ -14,9 +14,9 @@
 [ext_resource type="Material" uid="uid://b0i1v0ixlrvcg" path="res://Materials/green_bricks.tres" id="10_qyxdr"]
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="11_jqd2s"]
 [ext_resource type="MeshLibrary" uid="uid://cypae8l5wdq5f" path="res://WorldBlocks/MeshLibraries/BaseWorldBlocks.tres" id="13_kavlb"]
-[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="14_uo65f"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="14_uo65f"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="16_g5n33"]
-[ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://Traps/Enemies/squirell_with_shield.tscn" id="17_7rlut"]
+[ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://TrapsAndEnemies/Enemies/squirell_with_shield.tscn" id="17_7rlut"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvfsbrumep3x8"]
 
-[ext_resource type="PackedScene" uid="uid://dnpr4aq0nt4j3" path="res://Traps/Enemies/moving_enemyBase.tscn" id="1_t146q"]
-[ext_resource type="PackedScene" uid="uid://cpkh0rswkyyd6" path="res://Traps/Enemies/nutcracker.tscn" id="2_811ye"]
+[ext_resource type="PackedScene" uid="uid://dnpr4aq0nt4j3" path="res://TrapsAndEnemies/Enemies/moving_enemyBase.tscn" id="1_t146q"]
+[ext_resource type="PackedScene" uid="uid://cpkh0rswkyyd6" path="res://TrapsAndEnemies/Enemies/nutcracker.tscn" id="2_811ye"]
 
 [sub_resource type="Curve3D" id="Curve3D_fcbh8"]
 resource_local_to_scene = true

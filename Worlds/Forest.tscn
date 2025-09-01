@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="10_5gopa"]
 [ext_resource type="PackedScene" uid="uid://ct7mwusx3nm41" path="res://FlowerPower/tree.tscn" id="12_w02jb"]
 [ext_resource type="PackedScene" uid="uid://sup7uh5i734r" path="res://WorldBlocks/forest_floor.tscn" id="13_ebam1"]
-[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://Traps/Enemies/moving_nutcracker.tscn" id="16_o4g4e"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="16_o4g4e"]
 [ext_resource type="PackedScene" uid="uid://d2pg8s6s68vkj" path="res://WorldBlocks/Forest/forest_block.tscn" id="17_7i0tx"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_opd30"]
 [ext_resource type="PackedScene" uid="uid://byvqee5bllch1" path="res://WorldBlocks/Interactive/rotating_platform.tscn" id="18_so85a"]

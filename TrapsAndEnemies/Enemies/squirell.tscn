@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://4ywis8tsrao6"]
 
-[ext_resource type="PackedScene" uid="uid://co4pmmes5pkbl" path="res://Traps/Enemies/squirell.glb" id="1_ae0xo"]
+[ext_resource type="PackedScene" uid="uid://co4pmmes5pkbl" path="res://TrapsAndEnemies/Enemies/squirell.glb" id="1_ae0xo"]
 [ext_resource type="Material" uid="uid://dv6t01t6tmksj" path="res://Materials/fur.tres" id="2_1nm3u"]
-[ext_resource type="Script" path="res://Traps/Enemies/squirell.gd" id="2_rbu4s"]
+[ext_resource type="Script" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="2_rbu4s"]
 [ext_resource type="Material" uid="uid://3e8eaaxwdyga" path="res://Materials/furDark.tres" id="3_ssi5d"]
 
 [sub_resource type="Animation" id="Animation_2hsw2"]
