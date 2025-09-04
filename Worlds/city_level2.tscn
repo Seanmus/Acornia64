@@ -66,7 +66,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 60, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_i7fmj")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 82.7648, 3, 5.49094)
+transform = Transform3D(-1, 0, 8.74226e-08, 0, 1, 0, -8.74226e-08, 0, -1, 9.7648, 127, 48.4909)
 
 [node name="Death" parent="." instance=ExtResource("3_kisrf")]
 transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828, 0)
@@ -85,7 +85,7 @@ nextLevel = "water_level"
 [node name="SpawnPoints" type="Node" parent="."]
 
 [node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource("5_7dbrp")]
-transform = Transform3D(-1.38894e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38894e-06, 122.027, 34.1668, 210.683)
+transform = Transform3D(-31.7753, 0, 2.77788e-06, 0, 31.7753, 0, -2.77788e-06, 0, -31.7753, 9.827, 126.367, 47.883)
 
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("5_7dbrp")]
 transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 221.227, 42.1668, -7.317)
@@ -121,6 +121,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736, 84.2916, -41.1033)
 
 [node name="tire" parent="HomingAttackTargets" instance=ExtResource("7_skhvd")]
 transform = Transform3D(2.49024, 0, 0, 0, 2.49024, 0, 0, 0, 2.49024, -45.9153, 41.9664, -13.2368)
+bounceMultiplier = 2.0
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -284,6 +285,9 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01848e-0
 
 [node name="speedBoost6" parent="." instance=ExtResource("17_elptn")]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 230, 122, 110)
+
+[node name="speedBoost7" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 339.4, 122, 110)
 
 [node name="speedBoost3" parent="." instance=ExtResource("17_elptn")]
 transform = Transform3D(-1.01848e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, -1.01848e-07, 10, 122, 184)
