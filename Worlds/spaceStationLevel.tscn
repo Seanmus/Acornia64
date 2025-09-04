@@ -955,9 +955,9 @@ size = Vector3(130.2, 11, 79)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox61" parent="ExteriorCSGBlocks" instance=ExtResource("11_dx50o")]
-transform = Transform3D(-1.17203e-07, -0.999814, -4.37033e-08, 0, -4.37033e-08, 0.999814, -0.999814, 1.17203e-07, 4.70867e-15, 290.236, 138.558, 1612.88)
+transform = Transform3D(-1.17203e-07, -0.999814, -4.37033e-08, 0, -4.37033e-08, 0.999814, -0.999814, 1.17203e-07, 4.70867e-15, 290.236, 120.561, 1612.88)
 material_override = ExtResource("15_gcvop")
-size = Vector3(129.8, 39.6, 38.2)
+size = Vector3(129.8, 39.6, 74.2)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox59" parent="ExteriorCSGBlocks" instance=ExtResource("11_dx50o")]
