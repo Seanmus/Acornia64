@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=32 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
 [ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="11_jep6i"]
 [ext_resource type="Script" path="res://Player/homing_attack_hurt_detector.gd" id="14_mw1q2"]
+[ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="15_5kkaf"]
+[ext_resource type="Script" path="res://Player/shadowDecal.gd" id="16_flfvc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
@@ -197,7 +199,7 @@ volume_db = -80.0
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.09941, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, 0)
+target_position = Vector3(0, -10, 0)
 hit_back_faces = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 
@@ -206,20 +208,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.148544, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.411744, -0.000581795, -0.00298404)
-bones/3/position = Vector3(0.0559592, 4.99479e-05, 0.0034127)
-bones/3/rotation = Quaternion(-0.23537, -0.23537, -0.666784, 0.666784)
-bones/4/position = Vector3(-0.030396, 0.0247892, -0.015711)
-bones/5/position = Vector3(-0.0165197, -0.194252, 0.025841)
-bones/7/position = Vector3(-0.0160072, 0.192508, 0.0258794)
-bones/7/rotation = Quaternion(-0.713096, 0.155221, -0.00295227, 0.683661)
-bones/9/position = Vector3(-0.02072, 0.0486971, -0.0176151)
-bones/11/position = Vector3(-0.0665489, -0.0356496, -0.199555)
-bones/13/position = Vector3(-0.0204105, -0.048697, -0.0171271)
-bones/13/rotation = Quaternion(-0.00349365, 0.0703578, -0.722617, 0.68765)
-bones/15/position = Vector3(0.0660951, 0.0165105, 0.161749)
-bones/15/rotation = Quaternion(0.0422362, -0.0121991, -0.0141884, 0.998932)
+bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.409142, -0.000557558, -0.00285973)
+bones/3/position = Vector3(0.0540348, -2.75735e-05, 0.00316352)
+bones/3/rotation = Quaternion(-0.161002, -0.161002, -0.688533, 0.688533)
+bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
+bones/5/position = Vector3(-0.00888268, -0.194039, 0.025841)
+bones/5/rotation = Quaternion(0.0632971, 0.676174, 0.729042, -0.0853262)
+bones/7/position = Vector3(-0.00895441, 0.194252, 0.025841)
+bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674655)
+bones/9/position = Vector3(-0.0209544, 0.0486971, -0.0179948)
+bones/9/rotation = Quaternion(0.728726, -0.684456, 0.0196896, 0.00958356)
+bones/11/position = Vector3(-0.0665384, -0.0356558, -0.199801)
+bones/11/rotation = Quaternion(-0.0450817, -0.0196599, -0.0407385, 0.997959)
+bones/13/position = Vector3(-0.0204541, -0.0486058, -0.0174004)
+bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
+bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
+bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
@@ -357,6 +362,16 @@ player = NodePath("..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackHurtDetector"]
 transform = Transform3D(1.42593, 0, 0, 0, 1.42593, 0, 0, 0, 1.42593, 0, 0, 0)
 shape = SubResource("SphereShape3D_aqnfm")
+
+[node name="Decal" type="Decal" parent="." node_paths=PackedStringArray("raycast")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.275, 0)
+size = Vector3(2, 9, 2)
+texture_albedo = ExtResource("15_5kkaf")
+distance_fade_enabled = true
+distance_fade_begin = 30.0
+cull_mask = 1048573
+script = ExtResource("16_flfvc")
+raycast = NodePath("../RayCast3D")
 
 [connection signal="area_entered" from="HurtMonitor" to="HurtMonitor" method="_on_area_3d_area_entered"]
 [connection signal="body_entered" from="HurtMonitor" to="HurtMonitor" method="_on_crush_detector_entered"]

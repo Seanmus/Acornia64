@@ -184,17 +184,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6578, 82.6618, 49.1428)
 [node name="TallBuildingBricksPink3" parent="." instance=ExtResource("12_pxtc1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7762, 1.80341, 49.1576)
 
+[node name="TallBuildingBricksPink4" parent="." instance=ExtResource("12_pxtc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.7762, -78.9966, 49.1576)
+
 [node name="TallBuildingBricksPink7" parent="." instance=ExtResource("12_pxtc1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.6238, 11.0034, -29.6424)
-
-[node name="TallBuildingBricksPink4" parent="." instance=ExtResource("12_pxtc1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1762, -82.9765, 43.8959)
 
 [node name="TallBuildingBricks5" parent="." instance=ExtResource("15_5u3cu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.9459, 1.55972, -31.3183)
 
 [node name="TallBuildingBricks3" parent="." instance=ExtResource("15_5u3cu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2979, 2.1396, 49.1434)
+
+[node name="TallBuildingBricksPink8" parent="." instance=ExtResource("12_pxtc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6122, -71.4403, -38.7623)
+
+[node name="TallBuildingBricksPink9" parent="." instance=ExtResource("13_as4a4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9488, -48.0403, -32.9191)
+
+[node name="TallBuildingBricks7" parent="." instance=ExtResource("14_cawrw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.1422, -73.1577, 19.423)
+
+[node name="TallBuildingBricks8" parent="." instance=ExtResource("14_cawrw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.2578, -83.5577, 43.823)
+
+[node name="TallBuildingBricks9" parent="." instance=ExtResource("14_cawrw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.3422, -72.9507, -37.777)
+
+[node name="TallBuildingBricksPink10" parent="." instance=ExtResource("12_pxtc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.6238, -69.7966, -29.6424)
+
+[node name="TallBuildingBricks10" parent="." instance=ExtResource("15_5u3cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.9459, -79.2403, -31.3183)
+
+[node name="TallBuildingBricks11" parent="." instance=ExtResource("15_5u3cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.2979, -78.6604, 49.1434)
 
 [node name="MetalBox" parent="." instance=ExtResource("16_6qf4y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57749, 18.7562, 70.1709)
