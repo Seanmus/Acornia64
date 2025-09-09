@@ -130,6 +130,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.736, 84.2916, -41.1033)
 [node name="cheese" parent="Cheese" instance=ExtResource("8_4mlco")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2, 3.2, 5)
 
+[node name="cheese14" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 5.8, 31.8)
+
+[node name="cheese15" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 9.6, 31.8)
+
+[node name="cheese17" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 13.4, 31.8)
+
+[node name="cheese18" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 17, 31.8)
+
+[node name="cheese19" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 20.6, 31.8)
+
+[node name="cheese22" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 24.2, 31.8)
+
+[node name="cheese23" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318.8, 27.8, 31.8)
+
+[node name="cheese16" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 5.8, 7.2)
+
+[node name="cheese26" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 9.6, 7.2)
+
+[node name="cheese27" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 13.4, 7.2)
+
+[node name="cheese31" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 17, 7.2)
+
+[node name="cheese32" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 20.6, 7.2)
+
+[node name="cheese33" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 24.2, 7.2)
+
+[node name="cheese34" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 363, 27.8, 7.2)
+
+[node name="cheese35" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365, 27.4, -25)
+
+[node name="cheese36" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 360, 27.4, -25)
+
+[node name="cheese37" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 355, 27.4, -25)
+
+[node name="cheese38" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 325, 27.4, -25)
+
+[node name="cheese39" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 320, 27.4, -25)
+
+[node name="cheese40" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 315, 27.4, -25)
+
 [node name="cheese8" parent="Cheese" instance=ExtResource("8_4mlco")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 3.2, 5)
 
@@ -406,14 +466,14 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 798.2,
 [node name="catapult" parent="." instance=ExtResource("20_a6a17")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 828.674, 141, 109.8)
 
-[node name="tire" parent="." instance=ExtResource("20_22wsm")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 362.6, 2, -0.400001)
-bounceMultiplier = 2.0
-
 [node name="tire2" parent="." instance=ExtResource("20_22wsm")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 338, 2, -24.2)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 340.2, 2, -24.2)
 bounceMultiplier = 2.0
 
 [node name="tire3" parent="." instance=ExtResource("20_22wsm")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 318.8, 2, 31.8)
+bounceMultiplier = 2.0
+
+[node name="tire4" parent="." instance=ExtResource("20_22wsm")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 363, 2, 7.2)
 bounceMultiplier = 2.0
