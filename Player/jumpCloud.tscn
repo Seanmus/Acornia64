@@ -30,6 +30,7 @@ orientation = 2
 
 [node name="jumpCloud" type="GPUParticles3D"]
 transform = Transform3D(0.355692, 0, 0, 0, 0.15653, 0, 0, 0, 0.355692, 0.0311819, -0.941365, -0.399482)
+layers = 2
 emitting = false
 amount = 100
 lifetime = 0.4
