@@ -85,7 +85,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 12, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_i7fmj")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 333.765, 2.99999, 5.29089)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 563.765, 2.99999, 5.29089)
 
 [node name="Death" parent="." instance=ExtResource("3_kisrf")]
 transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -15.0828, 0)
@@ -404,6 +404,36 @@ transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 339.4, 122, 110)
 [node name="speedBoost9" parent="." instance=ExtResource("17_elptn")]
 transform = Transform3D(-2.33, 0, -2.03695e-07, 0, 2.33, 0, 2.03695e-07, 0, -2.33, 205.2, 2, 5.2)
 
+[node name="speedBoost10" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-2.33, 0, -2.03695e-07, 0, 2.33, 0, 2.03695e-07, 0, -2.33, 256, 2, 5.2)
+
+[node name="speedBoost11" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-1.01847e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01847e-07, 256, 2, 46.8)
+
+[node name="speedBoost12" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-1.01847e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01847e-07, 256, 2, 95.2)
+
+[node name="speedBoost13" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-2.33, 0, -2.03695e-07, 0, 2.33, 0, 2.03695e-07, 0, -2.33, 298.6, 2, 95.6)
+
+[node name="speedBoost14" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-2.33, 0, -2.03695e-07, 0, 2.33, 0, 2.03695e-07, 0, -2.33, 343.6, 2, 95.6)
+
+[node name="speedBoost15" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-2.33, 0, -2.03695e-07, 0, 2.33, 0, 2.03695e-07, 0, -2.33, 385.8, 2, 95.6)
+
+[node name="speedBoost16" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-2.33, 0, -2.03695e-07, 0, 2.33, 0, 2.03695e-07, 0, -2.33, 423.2, 2, 95.6)
+
+[node name="speedBoost17" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(3.05543e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, 3.05543e-07, 424.8, 2, 61.2)
+
+[node name="speedBoost18" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(3.05543e-07, 0, -2.33, 0, 2.33, 0, 2.33, 0, 3.05543e-07, 424.8, 2, 23.6)
+
+[node name="speedBoost19" parent="." instance=ExtResource("17_elptn")]
+transform = Transform3D(-1.01847e-07, 0, 2.33, 0, 2.33, 0, -2.33, 0, -1.01847e-07, 424.8, 2, -14)
+
 [node name="speedBoost8" parent="." instance=ExtResource("17_elptn")]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 462.8, 122, 110)
 
@@ -445,6 +475,21 @@ transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 112.4, 4, -13.4)
 
 [node name="cannon2" parent="." instance=ExtResource("18_20nxc")]
 transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 166.6, 4, -13.4)
+
+[node name="cannon5" parent="." instance=ExtResource("18_20nxc")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 285, 4, 77)
+
+[node name="cannon6" parent="." instance=ExtResource("18_20nxc")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 315, 4, 77)
+
+[node name="cannon7" parent="." instance=ExtResource("18_20nxc")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 345, 4, 77)
+
+[node name="cannon8" parent="." instance=ExtResource("18_20nxc")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 375, 4, 77)
+
+[node name="cannon9" parent="." instance=ExtResource("18_20nxc")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 399.8, 4, 77)
 
 [node name="cannon3" parent="." instance=ExtResource("18_20nxc")]
 transform = Transform3D(-1.8, 0, 1.57361e-07, 0, 1.8, 0, -1.57361e-07, 0, -1.8, 137.4, 4, 24.2)
