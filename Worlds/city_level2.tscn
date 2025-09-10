@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://lrhftas6xl3n"]
+[gd_scene load_steps=29 format=3 uid="uid://lrhftas6xl3n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_0y5cf"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_i7fmj"]
@@ -51,6 +51,22 @@ point_count = 2
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25.855, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_hki58"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 35.25, 9.6, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_doqhu"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 35.25, -12, 0, 0, 0, 0, 0, 0, 0, 70.5, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -108,10 +124,10 @@ transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 221.227, 42
 [node name="HomingAttackTargets" type="Node" parent="."]
 
 [node name="HomingAttackTarget3" parent="HomingAttackTargets" instance=ExtResource("6_4c5kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.736, 14.4916, 58.6967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.736, 13.8916, 58.6967)
 
 [node name="HomingAttackTarget4" parent="HomingAttackTargets" instance=ExtResource("6_4c5kt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.93599, 20.0916, 76.0967)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.93599, 19.6916, 76.0967)
 
 [node name="HomingAttackTarget7" parent="HomingAttackTargets" instance=ExtResource("6_4c5kt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.336, 59.4916, -79.7033)
@@ -374,6 +390,14 @@ curve = SubResource("Curve3D_e01l0")
 [node name="MovingPlatform5" parent="." instance=ExtResource("17_p4qbu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 347.222, 24.483, 33.37)
 curve = SubResource("Curve3D_jmo8c")
+
+[node name="MovingPlatform6" parent="." instance=ExtResource("17_p4qbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 347.222, 50.483, 63.57)
+curve = SubResource("Curve3D_hki58")
+
+[node name="MovingPlatform7" parent="." instance=ExtResource("17_p4qbu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 347.222, 50.483, 95.17)
+curve = SubResource("Curve3D_doqhu")
 
 [node name="MovingPlatform2" parent="." instance=ExtResource("17_p4qbu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4216, 71.9875, -11.8304)
