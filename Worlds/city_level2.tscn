@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://lrhftas6xl3n"]
+[gd_scene load_steps=32 format=3 uid="uid://lrhftas6xl3n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_0y5cf"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_i7fmj"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="19_rjdjk"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="20_22wsm"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_a6a17"]
+[ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="21_t4pva"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -86,6 +87,22 @@ _data = {
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_freyx"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -11, 0, 0, 0, 0, 0, -11, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 11, 0, 0, 15, 0, -40, 11, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_gmkhq"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(11, 0, 0, -11, 0, 0, 0, 0, 0, -11, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 11, 0, 0, 15, 0, -40, 11, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
 
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_0y5cf")
@@ -606,3 +623,19 @@ bounceMultiplier = 2.0
 [node name="tire4" parent="." instance=ExtResource("20_22wsm")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 363, 2, 7.2)
 bounceMultiplier = 2.0
+
+[node name="MovingNutcracker" parent="." instance=ExtResource("21_t4pva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316, 2.6, -65.6)
+curve = SubResource("Curve3D_freyx")
+
+[node name="MovingNutcracker2" parent="." instance=ExtResource("21_t4pva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.4, 2.6, -65.6)
+curve = SubResource("Curve3D_freyx")
+
+[node name="MovingNutcracker3" parent="." instance=ExtResource("21_t4pva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 353.2, 2.6, -65.6)
+curve = SubResource("Curve3D_freyx")
+
+[node name="MovingNutcracker4" parent="." instance=ExtResource("21_t4pva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 387, 2.6, -65.6)
+curve = SubResource("Curve3D_gmkhq")
