@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://lrhftas6xl3n"]
+[gd_scene load_steps=34 format=3 uid="uid://lrhftas6xl3n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_0y5cf"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_i7fmj"]
@@ -89,6 +89,22 @@ _data = {
 point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_freyx"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -11, 0, 0, 0, 0, 0, -11, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 11, 0, 0, 15, 0, -40, 11, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_o3wr0"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -11, 0, 0, 0, 0, 0, -11, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 11, 0, 0, 15, 0, -40, 11, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_o6ucq"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, -11, 0, 0, 0, 0, 0, -11, 0, 0, 0, 0, 0, 0, 0, -40, 0, 0, 0, 11, 0, 0, 15, 0, -40, 11, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -630,11 +646,11 @@ curve = SubResource("Curve3D_freyx")
 
 [node name="MovingNutcracker2" parent="." instance=ExtResource("21_t4pva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.4, 2.6, -65.6)
-curve = SubResource("Curve3D_freyx")
+curve = SubResource("Curve3D_o3wr0")
 
 [node name="MovingNutcracker3" parent="." instance=ExtResource("21_t4pva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 353.2, 2.6, -65.6)
-curve = SubResource("Curve3D_freyx")
+curve = SubResource("Curve3D_o6ucq")
 
 [node name="MovingNutcracker4" parent="." instance=ExtResource("21_t4pva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 387, 2.6, -65.6)
