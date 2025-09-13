@@ -1,11 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnnc0wsg62lb"]
+[gd_scene load_steps=15 format=3 uid="uid://dnnc0wsg62lb"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_1akpl"]
 [ext_resource type="AudioStream" uid="uid://coetmktbd0mu0" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 1.wav" id="2_ct63d"]
 [ext_resource type="Script" path="res://Worlds/level_select_parent.gd" id="4_ftdho"]
-[ext_resource type="Texture2D" uid="uid://dc1cguc8n314u" path="res://UI/Images/CityScape2-0.png" id="5_c3skm"]
+[ext_resource type="Texture2D" uid="uid://baf7kc46ayep4" path="res://UI/Images/LevelSelectImages/City1.png" id="6_lnklb"]
 [ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="6_rcthv"]
+[ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="7_1orbw"]
+[ext_resource type="Texture2D" uid="uid://yxd3wrdo7h7i" path="res://UI/Images/LevelSelectImages/LavaLevel1.png" id="8_xdkyc"]
+[ext_resource type="Texture2D" uid="uid://bidvss2j58mw0" path="res://UI/Images/LevelSelectImages/SpaceLevel1.png" id="9_ipy7o"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="10_7wj44"]
+[ext_resource type="Texture2D" uid="uid://ba31ib0uorqc1" path="res://UI/Images/LevelSelectImages/Forest.png" id="10_ux02c"]
+[ext_resource type="Texture2D" uid="uid://bqq2scgoa6dnj" path="res://UI/Images/LevelSelectImages/City2.png" id="11_hppjm"]
+[ext_resource type="Texture2D" uid="uid://c285omu0gxx5u" path="res://Textures/DeathMarker.png" id="13_252ro"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="15_5k66q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qtmo"]
@@ -49,7 +55,8 @@ columns = 4
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("6_lnklb")
+texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -78,7 +85,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("8_xdkyc")
+texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -107,7 +115,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("9_ipy7o")
+texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -136,7 +145,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("10_ux02c")
+texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -165,7 +175,8 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("11_hppjm")
+texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -195,7 +206,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("13_252ro")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -225,7 +236,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("13_252ro")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -254,7 +265,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("5_c3skm")
+texture_normal = ExtResource("13_252ro")
 ignore_texture_size = true
 stretch_mode = 0
 
