@@ -33,3 +33,7 @@ func collect_athon():
 
 func _on_quit_btn_pressed():
 	get_tree().quit()
+
+
+func _on_level_select_pressed() -> void:
+	LevelLoader._loadLevel("levelSelect")

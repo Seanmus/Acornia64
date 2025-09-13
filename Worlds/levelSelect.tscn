@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnnc0wsg62lb"]
+[gd_scene load_steps=9 format=3 uid="uid://dnnc0wsg62lb"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_1akpl"]
+[ext_resource type="AudioStream" uid="uid://coetmktbd0mu0" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 1.wav" id="2_ct63d"]
+[ext_resource type="Script" path="res://Worlds/level_select_parent.gd" id="4_ftdho"]
 [ext_resource type="Texture2D" uid="uid://dc1cguc8n314u" path="res://UI/Images/CityScape2-0.png" id="5_c3skm"]
 [ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="6_rcthv"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="10_7wj44"]
@@ -13,6 +15,7 @@ uv1_scale = Vector3(20, 20, 20)
 
 [node name="Title" type="Node3D"]
 script = ExtResource("1_1akpl")
+levelMusic = ExtResource("2_ct63d")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2411, 36.9344, 43.5572)
@@ -32,6 +35,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+script = ExtResource("4_ftdho")
 
 [node name="GridContainer" type="GridContainer" parent="LevelSelectParent"]
 layout_mode = 0
@@ -275,3 +279,27 @@ text = "Forest2
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Title" type="Button" parent="LevelSelectParent"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -155.0
+offset_right = 140.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(150, 75)
+theme = ExtResource("6_rcthv")
+text = "To Title"
+
+[connection signal="pressed" from="LevelSelectParent/GridContainer/CityLevel" to="LevelSelectParent" method="_on_city_level_pressed"]
+[connection signal="pressed" from="LevelSelectParent/GridContainer/LavaLevel" to="LevelSelectParent" method="_on_lava_level_pressed"]
+[connection signal="pressed" from="LevelSelectParent/GridContainer/SpaceStation" to="LevelSelectParent" method="_on_space_station_pressed"]
+[connection signal="pressed" from="LevelSelectParent/GridContainer/Forest" to="LevelSelectParent" method="_on_forest_pressed"]
+[connection signal="pressed" from="LevelSelectParent/GridContainer/CityLevel2" to="LevelSelectParent" method="_on_city_level_2_pressed"]
+[connection signal="pressed" from="LevelSelectParent/Title" to="LevelSelectParent" method="_on_title_pressed"]

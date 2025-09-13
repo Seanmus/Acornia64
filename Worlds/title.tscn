@@ -452,6 +452,7 @@ active = false
 [connection signal="value_changed" from="UI/audioSlider" to="UI" method="_on_audio_slider_value_changed"]
 [connection signal="animation_finished" from="UI/Transition/AnimationPlayer" to="UI" method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="UI/FlowContainer/startBtn" to="UI" method="_on_button_pressed"]
+[connection signal="pressed" from="UI/FlowContainer/levelSelect" to="UI" method="_on_level_select_pressed"]
 [connection signal="pressed" from="UI/FlowContainer/collectBtn" to="UI" method="collect_athon"]
 [connection signal="pressed" from="UI/FlowContainer/QuitBtn" to="UI" method="_on_quit_btn_pressed"]
 
