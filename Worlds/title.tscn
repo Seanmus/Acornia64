@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bavvqgm4m3koh" path="res://UI/Images/acorn.png" id="3_lkekw"]
 [ext_resource type="Theme" uid="uid://dg4ajowhvjqw1" path="res://UI/ui.tres" id="7_gw8r6"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="7_hgnnl"]
-[ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="7_lblcb"]
+[ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="8_4ym14"]
 [ext_resource type="Texture2D" uid="uid://bvsojsrde4x5a" path="res://UI/Images/AcorniaLibraryLogo.png" id="8_dqimy"]
 [ext_resource type="Script" path="res://WorldBlocks/Imports/moon.gd" id="10_0lnq2"]
 [ext_resource type="Script" path="res://WorldBlocks/Imports/titleearth.gd" id="11_2abwn"]
@@ -292,8 +292,8 @@ metadata/_edit_use_anchors_ = true
 [node name="FlowContainer" type="FlowContainer" parent="UI"]
 offset_left = 83.0
 offset_top = 524.0
-offset_right = 536.0
-offset_bottom = 805.0
+offset_right = 628.0
+offset_bottom = 906.0
 alignment = 1
 vertical = true
 
@@ -302,7 +302,7 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../../audioSlider")
 focus_neighbor_bottom = NodePath("../collectBtn")
 focus_next = NodePath("../collectBtn")
-theme = ExtResource("7_lblcb")
+theme = ExtResource("8_4ym14")
 theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
 theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
 theme_override_colors/font_focus_color = Color(0.995326, 0.415513, 0.963598, 1)
@@ -313,13 +313,29 @@ theme_override_font_sizes/font_size = 75
 text = "Start"
 metadata/_edit_use_anchors_ = true
 
+[node name="levelSelect" type="Button" parent="UI/FlowContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../audioSlider")
+focus_neighbor_bottom = NodePath("../collectBtn")
+focus_next = NodePath("../collectBtn")
+theme = ExtResource("8_4ym14")
+theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
+theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
+theme_override_colors/font_focus_color = Color(0.995326, 0.415513, 0.963598, 1)
+theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(0.117647, 0.317647, 0.458824, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 75
+text = "Level Select"
+metadata/_edit_use_anchors_ = true
+
 [node name="collectBtn" type="Button" parent="UI/FlowContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../startBtn")
 focus_neighbor_bottom = NodePath("../QuitBtn")
 focus_next = NodePath("../QuitBtn")
 focus_previous = NodePath("../startBtn")
-theme = ExtResource("7_lblcb")
+theme = ExtResource("8_4ym14")
 theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
 theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
 theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
@@ -335,7 +351,7 @@ focus_neighbor_top = NodePath("../collectBtn")
 focus_neighbor_bottom = NodePath("../../audioSlider")
 focus_next = NodePath("../../audioSlider")
 focus_previous = NodePath("../startBtn")
-theme = ExtResource("7_lblcb")
+theme = ExtResource("8_4ym14")
 theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
 theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
 theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
@@ -350,6 +366,7 @@ position = Vector2(582, 239)
 texture = ExtResource("8_dqimy")
 
 [node name="DemoLbl" type="Label" parent="UI"]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -359,7 +376,7 @@ offset_right = 157.0
 offset_bottom = 142.0
 grow_horizontal = 0
 rotation = 0.424825
-theme = ExtResource("7_lblcb")
+theme = ExtResource("8_4ym14")
 theme_override_colors/font_color = Color(0.494118, 0.85098, 0.341176, 1)
 theme_override_colors/font_outline_color = Color(0.54902, 0.321569, 1, 1)
 theme_override_constants/outline_size = 15

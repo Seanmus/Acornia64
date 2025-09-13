@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
 [ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
 [ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
-[ext_resource type="Theme" uid="uid://c4vrtqmqab678" path="res://UI/title.tres" id="11_jep6i"]
+[ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="13_s2t4a"]
 [ext_resource type="Script" path="res://Player/homing_attack_hurt_detector.gd" id="14_mw1q2"]
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="15_5kkaf"]
 [ext_resource type="Script" path="res://Player/shadowDecal.gd" id="16_flfvc"]
@@ -304,7 +304,7 @@ anchor_bottom = 1.0
 offset_bottom = 9.49997
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("11_jep6i")
+theme = ExtResource("13_s2t4a")
 theme_override_constants/h_separation = 0
 alignment = 1
 

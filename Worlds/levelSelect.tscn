@@ -1,0 +1,277 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnnc0wsg62lb"]
+
+[ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_1akpl"]
+[ext_resource type="Texture2D" uid="uid://dc1cguc8n314u" path="res://UI/Images/CityScape2-0.png" id="5_c3skm"]
+[ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="6_rcthv"]
+[ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="10_7wj44"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="15_5k66q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qtmo"]
+albedo_color = Color(0.154876, 0.154876, 0.154876, 1)
+albedo_texture = ExtResource("15_5k66q")
+uv1_scale = Vector3(20, 20, 20)
+
+[node name="Title" type="Node3D"]
+script = ExtResource("1_1akpl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2411, 36.9344, 43.5572)
+top_level = true
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("10_7wj44")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_8qtmo")
+
+[node name="LevelSelectParent" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="GridContainer" type="GridContainer" parent="LevelSelectParent"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 4
+
+[node name="CityLevel" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/CityLevel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Acornopolis"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LavaLevel" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/LavaLevel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Acorn Melter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceStation" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/SpaceStation"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Space Station"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Forest" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/Forest"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Wild Woods"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CityLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/CityLevel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "City 2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LavaLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/LavaLevel2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Lava 2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceStation2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/SpaceStation2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Space2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Forest2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+custom_minimum_size = Vector2(450, 450)
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("5_c3skm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/Forest2"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -177.0
+offset_top = -95.0
+offset_right = 192.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_rcthv")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 15
+text = "Forest2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
