@@ -36,4 +36,4 @@ func _on_quit_btn_pressed():
 
 
 func _on_level_select_pressed() -> void:
-	LevelLoader._loadLevel("levelSelect")
+	var _returnValue = get_tree().change_scene_to_file("res://Worlds/levelSelect.tscn")

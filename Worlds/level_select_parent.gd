@@ -3,11 +3,11 @@ extends Control
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
-		LevelLoader._loadLevel("title")
+		var _returnValue = get_tree().change_scene_to_file("res://Worlds/title.tscn")
 
 
 func _on_title_pressed() -> void:
-	LevelLoader._loadLevel("title")
+	var _returnValue = get_tree().change_scene_to_file("res://Worlds/title.tscn")
 
 
 func _on_city_level_pressed() -> void:
