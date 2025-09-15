@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=25 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="14_uo65f"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="16_g5n33"]
 [ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://TrapsAndEnemies/Enemies/squirell_with_shield.tscn" id="17_7rlut"]
+[ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_w2le0"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -59,6 +60,14 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_o4nho"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
 
 [node name="testLevel" type="Node3D"]
 
@@ -315,9 +324,6 @@ transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, 2.3820
 [node name="speedBoost5" parent="." instance=ExtResource("6_atxbo")]
 transform = Transform3D(-1.74483e-05, 0, 1, 0, 1, 0, -1, 0, -1.74483e-05, 2.38204, 1.52211, -280.564)
 
-[node name="HomingAttackTarget" parent="." instance=ExtResource("7_nd0eu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 4.09082, -6.98706)
-
 [node name="HomingAttackTarget8" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.468, 13.0908, -53.6144)
 
@@ -326,12 +332,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.5018, 8.0908, -41.9871)
 
 [node name="HomingAttackTarget9" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5018, 29.0908, -60.9871)
-
-[node name="HomingAttackTarget2" parent="." instance=ExtResource("7_nd0eu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, -6.98706)
-
-[node name="HomingAttackTarget3" parent="." instance=ExtResource("7_nd0eu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, 3.01294)
 
 [node name="HomingAttackTarget4" parent="." instance=ExtResource("7_nd0eu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3981, 4.09082, 19.6407)
@@ -402,3 +402,7 @@ startOffset = true
 
 [node name="SquirellWithShield2" parent="." instance=ExtResource("17_7rlut")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 75.1302, 9, -106.426)
+
+[node name="MovingPlatform" parent="." instance=ExtResource("18_w2le0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0747, 1.58738, -8.95075)
+curve = SubResource("Curve3D_o4nho")

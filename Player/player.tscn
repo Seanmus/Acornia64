@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene load_steps=33 format=3 uid="uid://c1nxd5aux2qvl"]
 
 [ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
 [ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
 [ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
+[ext_resource type="Script" path="res://Player/crush_detector.gd" id="11_1674d"]
 [ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="13_s2t4a"]
 [ext_resource type="Script" path="res://Player/homing_attack_hurt_detector.gd" id="14_mw1q2"]
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="15_5kkaf"]
@@ -208,23 +209,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.14477, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.412803, -0.000564792, -0.00289683)
-bones/3/position = Vector3(0.0543238, -6.46739e-05, 0.00310102)
-bones/3/rotation = Quaternion(-0.110664, -0.110664, -0.698394, 0.698394)
-bones/4/position = Vector3(-0.0295077, 0.0240647, -0.0152518)
-bones/5/position = Vector3(-0.010944, -0.193352, 0.0258412)
-bones/5/rotation = Quaternion(0.034053, 0.680196, 0.72269, -0.117873)
-bones/7/position = Vector3(-0.0112124, 0.194252, 0.025841)
-bones/7/rotation = Quaternion(-0.730728, 0.0750762, 0.0723919, 0.674656)
-bones/9/position = Vector3(-0.0205005, 0.0486971, -0.0172595)
-bones/9/rotation = Quaternion(0.7289, -0.684306, 0.0115386, 0.0172376)
-bones/11/position = Vector3(-0.0665782, -0.0356424, -0.198853)
-bones/11/rotation = Quaternion(-0.0339692, -0.0185234, -0.0404668, 0.998432)
-bones/13/position = Vector3(-0.0209644, -0.0486825, -0.0180453)
-bones/13/rotation = Quaternion(0.0226364, 0.0454483, -0.722271, 0.689744)
-bones/15/position = Vector3(0.0660337, 0.0104914, 0.165137)
-bones/15/rotation = Quaternion(0.00627573, -0.0144519, -0.0171719, 0.999729)
+bones/1/position = Vector3(0.149958, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.412644, -0.000588165, -0.00301672)
+bones/3/position = Vector3(0.0565719, -6.53808e-05, 0.00323659)
+bones/3/rotation = Quaternion(-0.114029, -0.114029, -0.697852, 0.697852)
+bones/4/position = Vector3(-0.0307289, 0.0250606, -0.015883)
+bones/5/position = Vector3(-0.0183663, -0.191374, 0.0255803)
+bones/5/rotation = Quaternion(-0.044386, 0.685623, 0.690748, -0.225431)
+bones/7/position = Vector3(-0.0175265, 0.191871, 0.0261357)
+bones/7/rotation = Quaternion(-0.702415, 0.176059, -0.0406023, 0.688453)
+bones/9/position = Vector3(-0.0197718, 0.0486971, -0.0162296)
+bones/9/rotation = Quaternion(0.728568, -0.682593, -0.0248501, 0.0513652)
+bones/11/position = Vector3(-0.0671118, -0.0296837, -0.195003)
+bones/11/rotation = Quaternion(0.0156685, -0.0134241, -0.0391927, 0.999019)
+bones/13/position = Vector3(-0.0199069, -0.0485343, -0.0167581)
+bones/13/rotation = Quaternion(-0.0119584, 0.0807854, -0.727292, 0.681452)
+bones/15/position = Vector3(0.0661536, 0.0199787, 0.161304)
+bones/15/rotation = Quaternion(0.0553879, -0.0131685, -0.00603845, 0.99836)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
@@ -259,10 +260,12 @@ raycast = NodePath("../../RayCast3D")
 transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 1.15369, -13.7557)
 shape = SubResource("BoxShape3D_fpp87")
 
-[node name="CrushDetector" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.984555, 0)
+[node name="CrushDetector" type="Area3D" parent="." node_paths=PackedStringArray("player")]
+transform = Transform3D(0.303123, 0, 0, 0, 0.303123, 0, 0, 0, 0.303123, 0, 0.285653, 0)
 collision_layer = 15
 collision_mask = 15
+script = ExtResource("11_1674d")
+player = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CrushDetector"]
 transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
@@ -380,7 +383,9 @@ raycast = NodePath("../RayCast3D")
 [connection signal="area_entered" from="auriModel/HomingAttackComponent" to="auriModel/HomingAttackComponent" method="_on_target_detection_area_area_entered"]
 [connection signal="area_exited" from="auriModel/HomingAttackComponent" to="auriModel/HomingAttackComponent" method="_on_target_detection_area_area_exited"]
 [connection signal="area_entered" from="CrushDetector" to="." method="_on_crush_detector_area_entered"]
+[connection signal="area_entered" from="CrushDetector" to="CrushDetector" method="_on_area_entered"]
 [connection signal="body_entered" from="CrushDetector" to="." method="_on_crush_detector_body_entered"]
+[connection signal="body_entered" from="CrushDetector" to="CrushDetector" method="_on_body_entered"]
 [connection signal="body_entered" from="MovingPlatformDetector" to="." method="_on_moving_platform_detector_body_entered"]
 [connection signal="pressed" from="PauseMenu/VFlowContainer/Resume?" to="PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="PauseMenu/VFlowContainer/Quit to Start?" to="PauseMenu" method="_on_quit_to_start_pressed"]
