@@ -75,7 +75,7 @@ func _physics_process(delta):
 
 	#If the game is not over and the player is not performing a homing attack
 	hurtMonitor.monitoring = true
-	HandleAerialMovements(delta)		
+	HandleAerialMovements(delta)	
 	MovePlayer(delta)
 
 #########################################################################################################################################
@@ -221,7 +221,6 @@ func kill():
 		$auriModel/SKM_Auri/AnimationPlayer.play("newDeathAnim")
 	else:
 		$auriModel/SKM_Auri/AnimationPlayer.play("die")
-	#animationState.travel("die")
 	$DeathSound.play()
 	velocity.y = 0
 	velocity.x = 0
