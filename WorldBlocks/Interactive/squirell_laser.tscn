@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://dwh84kgg0fo4p"]
+
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/homingAttackDestroy.gd" id="1_ygvpe"]
+[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_gxwc3"]
+[ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_7vxvr"]
+[ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="4_f05s2"]
+[ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="5_f7ywx"]
+[ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://TrapsAndEnemies/Enemies/squirell.tscn" id="6_8blq2"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_bvksr"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="8_6ip5u"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
+
+[node name="SquirellHomingAttackTarget" type="Area3D" node_paths=PackedStringArray("parent") groups=["enemies", "killable", "targets"]]
+script = ExtResource("1_ygvpe")
+parent = NodePath(".")
+hitEffect = ExtResource("2_gxwc3")
+hitSoundEffect = ExtResource("3_7vxvr")
+
+[node name="Shield" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_l7bm5")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+visible = false
+radius = 1.0
+material = ExtResource("4_f05s2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_f7ywx")
+
+[node name="squirell" parent="." instance=ExtResource("6_8blq2")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
+
+[node name="cannon" parent="squirell" instance=ExtResource("8_6ip5u")]
+transform = Transform3D(-0.204779, -0.00107223, -1.79026e-08, -0.00106742, 0.203861, -0.0193713, 0.000101445, -0.019371, -0.203864, 0, -0.598999, -1.07147)
+
+[node name="Icosphere" parent="squirell/cannon" index="1"]
+visible = false
+
+[node name="Icosphere_001" parent="squirell/cannon" index="2"]
+visible = false
+
+[node name="RespawnTimer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 5.0
+one_shot = true
+script = ExtResource("7_bvksr")
+
+[connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
+[connection signal="onHit" from="." to="RespawnTimer" method="_on_homing_attack_killed"]
+[connection signal="timeout" from="RespawnTimer" to="." method="_Respawn"]
+
+[editable path="squirell"]
+[editable path="squirell/cannon"]
