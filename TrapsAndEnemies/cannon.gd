@@ -6,7 +6,11 @@ extends Node3D
 #Linked to the cannon object and shoots every time the timer runs out, afterwards the timer is restarted
 func _on_timer_timeout():
 	var s = seedShot.instantiate()
-	$muzzle.add_child(s)
+	get_tree().root.add_child(s)
+	s.global_position = $muzzle.global_position
+	s.global_rotation = $muzzle.global_rotation
+	s.scale = self.scale
+	s._shoot()
 	$Timer.start()
 	$shoot.play("shoot")
 	$sound.play()

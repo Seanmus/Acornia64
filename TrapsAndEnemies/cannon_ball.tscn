@@ -9,7 +9,7 @@
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -37,7 +37,7 @@ resource_name = "shoot"
 length = 3.3
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -87,14 +87,13 @@ collision_mask = 2
 script = ExtResource("1_0cr5w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.95917, 0, 0, 0, 1.95917, 0, 0, 0, 1.95917, 0, 0, 0)
+transform = Transform3D(2.11763, 0, 0, 0, 2.11763, 0, 0, 0, 2.11763, 0, 0, 0)
 shape = SubResource("SphereShape3D_ye4um")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_anv6k")
 }
-autoplay = "shoot"
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.901534, 0)
