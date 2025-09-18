@@ -9,7 +9,7 @@ func _on_timer_timeout():
 	get_tree().root.add_child(s)
 	s.global_position = $muzzle.global_position
 	s.global_rotation = $muzzle.global_rotation
-	s.scale = self.scale
+	#s.scale = self.scale
 	s._shoot()
 	$Timer.start()
 	$shoot.play("shoot")

@@ -1,5 +1,5 @@
 extends Area3D
-var speed = 10
+var speed = 20
 
 @onready var explodeCloud = load("res://Player/jumpCloud.tscn")
 #Destroys the cannonball when after its animation has finished playing
