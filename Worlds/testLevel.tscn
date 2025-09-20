@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=27 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://TrapsAndEnemies/Enemies/squirell_with_shield.tscn" id="17_7rlut"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_w2le0"]
 [ext_resource type="PackedScene" uid="uid://dwh84kgg0fo4p" path="res://WorldBlocks/Interactive/squirell_laser.tscn" id="19_mxyai"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="20_b7ymo"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -411,5 +412,20 @@ curve = SubResource("Curve3D_o4nho")
 [node name="SquirellHomingAttackTarget2" parent="." instance=ExtResource("19_mxyai")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17.2105, 9.36593, -24.387)
 
+[node name="SquirellHomingAttackTarget4" parent="." instance=ExtResource("19_mxyai")]
+transform = Transform3D(-2.13302e-08, 0, -0.487978, 0, 0.487978, 0, 0.487978, 0, -2.13302e-08, -17.2105, 9.36593, -8.48385)
+
 [node name="SquirellHomingAttackTarget3" parent="." instance=ExtResource("19_mxyai")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17.2105, 9.36593, -44.6617)
+
+[node name="cannon" parent="." instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -139.661, 3.19583, 23.0596)
+
+[node name="cannon2" parent="." instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-6.7243e-08, 0, 1.53834, 0, 1.53834, 0, -1.53834, 0, -6.7243e-08, -140.937, 3.6301, 27.4016)
+
+[node name="cannon3" parent="." instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-9.64012e-08, 0, 2.2054, 0, 2.2054, 0, -2.2054, 0, -9.64012e-08, -142.46, 4.11011, 33.8035)
+
+[node name="cannon4" parent="." instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-1.20401e-07, 0, 2.75444, 0, 2.75444, 0, -2.75444, 0, -1.20401e-07, -143.532, 4.84863, 43.0359)

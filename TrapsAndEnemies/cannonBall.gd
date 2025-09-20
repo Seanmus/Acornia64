@@ -17,4 +17,4 @@ func _shoot():
 
 func _process(delta: float) -> void:
 	var forward = global_transform.basis.z
-	global_position += forward * speed * delta
+	global_position += (forward * speed * delta) / scale.x
