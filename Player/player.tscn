@@ -87,7 +87,9 @@ _data = {
 "ScreenShake": SubResource("Animation_ojn2d")
 }
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_iqq1t"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jg4hn"]
+radius = 0.701044
+height = 1.64468
 
 [sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_qbyin"]
 emission_shape = 1
@@ -190,7 +192,7 @@ script = ExtResource("6_4jg1v")
 player = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtMonitor"]
-shape = SubResource("SphereShape3D_iqq1t")
+shape = SubResource("CapsuleShape3D_jg4hn")
 
 [node name="coinSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ulqlb")
@@ -209,23 +211,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.144103, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.408863, -0.000561419, -0.00287953)
-bones/3/position = Vector3(0.0540348, 3.29215e-05, 0.0032746)
-bones/3/rotation = Quaternion(-0.222525, -0.222525, -0.67118, 0.67118)
-bones/4/position = Vector3(-0.0293507, 0.0239367, -0.0151707)
-bones/5/position = Vector3(-0.0100579, -0.193706, 0.0257899)
-bones/5/rotation = Quaternion(0.0509258, 0.678204, 0.725719, -0.103815)
-bones/7/position = Vector3(-0.00992965, 0.193843, 0.0258944)
-bones/7/rotation = Quaternion(-0.726549, 0.0942938, 0.0516824, 0.678649)
-bones/9/position = Vector3(-0.0208397, 0.0486971, -0.0177931)
-bones/9/rotation = Quaternion(0.728867, -0.684349, 0.0134679, 0.0154263)
-bones/11/position = Vector3(-0.0666422, -0.0345032, -0.199044)
-bones/11/rotation = Quaternion(-0.0365997, -0.0187926, -0.0405315, 0.998331)
-bones/13/position = Vector3(-0.0203517, -0.0485904, -0.0172711)
-bones/13/rotation = Quaternion(0.0161551, 0.0520039, -0.723356, 0.688325)
-bones/15/position = Vector3(0.0661323, 0.0122448, 0.164173)
-bones/15/rotation = Quaternion(0.0154269, -0.0141611, -0.0150881, 0.999667)
+bones/1/position = Vector3(0.150006, 4.52995e-08, 2.33833e-18)
+bones/2/position = Vector3(0.412676, -0.000588385, -0.00301784)
+bones/3/position = Vector3(0.0565844, 4.04092e-05, 0.00343818)
+bones/3/rotation = Quaternion(-0.228391, -0.228391, -0.669207, 0.669207)
+bones/4/position = Vector3(-0.0307357, 0.0250661, -0.0158865)
+bones/5/position = Vector3(-0.0184324, -0.191354, 0.0255785)
+bones/5/rotation = Quaternion(-0.0451212, 0.685622, 0.690366, -0.226456)
+bones/7/position = Vector3(-0.0175874, 0.191856, 0.0261376)
+bones/7/rotation = Quaternion(-0.702159, 0.176741, -0.0413389, 0.688496)
+bones/9/position = Vector3(-0.0197664, 0.0486971, -0.0162222)
+bones/9/rotation = Quaternion(0.728557, -0.682571, -0.0251653, 0.0516598)
+bones/11/position = Vector3(-0.0671159, -0.0296431, -0.194966)
+bones/11/rotation = Quaternion(0.0160983, -0.01338, -0.0391794, 0.999013)
+bones/13/position = Vector3(-0.019903, -0.0485339, -0.0167537)
+bones/13/rotation = Quaternion(-0.0121919, 0.0810191, -0.72732, 0.681391)
+bones/15/position = Vector3(0.0661561, 0.0200423, 0.161273)
+bones/15/rotation = Quaternion(0.055716, -0.0131602, -0.00596348, 0.998342)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
 transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
