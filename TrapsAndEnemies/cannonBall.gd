@@ -3,6 +3,11 @@ var speed = 20
 
 @onready var explodeCloud = load("res://Player/jumpCloud.tscn")
 #Destroys the cannonball when after its animation has finished playing
+@onready var player = get_tree().get_nodes_in_group("Player")
+func _ready() -> void:
+	if !Manager.won and player:
+		look_at(player[0].global_position)
+
 func _on_animation_player_animation_finished(_anim_name):	
 	queue_free()
 	
@@ -16,5 +21,5 @@ func _shoot():
 	$AnimationPlayer.play("shoot")
 
 func _process(delta: float) -> void:
-	var forward = global_transform.basis.z
+	var forward = -global_transform.basis.z
 	global_position += (forward * speed * delta) / scale.x
