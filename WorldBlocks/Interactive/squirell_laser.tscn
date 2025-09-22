@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwh84kgg0fo4p"]
+[gd_scene load_steps=10 format=3 uid="uid://dwh84kgg0fo4p"]
 
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/homingAttackDestroy.gd" id="1_ygvpe"]
 [ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_gxwc3"]
@@ -7,7 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="5_f7ywx"]
 [ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://TrapsAndEnemies/Enemies/squirell.tscn" id="6_8blq2"]
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_bvksr"]
-[ext_resource type="Script" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="7_joop6"]
 [ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="8_6ip5u"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
@@ -33,20 +32,8 @@ stream = ExtResource("5_f7ywx")
 [node name="squirell" parent="." instance=ExtResource("6_8blq2")]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
 
-[node name="CannonParent" type="Node3D" parent="squirell"]
-script = ExtResource("7_joop6")
-
-[node name="cannon2" parent="squirell/CannonParent" instance=ExtResource("8_6ip5u")]
-transform = Transform3D(-0.156352, 0, -1.36687e-08, 1.59426e-09, 0.155284, -0.0182362, 1.35754e-08, -0.0182362, -0.155284, 0, -0.543856, -1.10582)
-
-[node name="Icosphere" parent="squirell/CannonParent/cannon2" index="1"]
-visible = false
-
-[node name="Icosphere_001" parent="squirell/CannonParent/cannon2" index="2"]
-visible = false
-
-[node name="muzzle" parent="squirell/CannonParent/cannon2" index="3"]
-transform = Transform3D(1, -5.60948e-08, 2.03698e-08, 5.60949e-08, 0.766997, -0.64165, 2.03698e-08, 0.64165, 0.766997, 5.68434e-14, 4.76837e-07, 2.0837)
+[node name="cannon" parent="squirell" instance=ExtResource("8_6ip5u")]
+transform = Transform3D(-0.234621, 0, -0.0127353, 0, 0.234966, 0, 0.0127353, 0, -0.234621, 0, 0, -1.73692)
 
 [node name="RespawnTimer" type="Timer" parent="."]
 process_mode = 3
@@ -59,4 +46,3 @@ script = ExtResource("7_bvksr")
 [connection signal="timeout" from="RespawnTimer" to="." method="_Respawn"]
 
 [editable path="squirell"]
-[editable path="squirell/CannonParent/cannon2"]

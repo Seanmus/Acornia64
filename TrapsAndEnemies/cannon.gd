@@ -9,6 +9,7 @@ func _on_timer_timeout():
 	var s = seedShot.instantiate()
 	get_tree().root.add_child(s)
 	s.global_position = $muzzle.global_position
+	s.rotation = global_rotation
 	s.speed = cannonBallSpeed
 	s.scale.x = scale.x
 	s.scale.y = scale.y
