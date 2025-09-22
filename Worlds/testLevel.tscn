@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ba8mxcwjmigv0"]
+[gd_scene load_steps=28 format=3 uid="uid://ba8mxcwjmigv0"]
 
 [ext_resource type="PackedScene" uid="uid://sajoqkbhsp77" path="res://WorldBlocks/LargeTile2.tscn" id="1_pbe0x"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_ijyan"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_w2le0"]
 [ext_resource type="PackedScene" uid="uid://dwh84kgg0fo4p" path="res://WorldBlocks/Interactive/squirell_laser.tscn" id="19_mxyai"]
 [ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="20_b7ymo"]
+[ext_resource type="Script" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="21_thmo5"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
 background_mode = 1
@@ -395,6 +396,15 @@ metadata/_editor_floor_ = Vector3(3, 3, 0)
 [node name="MetalBox5" parent="." instance=ExtResource("3_tuby2")]
 transform = Transform3D(3.73136, 0, 0, 0, -1.63103e-07, 3.73136, 0, -3.73136, -1.63103e-07, -48.7206, 2, -34.2297)
 
+[node name="MetalBox6" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(3.73136, 0, 0, 0, -1.63103e-07, 3.73136, 0, -3.73136, -1.63103e-07, -48.7206, -8.58445, -19.2065)
+
+[node name="MetalBox8" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(3.73136, 0, 0, 0, -1.63103e-07, 3.73136, 0, -3.73136, -1.63103e-07, -48.7206, -12.5613, -12.3511)
+
+[node name="MetalBox7" parent="." instance=ExtResource("3_tuby2")]
+transform = Transform3D(3.73136, 0, 0, 0, -1.63103e-07, 3.73136, 0, -3.73136, -1.63103e-07, -48.7206, -4.47424, -26.4944)
+
 [node name="catapult" parent="." instance=ExtResource("16_g5n33")]
 transform = Transform3D(-2.51084, 0, -2.19505e-07, 0, 2.51084, 0, 2.19505e-07, 0, -2.51084, -62.4142, 9.20568, -5.5461)
 
@@ -427,8 +437,26 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -130.7
 [node name="cannon10" parent="." instance=ExtResource("20_b7ymo")]
 transform = Transform3D(-0.604154, 0, -0.796868, 0, 1, 0, 0.796868, 0, -0.604154, -108.617, 3.19583, 16.1893)
 
-[node name="cannon11" parent="." instance=ExtResource("20_b7ymo")]
-transform = Transform3D(0.658952, 0, 0.752185, 0, 1, 0, -0.752185, 0, 0.658952, -108.617, 3.19583, 33.3666)
+[node name="Targeting" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.1189, 9.79354, -11.105)
+script = ExtResource("21_thmo5")
+
+[node name="cannon" parent="Targeting" instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Targeting2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.2452, 9.79354, -11.105)
+script = ExtResource("21_thmo5")
+
+[node name="cannon" parent="Targeting2" instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Targeting3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.3743, 9.79354, -11.105)
+script = ExtResource("21_thmo5")
+
+[node name="cannon" parent="Targeting3" instance=ExtResource("20_b7ymo")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="cannon5" parent="." instance=ExtResource("20_b7ymo")]
 transform = Transform3D(1.91069e-15, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -1, 0, -4.37114e-08, -139.661, 3.19583, 10.5991)
