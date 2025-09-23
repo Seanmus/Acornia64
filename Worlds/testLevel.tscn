@@ -470,8 +470,5 @@ transform = Transform3D(-9.64012e-08, 0, 2.2054, 0, 2.2054, 0, -2.2054, 0, -9.64
 [node name="cannon4" parent="." instance=ExtResource("20_b7ymo")]
 transform = Transform3D(-1.20401e-07, 0, 2.75444, 0, 2.75444, 0, -2.75444, 0, -1.20401e-07, -143.532, 4.84863, 43.0359)
 
-[node name="SquirellHomingAttackTarget" parent="." instance=ExtResource("21_2xk6s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2764, 10.9017, -23.6663)
-
 [node name="SquirellHomingAttackTarget2" parent="." instance=ExtResource("21_2xk6s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.449734, 10.9017, -23.6663)

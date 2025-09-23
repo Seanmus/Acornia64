@@ -9,15 +9,18 @@
 [ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_tdto4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
+radius = 1.26642
 
-[node name="SquirellHomingAttackTarget" type="Area3D" node_paths=PackedStringArray("parent") groups=["enemies", "killable", "targets"]]
+[node name="SquirellHomingAttackTarget" type="Area3D" node_paths=PackedStringArray("parent") groups=["deadly", "enemies", "killable", "targets"]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_kost2")
 parent = NodePath(".")
 hitEffect = ExtResource("2_0ogu7")
 hitSoundEffect = ExtResource("3_6mpjh")
 
-[node name="Shield" type="CollisionShape3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+[node name="Shield" type="CollisionShape3D" parent="." groups=["deadly"]]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.429431, 0)
 shape = SubResource("SphereShape3D_l7bm5")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
