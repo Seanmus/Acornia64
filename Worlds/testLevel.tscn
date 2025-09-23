@@ -18,8 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="16_g5n33"]
 [ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://TrapsAndEnemies/Enemies/squirell_with_shield.tscn" id="17_7rlut"]
 [ext_resource type="PackedScene" uid="uid://c1mqdgd5tc4hj" path="res://WorldBlocks/MovingPlatforms/moving_platform.tscn" id="18_w2le0"]
-[ext_resource type="PackedScene" uid="uid://dwh84kgg0fo4p" path="res://WorldBlocks/Interactive/squirell_laser.tscn" id="19_mxyai"]
 [ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="20_b7ymo"]
+[ext_resource type="PackedScene" uid="uid://drjb1h4hjbsvk" path="res://WorldBlocks/Interactive/Squirell_Homing.tscn" id="21_2xk6s"]
 [ext_resource type="Script" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="21_thmo5"]
 
 [sub_resource type="Environment" id="Environment_0ucfl"]
@@ -419,15 +419,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 75.130
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0747, 1.58738, -8.95075)
 curve = SubResource("Curve3D_o4nho")
 
-[node name="SquirellHomingAttackTarget2" parent="." instance=ExtResource("19_mxyai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2105, 9.36593, -24.387)
-
-[node name="SquirellHomingAttackTarget4" parent="." instance=ExtResource("19_mxyai")]
-transform = Transform3D(-2.13302e-08, 0, -0.487978, 0, 0.487978, 0, 0.487978, 0, -2.13302e-08, -17.2105, 9.36593, -8.48385)
-
-[node name="SquirellHomingAttackTarget3" parent="." instance=ExtResource("19_mxyai")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17.2105, 9.36593, -44.6617)
-
 [node name="cannon" parent="." instance=ExtResource("20_b7ymo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -139.661, 3.19583, 23.0596)
 
@@ -478,3 +469,9 @@ transform = Transform3D(-9.64012e-08, 0, 2.2054, 0, 2.2054, 0, -2.2054, 0, -9.64
 
 [node name="cannon4" parent="." instance=ExtResource("20_b7ymo")]
 transform = Transform3D(-1.20401e-07, 0, 2.75444, 0, 2.75444, 0, -2.75444, 0, -1.20401e-07, -143.532, 4.84863, 43.0359)
+
+[node name="SquirellHomingAttackTarget" parent="." instance=ExtResource("21_2xk6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2764, 10.9017, -23.6663)
+
+[node name="SquirellHomingAttackTarget2" parent="." instance=ExtResource("21_2xk6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.449734, 10.9017, -23.6663)

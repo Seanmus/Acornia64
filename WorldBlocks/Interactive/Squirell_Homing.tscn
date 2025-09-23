@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://drjb1h4hjbsvk"]
+
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/squirell_homing.gd" id="1_kost2"]
+[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_0ogu7"]
+[ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_6mpjh"]
+[ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="4_6uhkf"]
+[ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="5_qu8ud"]
+[ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://TrapsAndEnemies/Enemies/squirell.tscn" id="6_c01ma"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_tdto4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
+
+[node name="SquirellHomingAttackTarget" type="Area3D" node_paths=PackedStringArray("parent") groups=["enemies", "killable", "targets"]]
+script = ExtResource("1_kost2")
+parent = NodePath(".")
+hitEffect = ExtResource("2_0ogu7")
+hitSoundEffect = ExtResource("3_6mpjh")
+
+[node name="Shield" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_l7bm5")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+visible = false
+radius = 1.0
+material = ExtResource("4_6uhkf")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_qu8ud")
+
+[node name="squirell" parent="." instance=ExtResource("6_c01ma")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
+
+[node name="RespawnTimer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 5.0
+one_shot = true
+script = ExtResource("7_tdto4")
+
+[connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
+[connection signal="onHit" from="." to="RespawnTimer" method="_on_homing_attack_killed"]
+[connection signal="timeout" from="RespawnTimer" to="." method="_Respawn"]

@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="20_22wsm"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_a6a17"]
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="21_t4pva"]
-[ext_resource type="PackedScene" uid="uid://dwh84kgg0fo4p" path="res://WorldBlocks/Interactive/squirell_laser.tscn" id="22_5ckfa"]
+[ext_resource type="PackedScene" uid="uid://dwh84kgg0fo4p" path="res://WorldBlocks/Interactive/SquirellAttackPlayer.tscn" id="22_5ckfa"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
