@@ -1,0 +1,114 @@
+[gd_scene load_steps=11 format=3 uid="uid://dmhgk14dmtxas"]
+
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/homingAttackDestroy.gd" id="1_tolcr"]
+[ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_mjv8c"]
+[ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_mfj5i"]
+[ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="4_0ap5w"]
+[ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="5_vnjes"]
+[ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://TrapsAndEnemies/Enemies/squirell.tscn" id="6_3qj8h"]
+[ext_resource type="Script" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="7_5brgd"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="8_qsuye"]
+[ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="9_va4e7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
+
+[node name="HomingAttackTarget4" type="Area3D" node_paths=PackedStringArray("parent") groups=["enemies", "killable", "targets"]]
+script = ExtResource("1_tolcr")
+parent = NodePath(".")
+hitEffect = ExtResource("2_mjv8c")
+hitSoundEffect = ExtResource("3_mfj5i")
+
+[node name="Shield" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("SphereShape3D_l7bm5")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+visible = false
+radius = 1.0
+material = ExtResource("4_0ap5w")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_vnjes")
+
+[node name="squirell" parent="." instance=ExtResource("6_3qj8h")]
+transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
+
+[node name="Head" parent="squirell" index="0"]
+transform = Transform3D(-1.15093e-08, 0, -0.263302, 0, 0.263302, 0, 0.263302, 0, -1.15093e-08, -0.00443278, 0.336349, -0.379829)
+
+[node name="Body" parent="squirell" index="1"]
+transform = Transform3D(-1.24247e-08, 0, -0.284244, 0, 0.284244, 0, 0.284244, 0, -1.24247e-08, -0.00443278, -0.0232472, 0.108656)
+
+[node name="Tail" parent="squirell" index="2"]
+transform = Transform3D(-2.27838e-09, -4.33718e-09, -0.239889, -0.0905363, 0.0571245, 0, 0.0521233, 0.099223, -1.04859e-08, -0.00443278, -0.29869, 0.317613)
+
+[node name="LeftFoot" parent="squirell" index="3"]
+transform = Transform3D(-8.38378e-09, 0, -0.109125, 0, 0.0752095, 0, 0.191798, 0, -4.76999e-09, -0.154433, -0.406931, 0.108656)
+
+[node name="RightFoot" parent="squirell" index="4"]
+transform = Transform3D(-8.38378e-09, 0, -0.109125, 0, 0.0752095, 0, 0.191798, 0, -4.76999e-09, 0.145567, -0.406931, 0.108656)
+
+[node name="LeftArm" parent="squirell" index="5"]
+transform = Transform3D(-6.67199e-09, 1.99069e-09, -0.109125, 0.11614, 0.0598533, 0, 0.152637, -0.0455417, -4.76999e-09, -0.174433, 0.0318978, -0.213982)
+
+[node name="RightArm" parent="squirell" index="6"]
+transform = Transform3D(-6.67199e-09, 1.99069e-09, -0.109125, 0.11614, 0.0598533, 0, 0.152637, -0.0455417, -4.76999e-09, 0.165567, 0.0318978, -0.213982)
+
+[node name="LeftEar" parent="squirell" index="7"]
+transform = Transform3D(-5.05381e-09, 0, -0.040743, 0, 0.115618, 0, 0.115618, 0, -1.78093e-09, -0.105338, 0.589988, -0.262556)
+
+[node name="RightEar" parent="squirell" index="8"]
+transform = Transform3D(-5.05381e-09, 0, -0.040743, 0, 0.115618, 0, 0.115618, 0, -1.78093e-09, 0.106684, 0.589988, -0.262556)
+
+[node name="SaucerBase" parent="squirell" index="9"]
+transform = Transform3D(0.203111, 0, -0.936733, 0, 0.576161, 0, 0.936733, 0, 0.203111, -0.00443278, -0.258296, 0.00655229)
+
+[node name="SaucerRim" parent="squirell" index="10"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.00443278, -0.16563, 0.00655229)
+
+[node name="LeftControlStick" parent="squirell" index="11"]
+transform = Transform3D(-2.3252e-09, 0, -0.0531944, 0, 0.127321, 0, 0.0531944, 0, -2.3252e-09, -0.174714, -0.306786, -0.50385)
+
+[node name="RightControlStick" parent="squirell" index="12"]
+transform = Transform3D(-2.04383e-09, 3.26221e-09, -0.0531944, 0.0136541, 0.123055, 0, 0.0514121, -0.0326812, -2.3252e-09, 0.159773, -0.303082, -0.480267)
+
+[node name="ColourPallete" parent="squirell" index="13"]
+transform = Transform3D(-4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -0.00443278, 1.37875, 0.00655229)
+
+[node name="LeftEye" parent="squirell" index="14"]
+transform = Transform3D(-0.02913, 0, -0.0191029, 0, 0.0544059, 0, 0.0459504, 0, -0.0121102, -0.165695, 0.37702, -0.517785)
+
+[node name="RightEye" parent="squirell" index="15"]
+transform = Transform3D(0.0288782, 0, -0.0189378, 0, 0.0539356, 0, 0.0455533, 0, 0.0120055, 0.156829, 0.37702, -0.517785)
+
+[node name="Targeting" type="Node3D" parent="squirell"]
+transform = Transform3D(0.429185, 0, 0, 0, 0.428874, -0.0163407, 0, 0.0163407, 0.428874, 0, 0.116529, -0.163692)
+script = ExtResource("7_5brgd")
+
+[node name="cannon" parent="squirell/Targeting" instance=ExtResource("8_qsuye")]
+transform = Transform3D(-0.838198, 0, 7.32776e-08, 0, 0.838198, 3.72529e-09, -7.32776e-08, 3.72529e-09, -0.838198, 0, 0, -2.242)
+
+[node name="Cylinder" parent="squirell/Targeting/cannon" index="0"]
+transform = Transform3D(1, 0, -4.44089e-16, 0, -4.47035e-08, -1, 7.10543e-15, 1, -4.47035e-08, 0, 0, 0)
+
+[node name="Icosphere" parent="squirell/Targeting/cannon" index="1"]
+visible = false
+
+[node name="Icosphere_001" parent="squirell/Targeting/cannon" index="2"]
+visible = false
+
+[node name="muzzle" parent="squirell/Targeting/cannon" index="3"]
+transform = Transform3D(1, -3.23704e-09, -5.99485e-11, 3.23704e-09, 0.999314, 0.0370274, -5.99485e-11, -0.0370274, 0.999314, 0, 1.49012e-08, 2.0837)
+
+[node name="RespawnTimer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 5.0
+one_shot = true
+script = ExtResource("9_va4e7")
+
+[connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
+[connection signal="onHit" from="." to="RespawnTimer" method="_on_homing_attack_killed"]
+[connection signal="timeout" from="RespawnTimer" to="." method="_Respawn"]
+
+[editable path="squirell"]
+[editable path="squirell/Targeting/cannon"]

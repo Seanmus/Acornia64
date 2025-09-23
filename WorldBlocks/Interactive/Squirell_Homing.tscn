@@ -40,6 +40,8 @@ wait_time = 5.0
 one_shot = true
 script = ExtResource("7_tdto4")
 
+[node name="RayCast3D" type="RayCast3D" parent="."]
+
 [connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
 [connection signal="onHit" from="." to="RespawnTimer" method="_on_homing_attack_killed"]
 [connection signal="timeout" from="RespawnTimer" to="." method="_Respawn"]
