@@ -1206,6 +1206,9 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 180.95
 [node name="HomingAttackTarget24" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 193.955, 82.7981, -213.894)
 
+[node name="HomingAttackTarget58" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 180.47, 105.83, -172.266)
+
 [node name="HomingAttackTarget25" parent="HomingAttackTargets" instance=ExtResource("9_q46w8")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 193.955, 87.7143, -224.423)
 
