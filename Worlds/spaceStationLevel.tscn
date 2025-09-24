@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cjri6d6d1wk0j"]
+[gd_scene load_steps=42 format=3 uid="uid://cjri6d6d1wk0j"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_lbn7d"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_fk0vd"]
@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://deubon21pfc6b" path="res://TrapsAndEnemies/Enemies/squirell_with_shield.tscn" id="24_rlgua"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7ffrx"]
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="26_gpsu8"]
+[ext_resource type="PackedScene" uid="uid://dmhgk14dmtxas" path="res://TrapsAndEnemies/Enemies/Squirell_Cannon.tscn" id="30_apha1"]
+[ext_resource type="PackedScene" uid="uid://drjb1h4hjbsvk" path="res://WorldBlocks/Interactive/Squirell_Homing.tscn" id="31_6ki4r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30j66"]
 albedo_texture = ExtResource("14_nader")
@@ -1061,7 +1063,7 @@ transform = Transform3D(2.38419e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, 2.3
 transform = Transform3D(-1.38895e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, -1.38895e-06, -17.5977, 70.2719, 84.9324)
 
 [node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("5_qfb5v")]
-transform = Transform3D(-31.468, 0, -4.40854, 0, 31.7753, 0, 4.40854, 0, -31.468, -524.885, 76.1018, 530.052)
+transform = Transform3D(-31.7753, 0, -2.77789e-06, 0, 31.7753, 0, 2.77789e-06, 0, -31.7753, -524.885, 76.1018, 530.052)
 
 [node name="SpawnPoint6" parent="SpawnPoints" instance=ExtResource("5_qfb5v")]
 transform = Transform3D(-44.0552, 0, -6.17196, 0, 44.4854, 0, 6.17196, 0, -44.0552, -524.885, 164.702, 891.252)
@@ -1138,9 +1140,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -523.451, 70.1199, 297.855)
 [node name="HomingAttackTarget28" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -523.511, 74.1521, 321.705)
 
-[node name="HomingAttackTarget29" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -523.646, 80.5364, 343.315)
-
 [node name="HomingAttackTarget38" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -513.01, 98.7035, 676.153)
 
@@ -1149,9 +1148,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -536.238, 98.7035, 676.421)
 
 [node name="HomingAttackTarget40" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -524.646, 98.7035, 706.439)
-
-[node name="HomingAttackTarget42" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -585.846, 194.704, 1105.55)
 
 [node name="HomingAttackTarget49" parent="HomingAttackTargets" instance=ExtResource("6_ybxcj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -559.646, 169.304, 966.153)
@@ -1296,6 +1292,9 @@ transform = Transform3D(-4.37115e-08, 0, 1, 0, 1, 0, -1, 0, -4.37115e-08, 235, 1
 
 [node name="SquirellWithShield16" parent="HomingAttackTargets" instance=ExtResource("24_rlgua")]
 transform = Transform3D(-4.37115e-08, 0, 1, 0, 1, 0, -1, 0, -4.37115e-08, 267, 164.8, 1619.6)
+
+[node name="SquirellWithShield" parent="HomingAttackTargets" instance=ExtResource("24_rlgua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -523.8, 81.8, 343.6)
 
 [node name="Cheese" type="Node3D" parent="."]
 
@@ -1795,3 +1794,21 @@ transform = Transform3D(-277.559, 0, -480.747, 0, 555.119, 0, 480.747, 0, -277.5
 transform = Transform3D(5163.39, 0, 0, 0, 5163.39, 0, 0, 0, 5163.39, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_b6sx0")
+
+[node name="HomingAttackTarget7" parent="." instance=ExtResource("30_apha1")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -485.891, 133.225, 666.324)
+
+[node name="HomingAttackTarget8" parent="." instance=ExtResource("30_apha1")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -564.305, 133.225, 666.324)
+
+[node name="SquirellWithShield" parent="." instance=ExtResource("24_rlgua")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -586.104, 194.836, 1105.95)
+
+[node name="SquirellHomingAttackTarget" parent="." instance=ExtResource("31_6ki4r")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -504.494, 78.8147, 604.913)
+
+[node name="SquirellHomingAttackTarget2" parent="." instance=ExtResource("31_6ki4r")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -524.098, 78.8147, 591.71)
+
+[node name="SquirellHomingAttackTarget3" parent="." instance=ExtResource("31_6ki4r")]
+transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -545.902, 78.8147, 604.913)
