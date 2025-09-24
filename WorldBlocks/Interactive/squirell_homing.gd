@@ -5,7 +5,7 @@ extends homingAttackDestroy
 
 func _process(delta: float) -> void:
 	if !Manager.won and player && position.distance_to(player[0].position) <= 150:
-		position = position.move_toward(player[0].position, 10 * delta)
+		position = position.move_toward(Vector3(player[0].position.x, player[0].position.y + 1, player[0].position.z), 10 * delta)
 		$squirell.look_at(player[0].position)
 	else:
 		if position != startPos:
