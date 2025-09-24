@@ -6,6 +6,7 @@ extends homingAttackTarget
 @export var hitEffect : PackedScene
 @export var hitSoundEffect : PackedScene
 
+
 func _Hit():
 	super()
 	_SpawnCloud()

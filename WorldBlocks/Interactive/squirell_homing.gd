@@ -4,7 +4,7 @@ extends homingAttackDestroy
 @onready var startPos = position
 
 func _process(delta: float) -> void:
-	if !Manager.won and player && position.distance_to(player[0].position) <= 40:
+	if !Manager.won and player && position.distance_to(player[0].position) <= 150:
 		position = position.move_toward(player[0].position, 10 * delta)
 		$squirell.look_at(player[0].position)
 	else:
@@ -12,3 +12,6 @@ func _process(delta: float) -> void:
 			position = position.move_toward(startPos, 10 * delta)
 			if position.distance_to(startPos) > 10:
 				$squirell.look_at(startPos)
+func _Respawn():	
+	position = startPos
+	super._Respawn()
