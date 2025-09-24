@@ -82,11 +82,11 @@ transform = Transform3D(-0.02913, 0, -0.0191029, 0, 0.0544059, 0, 0.0459504, 0, 
 transform = Transform3D(0.0288782, 0, -0.0189378, 0, 0.0539356, 0, 0.0455533, 0, 0.0120055, 0.156829, 0.37702, -0.517785)
 
 [node name="Targeting" type="Node3D" parent="squirell"]
-transform = Transform3D(0.429185, 0, 0, 0, 0.428874, -0.0163407, 0, 0.0163407, 0.428874, 0, 0.116529, -0.163692)
+transform = Transform3D(0.429185, 0, 0, 0, 0.429185, 0, 0, 0, 0.429185, 0, 0.116529, -0.163692)
 script = ExtResource("7_5brgd")
 
 [node name="cannon" parent="squirell/Targeting" instance=ExtResource("8_qsuye")]
-transform = Transform3D(-0.838198, 0, 7.32776e-08, 0, 0.838198, 3.72529e-09, -7.32776e-08, 3.72529e-09, -0.838198, 0, 0, -2.242)
+transform = Transform3D(-0.838198, -3.83505e-09, -7.31772e-08, 0, 0.837049, -0.0438679, 7.32776e-08, -0.0438679, -0.837049, 0, -0.252209, -2.242)
 
 [node name="Cylinder" parent="squirell/Targeting/cannon" index="0"]
 transform = Transform3D(1, 0, -4.44089e-16, 0, -4.47035e-08, -1, 7.10543e-15, 1, -4.47035e-08, 0, 0, 0)
