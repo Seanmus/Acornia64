@@ -41,6 +41,9 @@ one_shot = true
 script = ExtResource("7_tdto4")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 0)
+hit_back_faces = false
+debug_shape_custom_color = Color(1, 0, 0, 1)
 
 [connection signal="onHit" from="." to="Shield" method="_on_homing_attack_target_on_hit"]
 [connection signal="onHit" from="." to="RespawnTimer" method="_on_homing_attack_killed"]
