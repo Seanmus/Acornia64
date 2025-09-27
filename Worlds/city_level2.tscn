@@ -134,6 +134,9 @@ transform = Transform3D(4.16682e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, 4.1
 [node name="SpawnPoint4" parent="SpawnPoints" instance=ExtResource("5_7dbrp")]
 transform = Transform3D(4.16682e-06, 0, 31.7753, 0, 31.7753, 0, -31.7753, 0, 4.16682e-06, 463.027, 5.167, 5.0706)
 
+[node name="SpawnPoint5" parent="SpawnPoints" instance=ExtResource("5_7dbrp")]
+transform = Transform3D(-1.38893e-06, 0, -31.7753, 0, 31.7753, 0, 31.7753, 0, -1.38893e-06, 304.227, 125.367, 109.871)
+
 [node name="SpawnPoint2" parent="SpawnPoints" instance=ExtResource("5_7dbrp")]
 transform = Transform3D(31.7753, 0, 0, 0, 31.7753, 0, 0, 0, 31.7753, 221.227, 42.1668, -7.317)
 
