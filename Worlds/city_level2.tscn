@@ -757,6 +757,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 281.4, 12.6, -65.4)
 [node name="SquirellHomingAttackTarget6" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.6, 12.6, -106.6)
 
+[node name="SquirellHomingAttackTarget12" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 314.4, 9.6, -23.4)
+
+[node name="SquirellHomingAttackTarget13" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 362.8, 9.6, -23.4)
+
+[node name="SquirellHomingAttackTarget14" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 362.8, 9.6, 29)
+
+[node name="SquirellHomingAttackTarget15" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.4, 9.6, 29)
+
 [node name="SquirellHomingAttackTarget7" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 336, 12.6, -106.6)
 
