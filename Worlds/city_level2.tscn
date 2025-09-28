@@ -746,7 +746,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 334, 2.6, 24.8)
 curve = SubResource("Curve3D_o6ucq")
 
 [node name="SquirellHomingAttackTarget2" parent="." instance=ExtResource("22_oxxex")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 392.8, 12.6, -65.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 384.6, 12.6, -65.4)
 
 [node name="SquirellHomingAttackTarget3" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 356.6, 12.6, -65.4)
@@ -756,6 +756,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 316, 12.6, -65.4)
 
 [node name="SquirellHomingAttackTarget5" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 281.4, 12.6, -65.4)
+
+[node name="SquirellHomingAttackTarget16" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 262, 6, -65.4)
+
+[node name="SquirellHomingAttackTarget17" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 262, 6, -83.8)
+
+[node name="SquirellHomingAttackTarget18" parent="." instance=ExtResource("22_oxxex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 262, 6, -105.8)
 
 [node name="SquirellHomingAttackTarget6" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.6, 12.6, -106.6)
@@ -776,7 +785,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 328.4, 9.6, 29)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 336, 12.6, -106.6)
 
 [node name="SquirellHomingAttackTarget8" parent="." instance=ExtResource("22_oxxex")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 379.2, 12.6, -106.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 369, 12.6, -106.6)
 
 [node name="SquirellHomingAttackTarget9" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 665.2, 8.2, 110.2)
