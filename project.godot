@@ -16,7 +16,7 @@ config/use_hidden_project_data_directory=false
 config/features=PackedStringArray("4.3")
 boot_splash/bg_color=Color(0.0170754, 0.00102005, 0.12075, 1)
 boot_splash/image="res://UI/Images/DobiboGames.png"
-config/icon="res://UI/AcorniaIcon.ico"
+config/icon="res://Textures/cheese.png"
 config/macos_native_icon="res://UI/AcorniaIcon.ico"
 config/windows_native_icon="res://UI/AcorniaIcon.ico"
 
