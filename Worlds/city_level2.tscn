@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://lrhftas6xl3n"]
+[gd_scene load_steps=39 format=3 uid="uid://lrhftas6xl3n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_0y5cf"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_i7fmj"]
@@ -22,6 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_a6a17"]
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="21_t4pva"]
 [ext_resource type="PackedScene" uid="uid://drjb1h4hjbsvk" path="res://WorldBlocks/Interactive/Squirell_Homing.tscn" id="22_oxxex"]
+[ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="23_kdgju"]
+[ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="24_q4uw2"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7tap0"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -96,6 +99,25 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n3pnk"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fbh6g"]
+frames = 2
+frame_0/texture = ExtResource("23_kdgju")
+frame_1/texture = ExtResource("24_q4uw2")
+frame_1/duration = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7eo4e"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.580392)
+albedo_texture = SubResource("AnimatedTexture_fbh6g")
+uv1_scale = Vector3(50, 50, 50)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rrfs"]
+albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
+albedo_texture = ExtResource("25_7tap0")
+uv1_scale = Vector3(20, 20, 20)
 
 [node name="newForest" type="Node3D"]
 script = ExtResource("1_0y5cf")
@@ -795,3 +817,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 677.2, 8.2, 110.2)
 
 [node name="SquirellHomingAttackTarget11" parent="." instance=ExtResource("22_oxxex")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 653.2, 8.2, 110.2)
+
+[node name="Water" type="CSGMesh3D" parent="."]
+transform = Transform3D(1335.08, 0, 0, 0, 1335.08, 0, 0, 0, 1335.08, 0, -63.777, 0)
+mesh = SubResource("PlaneMesh_n3pnk")
+material = SubResource("StandardMaterial3D_7eo4e")
+
+[node name="Sky" type="CSGSphere3D" parent="."]
+transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 274.8, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_0rrfs")
