@@ -119,7 +119,7 @@ albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
 albedo_texture = ExtResource("25_7tap0")
 uv1_scale = Vector3(20, 20, 20)
 
-[node name="newForest" type="Node3D"]
+[node name="CityLevel2" type="Node3D"]
 script = ExtResource("1_0y5cf")
 nextLevel = "space_level"
 
