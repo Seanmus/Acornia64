@@ -36,7 +36,7 @@ transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
 
 [node name="RespawnTimer" type="Timer" parent="."]
 process_mode = 3
-wait_time = 8.0
+wait_time = 25.0
 one_shot = true
 script = ExtResource("7_tdto4")
 
