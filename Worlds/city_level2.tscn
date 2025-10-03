@@ -1,6 +1,7 @@
-[gd_scene load_steps=39 format=3 uid="uid://lrhftas6xl3n"]
+[gd_scene load_steps=40 format=3 uid="uid://lrhftas6xl3n"]
 
 [ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_0y5cf"]
+[ext_resource type="AudioStream" uid="uid://cg2u4qo5xroly" path="res://Audio/Music/fever_stadium_bpm165.ogg" id="2_067pf"]
 [ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="2_i7fmj"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_kisrf"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_7dbrp"]
@@ -122,6 +123,7 @@ uv1_scale = Vector3(20, 20, 20)
 [node name="CityLevel2" type="Node3D"]
 script = ExtResource("1_0y5cf")
 nextLevel = "space_level"
+levelMusic = ExtResource("2_067pf")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("16_eckce")
