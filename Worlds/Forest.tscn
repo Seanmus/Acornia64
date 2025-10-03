@@ -408,6 +408,7 @@ material = ExtResource("19_cgq7m")
 
 [node name="catapult" parent="." instance=ExtResource("20_jxm1x")]
 transform = Transform3D(-0.647048, 0, -2.41481, 0, 2.5, 0, 2.41481, 0, -0.647048, 174.236, 321.84, -114.665)
+nextLevel = "city_level2"
 
 [node name="RotatingHalfHex3" parent="." instance=ExtResource("22_4mc8o")]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 196.976, 215.37, -43.0993)
