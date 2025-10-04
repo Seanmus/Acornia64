@@ -9,7 +9,7 @@ var overlappedTargets = []
 @export var raycast : RayCast3D
 var homingTarget
 var homingSpeed = 85
-var homingAttackBounceVelocity = 11
+var homingAttackBounceVelocity = 15
 
 func _ready() -> void:
 	raycast.add_exception(player)
