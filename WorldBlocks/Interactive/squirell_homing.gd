@@ -3,7 +3,7 @@ class_name Squirell_Homing
 @onready var player = get_tree().get_nodes_in_group("Player")
 @onready var startPos = position
 var otherHoming = [self]
-
+var speed = 15
 func _process(delta: float) -> void:
 	if otherHoming.size() > 1:
 		position += (otherHoming[1].position - position) * -0.5 * delta
@@ -15,7 +15,7 @@ func _process(delta: float) -> void:
 		if $RayCast3D.get_collider() != player[0]:
 			_ReturnToStart(delta)
 		else:
-			position = position.move_toward(Vector3(player[0].position.x, player[0].position.y + 1, player[0].position.z), 10 * delta)
+			position = position.move_toward(Vector3(player[0].position.x, player[0].position.y + 1, player[0].position.z), speed * delta)
 			$squirell.look_at(player[0].position)
 	else:
 		_ReturnToStart(delta)
