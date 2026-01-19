@@ -1,9 +1,11 @@
 [gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://b5mdes6gsvtra"]
 
-[ext_resource type="Texture2D" uid="uid://bu4mpl65el83e" path="res://WorldBlocks/Imports/speedBoost_speedBoostTexture.png" id="1_ov3f6"]
+[ext_resource type="Texture2D" uid="uid://bu4mpl65el83e" path="res://WorldBlocks/Imports/speedBoost_speedBoostTexture.png" id="1_fmc5x"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_do12n"]
-frame_0/texture = ExtResource("1_ov3f6")
+frames = 2
+frame_0/texture = ExtResource("1_fmc5x")
+frame_1/duration = 1.0
 
 [resource]
 resource_name = "BoostMaterial"
