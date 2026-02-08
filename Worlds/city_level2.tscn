@@ -517,6 +517,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 3.2, 5)
 [node name="cheese6" parent="Cheese" instance=ExtResource("8_4mlco")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 3.2, 5)
 
+[node name="cheese7" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 495.087, 3.2, 254.924)
+
+[node name="cheese8" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 490.087, 3.2, 254.924)
+
+[node name="cheese9" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 500.087, 3.2, 254.924)
+
+[node name="cheese49" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 592.762, 3.2, 248.924)
+
+[node name="cheese51" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 619.288, 3.2, 260.924)
+
+[node name="cheese55" parent="Cheese" instance=ExtResource("8_4mlco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 646.288, 3.2, 254.924)
+
 [node name="UI" parent="." instance=ExtResource("9_v7baw")]
 
 [node name="MovingPlatforms" type="Node" parent="."]
