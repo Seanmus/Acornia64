@@ -95,6 +95,9 @@ func HandleAerialMovements(delta):
 				if landing:
 					landing = false
 			if Input.is_action_just_pressed("jump"):
+				canDoubleJump = true
+				wasOnGround = false
+				coyoteTime = false
 				jump()
 		else:
 			if wasOnGround:
@@ -113,6 +116,7 @@ func HandleAerialMovements(delta):
 					elif canDoubleJump:
 						jump()
 						canDoubleJump = false
+						coyoteTime = false
 						addPoofCloud()
 			#Makes the player fall
 			velocity.y -= gravity * 1.2 * delta
