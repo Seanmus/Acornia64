@@ -300,8 +300,8 @@ vertical = true
 [node name="startBtn" type="Button" parent="UI/FlowContainer"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../audioSlider")
-focus_neighbor_bottom = NodePath("../collectBtn")
-focus_next = NodePath("../collectBtn")
+focus_neighbor_bottom = NodePath("../levelSelect")
+focus_next = NodePath("../levelSelect")
 theme = ExtResource("8_4ym14")
 theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
 theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
@@ -315,9 +315,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="levelSelect" type="Button" parent="UI/FlowContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../../audioSlider")
+focus_neighbor_top = NodePath("../startBtn")
 focus_neighbor_bottom = NodePath("../collectBtn")
 focus_next = NodePath("../collectBtn")
+focus_previous = NodePath("../startBtn")
 theme = ExtResource("8_4ym14")
 theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
 theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
@@ -331,10 +332,10 @@ metadata/_edit_use_anchors_ = true
 
 [node name="collectBtn" type="Button" parent="UI/FlowContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../startBtn")
+focus_neighbor_top = NodePath("../levelSelect")
 focus_neighbor_bottom = NodePath("../QuitBtn")
 focus_next = NodePath("../QuitBtn")
-focus_previous = NodePath("../startBtn")
+focus_previous = NodePath("../levelSelect")
 theme = ExtResource("8_4ym14")
 theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
 theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
