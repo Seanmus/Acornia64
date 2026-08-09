@@ -1,23 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3be7imrni88"]
+[gd_scene format=3 uid="uid://d3be7imrni88"]
 
-[ext_resource type="PackedScene" uid="uid://b57qtln18tx6w" path="res://WorldBlocks/hex_platform.tscn" id="1_apulx"]
-[ext_resource type="Script" path="res://WorldBlocks/Interactive/rotating_platform.gd" id="1_tepfh"]
-[ext_resource type="Material" uid="uid://dydn8kppuutcj" path="res://Materials/wood.tres" id="2_854oj"]
+[ext_resource type="Script" uid="uid://bbfpjclnaui4q" path="res://WorldBlocks/Interactive/rotating_platform.gd" id="1_tepfh"]
+[ext_resource type="PackedScene" uid="uid://bhkimyo6enj20" path="res://WorldBlocks/Imports/MetalHex.glb" id="2_1fxfn"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ynfde"]
-data = PackedVector3Array(0, -1, -1, 0.866, 1, -0.5, 0, 1, -1, 0, -1, -1, 0.866, -1, -0.5, 0.866, 1, -0.5, 0.866, -1, -0.5, 0.866, 1, 0.5, 0.866, 1, -0.5, 0.866, -1, -0.5, 0.866, -1, 0.5, 0.866, 1, 0.5, 0.866, -1, 0.5, 0, 1, 1, 0.866, 1, 0.5, 0.866, -1, 0.5, 0, -1, 1, 0, 1, 1, 0, -1, 1, -0.866, 1, 0.5, 0, 1, 1, 0, -1, 1, -0.866, -1, 0.5, -0.866, 1, 0.5, 0.866, 1, 0.5, 0, 1, -1, 0.866, 1, -0.5, 0, 1, -1, -0.866, 1, 0.5, -0.866, 1, -0.5, -0.866, 1, 0.5, 0.866, 1, 0.5, 0, 1, 1, 0, 1, -1, 0.866, 1, 0.5, -0.866, 1, 0.5, -0.866, -1, 0.5, -0.866, 1, -0.5, -0.866, 1, 0.5, -0.866, -1, 0.5, -0.866, -1, -0.5, -0.866, 1, -0.5, -0.866, -1, -0.5, 0, 1, -1, -0.866, 1, -0.5, -0.866, -1, -0.5, 0, -1, -1, 0, 1, -1, -0.866, -1, -0.5, 0.866, -1, -0.5, 0, -1, -1, 0.866, -1, -0.5, 0, -1, 1, 0.866, -1, 0.5, 0, -1, 1, -0.866, -1, -0.5, -0.866, -1, 0.5, 0.866, -1, -0.5, -0.866, -1, -0.5, 0, -1, 1)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iabkt"]
+data = PackedVector3Array(0, -1, -1, 0.7071, 1, -0.7071, 0, 1, -1, 0, -1, -1, 0.7071, -1, -0.7071, 0.7071, 1, -0.7071, 0.7071, -1, -0.7071, 1, 1, 0, 0.7071, 1, -0.7071, 0.7071, -1, -0.7071, 1, -1, 0, 1, 1, 0, 1, -1, 0, 0.7071, 1, 0.7071, 1, 1, 0, 1, -1, 0, 0.7071, -1, 0.7071, 0.7071, 1, 0.7071, 0.7071, -1, 0.7071, 0, 1, 1, 0.7071, 1, 0.7071, 0.7071, -1, 0.7071, 0, -1, 1, 0, 1, 1, 0, -1, 1, -0.7071, 1, 0.7071, 0, 1, 1, 0, -1, 1, -0.7071, -1, 0.7071, -0.7071, 1, 0.7071, -0.7071, -1, 0.7071, -1, 1, 0, -0.7071, 1, 0.7071, -0.7071, -1, 0.7071, -1, -1, 0, -1, 1, 0, -1, -1, 0, -0.7071, 1, -0.7071, -1, 1, 0, -1, -1, 0, -0.7071, -1, -0.7071, -0.7071, 1, -0.7071, -0.7071, -1, -0.7071, 0, 1, -1, -0.7071, 1, -0.7071, -0.7071, -1, -0.7071, 0, -1, -1, 0, 1, -1, 1, 1, 0, 0, 1, -1, 0.7071, 1, -0.7071, 1, 1, 0, -1, 1, 0, 0, 1, -1, 0, 1, -1, -1, 1, 0, -0.7071, 1, -0.7071, -1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0.7071, 1, 0.7071, -1, 1, 0, 0, 1, 1, -0.7071, 1, 0.7071, -0.7071, -1, -0.7071, 0.7071, -1, -0.7071, 0, -1, -1, -0.7071, -1, -0.7071, 0.7071, -1, 0.7071, 0.7071, -1, -0.7071, 0.7071, -1, -0.7071, 0.7071, -1, 0.7071, 1, -1, 0, 0.7071, -1, 0.7071, -0.7071, -1, -0.7071, -0.7071, -1, 0.7071, -0.7071, -1, 0.7071, -0.7071, -1, -0.7071, -1, -1, 0, 0.7071, -1, 0.7071, -0.7071, -1, 0.7071, 0, -1, 1)
 
-[node name="RotatingHexPlatform" type="AnimatableBody3D"]
+[node name="RotatingHexPlatform" type="AnimatableBody3D" unique_id=434386894]
 sync_to_physics = false
 script = ExtResource("1_tepfh")
 
-[node name="hexPlatform" parent="." instance=ExtResource("1_apulx")]
+[node name="MetalHex" parent="." unique_id=660972623 instance=ExtResource("2_1fxfn")]
 
-[node name="Cylinder" parent="hexPlatform" index="0"]
-material_override = ExtResource("2_854oj")
+[node name="StaticBody3D" type="StaticBody3D" parent="MetalHex/Cylinder" parent_id_path=PackedInt32Array(660972623, 799210036) index="0" unique_id=774762483]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.185, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_ynfde")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MetalHex/Cylinder/StaticBody3D" unique_id=1249659752]
+shape = SubResource("ConcavePolygonShape3D_iabkt")
 
-[editable path="hexPlatform"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1908346298]
+transform = Transform3D(1, 0, 0, 0, 0.125, 0, 0, 0, 1, 0, 0.0010660589, 0)
+shape = SubResource("ConcavePolygonShape3D_iabkt")
+
+[editable path="MetalHex"]
