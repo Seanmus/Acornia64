@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://emfcsw4pi4lp"]
+
+[ext_resource type="Texture2D" uid="uid://bgvi3n2yp8gl4" path="res://WorldBlocks/Imports/grate_Grate-GrateAlpha.png" id="1_c74yc"]
+
+[resource]
+resource_name = "Material"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_c74yc")
+roughness = 0.5
+uv1_scale = Vector3(0.33, 0.33, 0.33)
