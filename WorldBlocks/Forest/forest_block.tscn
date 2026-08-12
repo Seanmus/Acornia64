@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2pg8s6s68vkj"]
 
 [ext_resource type="PackedScene" uid="uid://c3hxnxjsudufk" path="res://WorldBlocks/Imports/ForestBlock.glb" id="1_oh1ls"]
-[ext_resource type="Material" uid="uid://dkitafkl1rfl1" path="res://Materials/blue_bricks.tres" id="2_46sqk"]
+[ext_resource type="Material" uid="uid://mlxegwkrie62" path="res://Materials/pink_bricks.tres" id="2_46sqk"]
 [ext_resource type="Material" uid="uid://brpvthl0bmk04" path="res://Materials/Stone.tres" id="3_6ye6v"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jf2r5"]

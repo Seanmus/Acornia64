@@ -284,7 +284,7 @@ curve = SubResource("Curve3D_jow71")
 transform = Transform3D(2.25, 0, 0, 0, 0.1, 0, 0, 0, 2.25, 98.779, 142, -51.207)
 
 [node name="ForestBlock5" parent="." unique_id=346137909 instance=ExtResource("17_7i0tx")]
-transform = Transform3D(2.25, 0, 0, 0, 0.1, 0, 0, 0, 2.25, 98.779, 142, 151.6119)
+transform = Transform3D(2.25, 0, 0, 0, 0.53103787, 0, 0, 0, 2.25, 98.779, 138, 151.6119)
 
 [node name="ForestBlock6" parent="." unique_id=2118147719 instance=ExtResource("17_7i0tx")]
 transform = Transform3D(0.8, 0, 0, 0, 0.1, 0, 0, 0, 0.8, 103.401306, 182.08366, 152.79324)
