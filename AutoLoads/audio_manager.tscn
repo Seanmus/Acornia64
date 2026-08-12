@@ -1,15 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://ci8e1uv4chcu"]
+[gd_scene format=3 uid="uid://ci8e1uv4chcu"]
 
-[ext_resource type="Script" path="res://AutoLoads/audio_manager.gd" id="1_1sdxu"]
+[ext_resource type="Script" uid="uid://11leo45c7dkb" path="res://AutoLoads/audio_manager.gd" id="1_1sdxu"]
 [ext_resource type="AudioStream" uid="uid://gkhtfsmk3exg" path="res://Audio/Effects/collect.wav" id="2_uaevk"]
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="3_ujmde"]
+[ext_resource type="AudioStream" uid="uid://bkhh5vu0uo2ji" path="res://Audio/Effects/sppedBoost.wav" id="4_6x0yp"]
 
-[node name="AudioManager" type="Node"]
+[node name="AudioManager" type="Node" unique_id=1951419240]
 script = ExtResource("1_1sdxu")
 
-[node name="seedCollect" type="AudioStreamPlayer" parent="."]
+[node name="seedCollect" type="AudioStreamPlayer" parent="." unique_id=354517190]
 stream = ExtResource("2_uaevk")
 
-[node name="coinCollect" type="AudioStreamPlayer" parent="."]
+[node name="coinCollect" type="AudioStreamPlayer" parent="." unique_id=1340707321]
 stream = ExtResource("3_ujmde")
 volume_db = -9.455
+
+[node name="Woosh" type="AudioStreamPlayer" parent="." unique_id=2014332775]
+stream = ExtResource("4_6x0yp")
+volume_db = 6.0
+pitch_scale = 1.4

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://byhxv7tqydcf7"]
+[gd_scene format=4 uid="uid://byhxv7tqydcf7"]
 
-[ext_resource type="Script" path="res://WorldBlocks/Interactive/speed_boost.gd" id="1_3de51"]
+[ext_resource type="Script" uid="uid://b64rto3nxn4tk" path="res://WorldBlocks/Interactive/speed_boost.gd" id="1_3de51"]
 [ext_resource type="Material" uid="uid://b5mdes6gsvtra" path="res://Materials/speed_boostMaterial.tres" id="2_2psoy"]
+[ext_resource type="AudioStream" uid="uid://bkhh5vu0uo2ji" path="res://Audio/Effects/sppedBoost.wav" id="3_ql44b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_puvnf"]
 resource_name = "BaseMat"
@@ -67,16 +68,21 @@ shadow_mesh = SubResource("ArrayMesh_4av2e")
 [sub_resource type="BoxShape3D" id="BoxShape3D_ovuqx"]
 size = Vector3(3.08533, 0.235619, 1.66878)
 
-[node name="speedBoost" type="Area3D"]
+[node name="speedBoost" type="Area3D" unique_id=753254046]
 script = ExtResource("1_3de51")
 
-[node name="Cube" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1531005204]
 transform = Transform3D(1.54691, 0, 0, 0, 0.0552505, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_52u6s")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=656449444]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0668864, 0)
 shape = SubResource("BoxShape3D_ovuqx")
+
+[node name="Woosh" type="AudioStreamPlayer" parent="." unique_id=2139584641]
+stream = ExtResource("3_ql44b")
+volume_db = 1.922
+pitch_scale = 0.44
 
 [connection signal="body_entered" from="." to="." method="_on_speed_boost_body_entered"]

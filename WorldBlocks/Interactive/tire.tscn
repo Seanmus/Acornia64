@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://c0rvk8nuladak"]
+[gd_scene format=4 uid="uid://c0rvk8nuladak"]
 
-[ext_resource type="Script" path="res://WorldBlocks/Interactive/mushroom.gd" id="1_t1mfq"]
+[ext_resource type="Script" uid="uid://mwhrtq4eq6kg" path="res://WorldBlocks/Interactive/mushroom.gd" id="1_t1mfq"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="2_12rwa"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojpb5"]
@@ -80,30 +80,29 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wkwud"]
 _data = {
-"RESET": SubResource("Animation_dyodh"),
-"bounce": SubResource("Animation_w7ikw")
+&"RESET": SubResource("Animation_dyodh"),
+&"bounce": SubResource("Animation_w7ikw")
 }
 
-[node name="tire" type="Node3D"]
+[node name="tire" type="Node3D" unique_id=1732568289]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 script = ExtResource("1_t1mfq")
 
-[node name="Cylinder" type="MeshInstance3D" parent="."]
+[node name="Cylinder" type="MeshInstance3D" parent="." unique_id=753159694]
 transform = Transform3D(1, 0, 0, 0, 0.191428, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_bhkgs")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Cylinder"]
+[node name="Area3D" type="Area3D" parent="Cylinder" unique_id=410024579]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cylinder/Area3D" unique_id=1676235550]
 shape = SubResource("ConcavePolygonShape3D_5o8mt")
 
-[node name="sound" type="AudioStreamPlayer3D" parent="."]
+[node name="sound" type="AudioStreamPlayer" parent="." unique_id=1613989707]
 stream = ExtResource("2_12rwa")
+volume_db = 20.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wkwud")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1336138493]
+libraries/ = SubResource("AnimationLibrary_wkwud")
 
 [connection signal="body_entered" from="Cylinder/Area3D" to="." method="_on_area_3d_body_entered"]
