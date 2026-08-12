@@ -8,4 +8,4 @@ next_pass = ExtResource("2_d1k62")
 albedo_color = Color(0.487576, 0.529523, 0.507567, 1)
 albedo_texture = ExtResource("1_s4yuh")
 roughness = 1.07
-uv1_scale = Vector3(6.185, 6.185, 6.185)
+uv1_scale = Vector3(0.2, 0.2, 0.2)
