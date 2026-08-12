@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://behikmbciywxe" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 3.wav" id="2_y82gb"]
 [ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="3_itlwk"]
 [ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="5_qfb5v"]
+[ext_resource type="Material" uid="uid://byfug6c01uj73" path="res://Materials/metal_MatSpaceStation.tres" id="6_bj0ij"]
 [ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="6_ybxcj"]
 [ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="7_mnarr"]
 [ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="8_jwxpj"]
@@ -13,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cimcbk5kfcrlp" path="res://WorldBlocks/BaseWorldBlock.tscn" id="11_dx50o"]
 [ext_resource type="Material" uid="uid://b0i1v0ixlrvcg" path="res://Materials/green_bricks.tres" id="12_c5myv"]
 [ext_resource type="Material" uid="uid://bm8g2dtbrpeky" path="res://Materials/grey_bricks.tres" id="12_npbsa"]
-[ext_resource type="Material" uid="uid://ck4k6x52au3k7" path="res://Materials/blue_bricksScaledUV.tres" id="12_oyof2"]
 [ext_resource type="PackedScene" uid="uid://byhxv7tqydcf7" path="res://WorldBlocks/Interactive/speed_boost.tscn" id="13_0hu8e"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="14_n7o4n"]
 [ext_resource type="Texture2D" uid="uid://dgrccf4kxxm7f" path="res://Textures/GreyBrick.png" id="14_nader"]
@@ -682,7 +682,7 @@ upwardsVelocity = 20
 
 [node name="BrickBox22" parent="ExteriorCSGBlocks" unique_id=428135026 instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.37033e-08, 0, 0.999814, 0, 0.999814, 0, -0.999814, 0, -4.37033e-08, 81.9252, 24.7948, 87.3291)
-material_override = ExtResource("17_nbf0w")
+material_override = ExtResource("6_bj0ij")
 size = Vector3(41.6, 1, 105.747)
 material = ExtResource("12_npbsa")
 
@@ -694,13 +694,13 @@ material = ExtResource("12_npbsa")
 
 [node name="BrickBox21" parent="ExteriorCSGBlocks" unique_id=1445566707 instance=ExtResource("11_dx50o")]
 transform = Transform3D(-4.06724e-08, 0.258771, 0.965746, 1.13112e-08, 0.965746, -0.258771, -0.999814, 3.98978e-10, -4.22141e-08, 59.8576, 29.2102, 87.4889)
-material_override = ExtResource("17_nbf0w")
+material_override = ExtResource("6_bj0ij")
 size = Vector3(41, 1, 62.1882)
-material = ExtResource("12_oyof2")
+material = ExtResource("6_bj0ij")
 
 [node name="BrickBox26" parent="ExteriorCSGBlocks" unique_id=531667446 instance=ExtResource("11_dx50o")]
 transform = Transform3D(1.29621e-07, -0.258771, -0.965746, 1.13112e-08, 0.965746, -0.258771, 0.999814, 2.26225e-08, 1.28131e-07, 146.527, 30.9256, 87.4781)
-material_override = ExtResource("17_nbf0w")
+material_override = ExtResource("6_bj0ij")
 size = Vector3(41.8, 1, 48.8)
 material = SubResource("StandardMaterial3D_30j66")
 

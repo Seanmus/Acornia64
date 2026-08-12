@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cimcbk5kfcrlp"]
+[gd_scene format=3 uid="uid://cimcbk5kfcrlp"]
 
 [ext_resource type="Material" uid="uid://mlxegwkrie62" path="res://Materials/pink_bricks.tres" id="1_1pjkf"]
 
-[node name="BrickBox" type="CSGBox3D"]
+[node name="BrickBox" type="CSGBox3D" unique_id=945369600]
 use_collision = true
 material = ExtResource("1_1pjkf")
