@@ -1,9 +1,73 @@
-[gd_scene load_steps=8 format=3 uid="uid://4ywis8tsrao6"]
+[gd_scene format=3 uid="uid://4ywis8tsrao6"]
 
 [ext_resource type="PackedScene" uid="uid://co4pmmes5pkbl" path="res://TrapsAndEnemies/Enemies/squirell.glb" id="1_ae0xo"]
-[ext_resource type="Material" uid="uid://dv6t01t6tmksj" path="res://Materials/fur.tres" id="2_1nm3u"]
-[ext_resource type="Script" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="2_rbu4s"]
-[ext_resource type="Material" uid="uid://3e8eaaxwdyga" path="res://Materials/furDark.tres" id="3_ssi5d"]
+[ext_resource type="Script" uid="uid://bl1m1n5wsi8eh" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="2_rbu4s"]
+[ext_resource type="Texture2D" uid="uid://dkrulvc636it5" path="res://Materials/fur_albedo.png" id="3_oxmba"]
+[ext_resource type="Material" uid="uid://dyb7fsbl524vs" path="res://Player/AcornOutsideMat.tres" id="4_g8ql5"]
+[ext_resource type="Texture2D" uid="uid://bhxcqtkpn7rei" path="res://Materials/furDark_albedo.png" id="5_bsbk6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_708iq"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.709804, 0.596078, 0.341176, 1)
+albedo_texture = ExtResource("3_oxmba")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8g4j"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.572549, 0.427451, 0.235294, 1)
+albedo_texture = ExtResource("5_bsbk6")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t3uoo"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.572549, 0.427451, 0.235294, 1)
+albedo_texture = ExtResource("5_bsbk6")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahbct"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.709804, 0.596078, 0.341176, 1)
+albedo_texture = ExtResource("3_oxmba")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_37xtt"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.709804, 0.596078, 0.341176, 1)
+albedo_texture = ExtResource("3_oxmba")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lq2vy"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.709804, 0.596078, 0.341176, 1)
+albedo_texture = ExtResource("3_oxmba")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ec5qu"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.709804, 0.596078, 0.341176, 1)
+albedo_texture = ExtResource("3_oxmba")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw43e"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.572549, 0.427451, 0.235294, 1)
+albedo_texture = ExtResource("5_bsbk6")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bc8ta"]
+next_pass = ExtResource("4_g8ql5")
+albedo_color = Color(0.572549, 0.427451, 0.235294, 1)
+albedo_texture = ExtResource("5_bsbk6")
+roughness = 1.07
+uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="Animation" id="Animation_2hsw2"]
 length = 0.001
@@ -39,48 +103,48 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wp16p"]
 _data = {
-"RESET": SubResource("Animation_2hsw2"),
-"hover": SubResource("Animation_air3m")
+&"RESET": SubResource("Animation_2hsw2"),
+&"hover": SubResource("Animation_air3m")
 }
 
-[node name="squirell" instance=ExtResource("1_ae0xo")]
+[node name="squirell" unique_id=101117212 instance=ExtResource("1_ae0xo")]
 script = ExtResource("2_rbu4s")
 
 [node name="Head" parent="." index="0"]
 transform = Transform3D(-1.15093e-08, 0, -0.263302, 0, 0.263302, 0, 0.263302, 0, -1.15093e-08, -0.00443278, 0.00341929, -0.379829)
-material_override = ExtResource("2_1nm3u")
+material_override = SubResource("StandardMaterial3D_708iq")
 
 [node name="Body" parent="." index="1"]
 transform = Transform3D(-1.24247e-08, 0, -0.284244, 0, 0.284244, 0, 0.284244, 0, -1.24247e-08, -0.00443278, -0.356177, 0.108656)
-material_override = ExtResource("3_ssi5d")
+material_override = SubResource("StandardMaterial3D_q8g4j")
 
 [node name="Tail" parent="." index="2"]
 transform = Transform3D(-2.27838e-09, -4.33718e-09, -0.239889, -0.0905363, 0.0571245, 0, 0.0521233, 0.099223, -1.04859e-08, -0.00443278, -0.63162, 0.317613)
-material_override = ExtResource("3_ssi5d")
+material_override = SubResource("StandardMaterial3D_t3uoo")
 
 [node name="LeftFoot" parent="." index="3"]
 transform = Transform3D(-8.38378e-09, 0, -0.109125, 0, 0.0752095, 0, 0.191798, 0, -4.76999e-09, -0.154433, -0.739861, 0.108656)
-material_override = ExtResource("2_1nm3u")
+material_override = SubResource("StandardMaterial3D_ahbct")
 
 [node name="RightFoot" parent="." index="4"]
 transform = Transform3D(-8.38378e-09, 0, -0.109125, 0, 0.0752095, 0, 0.191798, 0, -4.76999e-09, 0.145567, -0.739861, 0.108656)
-material_override = ExtResource("2_1nm3u")
+material_override = SubResource("StandardMaterial3D_37xtt")
 
 [node name="LeftArm" parent="." index="5"]
 transform = Transform3D(-6.67199e-09, 1.99069e-09, -0.109125, 0.11614, 0.0598533, 0, 0.152637, -0.0455417, -4.76999e-09, -0.174433, -0.301032, -0.213982)
-material_override = ExtResource("2_1nm3u")
+material_override = SubResource("StandardMaterial3D_lq2vy")
 
 [node name="RightArm" parent="." index="6"]
 transform = Transform3D(-6.67199e-09, 1.99069e-09, -0.109125, 0.11614, 0.0598533, 0, 0.152637, -0.0455417, -4.76999e-09, 0.165567, -0.301032, -0.213982)
-material_override = ExtResource("2_1nm3u")
+material_override = SubResource("StandardMaterial3D_ec5qu")
 
 [node name="LeftEar" parent="." index="7"]
 transform = Transform3D(-5.05381e-09, 0, -0.040743, 0, 0.115618, 0, 0.115618, 0, -1.78093e-09, -0.105338, 0.257058, -0.262556)
-material_override = ExtResource("3_ssi5d")
+material_override = SubResource("StandardMaterial3D_aw43e")
 
 [node name="RightEar" parent="." index="8"]
 transform = Transform3D(-5.05381e-09, 0, -0.040743, 0, 0.115618, 0, 0.115618, 0, -1.78093e-09, 0.106684, 0.257058, -0.262556)
-material_override = ExtResource("3_ssi5d")
+material_override = SubResource("StandardMaterial3D_bc8ta")
 
 [node name="SaucerBase" parent="." index="9"]
 transform = Transform3D(0.203111, 0, -0.936733, 0, 0.576161, 0, 0.936733, 0, 0.203111, -0.00443278, -0.591226, 0.00655229)
@@ -103,8 +167,6 @@ transform = Transform3D(-0.02913, 0, -0.0191029, 0, 0.0544059, 0, 0.0459504, 0, 
 [node name="RightEye" parent="." index="15"]
 transform = Transform3D(0.0288782, 0, -0.0189378, 0, 0.0539356, 0, 0.0455533, 0, 0.0120055, 0.156829, 0.04409, -0.517785)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="16"]
-libraries = {
-"": SubResource("AnimationLibrary_wp16p")
-}
-autoplay = "hover"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="16" unique_id=901999472]
+libraries/ = SubResource("AnimationLibrary_wp16p")
+autoplay = &"hover"
