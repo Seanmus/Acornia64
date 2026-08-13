@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dnn21iixd1pjt"]
+
+[ext_resource type="PackedScene" uid="uid://bf52p216ew12c" path="res://WorldBlocks/Imports/rock.glb" id="1_fcul1"]
+[ext_resource type="Texture2D" uid="uid://bhxcqtkpn7rei" path="res://Materials/furDark_albedo.png" id="2_7nbfu"]
+[ext_resource type="Material" uid="uid://dyb7fsbl524vs" path="res://Player/AcornOutsideMat.tres" id="3_dgpjm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfkxd"]
+next_pass = ExtResource("3_dgpjm")
+albedo_color = Color(0.487576, 0.529523, 0.507567, 1)
+albedo_texture = ExtResource("2_7nbfu")
+roughness = 1.07
+uv1_scale = Vector3(0.265, 0.265, 0.265)
+uv1_triplanar = true
+
+[node name="rock" unique_id=2052676632 instance=ExtResource("1_fcul1")]
+
+[node name="Icosphere" parent="." index="0" unique_id=1222101021]
+surface_material_override/0 = SubResource("StandardMaterial3D_xfkxd")

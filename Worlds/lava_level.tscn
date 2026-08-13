@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://ck7d128a3d3s5" path="res://WorldBlocks/Grate_Corner.tscn" id="16_eenwa"]
 [ext_resource type="PackedScene" uid="uid://bpokyy4dpbopg" path="res://TrapsAndEnemies/lava_plume.tscn" id="18_d1e8r"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_8wnci"]
+[ext_resource type="Texture2D" uid="uid://doyiw4w6prbr3" path="res://FlowerPower/imports/sky_skyboxTexture.png" id="21_62pur"]
+[ext_resource type="PackedScene" uid="uid://dnn21iixd1pjt" path="res://WorldBlocks/Decor/rock.tscn" id="22_n1p2s"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_2s6p4"]
 panorama = ExtResource("5_512im")
@@ -42,7 +44,7 @@ fog_density = 1.0
 adjustment_enabled = true
 adjustment_saturation = 1.7
 
-[sub_resource type="Curve3D" id="Curve3D_7h4ua"]
+[sub_resource type="Curve3D" id="Curve3D_qfl3n"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -45.518, 10, 0),
@@ -50,40 +52,41 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_n1p2s"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, -1.955, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 3.825, 0, 0, 30, 0, 11, 0, 0, 0, -1.945, 0, 0.15, 30, 0, 3.46, 5.335, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-
-[sub_resource type="Curve3D" id="Curve3D_62pur"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, 0, 0, 0, -6.195, 0, 0, -25.815, 0, 0, -2.215, 0, 0, 0, 0, 0, -26.205, 0, 12.755, 0, 0, 0, 2.895, 0, 0, 0, 0, 13.26, 7.345, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-
-[sub_resource type="Curve3D" id="Curve3D_qfl3n"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, -1.955, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 3.825, 0, 0, 30, 0, 11, 0, 0, 0, -1.945, 0, 0.15, 30, 0, 3.46, 5.335, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-
 [sub_resource type="Curve3D" id="Curve3D_os4bu"]
 resource_local_to_scene = true
 _data = {
+"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, -1.955, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 3.825, 0, 0, 30, 0, 11, 0, 0, 0, -1.945, 0, 0.15, 30, 0, 3.46, 5.335, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_k563d"]
+resource_local_to_scene = true
+_data = {
 "points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, 0, 0, 0, -6.195, 0, 0, -25.815, 0, 0, -2.215, 0, 0, 0, 0, 0, -26.205, 0, 12.755, 0, 0, 0, 2.895, 0, 0, 0, 0, 13.26, 7.345, 0, 0, 0, 0, 0, 0, 0, 0),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgtj0"]
-albedo_texture = ExtResource("5_512im")
+[sub_resource type="Curve3D" id="Curve3D_qf3ya"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, -1.955, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 3.825, 0, 0, 30, 0, 11, 0, 0, 0, -1.945, 0, 0.15, 30, 0, 3.46, 5.335, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_mng2u"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, -2.24, 0, 0, 0, 0, 0, 0, 0, 0, -6.195, 0, 0, -25.815, 0, 0, -2.215, 0, 0, 0, 0, 0, -26.205, 0, 12.755, 0, 0, 0, 2.895, 0, 0, 0, 0, 13.26, 7.345, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5ey6"]
+albedo_color = Color(0.7137936, 0.053563856, 9.62615e-08, 1)
+albedo_texture = ExtResource("21_62pur")
 
 [node name="lavaLevel" type="Node3D" unique_id=1519676857 node_paths=PackedStringArray("UINode")]
 script = ExtResource("1_n27il")
@@ -497,26 +500,26 @@ transform = Transform3D(-31.7753, 0, 3.68999e-06, 0, 31.7753, 0, -3.68999e-06, 0
 [node name="MovingPlatform2" parent="MovingPlatforms" unique_id=78073708 instance=ExtResource("11_uqrww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.813, 25.0839, 28.0452)
 visible = false
-curve = SubResource("Curve3D_7h4ua")
+curve = SubResource("Curve3D_qfl3n")
 timeToCompletePathOneWay = 4
 
 [node name="Nutcrackers" type="Node" parent="." unique_id=2037528593]
 
 [node name="MovingNutcracker" parent="Nutcrackers" unique_id=1124849050 instance=ExtResource("12_g2puy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 291.791, -28.6394, 56.8182)
-curve = SubResource("Curve3D_n1p2s")
+curve = SubResource("Curve3D_os4bu")
 
 [node name="MovingNutcracker2" parent="Nutcrackers" unique_id=1090421896 instance=ExtResource("12_g2puy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 319.453, -28.6394, 32.9656)
-curve = SubResource("Curve3D_62pur")
+curve = SubResource("Curve3D_k563d")
 
 [node name="MovingNutcracker3" parent="Nutcrackers" unique_id=1296206301 instance=ExtResource("12_g2puy")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 309.457, 30.6871, 11.3804)
-curve = SubResource("Curve3D_qfl3n")
+curve = SubResource("Curve3D_qf3ya")
 
 [node name="MovingNutcracker4" parent="Nutcrackers" unique_id=1739016363 instance=ExtResource("12_g2puy")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 285.604, 30.6871, -16.2816)
-curve = SubResource("Curve3D_os4bu")
+curve = SubResource("Curve3D_mng2u")
 
 [node name="Lava" parent="." unique_id=533449723 instance=ExtResource("13_7hmqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.044, -119.215, -90.1806)
@@ -1468,7 +1471,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.738, -121.024, -127.843)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 321.538, -121.024, -127.843)
 
 [node name="LavaPlume11" parent="." unique_id=1545140372 instance=ExtResource("18_d1e8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 321.538, -121.024, -414.443)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 289.3034, -78.43416, -440.7366)
 
 [node name="LavaPlume12" parent="." unique_id=1296654399 instance=ExtResource("18_d1e8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 357.638, -121.024, -295.043)
@@ -1498,7 +1501,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 294.738, -121.024, 95.7569)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 142.138, -121.024, 150.957)
 
 [node name="LavaPlume9" parent="." unique_id=636521207 instance=ExtResource("18_d1e8r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 453.738, -121.024, 150.957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 529.8844, -68.68707, 232.05615)
 
 [node name="LavaPlume10" parent="." unique_id=1276069217 instance=ExtResource("18_d1e8r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.538, -121.024, 45.1569)
@@ -1506,7 +1509,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 426.538, -121.024, 45.1569)
 [node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1003691603]
 transform = Transform3D(1124.84, 0, 0, 0, 1124.84, 0, 0, 0, 1124.84, 356.84, 0, -81.7769)
 flip_faces = true
-material = SubResource("StandardMaterial3D_qgtj0")
+material = SubResource("StandardMaterial3D_x5ey6")
 
 [node name="catapult" parent="." unique_id=1420251203 instance=ExtResource("20_8wnci")]
 transform = Transform3D(-1.09278e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, -1.09278e-07, 366.527, 30.6244, -340.514)
@@ -1521,6 +1524,27 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 [node name="SpeedBoostRamp" parent="." unique_id=846173384 instance=ExtResource("8_pw0j6")]
 transform = Transform3D(-9.59356e-08, 0, -2.19475, 0.568043, 2.11997, -2.483e-08, 2.11997, -0.568043, -9.26667e-08, 310.969, -43.5075, -129.551)
 upwardsVelocity = 19
+
+[node name="rock" parent="." unique_id=2052676632 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(10.620664, 0, 0, 0, 10.620664, 0, 0, 0, 10.620664, 51.964737, -124.83453, -27.410246)
+
+[node name="rock2" parent="." unique_id=582264826 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(19.165962, 0, -14.725514, 0, 31.21186, 0, 14.725514, 0, 19.165962, 113.21553, -118.81143, -136.95786)
+
+[node name="rock3" parent="." unique_id=1336346744 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(-3.2902822, 0, -20.016186, 0, 26.19505, 0, 20.016186, 0, -3.2902822, 360.65057, -123.2432, -136.95786)
+
+[node name="rock4" parent="." unique_id=1671517241 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(-66.49683, 0, 12.245704, 0, 87.31547, 0, -12.245704, 0, -66.49683, 783.6289, -123.2432, -78.45868)
+
+[node name="rock5" parent="." unique_id=771454617 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(-66.49683, 0, 12.245704, 0, 87.31547, 0, -12.245704, 0, -66.49683, 298.00275, -168.9715, -441.30127)
+
+[node name="rock6" parent="." unique_id=40227378 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(-30.257004, 0, 43.91638, 0, 68.86893, 0, -43.91638, 0, -30.257004, 157.12141, -168.9715, 281.36322)
+
+[node name="rock7" parent="." unique_id=1742986206 instance=ExtResource("22_n1p2s")]
+transform = Transform3D(-51.406193, 0, 26.994724, 0, 68.044, 0, -26.994724, 0, -51.406193, 539.7912, -142.60046, 228.84897)
 
 [editable path="GratePaths/GratePathway196"]
 [editable path="GratePaths/GratePathway163"]
