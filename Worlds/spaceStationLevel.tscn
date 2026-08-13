@@ -30,7 +30,13 @@
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7ffrx"]
 [ext_resource type="PackedScene" uid="uid://dvfsbrumep3x8" path="res://TrapsAndEnemies/Enemies/moving_nutcracker.tscn" id="26_gpsu8"]
 [ext_resource type="PackedScene" uid="uid://dmhgk14dmtxas" path="res://TrapsAndEnemies/Enemies/Squirell_Cannon.tscn" id="30_apha1"]
+[ext_resource type="PackedScene" uid="uid://bosu7lnchsp4g" path="res://WorldBlocks/Decor/SatelitteDish.glb" id="30_nfrib"]
 [ext_resource type="PackedScene" uid="uid://drjb1h4hjbsvk" path="res://WorldBlocks/Interactive/Squirell_Homing.tscn" id="31_6ki4r"]
+[ext_resource type="Script" uid="uid://bl1m1n5wsi8eh" path="res://TrapsAndEnemies/Enemies/squirell.gd" id="31_22jyx"]
+[ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="32_3uxsm"]
+[ext_resource type="PackedScene" uid="uid://bg6wx1omgx1ge" path="res://WorldBlocks/mars.scn" id="33_o10mm"]
+[ext_resource type="PackedScene" uid="uid://cgu4whrv1kmrr" path="res://WorldBlocks/Forest/hub_world.tscn" id="34_o10mm"]
+[ext_resource type="PackedScene" uid="uid://dnh5va6k17p4v" path="res://WorldBlocks/Imports/hubTree.glb" id="35_iqdy6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30j66"]
 albedo_texture = ExtResource("14_nader")
@@ -49,22 +55,6 @@ adjustment_saturation = 1.7
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1ost"]
 size = Vector3(330.2, 10.2, 108.2)
-
-[sub_resource type="Curve3D" id="Curve3D_bj0ij"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0)
-}
-point_count = 3
-
-[sub_resource type="Curve3D" id="Curve3D_nfrib"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0)
-}
-point_count = 3
 
 [sub_resource type="Curve3D" id="Curve3D_22jyx"]
 resource_local_to_scene = true
@@ -91,6 +81,22 @@ _data = {
 point_count = 3
 
 [sub_resource type="Curve3D" id="Curve3D_3uxsm"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_o10mm"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="Curve3D" id="Curve3D_iqdy6"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -22.8, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -912,6 +918,18 @@ material = ExtResource("12_npbsa")
 transform = Transform3D(0.999814, -7.35e-08, -2.79834e-15, 0, -4.37033e-08, 0.999814, -7.35e-08, -0.999814, -4.37033e-08, -525.134, 20.2202, 587.575)
 material_override = ExtResource("15_gcvop")
 size = Vector3(151.4, 1, 103)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox78" parent="ExteriorCSGBlocks" unique_id=945369600 instance=ExtResource("11_dx50o")]
+transform = Transform3D(0.999814, -7.35e-08, -2.79834e-15, 0, -4.37033e-08, 0.999814, -7.35e-08, -0.999814, -4.37033e-08, -550.47986, 83.08257, 537.7092)
+material_override = ExtResource("15_gcvop")
+size = Vector3(1.5146713, 100.75009, 27.0318)
+material = ExtResource("12_npbsa")
+
+[node name="BrickBox79" parent="ExteriorCSGBlocks" unique_id=1888329098 instance=ExtResource("11_dx50o")]
+transform = Transform3D(0.999814, -7.35e-08, -2.79834e-15, 0, -4.37033e-08, 0.999814, -7.35e-08, -0.999814, -4.37033e-08, -499.33792, 83.08257, 537.7092)
+material_override = ExtResource("15_gcvop")
+size = Vector3(1.5146713, 100.75009, 27.0318)
 material = ExtResource("12_npbsa")
 
 [node name="BrickBox46" parent="ExteriorCSGBlocks" unique_id=1127418743 instance=ExtResource("11_dx50o")]
@@ -1742,27 +1760,27 @@ transform = Transform3D(-4.46772e-07, 0, 10.221, 0, 10.221, 0, -10.2209, 0, -4.4
 
 [node name="MovingNutcracker" parent="Nutcrackers" unique_id=1280235915 instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -302.8, 158.401, 1474)
-curve = SubResource("Curve3D_bj0ij")
+curve = SubResource("Curve3D_22jyx")
 
 [node name="MovingNutcracker3" parent="Nutcrackers" unique_id=1835694975 instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -276.2, 158.401, 1474)
-curve = SubResource("Curve3D_nfrib")
+curve = SubResource("Curve3D_rn6li")
 
 [node name="MovingNutcracker2" parent="Nutcrackers" unique_id=2104560179 instance=ExtResource("26_gpsu8")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -290.4, 158.401, 1452)
-curve = SubResource("Curve3D_22jyx")
+curve = SubResource("Curve3D_x7b6x")
 
 [node name="MovingNutcracker4" parent="Nutcrackers" unique_id=794447383 instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -415.4, 158.401, 1552.6)
-curve = SubResource("Curve3D_rn6li")
+curve = SubResource("Curve3D_3uxsm")
 
 [node name="MovingNutcracker5" parent="Nutcrackers" unique_id=304175502 instance=ExtResource("26_gpsu8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -388.8, 158.401, 1552.6)
-curve = SubResource("Curve3D_x7b6x")
+curve = SubResource("Curve3D_o10mm")
 
 [node name="MovingNutcracker6" parent="Nutcrackers" unique_id=1680863097 instance=ExtResource("26_gpsu8")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -403, 158.401, 1530.61)
-curve = SubResource("Curve3D_3uxsm")
+curve = SubResource("Curve3D_iqdy6")
 
 [node name="Decor" type="Node" parent="." unique_id=51903228]
 
@@ -1797,6 +1815,26 @@ transform = Transform3D(-277.559, 0, -480.747, 0, 555.119, 0, 480.747, 0, -277.5
 transform = Transform3D(5163.39, 0, 0, 0, 5163.39, 0, 0, 0, 5163.39, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_b6sx0")
+
+[node name="SatelitteDish" parent="Decor" unique_id=396023492 instance=ExtResource("30_nfrib")]
+transform = Transform3D(7.513145, 0, 8.040038, 0, 11.00407, 0, -8.040038, 0, 7.513145, -508.22797, 134.28964, 10.619526)
+script = ExtResource("31_22jyx")
+
+[node name="SatelitteDish2" parent="Decor" unique_id=695589438 instance=ExtResource("30_nfrib")]
+transform = Transform3D(-8.040038, 0, 7.5131445, 0, 11.004069, 0, -7.5131445, 0, -8.040038, -413.0925, 114.28964, 207.95572)
+script = ExtResource("31_22jyx")
+
+[node name="Moon" parent="Decor" unique_id=737345738 instance=ExtResource("32_3uxsm")]
+transform = Transform3D(465.9746, 0, 0, 0, 465.9746, 0, 0, 0, 465.9746, 1075.5457, -287.28094, 1618.5936)
+
+[node name="mars" parent="Decor" unique_id=1742879665 instance=ExtResource("33_o10mm")]
+transform = Transform3D(674.8482, 0, 0, 0, 674.8482, 0, 0, 0, 674.8482, -1501.8146, -42.477417, -269.80255)
+
+[node name="hubWorld" parent="Decor" unique_id=285468803 instance=ExtResource("34_o10mm")]
+transform = Transform3D(84.52589, 0, 0, 0, 84.52589, 0, 0, 0, 84.52589, 1081.9467, 171.3621, 1622.2338)
+
+[node name="hubTree" parent="Decor" unique_id=1090812748 instance=ExtResource("35_iqdy6")]
+transform = Transform3D(0.23925206, 0, 0, 0, 0.23925206, 0, 0, 0, 0.23925206, 1086.349, 188.00153, 1625.6414)
 
 [node name="HomingAttackTarget7" parent="." unique_id=734222979 instance=ExtResource("30_apha1")]
 transform = Transform3D(1.00019, 0, 0, 0, 1.00019, 0, 0, 0, 1.00019, -485.891, 133.225, 666.324)

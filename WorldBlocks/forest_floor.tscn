@@ -1,11 +1,20 @@
 [gd_scene format=3 uid="uid://sup7uh5i734r"]
 
 [ext_resource type="PackedScene" uid="uid://b4avpwbdx03lv" path="res://WorldBlocks/Imports/forestFloor.glb" id="1_0413u"]
+[ext_resource type="Texture2D" uid="uid://cvoekovan6ave" path="res://WorldBlocks/Imports/forestFloor_forest_leaves_02.webp" id="2_yv6nb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hc2ew"]
+albedo_color = Color(0.3647856, 0.71332824, 0.4696768, 1)
+albedo_texture = ExtResource("2_yv6nb")
+uv1_scale = Vector3(0.245, 0.245, 0.245)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y748c"]
 data = PackedVector3Array(-1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [node name="forestFloor" unique_id=1567333251 instance=ExtResource("1_0413u")]
+
+[node name="Plane" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_hc2ew")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Plane" index="0" unique_id=1523146164]
 
