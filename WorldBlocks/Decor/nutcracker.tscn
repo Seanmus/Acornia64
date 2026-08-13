@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d2r4s7su6gq1c"]
+
+[ext_resource type="PackedScene" uid="uid://cbc4k724xcs2c" path="res://TrapsAndEnemies/Enemies/nutcracker.glb" id="1_nb3g5"]
+
+[node name="nutcracker" unique_id=1319017528 instance=ExtResource("1_nb3g5")]
+
+[node name="HatBrim" parent="." index="0"]
+transform = Transform3D(-1.5405806, 0, 1.3468184e-07, 0, 0.1881338, 0, -1.3468184e-07, 0, -1.5405806, 0, 5.0953727, 0.24058123)
+
+[node name="Hat" parent="." index="1"]
+transform = Transform3D(-1.0896194, 0, 9.5257555e-08, 0, 0.9172105, 0, -9.5257555e-08, 0, -1.0896194, 0, 6.03952, 0.24058123)
+
+[node name="Head" parent="." index="2"]
+transform = Transform3D(1.0896194, 8.018509e-08, 9.5257555e-08, 9.5257555e-08, -0.9172105, 0, 9.5257555e-08, 7.010003e-15, -1.0896194, 0, 4.1917872, 0.24058123)
+
+[node name="Body" parent="." index="3"]
+transform = Transform3D(1.2180291, 8.963476e-08, 1.0648349e-07, 1.0648349e-07, -1.0253022, 0, 1.0648349e-07, 7.8361195e-15, -1.2180291, 0, 1.5391346, 0.24058123)
+
+[node name="LeftArm" parent="." index="4"]
+transform = Transform3D(0.39156255, 6.9805125e-08, 3.4231487e-08, 3.4231487e-08, -0.7984776, 0, 3.4231487e-08, 6.102558e-15, -0.39156255, -1.23, 1.5391346, 0.24058133)
+
+[node name="RightArm" parent="." index="5"]
+transform = Transform3D(0.39156255, 6.9805125e-08, 3.4231487e-08, 3.4231487e-08, -0.7984776, 0, 3.4231487e-08, 6.102558e-15, -0.39156255, 1.23, 1.5391346, 0.24058113)
+
+[node name="Wheel" parent="." index="6"]
+transform = Transform3D(3.781156e-08, -0.10563615, 7.562315e-08, -0.86502796, -4.617503e-09, -1.4093098e-07, 1.4093098e-07, -9.235005e-09, -0.86502796, 0, 0.21494365, 0.24058123)
+
+[node name="Lever" parent="." index="7"]
+transform = Transform3D(-0.34569865, 9.62583e-09, -1.3384197e-07, 0, -0.18942308, -0.8899149, -3.0221937e-08, -0.11010667, 1.5309737, 0, 1.5249039, 1.8471519)
+
+[node name="Hat_001" parent="." index="8"]
+transform = Transform3D(-1.3488027, 0, 9.712326e-08, 0, 1.0859816, 0, -1.1791607e-07, 0, -1.1109606, 0, 3.9351935, 0.24058123)
