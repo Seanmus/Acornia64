@@ -1,22 +1,23 @@
-[gd_scene load_steps=33 format=3 uid="uid://c1nxd5aux2qvl"]
+[gd_scene format=3 uid="uid://c1nxd5aux2qvl"]
 
-[ext_resource type="Script" path="res://Player/newPlayer.gd" id="1_c1cwn"]
+[ext_resource type="Script" uid="uid://xti4smwr645w" path="res://Player/newPlayer.gd" id="1_c1cwn"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="2_pbjct"]
-[ext_resource type="Script" path="res://Player/CameraController.gd" id="2_ufdal"]
+[ext_resource type="Script" uid="uid://r5vc4w1dcm4s" path="res://Player/CameraController.gd" id="2_ufdal"]
 [ext_resource type="AudioStream" uid="uid://bq1u4bll1m3yk" path="res://Audio/Effects/Mushroom.wav" id="3_2iij6"]
 [ext_resource type="AudioStream" uid="uid://tp6w0yea4480" path="res://Audio/Effects/Land.wav" id="4_ocmxn"]
 [ext_resource type="AudioStream" uid="uid://cawfi5a3wprvv" path="res://Audio/Effects/death.mp3" id="5_olqky"]
-[ext_resource type="Script" path="res://Player/crush_monitor.gd" id="6_4jg1v"]
+[ext_resource type="Script" uid="uid://bd3bj6gltpxqc" path="res://Player/crush_monitor.gd" id="6_4jg1v"]
 [ext_resource type="AudioStream" uid="uid://b4dtcw0kl8h7n" path="res://Audio/Effects/BitCollect.wav" id="6_ulqlb"]
 [ext_resource type="PackedScene" uid="uid://bud8gsinu5ptc" path="res://Player/auriModel.tscn" id="7_r22ru"]
 [ext_resource type="PackedScene" uid="uid://bu1gleum7faqc" path="res://Player/homingEffect.tscn" id="9_5nfe0"]
-[ext_resource type="Script" path="res://Player/pause_menu.gd" id="10_1woap"]
-[ext_resource type="Script" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
-[ext_resource type="Script" path="res://Player/crush_detector.gd" id="11_1674d"]
+[ext_resource type="Script" uid="uid://b75xup6v5i8n4" path="res://Player/pause_menu.gd" id="10_1woap"]
+[ext_resource type="Script" uid="uid://cc8l8uhp76a82" path="res://Player/homing_target_detector.gd" id="10_hdytl"]
+[ext_resource type="Script" uid="uid://4pvibxbovorj" path="res://Player/crush_detector.gd" id="11_1674d"]
 [ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="13_s2t4a"]
-[ext_resource type="Script" path="res://Player/homing_attack_hurt_detector.gd" id="14_mw1q2"]
+[ext_resource type="FontFile" uid="uid://bd4cx7uifdyas" path="res://UI/ReggaeOne-Regular.ttf" id="14_b1ygp"]
+[ext_resource type="Script" uid="uid://6nb2kpvy0qsj" path="res://Player/homing_attack_hurt_detector.gd" id="14_mw1q2"]
 [ext_resource type="Texture2D" uid="uid://crcg77uc2f6sv" path="res://Textures/shadow.png" id="15_5kkaf"]
-[ext_resource type="Script" path="res://Player/shadowDecal.gd" id="16_flfvc"]
+[ext_resource type="Script" uid="uid://vrrpwhgeju74" path="res://Player/shadowDecal.gd" id="16_flfvc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ys4sl"]
 
@@ -83,8 +84,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uh4y7"]
 _data = {
-"RESET": SubResource("Animation_ppe4r"),
-"ScreenShake": SubResource("Animation_ojn2d")
+&"RESET": SubResource("Animation_ppe4r"),
+&"ScreenShake": SubResource("Animation_ojn2d")
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jg4hn"]
@@ -128,11 +129,18 @@ radius = 0.573245
 [sub_resource type="Theme" id="Theme_8b5sv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8evvd"]
-bg_color = Color(0.101961, 0, 0.247059, 0.917647)
+bg_color = Color(0.24705882, 0.16078432, 0.54509807, 1)
+skew = Vector2(0, 0.035)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54901963, 0.32156864, 1, 1)
+corner_detail = 20
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_aqnfm"]
 
-[node name="player" type="CharacterBody3D" groups=["Player"]]
+[node name="player" type="CharacterBody3D" unique_id=2002336715 groups=["Player"]]
 floor_constant_speed = true
 floor_max_angle = 1.11177
 floor_snap_length = 0.52
@@ -142,101 +150,104 @@ platform_wall_layers = 2
 safe_margin = 0.1
 script = ExtResource("1_c1cwn")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1875578776]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0440736, 0)
 shape = SubResource("CapsuleShape3D_ys4sl")
 
-[node name="CameraControllerPivot" type="Node3D" parent="." node_paths=PackedStringArray("playerModel", "playerCharacter")]
+[node name="CameraControllerPivot" type="Node3D" parent="." unique_id=1047113015 node_paths=PackedStringArray("playerModel", "playerCharacter")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.632547, 0.099351)
 script = ExtResource("2_ufdal")
 playerModel = NodePath("../auriModel")
 playerCharacter = NodePath("..")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="CameraControllerPivot"]
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraControllerPivot" unique_id=2086691987]
 collision_mask = 986895
 shape = SubResource("SeparationRayShape3D_lj47o")
 spring_length = 20.08
 margin = 1.39
 
-[node name="Dummy" type="Node3D" parent="CameraControllerPivot/SpringArm3D"]
+[node name="Dummy" type="Node3D" parent="CameraControllerPivot/SpringArm3D" unique_id=1175716425]
 
-[node name="Camera3D" type="Camera3D" parent="CameraControllerPivot/SpringArm3D/Dummy"]
+[node name="Camera3D" type="Camera3D" parent="CameraControllerPivot/SpringArm3D/Dummy" unique_id=579453740]
 environment = ExtResource("2_pbjct")
 current = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraControllerPivot/SpringArm3D/Dummy/Camera3D"]
-libraries = {
-"": SubResource("AnimationLibrary_uh4y7")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraControllerPivot/SpringArm3D/Dummy/Camera3D" unique_id=788620272]
+libraries/ = SubResource("AnimationLibrary_uh4y7")
 
-[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=838964312]
 stream = ExtResource("3_2iij6")
 
-[node name="LandSound" type="AudioStreamPlayer" parent="."]
+[node name="LandSound" type="AudioStreamPlayer" parent="." unique_id=1064592434]
 stream = ExtResource("4_ocmxn")
 volume_db = -26.0
 pitch_scale = 0.42
 
-[node name="WalkSound" type="AudioStreamPlayer" parent="."]
+[node name="WalkSound" type="AudioStreamPlayer" parent="." unique_id=345344140]
 
-[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+[node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=850377831]
 stream = ExtResource("5_olqky")
 
-[node name="AudioListener3D" type="AudioListener3D" parent="."]
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=751747768]
 current = true
 
-[node name="HurtMonitor" type="Area3D" parent="." node_paths=PackedStringArray("player") groups=["seed"]]
+[node name="HurtMonitor" type="Area3D" parent="." unique_id=189122112 node_paths=PackedStringArray("player") groups=["seed"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_4jg1v")
 player = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtMonitor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtMonitor" unique_id=209370014]
 shape = SubResource("CapsuleShape3D_jg4hn")
 
-[node name="coinSound" type="AudioStreamPlayer" parent="."]
+[node name="coinSound" type="AudioStreamPlayer" parent="." unique_id=1124528965]
 stream = ExtResource("6_ulqlb")
 volume_db = -80.0
 
-[node name="JumpCloudSpawnPoint" type="Node3D" parent="."]
+[node name="JumpCloudSpawnPoint" type="Node3D" parent="." unique_id=500086513]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, -1.09941, 0)
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=525949494]
 target_position = Vector3(0, -10, 0)
 hit_back_faces = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 
-[node name="auriModel" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_r22ru")]
+[node name="auriModel" parent="." unique_id=1229497894 node_paths=PackedStringArray("player") instance=ExtResource("7_r22ru")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.576, 0)
 player = NodePath("..")
 
 [node name="Skeleton3D" parent="auriModel/SKM_Auri/Auri_Full" index="1"]
-bones/1/position = Vector3(0.146985, 4.52995e-08, 2.33833e-18)
-bones/2/position = Vector3(0.410751, -0.000574774, -0.00294803)
-bones/3/position = Vector3(0.0552915, 5.641e-05, 0.00338082)
-bones/3/rotation = Quaternion(-0.241606, -0.241606, -0.66455, 0.66455)
-bones/4/position = Vector3(-0.0300334, 0.0244934, -0.0155235)
-bones/5/position = Vector3(-0.0143281, -0.194252, 0.025841)
-bones/5/rotation = Quaternion(0.0723921, 0.674656, 0.730728, -0.075076)
-bones/7/position = Vector3(-0.0139107, 0.192982, 0.0258689)
-bones/7/rotation = Quaternion(-0.71863, 0.134268, 0.0171874, 0.682091)
-bones/9/position = Vector3(-0.0206905, 0.0486971, -0.0175672)
-bones/11/position = Vector3(-0.066551, -0.0356483, -0.199506)
-bones/13/position = Vector3(-0.0205498, -0.048697, -0.0173325)
-bones/13/rotation = Quaternion(0.00343003, 0.0637653, -0.722617, 0.688293)
-bones/15/position = Vector3(0.0660978, 0.014901, 0.162459)
-bones/15/rotation = Quaternion(0.032712, -0.012798, -0.0149804, 0.999271)
+bones/1/position = Vector3(0.1473006, 4.529953e-08, 2.338328e-18)
+bones/2/position = Vector3(0.4185737, -0.0005761953, -0.002955322)
+bones/3/position = Vector3(0.055419847, -8.952295e-05, 0.0030765913)
+bones/3/rotation = Quaternion(-0.06360161, -0.06360161, -0.7042406, 0.7042406)
+bones/4/position = Vector3(-0.030103076, 0.024550246, -0.015559536)
+bones/5/position = Vector3(-0.014267119, -0.19224758, 0.025842257)
+bones/5/rotation = Quaternion(-0.012374025, 0.6839088, 0.70974493, -0.16845717)
+bones/7/position = Vector3(-0.014771741, 0.194252, 0.025841003)
+bones/7/rotation = Quaternion(-0.7307277, 0.0750762, 0.07239188, 0.6746555)
+bones/9/position = Vector3(-0.020449791, 0.04869706, -0.017177861)
+bones/9/rotation = Quaternion(0.7289904, -0.68389547, -0.0013125092, 0.029298138)
+bones/11/position = Vector3(-0.06663395, -0.035648335, -0.1974848)
+bones/11/rotation = Quaternion(-0.016444232, -0.016727345, -0.040028136, 0.9989233)
+bones/13/position = Vector3(-0.020901209, -0.048673026, -0.017965415)
+bones/13/rotation = Quaternion(0.022636391, 0.04544834, -0.72227085, 0.68974406)
+bones/15/position = Vector3(0.06603367, 0.010491436, 0.16513689)
+bones/15/rotation = Quaternion(0.0062757297, -0.014451891, -0.017171856, 0.9997285)
 
 [node name="R_Hand" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
+transform = Transform3D(1, 7.1621024e-08, 3.7291723e-08, -7.162123e-08, 0.573433, 0.8192521, 3.72914e-08, -0.8192521, 0.573433, 0, 0, 0)
 
 [node name="L_Hand1" parent="auriModel/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+transform = Transform3D(1, 6.187773e-08, 2.5666035e-08, -6.187772e-08, 0.706415, 0.7077979, 2.5666047e-08, -0.7077979, 0.706415, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="auriModel/SKM_Auri" index="3"]
+autoplay = &"walking"
 
 [node name="AnimationTree" parent="auriModel/SKM_Auri" index="4"]
 advance_expression_base_node = NodePath("../../..")
 
-[node name="runCloud" type="GPUParticles3D" parent="auriModel/SKM_Auri" index="5"]
+[node name="runCloud" type="GPUParticles3D" parent="auriModel/SKM_Auri" index="5" unique_id=605117868]
 transform = Transform3D(-0.120057, -1.17691e-09, 1.01493e-08, 0, 0.0510896, 0.030591, -1.04957e-08, 0.0134622, -0.116094, 0.00704619, -0.179804, -0.133804)
 layers = 2
 amount = 400
@@ -246,7 +257,7 @@ collision_base_size = 0.1
 process_material = SubResource("ParticlesMaterial_qbyin")
 draw_pass_1 = SubResource("QuadMesh_bu1i1")
 
-[node name="HomingAttackComponent" type="Area3D" parent="auriModel" node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider", "raycast")]
+[node name="HomingAttackComponent" type="Area3D" parent="auriModel" unique_id=1110058781 node_paths=PackedStringArray("player", "hurtMonitor", "cameraAnimPlayer", "homingEffect", "playerCollider", "raycast")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.576, 1.03774)
 script = ExtResource("10_hdytl")
 player = NodePath("../..")
@@ -256,30 +267,30 @@ homingEffect = NodePath("../../Homing")
 playerCollider = NodePath("../../CollisionShape3D")
 raycast = NodePath("../../RayCast3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="auriModel/HomingAttackComponent"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="auriModel/HomingAttackComponent" unique_id=2044660965]
 transform = Transform3D(13, 0, 0, 0, -5.68248e-07, -13, 0, 13, -5.68248e-07, 0, 1.15369, -13.7557)
 shape = SubResource("BoxShape3D_fpp87")
 
-[node name="CrushDetector" type="Area3D" parent="." node_paths=PackedStringArray("player")]
+[node name="CrushDetector" type="Area3D" parent="." unique_id=1293680905 node_paths=PackedStringArray("player")]
 transform = Transform3D(0.303123, 0, 0, 0, 0.303123, 0, 0, 0, 0.303123, 0, 0.285653, 0)
 collision_layer = 15
 collision_mask = 15
 script = ExtResource("11_1674d")
 player = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CrushDetector"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CrushDetector" unique_id=920223474]
 transform = Transform3D(2.005, 0, 0, 0, 2.005, 0, 0, 0, 2.005, 0, 0.45206, 0)
 shape = SubResource("SphereShape3D_t5txg")
 
-[node name="Homing" parent="." instance=ExtResource("9_5nfe0")]
+[node name="Homing" parent="." unique_id=853287243 instance=ExtResource("9_5nfe0")]
 
-[node name="MovingPlatformDetector" type="Area3D" parent="."]
+[node name="MovingPlatformDetector" type="Area3D" parent="." unique_id=2119947077]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.539592, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MovingPlatformDetector"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MovingPlatformDetector" unique_id=1226805871]
 shape = SubResource("SphereShape3D_2ymgt")
 
-[node name="PauseMenu" type="Panel" parent="."]
+[node name="PauseMenu" type="Panel" parent="." unique_id=166460358]
 process_mode = 3
 visible = false
 anchors_preset = 8
@@ -287,9 +298,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -441.5
+offset_left = -441.0
 offset_top = -250.0
-offset_right = 441.5
+offset_right = 442.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -297,7 +308,31 @@ theme = SubResource("Theme_8b5sv")
 theme_override_styles/panel = SubResource("StyleBoxFlat_8evvd")
 script = ExtResource("10_1woap")
 
-[node name="VFlowContainer" type="VFlowContainer" parent="PauseMenu"]
+[node name="Label" type="Label" parent="PauseMenu" unique_id=2145969083]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -259.0
+offset_top = -340.0
+offset_right = 259.0
+offset_bottom = -225.99986
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.05235988
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.49411765, 0.8509804, 0.34117648, 1)
+theme_override_colors/font_outline_color = Color(0.2784314, 0.5019608, 0, 1)
+theme_override_constants/outline_size = 19
+theme_override_fonts/font = ExtResource("14_b1ygp")
+theme_override_font_sizes/font_size = 78
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VFlowContainer" type="VFlowContainer" parent="PauseMenu" unique_id=1496574986]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -311,62 +346,58 @@ theme = ExtResource("13_s2t4a")
 theme_override_constants/h_separation = 0
 alignment = 1
 
-[node name="Label" type="Label" parent="PauseMenu/VFlowContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Game is Paused!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/VFlowContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/VFlowContainer" unique_id=1292480786]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Resume?" type="Button" parent="PauseMenu/VFlowContainer"]
+[node name="Resume?" type="Button" parent="PauseMenu/VFlowContainer" unique_id=1698312394]
 layout_mode = 2
-text = "Resume?"
+theme_override_fonts/font = ExtResource("14_b1ygp")
+text = "Resume"
 
-[node name="Quit to Start?" type="Button" parent="PauseMenu/VFlowContainer"]
+[node name="Quit to Start?" type="Button" parent="PauseMenu/VFlowContainer" unique_id=545176404]
 layout_mode = 2
-text = "Quit to Start?"
+theme_override_fonts/font = ExtResource("14_b1ygp")
+text = "Exit Stage"
 
-[node name="Volume Label" type="Label" parent="PauseMenu/VFlowContainer"]
+[node name="Volume Label" type="Label" parent="PauseMenu/VFlowContainer" unique_id=1751463447]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("14_b1ygp")
 text = "Volume"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="audioSlider" type="HSlider" parent="PauseMenu/VFlowContainer"]
+[node name="audioSlider" type="HSlider" parent="PauseMenu/VFlowContainer" unique_id=889342970]
 layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 0.8
 metadata/_edit_use_anchors_ = true
 
-[node name="coyoteTimer" type="Timer" parent="."]
+[node name="coyoteTimer" type="Timer" parent="." unique_id=1802796842]
 wait_time = 0.2
 
-[node name="SpringArm3D" type="SpringArm3D" parent="."]
+[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=474678391]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 spring_length = 20.0
 margin = 5.0
 
-[node name="DeathCam" type="Camera3D" parent="SpringArm3D"]
+[node name="DeathCam" type="Camera3D" parent="SpringArm3D" unique_id=875736290]
 transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 0, 0)
 environment = ExtResource("2_pbjct")
 
-[node name="HomingAttackHurtDetector" type="Area3D" parent="." node_paths=PackedStringArray("player")]
+[node name="HomingAttackHurtDetector" type="Area3D" parent="." unique_id=1927753228 node_paths=PackedStringArray("player")]
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("14_mw1q2")
 player = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackHurtDetector"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HomingAttackHurtDetector" unique_id=71750790]
 transform = Transform3D(1.42593, 0, 0, 0, 1.42593, 0, 0, 0, 1.42593, 0, 0, 0)
 shape = SubResource("SphereShape3D_aqnfm")
 
-[node name="Decal" type="Decal" parent="." node_paths=PackedStringArray("raycast")]
+[node name="Decal" type="Decal" parent="." unique_id=2119483227 node_paths=PackedStringArray("raycast")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.275, 0)
 size = Vector3(2, 9, 2)
 texture_albedo = ExtResource("15_5kkaf")

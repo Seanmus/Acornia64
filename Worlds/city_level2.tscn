@@ -26,7 +26,6 @@
 [ext_resource type="Texture2D" uid="uid://dvp383k0kro7p" path="res://Textures/Water1.png" id="23_kdgju"]
 [ext_resource type="Texture2D" uid="uid://dkhkoqkx0lja0" path="res://Textures/Water2.png" id="24_q4uw2"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="25_7tap0"]
-[ext_resource type="PackedScene" uid="uid://dxrh74xrjckf4" path="res://WorldBlocks/Decor/imports/DobiboLogo.glb" id="27_almoq"]
 
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
@@ -858,6 +857,3 @@ material = SubResource("StandardMaterial3D_0rrfs")
 
 [node name="catapult" parent="." unique_id=469417529 instance=ExtResource("20_a6a17")]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 833.697, 141, 109.8)
-
-[node name="DobiboLogo" parent="." unique_id=1066100003 instance=ExtResource("27_almoq")]
-transform = Transform3D(-1.0305299e-06, 0, -23.575775, 0, 23.575775, 0, 23.575775, 0, -1.0305299e-06, 653.2445, 52.228703, 59.492115)
