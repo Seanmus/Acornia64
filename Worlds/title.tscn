@@ -1,6 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://bgugy0v18el3f"]
+[gd_scene format=3 uid="uid://bgugy0v18el3f"]
 
-[ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
+[ext_resource type="Script" uid="uid://bpbtbh6cn4f78" path="res://Worlds/levelProperties.gd" id="1_gp50i"]
 [ext_resource type="AudioStream" uid="uid://djjrsl2sdx1m4" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 2.wav" id="2_5g6k0"]
 [ext_resource type="Texture2D" uid="uid://dsf5k7q5eop6r" path="res://UI/Images/Sunflower.png" id="2_bwv21"]
 [ext_resource type="Texture2D" uid="uid://bavvqgm4m3koh" path="res://UI/Images/acorn.png" id="3_lkekw"]
@@ -8,11 +8,11 @@
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="7_hgnnl"]
 [ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="8_4ym14"]
 [ext_resource type="Texture2D" uid="uid://bvsojsrde4x5a" path="res://UI/Images/AcorniaLibraryLogo.png" id="8_dqimy"]
-[ext_resource type="Script" path="res://WorldBlocks/Imports/moon.gd" id="10_0lnq2"]
-[ext_resource type="Script" path="res://WorldBlocks/Imports/titleearth.gd" id="11_2abwn"]
+[ext_resource type="Script" uid="uid://oa8cyds5clm7" path="res://WorldBlocks/Imports/moon.gd" id="10_0lnq2"]
+[ext_resource type="Script" uid="uid://xjnko85rtydn" path="res://WorldBlocks/Imports/titleearth.gd" id="11_2abwn"]
 [ext_resource type="PackedScene" uid="uid://dvflu1f4hxcqw" path="res://WorldBlocks/Imports/Moon.glb" id="11_g3ylg"]
 [ext_resource type="PackedScene" uid="uid://dv3agdxbvkq4b" path="res://WorldBlocks/Imports/Earth.glb" id="12_0oq3f"]
-[ext_resource type="Script" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
+[ext_resource type="Script" uid="uid://cld1i7nu03plj" path="res://Worlds/StartUi.gd" id="17_vbvrs"]
 [ext_resource type="PackedScene" uid="uid://bxt2snnlcra4g" path="res://UI/Transition.tscn" id="20_pne6m"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="21_nwjt7"]
 [ext_resource type="PackedScene" uid="uid://b88um31hjcqyd" path="res://WorldBlocks/Imports/mars.glb" id="22_4u7kw"]
@@ -52,8 +52,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2q7uk"]
 _data = {
-"RESET": SubResource("Animation_8ovnh"),
-"SunflowerSpin": SubResource("Animation_danpn")
+&"RESET": SubResource("Animation_8ovnh"),
+&"SunflowerSpin": SubResource("Animation_danpn")
 }
 
 [sub_resource type="Animation" id="Animation_ew4jo"]
@@ -141,9 +141,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v6pmb"]
 _data = {
-"RESET": SubResource("Animation_ew4jo"),
-"end": SubResource("Animation_55taj"),
-"endFast": SubResource("Animation_wh74x")
+&"RESET": SubResource("Animation_ew4jo"),
+&"end": SubResource("Animation_55taj"),
+&"endFast": SubResource("Animation_wh74x")
 }
 
 [sub_resource type="Animation" id="Animation_4qdh7"]
@@ -180,8 +180,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hpexs"]
 _data = {
-"RESET": SubResource("Animation_4qdh7"),
-"demo_anim": SubResource("Animation_bpjv4")
+&"RESET": SubResource("Animation_4qdh7"),
+&"demo_anim": SubResource("Animation_bpjv4")
 }
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qtmo"]
@@ -189,23 +189,23 @@ albedo_color = Color(0.154876, 0.154876, 0.154876, 1)
 albedo_texture = ExtResource("21_nwjt7")
 uv1_scale = Vector3(20, 20, 20)
 
-[node name="Title" type="Node3D"]
+[node name="Title" type="Node3D" unique_id=2057947059]
 script = ExtResource("1_gp50i")
 nextLevel = ""
 gameMode = "title"
 levelMusic = ExtResource("2_5g6k0")
 
-[node name="UI" type="Node" parent="."]
+[node name="UI" type="Node" parent="." unique_id=1409436106]
 script = ExtResource("17_vbvrs")
 
-[node name="Sunflower" type="TextureRect" parent="UI"]
+[node name="Sunflower" type="TextureRect" parent="UI" unique_id=527266690]
 visible = false
 offset_right = 640.0
 offset_bottom = 480.0
 pivot_offset = Vector2(320, 240)
 texture = ExtResource("2_bwv21")
 
-[node name="Acorn" type="TextureRect" parent="UI"]
+[node name="Acorn" type="TextureRect" parent="UI" unique_id=2140550031]
 visible = false
 anchors_preset = -1
 anchor_top = -0.00185185
@@ -219,13 +219,11 @@ size_flags_horizontal = 4
 texture = ExtResource("3_lkekw")
 metadata/_edit_use_anchors_ = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
-libraries = {
-"": SubResource("AnimationLibrary_2q7uk")
-}
-autoplay = "SunflowerSpin"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI" unique_id=1221407398]
+libraries/ = SubResource("AnimationLibrary_2q7uk")
+autoplay = &"SunflowerSpin"
 
-[node name="audioSlider" type="HSlider" parent="UI"]
+[node name="audioSlider" type="HSlider" parent="UI" unique_id=1175541993]
 anchors_preset = -1
 anchor_left = 0.059375
 anchor_top = 0.895833
@@ -241,13 +239,13 @@ step = 0.05
 value = 0.5
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="UI"]
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=1601061007]
 visible = false
 offset_top = 361.0
 offset_right = 891.0
 offset_bottom = 544.0
 
-[node name="Transition" parent="UI" instance=ExtResource("20_pne6m")]
+[node name="Transition" parent="UI" unique_id=1961144879 instance=ExtResource("20_pne6m")]
 visible = true
 anchors_preset = 15
 anchor_right = 1.0
@@ -259,9 +257,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" parent="UI/Transition" index="0"]
-libraries = {
-"": SubResource("AnimationLibrary_v6pmb")
-}
+libraries/ = SubResource("AnimationLibrary_v6pmb")
 
 [node name="loadingLBL" parent="UI/Transition" index="1"]
 anchor_left = 0.0
@@ -273,7 +269,7 @@ offset_bottom = 23.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Volume Label" type="Label" parent="UI"]
+[node name="Volume Label" type="Label" parent="UI" unique_id=897291850]
 anchors_preset = -1
 anchor_left = 0.0640625
 anchor_top = 0.816667
@@ -289,7 +285,7 @@ theme_override_font_sizes/font_size = 50
 text = "Volume"
 metadata/_edit_use_anchors_ = true
 
-[node name="FlowContainer" type="FlowContainer" parent="UI"]
+[node name="FlowContainer" type="FlowContainer" parent="UI" unique_id=1521624354]
 offset_left = 83.0
 offset_top = 524.0
 offset_right = 628.0
@@ -297,76 +293,77 @@ offset_bottom = 906.0
 alignment = 1
 vertical = true
 
-[node name="startBtn" type="Button" parent="UI/FlowContainer"]
+[node name="startBtn" type="Button" parent="UI/FlowContainer" unique_id=2038422402]
 layout_mode = 2
 focus_neighbor_top = NodePath("../../audioSlider")
 focus_neighbor_bottom = NodePath("../levelSelect")
 focus_next = NodePath("../levelSelect")
 theme = ExtResource("8_4ym14")
-theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
-theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
-theme_override_colors/font_focus_color = Color(0.995326, 0.415513, 0.963598, 1)
 theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
+theme_override_colors/font_focus_color = Color(0.995326, 0.415513, 0.963598, 1)
+theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
+theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
 theme_override_colors/font_outline_color = Color(0.117647, 0.317647, 0.458824, 1)
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 75
 text = "Start"
 metadata/_edit_use_anchors_ = true
 
-[node name="levelSelect" type="Button" parent="UI/FlowContainer"]
+[node name="levelSelect" type="Button" parent="UI/FlowContainer" unique_id=1994229383]
 layout_mode = 2
 focus_neighbor_top = NodePath("../startBtn")
 focus_neighbor_bottom = NodePath("../collectBtn")
 focus_next = NodePath("../collectBtn")
 focus_previous = NodePath("../startBtn")
 theme = ExtResource("8_4ym14")
-theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
-theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
-theme_override_colors/font_focus_color = Color(0.995326, 0.415513, 0.963598, 1)
 theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
+theme_override_colors/font_focus_color = Color(0.995326, 0.415513, 0.963598, 1)
+theme_override_colors/font_pressed_color = Color(0.994574, 0.233709, 0.965829, 1)
+theme_override_colors/font_hover_color = Color(0.995221, 0.391065, 0.963792, 1)
 theme_override_colors/font_outline_color = Color(0.117647, 0.317647, 0.458824, 1)
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 75
 text = "Level Select"
 metadata/_edit_use_anchors_ = true
 
-[node name="collectBtn" type="Button" parent="UI/FlowContainer"]
+[node name="collectBtn" type="Button" parent="UI/FlowContainer" unique_id=509568839]
+visible = false
 layout_mode = 2
 focus_neighbor_top = NodePath("../levelSelect")
 focus_neighbor_bottom = NodePath("../QuitBtn")
 focus_next = NodePath("../QuitBtn")
 focus_previous = NodePath("../levelSelect")
 theme = ExtResource("8_4ym14")
-theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
-theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
 theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
+theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
+theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
 theme_override_colors/font_outline_color = Color(0.117647, 0.317647, 0.458824, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 75
 text = "Collect A thon"
 metadata/_edit_use_anchors_ = true
 
-[node name="QuitBtn" type="Button" parent="UI/FlowContainer"]
+[node name="QuitBtn" type="Button" parent="UI/FlowContainer" unique_id=1517813107]
 layout_mode = 2
 focus_neighbor_top = NodePath("../collectBtn")
 focus_neighbor_bottom = NodePath("../../audioSlider")
 focus_next = NodePath("../../audioSlider")
 focus_previous = NodePath("../startBtn")
 theme = ExtResource("8_4ym14")
-theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
-theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
 theme_override_colors/font_color = Color(0.996078, 0.584314, 0.964706, 1)
+theme_override_colors/font_focus_color = Color(0.996078, 0.415686, 0.964706, 1)
+theme_override_colors/font_hover_color = Color(0.996078, 0.584314, 0.964706, 1)
 theme_override_colors/font_outline_color = Color(0.117647, 0.317647, 0.458824, 1)
 theme_override_constants/outline_size = 12
 theme_override_font_sizes/font_size = 75
 text = "Quit"
 metadata/_edit_use_anchors_ = true
 
-[node name="AcorniaLibraryLogo" type="Sprite2D" parent="UI"]
+[node name="AcorniaLibraryLogo" type="Sprite2D" parent="UI" unique_id=2064233792]
 position = Vector2(582, 239)
 texture = ExtResource("8_dqimy")
 
-[node name="DemoLbl" type="Label" parent="UI"]
+[node name="DemoLbl" type="Label" parent="UI" unique_id=1239743592]
 visible = false
 anchors_preset = 1
 anchor_left = 1.0
@@ -384,41 +381,39 @@ theme_override_constants/outline_size = 15
 theme_override_font_sizes/font_size = 56
 text = "The Awesome Demo!"
 
-[node name="DemoAnim" type="AnimationPlayer" parent="UI/DemoLbl"]
+[node name="DemoAnim" type="AnimationPlayer" parent="UI/DemoLbl" unique_id=1510824101]
 root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_hpexs")
-}
-autoplay = "demo_anim"
+libraries/ = SubResource("AnimationLibrary_hpexs")
+autoplay = &"demo_anim"
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=874603492]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2411, 36.9344, 43.5572)
 top_level = true
 current = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1433699952]
 environment = ExtResource("7_hgnnl")
 
-[node name="Moon" parent="." instance=ExtResource("11_g3ylg")]
+[node name="Moon" parent="." unique_id=539555580 instance=ExtResource("11_g3ylg")]
 transform = Transform3D(1.31126, 0, 0, 0, 1.31126, 0, -1.19209e-07, -3.72529e-09, 1.31126, 96.3835, 37.1756, 28.0037)
 script = ExtResource("10_0lnq2")
 
-[node name="Earth" parent="." instance=ExtResource("12_0oq3f")]
+[node name="Earth" parent="." unique_id=1714417648 instance=ExtResource("12_0oq3f")]
 transform = Transform3D(5.55167, 0, -2.62972, 0, 6.143, 0, 2.62972, 0, 5.55167, 89.465, 30.1236, 30.6598)
 script = ExtResource("11_2abwn")
 rotationRate = -0.4
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1404834315]
 transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_8qtmo")
 
-[node name="mars" parent="." instance=ExtResource("22_4u7kw")]
+[node name="mars" parent="." unique_id=2132760819 instance=ExtResource("22_4u7kw")]
 transform = Transform3D(10.6207, 0, 0, 0, 10.6207, 0, 0, 0, 10.6207, 90.9555, 26, 31)
 script = ExtResource("11_2abwn")
 rotationRate = -0.4
 
-[node name="acorn" parent="." instance=ExtResource("23_6jgvb")]
+[node name="acorn" parent="." unique_id=1900682040 instance=ExtResource("23_6jgvb")]
 transform = Transform3D(-2.34437, 0, 1.35352, 0, 2.70704, 0, -1.35352, 0, -2.34437, 89.2312, 34.7039, 32.9135)
 script = null
 
@@ -442,10 +437,13 @@ bones/15/position = Vector3(0.0729517, 0.0248087, 0.158794)
 bones/15/rotation = Quaternion(0.154454, 0.00689319, 0.015049, 0.987861)
 
 [node name="R_Hand" parent="acorn/SKM_Auri/Auri_Full/Skeleton3D" index="5"]
-transform = Transform3D(1, 7.1621e-08, 3.72917e-08, -7.16212e-08, 0.573433, 0.819252, 3.72914e-08, -0.819252, 0.573433, 0, 0, 0)
+transform = Transform3D(1, 7.1621024e-08, 3.7291723e-08, -7.162123e-08, 0.573433, 0.8192521, 3.72914e-08, -0.8192521, 0.573433, 0, 0, 0)
 
 [node name="L_Hand1" parent="acorn/SKM_Auri/Auri_Full/Skeleton3D" index="6"]
-transform = Transform3D(1, 6.18777e-08, 2.5666e-08, -6.18777e-08, 0.706415, 0.707798, 2.5666e-08, -0.707798, 0.706415, 0, 0, 0)
+transform = Transform3D(1, 6.187773e-08, 2.5666035e-08, -6.187772e-08, 0.706415, 0.7077979, 2.5666047e-08, -0.7077979, 0.706415, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="acorn/SKM_Auri" index="3"]
+autoplay = &"walking"
 
 [node name="AnimationTree" parent="acorn/SKM_Auri" index="4"]
 active = false

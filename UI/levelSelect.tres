@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://0pqaw0i7r5gt"]
+[gd_resource type="Theme" format=3 uid="uid://0pqaw0i7r5gt"]
 
-[ext_resource type="FontFile" uid="uid://boiewx4478ao" path="res://UI/ZCOOLKuaiLe-Regular.ttf" id="1_8qcx3"]
+[ext_resource type="FontFile" uid="uid://bd4cx7uifdyas" path="res://UI/ReggaeOne-Regular.ttf" id="1_46d60"]
 
 [resource]
-default_font = ExtResource("1_8qcx3")
+default_font = ExtResource("1_46d60")
 default_font_size = 65

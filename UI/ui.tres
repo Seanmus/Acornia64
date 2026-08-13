@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dg4ajowhvjqw1"]
+[gd_resource type="Theme" format=3 uid="uid://dg4ajowhvjqw1"]
 
-[ext_resource type="FontFile" uid="uid://boiewx4478ao" path="res://UI/ZCOOLKuaiLe-Regular.ttf" id="1_4so26"]
+[ext_resource type="FontFile" uid="uid://bd4cx7uifdyas" path="res://UI/ReggaeOne-Regular.ttf" id="1_ohhi0"]
 
 [resource]
-default_font = ExtResource("1_4so26")
+default_font = ExtResource("1_ohhi0")
 default_font_size = 30
