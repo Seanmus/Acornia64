@@ -1,8 +1,48 @@
 [gd_scene format=3 uid="uid://d2r4s7su6gq1c"]
 
 [ext_resource type="PackedScene" uid="uid://cbc4k724xcs2c" path="res://TrapsAndEnemies/Enemies/nutcracker.glb" id="1_nb3g5"]
+[ext_resource type="Script" uid="uid://c61h3p0kr7fii" path="res://WorldBlocks/Decor/nutcrackerDecor.gd" id="2_s1ir1"]
+[ext_resource type="AudioStream" uid="uid://bc2gtxvweb5" path="res://Audio/Effects/EvilLaugh.wav" id="3_dv2lp"]
+
+[sub_resource type="Animation" id="Animation_nb3g5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lever:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.5265364, -8.742278e-08, 3.1415927)]
+}
+
+[sub_resource type="Animation" id="Animation_s1ir1"]
+resource_name = "laugh"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lever:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6000001, 1.8, 2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.5265364, -8.742278e-08, 3.1415927), Vector3(0.28972465, 0, 3.1415927), Vector3(0.5265364, -8.742278e-08, 3.1415927), Vector3(0.28972465, 0, 3.1415927), Vector3(0.5265364, -8.742278e-08, 3.1415927), Vector3(0.28972465, 0, 3.1415927), Vector3(0.5265364, -8.742278e-08, 3.1415927), Vector3(0.28972465, 0, 3.1415927), Vector3(0.5265364, -8.742278e-08, 3.1415927), Vector3(0.28972465, 0, 3.1415927), Vector3(0.5265364, -8.742278e-08, 3.1415927), Vector3(0.28972465, 0, 3.1415927)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dv2lp"]
+_data = {
+&"RESET": SubResource("Animation_nb3g5"),
+&"laugh": SubResource("Animation_s1ir1")
+}
 
 [node name="nutcracker" unique_id=1319017528 instance=ExtResource("1_nb3g5")]
+script = ExtResource("2_s1ir1")
 
 [node name="HatBrim" parent="." index="0"]
 transform = Transform3D(-1.5405806, 0, 1.3468184e-07, 0, 0.1881338, 0, -1.3468184e-07, 0, -1.5405806, 0, 5.0953727, 0.24058123)
@@ -26,7 +66,14 @@ transform = Transform3D(0.39156255, 6.9805125e-08, 3.4231487e-08, 3.4231487e-08,
 transform = Transform3D(3.781156e-08, -0.10563615, 7.562315e-08, -0.86502796, -4.617503e-09, -1.4093098e-07, 1.4093098e-07, -9.235005e-09, -0.86502796, 0, 0.21494365, 0.24058123)
 
 [node name="Lever" parent="." index="7"]
-transform = Transform3D(-0.34569865, 9.62583e-09, -1.3384197e-07, 0, -0.18942308, -0.8899149, -3.0221937e-08, -0.11010667, 1.5309737, 0, 1.5249039, 1.8471519)
+transform = Transform3D(-0.34569865, 2.8780116e-08, -1.3384197e-07, -2.6128461e-08, -0.18942308, -0.8899149, -4.5409728e-08, -0.11010667, 1.5309737, 0, 1.5249039, 1.6198252)
 
 [node name="Hat_001" parent="." index="8"]
 transform = Transform3D(-1.3488027, 0, 9.712326e-08, 0, 1.0859816, 0, -1.1791607e-07, 0, -1.1109606, 0, 3.9351935, 0.24058123)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9" unique_id=1139104390]
+libraries/ = SubResource("AnimationLibrary_dv2lp")
+
+[node name="Laugh" type="AudioStreamPlayer" parent="." index="10" unique_id=1127667583]
+stream = ExtResource("3_dv2lp")
+volume_db = 10.0
