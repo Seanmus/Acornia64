@@ -57,6 +57,7 @@ custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_lnklb")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 6
 script = ExtResource("8_us8gh")
@@ -82,19 +83,12 @@ text = "Acornopolis"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/CityLevel" unique_id=12224575]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
-
 [node name="LavaLevel" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1440071497]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("9_jin5j")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 6
 script = ExtResource("8_us8gh")
@@ -120,19 +114,12 @@ text = "Acorn Melter"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/LavaLevel" unique_id=1457647160]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
-
 [node name="SpaceStation" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1729551489]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("10_jin5j")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 6
 script = ExtResource("8_us8gh")
@@ -158,19 +145,12 @@ text = "Space Station"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/SpaceStation" unique_id=588793677]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
-
 [node name="Forest" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1711320067]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("10_ux02c")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 6
 script = ExtResource("8_us8gh")
@@ -196,19 +176,12 @@ text = "Wild Woods"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/Forest" unique_id=343189731]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
-
 [node name="CityLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1489794829]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("11_hppjm")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 6
 script = ExtResource("8_us8gh")
@@ -235,19 +208,12 @@ text = "City 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/CityLevel2" unique_id=390649417]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
-
 [node name="LavaLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=685823364]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_252ro")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_us8gh")
@@ -274,19 +240,12 @@ text = "Lava 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/LavaLevel2" unique_id=773921067]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
-
 [node name="SpaceStation2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=154369035]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_252ro")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_us8gh")
@@ -304,6 +263,7 @@ custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_252ro")
+texture_focused = ExtResource("10_b0wfx")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_us8gh")
@@ -329,14 +289,6 @@ text = "Forest2
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/Forest2" unique_id=1118595829]
-visible = false
-layout_mode = 0
-offset_right = 465.0
-offset_bottom = 450.0
-texture = ExtResource("10_b0wfx")
-expand_mode = 1
 
 [node name="Title" type="Button" parent="LevelSelectParent" unique_id=731893560]
 layout_mode = 1
