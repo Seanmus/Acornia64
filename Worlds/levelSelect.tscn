@@ -1,14 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://dnnc0wsg62lb"]
+[gd_scene format=3 uid="uid://dnnc0wsg62lb"]
 
-[ext_resource type="Script" path="res://Worlds/levelProperties.gd" id="1_1akpl"]
+[ext_resource type="Script" uid="uid://bpbtbh6cn4f78" path="res://Worlds/levelProperties.gd" id="1_1akpl"]
 [ext_resource type="AudioStream" uid="uid://coetmktbd0mu0" path="res://Audio/Music/Juhani Junkala [Retro Game Music Pack] Level 1.wav" id="2_ct63d"]
-[ext_resource type="Script" path="res://Worlds/level_select_parent.gd" id="4_ftdho"]
+[ext_resource type="Script" uid="uid://dkf3sjtn00nvn" path="res://Worlds/level_select_parent.gd" id="4_ftdho"]
 [ext_resource type="Texture2D" uid="uid://baf7kc46ayep4" path="res://UI/Images/LevelSelectImages/City1.png" id="6_lnklb"]
 [ext_resource type="Theme" uid="uid://0pqaw0i7r5gt" path="res://UI/levelSelect.tres" id="6_rcthv"]
-[ext_resource type="Texture2D" uid="uid://cig5aq8x8i62t" path="res://Textures/lava1.png" id="7_1orbw"]
-[ext_resource type="Texture2D" uid="uid://yxd3wrdo7h7i" path="res://UI/Images/LevelSelectImages/LavaLevel1.png" id="8_xdkyc"]
-[ext_resource type="Texture2D" uid="uid://bidvss2j58mw0" path="res://UI/Images/LevelSelectImages/SpaceLevel1.png" id="9_ipy7o"]
+[ext_resource type="Script" uid="uid://uospeohs4lt8" path="res://Worlds/levelSelectButton.gd" id="8_us8gh"]
+[ext_resource type="Texture2D" uid="uid://cyuwvsfb663c5" path="res://UI/Images/LevelSelectImages/AcorniaLavaLevel.png" id="9_jin5j"]
 [ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="10_7wj44"]
+[ext_resource type="Texture2D" uid="uid://ck5vxw1q3jkpg" path="res://UI/Images/LevelSelectImages/SelectOutline.png" id="10_b0wfx"]
+[ext_resource type="Texture2D" uid="uid://dia2rnui8xj6y" path="res://UI/Images/LevelSelectImages/SpaceSquirells.png" id="10_jin5j"]
 [ext_resource type="Texture2D" uid="uid://ba31ib0uorqc1" path="res://UI/Images/LevelSelectImages/Forest.png" id="10_ux02c"]
 [ext_resource type="Texture2D" uid="uid://bqq2scgoa6dnj" path="res://UI/Images/LevelSelectImages/City2.png" id="11_hppjm"]
 [ext_resource type="Texture2D" uid="uid://c285omu0gxx5u" path="res://Textures/DeathMarker.png" id="13_252ro"]
@@ -19,31 +20,31 @@ albedo_color = Color(0.154876, 0.154876, 0.154876, 1)
 albedo_texture = ExtResource("15_5k66q")
 uv1_scale = Vector3(20, 20, 20)
 
-[node name="Title" type="Node3D"]
+[node name="Title" type="Node3D" unique_id=100670417]
 script = ExtResource("1_1akpl")
 levelMusic = ExtResource("2_ct63d")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1047875043]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.2411, 36.9344, 43.5572)
 top_level = true
 current = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=483365287]
 environment = ExtResource("10_7wj44")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1838492760]
 transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
 flip_faces = true
 material = SubResource("StandardMaterial3D_8qtmo")
 
-[node name="LevelSelectParent" type="Control" parent="."]
+[node name="LevelSelectParent" type="Control" parent="." unique_id=1009237301]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("4_ftdho")
 
-[node name="GridContainer" type="GridContainer" parent="LevelSelectParent"]
+[node name="GridContainer" type="GridContainer" parent="LevelSelectParent" unique_id=1541716975]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
@@ -51,16 +52,16 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 20
 columns = 4
 
-[node name="CityLevel" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="CityLevel" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1290328805]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("6_lnklb")
-texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 6
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/CityLevel"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/CityLevel" unique_id=296672143]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -81,16 +82,24 @@ text = "Acornopolis"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LavaLevel" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/CityLevel" unique_id=12224575]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="LavaLevel" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1440071497]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("8_xdkyc")
-texture_hover = ExtResource("7_1orbw")
+texture_normal = ExtResource("9_jin5j")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 6
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/LavaLevel"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/LavaLevel" unique_id=1962339657]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -111,25 +120,33 @@ text = "Acorn Melter"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpaceStation" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/LavaLevel" unique_id=1457647160]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="SpaceStation" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1729551489]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("9_ipy7o")
-texture_hover = ExtResource("7_1orbw")
+texture_normal = ExtResource("10_jin5j")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 6
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/SpaceStation"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/SpaceStation" unique_id=453077799]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -177.0
-offset_top = -95.0
-offset_right = 192.0
+offset_left = -221.5
+offset_top = -108.0
+offset_right = 220.5
 offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -141,16 +158,24 @@ text = "Space Station"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Forest" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/SpaceStation" unique_id=588793677]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="Forest" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1711320067]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("10_ux02c")
-texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 6
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/Forest"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/Forest" unique_id=813087025]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -171,16 +196,24 @@ text = "Wild Woods"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CityLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/Forest" unique_id=343189731]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="CityLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=1489794829]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("11_hppjm")
-texture_hover = ExtResource("7_1orbw")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 6
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/CityLevel2"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/CityLevel2" unique_id=1613412060]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -202,15 +235,24 @@ text = "City 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LavaLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/CityLevel2" unique_id=390649417]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="LavaLevel2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=685823364]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_252ro")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/LavaLevel2"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/LavaLevel2" unique_id=1372119291]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -232,44 +274,41 @@ text = "Lava 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpaceStation2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/LavaLevel2" unique_id=773921067]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="SpaceStation2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=154369035]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_252ro")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/SpaceStation2"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -177.0
-offset_top = -95.0
-offset_right = 192.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("6_rcthv")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_outline_size = 15
-text = "Space2"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/SpaceStation2" unique_id=128494075]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
 
-[node name="Forest2" type="TextureButton" parent="LevelSelectParent/GridContainer"]
+[node name="Forest2" type="TextureButton" parent="LevelSelectParent/GridContainer" unique_id=663944997]
 custom_minimum_size = Vector2(450, 450)
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("13_252ro")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("8_us8gh")
 
-[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/Forest2"]
+[node name="Label" type="Label" parent="LevelSelectParent/GridContainer/Forest2" unique_id=1777111267]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -291,7 +330,15 @@ text = "Forest2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Title" type="Button" parent="LevelSelectParent"]
+[node name="Outline" type="TextureRect" parent="LevelSelectParent/GridContainer/Forest2" unique_id=1118595829]
+visible = false
+layout_mode = 0
+offset_right = 465.0
+offset_bottom = 450.0
+texture = ExtResource("10_b0wfx")
+expand_mode = 1
+
+[node name="Title" type="Button" parent="LevelSelectParent" unique_id=731893560]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -308,9 +355,37 @@ pivot_offset = Vector2(150, 75)
 theme = ExtResource("6_rcthv")
 text = "To Title"
 
+[connection signal="focus_entered" from="LevelSelectParent/GridContainer/CityLevel" to="LevelSelectParent/GridContainer/CityLevel" method="_on_focus_entered"]
+[connection signal="focus_exited" from="LevelSelectParent/GridContainer/CityLevel" to="LevelSelectParent/GridContainer/CityLevel" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/CityLevel" to="LevelSelectParent/GridContainer/CityLevel" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/CityLevel" to="LevelSelectParent/GridContainer/CityLevel" method="_on_focus_exited"]
 [connection signal="pressed" from="LevelSelectParent/GridContainer/CityLevel" to="LevelSelectParent" method="_on_city_level_pressed"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/LavaLevel" to="LevelSelectParent/GridContainer/LavaLevel" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/LavaLevel" to="LevelSelectParent/GridContainer/LavaLevel" method="_on_focus_exited"]
 [connection signal="pressed" from="LevelSelectParent/GridContainer/LavaLevel" to="LevelSelectParent" method="_on_lava_level_pressed"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/SpaceStation" to="LevelSelectParent/GridContainer/SpaceStation" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/SpaceStation" to="LevelSelectParent/GridContainer/SpaceStation" method="_on_focus_exited"]
 [connection signal="pressed" from="LevelSelectParent/GridContainer/SpaceStation" to="LevelSelectParent" method="_on_space_station_pressed"]
+[connection signal="focus_entered" from="LevelSelectParent/GridContainer/Forest" to="LevelSelectParent/GridContainer/Forest" method="_on_focus_entered"]
+[connection signal="focus_exited" from="LevelSelectParent/GridContainer/Forest" to="LevelSelectParent/GridContainer/Forest" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/Forest" to="LevelSelectParent/GridContainer/Forest" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/Forest" to="LevelSelectParent/GridContainer/Forest" method="_on_focus_exited"]
 [connection signal="pressed" from="LevelSelectParent/GridContainer/Forest" to="LevelSelectParent" method="_on_forest_pressed"]
+[connection signal="focus_entered" from="LevelSelectParent/GridContainer/CityLevel2" to="LevelSelectParent/GridContainer/CityLevel2" method="_on_focus_entered"]
+[connection signal="focus_exited" from="LevelSelectParent/GridContainer/CityLevel2" to="LevelSelectParent/GridContainer/CityLevel2" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/CityLevel2" to="LevelSelectParent/GridContainer/CityLevel2" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/CityLevel2" to="LevelSelectParent/GridContainer/CityLevel2" method="_on_focus_exited"]
 [connection signal="pressed" from="LevelSelectParent/GridContainer/CityLevel2" to="LevelSelectParent" method="_on_city_level_2_pressed"]
+[connection signal="focus_entered" from="LevelSelectParent/GridContainer/LavaLevel2" to="LevelSelectParent/GridContainer/LavaLevel2" method="_on_focus_entered"]
+[connection signal="focus_exited" from="LevelSelectParent/GridContainer/LavaLevel2" to="LevelSelectParent/GridContainer/LavaLevel2" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/LavaLevel2" to="LevelSelectParent/GridContainer/LavaLevel2" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/LavaLevel2" to="LevelSelectParent/GridContainer/LavaLevel2" method="_on_focus_exited"]
+[connection signal="focus_entered" from="LevelSelectParent/GridContainer/SpaceStation2" to="LevelSelectParent/GridContainer/SpaceStation2" method="_on_focus_entered"]
+[connection signal="focus_exited" from="LevelSelectParent/GridContainer/SpaceStation2" to="LevelSelectParent/GridContainer/SpaceStation2" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/SpaceStation2" to="LevelSelectParent/GridContainer/SpaceStation2" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/SpaceStation2" to="LevelSelectParent/GridContainer/SpaceStation2" method="_on_focus_exited"]
+[connection signal="focus_entered" from="LevelSelectParent/GridContainer/Forest2" to="LevelSelectParent/GridContainer/Forest2" method="_on_focus_entered"]
+[connection signal="focus_exited" from="LevelSelectParent/GridContainer/Forest2" to="LevelSelectParent/GridContainer/Forest2" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="LevelSelectParent/GridContainer/Forest2" to="LevelSelectParent/GridContainer/Forest2" method="_on_focus_entered"]
+[connection signal="mouse_exited" from="LevelSelectParent/GridContainer/Forest2" to="LevelSelectParent/GridContainer/Forest2" method="_on_focus_exited"]
 [connection signal="pressed" from="LevelSelectParent/Title" to="LevelSelectParent" method="_on_title_pressed"]
