@@ -43,7 +43,10 @@ window/size/fullscreen=true
 
 [editor]
 
-movie_writer/movie_file="D:/AcorniaFiles/Videos/homingAttack.avi"
+movie_writer/ogv/encoding_speed=1
+movie_writer/movie_file="/home/seanpiche/GameDev/Acornia/TrailerFootage/Forest.avi"
+movie_writer/disable_vsync=true
+movie_writer/fps=30
 
 [filesystem]
 
