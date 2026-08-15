@@ -1,17 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://drjb1h4hjbsvk"]
+[gd_scene format=3 uid="uid://drjb1h4hjbsvk"]
 
-[ext_resource type="Script" path="res://WorldBlocks/Interactive/squirell_homing.gd" id="1_kost2"]
+[ext_resource type="Script" uid="uid://c73rb2qpu57pc" path="res://WorldBlocks/Interactive/squirell_homing.gd" id="1_kost2"]
 [ext_resource type="PackedScene" uid="uid://bvmvh73ffunn6" path="res://Player/jumpCloud.tscn" id="2_0ogu7"]
 [ext_resource type="PackedScene" uid="uid://csrx61krieddt" path="res://hit_effect.tscn" id="3_6mpjh"]
 [ext_resource type="Material" uid="uid://dm6fwfi7ysn28" path="res://WorldBlocks/Interactive/unHighLight.tres" id="4_6uhkf"]
 [ext_resource type="AudioStream" uid="uid://dtx85b7b1kr54" path="res://Audio/Effects/TargetHit.wav" id="5_qu8ud"]
 [ext_resource type="PackedScene" uid="uid://4ywis8tsrao6" path="res://TrapsAndEnemies/Enemies/squirell.tscn" id="6_c01ma"]
-[ext_resource type="Script" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_tdto4"]
+[ext_resource type="Script" uid="uid://bwd400jar8hpx" path="res://WorldBlocks/Interactive/respawn_timer.gd" id="7_tdto4"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_l7bm5"]
 radius = 1.26642
 
-[node name="SquirellHomingAttackTarget" type="Area3D" node_paths=PackedStringArray("parent") groups=["deadly", "enemies", "killable", "targets"]]
+[node name="SquirellHomingAttackTarget" type="Area3D" unique_id=229112044 node_paths=PackedStringArray("parent") groups=["deadly", "enemies", "killable", "targets"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_kost2")
@@ -19,28 +19,28 @@ parent = NodePath(".")
 hitEffect = ExtResource("2_0ogu7")
 hitSoundEffect = ExtResource("3_6mpjh")
 
-[node name="Shield" type="CollisionShape3D" parent="." groups=["deadly"]]
+[node name="Shield" type="CollisionShape3D" parent="." unique_id=827417709 groups=["deadly"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.429431, 0)
 shape = SubResource("SphereShape3D_l7bm5")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1362827479]
 visible = false
 radius = 1.0
 material = ExtResource("4_6uhkf")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1023102140]
 stream = ExtResource("5_qu8ud")
 
-[node name="squirell" parent="." instance=ExtResource("6_c01ma")]
+[node name="squirell" parent="." unique_id=322694090 instance=ExtResource("6_c01ma")]
 transform = Transform3D(2.33, 0, 0, 0, 2.33, 0, 0, 0, 2.33, 0, 0, 0)
 
-[node name="RespawnTimer" type="Timer" parent="."]
+[node name="RespawnTimer" type="Timer" parent="." unique_id=1770722670]
 process_mode = 3
 wait_time = 25.0
 one_shot = true
 script = ExtResource("7_tdto4")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1937104957]
 target_position = Vector3(0, 0, 0)
 hit_back_faces = false
 debug_shape_custom_color = Color(1, 0, 0, 1)

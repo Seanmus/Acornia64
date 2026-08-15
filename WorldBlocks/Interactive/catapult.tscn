@@ -997,7 +997,7 @@ surface_material_override/0 = ExtResource("2_tx0a2")
 shape = SubResource("ConcavePolygonShape3D_3ibq8")
 
 [node name="Arm" parent="." index="3"]
-transform = Transform3D(0.9852459, 0.030353079, 0, -0.1711443, 0.174737, 0, 0, 0, 0.156465, 1.46772, -1.46287, 0)
+transform = Transform3D(0.98524576, 0.030353079, 0, -0.17114429, 0.174737, 0, 0, 0, 0.156465, 1.46772, -1.46287, 0)
 surface_material_override/0 = ExtResource("2_tx0a2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Arm" index="0" unique_id=707686184]

@@ -15,7 +15,7 @@ func death_Finished():
 func jump_Finished():
 	jumpFinished.emit()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "forward", "back")
 	_RotatePlayerModelInInputDirection(input_dir)
 
