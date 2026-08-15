@@ -30,6 +30,8 @@
 [ext_resource type="Script" uid="uid://sjndwg2bm046" path="res://WorldBlocks/Interactive/nutcracker_trigger.gd" id="27_xu8eu"]
 [ext_resource type="PackedScene" uid="uid://thsngsxjek5q" path="res://WorldBlocks/Interactive/speed_boost_ramp.tscn" id="28_idvwn"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j1gnj"]
+
 [sub_resource type="Environment" id="Environment_l3x7x"]
 background_mode = 1
 background_color = Color(0.0156863, 0, 0.117647, 1)
@@ -105,7 +107,14 @@ levelMusic = ExtResource("2_hwfva")
 transform = Transform3D(-0.42107654, 0, -0.90702516, 0, 1, 0, 0.90702516, 0, -0.42107654, -1118.0735, -75.32825, -633.89215)
 
 [node name="Death" parent="." unique_id=1166581628 instance=ExtResource("3_0r6t5")]
-transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -111.386955, 0)
+transform = Transform3D(40.7919, 0, 0, 0, 7.20316, 0, 0, 0, 40.7919, 0, -32.774506, 0)
+
+[node name="CollisionShape3D" parent="Death" index="0"]
+transform = Transform3D(42.6107, 0, 0, 0, 1.33469, 0, 0, 0, 42.6107, 10.950406, -3.921659, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Death" unique_id=159342210]
+transform = Transform3D(42.6107, 0, 0, 0, 1.33469, 0, 0, 0, 42.6107, -28.80615, -10.070461, 0)
+shape = SubResource("BoxShape3D_j1gnj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1728777876]
 environment = SubResource("Environment_l3x7x")
@@ -738,4 +747,5 @@ newMaxSpeed = 100
 [connection signal="body_entered" from="NutcrackerTrigger" to="NutcrackerTrigger" method="_on_body_entered"]
 [connection signal="nutcracker_trigger_entered" from="NutcrackerTrigger" to="nutcracker2" method="_play_Laugh"]
 
+[editable path="Death"]
 [editable path="ForestBlockDiamond16"]
