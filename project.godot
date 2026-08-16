@@ -204,3 +204,9 @@ outline_widthDerpy={
 "type": "float",
 "value": 4.0
 }
+
+[steam]
+
+initialization/app_id=3572080
+initialization/initialize_on_startup=true
+initialization/embed_callbacks=true

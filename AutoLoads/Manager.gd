@@ -13,27 +13,33 @@ var busLevel = 0.65
 var AppID = "3572080"
 
 func _init() -> void:
-	OS.set_environment("SteamAppID", AppID)
-	OS.set_environment("SteamGameID", AppID)
+	pass
+	#OS.set_environment("SteamAppID", AppID)
+	#OS.set_environment("SteamGameID", AppID)
 
 signal on_win
 #Sets win to false
 func _ready():	
 	won = false
 	LevelLoader.level_loaded.connect(_reset)
-	Steam.steamInit()
+	#Steam.steamInit()
 	var isRunning = Steam.isSteamRunning()
 	if !isRunning:
 		print("Error: Steam not running")
 		return
 	print("Steam is running")
+	var loggedOn = Steam.loggedOn()
+	
+	print("Steam Logged On: " + str(loggedOn))
+	
 	var id = Steam.getSteamID()
 	var steamName = Steam.getFriendPersonaName(id)
-	print(steamName)
-	print(id)
+	print("Steam name " + steamName)
+	print("Steam ID: " + str(id))
 	
 func _process(_delta: float) -> void:
-	Steam.run_callbacks()
+	pass
+	#Steam.run_callbacks()
 
 func _reset():
 	cheeseCount = 0
