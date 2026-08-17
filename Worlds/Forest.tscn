@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cdi7tnu4t431f" path="res://WorldBlocks/Forest/forest_block_diamond.tscn" id="19_ifote"]
 [ext_resource type="PackedScene" uid="uid://ch3dhotjpeu7h" path="res://WorldBlocks/metal_platform.tscn" id="19_las8y"]
 [ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="20_4wj2a"]
+[ext_resource type="PackedScene" uid="uid://o00d2x4kdyqf" path="res://TrapsAndEnemies/cannon.tscn" id="20_b5wwx"]
 [ext_resource type="PackedScene" uid="uid://bx6sxjtq8wmsx" path="res://WorldBlocks/Interactive/catapult.tscn" id="20_jxm1x"]
 [ext_resource type="PackedScene" uid="uid://br4gpi6l8jauk" path="res://WorldBlocks/rotating_half_hex.tscn" id="22_4mc8o"]
 [ext_resource type="PackedScene" uid="uid://d3be7imrni88" path="res://WorldBlocks/rotating_hex_platform.tscn" id="23_bx3xs"]
@@ -69,6 +70,14 @@ point_count = 5
 [sub_resource type="Curve3D" id="Curve3D_2icgv"]
 resource_local_to_scene = true
 _data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -8.762451, 0, -19.120552, 0, 0, 0, 0, 0, 0, -13.982178, 0, -29.111046, 0, 0, 0, 0, 0, 0, 1.4089661, 0, -23.897797, 0, 0, 0, 0, 0, 0, 12.051147, 0, 1.5018997, 0, 0, 0, 0, 0, 0, -8.579376, 0, -19.054619),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_56dfo"]
+resource_local_to_scene = true
+_data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
@@ -80,9 +89,9 @@ albedo_texture = ExtResource("20_4wj2a")
 uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6k62y"]
-size = Vector3(13.54541, 20.223831, 13.611404)
+size = Vector3(39.22165, 27.376442, 13.611404)
 
-[sub_resource type="Curve3D" id="Curve3D_56dfo"]
+[sub_resource type="Curve3D" id="Curve3D_jlobk"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 5, 50),
@@ -90,7 +99,7 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve3D" id="Curve3D_jlobk"]
+[sub_resource type="Curve3D" id="Curve3D_f5w13"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 20, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
@@ -415,6 +424,10 @@ curve = SubResource("Curve3D_b5wwx")
 transform = Transform3D(0.921504, 0, 0.388368, 0, 1, 0, -0.388368, 0, 0.921504, 231.694, 156.701, -146.421)
 curve = SubResource("Curve3D_suhuo")
 
+[node name="MovingNutcracker2" parent="." unique_id=91545123 instance=ExtResource("16_o4g4e")]
+transform = Transform3D(0.921504, 0, 0.388368, 0, 1, 0, -0.388368, 0, 0.921504, 224.45311, 156.701, -160.7454)
+curve = SubResource("Curve3D_2icgv")
+
 [node name="ForestBlock4" parent="." unique_id=588608829 instance=ExtResource("17_7i0tx")]
 transform = Transform3D(2.25, 0, 0, 0, 0.1, 0, 0, 0, 2.25, 98.779, 142, -51.207)
 
@@ -466,9 +479,12 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 39.925
 [node name="RotatingPlatform5" parent="." unique_id=157996657 instance=ExtResource("18_so85a")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.074433, 181.47, -70.87751)
 
+[node name="cannon" parent="RotatingPlatform5" unique_id=105378468 instance=ExtResource("20_b5wwx")]
+transform = Transform3D(1, 0, -1.0658141e-14, 0, 1, 0, 1.0658141e-14, 0, 1, 0.13345337, 2.4515076, -19.996851)
+
 [node name="MovingPlatform3" parent="." unique_id=350938062 instance=ExtResource("18_opd30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.586, 141.693, 179.25209)
-curve = SubResource("Curve3D_2icgv")
+curve = SubResource("Curve3D_56dfo")
 
 [node name="MetalBox" parent="." unique_id=984096729 instance=ExtResource("19_las8y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.6238, 141.694, 179.25159)
@@ -639,7 +655,7 @@ height = 968.81
 material = ExtResource("19_cgq7m")
 
 [node name="catapult" parent="." unique_id=1128266801 instance=ExtResource("20_jxm1x")]
-transform = Transform3D(-0.647048, 0, -2.41481, 0, 2.5, 0, 2.41481, 0, -0.647048, 174.236, 321.84, -114.665)
+transform = Transform3D(1.249999, 0, 2.165059, 0, 2.5, 0, -2.165059, 0, 1.249999, 174.236, 321.84, -114.665)
 nextLevel = "city_level2"
 
 [node name="RotatingHalfHex3" parent="." unique_id=1642242864 instance=ExtResource("22_4mc8o")]
@@ -712,7 +728,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.35107, 118.32411, -157.61
 script = ExtResource("27_xu8eu")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NutcrackerTrigger" unique_id=1372763657]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6374512, 7.131706, -20.093094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.475586, 10.708008, -20.093094)
 shape = SubResource("BoxShape3D_6k62y")
 
 [node name="nutcracker2" parent="." unique_id=981244431 instance=ExtResource("25_jow71")]
@@ -720,11 +736,11 @@ transform = Transform3D(-166.77573, 0, 68.61844, 0, 180.34032, 0, -68.61844, 0, 
 
 [node name="MovingPlatform4" parent="." unique_id=215470911 instance=ExtResource("18_opd30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -194.67667, 13.164108, -139.30334)
-curve = SubResource("Curve3D_56dfo")
+curve = SubResource("Curve3D_jlobk")
 
 [node name="MovingPlatform5" parent="." unique_id=1591024415 instance=ExtResource("18_opd30")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.864388, 6.4229565, -95.669525)
-curve = SubResource("Curve3D_jlobk")
+curve = SubResource("Curve3D_f5w13")
 
 [node name="SpeedBoostRamp" parent="." unique_id=1417891911 instance=ExtResource("28_idvwn")]
 transform = Transform3D(1.8197811, -1.006692, -1.050651, 1.1242609, 2.040801, -0.0081374645, 0.92376053, -0.50059986, 2.0796552, -481.55795, -8.817416, -363.7813)
