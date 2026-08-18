@@ -1,11 +1,11 @@
-[gd_scene load_steps=39 format=3 uid="uid://bleqbt5f1cfj2"]
+[gd_scene format=3 uid="uid://bleqbt5f1cfj2"]
 
-[ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/Derpy.gd" id="1_fuj54"]
+[ext_resource type="Script" uid="uid://c56avanfakfio" path="res://ADerpyChristmas/DerpyPlayer/Derpy.gd" id="1_fuj54"]
 [ext_resource type="PackedScene" uid="uid://b6il875bxkajk" path="res://ADerpyChristmas/DerpyPlayer/Derpy.fbx" id="2_6d2vt"]
 [ext_resource type="Material" uid="uid://rkppha3v4vdb" path="res://ADerpyChristmas/DerpyPlayer/Derpy.tres" id="3_kfaps"]
 [ext_resource type="AudioStream" uid="uid://ccyvfmfaycmc7" path="res://ADerpyChristmas/JumpSqueak.wav" id="4_k446v"]
 [ext_resource type="Texture2D" uid="uid://bmv1vabd5wc1n" path="res://ADerpyChristmas/DerpyPlayer/PresentCrunchy.png" id="5_1a8fc"]
-[ext_resource type="Script" path="res://ADerpyChristmas/DerpyPlayer/DerpyUI.gd" id="5_yq0re"]
+[ext_resource type="Script" uid="uid://bqoy6bhgqudgb" path="res://ADerpyChristmas/DerpyPlayer/DerpyUI.gd" id="5_yq0re"]
 [ext_resource type="FontFile" uid="uid://843bo5oy4r3s" path="res://UI/SigmarOne-Regular.ttf" id="6_hpwsy"]
 [ext_resource type="AudioStream" uid="uid://c1h1frpyok5m6" path="res://ADerpyChristmas/DerpyPlayer/PresentCollected.wav" id="8_tcujn"]
 [ext_resource type="AudioStream" uid="uid://cdusrnndmi2bl" path="res://ADerpyChristmas/DerpyPlayer/PP_Collect_Coin_1_2.wav" id="9_u5m70"]
@@ -654,12 +654,12 @@ tracks/13/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0csh3"]
 _data = {
-"Hover": SubResource("Animation_eo3mg"),
-"InAir": SubResource("Animation_pwx0c"),
-"Jump": SubResource("Animation_heg8d"),
-"Land": SubResource("Animation_m41vt"),
-"RESET": SubResource("Animation_eeojd"),
-"Walk": SubResource("Animation_7deyc")
+&"Hover": SubResource("Animation_eo3mg"),
+&"InAir": SubResource("Animation_pwx0c"),
+&"Jump": SubResource("Animation_heg8d"),
+&"Land": SubResource("Animation_m41vt"),
+&"RESET": SubResource("Animation_eeojd"),
+&"Walk": SubResource("Animation_7deyc")
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xvg6f"]
@@ -778,71 +778,69 @@ resource_name = "scoreIncreased"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xnidj"]
 _data = {
-"RESET": SubResource("Animation_4oytq"),
-"presentCollected": SubResource("Animation_1le4e"),
-"scoreIncreased": SubResource("Animation_1x077")
+&"RESET": SubResource("Animation_4oytq"),
+&"presentCollected": SubResource("Animation_1le4e"),
+&"scoreIncreased": SubResource("Animation_1x077")
 }
 
-[node name="DerpyPlayer" type="CharacterBody3D" groups=["player"]]
+[node name="DerpyPlayer" type="CharacterBody3D" unique_id=1940244824 groups=["player"]]
 floor_max_angle = 1.04894
 script = ExtResource("1_fuj54")
 
-[node name="Derpy" parent="." instance=ExtResource("2_6d2vt")]
+[node name="Derpy" parent="." unique_id=38798051 instance=ExtResource("2_6d2vt")]
 
 [node name="LeftWing" parent="Derpy" index="0"]
-transform = Transform3D(-22.0247, 8.98354e-05, 4.11459e-10, 0, -0.000128276, 44.8343, 5.58366e-05, 35.4355, 0.0001623, 0.6, 0.256785, -4.71597e-08)
+transform = Transform3D(-22.0247, 8.9835434e-05, 4.1145928e-10, 0, -0.00012827617, 44.8343, 5.5836616e-05, 35.4355, 0.00016229972, 0.6, 0.256785, -4.71597e-08)
 surface_material_override/0 = ExtResource("3_kfaps")
 
 [node name="Sunfglasses" parent="Derpy" index="1"]
-transform = Transform3D(36.1156, -0.0231852, 1.20616e-05, -3.11861e-05, -1.16757e-05, 14.3775, -0.252128, -3.32113, -5.06295e-05, -5.21184e-08, 0.3838, -0.596165)
+transform = Transform3D(36.1156, -0.023185275, 1.206164e-05, -3.1186122e-05, -1.1675706e-05, 14.3775, -0.2521281, -3.3211298, -5.0629493e-05, -5.21184e-08, 0.3838, -0.596165)
 
 [node name="HairTuft" parent="Derpy" index="2"]
-transform = Transform3D(-1.68555, 4.70529, 1.06049e-05, 0, -2.07936e-05, 3.5763, 2.40723, 3.29467, 7.4256e-06, 0, 0.781998, 0)
+transform = Transform3D(-1.6855531, 4.705291, 1.0604894e-05, 0, -2.0793559e-05, 3.5763, 2.4072275, 3.2946687, 7.425601e-06, 0, 0.781998, 0)
 
 [node name="LeftFoot" parent="Derpy" index="3"]
-transform = Transform3D(-0.000146044, 22.811, 5.14183e-05, 0, -8.25756e-05, 14.204, 40.3438, 8.25756e-05, 1.86134e-10, 0.2, -0.513494, -1.74846e-08)
+transform = Transform3D(-0.00014604416, 22.811, 5.141834e-05, 0, -8.25756e-05, 14.204, 40.3438, 8.25756e-05, 1.8613389e-10, 0.2, -0.513494, -1.74846e-08)
 
 [node name="RightFoot" parent="Derpy" index="4"]
-transform = Transform3D(-0.000146044, 22.811, 5.14183e-05, 0, -8.25756e-05, 14.204, 40.3438, 8.25756e-05, 1.86134e-10, -0.2, -0.513494, 1.74846e-08)
+transform = Transform3D(-0.00014604416, 22.811, 5.141834e-05, 0, -8.25756e-05, 14.204, 40.3438, 8.25756e-05, 1.8613389e-10, -0.2, -0.513494, 1.74846e-08)
 
 [node name="LeftWing_001" parent="Derpy" index="5"]
-transform = Transform3D(22.0247, -2.30927e-05, -1.05768e-10, 0, -0.000128276, 44.8343, -1.43531e-05, -35.4355, -0.0001623, -0.6, 0.256785, 5.77477e-08)
+transform = Transform3D(22.0247, -2.3092714e-05, -1.0576797e-10, 0, -0.00012827617, 44.8343, -1.4353123e-05, -35.4355, -0.00016229972, -0.6, 0.256785, 5.77477e-08)
 surface_material_override/0 = ExtResource("3_kfaps")
 
 [node name="Body_001" parent="Derpy" index="6"]
-transform = Transform3D(-16.3185, -1.53301e-12, -4.13704e-05, -1.99845e-15, 13.8185, -7.13304e-07, 4.13704e-05, -6.04026e-07, -16.3185, -5.70553e-08, 0.214111, -0.652636)
+transform = Transform3D(-16.3185, -1.5330079e-12, -4.1370364e-05, -1.9984453e-15, 13.8185, -7.133045e-07, 4.1370364e-05, -6.0402596e-07, -16.3185, -5.70553e-08, 0.214111, -0.652636)
 surface_material_override/0 = ExtResource("3_kfaps")
 
-[node name="LandEffect" type="AudioStreamPlayer" parent="."]
+[node name="LandEffect" type="AudioStreamPlayer" parent="." unique_id=1964133440]
 stream = ExtResource("4_k446v")
 
-[node name="JumpEffect" type="AudioStreamPlayer" parent="."]
+[node name="JumpEffect" type="AudioStreamPlayer" parent="." unique_id=721240472]
 stream = ExtResource("4_k446v")
 volume_db = -17.138
 pitch_scale = 0.9
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=730521327]
 shape = SubResource("SphereShape3D_lgsit")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_0csh3")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1282208675]
+libraries/ = SubResource("AnimationLibrary_0csh3")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1128710094]
 tree_root = SubResource("AnimationNodeStateMachine_uy886")
 anim_player = NodePath("../AnimationPlayer")
 
-[node name="Pivot" type="Node3D" parent="."]
+[node name="Pivot" type="Node3D" parent="." unique_id=2115108934]
 
-[node name="SpringArm3D" type="SpringArm3D" parent="Pivot"]
+[node name="SpringArm3D" type="SpringArm3D" parent="Pivot" unique_id=2138208408]
 shape = SubResource("SphereShape3D_5ax8n")
 spring_length = 6.12
 
-[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D"]
+[node name="Camera3D" type="Camera3D" parent="Pivot/SpringArm3D" unique_id=814638858]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.892117, 2.49008)
 
-[node name="UI" type="Control" parent="." node_paths=PackedStringArray("player")]
+[node name="UI" type="Control" parent="." unique_id=859828395 node_paths=PackedStringArray("player")]
 layout_mode = 3
 anchor_right = 1.0
 anchor_bottom = 0.995
@@ -852,12 +850,12 @@ mouse_filter = 2
 script = ExtResource("5_yq0re")
 player = NodePath("..")
 
-[node name="PresentSprite" type="Sprite2D" parent="UI"]
+[node name="PresentSprite" type="Sprite2D" parent="UI" unique_id=2004702183]
 position = Vector2(968.97, 171.98)
 scale = Vector2(0.66, 0.66)
 texture = ExtResource("5_1a8fc")
 
-[node name="PresentsLbl" type="Label" parent="UI"]
+[node name="PresentsLbl" type="Label" parent="UI" unique_id=2099368701]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.846
@@ -873,7 +871,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 text = "0/3"
 
-[node name="ScoreLbl" type="Label" parent="UI"]
+[node name="ScoreLbl" type="Label" parent="UI" unique_id=674842576]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.019
@@ -889,18 +887,16 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 text = "Score: 0"
 
-[node name="PresentCollectedAnim" type="AnimationPlayer" parent="UI"]
-libraries = {
-"": SubResource("AnimationLibrary_xnidj")
-}
+[node name="PresentCollectedAnim" type="AnimationPlayer" parent="UI" unique_id=966036484]
+libraries/ = SubResource("AnimationLibrary_xnidj")
 
-[node name="PresentCollectedEffect" type="AudioStreamPlayer" parent="."]
+[node name="PresentCollectedEffect" type="AudioStreamPlayer" parent="." unique_id=1140711032]
 stream = ExtResource("8_tcujn")
 
-[node name="CollectibleCollected" type="AudioStreamPlayer" parent="."]
+[node name="CollectibleCollected" type="AudioStreamPlayer" parent="." unique_id=1138448897]
 stream = ExtResource("9_u5m70")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1930286124]
 offset_left = 940.0
 offset_top = 42.0
 offset_right = 1250.0

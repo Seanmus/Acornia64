@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://b138pdj66wsbg"]
+
+[ext_resource type="Script" uid="uid://bpbtbh6cn4f78" path="res://Worlds/levelProperties.gd" id="1_rak2d"]
+[ext_resource type="PackedScene" uid="uid://b40m6ljoewadm" path="res://WorldBlocks/Interactive/death.tscn" id="2_o5lj0"]
+[ext_resource type="PackedScene" uid="uid://c1nxd5aux2qvl" path="res://Player/player.tscn" id="4_3tsit"]
+[ext_resource type="PackedScene" uid="uid://da4tmswl2bgct" path="res://WorldBlocks/Interactive/cheese.tscn" id="5_5vdcv"]
+[ext_resource type="Environment" uid="uid://b0ltdgsbqw2m1" path="res://Worlds/world_environment.tres" id="5_uoxrg"]
+[ext_resource type="PackedScene" uid="uid://dovpn8d3wmy6u" path="res://WorldBlocks/Interactive/FallingIcicle.tscn" id="12_y1pkt"]
+[ext_resource type="Texture2D" uid="uid://dxgh4otga6yam" path="res://ADerpyChristmas/Imports/icicle-f89961c60bf959a135b884c11c694106_iceTexture.png" id="14_e2173"]
+[ext_resource type="PackedScene" uid="uid://boe2lngb6cfv" path="res://WorldBlocks/Interactive/homing_attack_target.tscn" id="14_egtqs"]
+[ext_resource type="PackedScene" uid="uid://c0rvk8nuladak" path="res://WorldBlocks/Interactive/tire.tscn" id="15_cnh0n"]
+[ext_resource type="PackedScene" uid="uid://ckwghyx6thmtd" path="res://WorldBlocks/snow_lake_edge.tscn" id="15_rht1t"]
+[ext_resource type="PackedScene" uid="uid://bx5erxwt06q6k" path="res://WorldBlocks/Decor/winter_treeDecor.tscn" id="16_y1pkt"]
+[ext_resource type="Texture2D" uid="uid://bhx7usdgd80x" path="res://Textures/space.png" id="17_1naws"]
+[ext_resource type="PackedScene" uid="uid://cttcxv8hsj32r" path="res://AutoLoads/ui.tscn" id="21_ehj2b"]
+[ext_resource type="PackedScene" uid="uid://b4qn3cbbb3fru" path="res://WorldBlocks/spawn_point.tscn" id="23_5dcam"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ui6f3"]
+albedo_texture = ExtResource("14_e2173")
+uv1_scale = Vector3(0.1, 0.1, 0.1)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhor3"]
+albedo_color = Color(0.178212, 0.178212, 0.178212, 1)
+albedo_texture = ExtResource("17_1naws")
+uv1_scale = Vector3(20, 20, 20)
+
+[node name="spaceLevel" type="Node3D" unique_id=145058076 node_paths=PackedStringArray("UINode")]
+script = ExtResource("1_rak2d")
+UINode = NodePath("UI")
+
+[node name="Death" parent="." unique_id=1697141550 instance=ExtResource("2_o5lj0")]
+transform = Transform3D(9.89228, 0, 0, 0, 55.7761, 0, 0, 0, 23.645, -84.8822, -66.7301, 0)
+
+[node name="Death2" parent="." unique_id=1068707408 instance=ExtResource("2_o5lj0")]
+transform = Transform3D(23.8333, 0, 0, 0, 1.124, 0, 0, 0, 31.741, 312.171, -117.179, 0)
+
+[node name="Player" parent="." unique_id=84316113 instance=ExtResource("4_3tsit")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 306.71, -44.564804, 391.095)
+floor_block_on_wall = false
+
+[node name="Cheese" type="Node3D" parent="." unique_id=1654179341]
+
+[node name="cheese" parent="Cheese" unique_id=922020439 instance=ExtResource("5_5vdcv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=531701077]
+environment = ExtResource("5_uoxrg")
+
+[node name="Blocks" type="Node3D" parent="." unique_id=87437657]
+
+[node name="Ice" type="Node" parent="Blocks" unique_id=942510598]
+
+[node name="HomingAttackTargets" type="Node3D" parent="." unique_id=871403327]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 301.355, -42.92, 221.23)
+
+[node name="HomingAttackTarget" parent="HomingAttackTargets" unique_id=181475304 instance=ExtResource("14_egtqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0126, 3.31897, -4.32843)
+
+[node name="HomingAttackTarget2" parent="HomingAttackTargets" unique_id=1325268998 instance=ExtResource("14_egtqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.58737, 7.71897, -15.9284)
+
+[node name="HomingAttackTarget3" parent="HomingAttackTargets" unique_id=2099594540 instance=ExtResource("14_egtqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.9874, 13.719, -0.728455)
+
+[node name="HomingAttackTarget4" parent="HomingAttackTargets" unique_id=1216127810 instance=ExtResource("14_egtqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.987, 17.2651, 6.27155)
+
+[node name="HomingAttackTarget5" parent="HomingAttackTargets" unique_id=1058134171 instance=ExtResource("14_egtqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 124.787, 22.4829, -1.12845)
+
+[node name="Tires" type="Node3D" parent="." unique_id=1016730457]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 301.355, -42.92, 221.23)
+
+[node name="tire" parent="Tires" unique_id=1296068946 instance=ExtResource("15_cnh0n")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 140.777, 31.148, 210.049)
+
+[node name="UI" parent="." unique_id=131914608 instance=ExtResource("21_ehj2b")]
+
+[node name="SpawnPoints" type="Node" parent="." unique_id=493774338]
+
+[node name="SpawnPoint" parent="SpawnPoints" unique_id=888020915 instance=ExtResource("23_5dcam")]
+transform = Transform3D(31.7753, 0, 2.6148e-12, 0, 31.7753, 0, -2.6148e-12, 0, 31.7753, 321, -28.833, 146.28299)
+
+[node name="MovingPlatforms" type="Node" parent="." unique_id=1732303112]
+
+[node name="Nutcrackers" type="Node" parent="." unique_id=1790242335]
+
+[node name="FallingIcicle" parent="." unique_id=1435608031 instance=ExtResource("12_y1pkt")]
+transform = Transform3D(7.716, 0, 0, 0, 7.716, 0, 0, 0, 7.716, 306.736, -79.7563, 271.237)
+
+[node name="FallingIcicle2" parent="." unique_id=505622218 instance=ExtResource("12_y1pkt")]
+transform = Transform3D(7.716, 0, 0, 0, 7.716, 0, 0, 0, 7.716, 280.736, -67.270874, 189.237)
+
+[node name="FallingIcicle3" parent="." unique_id=2097677563 instance=ExtResource("12_y1pkt")]
+transform = Transform3D(7.716, 0, 0, 0, 7.716, 0, 0, 0, 7.716, 320.736, -61.270874, 145.237)
+
+[node name="FallingIcicle4" parent="." unique_id=1627632509 instance=ExtResource("12_y1pkt")]
+transform = Transform3D(7.716, 0, 0, 0, 7.716, 0, 0, 0, 7.716, 294.736, -54.270874, 69.237)
+
+[node name="BigIceBlock" type="StaticBody3D" parent="." unique_id=889926339]
+transform = Transform3D(101.983, 0, 0, 0, 1.914793, 0, 0, 0, 101.983, 307.812, -81.83221, 351.417)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BigIceBlock" unique_id=1453920271]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 15.739595, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_ui6f3")
+
+[node name="SnowLakeEdge" parent="." unique_id=1738405985 instance=ExtResource("15_rht1t")]
+transform = Transform3D(14.7649, 0, 0, 0, 14.7649, 0, 0, 0, 14.7649, 312.634, -50.776, 349.92)
+
+[node name="BigIceBlock2" type="StaticBody3D" parent="." unique_id=850456165]
+transform = Transform3D(101.983, 0, 0, 0, 1.914793, 0, 0, 0, 101.983, 307.812, -53.832207, -23.583008)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="BigIceBlock2" unique_id=461847882]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 15.739595, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_ui6f3")
+
+[node name="SnowLakeEdge2" parent="." unique_id=755778914 instance=ExtResource("15_rht1t")]
+transform = Transform3D(14.7649, 0, 0, 0, 14.7649, 0, 0, 0, 14.7649, 312.634, -22.776001, -25.079987)
+
+[node name="Sky" type="CSGSphere3D" parent="." unique_id=2054155648]
+transform = Transform3D(1780.81, 0, 0, 0, 1780.81, 0, 0, 0, 1780.81, 0, 0, 0)
+flip_faces = true
+material = SubResource("StandardMaterial3D_bhor3")
+
+[node name="winterTree" parent="." unique_id=178862217 instance=ExtResource("16_y1pkt")]
+transform = Transform3D(24.104338, 0, 0, 0, 24.104338, 0, 0, 0, 24.104338, 303.0805, -7.8652573, 349.48935)

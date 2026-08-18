@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://dovpn8d3wmy6u"]
+
+[ext_resource type="PackedScene" uid="uid://cmom4xu8eclg3" path="res://ADerpyChristmas/Imports/icicle.fbx" id="1_tsuqa"]
+[ext_resource type="Texture2D" uid="uid://dxgh4otga6yam" path="res://ADerpyChristmas/Imports/icicle-f89961c60bf959a135b884c11c694106_iceTexture.png" id="2_ewm50"]
+[ext_resource type="Script" uid="uid://dmsf0ioloe302" path="res://WorldBlocks/Interactive/falling_icicle.gd" id="2_qxmf0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6oisy"]
+albedo_texture = ExtResource("2_ewm50")
+uv1_scale = Vector3(0.12, 0.12, 0.12)
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nmctc"]
+data = PackedVector3Array(0.0087, 0.005, -0.01, 0, 0, 0.01, 0, 0.01, -0.01, 0.0087, -0.005, -0.01, 0, 0, 0.01, 0.0087, 0.005, -0.01, 0, -0.01, -0.01, 0, 0, 0.01, 0.0087, -0.005, -0.01, -0.0087, -0.005, -0.01, 0, 0, 0.01, 0, -0.01, -0.01, 0.0087, -0.005, -0.01, 0, 0.01, -0.01, -0.0087, 0.005, -0.01, 0.0087, -0.005, -0.01, 0.0087, 0.005, -0.01, 0, 0.01, -0.01, 0.0087, -0.005, -0.01, -0.0087, -0.005, -0.01, 0, -0.01, -0.01, 0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, -0.0087, -0.005, -0.01, -0.0087, 0.005, -0.01, 0, 0, 0.01, -0.0087, -0.005, -0.01, 0, 0.01, -0.01, 0, 0, 0.01, -0.0087, 0.005, -0.01)
+
+[sub_resource type="Animation" id="Animation_ewm50"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.9552647, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qxmf0"]
+resource_name = "icicle_fall"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cone:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.18, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1083331, 1.2083333, 1.2999998, 1.4, 1.4999999, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.9552647, 0), Vector3(0.10557556, 1.9552647, -0.22823226), Vector3(-0.058708668, 1.9552647, -0.36592507), Vector3(0.14193869, 1.9552647, 0.076524615), Vector3(-0.024674892, 1.9552647, -0.060243964), Vector3(0.14837742, 1.9552647, 0.289508), Vector3(-0.09540939, 1.9552647, 0.56386864), Vector3(0, 1.955, 0), Vector3(0.055, 1.955, 0.08), Vector3(-0.065437794, 1.955, 0.07649183), Vector3(0, 1.955, 0), Vector3(-0.09540939, 1.9552647, 0.56386864), Vector3(0, 1.955, 0), Vector3(0.055, 1.955, 0.08), Vector3(-0.065437794, 1.955, 0.07649183), Vector3(0, 1.955, 0), Vector3(0, -15, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_delete_icicle"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n07dd"]
+_data = {
+&"RESET": SubResource("Animation_ewm50"),
+&"icicle_fall": SubResource("Animation_qxmf0")
+}
+
+[node name="FallingIcicle" unique_id=1435608031 instance=ExtResource("1_tsuqa")]
+script = ExtResource("2_qxmf0")
+
+[node name="Cone" parent="." index="0"]
+transform = Transform3D(207.40187, 0, 0, 0, 5.7695333e-06, -207.40187, 0, 207.40187, 5.7695333e-06, 0, 1.9552647, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_6oisy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cone" index="0" unique_id=1891359803]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/StaticBody3D" index="0" unique_id=971391895]
+shape = SubResource("ConcavePolygonShape3D_nmctc")
+
+[node name="Trigger" type="Area3D" parent="Cone" index="1" unique_id=915707060]
+transform = Transform3D(1, 0, 0, 0, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 1.4271084e-11, -0.0005130144)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/Trigger" index="0" unique_id=1786457542]
+shape = SubResource("ConcavePolygonShape3D_nmctc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=271395777]
+libraries/ = SubResource("AnimationLibrary_n07dd")
+
+[connection signal="body_entered" from="Cone/Trigger" to="." method="_on_trigger_body_entered"]
