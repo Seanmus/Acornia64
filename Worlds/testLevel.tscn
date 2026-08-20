@@ -35,22 +35,6 @@ ambient_light_energy = 1.53
 adjustment_enabled = true
 adjustment_saturation = 1.7
 
-[sub_resource type="Curve3D" id="Curve3D_lkdur"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-
-[sub_resource type="Curve3D" id="Curve3D_ygyeh"]
-resource_local_to_scene = true
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
-}
-point_count = 5
-
 [sub_resource type="Curve3D" id="Curve3D_lgsvc"]
 resource_local_to_scene = true
 _data = {
@@ -68,6 +52,22 @@ _data = {
 point_count = 5
 
 [sub_resource type="Curve3D" id="Curve3D_rfxfo"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_gybig"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 6.7193, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_xcrdr"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0),
@@ -375,19 +375,19 @@ transform = Transform3D(-1.01848e-07, 0, 2.33, 0.603048, 2.25061, 2.63601e-08, -
 
 [node name="MovingNutcracker" parent="." unique_id=1703381409 instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346821, 2.43865, -106.007)
-curve = SubResource("Curve3D_lkdur")
+curve = SubResource("Curve3D_lgsvc")
 
 [node name="MovingNutcracker2" parent="." unique_id=1871128155 instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346821, 2.43865, -149.203)
-curve = SubResource("Curve3D_ygyeh")
+curve = SubResource("Curve3D_hlmrp")
 
 [node name="MovingNutcracker3" parent="." unique_id=279433942 instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1752, 2.43865, -149.203)
-curve = SubResource("Curve3D_lgsvc")
+curve = SubResource("Curve3D_rfxfo")
 
 [node name="MovingNutcracker4" parent="." unique_id=1406225952 instance=ExtResource("14_uo65f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.1752, 2.43865, -103.161)
-curve = SubResource("Curve3D_hlmrp")
+curve = SubResource("Curve3D_gybig")
 
 [node name="GridMap" type="GridMap" parent="." unique_id=365010590]
 mesh_library = ExtResource("13_kavlb")
@@ -435,7 +435,7 @@ startOffset = null
 
 [node name="MovingPlatform" parent="." unique_id=327914197 instance=ExtResource("18_w2le0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0747, 1.58738, -8.95075)
-curve = SubResource("Curve3D_rfxfo")
+curve = SubResource("Curve3D_xcrdr")
 
 [node name="cannon" parent="." unique_id=1365283710 instance=ExtResource("20_b7ymo")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -239.982, 3.19583, 23.0596)

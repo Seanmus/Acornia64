@@ -1,8 +1,45 @@
-[gd_scene format=3 uid="uid://dovpn8d3wmy6u"]
+[gd_scene format=4 uid="uid://dovpn8d3wmy6u"]
 
-[ext_resource type="PackedScene" uid="uid://cmom4xu8eclg3" path="res://ADerpyChristmas/Imports/icicle.fbx" id="1_tsuqa"]
 [ext_resource type="Texture2D" uid="uid://dxgh4otga6yam" path="res://ADerpyChristmas/Imports/icicle-f89961c60bf959a135b884c11c694106_iceTexture.png" id="2_ewm50"]
 [ext_resource type="Script" uid="uid://dmsf0ioloe302" path="res://WorldBlocks/Interactive/falling_icicle.gd" id="2_qxmf0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84tg2"]
+resource_name = "Material"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.99999994, 0.99999994, 0.99999994, 1)
+emission_enabled = true
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vqhsf"]
+_surfaces = [{
+"aabb": AABB(-0.008660254, -0.01, -0.01, 0.017320508, 0.02, 0.02),
+"format": 34359742465,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwABAAAABAABAAMABQABAAQAAwACAAYAAwAAAAIAAwAFAAQAAwAGAAUABgABAAUAAgABAAYA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 7,
+"vertex_data": PackedByteArray("veMNPArXozsK1yO8AAAAAAAAAAAK1yM8AAAAAArXIzwK1yO8veMNPArXo7sK1yO8AAAAAArXI7wK1yO8veMNvArXo7sK1yO8veMNvArXozsK1yO8")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_718oe"]
+resource_name = "Cone"
+_surfaces = [{
+"aabb": AABB(-0.008660254, -0.01, -0.01, 0.017320508, 0.02, 0.02),
+"attribute_data": PackedByteArray("lnxWPyCpOkAuCEVAMsLEPgWbCkAT92hAjIPYPnBDBkAuCEVAMsLEPpZ8Vj8gqTpAuuX6vhP3aECMg9g+MsLEPoyD2D5W32JALbHovyCpOkCMg9g+MsLEPrrl+r4T92hAd8vFPoBcvr5K5w7AgFy+vkrnDsB6JvG/tltsvzLCxD62W2y/E/cowHfLxT56JvG/SucOwHBDBkCMg9g+MsLEPi2x6L8gqTpABZsKQBP3aEAuCEVAMsLEPi4IRUBW32JA"),
+"format": 34359742487,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADAAPAA0ADAAQABEADAAOABAAEgATABQAFQAWABcA"),
+"material": SubResource("StandardMaterial3D_84tg2"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("veMNPArXozsK1yO8AAAAAAAAAAAK1yM8AAAAAArXIzwK1yO8veMNPArXo7sK1yO8AAAAAAAAAAAK1yM8veMNPArXozsK1yO8AAAAAArXI7wK1yO8AAAAAAAAAAAK1yM8veMNPArXo7sK1yO8veMNvArXo7sK1yO8AAAAAAAAAAAK1yM8AAAAAArXI7wK1yO8veMNPArXo7sK1yO8AAAAAArXIzwK1yO8veMNvArXozsK1yO8veMNPArXozsK1yO8veMNvArXo7sK1yO8AAAAAArXI7wK1yO8veMNvArXozsK1yO8AAAAAAAAAAAK1yM8veMNvArXo7sK1yO8AAAAAArXIzwK1yO8AAAAAAAAAAAK1yM8veMNvArXozsK1yO8kqOdvTQ6MMuSo529NDowy5Kjnb00OjDLUdn/f7FrZd5R2f9/sWtl3lHZ/3+xa2XekqNhQs/URdiSo2FCz9RF2JKjYULP1EXYbFxhQsrFzbRsXGFCysXNtGxcYULKxc20/////9mubJf/////2a5sl//////ZrmyX/////9mubJf/////2a5sl//////ZrmyXrSb/f02UmaGtJv9/TZSZoa0m/39NlJmhbFydvS8ruKdsXJ29Lyu4p2xcnb0vK7in")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vqhsf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6oisy"]
 albedo_texture = ExtResource("2_ewm50")
@@ -30,7 +67,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_qxmf0"]
 resource_name = "icicle_fall"
-length = 3.0000000000000004
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -38,10 +74,10 @@ tracks/0/path = NodePath("Cone:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.18, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1083331, 1.2083333, 1.2999998, 1.4, 1.4999999, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.033333335, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 1.9552647, 0), Vector3(0.10557556, 1.9552647, -0.22823226), Vector3(-0.058708668, 1.9552647, -0.36592507), Vector3(0.14193869, 1.9552647, 0.076524615), Vector3(-0.024674892, 1.9552647, -0.060243964), Vector3(0.14837742, 1.9552647, 0.289508), Vector3(-0.09540939, 1.9552647, 0.56386864), Vector3(0, 1.955, 0), Vector3(0.055, 1.955, 0.08), Vector3(-0.065437794, 1.955, 0.07649183), Vector3(0, 1.955, 0), Vector3(-0.09540939, 1.9552647, 0.56386864), Vector3(0, 1.955, 0), Vector3(0.055, 1.955, 0.08), Vector3(-0.065437794, 1.955, 0.07649183), Vector3(0, 1.955, 0), Vector3(0, -15, 0)]
+"values": [Vector3(0, 1.9552647, 0), Vector3(0, -15, 0)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -50,7 +86,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(3),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -64,25 +100,31 @@ _data = {
 &"icicle_fall": SubResource("Animation_qxmf0")
 }
 
-[node name="FallingIcicle" unique_id=1435608031 instance=ExtResource("1_tsuqa")]
+[node name="FallingIcicle" type="AnimatableBody3D" unique_id=1558994494 groups=["killable"]]
 script = ExtResource("2_qxmf0")
 
-[node name="Cone" parent="." index="0"]
+[node name="Cone" type="MeshInstance3D" parent="." unique_id=928080663]
 transform = Transform3D(207.40187, 0, 0, 0, 5.7695333e-06, -207.40187, 0, 207.40187, 5.7695333e-06, 0, 1.9552647, 0)
+mesh = SubResource("ArrayMesh_718oe")
+skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_6oisy")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Cone" index="0" unique_id=1891359803]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/StaticBody3D" index="0" unique_id=971391895]
-shape = SubResource("ConcavePolygonShape3D_nmctc")
-
-[node name="Trigger" type="Area3D" parent="Cone" index="1" unique_id=915707060]
+[node name="Trigger" type="Area3D" parent="Cone" unique_id=915707060]
 transform = Transform3D(1, 0, 0, 0, 1, -3.5527137e-15, 0, 3.5527137e-15, 1, 0, 1.4271084e-11, -0.0005130144)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/Trigger" index="0" unique_id=1786457542]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/Trigger" unique_id=1786457542]
 shape = SubResource("ConcavePolygonShape3D_nmctc")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=271395777]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=271395777]
 libraries/ = SubResource("AnimationLibrary_n07dd")
 
+[node name="Timer" type="Timer" parent="." unique_id=194506438]
+wait_time = 1.2
+one_shot = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=971391895]
+transform = Transform3D(207.40187, 0, 0, 0, 5.7695333e-06, -207.40187, 0, 207.40187, 5.7695333e-06, 0, 1.9552647, 0)
+shape = SubResource("ConcavePolygonShape3D_nmctc")
+
 [connection signal="body_entered" from="Cone/Trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
